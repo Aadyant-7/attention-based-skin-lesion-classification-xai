@@ -50,6 +50,10 @@ The classifier's 512 and 128 hidden dimensions are this project's implementation
 
 `python -m scripts.cache_phase4_features` caches validation probabilities from the three existing best checkpoints and 1,280-dimensional post-CBAM/global-pooling embeddings from the weighted checkpoint for the original train and validation images. The cache is local under `.cache/phase4/`; no test image is loaded. `python -m scripts.evaluate_phase4` then runs a small validation-only probability ensemble grid, class-balanced Logistic Regression and RBF SVM, ExtraTrees, and CNN/ML probability fusion. Candidate tables and confusion analyses are written under `results/phase4/`. These validation comparisons are exploratory model selection; they are not held-out test estimates.
 
+## Phase 5A metadata feasibility probe
+
+`python -m scripts.probe_multimodal` reuses the cached weighted-CNN embeddings and joins only age, sex, and localization by image ID. It fits missing-age imputation, scaling, and categorical encoding on training rows, then evaluates metadata-only Logistic Regression, single-field ablations, full-feature Logistic Regression/SVM/small MLP, and a small validation-only probability-fusion grid. Results and the preprocessing configuration are in `results/phase5_multimodal_probe/`. The probe found no gain of at least 1.5 percentage points over the best image-only validation results, so full multimodal CNN training is not currently justified. The test set remains locked.
+
 ## Reference
 
 A. M. H. Pardede, Solikhun, and Juni Ismail, “Comparative Analysis of EfficientNet-B0 and MobileNetV3-large Architectures for Imbalanced Multiclass Skin Lesion Classification,” *Journal of Image and Graphics*, 2026. DOI: [10.18178/joig.14.4.551-566](https://doi.org/10.18178/joig.14.4.551-566). Its reported performance is not assumed to reproduce on this lesion-grouped split.

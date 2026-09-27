@@ -1,0 +1,51 @@
+{
+  "allowed_predictors": [
+    "age",
+    "sex",
+    "localization"
+  ],
+  "excluded_predictors": [
+    "dx",
+    "dx_type",
+    "lesion_id",
+    "image_id",
+    "split"
+  ],
+  "age": {
+    "train_median": 50.0,
+    "train_mean_after_imputation": 52.01954650878906,
+    "train_std_after_imputation": 16.879505157470703,
+    "missing_train": 41,
+    "missing_validation": 6
+  },
+  "categorical_unknown_policy": "ignore unknown validation category (all-zero one-hot block)",
+  "image_embedding": "1280 post-CBAM/global-pooling features, standardized with train-only mean/std",
+  "sex": {
+    "train_categories": [
+      "female",
+      "male",
+      "unknown"
+    ],
+    "unknown_validation_rows": 0
+  },
+  "localization": {
+    "train_categories": [
+      "abdomen",
+      "acral",
+      "back",
+      "chest",
+      "ear",
+      "face",
+      "foot",
+      "genital",
+      "hand",
+      "lower extremity",
+      "neck",
+      "scalp",
+      "trunk",
+      "unknown",
+      "upper extremity"
+    ],
+    "unknown_validation_rows": 0
+  }
+}

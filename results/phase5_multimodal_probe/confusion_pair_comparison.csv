@@ -1,0 +1,5 @@
+pair,best_image_only_errors,best_multimodal_errors
+mel<->nv,104,101
+bkl<->nv,34,34
+bkl<->mel,32,31
+akiec<->bcc,12,12

@@ -1,0 +1,135 @@
+{
+  "metadata_only": {
+    "method": "metadata only Logistic Regression C=0.3",
+    "accuracy": 0.27877578176979373,
+    "macro_precision": 0.2517860491195019,
+    "macro_recall": 0.26877792546862467,
+    "macro_f1": 0.18589690777597265,
+    "weighted_f1": 0.36998419641198
+  },
+  "ablations": [
+    {
+      "method": "image embeddings only",
+      "classifier": "Logistic Regression",
+      "c": 0.3,
+      "features": "image",
+      "dimension": 1280,
+      "accuracy": 0.8383233532934131,
+      "macro_precision": 0.7692375184560747,
+      "macro_recall": 0.7090491229158024,
+      "macro_f1": 0.7347224551656346,
+      "weighted_f1": 0.8339216146896615
+    },
+    {
+      "method": "image + age",
+      "classifier": "Logistic Regression",
+      "c": 0.3,
+      "features": "image+age",
+      "dimension": 1281,
+      "accuracy": 0.8409846972721224,
+      "macro_precision": 0.7742081785768772,
+      "macro_recall": 0.711342794405725,
+      "macro_f1": 0.7384953529234861,
+      "weighted_f1": 0.836514302826536
+    },
+    {
+      "method": "image + sex",
+      "classifier": "Logistic Regression",
+      "c": 0.3,
+      "features": "image+sex",
+      "dimension": 1283,
+      "accuracy": 0.8396540252827678,
+      "macro_precision": 0.7737949137689263,
+      "macro_recall": 0.7025457012712825,
+      "macro_f1": 0.7329240735918169,
+      "weighted_f1": 0.8348677514369709
+    },
+    {
+      "method": "image + localization",
+      "classifier": "Logistic Regression",
+      "c": 0.3,
+      "features": "image+localization",
+      "dimension": 1295,
+      "accuracy": 0.8389886892880905,
+      "macro_precision": 0.7713376421907839,
+      "macro_recall": 0.7101929833155561,
+      "macro_f1": 0.7365394866520844,
+      "weighted_f1": 0.8344754210606358
+    },
+    {
+      "method": "image + all metadata",
+      "classifier": "Logistic Regression",
+      "c": 0.3,
+      "features": "image+age+sex+localization",
+      "dimension": 1299,
+      "accuracy": 0.8409846972721224,
+      "macro_precision": 0.7729080469845611,
+      "macro_recall": 0.7028297114956505,
+      "macro_f1": 0.7327215872348063,
+      "weighted_f1": 0.8361159795858705
+    }
+  ],
+  "best_multimodal_classifier": {
+    "method": "full small MLP",
+    "family": "MLP",
+    "parameter": "256-64,dropout=0.3,best_epoch=4",
+    "accuracy": 0.8423153692614771,
+    "macro_precision": 0.7878545809870976,
+    "macro_recall": 0.7151960492424422,
+    "macro_f1": 0.7454918512517936,
+    "weighted_f1": 0.8356339733566148
+  },
+  "best_fusion_macro_f1": {
+    "method": "weighted CNN tta + full small MLP | CNN=0.9",
+    "cnn_protocol": "tta",
+    "cnn_weight": 0.9,
+    "multimodal_weight": 0.09999999999999998,
+    "multimodal_classifier": "full small MLP",
+    "accuracy": 0.8456420492348636,
+    "macro_precision": 0.774974431926352,
+    "macro_recall": 0.7684966709616059,
+    "macro_f1": 0.7709512216044716,
+    "weighted_f1": 0.8446095217014827
+  },
+  "best_fusion_accuracy": {
+    "method": "weighted CNN tta + full small MLP | CNN=0.8",
+    "cnn_protocol": "tta",
+    "cnn_weight": 0.8,
+    "multimodal_weight": 0.19999999999999996,
+    "multimodal_classifier": "full small MLP",
+    "accuracy": 0.846307385229541,
+    "macro_precision": 0.7712838955278757,
+    "macro_recall": 0.7586832173243481,
+    "macro_f1": 0.7637399804202419,
+    "weighted_f1": 0.8442929824268244
+  },
+  "best_new_macro_f1": {
+    "method": "weighted CNN tta + full small MLP | CNN=0.9",
+    "cnn_protocol": "tta",
+    "cnn_weight": 0.9,
+    "multimodal_weight": 0.09999999999999998,
+    "multimodal_classifier": "full small MLP",
+    "accuracy": 0.8456420492348636,
+    "macro_precision": 0.774974431926352,
+    "macro_recall": 0.7684966709616059,
+    "macro_f1": 0.7709512216044716,
+    "weighted_f1": 0.8446095217014827
+  },
+  "best_new_accuracy": {
+    "method": "weighted CNN tta + full small MLP | CNN=0.8",
+    "cnn_protocol": "tta",
+    "cnn_weight": 0.8,
+    "multimodal_weight": 0.19999999999999996,
+    "multimodal_classifier": "full small MLP",
+    "accuracy": 0.846307385229541,
+    "macro_precision": 0.7712838955278757,
+    "macro_recall": 0.7586832173243481,
+    "macro_f1": 0.7637399804202419,
+    "weighted_f1": 0.8442929824268244
+  },
+  "best_image_only_macro_f1": 0.7718103328854748,
+  "best_image_only_accuracy": 0.8576180971390552,
+  "runtime_seconds": 23.6,
+  "test_set_used": false,
+  "cnn_trained": false
+}
