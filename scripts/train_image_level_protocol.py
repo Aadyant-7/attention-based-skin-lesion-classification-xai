@@ -13,8 +13,9 @@ import pandas as pd
 import torch
 from sklearn.model_selection import train_test_split
 from torch import nn
+from torchvision import transforms
 
-from src.data import ROOT, SPLIT, LesionDataset, class_counts, image_paths
+from src.data import ROOT, SPLIT, MEAN, STD, LesionDataset, class_counts, image_paths
 from src.losses import class_weights
 from src.models import EfficientNetCBAM
 from src.train import epoch_pass, loader
@@ -22,9 +23,24 @@ from src.utils import atomic_save, seed_everything, write_json
 
 
 RUN_NAME = "image_level_weighted_b0_cbam_v1"
+STRONG_RUN_NAME = "image_level_strong_aug_b0_cbam_v1"
 SPLIT_PATH = ROOT / "data/splits/exploratory/image_level_dev_v1.csv"
-RUN_DIR = ROOT / "results/exploratory/runs" / RUN_NAME
-CHECKPOINT_DIR = ROOT / "checkpoints/exploratory" / RUN_NAME
+
+
+def training_dataset(rows, paths, recipe):
+    dataset = LesionDataset(rows, paths, training=True, size=224)
+    if recipe == "strong_aug":
+        dataset.transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.RandomHorizontalFlip(p=.5),
+            transforms.RandomVerticalFlip(p=.5),
+            transforms.RandomRotation(20),
+            transforms.RandomAffine(degrees=0, translate=(.05, .05), scale=(.95, 1.05)),
+            transforms.ColorJitter(brightness=.12, contrast=.12, saturation=.10, hue=.02),
+            transforms.ToTensor(),
+            transforms.Normalize(MEAN, STD),
+        ])
+    return dataset
 
 
 def make_or_check_split():
@@ -72,7 +88,11 @@ def make_or_check_split():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--preflight", action="store_true")
+    parser.add_argument("--recipe", choices=("baseline", "strong_aug"), default="baseline")
     args = parser.parse_args()
+    run_name = RUN_NAME if args.recipe == "baseline" else STRONG_RUN_NAME
+    run_dir = ROOT / "results/exploratory/runs" / run_name
+    checkpoint_dir = ROOT / "checkpoints/exploratory" / run_name
     config = json.loads((ROOT / "configs/first_run.json").read_text(encoding="utf-8"))
     seed_everything(config["seed"])
     train, val, diagnostics = make_or_check_split()
@@ -81,7 +101,7 @@ def main():
         paths, duplicates = image_paths()
         if duplicates or len(paths) < 10015:
             raise ValueError("Missing or duplicate image paths")
-        sample = LesionDataset(train.head(2), paths, training=True, size=config["image_size"])
+        sample = training_dataset(train.head(2), paths, args.recipe)
         x, _ = sample[0]
         assert tuple(x.shape) == (3, 224, 224)
         if not torch.cuda.is_available():
@@ -94,14 +114,14 @@ def main():
         return
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA unavailable")
-    if (CHECKPOINT_DIR / "latest.pt").exists():
+    if (checkpoint_dir / "latest.pt").exists():
         raise FileExistsError("This probe has already started; refusing to overwrite checkpoints")
     torch.backends.cudnn.benchmark = True
     device = torch.device("cuda")
     paths, duplicates = image_paths()
     if duplicates or len(paths) < 10015:
         raise ValueError("Missing or duplicate image paths")
-    train_batches = loader(LesionDataset(train, paths, training=True, size=224), 64, 2, shuffle=True)
+    train_batches = loader(training_dataset(train, paths, args.recipe), 64, 2, shuffle=True)
     val_batches = loader(LesionDataset(val, paths, size=224), 64, 2)
     model = EfficientNetCBAM(pretrained=True).to(device)
     weights = class_weights(class_counts(train)).to(device)
@@ -112,10 +132,10 @@ def main():
     ], weight_decay=config["weight_decay"])
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="max", factor=.5, patience=2)
     scaler = torch.amp.GradScaler("cuda")
-    RUN_DIR.mkdir(parents=True, exist_ok=True)
-    CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
-    write_json(RUN_DIR / "config.json", {**config, "run_name": RUN_NAME, "protocol": diagnostics})
-    history = RUN_DIR / "history.csv"
+    run_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    write_json(run_dir / "config.json", {**config, "run_name": run_name, "recipe": args.recipe, "protocol": diagnostics})
+    history = run_dir / "history.csv"
     best_f1, best_epoch, best_accuracy, stale = -1., 0, 0., 0
     started = time.monotonic()
     for epoch in range(1, config["epochs"] + 1):
@@ -140,10 +160,10 @@ def main():
         payload = {"model": model.state_dict(), "optimizer": optimizer.state_dict(), "scheduler": scheduler.state_dict(),
                    "scaler": scaler.state_dict(), "epoch": epoch, "best_epoch": best_epoch, "best_f1": best_f1,
                    "config": config, "protocol": diagnostics}
-        atomic_save(payload, CHECKPOINT_DIR / "latest.pt")
+        atomic_save(payload, checkpoint_dir / "latest.pt")
         if improved:
-            atomic_save(payload, CHECKPOINT_DIR / "best.pt")
-            write_json(RUN_DIR / "validation_metrics.json", val_metrics)
+            atomic_save(payload, checkpoint_dir / "best.pt")
+            write_json(run_dir / "validation_metrics.json", val_metrics)
         print(f"epoch={epoch} train_acc={train_metrics['accuracy']:.4f} val_acc={val_metrics['accuracy']:.4f} val_macro_f1={val_metrics['macro_f1']:.4f} best_f1={best_f1:.4f} stale={stale}", flush=True)
         if stale >= config["patience"]:
             print("Early stopping", flush=True)
@@ -152,11 +172,11 @@ def main():
         if epoch >= 12 and best_accuracy < .82:
             print("Kill criterion: best accuracy below 0.82 after 12 epochs", flush=True)
             break
-    best = json.loads((RUN_DIR / "validation_metrics.json").read_text(encoding="utf-8"))
-    write_json(ROOT / "results/exploratory" / (RUN_NAME + "_summary.json"), {
-        "run_name": RUN_NAME, "protocol": diagnostics, "epochs": epoch, "best_epoch": best_epoch,
+    best = json.loads((run_dir / "validation_metrics.json").read_text(encoding="utf-8"))
+    write_json(ROOT / "results/exploratory" / (run_name + "_summary.json"), {
+        "run_name": run_name, "recipe": args.recipe, "protocol": diagnostics, "epochs": epoch, "best_epoch": best_epoch,
         "best_validation": best, "runtime_seconds": round(time.monotonic()-started, 1),
-        "checkpoint": (CHECKPOINT_DIR / "best.pt").relative_to(ROOT).as_posix(),
+        "checkpoint": (checkpoint_dir / "best.pt").relative_to(ROOT).as_posix(),
         "status": "completed", "strict_test_evaluated": False,
     })
     print("Training complete", flush=True)
