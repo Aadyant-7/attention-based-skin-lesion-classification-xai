@@ -58,6 +58,10 @@ The classifier's 512 and 128 hidden dimensions are this project's implementation
 
 `python -m scripts.audit_image_pipeline` inspects original training-image dimensions and a seeded 150-image black-border sample without changing the training pipeline. `python -m scripts.mc_dropout_validation` reuses cached weighted-CNN validation embeddings, enables only classifier Dropout at inference, and compares 10/20/30-pass probability averages with and without horizontal flip. It also performs one aspect-preserving resize plus center-crop diagnostic. Results are in `results/phase5b_inference_audit/`; the held-out test set is not accessed.
 
+## Phase 5C post-hoc correction
+
+`python -m scripts.prior_correction_validation` reuses cached validation probabilities. It computes the natural target prior from original training counts only, then applies a coarse lambda grid for oversampled-model prior correction and a separately labeled exploratory weighted-CE cost correction. Full per-class metrics and confusion matrices are in `results/phase5c_prior_correction/`. The highest validation accuracy rose slightly through more majority-class predictions while macro F1 declined; this is not evidence of balanced improvement. No model is trained and the test set remains locked.
+
 ## Reference
 
 A. M. H. Pardede, Solikhun, and Juni Ismail, “Comparative Analysis of EfficientNet-B0 and MobileNetV3-large Architectures for Imbalanced Multiclass Skin Lesion Classification,” *Journal of Image and Graphics*, 2026. DOI: [10.18178/joig.14.4.551-566](https://doi.org/10.18178/joig.14.4.551-566). Its reported performance is not assumed to reproduce on this lesion-grouped split.

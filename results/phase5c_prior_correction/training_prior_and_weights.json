@@ -1,0 +1,40 @@
+{
+  "train_counts": {
+    "akiec": 228,
+    "bcc": 359,
+    "bkl": 769,
+    "df": 80,
+    "mel": 779,
+    "nv": 4694,
+    "vasc": 100
+  },
+  "target_prior": {
+    "akiec": 0.03252960479383649,
+    "bcc": 0.051219860179768865,
+    "bkl": 0.10971607932658012,
+    "df": 0.011413896418889999,
+    "mel": 0.11114281637894136,
+    "nv": 0.6697103723783706,
+    "vasc": 0.014267370523612499
+  },
+  "oversampled_source_prior": {
+    "akiec": 0.14285714285714285,
+    "bcc": 0.14285714285714285,
+    "bkl": 0.14285714285714285,
+    "df": 0.14285714285714285,
+    "mel": 0.14285714285714285,
+    "nv": 0.14285714285714285,
+    "vasc": 0.14285714285714285
+  },
+  "weighted_ce_class_weights": {
+    "akiec": 1.1109360456466675,
+    "bcc": 0.8853382468223572,
+    "bkl": 0.6049135327339172,
+    "df": 1.8754758834838867,
+    "mel": 0.6010183691978455,
+    "nv": 0.24484144151210785,
+    "vasc": 1.6774765253067017
+  },
+  "oversampled_log_shift": "log(target_prior) - log(uniform_source_prior)",
+  "weighted_log_shift": "-log(weight); exploratory cost correction, not exact Bayesian calibration"
+}
