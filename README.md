@@ -1,0 +1,43 @@
+# Attention-Based Skin Lesion Classification with Explainable AI
+
+**Status:** Phase 1 implementation. Performance pending experimental evaluation. No test-set result is reported.
+
+This project classifies seven HAM10000 skin lesion categories from **images only**. It fine-tunes an ImageNet-pretrained EfficientNet-B0, applies a Convolutional Block Attention Module (CBAM) to the final spatial feature map, then uses global pooling and a seven-logit classifier. CBAM learns channel and spatial emphasis during prediction. Grad-CAM is a later explanation of a prediction; it does not improve accuracy.
+
+## Dataset and leakage policy
+
+Obtain HAM10000 from its authorized distribution and place the original `HAM10000_metadata.csv`, `HAM10000_images_part_1/`, and `HAM10000_images_part_2/` under `data/raw/HAM10000/`. The raw images are excluded from Git because of their size and dataset licensing. Metadata supplies labels, image IDs, and `lesion_id` for grouping; age, sex, and localization are not model inputs.
+
+Run `python -m scripts.prepare_data` once. This writes `data/splits/split_assignments.csv` and `label_mapping.json`. The fixed seed 42 split uses `StratifiedGroupKFold` with 20 folds: folds 0–2 are test, 3–5 validation, and 6–19 training. Every image of a lesion stays in one partition. The saved split is reused, checked against the raw metadata, and never regenerated silently. Training and model selection use only train and validation. Do not inspect test metrics until the configuration is locked.
+
+HAM10000 is imbalanced. The first experiment uses training-frequency-only class-weighted cross entropy, with weight `sqrt(N / (K * n_c))` normalized to mean 1. This moderates minority emphasis while retaining natural training sample frequency. `src/losses.py` also supports training-only `WeightedRandomSampler` with ordinary cross entropy for a later comparison. Validation and test retain their original distributions.
+
+## Setup and run
+
+On Windows, create or activate `.venv`, install a CUDA-capable PyTorch and torchvision pair appropriate for the machine from the [official PyTorch installer](https://pytorch.org/get-started/locally/), then install `requirements.txt`. The current project environment uses PyTorch 2.11.0 and torchvision 0.26.0 with CUDA 12.8. Check `python -c "import torch; print(torch.cuda.is_available())"` before training.
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.prepare_data
+.\.venv\Scripts\python.exe -m scripts.sanity
+.\.venv\Scripts\python.exe -m src.train --config configs/first_run.json
+```
+
+If interrupted, run the same training command or add `--resume`. A compatible `latest.pt` is automatically resumed; `--resume` requires it. Best checkpoint selection maximizes validation macro F1. ReduceLROnPlateau responds to validation macro F1 and early stopping uses five non-improving epochs. The first run is limited to 20 epochs. AdamW uses a `3e-5` backbone learning rate, `1e-4` for CBAM/head, and `1e-4` weight decay. Batch size 64 was checked on the RTX 4060 (about 2.9 GiB peak allocated in a synthetic AMP optimizer step). Input is 224×224 with ImageNet normalization; only horizontal flip at `p=0.5` augments training. Validation is deterministic.
+
+After configuration lock in a later phase, explicit test evaluation is available with `python -m src.evaluate --checkpoint <best.pt> --output <metrics.json> --confirm-locked-test`. Grad-CAM examples can be produced with `python -m src.gradcam --checkpoint <best.pt> --image <image.jpg> --output <overlay.png>`.
+
+## Repository layout
+
+- `src/`: image pipeline, EfficientNet-CBAM, losses, training, metrics, final evaluation, Grad-CAM.
+- `configs/first_run.json`: first experiment configuration.
+- `scripts/`: data verification and sanity tests.
+- `data/splits/`: fixed assignments and deterministic class mapping.
+- `results/runs/`: run config, history, logs, validation metrics; large/transient run data stays local.
+- `checkpoints/`: local latest and best training state.
+- `docs/private_reference/`, `notebooks/legacy/`, `archive/`: local historical material excluded from public Git.
+
+The classifier's 512 and 128 hidden dimensions are this project's implementation choice. They are not attributed to the reference paper.
+
+## Reference
+
+A. M. H. Pardede, Solikhun, and Juni Ismail, “Comparative Analysis of EfficientNet-B0 and MobileNetV3-large Architectures for Imbalanced Multiclass Skin Lesion Classification,” *Journal of Image and Graphics*, 2026. DOI: [10.18178/joig.14.4.551-566](https://doi.org/10.18178/joig.14.4.551-566). Its reported performance is not assumed to reproduce on this lesion-grouped split.
