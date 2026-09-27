@@ -40,6 +40,12 @@ After configuration lock in a later phase, explicit test evaluation is available
 
 The classifier's 512 and 128 hidden dimensions are this project's implementation choice. They are not attributed to the reference paper.
 
+## Phase 3 validation and focal-loss experiment
+
+`python -m scripts.compare_validation_inference` compares normal inference with horizontal-flip probability averaging on the **saved validation partition only** for the two existing best checkpoints. It writes `results/validation_inference_comparison.csv` and JSON files containing per-class metrics and confusion matrices. The experiment rationale and observed error patterns are in `results/validation_error_analysis.md`.
+
+`configs/focal_v1.json` defines one controlled EfficientNet-B0 + CBAM run with the same split, transforms, optimizer, learning rates, and batch size as the weighted baseline. It uses the original 7,009 training references per epoch (no oversampling). For true-class probability `p_y`, its loss is the batch mean of `-alpha_y (1-p_y)^2 log(p_y)`, where `alpha_y` is the Phase 1 square-root inverse-frequency weight recomputed from training counts. This tests whether downweighting easy predictions improves validation macro F1; no improvement is assumed. Launch with `python -m src.train --config configs/focal_v1.json` after `python -m scripts.preflight_focal`.
+
 ## Reference
 
 A. M. H. Pardede, Solikhun, and Juni Ismail, “Comparative Analysis of EfficientNet-B0 and MobileNetV3-large Architectures for Imbalanced Multiclass Skin Lesion Classification,” *Journal of Image and Graphics*, 2026. DOI: [10.18178/joig.14.4.551-566](https://doi.org/10.18178/joig.14.4.551-566). Its reported performance is not assumed to reproduce on this lesion-grouped split.

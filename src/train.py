@@ -12,7 +12,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 
 from .data import ROOT, SPLIT, CLASSES, LesionDataset, class_counts, create_or_load_split, oversample_training_rows
-from .losses import balanced_sampler, class_weights
+from .losses import MulticlassFocalLoss, balanced_sampler, class_weights
 from .metrics import classification_metrics
 from .models import EfficientNetCBAM
 from .utils import atomic_save, restore_rng, rng_state, seed_everything, write_json
@@ -92,12 +92,14 @@ def main():
     val_rows = rows.loc[rows.split == "val"]
     counts = class_counts(train_rows)
     strategy = config["imbalance"]
-    if strategy not in {"class_weighted", "balanced_sampler", "random_oversampling"}:
+    if strategy not in {"class_weighted", "balanced_sampler", "random_oversampling", "focal"}:
         raise ValueError(strategy)
     sampler = balanced_sampler(train_rows.label.to_numpy(), config["seed"]) if strategy == "balanced_sampler" else None
     effective_train_rows = oversample_training_rows(train_rows, config["seed"]) if strategy == "random_oversampling" else train_rows
     effective_counts = class_counts(effective_train_rows)
-    criterion = nn.CrossEntropyLoss(weight=class_weights(counts).to(device) if strategy == "class_weighted" else None)
+    alpha = class_weights(counts)
+    criterion = (MulticlassFocalLoss(alpha, gamma=config["focal_gamma"]).to(device)
+                 if strategy == "focal" else nn.CrossEntropyLoss(weight=alpha.to(device) if strategy == "class_weighted" else None))
     train_batches = loader(LesionDataset(effective_train_rows, paths, training=True, size=config["image_size"]), config["batch_size"], config["workers"], shuffle=sampler is None, sampler=sampler)
     val_batches = loader(LesionDataset(val_rows, paths, size=config["image_size"]), config["batch_size"], config["workers"])
     model = EfficientNetCBAM(pretrained=True).to(device)
@@ -128,19 +130,22 @@ def main():
         print(f"Checkpoint found. Saved epoch: {saved['epoch']}. Best validation metric: {best_f1:.4f}. Resuming from epoch: {start}. Next epoch: {start}", flush=True)
     elif args.resume:
         raise FileNotFoundError(latest)
-    print(f"CUDA: {torch.cuda.get_device_name(0)} | batch={config['batch_size']} | original_train={len(train_rows)} effective_train={len(effective_train_rows)} val={len(val_rows)} | strategy={strategy} | weights={class_weights(counts).tolist() if strategy == 'class_weighted' else 'none'}", flush=True)
+    print(f"CUDA: {torch.cuda.get_device_name(0)} | batch={config['batch_size']} | original_train={len(train_rows)} effective_train={len(effective_train_rows)} val={len(val_rows)} | strategy={strategy} | alpha/weights={alpha.tolist() if strategy in {'class_weighted', 'focal'} else 'none'}", flush=True)
     print(f"Effective training class counts: {dict(zip(CLASSES, effective_counts.tolist()))}", flush=True)
     record = {"timestamp": datetime.now(timezone.utc).isoformat(), "run_name": config["run_name"],
         "variant": "EfficientNet-B0", "image_size": config["image_size"], "pretrained": True, "cbam": "reduction=16,kernel=7",
         "classifier_dimensions": "1280-512-128-7", "dropout": "0.3-0.2-0.1", "imbalance": strategy,
-        "loss": "weighted CE" if strategy == "class_weighted" else "CE", "weight_formula": "sqrt(N/(K*n_c))/mean" if strategy == "class_weighted" else "none",
+        "loss": "focal" if strategy == "focal" else "weighted CE" if strategy == "class_weighted" else "CE",
+        "weight_formula": "sqrt(N/(K*n_c))/mean" if strategy in {"class_weighted", "focal"} else "none",
+        "focal_gamma": config.get("focal_gamma", "") if strategy == "focal" else "",
+        "alpha_class_weights": json.dumps(dict(zip(CLASSES, alpha.tolist()))) if strategy == "focal" else "",
         "augmentation": "horizontal flip p=0.5", "optimizer": "AdamW", "backbone_lr": config["backbone_lr"],
         "head_lr": config["head_lr"], "weight_decay": config["weight_decay"], "batch_size": config["batch_size"],
         "epochs": config["epochs"], "effective_samples_per_epoch": len(effective_train_rows),
         "effective_class_counts": json.dumps(dict(zip(CLASSES, effective_counts.tolist()))),
         "best_epoch": "", "val_accuracy": "", "val_macro_precision": "", "val_macro_recall": "",
         "val_macro_f1": "", "val_loss": "", "runtime_seconds": "", "checkpoint": best.relative_to(ROOT).as_posix(), "status": "running",
-        "notes": "Validation selected; test untouched"}
+        "notes": (config.get("rationale", "") + " Validation selected; test untouched").strip()}
     upsert_experiment(record)
     started = time.monotonic()
     history = run / "history.csv"
@@ -178,7 +183,7 @@ def main():
         "val_macro_precision": best_metrics["macro_precision"], "val_macro_recall": best_metrics["macro_recall"],
         "val_macro_f1": best_metrics["macro_f1"], "val_loss": best_metrics["loss"],
         "runtime_seconds": round(time.monotonic() - started, 1), "checkpoint": best.relative_to(ROOT).as_posix(), "status": "completed",
-        "notes": "Validation selected; test untouched"})
+        "notes": (config.get("rationale", "") + " Validation selected; test untouched").strip()})
     upsert_experiment(record)
     print("Training complete", flush=True)
 
