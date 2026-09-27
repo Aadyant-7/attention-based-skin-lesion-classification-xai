@@ -5,6 +5,7 @@ docs/private_reference/
 notebooks/legacy/
 checkpoints/
 results/runs/
+results/exploratory/runs/
 gradcam_outputs/
 archive/
 __pycache__/
