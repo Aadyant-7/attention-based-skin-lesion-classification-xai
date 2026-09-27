@@ -2,6 +2,7 @@
 import argparse
 import csv
 import json
+import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -48,19 +49,29 @@ def epoch_pass(model, batches, criterion, device, optimizer=None, scaler=None):
 
 
 def upsert_experiment(row):
+    run_name = row.get("run_name")
+    if not isinstance(run_name, str) or not run_name.strip():
+        raise ValueError("Experiment row requires a nonempty run_name")
     path = ROOT / "results/experiments.csv"
     path.parent.mkdir(parents=True, exist_ok=True)
     existing = []
     if path.exists():
         with path.open(newline="", encoding="utf-8") as file:
             existing = list(csv.DictReader(file))
-    existing = [item for item in existing if item["run_name"] != row["run_name"]]
+    if any(None in item for item in existing):
+        raise ValueError(f"Malformed experiment CSV with extra columns: {path}")
+    existing = [item for item in existing if item.get("run_name") != run_name]
     existing.append(row)
     fields = list(dict.fromkeys(key for item in existing for key in item))
-    with path.open("w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=fields)
-        writer.writeheader()
-        writer.writerows(existing)
+    temp = path.with_suffix(".csv.tmp")
+    try:
+        with temp.open("w", newline="", encoding="utf-8") as file:
+            writer = csv.DictWriter(file, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(existing)
+        os.replace(temp, path)
+    finally:
+        temp.unlink(missing_ok=True)
 
 
 def main():
@@ -121,7 +132,7 @@ def main():
         "augmentation": "horizontal flip p=0.5", "optimizer": "AdamW", "backbone_lr": config["backbone_lr"],
         "head_lr": config["head_lr"], "weight_decay": config["weight_decay"], "batch_size": config["batch_size"],
         "epochs": config["epochs"], "best_epoch": "", "val_accuracy": "", "val_macro_precision": "", "val_macro_recall": "",
-        "val_macro_f1": "", "val_loss": "", "runtime_seconds": "", "checkpoint": str(best), "status": "running",
+        "val_macro_f1": "", "val_loss": "", "runtime_seconds": "", "checkpoint": best.relative_to(ROOT).as_posix(), "status": "running",
         "notes": "Validation selected; test untouched"}
     upsert_experiment(record)
     started = time.monotonic()
@@ -136,14 +147,14 @@ def main():
             best_f1, best_epoch, stale = score, epoch, 0
         else:
             stale += 1
-        record = {"epoch": epoch, "train_loss": train_metrics["loss"], "train_accuracy": train_metrics["accuracy"],
+        history_record = {"epoch": epoch, "train_loss": train_metrics["loss"], "train_accuracy": train_metrics["accuracy"],
                   "val_loss": val_metrics["loss"], "val_accuracy": val_metrics["accuracy"],
                   "val_macro_precision": val_metrics["macro_precision"], "val_macro_recall": val_metrics["macro_recall"], "val_macro_f1": score}
         with history.open("a", newline="", encoding="utf-8") as file:
-            writer = csv.DictWriter(file, fieldnames=list(record))
+            writer = csv.DictWriter(file, fieldnames=list(history_record))
             if file.tell() == 0:
                 writer.writeheader()
-            writer.writerow(record)
+            writer.writerow(history_record)
         payload = {"model": model.state_dict(), "optimizer": optimizer.state_dict(), "scheduler": scheduler.state_dict(),
                    "scaler": scaler.state_dict(), "epoch": epoch, "best_f1": best_f1, "best_epoch": best_epoch,
                    "stale": stale, "config": config, "rng": rng_state()}
@@ -159,7 +170,7 @@ def main():
     record.update({"best_epoch": best_epoch, "val_accuracy": best_metrics["accuracy"],
         "val_macro_precision": best_metrics["macro_precision"], "val_macro_recall": best_metrics["macro_recall"],
         "val_macro_f1": best_metrics["macro_f1"], "val_loss": best_metrics["loss"],
-        "runtime_seconds": round(time.monotonic() - started, 1), "checkpoint": str(best), "status": "completed",
+        "runtime_seconds": round(time.monotonic() - started, 1), "checkpoint": best.relative_to(ROOT).as_posix(), "status": "completed",
         "notes": "Validation selected; test untouched"})
     upsert_experiment(record)
     print("Training complete", flush=True)
