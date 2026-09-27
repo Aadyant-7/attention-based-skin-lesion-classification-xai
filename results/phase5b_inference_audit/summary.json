@@ -1,0 +1,24 @@
+{
+  "best_mc_dropout": {
+    "method": "MC dropout 30 passes + flip TTA",
+    "passes": 30,
+    "flip_tta": true,
+    "accuracy": 0.8416500332667998,
+    "macro_precision": 0.7704155553940278,
+    "macro_recall": 0.7653771760112715,
+    "macro_f1": 0.7672831786435367,
+    "weighted_f1": 0.8416784961813926
+  },
+  "dropout_layers_enabled": 3,
+  "aspect_ratio_diagnostic": {
+    "method": "aspect-preserving resize + center crop diagnostic",
+    "accuracy": 0.8163672654690619,
+    "macro_precision": 0.7472257265092005,
+    "macro_recall": 0.699360235998034,
+    "macro_f1": 0.7158782015978372,
+    "weighted_f1": 0.8195356447461513
+  },
+  "runtime_seconds": 25.6,
+  "cnn_trained": false,
+  "test_set_used": false
+}

@@ -54,6 +54,10 @@ The classifier's 512 and 128 hidden dimensions are this project's implementation
 
 `python -m scripts.probe_multimodal` reuses the cached weighted-CNN embeddings and joins only age, sex, and localization by image ID. It fits missing-age imputation, scaling, and categorical encoding on training rows, then evaluates metadata-only Logistic Regression, single-field ablations, full-feature Logistic Regression/SVM/small MLP, and a small validation-only probability-fusion grid. Results and the preprocessing configuration are in `results/phase5_multimodal_probe/`. The probe found no gain of at least 1.5 percentage points over the best image-only validation results, so full multimodal CNN training is not currently justified. The test set remains locked.
 
+## Phase 5B input and MC-dropout audit
+
+`python -m scripts.audit_image_pipeline` inspects original training-image dimensions and a seeded 150-image black-border sample without changing the training pipeline. `python -m scripts.mc_dropout_validation` reuses cached weighted-CNN validation embeddings, enables only classifier Dropout at inference, and compares 10/20/30-pass probability averages with and without horizontal flip. It also performs one aspect-preserving resize plus center-crop diagnostic. Results are in `results/phase5b_inference_audit/`; the held-out test set is not accessed.
+
 ## Reference
 
 A. M. H. Pardede, Solikhun, and Juni Ismail, “Comparative Analysis of EfficientNet-B0 and MobileNetV3-large Architectures for Imbalanced Multiclass Skin Lesion Classification,” *Journal of Image and Graphics*, 2026. DOI: [10.18178/joig.14.4.551-566](https://doi.org/10.18178/joig.14.4.551-566). Its reported performance is not assumed to reproduce on this lesion-grouped split.
