@@ -10,7 +10,7 @@ Obtain HAM10000 from its authorized distribution and place the original `HAM1000
 
 Run `python -m scripts.prepare_data` once. This writes `data/splits/split_assignments.csv` and `label_mapping.json`. The fixed seed 42 split uses `StratifiedGroupKFold` with 20 folds: folds 0–2 are test, 3–5 validation, and 6–19 training. Every image of a lesion stays in one partition. The saved split is reused, checked against the raw metadata, and never regenerated silently. Training and model selection use only train and validation. Do not inspect test metrics until the configuration is locked.
 
-HAM10000 is imbalanced. The first experiment uses training-frequency-only class-weighted cross entropy, with weight `sqrt(N / (K * n_c))` normalized to mean 1. This moderates minority emphasis while retaining natural training sample frequency. `src/losses.py` also supports training-only `WeightedRandomSampler` with ordinary cross entropy for a later comparison. Validation and test retain their original distributions.
+HAM10000 is imbalanced. The first experiment uses training-frequency-only class-weighted cross entropy, with weight `sqrt(N / (K * n_c))` normalized to mean 1. This moderates minority emphasis while retaining natural training sample frequency. The controlled second experiment repeats training image references with seed 42 until each class matches the majority count and uses ordinary unweighted cross entropy. Repeated references receive fresh random training augmentation when loaded; no image files are copied. Validation and test retain their original distributions.
 
 ## Setup and run
 
@@ -20,6 +20,8 @@ On Windows, create or activate `.venv`, install a CUDA-capable PyTorch and torch
 .\.venv\Scripts\python.exe -m scripts.prepare_data
 .\.venv\Scripts\python.exe -m scripts.sanity
 .\.venv\Scripts\python.exe -m src.train --config configs/first_run.json
+.\.venv\Scripts\python.exe -m scripts.preflight_oversampling
+.\.venv\Scripts\python.exe -m src.train --config configs/oversampled_v1.json
 ```
 
 If interrupted, run the same training command or add `--resume`. A compatible `latest.pt` is automatically resumed; `--resume` requires it. Best checkpoint selection maximizes validation macro F1. ReduceLROnPlateau responds to validation macro F1 and early stopping uses five non-improving epochs. The first run is limited to 20 epochs. AdamW uses a `3e-5` backbone learning rate, `1e-4` for CBAM/head, and `1e-4` weight decay. Batch size 64 was checked on the RTX 4060 (about 2.9 GiB peak allocated in a synthetic AMP optimizer step). Input is 224×224 with ImageNet normalization; only horizontal flip at `p=0.5` augments training. Validation is deterministic.

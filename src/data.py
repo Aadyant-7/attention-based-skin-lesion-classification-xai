@@ -117,3 +117,25 @@ class LesionDataset(Dataset):
 
 def class_counts(rows):
     return np.bincount(rows.label.to_numpy(), minlength=len(CLASSES))
+
+
+def oversample_training_rows(train_rows, seed=42):
+    """Repeat training metadata rows to the majority count; never copy image files."""
+    if train_rows.empty or set(train_rows.split) != {"train"}:
+        raise ValueError("Oversampling accepts training rows only")
+    source = train_rows.reset_index(drop=True)
+    counts = class_counts(source)
+    if np.any(counts == 0):
+        raise ValueError("Every class must occur in training")
+    target = int(counts.max())
+    random = np.random.default_rng(seed)
+    selected = []
+    for label in range(len(CLASSES)):
+        indices = np.flatnonzero(source.label.to_numpy() == label)
+        selected.extend(indices.tolist())
+        selected.extend(random.choice(indices, size=target - len(indices), replace=True).tolist())
+    random.shuffle(selected)
+    result = source.iloc[selected].reset_index(drop=True)
+    if len(result) != target * len(CLASSES) or not np.all(class_counts(result) == target):
+        raise AssertionError("Oversampled class distribution is not balanced")
+    return result
