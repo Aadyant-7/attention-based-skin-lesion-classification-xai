@@ -46,6 +46,10 @@ The classifier's 512 and 128 hidden dimensions are this project's implementation
 
 `configs/focal_v1.json` defines one controlled EfficientNet-B0 + CBAM run with the same split, transforms, optimizer, learning rates, and batch size as the weighted baseline. It uses the original 7,009 training references per epoch (no oversampling). For true-class probability `p_y`, its loss is the batch mean of `-alpha_y (1-p_y)^2 log(p_y)`, where `alpha_y` is the Phase 1 square-root inverse-frequency weight recomputed from training counts. This tests whether downweighting easy predictions improves validation macro F1; no improvement is assumed. Launch with `python -m src.train --config configs/focal_v1.json` after `python -m scripts.preflight_focal`.
 
+## Phase 4 frozen-feature validation
+
+`python -m scripts.cache_phase4_features` caches validation probabilities from the three existing best checkpoints and 1,280-dimensional post-CBAM/global-pooling embeddings from the weighted checkpoint for the original train and validation images. The cache is local under `.cache/phase4/`; no test image is loaded. `python -m scripts.evaluate_phase4` then runs a small validation-only probability ensemble grid, class-balanced Logistic Regression and RBF SVM, ExtraTrees, and CNN/ML probability fusion. Candidate tables and confusion analyses are written under `results/phase4/`. These validation comparisons are exploratory model selection; they are not held-out test estimates.
+
 ## Reference
 
 A. M. H. Pardede, Solikhun, and Juni Ismail, “Comparative Analysis of EfficientNet-B0 and MobileNetV3-large Architectures for Imbalanced Multiclass Skin Lesion Classification,” *Journal of Image and Graphics*, 2026. DOI: [10.18178/joig.14.4.551-566](https://doi.org/10.18178/joig.14.4.551-566). Its reported performance is not assumed to reproduce on this lesion-grouped split.
