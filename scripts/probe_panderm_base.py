@@ -66,8 +66,8 @@ def load_backbone(device):
     return model.to(device).eval()
 
 
-def features(model, rows, paths, split, device):
-    path = CACHE / f"{split}.npz"
+def features(model, rows, paths, split, device, cache_dir=CACHE):
+    path = cache_dir / f"{split}.npz"
     expected_ids = rows.image_id.to_numpy(dtype=str)
     expected_y = rows.label.to_numpy()
     if path.exists():
@@ -89,7 +89,7 @@ def features(model, rows, paths, split, device):
     x = np.concatenate(vectors)
     if x.shape != (len(rows), 768) or not np.isfinite(x).all():
         raise ValueError("Invalid extracted PanDerm features")
-    CACHE.mkdir(parents=True, exist_ok=True)
+    cache_dir.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(path, ids=expected_ids, y=expected_y, features=x)
     return x
 

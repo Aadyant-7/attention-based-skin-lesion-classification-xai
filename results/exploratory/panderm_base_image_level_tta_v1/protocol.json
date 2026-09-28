@@ -1,0 +1,12 @@
+{
+  "strict_test_evaluated": false,
+  "model_weights_updated": false,
+  "validation_images": 1503,
+  "views": [
+    "normal",
+    "hflip",
+    "vflip",
+    "hvflip"
+  ],
+  "selection_warning": "Six candidates inspected on exploratory image-level validation; shared lesions and validation selection remain"
+}

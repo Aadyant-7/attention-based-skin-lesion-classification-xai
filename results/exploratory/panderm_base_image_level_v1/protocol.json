@@ -1,0 +1,12 @@
+{
+  "split": "data/splits/exploratory/image_level_dev_v1.csv",
+  "strict_test_images_evaluated": 0,
+  "train_images": 7009,
+  "validation_images": 1503,
+  "train_validation_shared_lesions": 563,
+  "validation_images_with_train_lesion": 596,
+  "backbone_updated": false,
+  "new_full_network_training_epochs": 0,
+  "validation_warning": "Image-level exploratory validation with shared lesions; selected among fixed candidates",
+  "runtime_seconds": 75.77797102928162
+}

@@ -1,6 +1,6 @@
 # Attention-Based Skin Lesion Classification with Explainable AI
 
-**Status:** Phase 1 implementation. Performance pending experimental evaluation. No test-set result is reported.
+**Status:** Phase 1 complete; validation experiments continue on the separate `accuracy-exploration` branch. No locked test-set result is reported.
 
 This project classifies seven HAM10000 skin lesion categories from **images only**. It fine-tunes an ImageNet-pretrained EfficientNet-B0, applies a Convolutional Block Attention Module (CBAM) to the final spatial feature map, then uses global pooling and a seven-logit classifier. CBAM learns channel and spatial emphasis during prediction. Grad-CAM is a later explanation of a prediction; it does not improve accuracy.
 
@@ -61,6 +61,10 @@ The classifier's 512 and 128 hidden dimensions are this project's implementation
 ## Phase 5C post-hoc correction
 
 `python -m scripts.prior_correction_validation` reuses cached validation probabilities. It computes the natural target prior from original training counts only, then applies a coarse lambda grid for oversampled-model prior correction and a separately labeled exploratory weighted-CE cost correction. Full per-class metrics and confusion matrices are in `results/phase5c_prior_correction/`. The highest validation accuracy rose slightly through more majority-class predictions while macro F1 declined; this is not evidence of balanced improvement. No model is trained and the test set remains locked.
+
+## Accuracy exploration
+
+The [accuracy leaderboard](docs/accuracy_leaderboard.md) keeps the strict lesion-disjoint and exploratory image-level protocols separate. The highest numeric validation accuracy is **90.75%** with a PanDerm/B0 orientation ensemble on the exploratory split, where some validation images share lesions with training. The best strict validation accuracy is **87.69%**. Neither is a final test score. Method details, saved checkpoint locations, and the single-image predictor are in the [PanDerm follow-up](docs/panderm_image_level_followup.md). The [base-paper audit](docs/base_paper_protocol_audit.md) explains why its reported 98.86% is not directly comparable to an untouched original-image test set.
 
 ## Reference
 

@@ -1,0 +1,7 @@
+method,accuracy,macro_f1
+b0_four_control,0.8815701929474384,0.8280078815327692
+panderm_svc_tta4,0.8908848968729208,0.8152061363998612
+b0_four_plus_svc_tta_five_equal,0.89354624085163,0.8399777941220716
+b0_four_plus_svc_tta_plus_linear_tta_six_equal,0.8968729208250167,0.839462312601958
+b0_four_plus_four_svc_views_eight_equal,0.9075182967398536,0.8573011134804184
+b0_four_plus_svc_tta_plus_linear_normal_six_equal,0.8962075848303394,0.8333423082620062
