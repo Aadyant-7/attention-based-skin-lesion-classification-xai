@@ -1,0 +1,6 @@
+{
+  "strict_test_evaluated": false,
+  "model_weights_updated": false,
+  "validation_images": 1503,
+  "selection_warning": "All candidates examined on the same exploratory image-level validation split; selected maximum may be optimistic"
+}

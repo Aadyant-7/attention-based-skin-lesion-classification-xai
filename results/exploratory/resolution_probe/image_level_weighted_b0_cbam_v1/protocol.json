@@ -1,0 +1,8 @@
+{
+  "checkpoint": "checkpoints/exploratory/image_level_weighted_b0_cbam_v1/best.pt",
+  "split": "data/splits/exploratory/image_level_dev_v1.csv",
+  "test_images_evaluated": 0,
+  "model_weights_updated": false,
+  "validation_images": 1503,
+  "selection_warning": "Resolution candidates examined on the same exploratory validation set"
+}

@@ -1,0 +1,10 @@
+{
+  "strict_validation_images": 1503,
+  "strict_test_evaluated": false,
+  "model_weights_updated": false,
+  "source_checkpoints": [
+    "checkpoints/efficientnet_b0_cbam_weighted_v1/best.pt",
+    "checkpoints/efficientnet_b0_cbam_oversampled_v1/best.pt"
+  ],
+  "selection_warning": "Multiple inference variants scored on the same strict validation split"
+}
