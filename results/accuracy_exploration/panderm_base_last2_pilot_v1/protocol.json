@@ -1,0 +1,14 @@
+{
+  "run": "panderm_base_last2_pilot_v1",
+  "train_images": 7009,
+  "validation_images": 1503,
+  "test_images_evaluated": 0,
+  "backbone": "PanDerm Base; last two transformer blocks plus layer norm and head updated",
+  "initial_head": "standardized logistic regression C=1 on strict training embeddings",
+  "max_epochs": 4,
+  "completed_epochs": 2,
+  "best_epoch": 2,
+  "best_val_accuracy": 0.844311377245509,
+  "checkpoint": "checkpoints/accuracy_exploration/panderm_base_last2_pilot_v1/best.pt",
+  "selection_warning": "Best checkpoint selected on strict validation accuracy"
+}

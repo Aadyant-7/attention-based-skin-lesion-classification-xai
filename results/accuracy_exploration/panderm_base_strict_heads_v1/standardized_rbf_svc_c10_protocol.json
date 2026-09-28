@@ -1,0 +1,9 @@
+{
+  "model": "frozen PanDerm Base",
+  "head": "standardized_rbf_svc_c10",
+  "strict_train_images": 7009,
+  "strict_validation_images": 1503,
+  "test_images_evaluated": 0,
+  "validation_warning": "Candidates inspected on strict validation; locked test remains untouched",
+  "runtime_seconds": 35.46374487876892
+}

@@ -1,0 +1,15 @@
+{
+  "backbone": "PanDerm Base ViT-B/16 frozen",
+  "weights_sha256": "be1e0fb108b3bc58721cb5195f136c948160799438f222acf1fd142230ac1ff1",
+  "weights_source": "https://drive.google.com/file/d/17J4MjsZu3gdBP6xAQi_NMDVvH65a00HB/view",
+  "source_code": "https://github.com/SiyuanYan1/PanDerm",
+  "input": "Resize short edge to 256, center crop 224, author ImageNet normalization",
+  "classifier": "sklearn multinomial logistic regression, C=53.76, max_iter=1000, no class weighting",
+  "train_images": 7009,
+  "validation_images": 1503,
+  "test_images_evaluated": 0,
+  "train_validation_lesion_overlap": 0,
+  "backbone_updated": false,
+  "validation_warning": "Candidates inspected on strict validation; locked test remains untouched",
+  "runtime_seconds": 44.35803771018982
+}
