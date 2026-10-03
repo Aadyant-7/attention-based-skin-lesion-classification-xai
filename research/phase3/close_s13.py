@@ -8,7 +8,7 @@ from research.fuse import aligned_probabilities
 from research.train import metric_report
 from research.plots import comparison_figures
 from research.registry import read_registry,upsert
-from research.phase3.close_s02 import load,verify_predictions,verify_figures
+from research.phase3.close_s02 import load,verify_predictions,verify_figures,verify_launch_code
 ID='s13_s12_four_flip_tta_exploratory_seed42'
 CONTROL='s13_s12_identity_fp32_control_exploratory_seed42'
 S12='s12_s03_s06_s10_equal_probability_exploratory_seed42'
@@ -24,8 +24,8 @@ def main():
     assert config==load(ROOT/'research/configs/phase3'/f'{ID}.json') and record['status']=='completed'
     frame,val,parents=check(config)
     signature=load(path/'inference_signature.json');assert signature['config']==config
-    assert signature['runner_sha256']==sha256(ROOT/'research/tta.py')
-    assert all(sha256(ROOT/f)==h for f,h in signature['supporting_source_hashes'].items())
+    # Authenticate frozen S13 sources via its launch commit after future adapter additions.
+    verify_launch_code({'code_hashes':{'research/tta.py':signature['runner_sha256'],**signature['supporting_source_hashes']}}, {'git_commit':'b91bfaf'})
     assert load(path/'environment.json')['precision']=='fp32'
     arrays=[];identities=[];hashes={}
     for rid in config['parent_run_ids']:

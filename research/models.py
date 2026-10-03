@@ -6,8 +6,8 @@ from torch import nn
 from torchvision import models
 from src.cbam import CBAM
 
-CHANNELS={'efficientnet_b0':1280,'efficientnet_b2':1408,'efficientnet_v2_s':1280,'resnet50':2048,
-          'densenet121':1024,'mobilenet_v3_large':960,'convnext_tiny':768}
+CHANNELS={'efficientnet_b0':1280,'efficientnet_b2':1408,'efficientnet_b3':1536,'efficientnet_v2_s':1280,'resnet50':2048,
+          'densenet121':1024,'densenet201':1920,'mobilenet_v3_large':960,'convnext_tiny':768}
 
 
 class ResearchClassifier(nn.Module):
@@ -26,7 +26,7 @@ class ResearchClassifier(nn.Module):
         net=models.get_model(backbone,weights=weights)
         if backbone=='resnet50':
             self.features=nn.Sequential(*list(net.children())[:-2])
-        elif backbone=='densenet121':
+        elif backbone in ('densenet121','densenet201'):
             self.features=nn.Sequential(net.features,nn.ReLU(inplace=False))
         else:
             self.features=net.features

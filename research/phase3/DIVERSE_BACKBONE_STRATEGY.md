@@ -1,6 +1,6 @@
 # Diverse backbone and bounded ensemble strategy - after S13
 
-**Current evidence:** [S13](S13_CLOSEOUT.md) rejects fixed four-flip TTA:91.55%/.8616 vs S12 92.42%/.8770; FP32 control92.48%/.8775 adds one image only. Retain S12 ensemble and S06 single-model/cost reference. Next [S14](S14_PROPOSAL.md) tests one fixed224/320 ConvNeXt resolution intervention, pending approval. No further flip/weight sweep; attention and a stronger diverse backbone remain later evidence-driven options. Original test untouched; fresh strict confirmation later.
+**Current priority:** [High-performance plan](HIGH_PERFORMANCE_ENSEMBLE_PLAN.md) replaces inference-tweak prioritization. S14 deferred; [S15 DenseNet201](S15_PROPOSAL.md) next, then B3/conditional Swin-T under separate approvals. S12 remains92.42%/.8770; FP32 control92.48%/.8775, S13 flips rejected. Strong standalone/class/error evidence first; bounded equal and global weighted fusion next; strict confirmation later. Original test untouched.
 
 ## Preserved plan before S06 evaluation
 

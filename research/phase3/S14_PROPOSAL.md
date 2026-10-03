@@ -1,5 +1,6 @@
 # S14 proposal: fixed224/320 ConvNeXt inference inside S12
 
+**Deferred by the user on3 October2026; not launched.** [High-performance backbone/ensemble plan](HIGH_PERFORMANCE_ENSEMBLE_PLAN.md) replaces this next-run priority. Original proposal/config preserved; requires explicit future approval.
 **Prepared only. Wait for GPU inference approval; no training or resolution search.**
 
 ## Question and rationale

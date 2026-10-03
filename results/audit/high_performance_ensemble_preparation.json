@@ -1,0 +1,53 @@
+{
+  "status": "prepared_pending_approval",
+  "candidates": {
+    "s15_densenet201_none_exploratory_seed42": {
+      "parameters": 18106375,
+      "pretrained_weight_url": "https://download.pytorch.org/models/densenet201-c1103571.pth",
+      "weight_file_size_mb": 77.373,
+      "native_weight_transform": "ImageClassification(\n    crop_size=[224]\n    resize_size=[256]\n    mean=[0.485, 0.456, 0.406]\n    std=[0.229, 0.224, 0.225]\n    interpolation=InterpolationMode.BILINEAR\n)",
+      "config_sha256": "ed0a0da8ec9e3a18f5c08e0a93c7b223247e0bb8ac1f32804176140467d805fa",
+      "new_result_folder_exists": false,
+      "new_checkpoint_folder_exists": false
+    },
+    "s16_efficientnet_b3_none_exploratory_seed42": {
+      "parameters": 10706991,
+      "pretrained_weight_url": "https://download.pytorch.org/models/efficientnet_b3_rwightman-b3899882.pth",
+      "weight_file_size_mb": 47.184,
+      "native_weight_transform": "ImageClassification(\n    crop_size=[300]\n    resize_size=[320]\n    mean=[0.485, 0.456, 0.406]\n    std=[0.229, 0.224, 0.225]\n    interpolation=InterpolationMode.BICUBIC\n)",
+      "config_sha256": "b6ef08c51a33e13246bcfaa8e8e626d257907f314089517a7c124485ec2f2148",
+      "new_result_folder_exists": false,
+      "new_checkpoint_folder_exists": false
+    }
+  },
+  "source_hashes": {
+    "research/train.py": "efdd1ca9313ac0cb7e7fdd10476348e031bbd2eb95a95665acf4150c55333914",
+    "research/models.py": "75181842e75d59a330f390df948cb63243c180131c2179e67ce1e142be21a0d1",
+    "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "cpu_tests_passed": 2,
+  "cpu_config_data_preflights": 2,
+  "registry_sha256": "739c81bf8f83150eb48cffadb6071d7d9da4b73d017dba3e20764cf20d68e817",
+  "registry_rows": 487,
+  "new_experiments_registered": false,
+  "gpu_used": false,
+  "test_images_opened": false,
+  "pretrained_weights_downloaded": false,
+  "s14_launched": false,
+  "s15_launched": false,
+  "s16_launched": false,
+  "historical_s13_launch_sources_authenticated": {
+    "research/tta.py": "current_file",
+    "research/models.py": "authenticated_launch_commit:b91bfaf",
+    "research/train.py": "current_file",
+    "research/fuse.py": "current_file",
+    "research/common.py": "current_file",
+    "research/plots.py": "current_file",
+    "research/registry.py": "current_file"
+  },
+  "preservation_check": "passed;487 registry rows/473 legacy rows,247 immutable artifacts unchanged"
+}

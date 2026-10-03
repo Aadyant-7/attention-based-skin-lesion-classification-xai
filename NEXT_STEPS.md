@@ -1,6 +1,6 @@
 # Research plan: 3–17 October 2026
 
-**Active research update (3 October2026):** [S13 closeout](research/phase3/S13_CLOSEOUT.md) verified: four-flip TTA regressed to91.55%/.8616; reject it. **S12 remains the strongest ensemble reference:92.42%/.8770**; its separately recorded FP32 identity control reached92.48%/.8775 by one extra correct image only. [S14 fixed224/320 ConvNeXt resolution proposal](research/phase3/S14_PROPOSAL.md) prepared only; awaits GPU inference approval. Strict confirmation/test remain later; original locked test untouched.
+**Active priority (3 October2026):** [High-performance heterogeneous ensemble phase](research/phase3/HIGH_PERFORMANCE_ENSEMBLE_PLAN.md): DenseNet201 next ([S15 proposal](research/phase3/S15_PROPOSAL.md)), EfficientNet-B3 second subject to evidence/approval, conditional Swin-T third; equal voting then a small bounded global-weight study. **S14 deferred by user; no new experiments launched.** Reference remains S12 92.42%/.8770, FP32 identity92.48%/.8775; S13 TTA rejected. Same exploratory split; strict confirmation postponed; original locked test untouched.
 
 ## Original Phase2 plan (historical)
 
