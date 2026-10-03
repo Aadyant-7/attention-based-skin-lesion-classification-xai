@@ -1,6 +1,6 @@
 # Structured research workspace
 
-**Phase3 active:** [S01](phase3/S01_CLOSEOUT.md):85.63% strict accuracy/.7791 macro-F1; [S02](phase3/S02_CLOSEOUT.md):86.03% exploratory/.7861; [S03](phase3/S03_CLOSEOUT.md):86.36% exploratory/.7707. Protocols remain separate. [S04 fixed CPU fusion](phase3/S04_PROPOSAL.md) is prepared only. Follow [two-stage evaluation and GPU launch policy](phase3/TWO_STAGE_STRATEGY.md). [Literature](literature/scispace_analysis/INTEGRATED_REVIEW.md) and earlier plans remain evidence. Old root handoffs live under `legacy/navigation/`.
+**Phase3 active:** [S01](phase3/S01_CLOSEOUT.md):85.63% strict/.7791 F1; [S02](phase3/S02_CLOSEOUT.md):86.03% exploratory/.7861; [S03](phase3/S03_CLOSEOUT.md):86.36% exploratory/.7707; [S04 fixed fusion](phase3/S04_CLOSEOUT.md):**88.56% exploratory/.8057**. Protocols remain separate. [S05 matched B0+CBAM](phase3/S05_PROPOSAL.md) is prepared only, awaiting approval. Follow [two-stage evaluation and GPU launch policy](phase3/TWO_STAGE_STRATEGY.md). [Literature](literature/scispace_analysis/INTEGRATED_REVIEW.md) and earlier plans remain evidence. Old root handoffs live under `legacy/navigation/`.
 
 **Local organization cleanup:** archives live under `legacy/`; immutable inventory uses `legacy/path_map.json`. Current verification is `python -m research.verify_layout --phase3-current`, preserving earlier cleanup/preparation audits. See [cleanup report](../legacy/organization/README.md). Historical code, datasets, results and checkpoints remain stable.
 

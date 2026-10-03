@@ -16,7 +16,14 @@ def main():
         config=json.loads((ROOT/r['config_path']).read_text(encoding='utf-8'))
         validate_config(config) # only the reviewed v1 common recipe belongs here
         m=json.loads((ROOT/r['metrics_path']).read_text(encoding='utf-8'));validate_metrics(m)
-        key=(config['recipe_version'],r['protocol'],str(r['seed']),config['selection_metric'])
+        family=config['recipe_version']
+        if family=='exploratory_cbam_v1':
+            base=json.loads((ROOT/'research/phase3/recipe_screening_v1.json').read_text(encoding='utf-8'))
+            # Added attention is a deliberate matched variable; all training settings must match.
+            if any(config.get(k)!=v for k,v in base.items() if k not in ('recipe_version','phase','attention','status')):
+                raise ValueError('CBAM recipe does not match the exploratory control')
+            family='exploratory_screening_v1'
+        key=(family,r['protocol'],str(r['seed']),config['selection_metric'])
         rows=groups.setdefault(key,[])
         rows.append(dict(display_name=r['model']+' | '+r['attention'],experiment_id=r['experiment_id'],protocol=r['protocol'],
              recipe_version=config['recipe_version'],selection_metric=config['selection_metric'],

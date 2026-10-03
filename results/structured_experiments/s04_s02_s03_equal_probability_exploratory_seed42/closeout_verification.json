@@ -1,0 +1,184 @@
+{
+  "status": "verified_completed",
+  "experiment_id": "s04_s02_s03_equal_probability_exploratory_seed42",
+  "protocol": "exploratory_image_level",
+  "metrics": {
+    "loss": 0.4667166441832347,
+    "accuracy": 0.8855622089155023,
+    "macro_precision": 0.8260743092585557,
+    "macro_recall": 0.7909651520972928,
+    "macro_f1": 0.8056543445886161,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        31,
+        7,
+        8,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        68,
+        0,
+        0,
+        1,
+        7,
+        0
+      ],
+      [
+        5,
+        0,
+        129,
+        1,
+        15,
+        15,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        13,
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        3,
+        7,
+        0,
+        120,
+        34,
+        1
+      ],
+      [
+        1,
+        7,
+        16,
+        0,
+        28,
+        953,
+        2
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        1,
+        17
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.775,
+        "recall": 0.6326530612244898,
+        "f1": 0.6966292134831461,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.7640449438202247,
+        "recall": 0.8831168831168831,
+        "f1": 0.8192771084337349,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.8012422360248447,
+        "recall": 0.7818181818181819,
+        "f1": 0.7914110429447853,
+        "support": 165
+      },
+      "df": {
+        "precision": 0.9285714285714286,
+        "recall": 0.7647058823529411,
+        "f1": 0.8387096774193549,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.7228915662650602,
+        "recall": 0.718562874251497,
+        "f1": 0.7207207207207207,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9407699901283317,
+        "recall": 0.9463753723932473,
+        "f1": 0.9435643564356435,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.85,
+        "recall": 0.8095238095238095,
+        "f1": 0.8292682926829268,
+        "support": 21
+      }
+    }
+  },
+  "correct": 1331,
+  "validation_images": 1503,
+  "paired_gains": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": {
+      "correct": 1293,
+      "fixed": 71,
+      "broken": 33,
+      "both_correct": 1260,
+      "both_wrong": 139,
+      "net_additional_correct": 38,
+      "accuracy_gain_percentage_points": 2.528276779773786,
+      "macro_f1_gain": 0.01954317693611496,
+      "macro_recall_gain": 0.010865484438056794
+    },
+    "s03_efficientnet_b0_none_exploratory_seed42": {
+      "correct": 1298,
+      "fixed": 66,
+      "broken": 33,
+      "both_correct": 1265,
+      "both_wrong": 139,
+      "net_additional_correct": 33,
+      "accuracy_gain_percentage_points": 2.1956087824351322,
+      "macro_f1_gain": 0.034994328223807325,
+      "macro_recall_gain": -0.0006679308158797914
+    }
+  },
+  "evaluation_seconds": 3.958904800005257,
+  "source_hashes": {
+    "config.json": "c39785380f387df335a20a54f3cecfaf259b2d791e9a225a579db3d45ce92513",
+    "validation_metrics.json": "e6aa1a9cc660626baa9d74112c34ef9949d0f60d7b8b50e0f17699e483d287aa",
+    "validation_predictions.csv": "de9dfadf7d5e0160adb5826b39144e1ef527b0afa3e9c833aa2051c5b7da3f12"
+  },
+  "parent_prediction_hashes": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": "b38898e669d47dfd7d9b3a812c68d681ee26e79756286cdd62def1f13d1a6f4b",
+    "s03_efficientnet_b0_none_exploratory_seed42": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d"
+  },
+  "parent_checkpoint_identities": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": "72e71e7be2e7465170c53211548ec65f72c1f393702f8e76e2c575c6a81bf45a",
+    "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c"
+  },
+  "verified_checks": [
+    "exact 50/50 probabilities",
+    "all 1503 IDs/labels/predictions",
+    "weighted loss",
+    "matrix/macro/class metrics",
+    "four PNG/PDF pairs and CSVs"
+  ],
+  "historical_rows_preserved": 473,
+  "all_other_registry_rows_unchanged": true,
+  "scope": "Observed exploratory validation improvement; parent checkpoints validation-selected; not lesion-independent/test/significance evidence",
+  "gpu_used": false,
+  "test_images_loaded": false,
+  "new_training": false,
+  "new_checkpoint": false
+}

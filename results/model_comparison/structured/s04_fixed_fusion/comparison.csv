@@ -1,0 +1,4 @@
+display_name,experiment_id,accuracy,macro_precision,macro_recall,macro_f1,melanoma_recall,protocol,scope
+mobilenet_v3_large | single model,s02_mobilenet_v3_large_none_exploratory_seed42,0.8602794411177644,0.7949701703544128,0.780099667659236,0.7861111676525011,0.6946107784431138,exploratory_image_level,matched parent; accuracy-selected
+efficientnet_b0 | single model,s03_efficientnet_b0_none_exploratory_seed42,0.863606121091151,0.7534286077687018,0.7916330829131726,0.7706600163648087,0.7005988023952096,exploratory_image_level,matched parent; accuracy-selected
+S04 fixed 50/50 fusion | two model passes,s04_s02_s03_equal_probability_exploratory_seed42,0.8855622089155023,0.8260743092585557,0.7909651520972928,0.8056543445886161,0.718562874251497,exploratory_image_level,one predeclared fixed fusion; same validation cohort

@@ -1,6 +1,6 @@
 # Two-stage evaluation — Phase 3 amendment
 
-**After S03:** [Matched B0 control](S03_CLOSEOUT.md) achieved 86.36% exploratory accuracy/.7707 macro-F1; [MobileNet](S02_CLOSEOUT.md) achieved 86.03%/.7861. Recommend [one fixed CPU fusion](S04_PROPOSAL.md) from aligned complementary errors before more GPU compute. Strict results remain separate. The pre-S02 rationale below is historical and does not authorize another run.
+**After S04:** [Fixed equal fusion](S04_CLOSEOUT.md) achieved **88.56% exploratory accuracy/.8057 macro-F1**, improving over [B0](S03_CLOSEOUT.md)86.36%/.7707 and [MobileNet](S02_CLOSEOUT.md)86.03%/.7861. Retain this bounded-fusion reference; next recommendation is [matched B0+CBAM](S05_PROPOSAL.md), prepared only. Strict results remain separate. Pre-S02 rationale below is historical, not authorization for another run.
 
 **GPU launch policy:** every future GPU run needs its own reviewed proposal and approval. Once launched independently and log/initial checkpoints confirmed, stop immediately. No epoch polling, background monitoring or completion wait; user returns to request analysis.
 

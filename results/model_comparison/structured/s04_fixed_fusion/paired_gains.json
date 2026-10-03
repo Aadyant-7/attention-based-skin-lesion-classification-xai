@@ -1,0 +1,24 @@
+{
+  "s02_mobilenet_v3_large_none_exploratory_seed42": {
+    "correct": 1293,
+    "fixed": 71,
+    "broken": 33,
+    "both_correct": 1260,
+    "both_wrong": 139,
+    "net_additional_correct": 38,
+    "accuracy_gain_percentage_points": 2.528276779773786,
+    "macro_f1_gain": 0.01954317693611496,
+    "macro_recall_gain": 0.010865484438056794
+  },
+  "s03_efficientnet_b0_none_exploratory_seed42": {
+    "correct": 1298,
+    "fixed": 66,
+    "broken": 33,
+    "both_correct": 1265,
+    "both_wrong": 139,
+    "net_additional_correct": 33,
+    "accuracy_gain_percentage_points": 2.1956087824351322,
+    "macro_f1_gain": 0.034994328223807325,
+    "macro_recall_gain": -0.0006679308158797914
+  }
+}

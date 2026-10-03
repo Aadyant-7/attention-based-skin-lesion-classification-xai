@@ -30,7 +30,8 @@ from .models import CHANNELS, ResearchClassifier
 
 RECIPE = ROOT/'research/phase2/recipe_v1.json'
 RECIPES={'backbone_comparison_v1':RECIPE,
-         'exploratory_screening_v1':ROOT/'research/phase3/recipe_screening_v1.json'}
+         'exploratory_screening_v1':ROOT/'research/phase3/recipe_screening_v1.json',
+         'exploratory_cbam_v1':ROOT/'research/phase3/recipe_cbam_v1.json'}
 
 
 def validate_config(config):

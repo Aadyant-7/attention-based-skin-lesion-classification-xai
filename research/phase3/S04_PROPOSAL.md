@@ -1,6 +1,6 @@
 # S04 proposal — fixed equal-probability fusion (CPU only)
 
-**Prepared, not executed.** ID `s04_s02_s03_equal_probability_exploratory_seed42`.
+**Historical proposal; approved, completed and verified 3 October 2026.** See [S04 closeout](S04_CLOSEOUT.md) and [next GPU proposal](S05_PROPOSAL.md). ID `s04_s02_s03_equal_probability_exploratory_seed42`. Pre-execution text below retained as provenance.
 
 ## Question and rationale
 
