@@ -3,6 +3,10 @@
 data/raw/
 docs/private_reference/
 notebooks/legacy/
+legacy/notebooks/
+legacy/archive/
+legacy/gradcam_outputs/
+research/literature/incoming/*.xlsx
 checkpoints/
 results/runs/
 results/exploratory/runs/
@@ -15,6 +19,9 @@ __pycache__/
 .ruff_cache/
 .idea/
 .vscode/
+!.vscode/
+.vscode/*
+!.vscode/settings.json
 *.log
 *.tmp
 *.bak
@@ -25,6 +32,7 @@ __pycache__/
 *.pth
 *.ckpt
 *.pdf
+!legacy/reports/*.pdf
 !results/figures/**/*.pdf
 !results/model_comparison/**/*.pdf
 !results/datasets/**/*.pdf

@@ -22,7 +22,7 @@ Read in this order:
 
 ## Organization record
 
-The root README is now a short active entry point. Two old root handoff guides moved unchanged into `legacy/navigation/`, with hashes and a README snapshot. Historical executable/data/checkpoint/result paths stay intact; the immutable 247-file inventory still verifies. New comparison/XAI locations are explicitly reserved. No historical experiment, report or raw file was deleted.
+The root README is now a short active entry point. Two old root handoff guides moved unchanged into `legacy/navigation/`, with hashes and a README snapshot. Historical executable/data/checkpoint/result paths stay intact (reports/notebooks were subsequently archived with a relocation map); the immutable 247-file inventory still verifies. New comparison/XAI locations are explicitly reserved. No historical experiment, report or raw file was deleted.
 
 ## Remaining limitations
 

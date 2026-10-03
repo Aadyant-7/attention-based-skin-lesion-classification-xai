@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "pre_cleanup_files": 506,
+  "unchanged_files": 494,
+  "documented_code_navigation_edits": [
+    ".gitattributes",
+    ".gitignore",
+    "legacy/README.md",
+    "legacy/navigation/README.md",
+    "README.md",
+    "research/build.py",
+    "research/common.py",
+    "research/FOLDER_MAP.md",
+    "research/README.md",
+    "research/phase2/prepare.py",
+    "research/phase2/README.md",
+    "results/legacy/README.md"
+  ],
+  "moved_files_byte_verified": 8,
+  "immutable_historical_files_verified": 247,
+  "registry_rows": 473,
+  "registry_references_verified": 152,
+  "saved_figure_packages": 10,
+  "current_markdown_files_checked": 21,
+  "python_syntax": "passed",
+  "scispace_path": "research/literature/incoming/SciSpace Literature Review.xlsx",
+  "workbook_parsed": false,
+  "model_instantiated": false,
+  "gpu_work": false,
+  "test_images_opened": false,
+  "historical_results_modified": false,
+  "non_model_unittests": {
+    "passed": 9,
+    "failed": 0,
+    "excluded": "ModelInterfaceChecks"
+  },
+  "import_and_archival_resolution_checks": "passed"
+}

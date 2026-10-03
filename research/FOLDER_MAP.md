@@ -31,12 +31,14 @@
 |---|---|
 | `legacy/` | Historical entry point and relocated old navigation. |
 | `src/`, `scripts/`, `configs/` | Preserved executable historical code/configs; shared CBAM reused explicitly. |
-| `docs/`, `reports/` | Historical audits and existing Word/PDF deliverables. |
+| `docs/` | Historical audits kept at referenced locations. |
+| `legacy/reports/` | Six archived Word/PDF deliverables. |
 | Older `results/` and `checkpoints/` subfolders | Historical experiments at original paths; see legacy index. |
 | `data/splits/` | Frozen tracked labels/assignments; do not regenerate. |
 | `data/raw/HAM10000/` | Ignored original images/metadata; future training needs them, presentation does not. |
 | `.cache/`, `.venv/` | Ignored features/weights/source and Python environment. |
-| `archive/`, `notebooks/legacy/`, `docs/private_reference/`, `gradcam_outputs/` | Local historical materials. |
+| `legacy/archive/`, `legacy/notebooks/`, `legacy/gradcam_outputs/` | Archived local historical materials. |
+| `docs/private_reference/` | Local private references kept with historical notes. |
 | `.git/` | Git database; active `structured-research`, historical `main`/`accuracy-exploration`. |
 | `.gitignore`, `.gitattributes`, `requirements.txt` | Asset exclusions, byte-preservation policy and dependencies. |
 

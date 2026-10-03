@@ -1,0 +1,6 @@
+{
+  "reports": "legacy/reports",
+  "notebooks": "legacy/notebooks",
+  "archive": "legacy/archive",
+  "gradcam_outputs": "legacy/gradcam_outputs"
+}

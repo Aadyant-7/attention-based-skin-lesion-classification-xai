@@ -2,6 +2,8 @@
 
 **Phase 2 completed:** start with [the Phase-2 handoff](phase2/README.md), [fixed setup](phase2/EXPERIMENTAL_SETUP.md) and [folder map](FOLDER_MAP.md). Before every future GPU job, follow [the launch/monitor contract](phase2/GPU_RUN_HANDOFF.md). New experiments remain unlaunched; no shared trainer exists yet. Old root handoff guides now live under `legacy/navigation/`.
 
+**Local organization cleanup:** reports/notebooks/archive/old Grad-CAM directories now live under `legacy/`. The original immutable inventory is resolved through `legacy/path_map.json`; active verification is `python -m research.verify_layout`. See [cleanup report](../legacy/organization/README.md). Executable code, datasets, historical results and checkpoint locations remain stable.
+
 Current direction (3 October 2026): final architecture is open to evidence. The primary benchmark remains the frozen lesion-disjoint split; the locked test is reserved until Phase 8. Historical image-level scores remain explicitly exploratory. Old reports describe the earlier direction and remain unchanged research history.
 
 ## Navigation

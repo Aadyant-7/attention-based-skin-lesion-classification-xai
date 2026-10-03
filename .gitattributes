@@ -4,3 +4,5 @@ legacy/navigation/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab
 # Planned config hashes must survive checkout without line-ending conversion.
 research/configs/backbone_comparison/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/phase2/recipe_v1.json -text
+# Archival copies remain byte-identical, including original line endings.
+legacy/organization/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

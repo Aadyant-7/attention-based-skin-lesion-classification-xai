@@ -11,7 +11,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from .common import ROOT, CLASSES, SPLITS, relative, sha256, write_csv, write_json, atomic_text
+from .common import ROOT, CLASSES, SPLITS, relative, sha256, write_csv, write_json, atomic_text, historical_path
 from .registry import rebuild
 from .plots import validate_metrics, metric_figures, training_figures, comparison_figures, save
 
@@ -90,13 +90,14 @@ def legacy_inventory(require_local=True):
     tracked=set(subprocess.check_output(['git','ls-files'],cwd=ROOT,text=True).splitlines())
     files=[]
     for folder in ('src','scripts','configs','results','checkpoints','docs','reports','data/splits','notebooks/legacy'):
-        for p in (ROOT/folder).rglob('*'):
+        base=historical_path(folder)
+        for p in base.rglob('*'):
             if not p.is_file() or '__pycache__' in p.parts:
                 continue
-            name=relative(p)
+            name=(Path(folder)/p.relative_to(base)).as_posix()
             if name.startswith(('results/legacy/','results/structured_experiments/','results/figures/','results/datasets/','results/audit/','results/model_comparison/','results/final/','results/ablations/','results/ensembles/','results/xai/')) or p.name=='master_experiment_registry.csv':
                 continue
-            files.append({'path':name,'bytes':p.stat().st_size,'sha256':sha256(p),'tracked':name in tracked,
+            files.append({'path':name,'bytes':p.stat().st_size,'sha256':sha256(p),'tracked':name in tracked or relative(p) in tracked,
                           'category':folder,'preservation':'in_place'})
     manifest=ROOT/'results/legacy/artifact_manifest.csv'
     if manifest.exists():
@@ -144,7 +145,8 @@ def legacy_inventory(require_local=True):
            'raw_image_filename_count':len(raw_names),'duplicate_raw_image_ids':sum(n>1 for n in counts.values()),
            'missing_raw_image_ids':sorted(expected-set(raw_names)),
            'extra_raw_image_ids':sorted(set(raw_names)-expected),
-           'raw_pixels_opened':False,'historical_paths_moved':False}
+           'raw_pixels_opened':False,'historical_paths_moved':(ROOT/'legacy/path_map.json').exists(),
+           'relocation_map':'legacy/path_map.json'}
     write_json(ROOT/'results/audit/repository_audit.json',audit)
     return audit
 

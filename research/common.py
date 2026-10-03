@@ -24,6 +24,23 @@ def relative(path):
     return Path(path).resolve().relative_to(ROOT).as_posix()
 
 
+def historical_path(path):
+    """Resolve approved archival moves without rewriting immutable evidence paths."""
+    path = Path(path)
+    logical = path.relative_to(ROOT) if path.is_absolute() else path
+    # Both logical paths and relocation targets must stay inside this project.
+    (ROOT/logical).resolve().relative_to(ROOT)
+    name = logical.as_posix()
+    mapping = ROOT/'legacy/path_map.json'
+    moves = json.loads(mapping.read_text(encoding='utf-8')) if mapping.exists() else {}
+    for old, new in moves.items():
+        if name == old or name.startswith(old+'/'):
+            target = ROOT/new/name[len(old):].lstrip('/')
+            target.resolve().relative_to(ROOT)
+            return target
+    return ROOT/logical
+
+
 def atomic_text(path, text):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)

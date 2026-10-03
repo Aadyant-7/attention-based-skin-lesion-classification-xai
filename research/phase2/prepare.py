@@ -3,7 +3,7 @@ import csv
 import json
 import math
 from pathlib import Path
-from ..common import ROOT, CLASSES, sha256, write_csv, write_json, atomic_text
+from ..common import ROOT, CLASSES, sha256, write_csv, write_json, atomic_text, historical_path
 
 
 def read_csv(path):
@@ -14,7 +14,7 @@ def read_csv(path):
 def preserve_check():
     checked, unavailable = 0, []
     for row in read_csv(ROOT/'results/legacy/artifact_manifest.csv'):
-        path = ROOT/row['path']
+        path = historical_path(row['path'])
         if not path.is_file():
             if row['tracked'].lower() == 'true':
                 raise ValueError(f"Tracked historical file missing: {row['path']}")
@@ -36,7 +36,8 @@ def preserve_check():
                          'sha256':sha256(ROOT/'legacy/navigation'/new),'action':action}
                         for old,new,action in entries])
     return {'historical_files_verified':checked,'unavailable_ignored_assets':unavailable,
-            'historical_experiment_paths_moved':False,'navigation_snapshots_verified':3}
+            'historical_experiment_paths_moved':False,'archival_report_notebook_moves':'legacy/path_map.json',
+            'navigation_snapshots_verified':3}
 
 
 def verify_protocol(recipe):
