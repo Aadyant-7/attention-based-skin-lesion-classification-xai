@@ -1,0 +1,19 @@
+{
+  "source": "results/accuracy_exploration/panderm_base_strict_tta_v1/prior_four_with_svc_tta_equal.json",
+  "source_sha256": "444270791467aea3223087d2d172d63df6beaffd45cd5104763018fc23ab04a8",
+  "selector": "",
+  "protocol": "strict_lesion_disjoint",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "evaluation_split": "validation",
+  "history": "",
+  "portable_source": "",
+  "note": "Generated from saved evidence; no model inference or training. Not held-out test results."
+}

@@ -1,0 +1,32 @@
+{
+  "a84736f2e60358004992e2d9a9fca3e153a7aa6acd9a3dd969881731825efc37": [
+    "results/exploratory/image_level_strong_aug_b0_cbam_v1_history.csv",
+    "results/exploratory/runs/image_level_strong_aug_b0_cbam_v1/history.csv"
+  ],
+  "26bf2fa60adac639ec794b0498c8f8ec6f32b4543a276532418116e49fccf353": [
+    "results/exploratory/image_level_weighted_b0_cbam_v1_history.csv",
+    "results/exploratory/runs/image_level_weighted_b0_cbam_v1/history.csv"
+  ],
+  "e58df82017ccad3626e2a867f828be2a534fdb0bb21f64cf62b9945c9e8fd8ec": [
+    "results/phase5c_prior_correction/best_oversampled_accuracy.json",
+    "results/phase5c_prior_correction/best_oversampled_macro_f1.json"
+  ],
+  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": [
+    "results/runs/efficientnet_b0_cbam_focal_v1/train.err.log",
+    "results/runs/efficientnet_b0_cbam_oversampled_v1/train.err.log",
+    "results/exploratory/runs/image_level_strong_aug_b0_cbam_v1/training_error.log",
+    "results/exploratory/runs/image_level_weighted_b0_cbam_v1/training_error.log"
+  ],
+  "a475df3a558a8e3024a93eb0cf08e2b74e72d87d0adcbb66a46be2f90471ec3f": [
+    "results/exploratory/panderm_base_image_level_tta_v1/b0_four_control.json",
+    "results/exploratory/panderm_base_image_level_v1/b0_four_control.json"
+  ],
+  "f084388250c34c8eef10bfd3b55ebf2acf687006c116f99023bb102199497f3f": [
+    "results/accuracy_exploration/panderm_base_strict_ensembles_v1/pilot_svm_weighted_oversampled_equal.json",
+    "results/accuracy_exploration/panderm_base_strict_tta_v1/prior_four_control.json"
+  ],
+  "b783e8d7ce4f292495b9b8c851d209a4f4b57b2ee1f8f808511ccdc034be34a2": [
+    "results/accuracy_exploration/panderm_base_strict_ensembles_v1/svm_weighted_equal.json",
+    "results/accuracy_exploration/panderm_base_strict_heads_v1/standardized_rbf_svc_c10_plus_weighted_b0_equal.json"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "legacy_registry_rows": 473,
+  "structured_registry_rows": 0,
+  "verified_full_metric_records": 89,
+  "evidence_build_complete": true,
+  "historical_assets_unchanged": true,
+  "test_images_opened": false,
+  "training_launched": false,
+  "protocol_counts": {
+    "strict_lesion_disjoint": 445,
+    "exploratory_image_level": 28
+  },
+  "missing_runtime_training_rows": [
+    "legacy:results/accuracy_exploration/panderm_base_last2_pilot_v1/best_validation_metrics.json",
+    "legacy:results/runs/efficientnet_b0_cbam_weighted_v1/validation_metrics.json"
+  ]
+}

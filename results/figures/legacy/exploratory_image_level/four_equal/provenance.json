@@ -1,0 +1,19 @@
+{
+  "source": "results/exploratory/multires_ensemble/four_equal.json",
+  "source_sha256": "e66e99ece551f14e149be12b8e8c719b7e72ff32172f131226604d3368cd4858",
+  "selector": "",
+  "protocol": "exploratory_image_level",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "evaluation_split": "validation",
+  "history": "",
+  "portable_source": "",
+  "note": "Generated from saved evidence; no model inference or training. Not held-out test results."
+}

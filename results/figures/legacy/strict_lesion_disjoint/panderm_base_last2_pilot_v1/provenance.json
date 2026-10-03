@@ -1,0 +1,19 @@
+{
+  "source": "results/accuracy_exploration/panderm_base_last2_pilot_v1/best_validation_metrics.json",
+  "source_sha256": "eb71f148cbfce9b65cd32955380271302f28903c11860d81d33a6d6e2d781d6e",
+  "selector": "",
+  "protocol": "strict_lesion_disjoint",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "evaluation_split": "validation",
+  "history": "results/accuracy_exploration/panderm_base_last2_pilot_v1/history.csv",
+  "portable_source": "",
+  "note": "Generated from saved evidence; no model inference or training. Not held-out test results."
+}

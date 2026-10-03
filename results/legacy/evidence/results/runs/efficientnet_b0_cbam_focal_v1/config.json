@@ -1,0 +1,17 @@
+{
+  "run_name": "efficientnet_b0_cbam_focal_v1",
+  "seed": 42,
+  "image_size": 224,
+  "batch_size": 64,
+  "workers": 2,
+  "epochs": 20,
+  "patience": 5,
+  "imbalance": "focal",
+  "focal_gamma": 2.0,
+  "focal_alpha_formula": "sqrt(N/(K*n_c)) normalized to mean 1; counts from training split only",
+  "focal_loss_equation": "mean[-alpha_y * (1 - p_y)^gamma * log(p_y)]",
+  "rationale": "Weighted CE had stronger macro F1 than full oversampling; full oversampling increased accuracy but overfit repeated images. Focal loss downweights easy predictions without image duplication. Validate the hypothesis on macro F1.",
+  "backbone_lr": 3e-05,
+  "head_lr": 0.0001,
+  "weight_decay": 0.0001
+}

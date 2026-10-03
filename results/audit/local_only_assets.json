@@ -1,0 +1,82 @@
+[
+  {
+    "path": ".cache/exploratory_multires",
+    "files": 6,
+    "bytes": 272345,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/panderm_base_image_level_v1",
+    "files": 7,
+    "bytes": 37285969,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/panderm_base_strict_lp_v1",
+    "files": 9,
+    "bytes": 37380318,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/phase4",
+    "files": 6,
+    "bytes": 25297818,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/phase5b",
+    "files": 2,
+    "bytes": 4424524,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/research_ensemble",
+    "files": 92,
+    "bytes": 28353153,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/research_nicolas",
+    "files": 49,
+    "bytes": 11595077,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/research_panderm",
+    "files": 188,
+    "bytes": 3586367,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/research_soft_attention",
+    "files": 59,
+    "bytes": 36179628,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/strict_multires",
+    "files": 2,
+    "bytes": 91163,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/torch",
+    "files": 1,
+    "bytes": 21444401,
+    "policy": "local cache/source only; no redistribution"
+  },
+  {
+    "path": ".cache/panderm_bb_data6_checkpoint-499.pth",
+    "files": 1,
+    "bytes": 343298382,
+    "sha256": "be1e0fb108b3bc58721cb5195f136c948160799438f222acf1fd142230ac1ff1",
+    "policy": "local pretrained weight; no redistribution"
+  },
+  {
+    "path": ".cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth",
+    "files": 1,
+    "bytes": 21444401,
+    "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "policy": "local pretrained weight; no redistribution"
+  }
+]

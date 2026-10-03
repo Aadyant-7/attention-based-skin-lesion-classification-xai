@@ -1,5 +1,7 @@
 # Minor Project handoff (repository snapshot: 29 September 2026)
 
+> **Historical snapshot.** The 3-October guide instruction supersedes the fixed EfficientNet/CBAM architecture restriction below. Final backbone, attention and ensemble are now open to evidence; the primary lesion-disjoint benchmark and locked test remain. Current infrastructure and phase plan: `research/README.md`, `research/PHASE1_AUDIT.md`, `NEXT_STEPS.md`. The original unmodified handoff is preserved in `results/legacy/documentation/PROJECT_HANDOFF.md`.
+
 **Project:** Attention-Based Deep Learning Framework for Skin Lesion Classification with Explainable AI. This is a seven-class, image-only HAM10000 research project. The agreed final methodology is **EfficientNet variants + CBAM + Grad-CAM**. PanDerm was an explicitly separate research probe, not part of that final architecture. The original locked test set has **never been evaluated**. Every accuracy below is a **validation** result, and no 93%+ strict or final-test result has been established.
 
 ## Repository and evaluation rules

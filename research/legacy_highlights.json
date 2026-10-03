@@ -1,0 +1,38 @@
+{
+  "results/exploratory/multires_ensemble/four_equal.json": {
+    "model": "Two EfficientNet-B0 + CBAM checkpoints, four resolution streams",
+    "image_size": "224 and 384",
+    "attention": "CBAM on B0",
+    "ensemble_members": ["weighted_b0_224", "weighted_b0_384", "strong_aug_b0_224", "strong_aug_b0_384"],
+    "ensemble_weights": [0.25, 0.25, 0.25, 0.25],
+    "checkpoints": ["checkpoints/exploratory/image_level_weighted_b0_cbam_v1/best.pt", "checkpoints/exploratory/image_level_strong_aug_b0_cbam_v1/best.pt"],
+    "source_scripts": ["scripts/ensemble_exploratory_multires.py"]
+  },
+  "results/exploratory/panderm_base_image_level_tta_v1/b0_four_plus_four_svc_views_eight_equal.json": {
+    "model": "EfficientNet-B0 + CBAM and PanDerm ViT-B/16 RBF SVM ensemble",
+    "image_size": "B0:224,384; PanDerm:224",
+    "attention": "CBAM on B0; native transformer attention on PanDerm",
+    "ensemble_members": ["weighted_b0_224", "weighted_b0_384", "strong_aug_b0_224", "strong_aug_b0_384", "panderm_svc_normal", "panderm_svc_hflip", "panderm_svc_vflip", "panderm_svc_hvflip"],
+    "ensemble_weights": [0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125],
+    "checkpoints": ["checkpoints/exploratory/image_level_weighted_b0_cbam_v1/best.pt", "checkpoints/exploratory/image_level_strong_aug_b0_cbam_v1/best.pt", "checkpoints/exploratory/panderm_base_image_level_v1/panderm_rbf_svc.joblib", ".cache/panderm_bb_data6_checkpoint-499.pth"],
+    "source_scripts": ["scripts/predict_panderm_exploratory_tta.py", "scripts/probe_panderm_base.py"]
+  },
+  "results/accuracy_exploration/panderm_base_strict_tta_v1/prior_four_with_svc_tta_equal.json": {
+    "model": "Weighted B0 + oversampled B0 + PanDerm pilot + PanDerm SVM TTA",
+    "image_size": 224,
+    "attention": "CBAM on B0; native transformer attention on PanDerm",
+    "ensemble_members": ["weighted_b0", "oversampled_b0", "panderm_pilot", "panderm_svc_four_view_average"],
+    "ensemble_weights": [0.25, 0.25, 0.25, 0.25],
+    "checkpoints": ["checkpoints/efficientnet_b0_cbam_weighted_v1/best.pt", "checkpoints/efficientnet_b0_cbam_oversampled_v1/best.pt", "checkpoints/accuracy_exploration/panderm_base_last2_pilot_v1/best.pt", "checkpoints/accuracy_exploration/panderm_base_strict_heads_v1/standardized_rbf_svc_c10.joblib", ".cache/panderm_bb_data6_checkpoint-499.pth"],
+    "source_scripts": ["scripts/probe_panderm_strict_tta.py", "scripts/predict_panderm_strict_ensemble.py", "scripts/probe_panderm_base.py"]
+  },
+  "results/accuracy_exploration/panderm_base_strict_tta_v1/weighted_b0_plus_svc_tta_two_equal.json": {
+    "model": "Weighted B0 + CBAM and PanDerm SVM TTA",
+    "image_size": 224,
+    "attention": "CBAM on B0; native transformer attention on PanDerm",
+    "ensemble_members": ["weighted_b0", "panderm_svc_four_view_average"],
+    "ensemble_weights": [0.5, 0.5],
+    "checkpoints": ["checkpoints/efficientnet_b0_cbam_weighted_v1/best.pt", "checkpoints/accuracy_exploration/panderm_base_strict_heads_v1/standardized_rbf_svc_c10.joblib", ".cache/panderm_bb_data6_checkpoint-499.pth"],
+    "source_scripts": ["scripts/probe_panderm_strict_tta.py", "scripts/probe_panderm_base.py"]
+  }
+}

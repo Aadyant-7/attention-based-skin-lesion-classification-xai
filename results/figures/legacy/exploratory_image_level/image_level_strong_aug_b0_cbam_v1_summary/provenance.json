@@ -1,0 +1,19 @@
+{
+  "source": "results/exploratory/image_level_strong_aug_b0_cbam_v1_summary.json",
+  "source_sha256": "6976762379e616745ec22bffae1acb8af433068ccfd37db88f15eab4896c6e7e",
+  "selector": "best_validation",
+  "protocol": "exploratory_image_level",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "evaluation_split": "validation",
+  "history": "results/exploratory/image_level_strong_aug_b0_cbam_v1_history.csv",
+  "portable_source": "",
+  "note": "Generated from saved evidence; no model inference or training. Not held-out test results."
+}

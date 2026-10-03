@@ -25,4 +25,9 @@ __pycache__/
 *.pth
 *.ckpt
 *.pdf
+!results/figures/**/*.pdf
+!results/model_comparison/**/*.pdf
+!results/datasets/**/*.pdf
+!results/structured_experiments/**/*.pdf
+*.lock
 !data/raw/.gitkeep

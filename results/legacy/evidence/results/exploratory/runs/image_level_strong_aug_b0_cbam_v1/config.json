@@ -1,0 +1,41 @@
+{
+  "run_name": "image_level_strong_aug_b0_cbam_v1",
+  "seed": 42,
+  "image_size": 224,
+  "batch_size": 64,
+  "workers": 2,
+  "epochs": 20,
+  "patience": 5,
+  "imbalance": "class_weighted",
+  "backbone_lr": 3e-05,
+  "head_lr": 0.0001,
+  "weight_decay": 0.0001,
+  "recipe": "strong_aug",
+  "protocol": {
+    "protocol": "EXPLORATORY image-level published-protocol comparison; not lesion-disjoint",
+    "strict_test_excluded": true,
+    "strict_test_images": 1503,
+    "train_images": 7009,
+    "validation_images": 1503,
+    "train_validation_shared_lesions": 563,
+    "validation_images_with_train_lesion": 596,
+    "train_class_counts": {
+      "akiec": 229,
+      "bcc": 359,
+      "bkl": 769,
+      "df": 81,
+      "mel": 778,
+      "nv": 4693,
+      "vasc": 100
+    },
+    "validation_class_counts": {
+      "akiec": 49,
+      "bcc": 77,
+      "bkl": 165,
+      "df": 17,
+      "mel": 167,
+      "nv": 1007,
+      "vasc": 21
+    }
+  }
+}

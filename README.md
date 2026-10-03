@@ -1,6 +1,22 @@
 # Attention-Based Skin Lesion Classification with Explainable AI
 
-**Status:** Phase 1 complete; validation experiments continue on the separate `accuracy-exploration` branch. No locked test-set result is reported.
+**Current direction — 3 October 2026:** structured research Phase 1 (audit, legacy indexing, registry, dataset tables and evidence figures) is complete. The final backbone/attention/ensemble is now open to experimental evidence; EfficientNet-B0 + CBAM is a historical baseline. The lesion-disjoint split remains the preferred primary benchmark and the test remains locked. No new training was launched in this phase.
+
+## Active research navigation
+
+- [Research workspace](research/README.md): current structure, artifact contract, common model interface and registry rules.
+- [Phase 1 audit](research/PHASE1_AUDIT.md): what was found, preserved, added and verified.
+- [Next steps](NEXT_STEPS.md): Phase 2 onward, five-model shortlist plus optional B2, controls and two-week plan.
+- [Master evidence registry](results/master_experiment_registry.csv): historical candidates and new structured run records; empty fields mean not recorded.
+- [Verified HAM10000 class counts](results/datasets/strict_lesion_disjoint/class_counts.md): total/train/validation/test for all classes.
+- [Legacy index](results/legacy/README.md) and [figure index](results/figures/figure_index.csv): preserved history and saved-result plots.
+- [Strict historical comparison](results/model_comparison/legacy/strict_lesion_disjoint/model_comparison.png) and [exploratory historical comparison](results/model_comparison/legacy/exploratory_image_level/model_comparison.png): protocols remain separate.
+
+Regenerate evidence only with `.\.venv\Scripts\python.exe -m research.build`; no model inference or training occurs. Tests: `.\.venv\Scripts\python.exe -m unittest discover -s research/tests -v`.
+
+## Historical implementation and experiments
+
+The following describes the pre-October work. Historical files retain their original paths; new runs belong under `results/structured_experiments/` and `checkpoints/structured/`. Original navigation documents are preserved under `results/legacy/documentation/`. Historical report architecture restrictions are superseded by the current research direction.
 
 This project classifies seven HAM10000 skin lesion categories from **images only**. It fine-tunes an ImageNet-pretrained EfficientNet-B0, applies a Convolutional Block Attention Module (CBAM) to the final spatial feature map, then uses global pooling and a seven-logit classifier. CBAM learns channel and spatial emphasis during prediction. Grad-CAM is a later explanation of a prediction; it does not improve accuracy.
 

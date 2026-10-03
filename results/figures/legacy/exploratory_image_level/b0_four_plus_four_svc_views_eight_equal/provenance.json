@@ -1,0 +1,19 @@
+{
+  "source": "results/exploratory/panderm_base_image_level_tta_v1/b0_four_plus_four_svc_views_eight_equal.json",
+  "source_sha256": "1934be7ba504ad2992f32df939e802f4cdb400b5432b412b5f340d06d0c0ac00",
+  "selector": "",
+  "protocol": "exploratory_image_level",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "evaluation_split": "validation",
+  "history": "",
+  "portable_source": "",
+  "note": "Generated from saved evidence; no model inference or training. Not held-out test results."
+}

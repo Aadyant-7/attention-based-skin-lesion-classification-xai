@@ -1,0 +1,6 @@
+topic,repository_evidence,primary_source,phase2_action
+HAM10000,docs/accuracy_exploration_research.md,https://doi.org/10.1038/sdata.2018.161,Transfer source-checked dataset description; do not invent a model result
+Base paper evaluation,docs/base_paper_protocol_audit.md,https://doi.org/10.18178/joig.14.4.551-566,Verify page/table support and split wording in the original paper
+High accuracy claims,docs/high_accuracy_claims_audit.md,,Use its exact source links and distinguish tasks/cohorts
+Architecture and augmentation studies,docs/accuracy_exploration_research.md,,Recheck each relevant primary source before filling the review template
+PanDerm,docs/panderm_probe.md,https://github.com/SiyuanYan1/PanDerm,Document pretraining overlap uncertainty and weight/source license

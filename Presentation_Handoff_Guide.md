@@ -1,5 +1,7 @@
 # Presentation handoff guide
 
+> **Historical presentation guide.** The 3-October research direction now permits other architectures and evidence-based final selection. Historical PanDerm scores retain their original protocol labels. Newly generated comparison/CM/training figures are in `results/figures/legacy/` and `results/model_comparison/legacy/`; the old “no saved plots” statement below describes the earlier snapshot. See `research/README.md` and `NEXT_STEPS.md` for current work. The original guide is preserved under `results/legacy/documentation/`.
+
 Use the repository's **`accuracy-exploration` branch**. All scores below are **validation** scores; the locked test set has not been evaluated. The 90.75% result uses an exploratory image-level split with shared lesions and a PanDerm component, so it is not the final EfficientNet + CBAM + Grad-CAM result.
 
 ## 1. Where the saved evidence is

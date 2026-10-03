@@ -1,0 +1,19 @@
+{
+  "source": "results/runs/efficientnet_b0_cbam_focal_v1/validation_metrics.json",
+  "source_sha256": "30b296646eacd9ee501966c5ced620292737c41cf220788a03cb66cb1602af30",
+  "selector": "",
+  "protocol": "strict_lesion_disjoint",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "evaluation_split": "validation",
+  "history": "results/runs/efficientnet_b0_cbam_focal_v1/history.csv",
+  "portable_source": "",
+  "note": "Generated from saved evidence; no model inference or training. Not held-out test results."
+}

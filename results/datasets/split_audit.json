@@ -1,0 +1,44 @@
+{
+  "strict_lesion_disjoint": {
+    "manifest": "data/splits/split_assignments.csv",
+    "sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "images": 10015,
+    "lesions": 7470,
+    "counts": {
+      "class": "TOTAL",
+      "total": 10015,
+      "train": 7009,
+      "validation": 1503,
+      "test": 1503,
+      "share_of_dataset_pct": 100
+    },
+    "lesion_overlaps": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "validation_images_with_training_lesion": 0
+  },
+  "exploratory_image_level": {
+    "manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+    "sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+    "images": 10015,
+    "lesions": 7470,
+    "counts": {
+      "class": "TOTAL",
+      "total": 10015,
+      "train": 7009,
+      "validation": 1503,
+      "test": 1503,
+      "share_of_dataset_pct": 100
+    },
+    "lesion_overlaps": {
+      "train_val": 563,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "validation_images_with_training_lesion": 596
+  },
+  "raw_metadata_verified": true,
+  "raw_metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5"
+}
