@@ -1,5 +1,7 @@
 # Integrated literature review — 3 October 2026
 
+Review snapshot prepared before S01 training. Current results/strategy are in [S01 closeout](../../phase3/S01_CLOSEOUT.md) and [two-stage amendment](../../phase3/TWO_STAGE_STRATEGY.md); its proposed all-strict screening sequence is superseded. Source extraction/screening decisions remain unchanged.
+
 ## Evidence and screening
 
 Latest input: `research/literature/incoming/SciSpace Literature Review.xlsx`, sheet `table1`, **A1:H51**, SHA-256 `1cf7ed7cad73ff48c235d4364509f95c52a86c3a9a23512c571fa2c31278c8db`. It contains 50 entries, eight columns, and no formula cells. The workbook was read without edits. `screening.csv` gives a decision, source coordinates, method/result extraction, rationale and verification scope for **every entry**. `provenance.json` records the reproducible counts; `../screen_scispace.py` produces these using bundled Python/openpyxl. Full extracted source text remains local in `.cache/research_literature/scispace_extracted.json`.

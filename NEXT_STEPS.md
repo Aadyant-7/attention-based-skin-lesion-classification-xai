@@ -1,6 +1,8 @@
 # Research plan: 3–17 October 2026
 
-**Active update:** [Phase 3 plan](research/phase3/PLAN.md) integrates the 50-entry SciSpace screening with retained verified references. The first B0 control/shared runner is prepared and awaits explicit GPU approval. The Phase 2 setup below remains unchanged; no structured model has trained yet.
+**Active update:** S01 is [completed and verified](research/phase3/S01_CLOSEOUT.md). Follow [exploratory screening then strict confirmation](research/phase3/TWO_STAGE_STRATEGY.md); [S02 MobileNet](research/phase3/S02_PROPOSAL.md) awaits approval. The Phase2 all-strict screening plan below is retained historical evidence and is superseded.
+
+## Original Phase2 plan (historical)
 
 The two-week target is a planning window, not a promise of a score. Final architecture is open to controlled evidence. **Phases 1–2 are complete; no new training or test evaluation was launched.** Start at [the Phase-2 handoff](research/phase2/README.md), [fixed recipe v1](research/phase2/EXPERIMENTAL_SETUP.md) and [planned model configs](research/configs/backbone_comparison/comparison_plan.csv). Phase 3 begins with CPU runner implementation/review; announce every GPU preflight/run before launching it.
 

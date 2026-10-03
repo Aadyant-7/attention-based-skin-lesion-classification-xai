@@ -1,5 +1,7 @@
 # Phase 3 — evidence-led experiments
 
+**Strategy superseded,3 October2026:** S01 is [closed out](S01_CLOSEOUT.md). Follow the user's [two-stage amendment](TWO_STAGE_STRATEGY.md) and [S02 MobileNet proposal](S02_PROPOSAL.md). Below preserves the original approved S01 plan; its pending-approval language is historical.
+
 **Prepared on 3 October 2026; GPU approval pending. No structured training launched.**
 
 Literature input: [integrated review](../literature/scispace_analysis/INTEGRATED_REVIEW.md), [all 50 screening decisions](../literature/scispace_analysis/screening.csv), and the retained Phase 2 primary references/base-paper audit. Phase 2 recipe v1 remains unchanged; original Phase 2 files are preserved as the planning snapshot.

@@ -80,7 +80,7 @@ def metric_figures(metrics, out, title):
     save(fig, out, 'class_support')
 
 
-def training_figures(history, out, title):
+def training_figures(history, out, title, selection_metric='macro_f1'):
     if history is None or history.empty:
         return
     for name, columns, ylabel in (
@@ -93,9 +93,11 @@ def training_figures(history, out, title):
         fig, ax = plt.subplots(figsize=(7, 4))
         for c in available:
             ax.plot(history['epoch'], history[c], marker='.', label=c.replace('_', ' '))
-        if 'val_macro_f1' in history and history['val_macro_f1'].notna().any():
-            selected=history.loc[history['val_macro_f1'].idxmax(),'epoch']
-            ax.axvline(selected,linestyle='--',color='#666666',alpha=.65,label='Macro-F1-selected epoch')
+        column='val_'+selection_metric
+        if column in history and history[column].notna().any():
+            selected=history.loc[history[column].idxmax(),'epoch']
+            label='Macro-F1' if selection_metric=='macro_f1' else 'Accuracy'
+            ax.axvline(selected,linestyle='--',color='#666666',alpha=.65,label=label+'-selected epoch')
         ax.set(xlabel='Epoch', ylabel=ylabel, title=title)
         ax.xaxis.set_major_locator(MaxNLocator(integer=True))
         ax.grid(alpha=.2)

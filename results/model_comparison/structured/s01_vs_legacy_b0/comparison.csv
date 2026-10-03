@@ -1,0 +1,3 @@
+display_name,experiment_id,accuracy,macro_f1,best_epoch,comparison
+Structured B0 | GAP head | batch16/acc2,s01_efficientnet_b0_none_strict_seed42,0.8562874251497006,0.7791473336748238,18,same strict cohort; different recipes
+Historical B0+CBAM | MLP head | batch64,efficientnet_b0_cbam_weighted_v1,0.8456420492348636,0.7568732673677362,16,descriptive; not CBAM ablation

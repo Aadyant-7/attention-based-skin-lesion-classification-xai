@@ -46,6 +46,46 @@ class RunnerChecks(unittest.TestCase):
             cfg=copy.deepcopy(self.config);cfg[key]=value
             with self.assertRaises(ValueError): train.validate_config(cfg)
 
+    def test_exploratory_preflight_preserves_locked_test_and_allows_known_overlap(self):
+        cfg=json.loads((ROOT/'research/configs/phase3/s02_mobilenet_v3_large_none_exploratory_seed42.json').read_text())
+        with patch.object(train.Image,'open',side_effect=AssertionError('Image read')),patch.object(torch.cuda,'is_available',side_effect=AssertionError('CUDA query')):
+            train.validate_config(cfg);tr,va,_=train.development_data(cfg)
+        self.assertEqual(len(set(tr.lesion_id)&set(va.lesion_id)),563)
+        self.assertEqual(int(va.lesion_id.isin(set(tr.lesion_id)).sum()),596)
+        frame=pd.read_csv(ROOT/cfg['split_manifest'])
+        bad=frame.copy();a=bad.index[bad.split=='test'][0];b=bad.index[bad.split=='train'][0]
+        bad.loc[a,'split']='train';bad.loc[b,'split']='test'
+        with self.assertRaisesRegex(ValueError,'Locked test identity'): train.check_partition(bad,cfg)
+        with self.assertRaisesRegex(ValueError,'Strict train/validation'):
+            train.check_partition(frame,dict(cfg,protocol='strict_lesion_disjoint'))
+
+    def test_screening_selection_and_secondary_checkpoint_are_declared(self):
+        cfg=json.loads((ROOT/'research/configs/phase3/s02_mobilenet_v3_large_none_exploratory_seed42.json').read_text())
+        self.assertEqual(cfg['selection_metric'],'accuracy');self.assertEqual(cfg['secondary_selection_metric'],'macro_f1')
+        for change in ({'secondary_selection_metric':None},{'selection_metric':'macro_f1'},{'split_sha256':'0'*64}):
+            with self.assertRaises(ValueError): train.validate_config(dict(cfg,**change))
+
+    def test_accuracy_selection_accepts_different_f1_winner_and_rejects_ties(self):
+        from research import experiment as exp
+        from research import common
+        metrics=json.loads((ROOT/'results/runs/efficientnet_b0_cbam_weighted_v1/validation_metrics.json').read_text())
+        obj=exp.Experiment.__new__(exp.Experiment)
+        obj.validation_support={c:metrics['per_class'][c]['support'] for c in CLASSES}
+        selected={'val_'+k:metrics[k] for k in ('accuracy','macro_precision','macro_recall','macro_f1')}
+        obj.history=[dict(selected,val_accuracy=metrics['accuracy']-.01,val_macro_f1=metrics['macro_f1']+.01),selected]
+        obj.row={k:'' for k in exp.FIELDS}
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);split=root/self.config['split_manifest'];split.parent.mkdir(parents=True)
+            split.write_bytes((ROOT/self.config['split_manifest']).read_bytes())
+            obj.config=dict(self.config,experiment_id='s99_fixture',selection_metric='accuracy')
+            obj.path=root/'results/structured_experiments/s99_fixture'
+            ckpt=root/'checkpoints/structured/s99_fixture/best.pt';ckpt.parent.mkdir(parents=True);ckpt.write_bytes(b'fixture')
+            with patch.object(exp,'ROOT',root),patch.object(common,'ROOT',root),patch.object(exp,'upsert'),patch.object(exp,'metric_figures'),patch.object(exp,'training_figures') as curves:
+                obj.complete(metrics,ckpt,2,0)
+                curves.assert_called_once();self.assertEqual(curves.call_args.kwargs['selection_metric'],'accuracy')
+                obj.history=[selected,selected]
+                with self.assertRaisesRegex(ValueError,'earliest accuracy'): obj.complete(metrics,ckpt,2,0)
+
     def test_test_partition_rejected_before_image_loading(self):
         frame=pd.DataFrame([dict(split='test',path='should-not-open.jpg',label=0,image_id='locked')])
         with patch.object(train.Image,'open',side_effect=AssertionError('Image read')):

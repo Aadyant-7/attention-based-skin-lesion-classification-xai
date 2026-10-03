@@ -1,0 +1,2 @@
+display_name,experiment_id,protocol,recipe_version,selection_metric,weights,seed,epochs,best_epoch,accuracy,macro_precision,macro_recall,macro_f1,melanoma_recall,runtime_seconds,checkpoint_sha256
+efficientnet_b0 | none,s01_efficientnet_b0_none_strict_seed42,strict_lesion_disjoint,backbone_comparison_v1,macro_f1,EfficientNet_B0_Weights.IMAGENET1K_V1,42,20,18,0.8562874251497006,0.7742211258057381,0.7852016013142199,0.7791473336748238,0.608433734939759,1006.2479975000024,0970a288544a783f2af8212939f927ce494b4aae9e4391d6eea991988de5bcdf

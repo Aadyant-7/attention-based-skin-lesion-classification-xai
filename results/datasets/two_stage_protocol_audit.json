@@ -1,0 +1,109 @@
+{
+  "status": "verified_existing_protocols_reused",
+  "protocols": {
+    "strict_lesion_disjoint": {
+      "path": "data/splits/split_assignments.csv",
+      "sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+      "counts": {
+        "train": 7009,
+        "val": 1503,
+        "test": 1503
+      },
+      "percentages": {
+        "train": 69.98502246630055,
+        "val": 15.007488766849725,
+        "test": 15.007488766849725
+      },
+      "lesion_overlaps": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "validation_images_with_training_lesion": 0,
+      "class_counts": {
+        "train": {
+          "akiec": 228,
+          "bcc": 359,
+          "bkl": 769,
+          "df": 80,
+          "mel": 779,
+          "nv": 4694,
+          "vasc": 100
+        },
+        "val": {
+          "akiec": 50,
+          "bcc": 77,
+          "bkl": 165,
+          "df": 18,
+          "mel": 166,
+          "nv": 1006,
+          "vasc": 21
+        },
+        "test": {
+          "akiec": 49,
+          "bcc": 78,
+          "bkl": 165,
+          "df": 17,
+          "mel": 168,
+          "nv": 1005,
+          "vasc": 21
+        }
+      }
+    },
+    "exploratory_image_level": {
+      "path": "data/splits/exploratory/image_level_dev_v1.csv",
+      "sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+      "counts": {
+        "train": 7009,
+        "val": 1503,
+        "test": 1503
+      },
+      "percentages": {
+        "train": 69.98502246630055,
+        "val": 15.007488766849725,
+        "test": 15.007488766849725
+      },
+      "lesion_overlaps": {
+        "train_val": 563,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "validation_images_with_training_lesion": 596,
+      "class_counts": {
+        "train": {
+          "akiec": 229,
+          "bcc": 359,
+          "bkl": 769,
+          "df": 81,
+          "mel": 778,
+          "nv": 4693,
+          "vasc": 100
+        },
+        "val": {
+          "akiec": 49,
+          "bcc": 77,
+          "bkl": 165,
+          "df": 17,
+          "mel": 167,
+          "nv": 1007,
+          "vasc": 21
+        },
+        "test": {
+          "akiec": 49,
+          "bcc": 78,
+          "bkl": 165,
+          "df": 17,
+          "mel": 168,
+          "nv": 1005,
+          "vasc": 21
+        }
+      }
+    }
+  },
+  "test_identity_unchanged": true,
+  "strict_validation_images_in_exploratory_training": 1243,
+  "strict_confirmation_requires_fresh_training": true,
+  "new_split_created": false,
+  "test_images_opened": false,
+  "gpu_used": false
+}

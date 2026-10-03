@@ -5,5 +5,7 @@ legacy/navigation/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab
 research/configs/backbone_comparison/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/configs/phase3/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/phase2/recipe_v1.json -text
+research/phase3/recipe_screening_v1.json -text
+results/structured_experiments/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Archival copies remain byte-identical, including original line endings.
 legacy/organization/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

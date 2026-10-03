@@ -1,0 +1,70 @@
+{
+  "recipe_version": "backbone_comparison_v1",
+  "phase": "backbone_comparison",
+  "protocol": "strict_lesion_disjoint",
+  "split_manifest": "data/splits/split_assignments.csv",
+  "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "attention": "none",
+  "seed": 42,
+  "deterministic": true,
+  "cudnn_benchmark": false,
+  "cuda_workspace_config": ":4096:8",
+  "workers": 2,
+  "precision": "cuda_amp_fp16_gradscaler",
+  "image_size": 224,
+  "preprocessing": "PIL RGB; resize 224x224 bilinear antialias; ImageNet normalization",
+  "normalization_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalization_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "augmentation": "horizontal flip p=0.5; validation deterministic",
+  "imbalance": "training-only sqrt inverse-frequency class weights normalized to mean1",
+  "loss": "weighted_cross_entropy",
+  "loss_reduction": "weighted numerator / target-weight sum across whole effective batch",
+  "optimizer": "AdamW",
+  "learning_rate": {
+    "backbone": 3e-05,
+    "head": 0.0001
+  },
+  "optimizer_betas": [
+    0.9,
+    0.999
+  ],
+  "optimizer_eps": 1e-08,
+  "weight_decay": 0.0001,
+  "batch_size": 16,
+  "validation_batch_size": 16,
+  "effective_batch_size": 32,
+  "gradient_accumulation": 2,
+  "drop_last_train": true,
+  "drop_last_validation": false,
+  "max_epochs": 20,
+  "patience": 5,
+  "selection_metric": "macro_f1",
+  "selection_tie": "earliest_epoch",
+  "scheduler": "ReduceLROnPlateau; mode=max; factor=0.5; patience=2; threshold=0; threshold_mode=abs; cooldown=0; min_lr=1e-7",
+  "initial_freeze_epochs": 0,
+  "head_dropout": 0.2,
+  "head": "GAP; preserve native ConvNeXt normalization; dropout; linear7",
+  "status": "prepared_pending_gpu_approval",
+  "experiment_id": "s01_efficientnet_b0_none_strict_seed42",
+  "question": "Establish the matched EfficientNet-B0 transfer-learning control for subsequent backbone and added-CBAM comparisons on strict validation macro-F1.",
+  "model": "efficientnet_b0",
+  "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+  "optional": false
+}

@@ -20,8 +20,8 @@ class Experiment:
         missing = [k for k in REQUIRED if k not in config]
         if missing:
             raise ValueError(f'Missing config fields: {missing}')
-        if config['protocol'] not in SPLITS or config['selection_metric'] != 'macro_f1':
-            raise ValueError('Use an explicit registered development protocol and macro_f1 selection')
+        if config['protocol'] not in SPLITS or config['selection_metric'] not in ('macro_f1','accuracy'):
+            raise ValueError('Use an explicit registered protocol and declared checkpoint selection metric')
         if not re.fullmatch(r'[a-z0-9][a-z0-9_-]{2,100}', config['experiment_id']):
             raise ValueError('Unsafe experiment identifier')
         self.config = dict(config)
@@ -69,9 +69,14 @@ class Experiment:
         if not self.history or not 1 <= best_epoch <= len(self.history):
             raise ValueError('Missing history / invalid best epoch')
         selected = self.history[best_epoch-1]
-        maximum = max(float(r['val_macro_f1']) for r in self.history)
-        if abs(float(selected['val_macro_f1'])-maximum)>1e-8 or abs(float(metrics['macro_f1'])-maximum)>1e-8:
-            raise ValueError('Metrics must match the macro-F1-selected epoch')
+        key=self.config.get('selection_metric','macro_f1')
+        maximum=max(float(r['val_'+key]) for r in self.history)
+        earliest=next(i+1 for i,r in enumerate(self.history) if float(r['val_'+key])==maximum)
+        if best_epoch!=earliest or abs(float(selected['val_'+key])-maximum)>1e-8 or abs(float(metrics[key])-maximum)>1e-8:
+            raise ValueError(f'Metrics must match the earliest {key}-selected epoch')
+        for metric in ('accuracy','macro_precision','macro_recall','macro_f1'):
+            if 'val_'+metric in selected and abs(float(metrics[metric])-float(selected['val_'+metric]))>1e-8:
+                raise ValueError(f'{metric} differs from the selected epoch')
         checkpoint = Path(checkpoint).resolve()
         checkpoint.relative_to(ROOT/'checkpoints/structured'/self.config['experiment_id'])
         if not checkpoint.is_file():
@@ -80,7 +85,7 @@ class Experiment:
         figures=self.path/'figures'
         title=f"{self.config['model']} | {self.config['protocol']} validation"
         metric_figures(metrics,figures,title)
-        training_figures(pd.DataFrame(self.history),figures,title)
+        training_figures(pd.DataFrame(self.history),figures,title,selection_metric=key)
         self.row.update(status='completed',best_epoch=best_epoch,runtime_seconds=runtime_seconds,
                         checkpoint=relative(checkpoint),checkpoint_available_local=True,
                         checkpoint_sha256=sha256(checkpoint),

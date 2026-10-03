@@ -8,9 +8,12 @@ B.Tech CSE Minor Project Â· HAM10000 Â· seven classes Â· active branch: **
 |---|---|
 | [Research workspace](research/README.md) | Active code, result contract and navigation. |
 | [Phase 2 handoff](research/phase2/README.md) | Literature, dataset protocol and frozen comparison plan. |
+| [S01 completed result](research/phase3/S01_CLOSEOUT.md) |85.63% strict validation accuracy/.7791 macro-F1; verified artifacts and historical context. |
+| [Two-stage strategy](research/phase3/TWO_STAGE_STRATEGY.md) | Exploratory discovery, then fresh strict confirmation; locked test preserved. |
+| [Next GPU proposal](research/phase3/S02_PROPOSAL.md) | MobileNetV3-Large exploratory screening; awaiting approval, with exact commands/paths. |
 | [Folder map](research/FOLDER_MAP.md) | Active, historical and local folders explained. |
 | [Next steps](NEXT_STEPS.md) | Remaining phases and training gates. |
-| [Experiment registry](results/master_experiment_registry.csv) | Verified historical evidence and future structured runs. |
+| [Experiment registry](results/master_experiment_registry.csv) | Historical evidence and actual structured run records; protocols kept separate. |
 | [Dataset table](results/datasets/strict_lesion_disjoint/class_counts.md) | Verified per-class total/train/validation/test counts. |
 | [Saved figures](results/figures/figure_index.csv) | Training curves, confusion matrices and class-score charts. |
 | [Legacy research](legacy/README.md) | Preserved code/results/reports and previous navigation documents. |

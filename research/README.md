@@ -1,8 +1,8 @@
 # Structured research workspace
 
-**Phase3 prepared; GPU approval pending:** start with [the integrated literature review](literature/scispace_analysis/INTEGRATED_REVIEW.md), [adaptive plan and first start/monitor commands](phase3/PLAN.md), [fixed setup](phase2/EXPERIMENTAL_SETUP.md) and [folder map](FOLDER_MAP.md). The reviewed shared runner is `research/train.py`; no structured experiment has launched. Phase2 documents remain the completed planning snapshot. Old root handoff guides live under `legacy/navigation/`.
+**Phase3 active:** S01 is [closed out](phase3/S01_CLOSEOUT.md),85.63% strict validation accuracy/.7791 macro-F1 at epoch18. Follow [two-stage evaluation](phase3/TWO_STAGE_STRATEGY.md): exploratory discovery, fresh strict confirmation of finalists. [S02 MobileNet](phase3/S02_PROPOSAL.md) awaits new GPU approval. [Literature](literature/scispace_analysis/INTEGRATED_REVIEW.md), Phase2 and original S01 plans remain evidence. Old root handoffs live under `legacy/navigation/`.
 
-**Local organization cleanup:** reports/notebooks/archive/old Grad-CAM directories now live under `legacy/`. The original immutable inventory is resolved through `legacy/path_map.json`; preparation verification is `python -m research.verify_layout --phase3-preparation`, which preserves the separate original cleanup audit. See [cleanup report](../legacy/organization/README.md). Historical executable code, datasets, results and checkpoint locations remain stable.
+**Local organization cleanup:** archives live under `legacy/`; immutable inventory uses `legacy/path_map.json`. Current verification is `python -m research.verify_layout --phase3-current`, preserving earlier cleanup/preparation audits. See [cleanup report](../legacy/organization/README.md). Historical code, datasets, results and checkpoints remain stable.
 
 Current direction (3 October 2026): final architecture is open to evidence. The primary benchmark remains the frozen lesion-disjoint split; the locked test is reserved until Phase 8. Historical image-level scores remain explicitly exploratory. Old reports describe the earlier direction and remain unchanged research history.
 
@@ -17,7 +17,7 @@ Current direction (3 October 2026): final architecture is open to evidence. The 
 | `results/datasets/` | Verified primary/exploratory class tables, manifest overlap audits, stacked count figures and LaTeX table fragments. |
 | `results/figures/legacy/` | Automatically generated evidence figures, labelled by protocol and source. |
 | `results/model_comparison/legacy/` | Separate strict and exploratory historical comparisons; these are not controlled backbone comparisons. |
-| `results/structured_experiments/<id>/` | New config, environment, history, metrics, run record and figures. No new models have been trained yet. |
+| `results/structured_experiments/<id>/` | Structured configs, environment, history, metrics, predictions and figures; S01 completed, later runs separately approved. |
 | `results/ablations/`, `results/ensembles/`, `results/final/` | Reserved outputs for later paired attention studies, controlled ensembles and frozen-test results. |
 | `checkpoints/structured/<id>/` | New local checkpoints, outside all historical checkpoint directories. |
 | `research/models.py` | Common seven-class feature-map classifier with optional CBAM for six torchvision CNNs. |
@@ -41,9 +41,9 @@ Rows index **saved evidence**, not independent trained networks. `record_kind` d
 
 ## New experiment contract
 
-The old config example is a historical proposal. Phase3's first prepared config and executable shared runner are documented in [the launch proposal](phase3/PLAN.md); launch waits for explicit GPU approval. Do not use the legacy B0-specific trainer to compare other backbones.
+The old config and original S01 launch plan remain historical. Active configs/shared runner follow [the two-stage strategy](phase3/TWO_STAGE_STRATEGY.md) and [next launch proposal](phase3/S02_PROPOSAL.md). Every new GPU run waits for approval. Use the shared runner for comparisons.
 
-The shared runner uses `Experiment(config)`, `log_epoch()` and `complete()` to validate/publish the selected validation result. It refuses mismatched support, split changes, inconsistent metrics and accidental overwrites. Checkpoints stay inside `checkpoints/structured/`. Its explicit epoch-boundary resume repairs partially published history/registry from atomic full state; completed IDs exit without training. The final test runner remains unimplemented and the test remains locked.
+Strict v1 selects macro-F1; exploratory screening v1 selects accuracy and saves a separate macro-F1 winner. `Experiment.complete()` verifies the declared criterion, supports, split identity and metrics. Checkpoints remain in `checkpoints/structured/`; explicit epoch resume repairs history/registry and completed IDs exit without training. The final test runner is unimplemented and the test remains locked.
 
 Use `research.plots.metric_figures()`, `training_figures()` and `comparison_figures()` with saved results for raw/normalized confusion matrices, per-class scores/support, available curves and model comparisons. PNG exports are 300 dpi and PDFs are vector figures. A missing historical field/curve is omitted, not synthesized. Every highlighted legacy figure directory includes `provenance.json` and a per-class CSV.
 

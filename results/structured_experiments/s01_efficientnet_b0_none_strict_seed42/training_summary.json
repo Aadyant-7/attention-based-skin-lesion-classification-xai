@@ -1,0 +1,8 @@
+{
+  "parameters": 4016515,
+  "optimizer_updates": 4376,
+  "best_epoch": 18,
+  "stop_reason": "epoch_cap",
+  "validation_timing_scope": "End-to-end validation batch loop including loading/transfers; not pure GPU latency",
+  "best_validation_ms_per_image": 8.014246240876
+}

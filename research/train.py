@@ -24,15 +24,19 @@ from PIL import Image
 from torch.nn import functional as F
 from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
-from .common import ROOT, CLASSES, sha256, write_csv, write_json
+from .common import ROOT, CLASSES, SPLITS, sha256, write_csv, write_json
 from .experiment import Experiment
 from .models import CHANNELS, ResearchClassifier
 
 RECIPE = ROOT/'research/phase2/recipe_v1.json'
+RECIPES={'backbone_comparison_v1':RECIPE,
+         'exploratory_screening_v1':ROOT/'research/phase3/recipe_screening_v1.json'}
 
 
 def validate_config(config):
-    recipe=json.loads(RECIPE.read_text(encoding='utf-8'))
+    if config.get('recipe_version') not in RECIPES:
+        raise ValueError('Unregistered recipe version')
+    recipe=json.loads(RECIPES[config['recipe_version']].read_text(encoding='utf-8'))
     differences=[k for k,v in recipe.items() if k!='status' and config.get(k)!=v]
     if differences:
         raise ValueError(f'Unsupported recipe amendment: {differences}; register/review a new runner recipe first')
@@ -56,9 +60,7 @@ def development_data(config, root=ROOT):
         raise ValueError('Invalid partition metadata')
     if not (frame.label==frame.diagnosis.map(dict(zip(CLASSES,range(7))))).all():
         raise ValueError('Class mapping changed')
-    groups={s:set(frame.loc[frame.split==s,'lesion_id']) for s in ('train','val','test')}
-    if any(groups[a]&groups[b] for a,b in (('train','val'),('train','test'),('val','test'))):
-        raise ValueError('Lesion overlap')
+    check_partition(frame,config,root)
     metadata=root/'data/raw/HAM10000/HAM10000_metadata.csv'
     raw=pd.read_csv(metadata).set_index('image_id')[['lesion_id','dx']].rename(columns={'dx':'diagnosis'})
     if not raw.sort_index().equals(frame.set_index('image_id')[['lesion_id','diagnosis']].sort_index()):
@@ -79,6 +81,30 @@ def development_data(config, root=ROOT):
         raise ValueError('Unexpected development support')
     weights=np.sqrt(len(train)/(7*counts));weights/=weights.mean()
     return train,val,torch.tensor(weights,dtype=torch.float32)
+
+
+def check_partition(frame,config,root=ROOT):
+    """Exploration allows only registered train/val overlap; the test stays fixed."""
+    reference=root/SPLITS['strict_lesion_disjoint']
+    frozen=json.loads(RECIPE.read_text(encoding='utf-8'))['split_sha256']
+    if sha256(reference)!=frozen:
+        raise ValueError('Original locked reference changed')
+    strict=pd.read_csv(reference)
+    columns=['image_id','lesion_id','diagnosis','label','split']
+    expected=strict.loc[strict.split=='test',columns].sort_values('image_id').reset_index(drop=True)
+    actual=frame.loc[frame.split=='test',columns].sort_values('image_id').reset_index(drop=True)
+    if not actual.equals(expected) or set(frame.image_id)!=set(strict.image_id):
+        raise ValueError('Locked test identity or development pool changed')
+    groups={s:set(frame.loc[frame.split==s,'lesion_id']) for s in ('train','val','test')}
+    if groups['test']&(groups['train']|groups['val']):
+        raise ValueError('Test lesion entered development')
+    shared=groups['train']&groups['val']
+    if config['protocol']=='strict_lesion_disjoint' and shared:
+        raise ValueError('Strict train/validation lesion overlap')
+    if config['protocol']=='exploratory_image_level':
+        affected=int(frame.loc[frame.split=='val','lesion_id'].isin(shared).sum())
+        if len(shared)!=563 or affected!=596:
+            raise ValueError('Existing exploratory protocol diagnostics changed')
 
 
 class DevelopmentImages(Dataset):
@@ -232,7 +258,7 @@ def run(config,resume=False):
         write_json(experiment.path/'progress.json',dict(experiment_id=config['experiment_id'],**values))
     start=time.perf_counter();runtime=checkpoint['runtime_seconds'] if checkpoint else 0
     try:
-        logger.info('START %s resume=%s train=%d val=%d; test loader absent',config['experiment_id'],resume,len(train),len(val))
+        logger.info('START %s resume=%s train=%d val=%d protocol=%s selection=%s; test loader absent',config['experiment_id'],resume,len(train),len(val),config['protocol'],config['selection_metric'])
         progress(status='initializing',epoch=len(experiment.history),max_epochs=config['max_epochs'])
         # Resume loads trained weights; no ImageNet download on that path.
         model=ResearchClassifier(config['model'],weights=None if resume else config['weights'],
@@ -242,11 +268,14 @@ def run(config,resume=False):
         scheduler=torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer,mode='max',factor=.5,patience=2,
                                    threshold=0,threshold_mode='abs',cooldown=0,min_lr=1e-7)
         scaler=torch.amp.GradScaler('cuda')
-        weights=weights.cuda();best=None;stale=0;updates=0
+        weights=weights.cuda();best=None;secondary_best=None;stale=0;updates=0
+        selection=config['selection_metric']
+        secondary=config.get('secondary_selection_metric')
         if checkpoint:
             model.load_state_dict(checkpoint['model']);optimizer.load_state_dict(checkpoint['optimizer'])
             scheduler.load_state_dict(checkpoint['scheduler']);scaler.load_state_dict(checkpoint['scaler'])
             best=checkpoint['best'];stale=checkpoint['stale'];updates=checkpoint['optimizer_updates']
+            secondary_best=checkpoint.get('secondary_best')
             restore_rng(checkpoint['rng'])
         else:
             enum=models.get_model_weights(config['model'])[config['weights'].split('.')[-1]]
@@ -286,7 +315,10 @@ def run(config,resume=False):
                 updates+=int(scaler.get_scale()>=scale_before)
                 if step%20==0 or step+1==steps:
                     progress(status='training',epoch=epoch,step=step+1,steps=steps,max_epochs=config['max_epochs'],
-                             best_epoch=best['epoch'] if best else None,best_macro_f1=best['metrics']['macro_f1'] if best else None)
+                             selection_metric=selection,best_epoch=best['epoch'] if best else None,
+                             best_accuracy=best['metrics']['accuracy'] if best else None,
+                             selected_macro_f1=best['metrics']['macro_f1'] if best else None,
+                             best_macro_f1=(secondary_best or best)['metrics']['macro_f1'] if (secondary_best or best) else None)
                     logger.info('epoch %d/%d step %d/%d weighted_loss %.5f',epoch,config['max_epochs'],step+1,steps,numerator/denominator)
             model.eval();all_y=[];all_p=[];ids=[];vn=vd=0.
             progress(status='validating',epoch=epoch,max_epochs=config['max_epochs'])
@@ -300,7 +332,7 @@ def run(config,resume=False):
             validation_ms=(time.perf_counter()-vt)*1000/len(val)
             metrics=metric_report(np.asarray(all_y),all_p,vn/vd)
             if not np.isfinite(metrics['loss']): raise FloatingPointError('Nonfinite validation loss')
-            lr_before=[g['lr'] for g in optimizer.param_groups];scheduler.step(metrics['macro_f1'])
+            lr_before=[g['lr'] for g in optimizer.param_groups];scheduler.step(metrics[selection])
             row=dict(epoch=epoch,train_loss=numerator/denominator,train_accuracy=correct/used,train_images_used=used,
                      val_loss=metrics['loss'],val_accuracy=metrics['accuracy'],val_macro_precision=metrics['macro_precision'],
                      val_macro_recall=metrics['macro_recall'],val_macro_f1=metrics['macro_f1'],epoch_seed=epoch_seed,
@@ -309,35 +341,50 @@ def run(config,resume=False):
                      epoch_seconds=time.perf_counter()-tick)
             predictions=[dict(image_id=i,true_class=CLASSES[y],predicted_class=CLASSES[int(np.argmax(p))],
                               **{f'p_{c}':float(p[j]) for j,c in enumerate(CLASSES)}) for i,y,p in zip(ids,all_y,all_p)]
-            improved=best is None or metrics['macro_f1']>best['metrics']['macro_f1']
+            improved=best is None or metrics[selection]>best['metrics'][selection]
             stale=0 if improved else stale+1
             if improved:
                 best=dict(epoch=epoch,metrics=metrics,predictions=predictions,
                           model={k:v.detach().cpu().clone() for k,v in model.state_dict().items()})
+            secondary_improved=secondary and (secondary_best is None or metrics[secondary]>secondary_best['metrics'][secondary])
+            if secondary_improved:
+                secondary_best=dict(epoch=epoch,metrics=metrics,predictions=predictions,
+                                    model={k:v.detach().cpu().clone() for k,v in model.state_dict().items()})
             # Commit full state first. If CSV/registry/plots fail, explicit resume repairs
             # them from this snapshot without rerunning an already committed epoch.
             payload=dict(config=config,code_hashes=code_hashes(),runtime_versions=runtime_versions(),model=model.state_dict(),optimizer=optimizer.state_dict(),
-                         scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=rng_state(True),best=best,stale=stale,
+                         scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=rng_state(True),best=best,secondary_best=secondary_best,stale=stale,
                          history=experiment.history+[row],registry_row=copy.deepcopy(experiment.row),
                          optimizer_updates=updates,runtime_seconds=runtime+time.perf_counter()-start)
             atomic_checkpoint(latest,payload)
             if improved: atomic_checkpoint(ckptdir/'best.pt',dict(payload,model=best['model']))
+            if secondary_improved:
+                atomic_checkpoint(ckptdir/f'best_{secondary}.pt',dict(config=config,model=secondary_best['model'],
+                          best_epoch=secondary_best['epoch'],metrics=secondary_best['metrics'],class_order=list(CLASSES),selection_metric=secondary))
             experiment.log_epoch(row)
             logger.info('EPOCH %d val_accuracy=%.6f macro_f1=%.6f best_epoch=%d stale=%d',epoch,metrics['accuracy'],metrics['macro_f1'],best['epoch'],stale)
         if best is None: raise RuntimeError('No committed epoch; cannot publish a completed result')
         # This also repairs a best.pt write interrupted after latest.pt committed.
         final=dict(config=config,code_hashes=code_hashes(),model=best['model'],best_epoch=best['epoch'],
-                   metrics=best['metrics'],class_order=list(CLASSES),selection_metric='macro_f1')
+                   metrics=best['metrics'],class_order=list(CLASSES),selection_metric=selection)
         atomic_checkpoint(ckptdir/'best.pt',final)
         write_csv(experiment.path/'validation_predictions.csv',best['predictions'])
+        if secondary_best:
+            atomic_checkpoint(ckptdir/f'best_{secondary}.pt',dict(config=config,model=secondary_best['model'],
+                 best_epoch=secondary_best['epoch'],metrics=secondary_best['metrics'],class_order=list(CLASSES),selection_metric=secondary))
+            write_json(experiment.path/f'validation_metrics_{secondary}.json',secondary_best['metrics'])
+            write_csv(experiment.path/f'validation_predictions_{secondary}.csv',secondary_best['predictions'])
         write_json(experiment.path/'training_summary.json',dict(parameters=sum(p.numel() for p in model.parameters()),
-                   optimizer_updates=updates,best_epoch=best['epoch'],stop_reason='patience' if stale>=config['patience'] else 'epoch_cap',
+                   optimizer_updates=updates,best_epoch=best['epoch'],selection_metric=selection,
+                   secondary_best_epoch=secondary_best['epoch'] if secondary_best else None,
+                   stop_reason='patience' if stale>=config['patience'] else 'epoch_cap',
                    validation_timing_scope='End-to-end validation batch loop including loading/transfers; not pure GPU latency',
                    best_validation_ms_per_image=experiment.history[best['epoch']-1]['validation_ms_per_image']))
         experiment.complete(best['metrics'],ckptdir/'best.pt',best['epoch'],runtime+time.perf_counter()-start,
-                            'Common recipe v1; validation only; selected earliest maximum macro-F1; no test loader.')
+                            f"{config['recipe_version']}; {config['protocol']} validation only; selected earliest maximum {selection}; no test loader.")
         progress(status='completed',epochs=len(experiment.history),best_epoch=best['epoch'],
-                 best_accuracy=best['metrics']['accuracy'],best_macro_f1=best['metrics']['macro_f1'])
+                 selection_metric=selection,best_accuracy=best['metrics']['accuracy'],selected_macro_f1=best['metrics']['macro_f1'],
+                 best_macro_f1=(secondary_best or best)['metrics']['macro_f1'])
         logger.info('COMPLETED best_epoch=%d accuracy=%.6f macro_f1=%.6f',best['epoch'],best['metrics']['accuracy'],best['metrics']['macro_f1'])
     except BaseException as exc:
         experiment.fail(repr(exc));progress(status='failed',error=repr(exc),committed_epochs=len(experiment.history))

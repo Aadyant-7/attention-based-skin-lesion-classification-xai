@@ -2,8 +2,10 @@
 import argparse
 import ast
 import csv
+import io
 import json
 import re
+import subprocess
 from pathlib import Path
 from .common import ROOT, sha256, historical_path, write_json
 
@@ -17,7 +19,8 @@ ORGANIZATION_EDITS = {
 # Explicitly authorized navigation updates for the subsequent literature/runner
 # preparation. Original inventories and the cleanup audit are never rewritten.
 PHASE3_EDITS = {'NEXT_STEPS.md','research/literature/README.md',
-                'research/literature/incoming/README.md'}
+                'research/literature/incoming/README.md',
+                'research/experiment.py','research/plots.py','results/master_experiment_registry.csv'}
 
 
 def rows(path):
@@ -25,7 +28,7 @@ def rows(path):
         return list(csv.DictReader(f))
 
 
-def verify(phase3=False):
+def verify(phase3=False,require_unlaunched=True):
     moves={r['original_path']:r for r in rows(ROOT/'legacy/organization/relocations.csv')}
     mapping=json.loads((ROOT/'legacy/path_map.json').read_text())
     for old,new in mapping.items():
@@ -54,6 +57,17 @@ def verify(phase3=False):
     for r in old:
         assert sha256(historical_path(r['path']))==r['sha256'], f'Historical bytes changed: {r["path"]}'
     registry=rows(ROOT/'results/master_experiment_registry.csv')
+    if phase3 and not require_unlaunched:
+        # Compare actual historical row values, not a now-changing whole-file hash.
+        # Pin the clean organization commit and authenticate its bytes against
+        # the existing pre-cleanup inventory (Git may normalize CSV line endings).
+        original=subprocess.check_output(['git','show','028586a:results/master_experiment_registry.csv'],cwd=ROOT)
+        import hashlib
+        expected=next(r['sha256'] for r in before if r['path']=='results/master_experiment_registry.csv')
+        restored=original.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
+        assert expected in (hashlib.sha256(original).hexdigest(),hashlib.sha256(restored).hexdigest())
+        original_rows=list(csv.DictReader(io.StringIO(original.decode('utf-8-sig'))))
+        assert [r for r in registry if r['era']=='legacy']==[r for r in original_rows if r['era']=='legacy'], 'Historical registry rows changed'
     references=set()
     fields=('metrics_path','config_path','history_path','checkpoint','plots_dir',
             'confusion_matrix_path','split_manifest','portable_metrics_path',
@@ -95,9 +109,10 @@ def verify(phase3=False):
     if phase3:
         provenance=json.loads((ROOT/'research/literature/scispace_analysis/provenance.json').read_text())
         assert sha256(workbook)==provenance['sha256'], 'Analyzed workbook changed'
-        assert not any(r['era']=='structured' for r in registry), 'Preparation check expects no real run yet'
-        assert not (ROOT/'checkpoints/structured/s01_efficientnet_b0_none_strict_seed42').exists()
-        assert not (ROOT/'results/structured_experiments/s01_efficientnet_b0_none_strict_seed42').exists()
+        if require_unlaunched:
+            assert not any(r['era']=='structured' for r in registry), 'Preparation check expects no real run yet'
+            assert not (ROOT/'checkpoints/structured/s01_efficientnet_b0_none_strict_seed42').exists()
+            assert not (ROOT/'results/structured_experiments/s01_efficientnet_b0_none_strict_seed42').exists()
     report={'status':'passed','pre_cleanup_files':len(before),'unchanged_files':unchanged,
             'documented_code_navigation_edits':edits,'moved_files_byte_verified':len(moves),
             'immutable_historical_files_verified':len(old),'registry_rows':len(registry),
@@ -106,12 +121,17 @@ def verify(phase3=False):
             'scispace_path':workbook.relative_to(ROOT).as_posix(),
             'workbook_parsed_by_this_check':False,'model_instantiated_by_this_check':False,'gpu_work':False,
             'test_images_opened':False,'historical_results_modified':False}
-    report['verification_scope']='phase3_preparation' if phase3 else 'organization_cleanup'
-    write_json(ROOT/('results/audit/phase3_preservation_verification.json' if phase3 else 'results/audit/organization_verification.json'),report)
+    scope=('phase3_preparation' if require_unlaunched else 'phase3_current') if phase3 else 'organization_cleanup'
+    report['verification_scope']=scope
+    filename={'phase3_preparation':'phase3_preservation_verification.json',
+              'phase3_current':'phase3_current_verification.json','organization_cleanup':'organization_verification.json'}[scope]
+    write_json(ROOT/'results/audit'/filename,report)
     print(json.dumps(report,indent=2))
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--phase3-preparation',action='store_true')
-    verify(parser.parse_args().phase3_preparation)
+    parser.add_argument('--phase3-current',action='store_true')
+    args=parser.parse_args()
+    verify(args.phase3_preparation or args.phase3_current,require_unlaunched=not args.phase3_current)
