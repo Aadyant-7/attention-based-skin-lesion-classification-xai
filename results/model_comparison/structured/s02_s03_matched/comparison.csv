@@ -1,0 +1,3 @@
+display_name,experiment_id,accuracy,macro_f1,melanoma_recall,scope,split_sha256
+S02 MobileNetV3-Large,s02_mobilenet_v3_large_none_exploratory_seed42,0.8602794411177644,0.7861111676525011,0.6946107784431138,matched exploratory recipe; accuracy-selected; one seed,75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb
+S03 EfficientNet-B0,s03_efficientnet_b0_none_exploratory_seed42,0.863606121091151,0.7706600163648087,0.7005988023952096,matched exploratory recipe; accuracy-selected; one seed,75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb

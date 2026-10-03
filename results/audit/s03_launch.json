@@ -1,0 +1,6 @@
+{
+  "process_id": 35180,
+  "started_at": "2026-10-03T17:33:15.3230889+05:30",
+  "experiment_id": "s03_efficientnet_b0_none_exploratory_seed42",
+  "config": "research/configs/phase3/s03_efficientnet_b0_none_exploratory_seed42.json"
+}

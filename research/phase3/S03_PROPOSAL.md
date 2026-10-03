@@ -1,6 +1,6 @@
 # S03 proposal — matched exploratory EfficientNet-B0 control
 
-**Prepared only; GPU approval required.** ID `s03_efficientnet_b0_none_exploratory_seed42`.
+**Historical proposal; approved and completed 3 October 2026.** See [S03 closeout](S03_CLOSEOUT.md) and [next CPU proposal](S04_PROPOSAL.md). ID `s03_efficientnet_b0_none_exploratory_seed42`. Original prelaunch text retained below as provenance.
 
 S02 achieved86.03% accuracy/.7861 macro-F1 with a generalization gap. Historical B0+CBAM86.23% changes head,attention,batch and selection. One B0 control under **S02's identical exploratory recipe** supplies a fair architecture comparison, a future CBAM baseline and aligned probabilities for bounded fusion. Improvement is a hypothesis, not a promise of90%.
 

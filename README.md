@@ -11,7 +11,8 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 | [S01 completed result](research/phase3/S01_CLOSEOUT.md) |85.63% strict validation accuracy/.7791 macro-F1; verified artifacts and historical context. |
 | [Two-stage strategy](research/phase3/TWO_STAGE_STRATEGY.md) | Exploratory discovery, then fresh strict confirmation; locked test preserved. |
 | [S02 completed result](research/phase3/S02_CLOSEOUT.md) |86.03% exploratory accuracy/.7861 macro-F1; verified artifacts and same-protocol context. |
-| [Next GPU proposal](research/phase3/S03_PROPOSAL.md) | Matched exploratory EfficientNet-B0 control; awaiting approval, with exact commands/paths. |
+| [S03 completed result](research/phase3/S03_CLOSEOUT.md) |86.36% exploratory accuracy/.7707 macro-F1; matched MobileNet comparison and error analysis. |
+| [Next experiment proposal](research/phase3/S04_PROPOSAL.md) | Fixed equal-probability fusion from saved S02/S03 predictions; CPU only, prepared but not executed. |
 | [Folder map](research/FOLDER_MAP.md) | Active, historical and local folders explained. |
 | [Next steps](NEXT_STEPS.md) | Remaining phases and training gates. |
 | [Experiment registry](results/master_experiment_registry.csv) | Historical evidence and actual structured run records; protocols kept separate. |
@@ -21,7 +22,7 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 
 ## Current status
 
-Phases 1–2 are complete. S01 strict B0 and S02 exploratory MobileNet are completed; S03 is prepared only. Model discovery uses the existing image-level development protocol, followed by fresh lesion-disjoint confirmation of finalists. Both use 7,009/1,503/1,503 partitions with the original test locked until methodology freeze; report protocols separately. Final architecture remains open to controlled evidence.
+Phases 1–2 are complete. S01 strict B0, S02 exploratory MobileNet and S03 matched exploratory B0 are completed; S04 CPU fusion is prepared only. Model discovery uses image-level development, followed by fresh lesion-disjoint confirmation of finalists. Both use 7,009/1,503/1,503 partitions with the original test locked until methodology freeze; report protocols separately. Final architecture remains open to controlled evidence. Future GPU launches stop after initial log/checkpoint confirmation; no agent monitoring until the user returns.
 
 Historical validation leaders: **87.69% strict accuracy**, **0.7837 strict macro-F1** (different combinations), and **90.75% exploratory accuracy / 0.8573 macro-F1**. These are validation-selected observations, not final test scores. Historical comparison figures are not controlled architecture ablations.
 

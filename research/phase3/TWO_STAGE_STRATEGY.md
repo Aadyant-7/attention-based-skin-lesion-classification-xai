@@ -1,6 +1,8 @@
 # Two-stage evaluation — Phase 3 amendment
 
-**After S02:** [MobileNet completed](S02_CLOSEOUT.md),86.03% exploratory accuracy/.7861 macro-F1 at epoch16. [S03 matched exploratory B0 control](S03_PROPOSAL.md) is recommended and awaits approval. The pre-S02 rationale below is historical; it does not authorize another run.
+**After S03:** [Matched B0 control](S03_CLOSEOUT.md) achieved 86.36% exploratory accuracy/.7707 macro-F1; [MobileNet](S02_CLOSEOUT.md) achieved 86.03%/.7861. Recommend [one fixed CPU fusion](S04_PROPOSAL.md) from aligned complementary errors before more GPU compute. Strict results remain separate. The pre-S02 rationale below is historical and does not authorize another run.
+
+**GPU launch policy:** every future GPU run needs its own reviewed proposal and approval. Once launched independently and log/initial checkpoints confirmed, stop immediately. No epoch polling, background monitoring or completion wait; user returns to request analysis.
 
 User decision 3 October 2026: prioritize **image-level exploratory discovery**, then **fresh strict confirmation of only the strongest methods**. This supersedes screening every backbone on the strict split. Phase2 and S01 plans/configs remain historical evidence.
 

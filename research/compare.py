@@ -11,6 +11,8 @@ def main():
     for r in read_registry():
         if (r['era'],r['status'])!=('structured','completed'):
             continue
+        if r['record_kind'] != 'training_run':
+            continue  # CPU fusion has its own cost-labelled comparison; no fake training recipe.
         config=json.loads((ROOT/r['config_path']).read_text(encoding='utf-8'))
         validate_config(config) # only the reviewed v1 common recipe belongs here
         m=json.loads((ROOT/r['metrics_path']).read_text(encoding='utf-8'));validate_metrics(m)

@@ -1,0 +1,9 @@
+{
+  "images": 1503,
+  "both_correct": 1195,
+  "only_s02_correct": 98,
+  "only_s03_correct": 103,
+  "both_wrong": 107,
+  "prediction_disagreements": 228,
+  "scope": "Paired error diagnostics only; no fusion weights or ensemble result selected; not independent lesion-level significance evidence"
+}

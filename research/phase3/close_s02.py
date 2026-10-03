@@ -1,5 +1,7 @@
 """Verify completed S02 using saved artifacts only; no images/models/GPU."""
 import json
+import hashlib
+import subprocess
 import numpy as np
 import pandas as pd
 import torch
@@ -13,6 +15,22 @@ ID = 's02_mobilenet_v3_large_none_exploratory_seed42'
 
 def load(path):
     return json.loads(path.read_text(encoding='utf-8'))
+
+
+def verify_launch_code(checkpoint, environment):
+    """Authenticate original launch code even after later reviewed runner edits."""
+    commit = environment['git_commit']
+    verified = {}
+    for filename, digest in checkpoint['code_hashes'].items():
+        if sha256(ROOT / filename) == digest:
+            verified[filename] = 'current_file'
+            continue
+        original = subprocess.check_output(['git', 'show', f'{commit}:{filename}'], cwd=ROOT)
+        # Git stores text as LF; the launch checkout may have used CRLF.
+        candidates = (original, original.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n'))
+        assert any(hashlib.sha256(data).hexdigest() == digest for data in candidates), filename
+        verified[filename] = f'authenticated_launch_commit:{commit}'
+    return verified
 
 
 def verify_predictions(path, metrics, validation):
@@ -64,8 +82,7 @@ def main():
     checkpoint_dir = ROOT / 'checkpoints/structured' / ID
     latest = torch.load(checkpoint_dir / 'latest.pt', map_location='cpu', weights_only=False)
     assert latest['config'] == config
-    for filename, digest in latest['code_hashes'].items():
-        assert sha256(ROOT / filename) == digest
+    verify_launch_code(latest, load(path / 'environment.json'))
     pd.testing.assert_frame_equal(pd.DataFrame(latest['history']), history, check_exact=False, rtol=1e-12, atol=1e-12)
     results = {}
     for criterion, suffix, checkpoint_name, state_key in (

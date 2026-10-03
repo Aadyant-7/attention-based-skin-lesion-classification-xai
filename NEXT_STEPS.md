@@ -1,6 +1,6 @@
 # Research plan: 3–17 October 2026
 
-**Active update:** [S01 strict](research/phase3/S01_CLOSEOUT.md) and [S02 exploratory MobileNet](research/phase3/S02_CLOSEOUT.md) are completed and verified. Follow [two-stage evaluation](research/phase3/TWO_STAGE_STRATEGY.md); [S03 matched exploratory B0](research/phase3/S03_PROPOSAL.md) awaits approval. The Phase2 all-strict screening plan below is historical and superseded.
+**Active update:** [S01 strict](research/phase3/S01_CLOSEOUT.md), [S02 MobileNet](research/phase3/S02_CLOSEOUT.md) and [S03 exploratory B0](research/phase3/S03_CLOSEOUT.md) are completed/verified. Next recommendation: [one fixed CPU fusion](research/phase3/S04_PROPOSAL.md), prepared only. Follow [two-stage evaluation and GPU launch policy](research/phase3/TWO_STAGE_STRATEGY.md). The Phase2 all-strict screening plan below is historical and superseded.
 
 ## Original Phase2 plan (historical)
 
