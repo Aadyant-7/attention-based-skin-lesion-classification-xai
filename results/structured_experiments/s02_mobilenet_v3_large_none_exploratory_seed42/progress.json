@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s02_mobilenet_v3_large_none_exploratory_seed42",
+  "status": "completed",
+  "epochs": 20,
+  "best_epoch": 16,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.8602794411177644,
+  "selected_macro_f1": 0.7861111676525011,
+  "best_macro_f1": 0.7861111676525011
+}

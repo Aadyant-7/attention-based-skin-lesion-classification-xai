@@ -1,5 +1,7 @@
 # Two-stage evaluation — Phase 3 amendment
 
+**After S02:** [MobileNet completed](S02_CLOSEOUT.md),86.03% exploratory accuracy/.7861 macro-F1 at epoch16. [S03 matched exploratory B0 control](S03_PROPOSAL.md) is recommended and awaits approval. The pre-S02 rationale below is historical; it does not authorize another run.
+
 User decision 3 October 2026: prioritize **image-level exploratory discovery**, then **fresh strict confirmation of only the strongest methods**. This supersedes screening every backbone on the strict split. Phase2 and S01 plans/configs remain historical evidence.
 
 | Stage | Existing manifest | Train / validation / locked test |

@@ -1,6 +1,6 @@
 # Attention-Based Skin Lesion Classification with Explainable AI
 
-B.Tech CSE Minor Project Â· HAM10000 Â· seven classes Â· active branch: **structured-research**.
+B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **structured-research**.
 
 ## Start here
 
@@ -10,7 +10,8 @@ B.Tech CSE Minor Project Â· HAM10000 Â· seven classes Â· active branch: **
 | [Phase 2 handoff](research/phase2/README.md) | Literature, dataset protocol and frozen comparison plan. |
 | [S01 completed result](research/phase3/S01_CLOSEOUT.md) |85.63% strict validation accuracy/.7791 macro-F1; verified artifacts and historical context. |
 | [Two-stage strategy](research/phase3/TWO_STAGE_STRATEGY.md) | Exploratory discovery, then fresh strict confirmation; locked test preserved. |
-| [Next GPU proposal](research/phase3/S02_PROPOSAL.md) | MobileNetV3-Large exploratory screening; awaiting approval, with exact commands/paths. |
+| [S02 completed result](research/phase3/S02_CLOSEOUT.md) |86.03% exploratory accuracy/.7861 macro-F1; verified artifacts and same-protocol context. |
+| [Next GPU proposal](research/phase3/S03_PROPOSAL.md) | Matched exploratory EfficientNet-B0 control; awaiting approval, with exact commands/paths. |
 | [Folder map](research/FOLDER_MAP.md) | Active, historical and local folders explained. |
 | [Next steps](NEXT_STEPS.md) | Remaining phases and training gates. |
 | [Experiment registry](results/master_experiment_registry.csv) | Historical evidence and actual structured run records; protocols kept separate. |
@@ -20,7 +21,7 @@ B.Tech CSE Minor Project Â· HAM10000 Â· seven classes Â· active branch: **
 
 ## Current status
 
-Phases 1â€“2 are complete. No structured model has been trained. Final architecture is open to controlled evidence. Primary validation uses the existing lesion-disjoint split (7,009/1,503/1,503 images); the test stays locked until methodology freeze.
+Phases 1–2 are complete. S01 strict B0 and S02 exploratory MobileNet are completed; S03 is prepared only. Model discovery uses the existing image-level development protocol, followed by fresh lesion-disjoint confirmation of finalists. Both use 7,009/1,503/1,503 partitions with the original test locked until methodology freeze; report protocols separately. Final architecture remains open to controlled evidence.
 
 Historical validation leaders: **87.69% strict accuracy**, **0.7837 strict macro-F1** (different combinations), and **90.75% exploratory accuracy / 0.8573 macro-F1**. These are validation-selected observations, not final test scores. Historical comparison figures are not controlled architecture ablations.
 

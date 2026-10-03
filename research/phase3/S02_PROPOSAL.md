@@ -1,6 +1,6 @@
 # S02 — MobileNetV3-Large exploratory screening
 
-**Prepared; new GPU approval required.** ID `s02_mobilenet_v3_large_none_exploratory_seed42`.
+**Historical proposal; approved and completed 3 October 2026.** See [S02 closeout](S02_CLOSEOUT.md) and [next proposal](S03_PROPOSAL.md). ID `s02_mobilenet_v3_large_none_exploratory_seed42`. Original prelaunch text below retained as provenance.
 
 Question: does this lightweight ImageNet backbone provide competitive exploratory accuracy and useful minority-class performance within 20 epochs? It adds architecture diversity at **2,978,679 common-head parameters**, connects to the base-paper B0/MobileNet comparison, and may provide complementary errors. S01's generalization gap/melanoma confusion makes extending the same strict run weakly motivated. Improvement is a hypothesis.
 
