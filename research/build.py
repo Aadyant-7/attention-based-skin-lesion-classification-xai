@@ -94,7 +94,7 @@ def legacy_inventory(require_local=True):
             if not p.is_file() or '__pycache__' in p.parts:
                 continue
             name=relative(p)
-            if name.startswith(('results/legacy/','results/structured_experiments/','results/figures/','results/datasets/','results/audit/','results/model_comparison/','results/final/','results/ablations/','results/ensembles/')) or p.name=='master_experiment_registry.csv':
+            if name.startswith(('results/legacy/','results/structured_experiments/','results/figures/','results/datasets/','results/audit/','results/model_comparison/','results/final/','results/ablations/','results/ensembles/','results/xai/')) or p.name=='master_experiment_registry.csv':
                 continue
             files.append({'path':name,'bytes':p.stat().st_size,'sha256':sha256(p),'tracked':name in tracked,
                           'category':folder,'preservation':'in_place'})

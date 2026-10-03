@@ -29,5 +29,6 @@ __pycache__/
 !results/model_comparison/**/*.pdf
 !results/datasets/**/*.pdf
 !results/structured_experiments/**/*.pdf
+!results/xai/structured/**/*.pdf
 *.lock
 !data/raw/.gitkeep

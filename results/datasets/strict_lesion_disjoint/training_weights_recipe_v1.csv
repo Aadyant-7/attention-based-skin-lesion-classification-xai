@@ -1,0 +1,8 @@
+class_index,class,training_images,weight,formula
+0,akiec,228,1.1109360018650707,sqrt(N/(K*n_c)); normalize mean1
+1,bcc,359,0.8853382754579352,sqrt(N/(K*n_c)); normalize mean1
+2,bkl,769,0.6049135248139783,sqrt(N/(K*n_c)); normalize mean1
+3,df,80,1.8754758278058006,sqrt(N/(K*n_c)); normalize mean1
+4,mel,779,0.6010183553643457,sqrt(N/(K*n_c)); normalize mean1
+5,nv,4694,0.2448414382402853,sqrt(N/(K*n_c)); normalize mean1
+6,vasc,100,1.6774765764525843,sqrt(N/(K*n_c)); normalize mean1

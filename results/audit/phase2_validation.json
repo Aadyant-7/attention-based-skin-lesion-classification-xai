@@ -1,0 +1,37 @@
+{
+  "phase": 2,
+  "preservation": {
+    "historical_files_verified": 247,
+    "unavailable_ignored_assets": [],
+    "historical_experiment_paths_moved": false,
+    "navigation_snapshots_verified": 3
+  },
+  "protocol": {
+    "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "images": 10015,
+    "lesions": 7470,
+    "partition_counts": {
+      "train": 7009,
+      "val": 1503,
+      "test": 1503
+    },
+    "lesion_counts": {
+      "train": 5230,
+      "val": 1122,
+      "test": 1118
+    },
+    "lesion_overlap": 0,
+    "raw_metadata_verified": true,
+    "test_images_opened": false,
+    "test_metrics_computed": false
+  },
+  "literature_papers_selected_fields_verified": 12,
+  "planned_configs": 6,
+  "initial_models": 5,
+  "structured_result_rows": 0,
+  "recipe_sha256": "f81281a212df6b5d1c9873e5788ea505caa801db24349b67ca5fffda2e83fb59",
+  "registry_sha256": "406103e7a50778761c2defd1e610bf335f82b360cdd8223711ad67609e97dfc6",
+  "gpu_run_launched": false,
+  "training_launched": false,
+  "next_gate": "CPU runner implementation and review; then announced GPU preflight"
+}

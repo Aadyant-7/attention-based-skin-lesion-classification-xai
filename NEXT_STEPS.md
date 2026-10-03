@@ -1,13 +1,13 @@
 # Research plan: 3–17 October 2026
 
-The two-week target is a planning window, not a promise of a score. Final architecture is open to controlled evidence. No new training or test evaluation was launched in Phase 1.
+The two-week target is a planning window, not a promise of a score. Final architecture is open to controlled evidence. **Phases 1–2 are complete; no new training or test evaluation was launched.** Start at [the Phase-2 handoff](research/phase2/README.md), [fixed recipe v1](research/phase2/EXPERIMENTAL_SETUP.md) and [planned model configs](research/configs/backbone_comparison/comparison_plan.csv). Phase 3 begins with CPU runner implementation/review; announce every GPU preflight/run before launching it.
 
 ## Phases and gates
 
 | Phase | Work | Gate / output |
 |---|---|---|
 | 1 | Audit, preserve legacy, common registry/model interface/artifact logger, dataset counts and saved-result figures | Completed infrastructure audit; history unchanged; test images unopened. |
-| 2 | Verify literature rows, dataset/protocol text, research question and comparison recipe | Review table, research gap, registered comparison budget; no inferred literature metrics. |
+| 2 | Verify literature rows, dataset/protocol text, research question and comparison recipe | Completed focused primary-source table, research gap, verified protocol and recipe v1; unknowns explicit. |
 | 3 | Implement/review common training runner, then sequential transfer-learning comparisons | 4–6 completed comparable run packages; no test selection. |
 | 4 | Paired no-attention vs CBAM on 1–2 strongest backbones | Same head/recipe/seed; show class-wise changes and compute cost, including negative results. |
 | 5 | One or two hypothesis-led improvements on strongest candidates | Predeclared metric/compute gates; avoid another broad tuning sweep. |
@@ -34,14 +34,16 @@ The installed environment was checked: RTX 4060, 8 GB VRAM; PyTorch 2.11.0+cu128
 
 Choose five initial candidates; B2 is optional. These are feasible *candidates*, not verified training-memory fits. No model weights were downloaded to make this recommendation. Official model/weight references: [torchvision models](https://docs.pytorch.org/vision/stable/models.html), [EfficientNet-B0](https://docs.pytorch.org/vision/main/models/generated/torchvision.models.efficientnet_b0.html), [ConvNeXt implementation](https://docs.pytorch.org/vision/stable/_modules/torchvision/models/convnext.html). A larger EfficientNetV2-L/ViT-L sweep is not a sensible first use of this GPU or deadline. Domain-specific pretraining remains allowed, with overlap/license caveats.
 
-## Fair-comparison recipe to freeze in Phase 2
+## Fair-comparison recipe fixed in Phase 2
+
+The detailed versioned specification in `research/phase2/EXPERIMENTAL_SETUP.md` and `recipe_v1.json` is authoritative. The earlier `backbone_example.json` is a historical proposal; Phase 3 uses the six planned configs under `research/configs/backbone_comparison/`. Before changing an optimizer/batch/transform decision, record a recipe amendment and maintain matched controls.
 
 - Use the exact existing lesion-disjoint manifest, seven classes, fixed seed and macro-F1 checkpoint selection; report accuracy, macro precision/recall/F1 and class metrics together.
 - Start with 224-square ImageNet-normalized input, one documented augmentation recipe, training-only weighted CE, common seven-class GAP/dropout/linear head and no added CBAM. Record native architectural normalization and pretrained recipe differences.
 - Use a common effective batch size (proposed 32), 20-epoch cap, five stale-epoch patience, AdamW and documented backbone/head learning rates. Run a short timing/memory preflight per backbone and adjust microbatch/accumulation rather than silently changing effective batch size. BatchNorm microbatch differences remain a limitation; avoid batch size one.
 - Log exact weights, hashes, environment, seed, trainability/freeze stages, parameter counts, epochs and wall time. Similar epoch budgets do not imply identical optimization quality; disclose this rather than overclaiming a universal best architecture.
 - Implement and record deterministic settings/worker seeds in the new runner; seed 42 alone is insufficient. Explicitly handle already-completed runs and safe resume so post-training bookkeeping never depends on an uninitialized epoch.
-- The example config in `research/configs/` is not yet a reviewed training runner. Phase 3 must implement and verify that runner, resume/checkpoint semantics and validation-only loading before launching.
+- The planned configs are not an executable training runner. Phase 3 must implement and verify that runner, resume/checkpoint semantics, effective-batch weighted-loss reduction and validation-only loading before launching.
 - Historical B0 runs took roughly 10–43 minutes; different backbones/heads/augmentation can take longer. Derive a real remaining budget from preflight timings; do not claim an unmeasured exact ETA.
 - If useful, repeat the top paired attention comparison with a second seed. A single seed cannot establish statistical significance.
 
@@ -62,4 +64,4 @@ Enough data, split manifests, local checkpoints and dependencies are already ava
 .\.venv\Scripts\python.exe -m unittest discover -s research/tests -v
 ```
 
-No manual command is required to finish Phase 1. Next authorized scope should be Phase 2; do not start legacy training commands or invoke `src.evaluate --confirm-locked-test` now.
+Phase-2 validation/table refresh: `.\.venv\Scripts\python.exe -m research.phase2.prepare` (CPU only). No manual command is required now. Next is Phase-3 CPU runner implementation and review, followed by a concrete announced GPU preflight. Do not launch historical training or `src.evaluate --confirm-locked-test`.
