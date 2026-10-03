@@ -1,0 +1,8 @@
+{
+  "status": "paused_screening",
+  "committed_epoch": 8,
+  "best_epoch": 7,
+  "secondary_best_epoch": 8,
+  "continuation_requires_approval": true,
+  "test_loader": false
+}

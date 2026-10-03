@@ -1,3 +1,7 @@
+## S18 completed; research paused for tonight
+
+S18 finished20epochs: best92.22%/.8549 at17; final91.28%/.8398. Modest accuracy gain versus Tiny with lower macro-F1; retain candidate for future ensemble review. No new ensemble run. User-approved15/20continuations superseded the old epoch8gate; future plan undecided until tomorrow. See research/phase3/S18_CLOSEOUT.md (root-relative). Historical proposals below remain preserved.
+
 ## Current decision after S15 (3 October 2026)
 
 S15: 89.62%/.8075. One fixed S17 fusion: 92.61%/.8771, only two extra correct versus FP32 reference with lower macro-F1. DenseNet excluded from selected ensemble; S12 FP32 reference retained. Next proposal: staged ConvNeXt-Small S18, with 8/12/20-epoch approval gates. S16 B3/Swin deferred; S14 remains deferred. No new GPU run approved. See research/phase3/S15_CLOSEOUT.md and research/phase3/S18_PROPOSAL.md (paths relative to root).

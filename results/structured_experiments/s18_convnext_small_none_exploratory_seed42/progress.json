@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s18_convnext_small_none_exploratory_seed42",
+  "status": "completed",
+  "epochs": 20,
+  "best_epoch": 17,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.9221556886227545,
+  "selected_macro_f1": 0.8549484177398866,
+  "best_macro_f1": 0.8549484177398866
+}

@@ -1,0 +1,3 @@
+display_name,experiment_id,selection_metric,best_epoch,accuracy,macro_precision,macro_recall,macro_f1,melanoma_recall,runtime_seconds,inference_model_passes,scope
+S06 ConvNeXt-Tiny,s06_convnext_tiny_none_exploratory_seed42,accuracy,17,0.9174983366600133,0.8804352604512183,0.8533257129249898,0.862830691053104,0.7784431137724551,896.4832069000695,1,Same exploratory cohort; seed42; common screening policy for singles; fusion cost differs
+S18 ConvNeXt-Small,s18_convnext_small_none_exploratory_seed42,accuracy,17,0.9221556886227545,0.8793870459091774,0.8371484433006663,0.8549484177398866,0.8023952095808383,1470.2621479999507,1,Same exploratory cohort; seed42; common screening policy for singles; fusion cost differs

@@ -1,0 +1,15 @@
+{
+  "s06_convnext_tiny_none_exploratory_seed42": {
+    "display_name": "S06 ConvNeXt-Tiny",
+    "validation_images": 1503,
+    "s18_correct": 1386,
+    "other_correct": 1379,
+    "s18_fixes_other": 57,
+    "other_recovers_s18": 50,
+    "both_wrong": 67,
+    "both_correct": 1329,
+    "prediction_disagreements": 118,
+    "oracle_union_accuracy": 0.9554224883566201,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  }
+}

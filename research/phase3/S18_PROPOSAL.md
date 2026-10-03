@@ -1,3 +1,5 @@
+Completed under subsequent user-approved epoch15/20 continuations. Original epoch8gate superseded. See S18_CLOSEOUT.md for actual results; proposal below is historical.
+
 # S18: staged ConvNeXt-Small proposal
 
 Not approved or launched. Replaces the automatic DenseNet/B3/Swin sequence. S16 B3 remains prepared but deferred; S14 remains deferred. S17 identifies the single approved CPU fusion, so S18 is the next training ID.

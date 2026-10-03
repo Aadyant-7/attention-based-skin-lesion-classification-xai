@@ -1,0 +1,12 @@
+{
+  "other_experiments_authorized": false,
+  "max_epochs": 20,
+  "recipe_changed": false,
+  "command": "-u -m research.train --config research/configs/phase3/s18_convnext_small_none_exploratory_seed42.json --resume",
+  "resumed_committed_epoch": 15,
+  "preserved_epoch15_checkpoints": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s18_convnext_small_none_exploratory_seed42\\screening_epoch_15",
+  "user_approved": true,
+  "original_latest_write_utc": "2026-10-03T17:49:37.3947887Z",
+  "pid": 23328,
+  "launched_at": "2026-10-03T23:20:54.4203946+05:30"
+}

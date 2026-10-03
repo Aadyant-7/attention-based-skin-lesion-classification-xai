@@ -1,0 +1,14 @@
+{
+  "command": "-u -m research.train --config research/configs/phase3/s18_convnext_small_none_exploratory_seed42.json --resume --stop-after-epoch 15",
+  "old_epoch8_gate_superseded": true,
+  "resumed_committed_epoch": 8,
+  "continuation_beyond_15_authorized": false,
+  "launched_at": "2026-10-03T23:10:58.7480439+05:30",
+  "pid": 6464,
+  "original_latest_write_utc": "2026-10-03T17:35:21.9661054Z",
+  "recipe_changed": false,
+  "stop_after_epoch": 15,
+  "user_approved": true,
+  "preserved_epoch8_checkpoints": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s18_convnext_small_none_exploratory_seed42\\screening_epoch_08",
+  "decision_standard": "Continue tomorrow only near/above Tiny or convincingly improving late trend; stop if substantially below and flat/deteriorating"
+}

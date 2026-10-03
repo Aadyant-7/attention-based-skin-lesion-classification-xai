@@ -1,0 +1,12 @@
+{
+  "pid": 19944,
+  "results": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\structured_experiments\\s18_convnext_small_none_exploratory_seed42",
+  "continuation_authorized": false,
+  "locked_test_loader": false,
+  "config_sha256": "350b02f0a1d0d9530e5b539182f85bcf6f312a1c1c718a4aa0ac66f3b8e484dd",
+  "user_approved": true,
+  "command": "-u -m research.train --config research/configs/phase3/s18_convnext_small_none_exploratory_seed42.json --stop-after-epoch 8",
+  "launched_at": "2026-10-03T22:55:12.4347686+05:30",
+  "checkpoints": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s18_convnext_small_none_exploratory_seed42",
+  "stop_after_epoch": 8
+}
