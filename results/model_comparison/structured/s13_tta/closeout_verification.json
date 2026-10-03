@@ -1,0 +1,390 @@
+{
+  "status": "verified_completed",
+  "experiment_id": "s13_s12_four_flip_tta_exploratory_seed42",
+  "results": {
+    "identity_fp32": {
+      "loss": 0.3609271708617435,
+      "accuracy": 0.9248170326014638,
+      "macro_precision": 0.9032601879784398,
+      "macro_recall": 0.8586992323421929,
+      "macro_f1": 0.8774541331925992,
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "confusion_matrix": [
+        [
+          35,
+          9,
+          4,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          73,
+          0,
+          0,
+          1,
+          3,
+          0
+        ],
+        [
+          5,
+          1,
+          133,
+          0,
+          9,
+          17,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          14,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          132,
+          32,
+          0
+        ],
+        [
+          0,
+          2,
+          5,
+          0,
+          15,
+          983,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          20
+        ]
+      ],
+      "per_class": {
+        "akiec": {
+          "precision": 0.875,
+          "recall": 0.7142857142857143,
+          "f1": 0.7865168539325843,
+          "support": 49
+        },
+        "bcc": {
+          "precision": 0.8390804597701149,
+          "recall": 0.948051948051948,
+          "f1": 0.8902439024390244,
+          "support": 77
+        },
+        "bkl": {
+          "precision": 0.910958904109589,
+          "recall": 0.806060606060606,
+          "f1": 0.8553054662379421,
+          "support": 165
+        },
+        "df": {
+          "precision": 1.0,
+          "recall": 0.8235294117647058,
+          "f1": 0.9032258064516129,
+          "support": 17
+        },
+        "mel": {
+          "precision": 0.8407643312101911,
+          "recall": 0.7904191616766467,
+          "f1": 0.8148148148148148,
+          "support": 167
+        },
+        "nv": {
+          "precision": 0.9479267116682739,
+          "recall": 0.9761668321747765,
+          "f1": 0.961839530332681,
+          "support": 1007
+        },
+        "vasc": {
+          "precision": 0.9090909090909091,
+          "recall": 0.9523809523809523,
+          "f1": 0.9302325581395349,
+          "support": 21
+        }
+      }
+    },
+    "tta": {
+      "loss": 0.36369641276244624,
+      "accuracy": 0.9155023286759814,
+      "macro_precision": 0.8959559263800572,
+      "macro_recall": 0.8379198557513251,
+      "macro_f1": 0.8616182743001131,
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "confusion_matrix": [
+        [
+          33,
+          9,
+          3,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          73,
+          0,
+          0,
+          1,
+          3,
+          0
+        ],
+        [
+          5,
+          1,
+          134,
+          0,
+          8,
+          17,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          13,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          124,
+          38,
+          1
+        ],
+        [
+          0,
+          3,
+          7,
+          0,
+          17,
+          979,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          20
+        ]
+      ],
+      "per_class": {
+        "akiec": {
+          "precision": 0.868421052631579,
+          "recall": 0.673469387755102,
+          "f1": 0.7586206896551724,
+          "support": 49
+        },
+        "bcc": {
+          "precision": 0.8295454545454546,
+          "recall": 0.948051948051948,
+          "f1": 0.8848484848484849,
+          "support": 77
+        },
+        "bkl": {
+          "precision": 0.8993288590604027,
+          "recall": 0.8121212121212121,
+          "f1": 0.8535031847133758,
+          "support": 165
+        },
+        "df": {
+          "precision": 1.0,
+          "recall": 0.7647058823529411,
+          "f1": 0.8666666666666667,
+          "support": 17
+        },
+        "mel": {
+          "precision": 0.8266666666666667,
+          "recall": 0.7425149700598802,
+          "f1": 0.7823343848580442,
+          "support": 167
+        },
+        "nv": {
+          "precision": 0.9386385426653883,
+          "recall": 0.9721946375372393,
+          "f1": 0.9551219512195122,
+          "support": 1007
+        },
+        "vasc": {
+          "precision": 0.9090909090909091,
+          "recall": 0.9523809523809523,
+          "f1": 0.9302325581395349,
+          "support": 21
+        }
+      }
+    }
+  },
+  "paired_gains": {
+    "identity_fp32": {
+      "s06_convnext_tiny_none_exploratory_seed42": {
+        "correct": 1390,
+        "fixed": 38,
+        "broken": 27,
+        "net_correct": 11,
+        "both_wrong": 86
+      },
+      "s09_s02_s03_s06_equal_probability_exploratory_seed42": {
+        "correct": 1390,
+        "fixed": 28,
+        "broken": 17,
+        "net_correct": 11,
+        "both_wrong": 96
+      },
+      "s12_s03_s06_s10_equal_probability_exploratory_seed42": {
+        "correct": 1390,
+        "fixed": 1,
+        "broken": 0,
+        "net_correct": 1,
+        "both_wrong": 113
+      }
+    },
+    "tta": {
+      "s06_convnext_tiny_none_exploratory_seed42": {
+        "correct": 1376,
+        "fixed": 37,
+        "broken": 40,
+        "net_correct": -3,
+        "both_wrong": 87
+      },
+      "s09_s02_s03_s06_equal_probability_exploratory_seed42": {
+        "correct": 1376,
+        "fixed": 26,
+        "broken": 29,
+        "net_correct": -3,
+        "both_wrong": 98
+      },
+      "s12_s03_s06_s10_equal_probability_exploratory_seed42": {
+        "correct": 1376,
+        "fixed": 10,
+        "broken": 23,
+        "net_correct": -13,
+        "both_wrong": 104
+      },
+      "identity_fp32": {
+        "correct": 1376,
+        "fixed": 10,
+        "broken": 24,
+        "net_correct": -14,
+        "both_wrong": 103
+      }
+    }
+  },
+  "validation_images": 1503,
+  "verified_view_tables": 12,
+  "aggregate_prediction_tables": 2,
+  "source_hashes": {
+    "s03_efficientnet_b0_none_exploratory_seed42_identity.csv": "e8d929f8712f431db8f00391a80328f7cbbac8ef40b7815ae319ff9edf8ae9be",
+    "s03_efficientnet_b0_none_exploratory_seed42_horizontal.csv": "22436b4740941bf5051d6f8f826f6d08b39acdb6ea81f8e906a037c357432c42",
+    "s03_efficientnet_b0_none_exploratory_seed42_vertical.csv": "3dcd8b880f90837c7b081596af70323513010189c7e4c7406af36533abf5286d",
+    "s03_efficientnet_b0_none_exploratory_seed42_both.csv": "1289a6cff9088d1b58c1b4cbea825748b94343df9607982605447c8cdcb89e2f",
+    "s06_convnext_tiny_none_exploratory_seed42_identity.csv": "23d7d978ab257072466c5d267c19ea9b91c6eb4a437acf3bf0ef3d24be86a87f",
+    "s06_convnext_tiny_none_exploratory_seed42_horizontal.csv": "0a93e659aa16bfc5d4a258bc33923b6e199a20905b8ba13c109a2a28d03403cd",
+    "s06_convnext_tiny_none_exploratory_seed42_vertical.csv": "b0ab2d69ebdd96d52a77e49c0ec208a7c9af51826942d3c35770c5d12b369f0e",
+    "s06_convnext_tiny_none_exploratory_seed42_both.csv": "25a7f4bc06387d6b8c1639e811172f423fc09673471a8a897d9ea84bbde26e32",
+    "s10_efficientnet_v2_s_none_exploratory_seed42_identity.csv": "be48205b67c5c254ddf2031d4dd20a70f682b9329a47f1090ba22dc149c27e2d",
+    "s10_efficientnet_v2_s_none_exploratory_seed42_horizontal.csv": "9350b2b90a817809fa7b4e44d18b0a60edc51c5e05c3e6576014ca84f5f7bed0",
+    "s10_efficientnet_v2_s_none_exploratory_seed42_vertical.csv": "7eee444f33c923c96299d99acdcc5f66525a8d42557e944b0668768669738276",
+    "s10_efficientnet_v2_s_none_exploratory_seed42_both.csv": "3e3166429b983126cd2db31264bee0dc76ef718502aab9fca8980ea8ea02695c",
+    "validation_predictions_identity_fp32.csv": "f1c844d2ea8230c384e3037daf35ddc9de44ff261c740cd62049773ade78a2cb",
+    "validation_metrics_identity_fp32.json": "56c0bb53de909ea0358f05d26f69e2b806d0a9ea5e712398ed67d63b030a43bb",
+    "validation_predictions.csv": "f7b9b411ff302e6aaa4063a20ce6ce7e70148802f59c6c1ceaa854a9626caa40",
+    "validation_metrics.json": "adf4ebb4209ea7ffecfea8131a4394e29ba5e6dae49e5583bafba202c2ffcd11"
+  },
+  "parent_checkpoint_hashes": {
+    "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+  },
+  "signature": {
+    "config": {
+      "experiment_id": "s13_s12_four_flip_tta_exploratory_seed42",
+      "parent_fusion_config": "research/configs/phase3/s12_s03_s06_s10_equal_probability_exploratory_seed42.json",
+      "parent_fusion_sha256": "66c169bbd01b7108031df8290abfe950448970ace8518394b3189e0bf6d87028",
+      "views": [
+        "identity",
+        "horizontal",
+        "vertical",
+        "both"
+      ],
+      "precision": "fp32",
+      "image_size": 224,
+      "batch_size": 16,
+      "protocol": "exploratory_image_level",
+      "question": "Does fixed four-flip TTA improve the strongest equal three-model ensemble? FP32 identity control separates precision from the view effect.",
+      "parent_run_ids": [
+        "s03_efficientnet_b0_none_exploratory_seed42",
+        "s06_convnext_tiny_none_exploratory_seed42",
+        "s10_efficientnet_v2_s_none_exploratory_seed42"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+      "checkpoint_sha256": {
+        "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+        "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+        "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+      }
+    },
+    "runner_sha256": "a4b4674662d97f4ac8826fa66571a50870b2f54a3f9f7f5feba13cadc1fb8bcb",
+    "supporting_source_hashes": {
+      "research/models.py": "a0efb83a93d8392d680951c1a93d7cd7a0f2e7429e546128dd2fab7aa8a866db",
+      "research/train.py": "efdd1ca9313ac0cb7e7fdd10476348e031bbd2eb95a95665acf4150c55333914",
+      "research/fuse.py": "54d2c88cff64ca7d28ce97dbbbec7324b12855e9f730e29e00d7e18ed80ad113",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+      "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+    }
+  },
+  "registry_entries": [
+    "s13_s12_four_flip_tta_exploratory_seed42",
+    "s13_s12_identity_fp32_control_exploratory_seed42"
+  ],
+  "historical_rows_preserved": 473,
+  "all_other_registry_rows_unchanged": true,
+  "runtime_seconds": 167.26259010005742,
+  "gpu_used_for_closeout": false,
+  "test_images_loaded": false,
+  "decision": "Reject four-flip TTA; retain S12 architecture/ensemble reference. FP32 control adds one image, not a meaningful methodology gain."
+}

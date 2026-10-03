@@ -1,5 +1,6 @@
 # S13 proposal: fixed four-flip TTA on the S12 ensemble
 
+**Historical approved proposal: completed. [Closeout](S13_CLOSEOUT.md) rejects four-flip TTA; original prelaunch plan below is retained.**
 **Prepared only; GPU inference awaits approval. No retraining.**
 
 ## Question and choice

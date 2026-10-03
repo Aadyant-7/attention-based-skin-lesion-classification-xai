@@ -1,6 +1,6 @@
 # Structured research workspace
 
-**Active research update (3 October 2026):** [S10 and two fixed ensemble closeouts](phase3/S10_S12_CLOSEOUT.md) verified. S10:89.49%/.8232; FP32 validation recovery at14/18/20 disclosed, winning epoch15 AMP. **S12 equal B0/ConvNeXt/V2-S is the current best:92.42% exploratory accuracy/.8770 macro-F1**. S06 remains the single-model/cost reference. [S13 fixed TTA proposal](phase3/S13_PROPOSAL.md) is prepared only; awaits GPU inference approval. Locked test untouched; future strict confirmation fresh from external weights.
+**Active research update (3 October2026):** [S13 closeout](phase3/S13_CLOSEOUT.md) verified: four-flip TTA regressed to91.55%/.8616; reject it. **S12 remains the strongest ensemble reference:92.42%/.8770**; its separately recorded FP32 identity control reached92.48%/.8775 by one extra correct image only. [S14 fixed224/320 ConvNeXt resolution proposal](phase3/S14_PROPOSAL.md) prepared only; awaits GPU inference approval. Strict confirmation/test remain later; original locked test untouched.
 
 **Local organization cleanup:** archives live under `legacy/`; immutable inventory uses `legacy/path_map.json`. Current verification is `python -m research.verify_layout --phase3-current`, preserving earlier cleanup/preparation audits. See [cleanup report](../legacy/organization/README.md). Historical code, datasets, results and checkpoints remain stable.
 
@@ -41,7 +41,7 @@ Rows index **saved evidence**, not independent trained networks. `record_kind` d
 
 ## New experiment contract
 
-The old config and original S01 launch plan remain historical. Active configs/shared runner follow [the two-stage strategy](phase3/TWO_STAGE_STRATEGY.md) and [next launch proposal](phase3/S10_PROPOSAL.md). Every new GPU run waits for approval. Use the shared runner for comparisons.
+The old config and original S01 launch plan remain historical. Active configs/shared runner follow [the two-stage strategy](phase3/TWO_STAGE_STRATEGY.md) and [next launch proposal](phase3/S14_PROPOSAL.md). Every new GPU run waits for approval. Use the shared runner for comparisons.
 
 Strict v1 selects macro-F1; exploratory screening v1 selects accuracy and saves a separate macro-F1 winner. `Experiment.complete()` verifies the declared criterion, supports, split identity and metrics. Checkpoints remain in `checkpoints/structured/`; explicit epoch resume repairs history/registry and completed IDs exit without training. The final test runner is unimplemented and the test remains locked.
 

@@ -1,0 +1,32 @@
+{
+  "experiment_id": "s13_s12_four_flip_tta_exploratory_seed42",
+  "parent_fusion_config": "research/configs/phase3/s12_s03_s06_s10_equal_probability_exploratory_seed42.json",
+  "parent_fusion_sha256": "66c169bbd01b7108031df8290abfe950448970ace8518394b3189e0bf6d87028",
+  "views": [
+    "identity",
+    "horizontal",
+    "vertical",
+    "both"
+  ],
+  "precision": "fp32",
+  "image_size": 224,
+  "batch_size": 16,
+  "protocol": "exploratory_image_level",
+  "question": "Does fixed four-flip TTA improve the strongest equal three-model ensemble? FP32 identity control separates precision from the view effect.",
+  "parent_run_ids": [
+    "s03_efficientnet_b0_none_exploratory_seed42",
+    "s06_convnext_tiny_none_exploratory_seed42",
+    "s10_efficientnet_v2_s_none_exploratory_seed42"
+  ],
+  "weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "checkpoint_sha256": {
+    "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+  }
+}

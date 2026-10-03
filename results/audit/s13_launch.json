@@ -1,0 +1,9 @@
+{
+  "experiment_id": "s13_s12_four_flip_tta_exploratory_seed42",
+  "process_id": 25432,
+  "started_at": "2026-10-03T21:02:06.1083849+05:30",
+  "human_approved": true,
+  "config": "research/configs/phase3/s13_s12_four_flip_tta_exploratory_seed42.json",
+  "training": false,
+  "launch_policy": "Confirm initial output only, then stop"
+}

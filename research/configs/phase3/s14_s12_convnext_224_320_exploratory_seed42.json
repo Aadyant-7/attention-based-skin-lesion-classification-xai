@@ -1,0 +1,44 @@
+{
+  "experiment_id": "s14_s12_convnext_224_320_exploratory_seed42",
+  "source_config": "research/configs/phase3/s13_s12_four_flip_tta_exploratory_seed42.json",
+  "source_config_sha256": "8f1f14cc507fc05ffccb4e185af57818a9e176cd4493646142e8d15eb0c7b1e0",
+  "protocol": "exploratory_image_level",
+  "parent_run_ids": [
+    "s03_efficientnet_b0_none_exploratory_seed42",
+    "s06_convnext_tiny_none_exploratory_seed42",
+    "s10_efficientnet_v2_s_none_exploratory_seed42"
+  ],
+  "checkpoint_sha256": {
+    "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+  },
+  "weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "resolutions": [
+    224,
+    320
+  ],
+  "resolution_weights": [
+    0.5,
+    0.5
+  ],
+  "multires_parent": "s06_convnext_tiny_none_exploratory_seed42",
+  "precision": "fp32",
+  "batch_size": 8,
+  "views": [
+    "identity"
+  ],
+  "question": "Does equal224/320 ConvNeXt resolution averaging improve the unchanged equal S12 ensemble over its FP32 identity baseline?",
+  "identity_prediction_sha256": {
+    "s03_efficientnet_b0_none_exploratory_seed42": "e8d929f8712f431db8f00391a80328f7cbbac8ef40b7815ae319ff9edf8ae9be",
+    "s06_convnext_tiny_none_exploratory_seed42": "23d7d978ab257072466c5d267c19ea9b91c6eb4a437acf3bf0ef3d24be86a87f",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "be48205b67c5c254ddf2031d4dd20a70f682b9329a47f1090ba22dc149c27e2d"
+  },
+  "baseline_prediction_sha256": "f1c844d2ea8230c384e3037daf35ddc9de44ff261c740cd62049773ade78a2cb",
+  "baseline_metrics_sha256": "56c0bb53de909ea0358f05d26f69e2b806d0a9ea5e712398ed67d63b030a43bb"
+}

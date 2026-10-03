@@ -1,0 +1,12 @@
+{
+  "s13_closeout": "passed",
+  "s13_gpu_runtime_seconds": 167.26259010005742,
+  "verified_view_tables": 12,
+  "aggregate_predictions": 2,
+  "s14_preflight": "passed",
+  "s14_cpu_tests_passed": 3,
+  "synthetic_convnext_320_forward": "finite1x7 CPU only",
+  "gpu_work_this_turn": false,
+  "test_images_loaded": false,
+  "s14_launched": false
+}

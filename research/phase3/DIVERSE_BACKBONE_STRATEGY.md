@@ -1,6 +1,6 @@
-# Diverse backbone and bounded ensemble strategy â€” after S06
+# Diverse backbone and bounded ensemble strategy - after S13
 
-**Current evidence:** [S10–S12 closeout](S10_S12_CLOSEOUT.md): S10 weaker standalone but complementary; S12 equal B0/ConvNeXt/V2-S reaches92.42%/.8770 with3 passes. Retain S06 cheap standalone. Next one frozen [S13 TTA inference study](S13_PROPOSAL.md), with FP32 identity control and no retraining/weight search, pending approval. CBAM mixed evidence retained; strict confirmation and original locked test later.
+**Current evidence:** [S13](S13_CLOSEOUT.md) rejects fixed four-flip TTA:91.55%/.8616 vs S12 92.42%/.8770; FP32 control92.48%/.8775 adds one image only. Retain S12 ensemble and S06 single-model/cost reference. Next [S14](S14_PROPOSAL.md) tests one fixed224/320 ConvNeXt resolution intervention, pending approval. No further flip/weight sweep; attention and a stronger diverse backbone remain later evidence-driven options. Original test untouched; fresh strict confirmation later.
 
 ## Preserved plan before S06 evaluation
 

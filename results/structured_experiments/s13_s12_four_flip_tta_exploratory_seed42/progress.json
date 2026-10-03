@@ -1,0 +1,6 @@
+{
+  "parent": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "view": "both",
+  "status": "view_saved",
+  "precision": "fp32"
+}

@@ -1,0 +1,43 @@
+{
+  "config": {
+    "experiment_id": "s13_s12_four_flip_tta_exploratory_seed42",
+    "parent_fusion_config": "research/configs/phase3/s12_s03_s06_s10_equal_probability_exploratory_seed42.json",
+    "parent_fusion_sha256": "66c169bbd01b7108031df8290abfe950448970ace8518394b3189e0bf6d87028",
+    "views": [
+      "identity",
+      "horizontal",
+      "vertical",
+      "both"
+    ],
+    "precision": "fp32",
+    "image_size": 224,
+    "batch_size": 16,
+    "protocol": "exploratory_image_level",
+    "question": "Does fixed four-flip TTA improve the strongest equal three-model ensemble? FP32 identity control separates precision from the view effect.",
+    "parent_run_ids": [
+      "s03_efficientnet_b0_none_exploratory_seed42",
+      "s06_convnext_tiny_none_exploratory_seed42",
+      "s10_efficientnet_v2_s_none_exploratory_seed42"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+    "checkpoint_sha256": {
+      "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+      "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+      "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+    }
+  },
+  "runner_sha256": "a4b4674662d97f4ac8826fa66571a50870b2f54a3f9f7f5feba13cadc1fb8bcb",
+  "supporting_source_hashes": {
+    "research/models.py": "a0efb83a93d8392d680951c1a93d7cd7a0f2e7429e546128dd2fab7aa8a866db",
+    "research/train.py": "efdd1ca9313ac0cb7e7fdd10476348e031bbd2eb95a95665acf4150c55333914",
+    "research/fuse.py": "54d2c88cff64ca7d28ce97dbbbec7324b12855e9f730e29e00d7e18ed80ad113",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+  }
+}
