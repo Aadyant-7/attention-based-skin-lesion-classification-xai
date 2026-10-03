@@ -1,5 +1,7 @@
 # Literature review evidence workflow (Phase 2)
 
+**Phase 3 supplement:** the latest SciSpace workbook's50 entries are screened in [the integrated review](scispace_analysis/INTEGRATED_REVIEW.md) and [per-entry evidence table](scispace_analysis/screening.csv). Existing primary references below remain retained; spreadsheet extraction is not automatically verified evidence.
+
 **Focused Phase-2 review completed:** open [review table](review_table.md), [full CSV](review.csv), [evidence notes/research gap](evidence_notes.md) and [citations](references.bib). `sources.json` contains curated verified fields; `research.phase2.prepare` validates and exports them. This is not an exhaustive systematic review and does not claim to reproduce literature metrics. Missing fields stay explicitly unverified.
 
 `review_template.csv` supplies the guide's requested fields. Start by transferring evidence from `historical_evidence_index.csv` and the linked original audits. Do not fill missing details from model conventions. Use `Not reported` for absent source statements and `Not verified` for uninspected claims. Record source URL, page/table/section, date checked, and which fields were independently verified.

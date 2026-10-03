@@ -1,4 +1,5 @@
-"""Read-only organization checks plus an audit report; no models/images/XLSX parsing."""
+"""Preservation/navigation checks; phase-specific reports, no model/image execution."""
+import argparse
 import ast
 import csv
 import json
@@ -13,6 +14,10 @@ ORGANIZATION_EDITS = {
     'research/phase2/prepare.py','research/phase2/README.md',
     'legacy/README.md','legacy/navigation/README.md','results/legacy/README.md',
 }
+# Explicitly authorized navigation updates for the subsequent literature/runner
+# preparation. Original inventories and the cleanup audit are never rewritten.
+PHASE3_EDITS = {'NEXT_STEPS.md','research/literature/README.md',
+                'research/literature/incoming/README.md'}
 
 
 def rows(path):
@@ -20,7 +25,7 @@ def rows(path):
         return list(csv.DictReader(f))
 
 
-def verify():
+def verify(phase3=False):
     moves={r['original_path']:r for r in rows(ROOT/'legacy/organization/relocations.csv')}
     mapping=json.loads((ROOT/'legacy/path_map.json').read_text())
     for old,new in mapping.items():
@@ -34,7 +39,7 @@ def verify():
         path=ROOT/moves[original]['current_path'] if original in moves else ROOT/original
         assert path.is_file(), f'Missing pre-cleanup asset: {original}'
         actual=sha256(path)
-        if original in ORGANIZATION_EDITS:
+        if original in ORGANIZATION_EDITS or (phase3 and original in PHASE3_EDITS):
             if actual!=r['sha256']:
                 edits.append(original)
         else:
@@ -74,6 +79,10 @@ def verify():
           ROOT/'research/README.md',ROOT/'research/FOLDER_MAP.md']
     docs+=list((ROOT/'research/phase2').glob('*.md'))
     docs+=list((ROOT/'research/literature').glob('*.md'))
+    if phase3:
+        docs+=list((ROOT/'research/phase3').glob('*.md'))
+        docs+=list((ROOT/'research/literature/scispace_analysis').glob('*.md'))
+        docs+=list((ROOT/'research/literature/incoming').glob('*.md'))
     docs+=list((ROOT/'docs').glob('*.md'))
     for p in docs:
         for link in re.findall(r'\]\(([^)]+)\)',p.read_text(encoding='utf-8')):
@@ -83,17 +92,26 @@ def verify():
             assert (p.parent/link).exists(), f'Broken Markdown link: {p.name} -> {link}'
     workbook=ROOT/'research/literature/incoming/SciSpace Literature Review.xlsx'
     assert workbook.is_file() and not (ROOT/'SciSpace Literature Review.xlsx').exists()
+    if phase3:
+        provenance=json.loads((ROOT/'research/literature/scispace_analysis/provenance.json').read_text())
+        assert sha256(workbook)==provenance['sha256'], 'Analyzed workbook changed'
+        assert not any(r['era']=='structured' for r in registry), 'Preparation check expects no real run yet'
+        assert not (ROOT/'checkpoints/structured/s01_efficientnet_b0_none_strict_seed42').exists()
+        assert not (ROOT/'results/structured_experiments/s01_efficientnet_b0_none_strict_seed42').exists()
     report={'status':'passed','pre_cleanup_files':len(before),'unchanged_files':unchanged,
             'documented_code_navigation_edits':edits,'moved_files_byte_verified':len(moves),
             'immutable_historical_files_verified':len(old),'registry_rows':len(registry),
             'registry_references_verified':len(references),'saved_figure_packages':len(figures),
             'current_markdown_files_checked':len(docs),'python_syntax':'passed',
             'scispace_path':workbook.relative_to(ROOT).as_posix(),
-            'workbook_parsed':False,'model_instantiated':False,'gpu_work':False,
+            'workbook_parsed_by_this_check':False,'model_instantiated_by_this_check':False,'gpu_work':False,
             'test_images_opened':False,'historical_results_modified':False}
-    write_json(ROOT/'results/audit/organization_verification.json',report)
+    report['verification_scope']='phase3_preparation' if phase3 else 'organization_cleanup'
+    write_json(ROOT/('results/audit/phase3_preservation_verification.json' if phase3 else 'results/audit/organization_verification.json'),report)
     print(json.dumps(report,indent=2))
 
 
 if __name__=='__main__':
-    verify()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--phase3-preparation',action='store_true')
+    verify(parser.parse_args().phase3_preparation)

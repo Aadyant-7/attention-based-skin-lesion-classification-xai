@@ -1,0 +1,34 @@
+{
+  "source_path": "research/literature/incoming/SciSpace Literature Review.xlsx",
+  "sha256": "1cf7ed7cad73ff48c235d4364509f95c52a86c3a9a23512c571fa2c31278c8db",
+  "sheet": "table1",
+  "range": "A1:H51",
+  "entries": 50,
+  "distinct_doi_candidates": 49,
+  "duplicate_rows": [
+    27
+  ],
+  "formula_cells": 0,
+  "decisions": {
+    "candidate": 22,
+    "priority": 8,
+    "deferred": 8,
+    "task_context": 10,
+    "duplicate": 1,
+    "review_context": 1
+  },
+  "tag_counts_extracted_text_unique_entries": {
+    "ensemble_fusion": 25,
+    "imbalance": 27,
+    "augmentation_preprocessing": 20,
+    "attention": 18,
+    "xai": 12,
+    "transformer": 6,
+    "transfer_learning": 15,
+    "distillation": 1,
+    "synthetic_data": 2
+  },
+  "counting_caveat": "Keywords across all extracted columns including generic gaps/challenges; not counts of verified implementations or evidence of efficacy.",
+  "raw_extraction": ".cache/research_literature/scispace_extracted.json",
+  "workbook_unchanged": true
+}

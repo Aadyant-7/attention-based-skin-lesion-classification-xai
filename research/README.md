@@ -1,8 +1,8 @@
 # Structured research workspace
 
-**Phase 2 completed:** start with [the Phase-2 handoff](phase2/README.md), [fixed setup](phase2/EXPERIMENTAL_SETUP.md) and [folder map](FOLDER_MAP.md). Before every future GPU job, follow [the launch/monitor contract](phase2/GPU_RUN_HANDOFF.md). New experiments remain unlaunched; no shared trainer exists yet. Old root handoff guides now live under `legacy/navigation/`.
+**Phase3 prepared; GPU approval pending:** start with [the integrated literature review](literature/scispace_analysis/INTEGRATED_REVIEW.md), [adaptive plan and first start/monitor commands](phase3/PLAN.md), [fixed setup](phase2/EXPERIMENTAL_SETUP.md) and [folder map](FOLDER_MAP.md). The reviewed shared runner is `research/train.py`; no structured experiment has launched. Phase2 documents remain the completed planning snapshot. Old root handoff guides live under `legacy/navigation/`.
 
-**Local organization cleanup:** reports/notebooks/archive/old Grad-CAM directories now live under `legacy/`. The original immutable inventory is resolved through `legacy/path_map.json`; active verification is `python -m research.verify_layout`. See [cleanup report](../legacy/organization/README.md). Executable code, datasets, historical results and checkpoint locations remain stable.
+**Local organization cleanup:** reports/notebooks/archive/old Grad-CAM directories now live under `legacy/`. The original immutable inventory is resolved through `legacy/path_map.json`; preparation verification is `python -m research.verify_layout --phase3-preparation`, which preserves the separate original cleanup audit. See [cleanup report](../legacy/organization/README.md). Historical executable code, datasets, results and checkpoint locations remain stable.
 
 Current direction (3 October 2026): final architecture is open to evidence. The primary benchmark remains the frozen lesion-disjoint split; the locked test is reserved until Phase 8. Historical image-level scores remain explicitly exploratory. Old reports describe the earlier direction and remain unchanged research history.
 
@@ -41,9 +41,9 @@ Rows index **saved evidence**, not independent trained networks. `record_kind` d
 
 ## New experiment contract
 
-The config example is a **proposal**, not an executable training launch. Later Phase 3 will connect the common model interface and `Experiment` artifact writer to a reviewed common training runner. Do not use the legacy B0-specific trainer to compare other backbones.
+The old config example is a historical proposal. Phase3's first prepared config and executable shared runner are documented in [the launch proposal](phase3/PLAN.md); launch waits for explicit GPU approval. Do not use the legacy B0-specific trainer to compare other backbones.
 
-For an approved training runner: create `Experiment(config)` once, call `log_epoch()` after each epoch, and `complete()` with saved validation metrics and the macro-F1-selected checkpoint. It refuses existing run IDs, mismatched validation support, changed split manifests, invalid matrices and inconsistent selected epochs. Checkpoints must be inside `checkpoints/structured/`. Call `fail()` on exceptions. Resume handling and the final test runner require explicit implementation/review in their later phases; they are not silently provided here.
+The shared runner uses `Experiment(config)`, `log_epoch()` and `complete()` to validate/publish the selected validation result. It refuses mismatched support, split changes, inconsistent metrics and accidental overwrites. Checkpoints stay inside `checkpoints/structured/`. Its explicit epoch-boundary resume repairs partially published history/registry from atomic full state; completed IDs exit without training. The final test runner remains unimplemented and the test remains locked.
 
 Use `research.plots.metric_figures()`, `training_figures()` and `comparison_figures()` with saved results for raw/normalized confusion matrices, per-class scores/support, available curves and model comparisons. PNG exports are 300 dpi and PDFs are vector figures. A missing historical field/curve is omitted, not synthesized. Every highlighted legacy figure directory includes `provenance.json` and a per-class CSV.
 
