@@ -14,6 +14,7 @@ S02 = 's02_mobilenet_v3_large_none_exploratory_seed42'
 S03 = 's03_efficientnet_b0_none_exploratory_seed42'
 S06 = 's06_convnext_tiny_none_exploratory_seed42'
 CANDIDATES = {
+    's17_s06_s15_equal_probability_exploratory_seed42': [S06, 's15_densenet201_none_exploratory_seed42'],
     's11_s06_s10_equal_probability_exploratory_seed42': ['s06_convnext_tiny_none_exploratory_seed42', 's10_efficientnet_v2_s_none_exploratory_seed42'],
     's12_s03_s06_s10_equal_probability_exploratory_seed42': ['s03_efficientnet_b0_none_exploratory_seed42', 's06_convnext_tiny_none_exploratory_seed42', 's10_efficientnet_v2_s_none_exploratory_seed42'],
     's04_s02_s03_equal_probability_exploratory_seed42': [S02, S03],

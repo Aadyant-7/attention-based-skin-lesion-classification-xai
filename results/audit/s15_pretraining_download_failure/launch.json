@@ -1,0 +1,9 @@
+{
+  "user_approved": true,
+  "checkpoints": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s15_densenet201_none_exploratory_seed42",
+  "results": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\structured_experiments\\s15_densenet201_none_exploratory_seed42",
+  "pid": 34520,
+  "launched_at": "2026-10-03T21:59:33.9570891+05:30",
+  "config": "research/configs/phase3/s15_densenet201_none_exploratory_seed42.json",
+  "log": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\structured_experiments\\s15_densenet201_none_exploratory_seed42\\train.log"
+}

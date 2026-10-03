@@ -1,0 +1,9 @@
+{
+  "pid": 39200,
+  "checkpoints": "checkpoints/structured/s15_densenet201_none_exploratory_seed42",
+  "results": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\structured_experiments\\s15_densenet201_none_exploratory_seed42",
+  "config": "research/configs/phase3/s15_densenet201_none_exploratory_seed42.json",
+  "user_approved": true,
+  "preserved_initial_download_failure": "results/audit/s15_pretraining_download_failure",
+  "launched_at": "2026-10-03T22:00:54.6635928+05:30"
+}

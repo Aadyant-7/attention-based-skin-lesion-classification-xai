@@ -341,7 +341,29 @@ def completed_run(config):
     return False
 
 
-def run(config,resume=False,resume_fix=None):
+def save_screening_snapshot(experiment,best,secondary_best,epoch):
+    """Publish pilot artifacts without completing or changing the experiment recipe."""
+    from .plots import metric_figures, training_figures
+    folder=experiment.path/'screening'/f'epoch_{epoch:02d}'
+    folder.mkdir(parents=True,exist_ok=True)
+    write_json(folder/'metrics.json',best['metrics'])
+    write_csv(folder/'predictions.csv',best['predictions'])
+    metric_figures(best['metrics'],folder/'figures','Pilot accuracy winner | exploratory validation')
+    training_figures(pd.DataFrame(experiment.history),folder/'figures','Pilot training through screening boundary',selection_metric=experiment.config['selection_metric'])
+    if secondary_best:
+        write_json(folder/'metrics_macro_f1.json',secondary_best['metrics'])
+        write_csv(folder/'predictions_macro_f1.csv',secondary_best['predictions'])
+    write_json(folder/'screening_status.json',dict(status='paused_screening',committed_epoch=epoch,
+        best_epoch=best['epoch'],secondary_best_epoch=secondary_best['epoch'] if secondary_best else None,
+        continuation_requires_approval=True,test_loader=False))
+    experiment.row.update(status='paused_screening',epochs=epoch,decision='await_pilot_review')
+    from .registry import upsert
+    upsert(experiment.row);write_json(experiment.path/'record.json',experiment.row)
+
+
+def run(config,resume=False,resume_fix=None,stop_after_epoch=None):
+    if stop_after_epoch is not None and not 1 <= stop_after_epoch < config['max_epochs']:
+        raise ValueError('Screening boundary must precede the full epoch cap')
     # Safe completed-run exit occurs before CUDA queries or loading images/weights.
     if completed_run(config):
         print('Already completed; preserved without training.',flush=True);return
@@ -406,6 +428,8 @@ def run(config,resume=False,resume_fix=None):
         trainset=DevelopmentImages(train,config,True);valset=DevelopmentImages(val,config)
         val_loader=DataLoader(valset,batch_size=config['validation_batch_size'],shuffle=False,num_workers=config['workers'],
                               pin_memory=True,worker_init_fn=seed_worker,generator=torch.Generator().manual_seed(config['seed']))
+        if stop_after_epoch is not None and len(experiment.history)>=stop_after_epoch:
+            raise ValueError('Screening boundary already reached; choose a later approved boundary')
         for epoch in range(len(experiment.history)+1,config['max_epochs']+1):
             if stale>=config['patience']: break
             tick=time.perf_counter();torch.cuda.reset_peak_memory_stats()
@@ -478,6 +502,11 @@ def run(config,resume=False,resume_fix=None):
                           best_epoch=secondary_best['epoch'],metrics=secondary_best['metrics'],class_order=list(CLASSES),selection_metric=secondary))
             experiment.log_epoch(row)
             logger.info('EPOCH %d val_accuracy=%.6f macro_f1=%.6f best_epoch=%d stale=%d',epoch,metrics['accuracy'],metrics['macro_f1'],best['epoch'],stale)
+            if stop_after_epoch is not None and epoch>=stop_after_epoch:
+                save_screening_snapshot(experiment,best,secondary_best,epoch)
+                progress(status='paused_screening',epochs=epoch,best_epoch=best['epoch'])
+                logger.info('SCREENING PAUSED: committed checkpoint; continuation requires approval')
+                return
         if best is None: raise RuntimeError('No committed epoch; cannot publish a completed result')
         # This also repairs a best.pt write interrupted after latest.pt committed.
         final=dict(config=config,code_hashes=code_hashes(),model=best['model'],best_epoch=best['epoch'],
@@ -517,6 +546,7 @@ def main():
     parser.add_argument('--check',action='store_true',help='Read-only config/data-path check; no model, CUDA, downloads or run outputs')
     parser.add_argument('--resume',action='store_true',help='Resume trusted latest.pt at committed epoch boundary')
     parser.add_argument('--resume-fix',type=Path,help='Explicit reviewed S10 numerical-recovery manifest; requires --resume')
+    parser.add_argument('--stop-after-epoch',type=int,help='Pause at a committed pilot epoch; recipe and resume state remain unchanged')
     args=parser.parse_args()
     if args.resume_fix and not args.resume:parser.error('--resume-fix requires --resume')
     config=json.loads(args.config.read_text(encoding='utf-8'));validate_config(config)
@@ -529,7 +559,7 @@ def main():
                    results=f"results/structured_experiments/{config['experiment_id']}"),indent=2))
     else:
         fix=json.loads(args.resume_fix.read_text(encoding='utf-8')) if args.resume_fix else None
-        with run_lock(config['experiment_id']): run(config,args.resume,fix)
+        with run_lock(config['experiment_id']): run(config,args.resume,fix,args.stop_after_epoch)
 
 
 if __name__=='__main__': main()

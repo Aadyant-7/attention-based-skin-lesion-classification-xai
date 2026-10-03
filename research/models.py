@@ -7,7 +7,7 @@ from torchvision import models
 from src.cbam import CBAM
 
 CHANNELS={'efficientnet_b0':1280,'efficientnet_b2':1408,'efficientnet_b3':1536,'efficientnet_v2_s':1280,'resnet50':2048,
-          'densenet121':1024,'densenet201':1920,'mobilenet_v3_large':960,'convnext_tiny':768}
+          'densenet121':1024,'densenet201':1920,'mobilenet_v3_large':960,'convnext_tiny':768,'convnext_small':768}
 
 
 class ResearchClassifier(nn.Module):
@@ -33,7 +33,7 @@ class ResearchClassifier(nn.Module):
         channels=CHANNELS[backbone]
         self.attention=CBAM(channels,16,7) if attention=='cbam' else nn.Identity()
         # ConvNeXt uses channel LayerNorm after pooling; preserve that operation.
-        norm=net.classifier[0] if backbone=='convnext_tiny' else nn.Identity()
+        norm=net.classifier[0] if backbone in ('convnext_tiny','convnext_small') else nn.Identity()
         self.head=nn.Sequential(nn.AdaptiveAvgPool2d(1),norm,nn.Flatten(),nn.Dropout(dropout),nn.Linear(channels,7))
         self.backbone_name=backbone
 

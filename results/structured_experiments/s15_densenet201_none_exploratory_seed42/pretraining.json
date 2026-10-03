@@ -1,0 +1,21 @@
+{
+  "weights": "DenseNet201_Weights.IMAGENET1K_V1",
+  "url": "https://download.pytorch.org/models/densenet201-c1103571.pth",
+  "sha256": "c1103571aad4f45d0b5b15556d92944db94c33bee68cd58babba3d76225a6401",
+  "parameters": 18106375,
+  "metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+  "code_hashes": {
+    "research/train.py": "efdd1ca9313ac0cb7e7fdd10476348e031bbd2eb95a95665acf4150c55333914",
+    "research/models.py": "75181842e75d59a330f390df948cb63243c180131c2179e67ce1e142be21a0d1",
+    "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "torch": "2.11.0+cu128",
+  "device": "NVIDIA GeForce RTX 4060",
+  "microbatch": 16,
+  "effective_batch": 32,
+  "native_attention": "SE retained for EfficientNet/MobileNet; none means no added CBAM"
+}

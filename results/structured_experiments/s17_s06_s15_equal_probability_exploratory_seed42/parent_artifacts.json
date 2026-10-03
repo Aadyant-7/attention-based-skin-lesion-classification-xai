@@ -1,0 +1,15 @@
+{
+  "parent_runs": [
+    "s06_convnext_tiny_none_exploratory_seed42",
+    "s15_densenet201_none_exploratory_seed42"
+  ],
+  "training_curves": [
+    "results\\structured_experiments\\s06_convnext_tiny_none_exploratory_seed42\\figures",
+    "results\\structured_experiments\\s15_densenet201_none_exploratory_seed42\\figures"
+  ],
+  "parent_checkpoints": [
+    "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best.pt",
+    "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best.pt"
+  ],
+  "note": "No training, new checkpoint, training curve or best epoch exists for this CPU fusion. Parent models required for future image inference."
+}

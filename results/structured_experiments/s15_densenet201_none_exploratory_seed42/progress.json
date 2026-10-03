@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s15_densenet201_none_exploratory_seed42",
+  "status": "completed",
+  "epochs": 17,
+  "best_epoch": 12,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.8962075848303394,
+  "selected_macro_f1": 0.8075191800514074,
+  "best_macro_f1": 0.8105850660973271
+}

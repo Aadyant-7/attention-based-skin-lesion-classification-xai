@@ -1,0 +1,6 @@
+{
+  "experiment_id": "s15_densenet201_none_exploratory_seed42",
+  "status": "failed",
+  "error": "URLError(OSError(10051, 'A socket operation was attempted to an unreachable network', None, 10051, None))",
+  "committed_epochs": 0
+}

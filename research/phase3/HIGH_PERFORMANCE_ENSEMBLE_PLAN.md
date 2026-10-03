@@ -1,3 +1,7 @@
+## Current decision after S15 (3 October 2026)
+
+S15: 89.62%/.8075. One fixed S17 fusion: 92.61%/.8771, only two extra correct versus FP32 reference with lower macro-F1. DenseNet excluded from selected ensemble; S12 FP32 reference retained. Next proposal: staged ConvNeXt-Small S18, with 8/12/20-epoch approval gates. S16 B3/Swin deferred; S14 remains deferred. No new GPU run approved. See research/phase3/S15_CLOSEOUT.md and research/phase3/S18_PROPOSAL.md (paths relative to root).
+
 # High-performance heterogeneous ensemble phase
 
 Priority changed by the user on3 October2026. **S14 is deferred and unlaunched. No new experiment is authorized.** This replaces inference-tweak prioritization; S01–S13 results and S14 preparation remain preserved. Expanded Phase3 now targets two strong new backbones, with one conditional transformer slot, then bounded heterogeneous fusion. Strict confirmation waits until this block is complete; original locked test untouched.
