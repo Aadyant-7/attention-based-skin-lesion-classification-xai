@@ -1,0 +1,6 @@
+{
+  "experiment_id": "s06_convnext_tiny_none_exploratory_seed42",
+  "started_at": "2026-10-03T18:58:11.3317245+05:30",
+  "process_id": 16372,
+  "config": "research/configs/phase3/s06_convnext_tiny_none_exploratory_seed42.json"
+}

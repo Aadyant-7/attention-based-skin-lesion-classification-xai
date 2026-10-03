@@ -1,0 +1,54 @@
+{
+  "s02_mobilenet_v3_large_none_exploratory_seed42": {
+    "display_name": "S02 MobileNetV3-Large",
+    "validation_images": 1503,
+    "s06_correct": 1379,
+    "other_correct": 1293,
+    "s06_fixes_other": 132,
+    "other_recovers_s06": 46,
+    "both_wrong": 78,
+    "both_correct": 1247,
+    "prediction_disagreements": 196,
+    "oracle_union_accuracy": 0.9481037924151696,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s03_efficientnet_b0_none_exploratory_seed42": {
+    "display_name": "S03 EfficientNet-B0",
+    "validation_images": 1503,
+    "s06_correct": 1379,
+    "other_correct": 1298,
+    "s06_fixes_other": 133,
+    "other_recovers_s06": 52,
+    "both_wrong": 72,
+    "both_correct": 1246,
+    "prediction_disagreements": 202,
+    "oracle_union_accuracy": 0.9520958083832335,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s05_efficientnet_b0_cbam_exploratory_seed42": {
+    "display_name": "S05 B0 + CBAM",
+    "validation_images": 1503,
+    "s06_correct": 1379,
+    "other_correct": 1298,
+    "s06_fixes_other": 129,
+    "other_recovers_s06": 48,
+    "both_wrong": 76,
+    "both_correct": 1250,
+    "prediction_disagreements": 200,
+    "oracle_union_accuracy": 0.9494344644045243,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s04_s02_s03_equal_probability_exploratory_seed42": {
+    "display_name": "S04 fixed S02/S03 fusion",
+    "validation_images": 1503,
+    "s06_correct": 1379,
+    "other_correct": 1331,
+    "s06_fixes_other": 97,
+    "other_recovers_s06": 49,
+    "both_wrong": 75,
+    "both_correct": 1282,
+    "prediction_disagreements": 160,
+    "oracle_union_accuracy": 0.9500998003992016,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  }
+}

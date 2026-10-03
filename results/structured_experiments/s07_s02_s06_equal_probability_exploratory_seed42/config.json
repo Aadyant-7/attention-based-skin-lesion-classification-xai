@@ -1,0 +1,35 @@
+{
+  "experiment_id": "s07_s02_s06_equal_probability_exploratory_seed42",
+  "recipe_version": "equal_probability_v1",
+  "phase": "ensemble_screening",
+  "protocol": "exploratory_image_level",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "locked_manifest_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "parent_run_ids": [
+    "s02_mobilenet_v3_large_none_exploratory_seed42",
+    "s06_convnext_tiny_none_exploratory_seed42"
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "checkpoint_sha256": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": "72e71e7be2e7465170c53211548ec65f72c1f393702f8e76e2c575c6a81bf45a",
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7"
+  },
+  "prediction_sha256": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": "b38898e669d47dfd7d9b3a812c68d681ee26e79756286cdd62def1f13d1a6f4b",
+    "s06_convnext_tiny_none_exploratory_seed42": "86a4e98809591a4c767d68d2a90004304c0afe441240b48cc60d987dfd52e27b"
+  },
+  "question": "Does one fixed equal-probability fusion of S02, S06 accuracy winners improve over S06 and frozen S04 on the identical exploratory validation cohort?"
+}

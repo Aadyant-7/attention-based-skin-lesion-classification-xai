@@ -1,6 +1,6 @@
 # S06 proposal — ConvNeXt-Tiny transfer learning
 
-**Prepared only; GPU approval required.** ID `s06_convnext_tiny_none_exploratory_seed42`.
+**Historical proposal; approved, completed and verified.** See [S06 closeout](S06_CLOSEOUT.md), [bounded CPU ensemble results](S07_S09_CLOSEOUT.md) and [next proposal](S10_PROPOSAL.md). Original prelaunch text below preserved. ID `s06_convnext_tiny_none_exploratory_seed42`.
 
 Question: does a larger modern ConvNeXt backbone improve matched exploratory single-model performance and add complementary errors useful for two-/three-model fusion?
 

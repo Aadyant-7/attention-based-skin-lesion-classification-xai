@@ -6,7 +6,7 @@ from torch import nn
 from torchvision import models
 from src.cbam import CBAM
 
-CHANNELS={'efficientnet_b0':1280,'efficientnet_b2':1408,'resnet50':2048,
+CHANNELS={'efficientnet_b0':1280,'efficientnet_b2':1408,'efficientnet_v2_s':1280,'resnet50':2048,
           'densenet121':1024,'mobilenet_v3_large':960,'convnext_tiny':768}
 
 

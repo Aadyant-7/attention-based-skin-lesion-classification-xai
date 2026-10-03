@@ -142,5 +142,20 @@ class RunnerChecks(unittest.TestCase):
         self.assertFalse(backbone_ids&head_ids)
         self.assertEqual(len(backbone_ids|head_ids),len(list(model.parameters())))
 
+    def test_efficientnet_v2_s_keeps_native_se_and_common_head(self):
+        from research.models import ResearchClassifier
+        from torchvision.ops import SqueezeExcitation
+        from research.common import CLASSES
+        model=ResearchClassifier('efficientnet_v2_s',weights=None).eval()
+        self.assertTrue(any(isinstance(m,SqueezeExcitation) for m in model.features.modules()))
+        self.assertIsInstance(model.attention,torch.nn.Identity)
+        self.assertEqual(model.head[-1].in_features,1280)
+        self.assertEqual(model.head[-1].out_features,len(CLASSES))
+        with torch.inference_mode(): logits=model(torch.zeros(2,3,224,224))
+        self.assertEqual(tuple(logits.shape),(2,7))
+        self.assertTrue(torch.isfinite(logits).all())
+        groups=train.optimizer_groups(model,self.config)
+        self.assertEqual({id(p) for p in groups[1]['params']},{id(p) for p in model.head[-1].parameters()})
+
 
 if __name__=='__main__': unittest.main()

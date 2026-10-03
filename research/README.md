@@ -1,6 +1,6 @@
 # Structured research workspace
 
-**Phase3 active:** [S01](phase3/S01_CLOSEOUT.md):85.63% strict/.7791 F1; [S02](phase3/S02_CLOSEOUT.md):86.03% exploratory/.7861; [S03](phase3/S03_CLOSEOUT.md):86.36% exploratory/.7707; [S04 fixed fusion](phase3/S04_CLOSEOUT.md):**88.56% exploratory/.8057**. Protocols remain separate. [S05 CBAM](phase3/S05_CLOSEOUT.md) is completed with no primary accuracy gain; [S06 ConvNeXt](phase3/S06_PROPOSAL.md) awaits approval. Follow [diverse-backbone/ensemble strategy](phase3/DIVERSE_BACKBONE_STRATEGY.md). Follow [two-stage evaluation and GPU launch policy](phase3/TWO_STAGE_STRATEGY.md). [Literature](literature/scispace_analysis/INTEGRATED_REVIEW.md) and earlier plans remain evidence. Old root handoffs live under `legacy/navigation/`.
+**Phase3 active:** S01 strict and S02–S06 exploratory training runs completed; [S06 ConvNeXt closeout](phase3/S06_CLOSEOUT.md) reached **91.75% accuracy/.8628 macro-F1**. [Bounded CPU ensembles S07–S09](phase3/S07_S09_CLOSEOUT.md) did not increase accuracy; S09 gave.8691 F1 at three-model cost. S04 remains the earlier88.56% fusion reference. [S05 CBAM](phase3/S05_CLOSEOUT.md) was mixed/near-neutral. [S10 EfficientNetV2-S proposal](phase3/S10_PROPOSAL.md) awaits approval. Follow [diverse-backbone strategy](phase3/DIVERSE_BACKBONE_STRATEGY.md) and [two-stage/GPU policy](phase3/TWO_STAGE_STRATEGY.md). Strict and exploratory results remain separate. [Literature](literature/scispace_analysis/INTEGRATED_REVIEW.md) and earlier plans remain evidence.
 
 **Local organization cleanup:** archives live under `legacy/`; immutable inventory uses `legacy/path_map.json`. Current verification is `python -m research.verify_layout --phase3-current`, preserving earlier cleanup/preparation audits. See [cleanup report](../legacy/organization/README.md). Historical code, datasets, results and checkpoints remain stable.
 
@@ -20,7 +20,7 @@ Current direction (3 October 2026): final architecture is open to evidence. The 
 | `results/structured_experiments/<id>/` | Structured configs, environment, history, metrics, predictions and figures; S01 completed, later runs separately approved. |
 | `results/ablations/`, `results/ensembles/`, `results/final/` | Reserved outputs for later paired attention studies, controlled ensembles and frozen-test results. |
 | `checkpoints/structured/<id>/` | New local checkpoints, outside all historical checkpoint directories. |
-| `research/models.py` | Common seven-class feature-map classifier with optional CBAM for six torchvision CNNs. |
+| `research/models.py` | Common seven-class feature-map classifier with optional CBAM for seven torchvision CNNs. |
 | `research/experiment.py` | New run logging/artifact contract; never starts training itself. |
 | `research/literature/` | Review schema, historical evidence index, and verification guidance. |
 | `NEXT_STEPS.md` | Phases, model shortlist, controls, gates and two-week schedule. |
@@ -41,7 +41,7 @@ Rows index **saved evidence**, not independent trained networks. `record_kind` d
 
 ## New experiment contract
 
-The old config and original S01 launch plan remain historical. Active configs/shared runner follow [the two-stage strategy](phase3/TWO_STAGE_STRATEGY.md) and [next launch proposal](phase3/S02_PROPOSAL.md). Every new GPU run waits for approval. Use the shared runner for comparisons.
+The old config and original S01 launch plan remain historical. Active configs/shared runner follow [the two-stage strategy](phase3/TWO_STAGE_STRATEGY.md) and [next launch proposal](phase3/S10_PROPOSAL.md). Every new GPU run waits for approval. Use the shared runner for comparisons.
 
 Strict v1 selects macro-F1; exploratory screening v1 selects accuracy and saves a separate macro-F1 winner. `Experiment.complete()` verifies the declared criterion, supports, split identity and metrics. Checkpoints remain in `checkpoints/structured/`; explicit epoch resume repairs history/registry and completed IDs exit without training. The final test runner is unimplemented and the test remains locked.
 

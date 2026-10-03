@@ -1,0 +1,10 @@
+{
+  "parameters": 27825511,
+  "optimizer_updates": 4375,
+  "best_epoch": 17,
+  "selection_metric": "accuracy",
+  "secondary_best_epoch": 18,
+  "stop_reason": "epoch_cap",
+  "validation_timing_scope": "End-to-end validation batch loop including loading/transfers; not pure GPU latency",
+  "best_validation_ms_per_image": 6.555812242202317
+}

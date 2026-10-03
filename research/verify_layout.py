@@ -20,7 +20,10 @@ ORGANIZATION_EDITS = {
 # preparation. Original inventories and the cleanup audit are never rewritten.
 PHASE3_EDITS = {'NEXT_STEPS.md','research/literature/README.md',
                 'research/literature/incoming/README.md',
-                'research/experiment.py','research/plots.py','results/master_experiment_registry.csv'}
+                'research/experiment.py','research/plots.py','results/master_experiment_registry.csv',
+                # S10 extends active model dispatch with EfficientNetV2-S channels.
+                # Historical src/models.py and all result bytes stay hash-locked.
+                'research/models.py'}
 
 
 def rows(path):

@@ -1,0 +1,174 @@
+{
+  "status": "verified_completed",
+  "experiment_id": "s07_s02_s06_equal_probability_exploratory_seed42",
+  "metrics": {
+    "loss": 0.3994373533628884,
+    "accuracy": 0.9135063206919495,
+    "macro_precision": 0.8834463014962404,
+    "macro_recall": 0.8390420167647568,
+    "macro_f1": 0.8572834902217,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        7,
+        5,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        75,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        4,
+        2,
+        129,
+        1,
+        8,
+        21,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        13,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        4,
+        6,
+        0,
+        128,
+        29,
+        0
+      ],
+      [
+        1,
+        2,
+        6,
+        0,
+        23,
+        974,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        19
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.8064516129032258,
+        "recall": 0.974025974025974,
+        "f1": 0.8823529411764706,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.8775510204081632,
+        "recall": 0.7818181818181819,
+        "f1": 0.8269230769230769,
+        "support": 165
+      },
+      "df": {
+        "precision": 0.9285714285714286,
+        "recall": 0.7647058823529411,
+        "f1": 0.8387096774193549,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8,
+        "recall": 0.7664670658682635,
+        "f1": 0.7828746177370031,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9465500485908649,
+        "recall": 0.9672293942403177,
+        "f1": 0.9567779960707269,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.95,
+        "recall": 0.9047619047619048,
+        "f1": 0.926829268292683,
+        "support": 21
+      }
+    }
+  },
+  "validation_images": 1503,
+  "correct": 1373,
+  "paired_gains": {
+    "s04_s02_s03_equal_probability_exploratory_seed42": {
+      "fixed": 79,
+      "broken": 37,
+      "both_wrong": 93,
+      "net_additional_correct": 42,
+      "accuracy_gain_percentage_points": 2.794411177644718,
+      "macro_f1_gain": 0.05162914563308396
+    },
+    "s06_convnext_tiny_none_exploratory_seed42": {
+      "fixed": 20,
+      "broken": 26,
+      "both_wrong": 104,
+      "net_additional_correct": -6,
+      "accuracy_gain_percentage_points": -0.39920159680638667,
+      "macro_f1_gain": -0.00554720083140392
+    }
+  },
+  "config_sha256": "51641be2ed80d89699e417b92146c774f8dc360c8cecb6c78f1ee396ff708414",
+  "source_hashes": {
+    "config.json": "51641be2ed80d89699e417b92146c774f8dc360c8cecb6c78f1ee396ff708414",
+    "validation_metrics.json": "2be9f37ca5e5a4626f1652d760fa4a2cc0a15cad5303a5eb9e0d8c353a2e7057",
+    "validation_predictions.csv": "3f1befe5f77e09e51dd8c88d11ec7b1144e58161d2ac9ef30fd3cd08a1e16332"
+  },
+  "parent_prediction_hashes": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": "b38898e669d47dfd7d9b3a812c68d681ee26e79756286cdd62def1f13d1a6f4b",
+    "s06_convnext_tiny_none_exploratory_seed42": "86a4e98809591a4c767d68d2a90004304c0afe441240b48cc60d987dfd52e27b"
+  },
+  "parent_checkpoint_identities": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": "72e71e7be2e7465170c53211548ec65f72c1f393702f8e76e2c575c6a81bf45a",
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7"
+  },
+  "verified_checks": [
+    "exact equal probabilities",
+    "all validation IDs and labels",
+    "weighted loss",
+    "matrix and class scores",
+    "four PNG/PDF pairs and CSVs"
+  ],
+  "gpu_used": false,
+  "test_images_loaded": false,
+  "new_checkpoint": false,
+  "selection_scope": "three predeclared candidates; validation-selected parents"
+}

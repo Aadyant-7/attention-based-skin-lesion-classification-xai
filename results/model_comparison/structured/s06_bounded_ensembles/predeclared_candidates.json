@@ -1,0 +1,49 @@
+{
+  "candidates": [
+    {
+      "experiment_id": "s07_s02_s06_equal_probability_exploratory_seed42",
+      "config_path": "research/configs/phase3/s07_s02_s06_equal_probability_exploratory_seed42.json",
+      "config_sha256": "51641be2ed80d89699e417b92146c774f8dc360c8cecb6c78f1ee396ff708414",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "parent_run_ids": [
+        "s02_mobilenet_v3_large_none_exploratory_seed42",
+        "s06_convnext_tiny_none_exploratory_seed42"
+      ]
+    },
+    {
+      "experiment_id": "s08_s03_s06_equal_probability_exploratory_seed42",
+      "config_path": "research/configs/phase3/s08_s03_s06_equal_probability_exploratory_seed42.json",
+      "config_sha256": "4d257ab1390ae19409a557787bb052a08534d6508d8c63f6e7b6de79d753fac4",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "parent_run_ids": [
+        "s03_efficientnet_b0_none_exploratory_seed42",
+        "s06_convnext_tiny_none_exploratory_seed42"
+      ]
+    },
+    {
+      "experiment_id": "s09_s02_s03_s06_equal_probability_exploratory_seed42",
+      "config_path": "research/configs/phase3/s09_s02_s03_s06_equal_probability_exploratory_seed42.json",
+      "config_sha256": "7d209c7ec958dc294f4c5943792c9f11e73ace978447a9230d0c8ecb79edb2eb",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "parent_run_ids": [
+        "s02_mobilenet_v3_large_none_exploratory_seed42",
+        "s03_efficientnet_b0_none_exploratory_seed42",
+        "s06_convnext_tiny_none_exploratory_seed42"
+      ]
+    }
+  ],
+  "scope": "All three frozen before any new fused probabilities/metrics are computed; maximum three equal candidates; no grid/weight/criterion search",
+  "parent_selection": "accuracy winner only; S06 epoch17; S02 epoch16; S03 epoch20",
+  "gpu_used": false,
+  "test_images_loaded": false
+}

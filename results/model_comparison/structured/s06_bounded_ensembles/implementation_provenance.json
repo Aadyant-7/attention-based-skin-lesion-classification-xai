@@ -1,0 +1,21 @@
+{
+  "source_hashes": {
+    "research/fuse.py": "06e9ce57022f147155b53d5dfe8daf5b2ac5ced43482e9b13215aed274bc567a",
+    "research/train.py": "2e8f7f9c9358b6742155776b75f28864a5d1a547e9136f3818531ce0745b9a54",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+  },
+  "git_base_commit": "5bd85be89ca9cff81eb92a693ecad17e81a644da",
+  "source_state": "Reviewed local source hashes, committed with this closeout; base commit predates the bounded-fusion extension",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128"
+  },
+  "gpu_used": false,
+  "test_images_loaded": false
+}

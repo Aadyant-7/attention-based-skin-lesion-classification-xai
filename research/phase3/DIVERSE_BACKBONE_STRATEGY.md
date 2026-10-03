@@ -1,4 +1,8 @@
-# Diverse backbone and bounded ensemble strategy — after S05
+# Diverse backbone and bounded ensemble strategy — after S06
+
+**Current evidence:** [S06](S06_CLOSEOUT.md) reached91.75%/.8628. [Three predeclared equal fusions](S07_S09_CLOSEOUT.md) did not raise accuracy; S09 reached.8691 F1 with three-model cost. Keep S06 accuracy/cost and S09 balanced references; one further strong model package [S10 EfficientNetV2-S](S10_PROPOSAL.md) is prepared only. It replaces an automatic DenseNet/ResNet run: stronger pretraining plus Fused-MBConv/SE representation is a justified diversity hypothesis, not a promised gain. After S10, evaluate complementarity before proposing at most one fixed S06/S10 pair. No new grid or full backbone list. CBAM remains available for a useful matched question. GPU launch policy unchanged.
+
+## Preserved plan before S06 evaluation
 
 Evidence: B0/MobileNet give86.36%/86.03% exploratory accuracy; fixed fusion88.56%/.8057 F1. Added B0 CBAM ties accuracy with mixed class/criterion effects. Preserve all results; move screening compute toward a small number of distinct strong transfer models.
 

@@ -1,4 +1,4 @@
-"""One predeclared equal-probability fusion of saved exploratory predictions; CPU only."""
+"""Predeclared equal-probability fusions of saved exploratory predictions; CPU only."""
 import argparse
 import json
 import logging
@@ -9,6 +9,26 @@ import pandas as pd
 from .common import ROOT, CLASSES, sha256, write_json, write_csv
 from .plots import validate_metrics, metric_figures, comparison_figures
 from .registry import FIELDS, read_registry, upsert
+
+S02 = 's02_mobilenet_v3_large_none_exploratory_seed42'
+S03 = 's03_efficientnet_b0_none_exploratory_seed42'
+S06 = 's06_convnext_tiny_none_exploratory_seed42'
+CANDIDATES = {
+    's04_s02_s03_equal_probability_exploratory_seed42': [S02, S03],
+    's07_s02_s06_equal_probability_exploratory_seed42': [S02, S06],
+    's08_s03_s06_equal_probability_exploratory_seed42': [S03, S06],
+    's09_s02_s03_s06_equal_probability_exploratory_seed42': [S02, S03, S06],
+}
+
+
+def validate_candidate(config):
+    expected = CANDIDATES.get(config['experiment_id'])
+    if (not expected or config['recipe_version'] != 'equal_probability_v1'
+            or config['parent_run_ids'] != expected
+            or config['weights'] != [1/len(expected)]*len(expected)
+            or config['protocol'] != 'exploratory_image_level'
+            or config['class_order'] != list(CLASSES)):
+        raise ValueError('Only the predeclared equal-fusion candidates are supported; no weight/subset search')
 
 
 def read(path):
@@ -31,12 +51,7 @@ def aligned_probabilities(frame, validation):
 
 
 def preflight(config):
-    expected = ['s02_mobilenet_v3_large_none_exploratory_seed42', 's03_efficientnet_b0_none_exploratory_seed42']
-    if (config['recipe_version'] != 'equal_probability_v1' or config['parent_run_ids'] != expected
-            or config['weights'] != [0.5, 0.5] or config['protocol'] != 'exploratory_image_level'
-            or config['class_order'] != list(CLASSES)
-            or config['experiment_id'] != 's04_s02_s03_equal_probability_exploratory_seed42'):
-        raise ValueError('Only the predeclared single equal-fusion candidate is supported')
+    validate_candidate(config)
     manifest = ROOT / config['split_manifest']
     if sha256(manifest) != config['split_sha256']:
         raise ValueError('Exploratory manifest changed')
@@ -56,10 +71,13 @@ def preflight(config):
         parent, recipe = read(folder / 'record.json'), read(folder / 'config.json')
         if (parent['status'] != 'completed' or parent['protocol'] != config['protocol']
                 or parent['split_sha256'] != config['split_sha256'] or recipe['selection_metric'] != 'accuracy'
+                or recipe['split_sha256'] != config['split_sha256']
                 or parent['checkpoint_sha256'] != config['checkpoint_sha256'][rid]
                 or sha256(folder / 'validation_predictions.csv') != config['prediction_sha256'][rid]):
             raise ValueError('Parent source/selection/protocol changed')
         m = read(folder / 'validation_metrics.json'); validate_metrics(m)
+        if sha256(folder/'validation_metrics.json') != parent['source_sha256']:
+            raise ValueError('Parent metrics provenance changed')
         probabilities.append(aligned_probabilities(pd.read_csv(folder / 'validation_predictions.csv'), validation))
         parents.append((parent, m))
     return frame, validation, parents, probabilities
@@ -91,7 +109,7 @@ def main():
     row.update(experiment_id=config['experiment_id'], era='structured', record_kind='fixed_probability_fusion',
         phase='ensemble_screening', protocol=config['protocol'], evaluation_split='validation',
         split_manifest=config['split_manifest'], split_sha256=config['split_sha256'], method=config['question'],
-        model='mobilenet_v3_large+efficientnet_b0', attention='none', image_size=224, seed=42,
+        model='+'.join(p['model'] for p,m in parents), attention='none', image_size=224, seed=42,
         ensemble_members=json.dumps(config['parent_run_ids']), ensemble_weights=json.dumps(config['weights']),
         checkpoint=json.dumps([p['checkpoint'] for p,m in parents]), checkpoint_available_local=all((ROOT/p['checkpoint']).exists() for p,m in parents),
         config_path=(out/'config.json').relative_to(ROOT).as_posix(), status='running')
@@ -102,7 +120,7 @@ def main():
         handler.setFormatter(logging.Formatter('%(asctime)s %(message)s')); logger.addHandler(handler)
     start = time.perf_counter()
     try:
-        logger.info('START CPU-only fixed 50/50 fusion; no images/models/test loader; no weight search')
+        logger.info('START CPU-only fixed equal fusion of %d parents; no images/models/test loader; no weight search', len(parents))
         fused = sum(w*p for w,p in zip(config['weights'], probabilities))
         labels = validation.diagnosis.map(dict(zip(CLASSES, range(7)))).to_numpy()
         counts = frame.query("split=='train'").diagnosis.value_counts()
@@ -116,14 +134,15 @@ def main():
             **{f'p_{c}':float(p[j]) for j,c in enumerate(CLASSES)}) for i,y,p in zip(validation.index, labels, fused)]
         write_csv(out / 'validation_predictions.csv', predictions)
         aligned_probabilities(pd.read_csv(out / 'validation_predictions.csv'), validation)
-        metric_figures(metrics, out / 'figures', 'S04 fixed equal fusion | exploratory validation | no weight tuning')
+        label = config['experiment_id'].split('_',1)[0].upper() + ' fixed equal fusion'
+        metric_figures(metrics, out / 'figures', label + ' | exploratory validation | no weight tuning')
         write_json(out / 'parent_artifacts.json', dict(parent_runs=config['parent_run_ids'],
             training_curves=[str(Path(p['history_path']).parent/'figures') for p,m in parents],
             parent_checkpoints=[p['checkpoint'] for p,m in parents],
             note='No training, new checkpoint, training curve or best epoch exists for this CPU fusion. Parent models required for future image inference.'))
         compare = [dict(display_name=p['model'], accuracy=m['accuracy'], macro_f1=m['macro_f1']) for p,m in parents]
-        compare.append(dict(display_name='S04 fixed equal fusion', accuracy=metrics['accuracy'], macro_f1=metrics['macro_f1']))
-        comparison_figures(compare, ROOT/'results/model_comparison/structured/s04_fixed_fusion', 'Same exploratory validation | single models and fixed equal fusion')
+        compare.append(dict(display_name=label, accuracy=metrics['accuracy'], macro_f1=metrics['macro_f1']))
+        comparison_figures(compare, ROOT/'results/model_comparison/structured'/f"{config['experiment_id'].split('_',1)[0]}_fixed_fusion", 'Same exploratory validation | single models and fixed equal fusion')
         row.update(status='completed', runtime_seconds=time.perf_counter()-start,
             **{k:metrics[k] for k in ('accuracy','macro_precision','macro_recall','macro_f1')}, val_loss=loss,
             metrics_path=(out/'validation_metrics.json').relative_to(ROOT).as_posix(),
@@ -131,7 +150,7 @@ def main():
             plots_dir=(out/'figures').relative_to(ROOT).as_posix(),
             confusion_matrix_path=(out/'figures/confusion_matrix.csv').relative_to(ROOT).as_posix(),
             decision='fixed_fusion_completed_pending_review',
-            notes='One predeclared candidate, parent accuracy winners, weights 0.5/0.5; validation-selected parent models; exploratory only; no GPU/raw/test images/new checkpoint.')
+            notes='One predeclared equal-probability candidate, parent accuracy winners; validation-selected parent models; exploratory only; no GPU/raw/test images/new checkpoint.')
         upsert(row); write_json(out / 'record.json', row)
         logger.info('COMPLETED accuracy=%.6f macro_f1=%.6f', metrics['accuracy'], metrics['macro_f1'])
     except BaseException as exc:
