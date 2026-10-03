@@ -1,0 +1,5 @@
+display_name,experiment_id,selection_metric,best_epoch,accuracy,macro_precision,macro_recall,macro_f1,melanoma_recall,scope
+S03 B0 | no added CBAM | accuracy selected,s03_efficientnet_b0_none_exploratory_seed42,accuracy,20,0.863606121091151,0.7534286077687018,0.7916330829131726,0.7706600163648087,0.7005988023952096,same exploratory training policy; one seed; criteria separate
+S05 B0 | added CBAM | accuracy selected,s05_efficientnet_b0_cbam_exploratory_seed42,accuracy,19,0.863606121091151,0.7599204214006077,0.7812601338875816,0.7693010875155818,0.718562874251497,same exploratory training policy; one seed; criteria separate
+S03 B0 | no added CBAM | macro_f1 selected,s03_efficientnet_b0_none_exploratory_seed42,macro_f1,20,0.863606121091151,0.7534286077687018,0.7916330829131726,0.7706600163648087,0.7005988023952096,same exploratory training policy; one seed; criteria separate
+S05 B0 | added CBAM | macro_f1 selected,s05_efficientnet_b0_cbam_exploratory_seed42,macro_f1,16,0.8629407850964738,0.7568826695760592,0.7978726296082378,0.7745908141348191,0.7305389221556886,same exploratory training policy; one seed; criteria separate

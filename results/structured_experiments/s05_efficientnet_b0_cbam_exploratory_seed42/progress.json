@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s05_efficientnet_b0_cbam_exploratory_seed42",
+  "status": "completed",
+  "epochs": 20,
+  "best_epoch": 19,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.863606121091151,
+  "selected_macro_f1": 0.7693010875155818,
+  "best_macro_f1": 0.7745908141348191
+}

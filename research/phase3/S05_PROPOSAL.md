@@ -1,6 +1,6 @@
 # S05 proposal — matched EfficientNet-B0 + added CBAM
 
-**Prepared only; separate GPU approval required.** ID `s05_efficientnet_b0_cbam_exploratory_seed42`.
+**Historical proposal; approved,completed and verified.** See [S05 closeout](S05_CLOSEOUT.md) and [next ConvNeXt proposal](S06_PROPOSAL.md). ID `s05_efficientnet_b0_cbam_exploratory_seed42`. Original prelaunch plan below retained as provenance.
 
 Question: does adding channel/spatial CBAM before GAP improve B0 accuracy and minority-class performance versus S03 under the matched exploratory recipe? B0 is the structured single-model accuracy leader; S04 confirms fusion helps but minority trade-offs remain. A controlled CBAM pair closes a central methodology/literature gap instead of screening another arbitrary backbone or searching fusion weights. Existing historical CBAM scores changed heads/batches/selection and cannot answer this question. Improvement is a hypothesis, not guaranteed.
 

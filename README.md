@@ -13,7 +13,8 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 | [S02 completed result](research/phase3/S02_CLOSEOUT.md) |86.03% exploratory accuracy/.7861 macro-F1; verified artifacts and same-protocol context. |
 | [S03 completed result](research/phase3/S03_CLOSEOUT.md) |86.36% exploratory accuracy/.7707 macro-F1; matched MobileNet comparison and error analysis. |
 | [S04 completed fusion](research/phase3/S04_CLOSEOUT.md) |88.56% exploratory accuracy/.8057 macro-F1; fixed 50/50 probabilities with no new training. |
-| [Next GPU proposal](research/phase3/S05_PROPOSAL.md) | Matched EfficientNet-B0 + CBAM; prepared only and awaiting approval. |
+| [S05 attention result](research/phase3/S05_CLOSEOUT.md) | CBAM tied B0 accuracy; criterion/class trade-offs documented. |
+| [Next GPU proposal](research/phase3/S06_PROPOSAL.md) | ConvNeXt-Tiny diverse-backbone screening; prepared only, awaiting approval. |
 | [Folder map](research/FOLDER_MAP.md) | Active, historical and local folders explained. |
 | [Next steps](NEXT_STEPS.md) | Remaining phases and training gates. |
 | [Experiment registry](results/master_experiment_registry.csv) | Historical evidence and actual structured run records; protocols kept separate. |
@@ -23,7 +24,7 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 
 ## Current status
 
-Phases 1–2 are complete. S01 strict B0, S02 exploratory MobileNet, S03 matched exploratory B0 and S04 fixed fusion are completed; S05 CBAM is prepared only. Structured exploratory best is88.56% accuracy/.8057 macro-F1. Model discovery uses image-level development, then fresh lesion-disjoint confirmation of finalists. Both use7,009/1,503/1,503 partitions with the original test locked until methodology freeze; report protocols separately. Future GPU launches stop after initial log/checkpoint confirmation; no agent monitoring until the user returns.
+Phases 1–2 are complete. S01 strict B0, S02 exploratory MobileNet, S03 matched exploratory B0 and S04 fixed fusion are completed; S05 CBAM is completed; S06 ConvNeXt is prepared only. Structured exploratory best is88.56% accuracy/.8057 macro-F1. Model discovery uses image-level development, then fresh lesion-disjoint confirmation of finalists. Both use7,009/1,503/1,503 partitions with the original test locked until methodology freeze; report protocols separately. Future GPU launches stop after initial log/checkpoint confirmation; no agent monitoring until the user returns.
 
 Historical validation leaders: **87.69% strict accuracy**, **0.7837 strict macro-F1** (different combinations), and **90.75% exploratory accuracy / 0.8573 macro-F1**. These are validation-selected observations, not final test scores. Historical comparison figures are not controlled architecture ablations.
 

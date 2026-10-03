@@ -1,6 +1,6 @@
 # Two-stage evaluation — Phase 3 amendment
 
-**After S04:** [Fixed equal fusion](S04_CLOSEOUT.md) achieved **88.56% exploratory accuracy/.8057 macro-F1**, improving over [B0](S03_CLOSEOUT.md)86.36%/.7707 and [MobileNet](S02_CLOSEOUT.md)86.03%/.7861. Retain this bounded-fusion reference; next recommendation is [matched B0+CBAM](S05_PROPOSAL.md), prepared only. Strict results remain separate. Pre-S02 rationale below is historical, not authorization for another run.
+**After S04:** [Fixed equal fusion](S04_CLOSEOUT.md) achieved **88.56% exploratory accuracy/.8057 macro-F1**, improving over [B0](S03_CLOSEOUT.md)86.36%/.7707 and [MobileNet](S02_CLOSEOUT.md)86.03%/.7861. Retain this bounded-fusion reference; [S05 CBAM](S05_CLOSEOUT.md) tied B0 accuracy; next is [ConvNeXt-Tiny](S06_PROPOSAL.md), prepared only, following [diverse-backbone strategy](DIVERSE_BACKBONE_STRATEGY.md). Strict results remain separate. Pre-S02 rationale below is historical, not authorization for another run.
 
 **GPU launch policy:** every future GPU run needs its own reviewed proposal and approval. Once launched independently and log/initial checkpoints confirmed, stop immediately. No epoch polling, background monitoring or completion wait; user returns to request analysis.
 

@@ -1,6 +1,6 @@
 # Research plan: 3–17 October 2026
 
-**Active update:** S01–S04 are completed/verified; [S04 fixed fusion](research/phase3/S04_CLOSEOUT.md) reached88.56% exploratory accuracy/.8057 macro-F1. Next recommendation: [S05 matched B0+CBAM](research/phase3/S05_PROPOSAL.md), prepared only and awaiting GPU approval. Follow [two-stage evaluation and launch-and-stop policy](research/phase3/TWO_STAGE_STRATEGY.md). Phase2 all-strict screening below is historical and superseded.
+**Active update:** S01–S04 are completed/verified; [S04 fixed fusion](research/phase3/S04_CLOSEOUT.md) reached88.56% exploratory accuracy/.8057 macro-F1. [S05 CBAM closeout](research/phase3/S05_CLOSEOUT.md) found no primary accuracy gain. Next: [S06 ConvNeXt-Tiny](research/phase3/S06_PROPOSAL.md), prepared only; [bounded diverse-backbone strategy](research/phase3/DIVERSE_BACKBONE_STRATEGY.md) supersedes further B0 tuning. Follow [two-stage evaluation and launch-and-stop policy](research/phase3/TWO_STAGE_STRATEGY.md). Phase2 all-strict screening below is historical and superseded.
 
 ## Original Phase2 plan (historical)
 

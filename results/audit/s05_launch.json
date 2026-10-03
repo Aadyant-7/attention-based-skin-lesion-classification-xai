@@ -1,0 +1,6 @@
+{
+  "process_id": 13908,
+  "started_at": "2026-10-03T18:24:29.5277322+05:30",
+  "experiment_id": "s05_efficientnet_b0_cbam_exploratory_seed42",
+  "config": "research/configs/phase3/s05_efficientnet_b0_cbam_exploratory_seed42.json"
+}

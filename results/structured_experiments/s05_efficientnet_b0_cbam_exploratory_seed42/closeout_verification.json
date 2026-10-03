@@ -1,0 +1,586 @@
+{
+  "status": "verified_completed",
+  "experiment_id": "s05_efficientnet_b0_cbam_exploratory_seed42",
+  "protocol": "exploratory_image_level",
+  "epochs": 20,
+  "selected": {
+    "accuracy": {
+      "epoch": 19,
+      "metrics": {
+        "loss": 0.6240051710418912,
+        "accuracy": 0.863606121091151,
+        "macro_precision": 0.7599204214006077,
+        "macro_recall": 0.7812601338875816,
+        "macro_f1": 0.7693010875155818,
+        "class_order": [
+          "akiec",
+          "bcc",
+          "bkl",
+          "df",
+          "mel",
+          "nv",
+          "vasc"
+        ],
+        "confusion_matrix": [
+          [
+            29,
+            8,
+            8,
+            0,
+            2,
+            2,
+            0
+          ],
+          [
+            6,
+            59,
+            2,
+            2,
+            2,
+            5,
+            1
+          ],
+          [
+            6,
+            1,
+            119,
+            0,
+            18,
+            21,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            15,
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            6,
+            0,
+            120,
+            36,
+            1
+          ],
+          [
+            1,
+            7,
+            22,
+            2,
+            33,
+            938,
+            4
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            18
+          ]
+        ],
+        "per_class": {
+          "akiec": {
+            "precision": 0.6590909090909091,
+            "recall": 0.5918367346938775,
+            "f1": 0.6236559139784946,
+            "support": 49
+          },
+          "bcc": {
+            "precision": 0.7468354430379747,
+            "recall": 0.7662337662337663,
+            "f1": 0.7564102564102564,
+            "support": 77
+          },
+          "bkl": {
+            "precision": 0.7579617834394905,
+            "recall": 0.7212121212121212,
+            "f1": 0.7391304347826086,
+            "support": 165
+          },
+          "df": {
+            "precision": 0.7894736842105263,
+            "recall": 0.8823529411764706,
+            "f1": 0.8333333333333334,
+            "support": 17
+          },
+          "mel": {
+            "precision": 0.6818181818181818,
+            "recall": 0.718562874251497,
+            "f1": 0.6997084548104956,
+            "support": 167
+          },
+          "nv": {
+            "precision": 0.9342629482071713,
+            "recall": 0.9314796425024826,
+            "f1": 0.9328692192938837,
+            "support": 1007
+          },
+          "vasc": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8,
+            "support": 21
+          }
+        }
+      },
+      "control_metrics": {
+        "loss": 0.6304686558695167,
+        "accuracy": 0.863606121091151,
+        "macro_precision": 0.7534286077687018,
+        "macro_recall": 0.7916330829131726,
+        "macro_f1": 0.7706600163648087,
+        "class_order": [
+          "akiec",
+          "bcc",
+          "bkl",
+          "df",
+          "mel",
+          "nv",
+          "vasc"
+        ],
+        "confusion_matrix": [
+          [
+            31,
+            8,
+            5,
+            0,
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            64,
+            1,
+            1,
+            1,
+            6,
+            1
+          ],
+          [
+            6,
+            2,
+            119,
+            0,
+            20,
+            17,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            14,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            2,
+            5,
+            0,
+            117,
+            37,
+            1
+          ],
+          [
+            2,
+            9,
+            23,
+            4,
+            32,
+            934,
+            3
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            19
+          ]
+        ],
+        "per_class": {
+          "akiec": {
+            "precision": 0.6595744680851063,
+            "recall": 0.6326530612244898,
+            "f1": 0.6458333333333334,
+            "support": 49
+          },
+          "bcc": {
+            "precision": 0.735632183908046,
+            "recall": 0.8311688311688312,
+            "f1": 0.7804878048780488,
+            "support": 77
+          },
+          "bkl": {
+            "precision": 0.7727272727272727,
+            "recall": 0.7212121212121212,
+            "f1": 0.7460815047021944,
+            "support": 165
+          },
+          "df": {
+            "precision": 0.7368421052631579,
+            "recall": 0.8235294117647058,
+            "f1": 0.7777777777777778,
+            "support": 17
+          },
+          "mel": {
+            "precision": 0.6724137931034483,
+            "recall": 0.7005988023952096,
+            "f1": 0.6862170087976539,
+            "support": 167
+          },
+          "nv": {
+            "precision": 0.9368104312938816,
+            "recall": 0.9275074478649454,
+            "f1": 0.9321357285429142,
+            "support": 1007
+          },
+          "vasc": {
+            "precision": 0.76,
+            "recall": 0.9047619047619048,
+            "f1": 0.8260869565217391,
+            "support": 21
+          }
+        }
+      },
+      "deltas": {
+        "accuracy": 0.0,
+        "macro_precision": 0.006491813631905874,
+        "macro_recall": -0.010372949025590938,
+        "macro_f1": -0.001358928849226948,
+        "loss": -0.0064634848276254875
+      }
+    },
+    "macro_f1": {
+      "epoch": 16,
+      "metrics": {
+        "loss": 0.6023292526571736,
+        "accuracy": 0.8629407850964738,
+        "macro_precision": 0.7568826695760592,
+        "macro_recall": 0.7978726296082378,
+        "macro_f1": 0.7745908141348191,
+        "class_order": [
+          "akiec",
+          "bcc",
+          "bkl",
+          "df",
+          "mel",
+          "nv",
+          "vasc"
+        ],
+        "confusion_matrix": [
+          [
+            32,
+            6,
+            6,
+            0,
+            4,
+            1,
+            0
+          ],
+          [
+            7,
+            57,
+            3,
+            2,
+            3,
+            5,
+            0
+          ],
+          [
+            5,
+            1,
+            122,
+            0,
+            19,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            16,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            6,
+            0,
+            122,
+            34,
+            2
+          ],
+          [
+            1,
+            6,
+            20,
+            3,
+            42,
+            930,
+            5
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            18
+          ]
+        ],
+        "per_class": {
+          "akiec": {
+            "precision": 0.6808510638297872,
+            "recall": 0.6530612244897959,
+            "f1": 0.6666666666666666,
+            "support": 49
+          },
+          "bcc": {
+            "precision": 0.7808219178082192,
+            "recall": 0.7402597402597403,
+            "f1": 0.76,
+            "support": 77
+          },
+          "bkl": {
+            "precision": 0.7721518987341772,
+            "recall": 0.7393939393939394,
+            "f1": 0.7554179566563467,
+            "support": 165
+          },
+          "df": {
+            "precision": 0.7619047619047619,
+            "recall": 0.9411764705882353,
+            "f1": 0.8421052631578947,
+            "support": 17
+          },
+          "mel": {
+            "precision": 0.6421052631578947,
+            "recall": 0.7305389221556886,
+            "f1": 0.6834733893557423,
+            "support": 167
+          },
+          "nv": {
+            "precision": 0.9403437815975733,
+            "recall": 0.9235352532274081,
+            "f1": 0.9318637274549099,
+            "support": 1007
+          },
+          "vasc": {
+            "precision": 0.72,
+            "recall": 0.8571428571428571,
+            "f1": 0.782608695652174,
+            "support": 21
+          }
+        }
+      },
+      "control_metrics": {
+        "loss": 0.6304686558695167,
+        "accuracy": 0.863606121091151,
+        "macro_precision": 0.7534286077687018,
+        "macro_recall": 0.7916330829131726,
+        "macro_f1": 0.7706600163648087,
+        "class_order": [
+          "akiec",
+          "bcc",
+          "bkl",
+          "df",
+          "mel",
+          "nv",
+          "vasc"
+        ],
+        "confusion_matrix": [
+          [
+            31,
+            8,
+            5,
+            0,
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            64,
+            1,
+            1,
+            1,
+            6,
+            1
+          ],
+          [
+            6,
+            2,
+            119,
+            0,
+            20,
+            17,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            14,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            2,
+            5,
+            0,
+            117,
+            37,
+            1
+          ],
+          [
+            2,
+            9,
+            23,
+            4,
+            32,
+            934,
+            3
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            19
+          ]
+        ],
+        "per_class": {
+          "akiec": {
+            "precision": 0.6595744680851063,
+            "recall": 0.6326530612244898,
+            "f1": 0.6458333333333334,
+            "support": 49
+          },
+          "bcc": {
+            "precision": 0.735632183908046,
+            "recall": 0.8311688311688312,
+            "f1": 0.7804878048780488,
+            "support": 77
+          },
+          "bkl": {
+            "precision": 0.7727272727272727,
+            "recall": 0.7212121212121212,
+            "f1": 0.7460815047021944,
+            "support": 165
+          },
+          "df": {
+            "precision": 0.7368421052631579,
+            "recall": 0.8235294117647058,
+            "f1": 0.7777777777777778,
+            "support": 17
+          },
+          "mel": {
+            "precision": 0.6724137931034483,
+            "recall": 0.7005988023952096,
+            "f1": 0.6862170087976539,
+            "support": 167
+          },
+          "nv": {
+            "precision": 0.9368104312938816,
+            "recall": 0.9275074478649454,
+            "f1": 0.9321357285429142,
+            "support": 1007
+          },
+          "vasc": {
+            "precision": 0.76,
+            "recall": 0.9047619047619048,
+            "f1": 0.8260869565217391,
+            "support": 21
+          }
+        }
+      },
+      "deltas": {
+        "accuracy": -0.0006653359946772186,
+        "macro_precision": 0.0034540618073574114,
+        "macro_recall": 0.006239546695065212,
+        "macro_f1": 0.003930797770010375,
+        "loss": -0.028139403212343095
+      }
+    }
+  },
+  "final_epoch_metrics": {
+    "accuracy": 0.8569527611443779,
+    "macro_precision": 0.742227899407332,
+    "macro_recall": 0.7726340937374625,
+    "macro_f1": 0.75547156763302,
+    "loss": 0.6379226772305387
+  },
+  "final_train_accuracy": 0.9489155251141552,
+  "minimum_val_loss_epoch": 14,
+  "runtime_seconds": 743.0220448999899,
+  "matched_config_differences": {
+    "attention": [
+      "none",
+      "cbam"
+    ],
+    "experiment_id": [
+      "s03_efficientnet_b0_none_exploratory_seed42",
+      "s05_efficientnet_b0_cbam_exploratory_seed42"
+    ],
+    "phase": [
+      "exploratory_screening",
+      "exploratory_attention"
+    ],
+    "question": [
+      "Does EfficientNet-B0 outperform S02 MobileNetV3-Large under the identical exploratory recipe, and provide aligned probabilities for a later bounded ensemble?",
+      "Does adding channel/spatial CBAM before global pooling improve EfficientNet-B0 accuracy and minority-class performance versus S03 under the matched exploratory recipe?"
+    ],
+    "recipe_version": [
+      "exploratory_screening_v1",
+      "exploratory_cbam_v1"
+    ]
+  },
+  "verified_launch_sources": {
+    "research/train.py": "current_file",
+    "research/models.py": "current_file",
+    "research/experiment.py": "current_file",
+    "research/common.py": "current_file",
+    "research/plots.py": "current_file",
+    "research/registry.py": "current_file",
+    "src/cbam.py": "current_file"
+  },
+  "checkpoint_hashes": {
+    "best.pt": "9fa9dce5a85f9110d7dd2940d56185feaa16aa4b0605b5f7ff045ac8f7e20320",
+    "best_macro_f1.pt": "0bdb1651d7efe3512514415076b7f745cd6abc04c7c910ec818f1f0c9229e5be",
+    "latest.pt": "428770595db213e9f5165122793bda5421db981e36f8d755aab1adefc25b8007"
+  },
+  "source_hashes": {
+    "config.json": "232d8413e42240e70220cff1fdbc654e75dd9dad2537468c73d7f8952907cc97",
+    "history.csv": "125e8e9069c890e2bdfcd27ae1ff1edca744d868c52b06ad9f66ca2af1525f4a",
+    "validation_metrics.json": "c72458e7266a9c171b082d597b0962605f8ffd11b68dcb2dfbeba1fd175dfe3c",
+    "validation_metrics_macro_f1.json": "2721af3a177d8df82a7555ec953457cd809c50345db2e56e2a1b6d30b590bbcd",
+    "validation_predictions.csv": "a1d993d595971deb287dc21b7d350822fe93d2e69312c8e32952302b5d80185c",
+    "validation_predictions_macro_f1.csv": "3363e145f271493cfb4e4bd76b703a75ebe770973d607a4c6bda0da820a5cb97"
+  },
+  "historical_rows_preserved": 473,
+  "all_other_registry_rows_unchanged": true,
+  "gpu_used": false,
+  "test_images_loaded": false
+}
