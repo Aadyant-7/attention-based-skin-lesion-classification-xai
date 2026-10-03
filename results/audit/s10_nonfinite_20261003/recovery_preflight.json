@@ -1,0 +1,15 @@
+{
+  "status": "prepared_only_not_resumed",
+  "resume_boundary": 13,
+  "epochs_remaining_maximum": 7,
+  "config_sha256": "086a6a5821241fbdb19dec1294e96fbe80562a4d4cb0f94916a69265b0e609be",
+  "source_migration_files": [
+    "research/train.py"
+  ],
+  "all_original_s10_artifacts_byte_preserved": true,
+  "latest_checkpoint_sha256": "fc9556322f6ab01da9ae192e33d678a28039a378bd2e0fb85bea80123978c2dd",
+  "gpu_used": false,
+  "test_images_loaded": false,
+  "tests_passed": 18,
+  "guard_manifest_cpu_validated": true
+}

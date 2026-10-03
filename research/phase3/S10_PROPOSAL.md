@@ -1,6 +1,6 @@
 # S10 proposal — EfficientNetV2-S transfer learning
 
-**Prepared only; separate GPU approval required.** ID `s10_efficientnet_v2_s_none_exploratory_seed42`.
+**Historical initial proposal; approved and launched. S10 failed during epoch14 validation, with valid epoch13 checkpoints preserved.** See [diagnosis and guarded recovery proposal](S10_FAILURE_RECOVERY.md); original prelaunch text below retained. ID `s10_efficientnet_v2_s_none_exploratory_seed42`.
 
 ## Evidence and research question
 

@@ -1,0 +1,29 @@
+{
+  "kind": "s10_validation_numerics_v1",
+  "experiment_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "checkpoint_epoch": 13,
+  "checkpoint_sha256": "fc9556322f6ab01da9ae192e33d678a28039a378bd2e0fb85bea80123978c2dd",
+  "config_sha256": "086a6a5821241fbdb19dec1294e96fbe80562a4d4cb0f94916a69265b0e609be",
+  "from_code_hashes": {
+    "research/train.py": "2e8f7f9c9358b6742155776b75f28864a5d1a547e9136f3818531ce0745b9a54",
+    "research/models.py": "a0efb83a93d8392d680951c1a93d7cd7a0f2e7429e546128dd2fab7aa8a866db",
+    "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "to_code_hashes": {
+    "research/train.py": "efdd1ca9313ac0cb7e7fdd10476348e031bbd2eb95a95665acf4150c55333914",
+    "research/models.py": "a0efb83a93d8392d680951c1a93d7cd7a0f2e7429e546128dd2fab7aa8a866db",
+    "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "training_policy": "Unchanged AMP training, optimizer/scheduler/scaler/RNG, data/config and epoch budget; replay epoch14 from saved epoch13",
+  "validation_policy": "AMP normally; only after nonfinite outputs, finite model/optimizer state and finite same-batch FP32 probe, repeat complete validation in FP32; otherwise stop",
+  "diagnosis_scope": "Original epoch14 failure retained only aggregate loss. CPU FP32 full validation and targeted FP16 probes are finite at epoch13. No exact original AMP cause claimed.",
+  "approval_status": "prepared_pending_human_gpu_resume_approval"
+}

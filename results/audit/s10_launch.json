@@ -1,0 +1,6 @@
+{
+  "experiment_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "process_id": 18972,
+  "started_at": "2026-10-03T19:31:35.3669463+05:30",
+  "config": "research/configs/phase3/s10_efficientnet_v2_s_none_exploratory_seed42.json"
+}

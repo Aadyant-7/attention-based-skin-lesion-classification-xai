@@ -1,0 +1,42 @@
+{
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/config.json": {
+    "sha256": "086a6a5821241fbdb19dec1294e96fbe80562a4d4cb0f94916a69265b0e609be",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/config.json"
+  },
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/environment.json": {
+    "sha256": "c9f3d976de7b9e7ee3283c8d86c7cbb7f86201e37741eb31c359719337a3c4c8",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/environment.json"
+  },
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/history.csv": {
+    "sha256": "16e3257d8f0a234b104da93a62dd488895d75aadd38ea436aad3bf911d939c01",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/history.csv"
+  },
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/pretraining.json": {
+    "sha256": "0862a9aeb9c0ee706b6bb14c4d93bf84a0b9283fa5002a3cff9ef56d60d7075a",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/pretraining.json"
+  },
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/progress.json": {
+    "sha256": "db9ac780aa0bea6b98363e8b8cd5b9894d372c40ff33d6509e22a99419b78bc1",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/progress.json"
+  },
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/record.json": {
+    "sha256": "f408e9adfcd4926a98d6be3e0500b3c53c3abc9ec44c859a13f36c3bf18f15d7",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/record.json"
+  },
+  "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/train.log": {
+    "sha256": "6e2a52d0359600b755925b3f6695573f2bb381afdb43cf0acf02eae9741889c2",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/run_artifacts/train.log"
+  },
+  "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best.pt": {
+    "sha256": "5c2d92b7aa481b6cb425ae6c3ed2608f6ad8099cac41efcb79734597bd934feb",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/checkpoints/best.pt"
+  },
+  "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt": {
+    "sha256": "ce2a9b9ac94c05113d919e110d7c5b6118406894e906cce639bd7e4551663505",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/checkpoints/best_macro_f1.pt"
+  },
+  "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/latest.pt": {
+    "sha256": "fc9556322f6ab01da9ae192e33d678a28039a378bd2e0fb85bea80123978c2dd",
+    "copy": "results/audit/s10_nonfinite_20261003/preserved/checkpoints/latest.pt"
+  }
+}

@@ -143,6 +143,101 @@ def weighted_numerator(logits, targets, weights):
     return F.cross_entropy(logits.float(),targets,weight=weights,reduction='sum')
 
 
+class NonfiniteValidation(FloatingPointError):
+    def __init__(self, details):
+        self.details=details
+        super().__init__('Nonfinite validation batch: '+json.dumps(details))
+
+
+def checked_validation_batch(model, images, targets, weights, fp32=False):
+    """Never let invalid outputs reach argmax/metrics; forward precision is explicit."""
+    if not torch.isfinite(images).all() or not torch.isfinite(weights).all() or (weights<=0).any():
+        raise NonfiniteValidation(dict(reason='invalid_inputs_or_weights'))
+    if (targets<0).any() or (targets>=len(CLASSES)).any():
+        raise NonfiniteValidation(dict(reason='invalid_targets'))
+    with torch.autocast(images.device.type,dtype=torch.float16,enabled=not fp32):
+        logits=model(images)
+    num=weighted_numerator(logits,targets,weights)
+    probabilities=logits.float().softmax(1)
+    if not (torch.isfinite(logits).all() and torch.isfinite(num) and torch.isfinite(probabilities).all()):
+        raise NonfiniteValidation(dict(reason='nonfinite_forward_or_loss',precision='fp32' if fp32 else 'amp_fp16',
+            logits_nan=int(torch.isnan(logits).sum()),logits_inf=int(torch.isinf(logits).sum()),
+            bad_logit_rows=(~torch.isfinite(logits).all(1)).nonzero().flatten().cpu().tolist(),
+            loss_finite=bool(torch.isfinite(num)),probabilities_nonfinite=int((~torch.isfinite(probabilities)).sum())))
+    return num,probabilities
+
+
+def tensor_nonfinite_names(obj,prefix=''):
+    if torch.is_tensor(obj):
+        return [prefix] if obj.is_floating_point() and not torch.isfinite(obj).all() else []
+    if isinstance(obj,dict):
+        return sum((tensor_nonfinite_names(v,prefix+'.'+str(k)) for k,v in obj.items()),[])
+    if isinstance(obj,(tuple,list)):
+        return sum((tensor_nonfinite_names(v,prefix+'.'+str(i)) for i,v in enumerate(obj)),[])
+    return []
+
+
+def evaluate_validation(model,loader,weights,config,path,epoch,allow_fp32_recovery=False,training_state=None):
+    """Unchanged AMP normally; approved S10 recovery may repeat a whole pass in FP32."""
+    device=next(model.parameters()).device
+    model.eval()
+    def collect(fp32):
+        all_y=[];all_p=[];ids=[];vn=vd=0.
+        with torch.inference_mode():
+            for batch, (images,y,image_ids) in enumerate(loader):
+                images=images.to(device,non_blocking=True);y=y.to(device,non_blocking=True)
+                try:num,p=checked_validation_batch(model,images,y,weights,fp32)
+                except NonfiniteValidation as exc:
+                    exc.batch_data=(images,y,list(image_ids),batch)
+                    raise
+                vn+=float(num);vd+=float(weights[y].sum())
+                all_y.extend(y.cpu().tolist());all_p.extend(p.cpu().tolist());ids.extend(image_ids)
+        if not np.isfinite(vn/vd):raise FloatingPointError('Nonfinite validation accumulation')
+        return all_y,all_p,ids,vn/vd,'fp32' if fp32 else 'amp_fp16'
+    try:return collect(False)
+    except NonfiniteValidation as exc:
+        images,y,image_ids,batch=exc.batch_data
+        stamp=f'validation_failure_epoch{epoch}_{time.time_ns()}'
+        details=dict(exc.details,epoch=epoch,batch=batch,image_ids=image_ids,
+            model_nonfinite_tensors=tensor_nonfinite_names(model.state_dict()),
+            optimizer_nonfinite_tensors=tensor_nonfinite_names((training_state or {}).get('optimizer',{})),
+            fp32_recovery_authorized=allow_fp32_recovery)
+        # Diagnostic snapshot only; latest.pt remains the valid resume boundary.
+        atomic_checkpoint(path/(stamp+'.pt'),dict(config=config,epoch=epoch,model=model.state_dict(),
+            code_hashes=code_hashes(),diagnostic_only=True,**(training_state or {})))
+        handles=[];first_bad=[]
+        def hook(name):
+            def inspect(_module,_input,output):
+                if torch.is_tensor(output) and not first_bad and not torch.isfinite(output).all():
+                    first_bad.append(dict(module=name,dtype=str(output.dtype),nan=int(torch.isnan(output).sum()),inf=int(torch.isinf(output).sum())))
+            return inspect
+        for name,module in model.named_modules():
+            if not list(module.children()):handles.append(module.register_forward_hook(hook(name)))
+        try:
+            with torch.inference_mode():
+                try:checked_validation_batch(model,images,y,weights)
+                except NonfiniteValidation:pass
+        finally:
+            for handle in handles:handle.remove()
+        details['amp_replay_first_nonfinite_module']=first_bad
+        can_retry=(allow_fp32_recovery and exc.details['reason']=='nonfinite_forward_or_loss'
+                   and not details['model_nonfinite_tensors'] and not details['optimizer_nonfinite_tensors'])
+        details['fp32_probe_finite']=False
+        if can_retry:
+            try:
+                with torch.inference_mode():checked_validation_batch(model,images,y,weights,fp32=True)
+                details['fp32_probe_finite']=True
+            except NonfiniteValidation as fp32_exc:details['fp32_probe_failure']=fp32_exc.details
+        details['decision']='repeat_entire_validation_fp32' if details['fp32_probe_finite'] else 'stop_preserve_valid_checkpoint'
+        write_json(path/(stamp+'.json'),details)
+        if not details['fp32_probe_finite']:raise
+        try:return collect(True)
+        except NonfiniteValidation as fp32_exc:
+            images,y,image_ids,batch=fp32_exc.batch_data
+            write_json(path/(stamp+'_fp32_failed.json'),dict(fp32_exc.details,epoch=epoch,batch=batch,image_ids=image_ids))
+            raise
+
+
 def metric_report(targets, probabilities, loss):
     from sklearn.metrics import confusion_matrix,precision_recall_fscore_support
     predicted=np.asarray(probabilities).argmax(axis=1)
@@ -205,14 +300,29 @@ def restore_rng(state):
     if state['cuda']: torch.cuda.set_rng_state_all(state['cuda'])
 
 
-def restore_experiment(config, checkpoint):
+def validate_resume_fix(config,checkpoint,fix):
+    """Only this reviewed S10 source migration may bypass the original source match."""
+    rid='s10_efficientnet_v2_s_none_exploratory_seed42'
+    if (fix.get('kind')!='s10_validation_numerics_v1' or config['experiment_id']!=rid
+            or fix.get('experiment_id')!=rid or fix.get('checkpoint_epoch')!=len(checkpoint['history'])
+            or len(checkpoint['history'])!=13 or fix.get('from_code_hashes')!=checkpoint['code_hashes']
+            or fix.get('to_code_hashes')!=code_hashes()
+            or {k for k in checkpoint['code_hashes'] if checkpoint['code_hashes'][k]!=code_hashes().get(k)}!={'research/train.py'}
+            or fix.get('config_sha256')!=sha256(ROOT/'research/configs/phase3'/f'{rid}.json')
+            or fix.get('checkpoint_sha256')!=sha256(ROOT/'checkpoints/structured'/rid/'latest.pt')):
+        raise ValueError('Unapproved or mismatched S10 resume-fix manifest')
+
+
+def restore_experiment(config, checkpoint, resume_fix=None):
     """Checkpoint is the authoritative committed epoch, repairing partial CSV writes."""
     from .registry import upsert
     path=ROOT/'results/structured_experiments'/config['experiment_id']
     saved=json.loads((path/'config.json').read_text(encoding='utf-8'))
-    if (saved!=config or checkpoint['config']!=config or checkpoint['code_hashes']!=code_hashes()
-            or checkpoint['runtime_versions']!=runtime_versions()):
+    if (saved!=config or checkpoint['config']!=config or checkpoint['runtime_versions']!=runtime_versions()):
         raise ValueError('Resume config or runner changed; do not silently continue another recipe')
+    if resume_fix is not None:validate_resume_fix(config,checkpoint,resume_fix)
+    elif checkpoint['code_hashes']!=code_hashes():
+        raise ValueError('Resume config or runner changed; an explicit reviewed resume-fix manifest is required')
     obj=Experiment.__new__(Experiment);obj.config=saved;obj.path=path
     obj.history=checkpoint['history'];obj.row=checkpoint['registry_row']
     obj.validation_support=pd.read_csv(ROOT/config['split_manifest']).query("split=='val'").diagnosis.value_counts().to_dict()
@@ -231,7 +341,7 @@ def completed_run(config):
     return False
 
 
-def run(config,resume=False):
+def run(config,resume=False,resume_fix=None):
     # Safe completed-run exit occurs before CUDA queries or loading images/weights.
     if completed_run(config):
         print('Already completed; preserved without training.',flush=True);return
@@ -247,7 +357,7 @@ def run(config,resume=False):
     if resume:
         # Our own trusted local full-state checkpoint, never an arbitrary downloaded file.
         checkpoint=torch.load(latest,map_location='cpu',weights_only=False)
-        experiment=restore_experiment(config,checkpoint)
+        experiment=restore_experiment(config,checkpoint,resume_fix)
     else:
         if ckptdir.exists(): raise FileExistsError('Existing checkpoint directory; inspect/resume explicitly')
         experiment=Experiment(config)
@@ -258,6 +368,12 @@ def run(config,resume=False):
     def progress(**values):
         write_json(experiment.path/'progress.json',dict(experiment_id=config['experiment_id'],**values))
     start=time.perf_counter();runtime=checkpoint['runtime_seconds'] if checkpoint else 0
+    amendment=resume_fix or (checkpoint or {}).get('resume_fix')
+    if amendment:
+        if (amendment['experiment_id']!=config['experiment_id'] or amendment['to_code_hashes']!=code_hashes()
+                or amendment['kind']!='s10_validation_numerics_v1'):
+            raise ValueError('Stored validation recovery amendment no longer matches this runner')
+        write_json(experiment.path/'resume_amendment.json',amendment)
     try:
         logger.info('START %s resume=%s train=%d val=%d protocol=%s selection=%s; test loader absent',config['experiment_id'],resume,len(train),len(val),config['protocol'],config['selection_metric'])
         progress(status='initializing',epoch=len(experiment.history),max_epochs=config['max_epochs'])
@@ -321,17 +437,15 @@ def run(config,resume=False):
                              selected_macro_f1=best['metrics']['macro_f1'] if best else None,
                              best_macro_f1=(secondary_best or best)['metrics']['macro_f1'] if (secondary_best or best) else None)
                     logger.info('epoch %d/%d step %d/%d weighted_loss %.5f',epoch,config['max_epochs'],step+1,steps,numerator/denominator)
-            model.eval();all_y=[];all_p=[];ids=[];vn=vd=0.
+            model.eval()
             progress(status='validating',epoch=epoch,max_epochs=config['max_epochs'])
             vt=time.perf_counter()
-            with torch.inference_mode():
-                for images,y,image_ids in val_loader:
-                    images=images.cuda(non_blocking=True);y=y.cuda(non_blocking=True)
-                    with torch.autocast('cuda',dtype=torch.float16): logits=model(images)
-                    vn+=float(weighted_numerator(logits,y,weights));vd+=float(weights[y].sum())
-                    all_y.extend(y.cpu().tolist());all_p.extend(logits.float().softmax(1).cpu().tolist());ids.extend(image_ids)
+            all_y,all_p,ids,val_loss,validation_precision=evaluate_validation(model,val_loader,weights,config,experiment.path,epoch,
+                allow_fp32_recovery=bool(amendment),training_state=dict(optimizer=optimizer.state_dict(),
+                    scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=rng_state(True)))
+            if validation_precision=='fp32':logger.warning('Validation epoch %d recovered with a complete FP32 pass; diagnostic artifacts saved',epoch)
             validation_ms=(time.perf_counter()-vt)*1000/len(val)
-            metrics=metric_report(np.asarray(all_y),all_p,vn/vd)
+            metrics=metric_report(np.asarray(all_y),all_p,val_loss)
             if not np.isfinite(metrics['loss']): raise FloatingPointError('Nonfinite validation loss')
             lr_before=[g['lr'] for g in optimizer.param_groups];scheduler.step(metrics[selection])
             row=dict(epoch=epoch,train_loss=numerator/denominator,train_accuracy=correct/used,train_images_used=used,
@@ -339,24 +453,24 @@ def run(config,resume=False):
                      val_macro_recall=metrics['macro_recall'],val_macro_f1=metrics['macro_f1'],epoch_seed=epoch_seed,
                      backbone_lr=lr_before[0],head_lr=lr_before[1],optimizer_updates=updates,
                      validation_ms_per_image=validation_ms,peak_allocated_vram_mb=torch.cuda.max_memory_allocated()/1024**2,
-                     epoch_seconds=time.perf_counter()-tick)
+                     epoch_seconds=time.perf_counter()-tick,validation_precision=validation_precision)
             predictions=[dict(image_id=i,true_class=CLASSES[y],predicted_class=CLASSES[int(np.argmax(p))],
                               **{f'p_{c}':float(p[j]) for j,c in enumerate(CLASSES)}) for i,y,p in zip(ids,all_y,all_p)]
             improved=best is None or metrics[selection]>best['metrics'][selection]
             stale=0 if improved else stale+1
             if improved:
-                best=dict(epoch=epoch,metrics=metrics,predictions=predictions,
+                best=dict(epoch=epoch,metrics=metrics,predictions=predictions,validation_precision=validation_precision,
                           model={k:v.detach().cpu().clone() for k,v in model.state_dict().items()})
             secondary_improved=secondary and (secondary_best is None or metrics[secondary]>secondary_best['metrics'][secondary])
             if secondary_improved:
-                secondary_best=dict(epoch=epoch,metrics=metrics,predictions=predictions,
+                secondary_best=dict(epoch=epoch,metrics=metrics,predictions=predictions,validation_precision=validation_precision,
                                     model={k:v.detach().cpu().clone() for k,v in model.state_dict().items()})
             # Commit full state first. If CSV/registry/plots fail, explicit resume repairs
             # them from this snapshot without rerunning an already committed epoch.
             payload=dict(config=config,code_hashes=code_hashes(),runtime_versions=runtime_versions(),model=model.state_dict(),optimizer=optimizer.state_dict(),
                          scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=rng_state(True),best=best,secondary_best=secondary_best,stale=stale,
                          history=experiment.history+[row],registry_row=copy.deepcopy(experiment.row),
-                         optimizer_updates=updates,runtime_seconds=runtime+time.perf_counter()-start)
+                         optimizer_updates=updates,runtime_seconds=runtime+time.perf_counter()-start,resume_fix=amendment)
             atomic_checkpoint(latest,payload)
             if improved: atomic_checkpoint(ckptdir/'best.pt',dict(payload,model=best['model']))
             if secondary_improved:
@@ -380,9 +494,12 @@ def run(config,resume=False):
                    secondary_best_epoch=secondary_best['epoch'] if secondary_best else None,
                    stop_reason='patience' if stale>=config['patience'] else 'epoch_cap',
                    validation_timing_scope='End-to-end validation batch loop including loading/transfers; not pure GPU latency',
-                   best_validation_ms_per_image=experiment.history[best['epoch']-1]['validation_ms_per_image']))
+                   best_validation_ms_per_image=experiment.history[best['epoch']-1]['validation_ms_per_image'],
+                   validation_recovery_amendment=amendment,
+                   selected_validation_precision=best.get('validation_precision','amp_fp16')))
         experiment.complete(best['metrics'],ckptdir/'best.pt',best['epoch'],runtime+time.perf_counter()-start,
-                            f"{config['recipe_version']}; {config['protocol']} validation only; selected earliest maximum {selection}; no test loader.")
+                            f"{config['recipe_version']}; {config['protocol']} validation only; selected earliest maximum {selection}; no test loader."
+                            + (' Explicit S10 numerical recovery amendment: training AMP unchanged; any recovered validation epochs use full FP32, recorded in history/diagnostics.' if amendment else ''))
         progress(status='completed',epochs=len(experiment.history),best_epoch=best['epoch'],
                  selection_metric=selection,best_accuracy=best['metrics']['accuracy'],selected_macro_f1=best['metrics']['macro_f1'],
                  best_macro_f1=(secondary_best or best)['metrics']['macro_f1'])
@@ -399,7 +516,9 @@ def main():
     parser.add_argument('--config',required=True,type=Path)
     parser.add_argument('--check',action='store_true',help='Read-only config/data-path check; no model, CUDA, downloads or run outputs')
     parser.add_argument('--resume',action='store_true',help='Resume trusted latest.pt at committed epoch boundary')
+    parser.add_argument('--resume-fix',type=Path,help='Explicit reviewed S10 numerical-recovery manifest; requires --resume')
     args=parser.parse_args()
+    if args.resume_fix and not args.resume:parser.error('--resume-fix requires --resume')
     config=json.loads(args.config.read_text(encoding='utf-8'));validate_config(config)
     if args.check:
         train,val,w=development_data(config)
@@ -409,7 +528,8 @@ def main():
                    checkpoints=f"checkpoints/structured/{config['experiment_id']}",
                    results=f"results/structured_experiments/{config['experiment_id']}"),indent=2))
     else:
-        with run_lock(config['experiment_id']): run(config,args.resume)
+        fix=json.loads(args.resume_fix.read_text(encoding='utf-8')) if args.resume_fix else None
+        with run_lock(config['experiment_id']): run(config,args.resume,fix)
 
 
 if __name__=='__main__': main()

@@ -16,7 +16,7 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 | [S05 attention result](research/phase3/S05_CLOSEOUT.md) | CBAM tied B0 accuracy; criterion/class trade-offs documented. |
 | [ConvNeXt result](research/phase3/S06_CLOSEOUT.md) | 91.75% exploratory accuracy; strongest standalone so far. |
 | [Bounded ensemble results](research/phase3/S07_S09_CLOSEOUT.md) | Three fixed fusions; no accuracy gain, S09 macro-F1 .8691. |
-| [Next GPU proposal](research/phase3/S10_PROPOSAL.md) | EfficientNetV2-S strong complementary backbone; prepared only. |
+| [S10 recovery proposal](research/phase3/S10_FAILURE_RECOVERY.md) | Failed epoch14 validation; valid epoch13 saved; guarded resume awaits approval. |
 | [Folder map](research/FOLDER_MAP.md) | Active, historical and local folders explained. |
 | [Next steps](NEXT_STEPS.md) | Remaining phases and training gates. |
 | [Experiment registry](results/master_experiment_registry.csv) | Historical evidence and actual structured run records; protocols kept separate. |
@@ -26,7 +26,7 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 
 ## Current status
 
-Phases 1–2 are complete. S01 strict B0 and S02–S06 exploratory training runs are completed/verified; CPU ensembles S04 and S07–S09 are also closed out. Best exploratory accuracy is **91.75%** (S06 standalone and S08/S09 fusions); S09 gives **.8691 macro-F1** at three-model cost. S10 EfficientNetV2-S is prepared only. Screening uses image-level development, followed by fresh lesion-disjoint confirmation of finalists. Both use7,009/1,503/1,503 partitions with original test locked until methodology freeze. Future GPU runs require approval and stop agent activity after initial log/checkpoint confirmation.
+Phases 1–2 are complete. S01 strict B0 and S02–S06 exploratory training runs are completed/verified; CPU ensembles S04 and S07–S09 are also closed out. Best exploratory accuracy is **91.75%** (S06 standalone and S08/S09 fusions); S09 gives **.8691 macro-F1** at three-model cost. S10 EfficientNetV2-S failed during epoch14 validation; epoch13 checkpoints are valid and guarded recovery awaits approval. Screening uses image-level development, followed by fresh lesion-disjoint confirmation of finalists. Both use7,009/1,503/1,503 partitions with original test locked until methodology freeze. Future GPU runs require approval and stop agent activity after initial log/checkpoint confirmation.
 
 Historical validation leaders: **87.69% strict accuracy**, **0.7837 strict macro-F1** (different combinations), and **90.75% exploratory accuracy / 0.8573 macro-F1**. These are validation-selected observations, not final test scores. Historical comparison figures are not controlled architecture ablations.
 

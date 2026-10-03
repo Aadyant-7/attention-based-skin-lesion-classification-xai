@@ -1,0 +1,493 @@
+{
+  "status": "saved_epoch13_cpu_fp32_verified",
+  "created_utc": "2026-10-03T14:43:03.729969+00:00",
+  "committed_epochs": 13,
+  "failed_epoch": 14,
+  "failed_epoch_state_saved": false,
+  "checkpoint_hashes": {
+    "latest.pt": "fc9556322f6ab01da9ae192e33d678a28039a378bd2e0fb85bea80123978c2dd",
+    "best.pt": "5c2d92b7aa481b6cb425ae6c3ed2608f6ad8099cac41efcb79734597bd934feb",
+    "best_macro_f1.pt": "ce2a9b9ac94c05113d919e110d7c5b6118406894e906cce639bd7e4551663505"
+  },
+  "checkpoint_model_nonfinite": [],
+  "checkpoint_optimizer_nonfinite": [],
+  "source_verification": {
+    "research/train.py": "current_file",
+    "research/models.py": "current_file",
+    "research/experiment.py": "current_file",
+    "research/common.py": "current_file",
+    "research/plots.py": "current_file",
+    "research/registry.py": "current_file",
+    "src/cbam.py": "current_file"
+  },
+  "saved_epoch13_metrics": {
+    "loss": 1.2779986711450575,
+    "accuracy": 0.8862275449101796,
+    "macro_precision": 0.8065626928570888,
+    "macro_recall": 0.8235810101544278,
+    "macro_f1": 0.8145380968665761,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        33,
+        6,
+        6,
+        1,
+        2,
+        1,
+        0
+      ],
+      [
+        4,
+        66,
+        2,
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        6,
+        3,
+        126,
+        0,
+        14,
+        15,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        14,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        11,
+        1,
+        126,
+        27,
+        0
+      ],
+      [
+        4,
+        3,
+        14,
+        1,
+        36,
+        947,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.6875,
+        "recall": 0.673469387755102,
+        "f1": 0.6804123711340206,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.825,
+        "recall": 0.8571428571428571,
+        "f1": 0.8407643312101911,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.7924528301886793,
+        "recall": 0.7636363636363637,
+        "f1": 0.7777777777777778,
+        "support": 165
+      },
+      "df": {
+        "precision": 0.8235294117647058,
+        "recall": 0.8235294117647058,
+        "f1": 0.8235294117647058,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.6961325966850829,
+        "recall": 0.7544910179640718,
+        "f1": 0.7241379310344828,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9517587939698492,
+        "recall": 0.9404170804369414,
+        "f1": 0.9460539460539461,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.8695652173913043,
+        "recall": 0.9523809523809523,
+        "f1": 0.9090909090909091,
+        "support": 21
+      }
+    }
+  },
+  "cpu_fp32_metrics": {
+    "loss": 1.2755957028680336,
+    "accuracy": 0.884896872920825,
+    "macro_precision": 0.8056298518565058,
+    "macro_recall": 0.8225837140670735,
+    "macro_f1": 0.81357436437575,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        33,
+        6,
+        6,
+        1,
+        2,
+        1,
+        0
+      ],
+      [
+        4,
+        66,
+        2,
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        6,
+        3,
+        126,
+        0,
+        14,
+        15,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        14,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        11,
+        1,
+        125,
+        28,
+        0
+      ],
+      [
+        4,
+        3,
+        14,
+        1,
+        37,
+        946,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.6875,
+        "recall": 0.673469387755102,
+        "f1": 0.6804123711340206,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.825,
+        "recall": 0.8571428571428571,
+        "f1": 0.8407643312101911,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.7924528301886793,
+        "recall": 0.7636363636363637,
+        "f1": 0.7777777777777778,
+        "support": 165
+      },
+      "df": {
+        "precision": 0.8235294117647058,
+        "recall": 0.8235294117647058,
+        "f1": 0.8235294117647058,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.6906077348066298,
+        "recall": 0.7485029940119761,
+        "f1": 0.7183908045977011,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9507537688442211,
+        "recall": 0.9394240317775571,
+        "f1": 0.945054945054945,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.8695652173913043,
+        "recall": 0.9523809523809523,
+        "f1": 0.9090909090909091,
+        "support": 21
+      }
+    }
+  },
+  "cpu_validation_images": 1503,
+  "cpu_fp32_seconds": 127.16465999989305,
+  "largest_abs_logits": [
+    [
+      597.8281860351562,
+      "ISIC_0025851"
+    ],
+    [
+      13.198380470275879,
+      "ISIC_0025194"
+    ],
+    [
+      12.832859992980957,
+      "ISIC_0028273"
+    ],
+    [
+      12.61723518371582,
+      "ISIC_0029817"
+    ],
+    [
+      12.573598861694336,
+      "ISIC_0030147"
+    ],
+    [
+      12.37779712677002,
+      "ISIC_0025213"
+    ],
+    [
+      12.036304473876953,
+      "ISIC_0029194"
+    ],
+    [
+      11.97385025024414,
+      "ISIC_0031434"
+    ],
+    [
+      11.967639923095703,
+      "ISIC_0027214"
+    ],
+    [
+      11.952929496765137,
+      "ISIC_0024460"
+    ]
+  ],
+  "feature_stage_abs_maxima": {
+    "features.0": 57.32715606689453,
+    "features.1": 201.63705444335938,
+    "features.2": 101.20193481445312,
+    "features.3": 505.1556091308594,
+    "features.4": 948.25927734375,
+    "features.5": 548.0586547851562,
+    "features.6": 4533.8740234375,
+    "features.7": 1851.6409912109375
+  },
+  "scaler": {
+    "scale": 16384.0,
+    "growth_factor": 2.0,
+    "backoff_factor": 0.5,
+    "growth_interval": 2000,
+    "_growth_tracker": 725
+  },
+  "loss_implementation": "FP32 cross_entropy(logits.float(), weighted sum) / positive target weight sum; not log of softmax probabilities",
+  "failure_log_limit": "Epoch14 failed before checkpoint publication. Log only records aggregate nonfinite loss; no failed logits, sample IDs or epoch14 weights survive. Exact original offending operation/sample cannot be recovered without approved deterministic replay.",
+  "gpu_used": false,
+  "training_updates": false,
+  "test_images_loaded": false,
+  "cpu_precision_probe": [
+    {
+      "mode": "fp32",
+      "batch_start": 112,
+      "image_ids": [
+        "ISIC_0026069",
+        "ISIC_0031528",
+        "ISIC_0028623",
+        "ISIC_0025103",
+        "ISIC_0030123",
+        "ISIC_0024782",
+        "ISIC_0029320",
+        "ISIC_0029924",
+        "ISIC_0032498",
+        "ISIC_0024943",
+        "ISIC_0028449",
+        "ISIC_0026174",
+        "ISIC_0032170",
+        "ISIC_0025005",
+        "ISIC_0025851",
+        "ISIC_0033722"
+      ],
+      "input_finite": true,
+      "logits_nonfinite": 0,
+      "loss": 426.964599609375,
+      "first_nonfinite_module": null,
+      "largest_finite_layers": [
+        {
+          "name": "features.6.11.block.1.1",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 15849.537109375
+        },
+        {
+          "name": "features.6.11.block.1.2",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 15849.537109375
+        },
+        {
+          "name": "features.6.14.block.1.1",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 13039.998046875
+        },
+        {
+          "name": "features.6.14.block.1.2",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 13039.998046875
+        },
+        {
+          "name": "features.6.13.block.1.1",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 8964.353515625
+        },
+        {
+          "name": "features.6.13.block.1.2",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 8964.353515625
+        },
+        {
+          "name": "features.6.13.block.3.1",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 8844.130859375
+        },
+        {
+          "name": "features.6.13.stochastic_depth",
+          "dtype": "torch.float32",
+          "nonfinite": 0,
+          "max_abs_finite": 8844.130859375
+        }
+      ]
+    },
+    {
+      "mode": "cpu_fp16",
+      "batch_start": 112,
+      "image_ids": [
+        "ISIC_0026069",
+        "ISIC_0031528",
+        "ISIC_0028623",
+        "ISIC_0025103",
+        "ISIC_0030123",
+        "ISIC_0024782",
+        "ISIC_0029320",
+        "ISIC_0029924",
+        "ISIC_0032498",
+        "ISIC_0024943",
+        "ISIC_0028449",
+        "ISIC_0026174",
+        "ISIC_0032170",
+        "ISIC_0025005",
+        "ISIC_0025851",
+        "ISIC_0033722"
+      ],
+      "input_finite": true,
+      "logits_nonfinite": 0,
+      "loss": 436.931640625,
+      "first_nonfinite_module": null,
+      "largest_finite_layers": [
+        {
+          "name": "features.6.11.block.1.1",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 17136.0
+        },
+        {
+          "name": "features.6.11.block.1.2",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 17136.0
+        },
+        {
+          "name": "features.6.14.block.1.1",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 14072.0
+        },
+        {
+          "name": "features.6.14.block.1.2",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 14072.0
+        },
+        {
+          "name": "features.6.13.block.1.1",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 9632.0
+        },
+        {
+          "name": "features.6.13.block.1.2",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 9632.0
+        },
+        {
+          "name": "features.6.13.block.3.1",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 9512.0
+        },
+        {
+          "name": "features.6.13.stochastic_depth",
+          "dtype": "torch.float16",
+          "nonfinite": 0,
+          "max_abs_finite": 9512.0
+        }
+      ]
+    }
+  ]
+}

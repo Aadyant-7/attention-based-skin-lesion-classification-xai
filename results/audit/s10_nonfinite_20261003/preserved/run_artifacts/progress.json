@@ -1,0 +1,6 @@
+{
+  "experiment_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "status": "failed",
+  "error": "FloatingPointError('Nonfinite validation loss')",
+  "committed_epochs": 13
+}

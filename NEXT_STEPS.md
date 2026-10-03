@@ -1,6 +1,6 @@
 # Research plan: 3–17 October 2026
 
-**Active update:** S01–S06 and bounded CPU S07–S09 are completed/verified. [S06 ConvNeXt](research/phase3/S06_CLOSEOUT.md) reached **91.75% exploratory accuracy/.8628 macro-F1**; [S09 equal triple](research/phase3/S07_S09_CLOSEOUT.md) tied accuracy with.8691 F1 at three-model cost. S05 CBAM was near-neutral/mixed. Next: [S10 EfficientNetV2-S](research/phase3/S10_PROPOSAL.md), prepared only; [diverse-backbone strategy](research/phase3/DIVERSE_BACKBONE_STRATEGY.md) is evidence-driven. Follow [two-stage evaluation and launch-and-stop policy](research/phase3/TWO_STAGE_STRATEGY.md). Phase2 all-strict screening below is historical and superseded.
+**Active update:** S01–S06 and bounded CPU S07–S09 are completed/verified. [S06 ConvNeXt](research/phase3/S06_CLOSEOUT.md) reached **91.75% exploratory accuracy/.8628 macro-F1**; [S09 equal triple](research/phase3/S07_S09_CLOSEOUT.md) tied accuracy with.8691 F1 at three-model cost. S05 CBAM was near-neutral/mixed. Current: S10 failed epoch14 validation; [guarded epoch13 recovery](research/phase3/S10_FAILURE_RECOVERY.md) awaits approval; [diverse-backbone strategy](research/phase3/DIVERSE_BACKBONE_STRATEGY.md) is evidence-driven. Follow [two-stage evaluation and launch-and-stop policy](research/phase3/TWO_STAGE_STRATEGY.md). Phase2 all-strict screening below is historical and superseded.
 
 ## Original Phase2 plan (historical)
 
