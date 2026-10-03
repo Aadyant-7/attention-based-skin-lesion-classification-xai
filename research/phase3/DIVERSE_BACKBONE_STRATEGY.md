@@ -1,6 +1,6 @@
-# Diverse backbone and bounded ensemble strategy — after S06
+# Diverse backbone and bounded ensemble strategy â€” after S06
 
-**Current evidence:** [S06](S06_CLOSEOUT.md) reached91.75%/.8628. [Three predeclared equal fusions](S07_S09_CLOSEOUT.md) did not raise accuracy; S09 reached.8691 F1 with three-model cost. Keep S06 accuracy/cost and S09 balanced references; one further strong model package [S10 EfficientNetV2-S](S10_PROPOSAL.md) is prepared only. It replaces an automatic DenseNet/ResNet run: stronger pretraining plus Fused-MBConv/SE representation is a justified diversity hypothesis, not a promised gain. After S10, evaluate complementarity before proposing at most one fixed S06/S10 pair. No new grid or full backbone list. CBAM remains available for a useful matched question. GPU launch policy unchanged.
+**Current evidence:** [S10–S12 closeout](S10_S12_CLOSEOUT.md): S10 weaker standalone but complementary; S12 equal B0/ConvNeXt/V2-S reaches92.42%/.8770 with3 passes. Retain S06 cheap standalone. Next one frozen [S13 TTA inference study](S13_PROPOSAL.md), with FP32 identity control and no retraining/weight search, pending approval. CBAM mixed evidence retained; strict confirmation and original locked test later.
 
 ## Preserved plan before S06 evaluation
 
@@ -14,8 +14,8 @@ Evidence: B0/MobileNet give86.36%/86.03% exploratory accuracy; fixed fusion88.56
 6. Exploratory image-level screening remains ~70/15/15 with563 shared train/val lesions. Every comparison identifies manifest,recipe,pretraining,selection,class supports and cost. No independent-lesion/test claim; no patient-independence assumption. Never balance validation/test populations.
 7. Shortlist only the strongest accuracy/balanced methods for **fresh strict training** from external pretrained weights. Exploratory checkpoints have trained on strict-val images and cannot supply clean strict confirmation. Freeze methodology/member checkpoints/weights/views before the final original locked-test session. Test remains untouched.
 
-Literature foundation: integrated review's transfer-learning,attention and constrained-fusion sections; originalConvNeXt architecture reference; HAM10000/base-paper protocol audits retained. Some papers'95–98% use different support/preprocessing/evaluation; those values motivate investigation but are not comparable targets or promises. Report complete candidate/selection history and negative results to limit hidden validation overfitting.
+Literature foundation: integrated review's transfer-learning,attention and constrained-fusion sections; originalConvNeXt architecture reference; HAM10000/base-paper protocol audits retained. Some papers'95â€“98% use different support/preprocessing/evaluation; those values motivate investigation but are not comparable targets or promises. Report complete candidate/selection history and negative results to limit hidden validation overfitting.
 
 Every serious training run saves best/latest/F1 states,config/environment/source hashes,logs/history,metrics,class scores,probabilities,curves,matrices and comparison plots. CPU ensembles reference parents and do not invent training curves/new checkpoints. Registry separates structured/historical and strict/exploratory records.
 
-GPU policy unchanged: specific proposal→human approval→independent launch→confirm log/first checkpoints→manual monitor/recovery instructions→**stop immediately**. No monitoring/epoch updates/completion wait; user returns for analysis. No further run is authorized by this plan.
+GPU policy unchanged: specific proposalâ†’human approvalâ†’independent launchâ†’confirm log/first checkpointsâ†’manual monitor/recovery instructionsâ†’**stop immediately**. No monitoring/epoch updates/completion wait; user returns for analysis. No further run is authorized by this plan.

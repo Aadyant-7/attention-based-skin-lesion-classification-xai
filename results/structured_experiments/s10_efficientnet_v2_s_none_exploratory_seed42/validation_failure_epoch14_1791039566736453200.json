@@ -1,0 +1,44 @@
+{
+  "reason": "nonfinite_forward_or_loss",
+  "precision": "amp_fp16",
+  "logits_nan": 7,
+  "logits_inf": 0,
+  "bad_logit_rows": [
+    14
+  ],
+  "loss_finite": false,
+  "probabilities_nonfinite": 7,
+  "epoch": 14,
+  "batch": 7,
+  "image_ids": [
+    "ISIC_0026069",
+    "ISIC_0031528",
+    "ISIC_0028623",
+    "ISIC_0025103",
+    "ISIC_0030123",
+    "ISIC_0024782",
+    "ISIC_0029320",
+    "ISIC_0029924",
+    "ISIC_0032498",
+    "ISIC_0024943",
+    "ISIC_0028449",
+    "ISIC_0026174",
+    "ISIC_0032170",
+    "ISIC_0025005",
+    "ISIC_0025851",
+    "ISIC_0033722"
+  ],
+  "model_nonfinite_tensors": [],
+  "optimizer_nonfinite_tensors": [],
+  "fp32_recovery_authorized": true,
+  "amp_replay_first_nonfinite_module": [
+    {
+      "module": "features.6.11.block.1.1",
+      "dtype": "torch.float16",
+      "nan": 0,
+      "inf": 8
+    }
+  ],
+  "fp32_probe_finite": true,
+  "decision": "repeat_entire_validation_fp32"
+}

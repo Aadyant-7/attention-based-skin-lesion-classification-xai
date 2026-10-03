@@ -1,6 +1,10 @@
 {
   "experiment_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
-  "status": "failed",
-  "error": "FloatingPointError('Nonfinite validation loss')",
-  "committed_epochs": 13
+  "status": "completed",
+  "epochs": 20,
+  "best_epoch": 15,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.8948769128409847,
+  "selected_macro_f1": 0.8231616637229359,
+  "best_macro_f1": 0.8231616637229359
 }

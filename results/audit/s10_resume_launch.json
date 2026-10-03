@@ -1,0 +1,10 @@
+{
+  "config": "research/configs/phase3/s10_efficientnet_v2_s_none_exploratory_seed42.json",
+  "original_latest_write_ticks": 639266340148916511,
+  "resume_fix": "research/phase3/s10_resume_fix.json",
+  "resume_epoch": 13,
+  "human_approved": true,
+  "process_id": 12920,
+  "experiment_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "started_at": "2026-10-03T20:27:58.5044638+05:30"
+}

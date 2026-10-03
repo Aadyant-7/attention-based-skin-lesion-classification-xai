@@ -1,0 +1,548 @@
+{
+  "status": "verified_completed",
+  "experiment_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "protocol": "exploratory_image_level",
+  "epochs": 20,
+  "selected": {
+    "accuracy": {
+      "epoch": 15,
+      "metrics": {
+        "loss": 0.6761729821867744,
+        "accuracy": 0.8948769128409847,
+        "macro_precision": 0.8429931782712218,
+        "macro_recall": 0.8099490560479351,
+        "macro_f1": 0.8231616637229359,
+        "class_order": [
+          "akiec",
+          "bcc",
+          "bkl",
+          "df",
+          "mel",
+          "nv",
+          "vasc"
+        ],
+        "confusion_matrix": [
+          [
+            31,
+            6,
+            6,
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            67,
+            1,
+            0,
+            1,
+            5,
+            0
+          ],
+          [
+            8,
+            3,
+            121,
+            0,
+            10,
+            23,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            13,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            2,
+            5,
+            0,
+            117,
+            43,
+            0
+          ],
+          [
+            3,
+            3,
+            9,
+            0,
+            14,
+            975,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ]
+        ],
+        "per_class": {
+          "akiec": {
+            "precision": 0.6888888888888889,
+            "recall": 0.6326530612244898,
+            "f1": 0.6595744680851063,
+            "support": 49
+          },
+          "bcc": {
+            "precision": 0.8170731707317073,
+            "recall": 0.8701298701298701,
+            "f1": 0.8427672955974843,
+            "support": 77
+          },
+          "bkl": {
+            "precision": 0.852112676056338,
+            "recall": 0.7333333333333333,
+            "f1": 0.7882736156351792,
+            "support": 165
+          },
+          "df": {
+            "precision": 0.9285714285714286,
+            "recall": 0.7647058823529411,
+            "f1": 0.8387096774193549,
+            "support": 17
+          },
+          "mel": {
+            "precision": 0.8125,
+            "recall": 0.7005988023952096,
+            "f1": 0.752411575562701,
+            "support": 167
+          },
+          "nv": {
+            "precision": 0.9268060836501901,
+            "recall": 0.968222442899702,
+            "f1": 0.9470616804273919,
+            "support": 1007
+          },
+          "vasc": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333,
+            "support": 21
+          }
+        }
+      }
+    },
+    "macro_f1": {
+      "epoch": 15,
+      "metrics": {
+        "loss": 0.6761729821867744,
+        "accuracy": 0.8948769128409847,
+        "macro_precision": 0.8429931782712218,
+        "macro_recall": 0.8099490560479351,
+        "macro_f1": 0.8231616637229359,
+        "class_order": [
+          "akiec",
+          "bcc",
+          "bkl",
+          "df",
+          "mel",
+          "nv",
+          "vasc"
+        ],
+        "confusion_matrix": [
+          [
+            31,
+            6,
+            6,
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            67,
+            1,
+            0,
+            1,
+            5,
+            0
+          ],
+          [
+            8,
+            3,
+            121,
+            0,
+            10,
+            23,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            13,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            2,
+            5,
+            0,
+            117,
+            43,
+            0
+          ],
+          [
+            3,
+            3,
+            9,
+            0,
+            14,
+            975,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21
+          ]
+        ],
+        "per_class": {
+          "akiec": {
+            "precision": 0.6888888888888889,
+            "recall": 0.6326530612244898,
+            "f1": 0.6595744680851063,
+            "support": 49
+          },
+          "bcc": {
+            "precision": 0.8170731707317073,
+            "recall": 0.8701298701298701,
+            "f1": 0.8427672955974843,
+            "support": 77
+          },
+          "bkl": {
+            "precision": 0.852112676056338,
+            "recall": 0.7333333333333333,
+            "f1": 0.7882736156351792,
+            "support": 165
+          },
+          "df": {
+            "precision": 0.9285714285714286,
+            "recall": 0.7647058823529411,
+            "f1": 0.8387096774193549,
+            "support": 17
+          },
+          "mel": {
+            "precision": 0.8125,
+            "recall": 0.7005988023952096,
+            "f1": 0.752411575562701,
+            "support": 167
+          },
+          "nv": {
+            "precision": 0.9268060836501901,
+            "recall": 0.968222442899702,
+            "f1": 0.9470616804273919,
+            "support": 1007
+          },
+          "vasc": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333,
+            "support": 21
+          }
+        }
+      }
+    }
+  },
+  "final_epoch_metrics": {
+    "accuracy": 0.8895542248835662,
+    "macro_precision": 0.828501652883335,
+    "macro_recall": 0.8060502942591538,
+    "macro_f1": 0.8162095529418745,
+    "loss": 4.7198143520418085
+  },
+  "recovery": {
+    "fallback_epochs": [
+      14,
+      18,
+      20
+    ],
+    "failures": [
+      {
+        "reason": "nonfinite_forward_or_loss",
+        "precision": "amp_fp16",
+        "logits_nan": 7,
+        "logits_inf": 0,
+        "bad_logit_rows": [
+          14
+        ],
+        "loss_finite": false,
+        "probabilities_nonfinite": 7,
+        "epoch": 14,
+        "batch": 7,
+        "image_ids": [
+          "ISIC_0026069",
+          "ISIC_0031528",
+          "ISIC_0028623",
+          "ISIC_0025103",
+          "ISIC_0030123",
+          "ISIC_0024782",
+          "ISIC_0029320",
+          "ISIC_0029924",
+          "ISIC_0032498",
+          "ISIC_0024943",
+          "ISIC_0028449",
+          "ISIC_0026174",
+          "ISIC_0032170",
+          "ISIC_0025005",
+          "ISIC_0025851",
+          "ISIC_0033722"
+        ],
+        "model_nonfinite_tensors": [],
+        "optimizer_nonfinite_tensors": [],
+        "fp32_recovery_authorized": true,
+        "amp_replay_first_nonfinite_module": [
+          {
+            "module": "features.6.11.block.1.1",
+            "dtype": "torch.float16",
+            "nan": 0,
+            "inf": 8
+          }
+        ],
+        "fp32_probe_finite": true,
+        "decision": "repeat_entire_validation_fp32"
+      },
+      {
+        "reason": "nonfinite_forward_or_loss",
+        "precision": "amp_fp16",
+        "logits_nan": 7,
+        "logits_inf": 0,
+        "bad_logit_rows": [
+          14
+        ],
+        "loss_finite": false,
+        "probabilities_nonfinite": 7,
+        "epoch": 18,
+        "batch": 7,
+        "image_ids": [
+          "ISIC_0026069",
+          "ISIC_0031528",
+          "ISIC_0028623",
+          "ISIC_0025103",
+          "ISIC_0030123",
+          "ISIC_0024782",
+          "ISIC_0029320",
+          "ISIC_0029924",
+          "ISIC_0032498",
+          "ISIC_0024943",
+          "ISIC_0028449",
+          "ISIC_0026174",
+          "ISIC_0032170",
+          "ISIC_0025005",
+          "ISIC_0025851",
+          "ISIC_0033722"
+        ],
+        "model_nonfinite_tensors": [],
+        "optimizer_nonfinite_tensors": [],
+        "fp32_recovery_authorized": true,
+        "amp_replay_first_nonfinite_module": [
+          {
+            "module": "features.6.9.block.1.1",
+            "dtype": "torch.float16",
+            "nan": 0,
+            "inf": 6
+          }
+        ],
+        "fp32_probe_finite": true,
+        "decision": "repeat_entire_validation_fp32"
+      },
+      {
+        "reason": "nonfinite_forward_or_loss",
+        "precision": "amp_fp16",
+        "logits_nan": 7,
+        "logits_inf": 0,
+        "bad_logit_rows": [
+          14
+        ],
+        "loss_finite": false,
+        "probabilities_nonfinite": 7,
+        "epoch": 20,
+        "batch": 7,
+        "image_ids": [
+          "ISIC_0026069",
+          "ISIC_0031528",
+          "ISIC_0028623",
+          "ISIC_0025103",
+          "ISIC_0030123",
+          "ISIC_0024782",
+          "ISIC_0029320",
+          "ISIC_0029924",
+          "ISIC_0032498",
+          "ISIC_0024943",
+          "ISIC_0028449",
+          "ISIC_0026174",
+          "ISIC_0032170",
+          "ISIC_0025005",
+          "ISIC_0025851",
+          "ISIC_0033722"
+        ],
+        "model_nonfinite_tensors": [],
+        "optimizer_nonfinite_tensors": [],
+        "fp32_recovery_authorized": true,
+        "amp_replay_first_nonfinite_module": [
+          {
+            "module": "features.6.10.block.3.1",
+            "dtype": "torch.float16",
+            "nan": 0,
+            "inf": 12
+          }
+        ],
+        "fp32_probe_finite": true,
+        "decision": "repeat_entire_validation_fp32"
+      }
+    ],
+    "selected_precision": "amp_fp16",
+    "training_changed": false,
+    "evaluation_amendment_disclosed": true
+  },
+  "final_checkpoint_epoch": 20,
+  "final_model_finite": true,
+  "final_optimizer_finite": true,
+  "final_train_accuracy": 0.990296803652968,
+  "minimum_val_loss_epoch": 6,
+  "runtime_seconds": 1713.7837136001326,
+  "peak_allocated_vram_mb": 1641.892578125,
+  "optimizer_updates": 4376,
+  "expected_optimizer_updates": 4380,
+  "verified_launch_sources": {
+    "research/train.py": "current_file",
+    "research/models.py": "current_file",
+    "research/experiment.py": "current_file",
+    "research/common.py": "current_file",
+    "research/plots.py": "current_file",
+    "research/registry.py": "current_file",
+    "src/cbam.py": "current_file"
+  },
+  "checkpoint_hashes": {
+    "best.pt": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5",
+    "best_macro_f1.pt": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+    "latest.pt": "ea0601c3c741f25d56a24468ccf632309e696bce440305f21ea6c0612b5e3f8a"
+  },
+  "source_hashes": {
+    "config.json": "086a6a5821241fbdb19dec1294e96fbe80562a4d4cb0f94916a69265b0e609be",
+    "history.csv": "4efb82ca7640140b652a802a28a107dfad7789461db8ec8ba8022281933a5bed",
+    "validation_metrics.json": "281c4efda7c8024afc62a59d59ff68b7ec52b5f067e9ca24b4a8cf741cf36f4c",
+    "validation_metrics_macro_f1.json": "281c4efda7c8024afc62a59d59ff68b7ec52b5f067e9ca24b4a8cf741cf36f4c",
+    "validation_predictions.csv": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+    "validation_predictions_macro_f1.csv": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c"
+  },
+  "paired_error_overlap": {
+    "s02_mobilenet_v3_large_none_exploratory_seed42": {
+      "display_name": "S02 MobileNetV3-Large",
+      "validation_images": 1503,
+      "s10_correct": 1345,
+      "other_correct": 1293,
+      "s10_fixes_other": 120,
+      "other_recovers_s10": 68,
+      "both_wrong": 90,
+      "both_correct": 1225,
+      "prediction_disagreements": 211,
+      "oracle_union_accuracy": 0.9401197604790419,
+      "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+    },
+    "s03_efficientnet_b0_none_exploratory_seed42": {
+      "display_name": "S03 EfficientNet-B0",
+      "validation_images": 1503,
+      "s10_correct": 1345,
+      "other_correct": 1298,
+      "s10_fixes_other": 123,
+      "other_recovers_s10": 76,
+      "both_wrong": 82,
+      "both_correct": 1222,
+      "prediction_disagreements": 224,
+      "oracle_union_accuracy": 0.9454424484364604,
+      "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+    },
+    "s05_efficientnet_b0_cbam_exploratory_seed42": {
+      "display_name": "S05 B0 + CBAM",
+      "validation_images": 1503,
+      "s10_correct": 1345,
+      "other_correct": 1298,
+      "s10_fixes_other": 113,
+      "other_recovers_s10": 66,
+      "both_wrong": 92,
+      "both_correct": 1232,
+      "prediction_disagreements": 201,
+      "oracle_union_accuracy": 0.9387890884896873,
+      "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+    },
+    "s04_s02_s03_equal_probability_exploratory_seed42": {
+      "display_name": "S04 fixed S02/S03 fusion",
+      "validation_images": 1503,
+      "s10_correct": 1345,
+      "other_correct": 1331,
+      "s10_fixes_other": 84,
+      "other_recovers_s10": 70,
+      "both_wrong": 88,
+      "both_correct": 1261,
+      "prediction_disagreements": 174,
+      "oracle_union_accuracy": 0.9414504324683965,
+      "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+    },
+    "s06_convnext_tiny_none_exploratory_seed42": {
+      "display_name": "S06 ConvNeXt-Tiny",
+      "validation_images": 1503,
+      "s10_correct": 1345,
+      "other_correct": 1379,
+      "s10_fixes_other": 55,
+      "other_recovers_s10": 89,
+      "both_wrong": 69,
+      "both_correct": 1290,
+      "prediction_disagreements": 161,
+      "oracle_union_accuracy": 0.9540918163672655,
+      "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+    },
+    "s09_s02_s03_s06_equal_probability_exploratory_seed42": {
+      "display_name": "S09 three-model fusion",
+      "validation_images": 1503,
+      "s10_correct": 1345,
+      "other_correct": 1379,
+      "s10_fixes_other": 43,
+      "other_recovers_s10": 77,
+      "both_wrong": 81,
+      "both_correct": 1302,
+      "prediction_disagreements": 138,
+      "oracle_union_accuracy": 0.9461077844311377,
+      "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+    }
+  },
+  "historical_rows_preserved": 473,
+  "all_other_registry_rows_unchanged": true,
+  "gpu_used": false,
+  "test_images_loaded": false,
+  "diagnostic_checkpoints": [
+    {
+      "path": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_failure_epoch14_1791039566736453200.pt",
+      "sha256": "b65b0790def79777f2ea7409746db1dc55c2a23f8b87305b7843677230d70349",
+      "loadable": true
+    },
+    {
+      "path": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_failure_epoch18_1791039893797589700.pt",
+      "sha256": "8708e685970a76afcb3bd4c20706945e7b0e09faadf2b165e48052b3a78fcf9a",
+      "loadable": true
+    },
+    {
+      "path": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_failure_epoch20_1791040067708139600.pt",
+      "sha256": "d8c1c9f0b8d831d3dbefc3e5674ce3d8be337c8c2387e3fe048f5167d10ed70a",
+      "loadable": true
+    }
+  ],
+  "final_prediction_scope": "Final epoch metrics authenticated against latest.pt history; standalone final-epoch prediction CSV was not saved by training runner. Primary and macro-F1 predictions each cover1503 validation images."
+}

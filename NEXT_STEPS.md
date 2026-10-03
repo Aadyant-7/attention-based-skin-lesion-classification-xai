@@ -1,6 +1,6 @@
 # Research plan: 3–17 October 2026
 
-**Active update:** S01–S06 and bounded CPU S07–S09 are completed/verified. [S06 ConvNeXt](research/phase3/S06_CLOSEOUT.md) reached **91.75% exploratory accuracy/.8628 macro-F1**; [S09 equal triple](research/phase3/S07_S09_CLOSEOUT.md) tied accuracy with.8691 F1 at three-model cost. S05 CBAM was near-neutral/mixed. Current: S10 failed epoch14 validation; [guarded epoch13 recovery](research/phase3/S10_FAILURE_RECOVERY.md) awaits approval; [diverse-backbone strategy](research/phase3/DIVERSE_BACKBONE_STRATEGY.md) is evidence-driven. Follow [two-stage evaluation and launch-and-stop policy](research/phase3/TWO_STAGE_STRATEGY.md). Phase2 all-strict screening below is historical and superseded.
+**Active research update (3 October 2026):** [S10 and two fixed ensemble closeouts](research/phase3/S10_S12_CLOSEOUT.md) verified. S10:89.49%/.8232; FP32 validation recovery at14/18/20 disclosed, winning epoch15 AMP. **S12 equal B0/ConvNeXt/V2-S is the current best:92.42% exploratory accuracy/.8770 macro-F1**. S06 remains the single-model/cost reference. [S13 fixed TTA proposal](research/phase3/S13_PROPOSAL.md) is prepared only; awaits GPU inference approval. Locked test untouched; future strict confirmation fresh from external weights.
 
 ## Original Phase2 plan (historical)
 

@@ -1,0 +1,80 @@
+{
+  "s02_mobilenet_v3_large_none_exploratory_seed42": {
+    "display_name": "S02 MobileNetV3-Large",
+    "validation_images": 1503,
+    "s10_correct": 1345,
+    "other_correct": 1293,
+    "s10_fixes_other": 120,
+    "other_recovers_s10": 68,
+    "both_wrong": 90,
+    "both_correct": 1225,
+    "prediction_disagreements": 211,
+    "oracle_union_accuracy": 0.9401197604790419,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s03_efficientnet_b0_none_exploratory_seed42": {
+    "display_name": "S03 EfficientNet-B0",
+    "validation_images": 1503,
+    "s10_correct": 1345,
+    "other_correct": 1298,
+    "s10_fixes_other": 123,
+    "other_recovers_s10": 76,
+    "both_wrong": 82,
+    "both_correct": 1222,
+    "prediction_disagreements": 224,
+    "oracle_union_accuracy": 0.9454424484364604,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s05_efficientnet_b0_cbam_exploratory_seed42": {
+    "display_name": "S05 B0 + CBAM",
+    "validation_images": 1503,
+    "s10_correct": 1345,
+    "other_correct": 1298,
+    "s10_fixes_other": 113,
+    "other_recovers_s10": 66,
+    "both_wrong": 92,
+    "both_correct": 1232,
+    "prediction_disagreements": 201,
+    "oracle_union_accuracy": 0.9387890884896873,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s04_s02_s03_equal_probability_exploratory_seed42": {
+    "display_name": "S04 fixed S02/S03 fusion",
+    "validation_images": 1503,
+    "s10_correct": 1345,
+    "other_correct": 1331,
+    "s10_fixes_other": 84,
+    "other_recovers_s10": 70,
+    "both_wrong": 88,
+    "both_correct": 1261,
+    "prediction_disagreements": 174,
+    "oracle_union_accuracy": 0.9414504324683965,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s06_convnext_tiny_none_exploratory_seed42": {
+    "display_name": "S06 ConvNeXt-Tiny",
+    "validation_images": 1503,
+    "s10_correct": 1345,
+    "other_correct": 1379,
+    "s10_fixes_other": 55,
+    "other_recovers_s10": 89,
+    "both_wrong": 69,
+    "both_correct": 1290,
+    "prediction_disagreements": 161,
+    "oracle_union_accuracy": 0.9540918163672655,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  },
+  "s09_s02_s03_s06_equal_probability_exploratory_seed42": {
+    "display_name": "S09 three-model fusion",
+    "validation_images": 1503,
+    "s10_correct": 1345,
+    "other_correct": 1379,
+    "s10_fixes_other": 43,
+    "other_recovers_s10": 77,
+    "both_wrong": 81,
+    "both_correct": 1302,
+    "prediction_disagreements": 138,
+    "oracle_union_accuracy": 0.9461077844311377,
+    "scope": "Oracle uses true labels: diagnostic upper bound only, not an ensemble or achievable reported result"
+  }
+}

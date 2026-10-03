@@ -1,0 +1,14 @@
+{
+  "s10_closeout": "passed",
+  "ensembles": [
+    "s11_s06_s10_equal_probability_exploratory_seed42",
+    "s12_s03_s06_s10_equal_probability_exploratory_seed42"
+  ],
+  "fusion_and_tta_tests_passed": 7,
+  "test_command": "python -m unittest research.tests.test_fuse research.tests.test_tta -v",
+  "preservation_check": "python -m research.verify_layout --phase3-current: passed;473 legacy registry rows and247 immutable historical artifacts preserved",
+  "s13_preflight": "passed",
+  "s13_launched": false,
+  "gpu_work_this_turn": false,
+  "test_images_loaded": false
+}

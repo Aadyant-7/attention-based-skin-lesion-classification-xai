@@ -1,0 +1,16 @@
+{
+  "candidates": [
+    {
+      "experiment_id": "s11_s06_s10_equal_probability_exploratory_seed42",
+      "config_path": "research/configs/phase3/s11_s06_s10_equal_probability_exploratory_seed42.json",
+      "config_sha256": "96944663b42119442108e1d69e933482a8ebcad70108fdf28af08d01e6580381"
+    },
+    {
+      "experiment_id": "s12_s03_s06_s10_equal_probability_exploratory_seed42",
+      "config_path": "research/configs/phase3/s12_s03_s06_s10_equal_probability_exploratory_seed42.json",
+      "config_sha256": "66c169bbd01b7108031df8290abfe950448970ace8518394b3189e0bf6d87028"
+    }
+  ],
+  "reason": "S10 fixes55 S06 misses. S03 recovers25 additional images beyond S06/S10 (S02/S05 each19) and slightly stronger single than S02. Two fixed candidates only; no weights/criterion tuning; oracle counts are diagnostic, not performance.",
+  "gpu_used": false
+}

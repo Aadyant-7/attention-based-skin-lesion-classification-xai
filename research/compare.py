@@ -25,12 +25,18 @@ def main():
             family='exploratory_screening_v1'
         key=(family,r['protocol'],str(r['seed']),config['selection_metric'])
         rows=groups.setdefault(key,[])
+        summary_path=ROOT/r['metrics_path']
+        summary_path=summary_path.parent/'training_summary.json'
+        summary=json.loads(summary_path.read_text(encoding='utf-8')) if summary_path.exists() else {}
+        amendment=summary.get('validation_recovery_amendment')
+        validation_note='FP32 fallback at14/18/20; winner15 AMP; training unchanged' if amendment else 'original AMP validation'
+
         rows.append(dict(display_name=r['model']+' | '+r['attention'],experiment_id=r['experiment_id'],protocol=r['protocol'],
              recipe_version=config['recipe_version'],selection_metric=config['selection_metric'],
              weights=r['pretrained_weights'],seed=r['seed'],epochs=r['epochs'],best_epoch=r['best_epoch'],
              accuracy=m['accuracy'],macro_precision=m['macro_precision'],macro_recall=m['macro_recall'],
              macro_f1=m['macro_f1'],melanoma_recall=m['per_class']['mel']['recall'],
-             runtime_seconds=r['runtime_seconds'],checkpoint_sha256=r['checkpoint_sha256']))
+             validation_numerical_amendment=validation_note,runtime_seconds=r['runtime_seconds'],checkpoint_sha256=r['checkpoint_sha256']))
     if not groups:
         print('No completed common-recipe runs; no comparison output created.');return
     for (recipe,protocol,seed,selection),rows in groups.items():

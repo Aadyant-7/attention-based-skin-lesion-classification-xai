@@ -1,0 +1,40 @@
+{
+  "experiment_id": "s12_s03_s06_s10_equal_probability_exploratory_seed42",
+  "recipe_version": "equal_probability_v1",
+  "phase": "ensemble_screening",
+  "protocol": "exploratory_image_level",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "locked_manifest_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "parent_run_ids": [
+    "s03_efficientnet_b0_none_exploratory_seed42",
+    "s06_convnext_tiny_none_exploratory_seed42",
+    "s10_efficientnet_v2_s_none_exploratory_seed42"
+  ],
+  "weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "checkpoint_sha256": {
+    "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+  },
+  "prediction_sha256": {
+    "s03_efficientnet_b0_none_exploratory_seed42": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d",
+    "s06_convnext_tiny_none_exploratory_seed42": "86a4e98809591a4c767d68d2a90004304c0afe441240b48cc60d987dfd52e27b",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c"
+  },
+  "question": "Does fixed equal fusion exploit S10 complementary errors and improve over frozen S06/S09?",
+  "numerical_amendment_note": "S10 accuracy winner epoch15 uses AMP validation; FP32 fallback at14/18/20, training unchanged."
+}

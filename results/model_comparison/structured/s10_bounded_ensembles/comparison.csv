@@ -1,0 +1,10 @@
+display_name,experiment_id,accuracy,macro_precision,macro_recall,macro_f1,melanoma_recall,inference_model_passes,scope
+S02 MobileNetV3-Large,s02_mobilenet_v3_large_none_exploratory_seed42,0.8602794411177644,0.7949701703544128,0.780099667659236,0.7861111676525011,0.6946107784431138,1,exploratory validation; accuracy winners; cost differs
+S03 EfficientNet-B0,s03_efficientnet_b0_none_exploratory_seed42,0.863606121091151,0.7534286077687018,0.7916330829131726,0.7706600163648087,0.7005988023952096,1,exploratory validation; accuracy winners; cost differs
+S05 B0 + CBAM,s05_efficientnet_b0_cbam_exploratory_seed42,0.863606121091151,0.7599204214006077,0.7812601338875816,0.7693010875155818,0.718562874251497,1,exploratory validation; accuracy winners; cost differs
+S04 fixed S02/S03 fusion,s04_s02_s03_equal_probability_exploratory_seed42,0.8855622089155023,0.8260743092585557,0.7909651520972928,0.8056543445886161,0.718562874251497,2,exploratory validation; accuracy winners; cost differs
+S06 ConvNeXt-Tiny,s06_convnext_tiny_none_exploratory_seed42,0.9174983366600133,0.8804352604512183,0.8533257129249898,0.862830691053104,0.7784431137724551,1,exploratory validation; accuracy winners; cost differs
+S09 three-model fusion,s09_s02_s03_s06_equal_probability_exploratory_seed42,0.9174983366600133,0.8888675000541016,0.855425303830642,0.8690940267638634,0.7904191616766467,3,exploratory validation; accuracy winners; cost differs
+S10 EfficientNetV2-S,s10_efficientnet_v2_s_none_exploratory_seed42,0.8948769128409847,0.8429931782712218,0.8099490560479351,0.8231616637229359,0.7005988023952096,1,exploratory validation; accuracy winners; cost differs
+S11 equal S06/S10,s11_s06_s10_equal_probability_exploratory_seed42,0.9208250166333999,0.8897778150511025,0.838727005336872,0.8601656052300787,0.7784431137724551,2,one of two predeclared equal candidates; accuracy-selected parents; exploratory validation
+S12 equal S03/S06/S10,s12_s03_s06_s10_equal_probability_exploratory_seed42,0.9241516966067864,0.9024928226888206,0.8585573682479951,0.877023379276669,0.7904191616766467,3,one of two predeclared equal candidates; accuracy-selected parents; exploratory validation
