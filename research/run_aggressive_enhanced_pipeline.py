@@ -68,6 +68,13 @@ def amended_boundary_handoff(s,rid,log):
 
 STATE=OUT/'status.json'
 
+def planned_handoff_pending(rid):
+    p=OUT/'stopping_policy_amendment.json'
+    if not p.exists():return False
+    a=json.loads(p.read_text())
+    return bool(a.get('handoff_complete') and a.get('decision',{}).get('stop')
+                and rid=='s32_efficientnet_b3_cbam_enhanced_seed42')
+
 def alive(s):
     try:p=psutil.Process(s['pid']);return p.is_running() and abs(p.create_time()-s['create_time'])<1
     except (KeyError,psutil.NoSuchProcess):return False
@@ -128,7 +135,11 @@ def main():
                 rid=spec['id'];s=state['models'][rid];folder=OUT/rid;record=folder/'record.json';latest=CKPT/rid/'latest.pt'
                 if record.exists() and json.loads(record.read_text())['status']=='completed':
                     verify_saved(rid,c);record_stopping_audit(rid);s['status']='completed';write_json(STATE,state);log.info('VERIFIED/SKIP %s',rid);continue
-                if s['status']=='failed':raise RuntimeError('Unrecoverable stage preserved; manual diagnosis required: '+rid)
+                if s['status']=='failed':
+                    if planned_handoff_pending(rid) and s.get('pid')==json.loads((OUT/'stopping_policy_amendment.json').read_text()).get('legacy_worker_pid') and latest.exists() and compatible(spec,c):
+                        s['status']='pending_closeout';write_json(STATE,state)
+                        log.info('Recover planned epoch-boundary closeout; recorded failure evidence remains preserved')
+                    else:raise RuntimeError('Unrecoverable stage preserved; manual diagnosis required: '+rid)
                 while True:
                     proc=None
                     if alive(s):log.info('Reattached live %s PID %s',rid,s['pid'])
@@ -155,6 +166,9 @@ def main():
                     if record.exists() and json.loads(record.read_text())['status']=='completed':
                         verify_saved(rid,c);record_stopping_audit(rid);s['status']='completed';write_json(STATE,state);log.info('COMPLETED/VERIFIED %s',rid);break
                     failure=folder/'failure_status.json';details=json.loads(failure.read_text()) if failure.exists() else {}
+                    if planned_handoff_pending(rid) and s.get('pid')==json.loads((OUT/'stopping_policy_amendment.json').read_text()).get('legacy_worker_pid') and latest.exists() and compatible(spec,c):
+                        s['status']='pending_closeout';write_json(STATE,state)
+                        log.info('Planned meaningful-stop handoff; resume checkpoint for closeout, not a numerical retry');continue
                     if details.get('numerical') and details.get('precision')=='bf16' and not s['fp32_recovery'] and latest.exists() and compatible(spec,c):
                         s['fp32_recovery']=True
                         write_json(OUT/(rid+'_automatic_fp32_recovery.json'),dict(failure=details,policy='Predeclared one BF16-to-full-FP32 retry',resume_checkpoint=str(latest),checkpoint_sha256=sha256(latest)))

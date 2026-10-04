@@ -4,7 +4,8 @@ import numpy as np
 import pandas as pd
 from research.common import ROOT,CLASSES,write_csv,write_json,atomic_text,relative,sha256
 from research.plots import metric_figures,comparison_figures,save
-from research.registry import FIELDS,upsert
+from research.registry import FIELDS
+from .core import retry_registry_upsert as upsert
 from .core import OUT,CKPT,CONFIG,config,data,verify_saved,weighted_metrics,predictions
 
 def fusion(arrays,weights):

@@ -7,7 +7,8 @@ from torch.utils.data import DataLoader
 from torchvision import models
 from research.common import ROOT,write_json,write_csv,sha256,relative
 from research.train import atomic_checkpoint,rng_state,restore_rng,runtime_versions,run_lock,seed_worker,tensor_nonfinite_names
-from research.registry import FIELDS,upsert
+from research.registry import FIELDS
+from .core import retry_registry_upsert as upsert
 from research.plots import metric_figures,training_figures
 from .core import config,CONFIG,OUT,CKPT,hashes,data,Images,EnhancedModel,mixed_focal_sum,weighted_metrics,predictions,stopping_state,epoch_batches,micro_ranges
 from .core import compatible_sources

@@ -1,6 +1,7 @@
 """Shared enhanced recipe: train-only focal weighting, augmentation, CBAM and safe precision."""
 import json,os,random
 import math
+import time
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -16,6 +17,15 @@ from research.models import ResearchClassifier,CHANNELS
 CONFIG=ROOT/'research/aggressive/config.json'
 OUT=ROOT/'results/aggressive_enhanced/v1'
 CKPT=ROOT/'checkpoints/aggressive_enhanced/v1'
+
+def retry_registry_upsert(row):
+    """Windows spreadsheet/scanner locks can temporarily block atomic replacement."""
+    from research.registry import upsert
+    for attempt in range(16):
+        try:return upsert(row)
+        except PermissionError:
+            if attempt==15:raise
+            time.sleep(2)
 
 def config():return json.loads(CONFIG.read_text(encoding='utf-8'))
 
