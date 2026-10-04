@@ -1,0 +1,10 @@
+{
+  "model_passes": 3,
+  "images_per_model": 1503,
+  "labels_used_during_inference": false,
+  "probability_files": [
+    "results/final_locked_test/v1/efficientnet_b0/inference_probabilities_unscored.csv",
+    "results/final_locked_test/v1/convnext_tiny/inference_probabilities_unscored.csv",
+    "results/final_locked_test/v1/efficientnet_v2_s/inference_probabilities_unscored.csv"
+  ]
+}

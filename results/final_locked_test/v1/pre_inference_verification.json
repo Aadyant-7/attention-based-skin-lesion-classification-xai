@@ -1,0 +1,109 @@
+{
+  "members": [
+    {
+      "model": "efficientnet_b0",
+      "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s28_efficientnet_b0_final_strict_seed42/best.pt",
+      "sha256": "4ad09eed40c57970addce772043267d835bb93c41ec64a81fd7a0c7d7ed9a50f",
+      "best_epoch": 19,
+      "absolute_checkpoint": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s28_efficientnet_b0_final_strict_seed42\\best.pt"
+    },
+    {
+      "model": "convnext_tiny",
+      "weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s29_convnext_tiny_final_strict_seed42/best.pt",
+      "sha256": "ffe3a7f00c5371824fa46a8f9e5f864f53e15fcc533f5bf0263648f8573a1e93",
+      "best_epoch": 33,
+      "absolute_checkpoint": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s29_convnext_tiny_final_strict_seed42\\best.pt"
+    },
+    {
+      "model": "efficientnet_v2_s",
+      "weights": "EfficientNet_V2_S_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s30_efficientnet_v2_s_final_strict_seed42/best.pt",
+      "sha256": "8c3256e2a8a1335c00a38095aaa24f2fe9af136fc95044d5b419b880bb75f230",
+      "best_epoch": 24,
+      "absolute_checkpoint": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\structured\\s30_efficientnet_v2_s_final_strict_seed42\\best.pt"
+    }
+  ],
+  "freeze_manifest_sha256": "19538e90ceeda3126404efa03e258a6f2dfc2c679592ce1029aa387c7c540b01",
+  "split_verification": {
+    "protocol": "strict_lesion_disjoint",
+    "split_manifest": "data/splits/split_assignments.csv",
+    "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "image_counts": {
+      "train": 7009,
+      "val": 1503,
+      "test": 1503
+    },
+    "lesion_counts": {
+      "train": 5230,
+      "val": 1122,
+      "test": 1118
+    },
+    "lesion_overlaps": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "test_labels_read": false,
+    "test_images_loaded": false,
+    "test_loader_instantiated": false
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "cohort_size": 1503,
+  "test_identity_sha256": "d07e4003fa858301a5b052172b8345d0866f04f36731d18b6ce31d7b396569d2",
+  "preprocessing": {
+    "mode": "RGB",
+    "size": [
+      224,
+      224
+    ],
+    "resize": "bilinear antialias",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "augmentation": false
+  },
+  "precision": "fp32",
+  "autocast": false,
+  "views": [
+    "identity"
+  ],
+  "ensemble_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "configuration_unchanged": true,
+  "test_labels_available_to_inference": false,
+  "source_hashes": {
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/strict_protocol.py": "eb43d9fefda37bb4ba94c2b51f3c10171648543bc240af1e4c74a4fb41c1503c",
+    "research/run_final_strict_training.py": "4b7967a739604f78609f691611a45ba4cefc41d5eaf4a23f628b81b413afa0d9",
+    "research/final_strict_results.py": "4ac129d360aea7a6a98fa413f5a9e8cd2a01f1f7bdb51cb2031c77c7f0e6caaa",
+    "research/configs/final_strict_recipe_v1.json": "b5e646bf7b4a18e5acf8dfb5302a89834bbf26b25b536a084be14b587cc4e58a",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/strict_experiment.py": "84b9d83119b0a786465a5271c7d0c11f35cd05b6ff4cb69df5618c13a5ed190a",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "evaluation_script_sha256": "5c17f5eccfbbd4ed7463e0921a5af715a0ff278742e23f34bb917e1049bbb0cc",
+  "device": "NVIDIA GeForce RTX 4060"
+}

@@ -1,0 +1,6 @@
+{
+  "test_vs_strict_accuracy_pp": -3.393213572854281,
+  "test_vs_strict_macro_f1": -0.049013746611421105,
+  "test_vs_exploratory_accuracy_pp": -5.721889554224879,
+  "test_vs_exploratory_macro_f1": -0.08298148820323692
+}

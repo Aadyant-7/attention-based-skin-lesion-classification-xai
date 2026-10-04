@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "first_and_only_evaluation": true,
+  "performance_work_finished": true,
+  "method_changed_after_test": false,
+  "checkpoint_hashes_unchanged": true,
+  "accuracy": 0.867598137059215,
+  "macro_f1": 0.7944726449893623,
+  "comparison": {
+    "test_vs_strict_accuracy_pp": -3.393213572854281,
+    "test_vs_strict_macro_f1": -0.049013746611421105,
+    "test_vs_exploratory_accuracy_pp": -5.721889554224879,
+    "test_vs_exploratory_macro_f1": -0.08298148820323692
+  }
+}
