@@ -29,3 +29,6 @@ research/profile_final_strict.py -text
 research/configs/final_strict_recipe_v1.json -text
 research/configs/final_strict_queue_v1.json -text
 research/configs/final_strict/** -text
+research/strict*.py -text whitespace=cr-at-eol
+research/configs/final_strict*.json -text whitespace=cr-at-eol
+research/configs/final_strict/** -text whitespace=cr-at-eol
