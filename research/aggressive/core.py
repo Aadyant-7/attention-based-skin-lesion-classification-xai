@@ -30,7 +30,7 @@ def compatible_sources(saved):
     amendment=OUT/'stopping_policy_amendment.json'
     if not amendment.exists():return False
     record=json.loads(amendment.read_text())
-    allowed=[record.get('original_source_hashes'),record.get('legacy_live_disk_hashes')]
+    allowed=[record.get('original_source_hashes'),record.get('legacy_live_disk_hashes')]+record.get('additional_authorized_sources',[])
     return record.get('status')=='authorized' and saved in allowed and current==record['amended_source_hashes']
 
 def data(c):
