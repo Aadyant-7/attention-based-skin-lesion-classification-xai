@@ -1,0 +1,15 @@
+{
+  "training_images": 7009,
+  "pixels": 351683584,
+  "mean": [
+    0.7630306432877934,
+    0.5459358876080843,
+    0.5705884149341853
+  ],
+  "std": [
+    0.1402932921658137,
+    0.15144422149154305,
+    0.16872958982765698
+  ],
+  "method": "Every training RGB image, resized224 bilinear; population channel moments; validation/test excluded"
+}

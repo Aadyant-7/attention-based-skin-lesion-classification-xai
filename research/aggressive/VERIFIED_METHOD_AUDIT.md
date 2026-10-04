@@ -1,0 +1,13 @@
+# Primary-method audit before implementation
+
+[2026 Frontiers primary](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1847649/full), §§3.2–3.8/Tables2–4: B3/Dense201/Res101,224px,custom512/256 head with BN and .65/.55/.45 dropout, weighted focal2.2, Mixup.2/p.3, AdamW/modelLRs1e-4/7.5e-5/5e-5,decay.0015,StepLR.7/10,clip.5,50cap/min25/patience12/delta.0003. Reports96.37% primary and95.56±.32%3fold. Primary evaluation uses1103single-image-lesion images despite nominal8012/2003 partition. Source uses timmB3,train-derived normalization and manually selected class multipliers/fusion. Dropout progression is across head depth; full end-to-end fine-tuning is stated. Its weighted F1 is not our macro-F1. These are evidence, not expected outputs or an exact reproducibility claim.
+
+[2025 Frontiers primary](https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2025.1699960/full), §§3/4: gradual unfreezing,heterogeneousImageNet models,targetedtraining-only augmentation,class-weighted focal,Grad-CAM. Describes70/15/15 alongside5fold/5seed results and duplicate filtering; reports98.32%. Architectures/optimizer/balancing differ; Bayesian tuning is reported. It supports the combined package and staged adaptation, not importing its score or running another search.
+
+## Our implementation decisions
+
+Use source recipe values listed in config, existing CBAM after B3 final feature map, fresh explicit torchvision ImageNet weights. Preserve all HAM development images and use the existing lesion-disjoint validation cohort rather than choosing source's reduced subset. Exclude the revealed historical test. Choose a single development run to bound compute, label it post-test and do not equate it with CV. Compute normalization on all training images; use data-derived inverse weights bounded1–20 then mean-normalized, no manual multipliers. Cap hue/erasing strength to preserve morphology. Stage head2epochs,lastblock3epochs,full thereafter; no tuning. Fix .40/.40/.20 before outcomes. Min-delta controls patience only; true maximum accuracy remains saved. BF16 plus explicit FP32 BN/loss/validation replaces unsafe FP16; one declared fullFP32 recovery is available.
+
+The S16 diagnostic's first overflow is features.7.0.block.0.0. Its fp32_probe_finite=false accompanies fp32_recovery_authorized=false, meaning FP32 was not tested; prior summary wording that FP32 also failed is corrected here without modifying old evidence.
+
+Retain foundational HAM10000/base-paper references in research/literature. CBAM's standalone causal benefit is not established; historical B0 ablation is mixed/neutral. XAI overlays describe evidence localization, not clinical correctness.

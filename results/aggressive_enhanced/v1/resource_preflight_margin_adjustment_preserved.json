@@ -1,0 +1,53 @@
+[
+  {
+    "model": "efficientnet_b3",
+    "attention": "cbam",
+    "precision": "bf16",
+    "microbatch": 32,
+    "effective_batch": 32,
+    "peak_allocated_mb": 4757.353515625,
+    "peak_reserved_mb": 5144.0,
+    "host_available_gib": 3.583629608154297,
+    "three_step_seconds": 1.4729554999976244,
+    "scope": "3 disposable full-fine-tuning optimizer steps on real augmented training batch with fixed Mixup; FP32 eval forward; no validation accuracy measured",
+    "attempts": [],
+    "safe": true,
+    "probe_weights_discarded": true
+  },
+  {
+    "model": "densenet201",
+    "attention": "none",
+    "precision": "bf16",
+    "microbatch": 16,
+    "effective_batch": 32,
+    "peak_allocated_mb": 8045.087890625,
+    "peak_reserved_mb": 8870.0,
+    "host_available_gib": 3.2617950439453125,
+    "three_step_seconds": 9.09609989999808,
+    "scope": "3 disposable full-fine-tuning optimizer steps on real augmented training batch with fixed Mixup; FP32 eval forward; no validation accuracy measured",
+    "attempts": [
+      {
+        "precision": "bf16",
+        "micro": 32,
+        "error": "OutOfMemoryError('Preflight safety margin: insufficient physical VRAM headroom at micro32')"
+      }
+    ],
+    "safe": true,
+    "probe_weights_discarded": true
+  },
+  {
+    "model": "resnet101",
+    "attention": "none",
+    "precision": "bf16",
+    "microbatch": 16,
+    "effective_batch": 32,
+    "peak_allocated_mb": 3306.14111328125,
+    "peak_reserved_mb": 3404.0,
+    "host_available_gib": 3.2669219970703125,
+    "three_step_seconds": 1.022790699997131,
+    "scope": "3 disposable full-fine-tuning optimizer steps on real augmented training batch with fixed Mixup; FP32 eval forward; no validation accuracy measured",
+    "attempts": [],
+    "safe": true,
+    "probe_weights_discarded": true
+  }
+]

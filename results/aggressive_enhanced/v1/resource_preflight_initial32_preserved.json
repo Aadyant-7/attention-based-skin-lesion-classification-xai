@@ -1,0 +1,47 @@
+[
+  {
+    "model": "efficientnet_b3",
+    "attention": "cbam",
+    "precision": "bf16",
+    "microbatch": 32,
+    "effective_batch": 32,
+    "peak_allocated_mb": 4757.353515625,
+    "peak_reserved_mb": 5144.0,
+    "host_available_gib": 4.3138427734375,
+    "three_step_seconds": 2.2220144999992044,
+    "scope": "3 disposable full-fine-tuning optimizer steps on real augmented training batch with fixed Mixup; FP32 eval forward; no validation accuracy measured",
+    "attempts": [],
+    "safe": true,
+    "probe_weights_discarded": true
+  },
+  {
+    "model": "densenet201",
+    "attention": "none",
+    "precision": "bf16",
+    "microbatch": 32,
+    "effective_batch": 32,
+    "peak_allocated_mb": 8045.087890625,
+    "peak_reserved_mb": 8870.0,
+    "host_available_gib": 2.431488037109375,
+    "three_step_seconds": 7.544103799998993,
+    "scope": "3 disposable full-fine-tuning optimizer steps on real augmented training batch with fixed Mixup; FP32 eval forward; no validation accuracy measured",
+    "attempts": [],
+    "safe": true,
+    "probe_weights_discarded": true
+  },
+  {
+    "model": "resnet101",
+    "attention": "none",
+    "precision": "bf16",
+    "microbatch": 32,
+    "effective_batch": 32,
+    "peak_allocated_mb": 5545.30908203125,
+    "peak_reserved_mb": 6088.0,
+    "host_available_gib": 3.3802223205566406,
+    "three_step_seconds": 1.3420040000019071,
+    "scope": "3 disposable full-fine-tuning optimizer steps on real augmented training batch with fixed Mixup; FP32 eval forward; no validation accuracy measured",
+    "attempts": [],
+    "safe": true,
+    "probe_weights_discarded": true
+  }
+]

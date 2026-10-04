@@ -1,0 +1,29 @@
+[
+  {
+    "model": "efficientnet_b3",
+    "precision": "full_fp32",
+    "microbatch": 16,
+    "effective_batch": 32,
+    "peak_allocated_mb": 2822.14208984375,
+    "finite": true,
+    "scope": "One disposable training-only optimizer update; no validation accuracy"
+  },
+  {
+    "model": "densenet201",
+    "precision": "full_fp32",
+    "microbatch": 16,
+    "effective_batch": 32,
+    "peak_allocated_mb": 3373.7587890625,
+    "finite": true,
+    "scope": "One disposable training-only optimizer update; no validation accuracy"
+  },
+  {
+    "model": "resnet101",
+    "precision": "full_fp32",
+    "microbatch": 16,
+    "effective_batch": 32,
+    "peak_allocated_mb": 2380.58056640625,
+    "finite": true,
+    "scope": "One disposable training-only optimizer update; no validation accuracy"
+  }
+]

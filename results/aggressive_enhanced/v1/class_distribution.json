@@ -1,0 +1,32 @@
+{
+  "training_counts": {
+    "akiec": 228,
+    "bcc": 359,
+    "bkl": 769,
+    "df": 80,
+    "mel": 779,
+    "nv": 4694,
+    "vasc": 100
+  },
+  "validation_counts": {
+    "akiec": 50,
+    "bcc": 77,
+    "bkl": 165,
+    "df": 18,
+    "mel": 166,
+    "nv": 1006,
+    "vasc": 21
+  },
+  "class_weights": {
+    "akiec": 0.9232420921325684,
+    "bcc": 0.5863487720489502,
+    "bkl": 0.2737310826778412,
+    "df": 2.631239891052246,
+    "mel": 0.2702172100543976,
+    "nv": 0.21022890508174896,
+    "vasc": 2.104991912841797
+  },
+  "after_augmentation_counts": "Unchanged: on-the-fly class-specific augmentation adds diversity, not fictitious stored images",
+  "resampling": false,
+  "test_labels_read": false
+}

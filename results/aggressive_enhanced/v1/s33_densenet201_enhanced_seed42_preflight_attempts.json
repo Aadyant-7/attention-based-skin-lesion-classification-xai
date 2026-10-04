@@ -1,0 +1,7 @@
+[
+  {
+    "precision": "bf16",
+    "micro": 32,
+    "error": "OutOfMemoryError('Preflight safety margin: insufficient physical VRAM headroom at micro32')"
+  }
+]

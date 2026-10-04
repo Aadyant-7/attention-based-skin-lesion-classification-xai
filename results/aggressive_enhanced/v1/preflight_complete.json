@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "execution_mode": "sequential",
+  "config_sha256": "a0d64453d2a508ce2c5d590474a696b759bf094ea0a54d43a8e2e4c6596257fd",
+  "estimated_max_hours": 4.0858864472207745,
+  "expectation": "Conservative synthetic optimizer timing extrapolation; augment/I/O/validation/checkpoints/XAI may add substantial overhead; early stop may shorten"
+}
