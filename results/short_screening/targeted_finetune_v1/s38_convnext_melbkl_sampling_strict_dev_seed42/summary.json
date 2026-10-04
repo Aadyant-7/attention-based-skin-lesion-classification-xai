@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "new_epochs": 5,
+  "hard_cap": 15,
+  "best_epoch": 0,
+  "best_macro_f1_epoch": 5,
+  "stop_reason": "pilot_material_gate_failed",
+  "runtime_seconds": 347.5279242999968,
+  "optimizer_updates": 1329,
+  "baseline_retained": true,
+  "source_epoch": 33,
+  "test_loaded": false
+}

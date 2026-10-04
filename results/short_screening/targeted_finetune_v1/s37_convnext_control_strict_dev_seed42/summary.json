@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "new_epochs": 5,
+  "hard_cap": 5,
+  "best_epoch": 0,
+  "best_macro_f1_epoch": 5,
+  "stop_reason": "hard_epoch_cap",
+  "runtime_seconds": 331.04679359999864,
+  "optimizer_updates": 1329,
+  "baseline_retained": true,
+  "source_epoch": 33,
+  "test_loaded": false
+}

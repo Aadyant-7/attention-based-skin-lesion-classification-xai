@@ -1,0 +1,11 @@
+{
+  "at_completed_epoch": 5,
+  "passed": false,
+  "checks": {
+    "accuracy": false,
+    "macro_f1": true,
+    "focus_recall": false,
+    "neither_focus_class_declines": true,
+    "nv_recall": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "hard_total_epoch_cap": 20,
+  "fingerprints": {
+    "research/short_screening/targeted_finetune.py": "841aa20fd3419525fea673f9eca3beed79840b837ed1ddd67c52ba24fbef0744",
+    "research/short_screening/targeted_finetune_v1.json": "4315e28de0459fb45a07e2da35809993584eb2fc55c9dae20fb0545e5bd3b033",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/strict_protocol.py": "eb43d9fefda37bb4ba94c2b51f3c10171648543bc240af1e4c74a4fb41c1503c",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "master_pid": 14600,
+  "master_create_time": 1791134245.7060025,
+  "active_arm": "targeted",
+  "worker_pid": 23832,
+  "worker_create_time": 1791134584.9059088,
+  "stop": true,
+  "no_additional_experiments": true
+}
