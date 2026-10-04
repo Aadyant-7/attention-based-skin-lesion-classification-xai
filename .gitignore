@@ -39,5 +39,6 @@ __pycache__/
 !results/structured_experiments/**/*.pdf
 !results/xai/structured/**/*.pdf
 !results/final_strict/**/*.pdf
+!results/final_locked_test/**/*.pdf
 *.lock
 !data/raw/.gitkeep

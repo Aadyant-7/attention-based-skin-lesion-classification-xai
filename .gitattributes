@@ -32,3 +32,4 @@ research/configs/final_strict/** -text
 research/strict*.py -text whitespace=cr-at-eol
 research/configs/final_strict*.json -text whitespace=cr-at-eol
 research/configs/final_strict/** -text whitespace=cr-at-eol
+research/evaluate_final_locked_test.py -text whitespace=cr-at-eol
