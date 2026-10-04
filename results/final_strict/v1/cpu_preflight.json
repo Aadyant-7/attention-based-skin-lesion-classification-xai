@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "Three registered frozen configurations and train/validation paths",
+    "Identity-only strict split overlap verification; test rows excluded before labels parsed",
+    "Frozen recipe drift rejected",
+    "Exactly three equal probability members required and invalid probabilities rejected",
+    "Nonfinite FP32 validation rejected",
+    "Isolated full fixed-ensemble closeout generates report, metrics, PNG/PDF and registry record"
+  ],
+  "unit_tests_passed": 5,
+  "cuda_used": false,
+  "test_loader": false
+}

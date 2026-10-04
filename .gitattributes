@@ -20,3 +20,12 @@ research/final_selection.py -text
 research/run_final_architecture_selection.py -text
 research/profile_final_selection.py -text
 research/configs/final_architecture_selection_v1.json -text
+research/strict_train.py -text
+research/strict_protocol.py -text
+research/strict_experiment.py -text
+research/run_final_strict_training.py -text
+research/final_strict_results.py -text
+research/profile_final_strict.py -text
+research/configs/final_strict_recipe_v1.json -text
+research/configs/final_strict_queue_v1.json -text
+research/configs/final_strict/** -text

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "execution_mode": "sequential",
+  "models": 3,
+  "test_loader": false
+}

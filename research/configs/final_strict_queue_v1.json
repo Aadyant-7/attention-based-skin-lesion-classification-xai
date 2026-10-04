@@ -1,0 +1,15 @@
+{
+  "configs": [
+    "research/configs/final_strict/s28_efficientnet_b0_final_strict_seed42.json",
+    "research/configs/final_strict/s29_convnext_tiny_final_strict_seed42.json",
+    "research/configs/final_strict/s30_efficientnet_v2_s_final_strict_seed42.json"
+  ],
+  "execution_mode": "sequential",
+  "ensemble_id": "s31_final_equal_fp32_strict_seed42",
+  "ensemble_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "test_evaluation": false
+}

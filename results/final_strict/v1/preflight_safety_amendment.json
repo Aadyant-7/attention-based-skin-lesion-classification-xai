@@ -1,0 +1,11 @@
+{
+  "scope": "GPU fit check before any strict experiment started",
+  "initial_probe": "B0 passed; ConvNeXt-Tiny encountered nonfinite unscaled gradients at initial AMP loss scale and the clipping guard stopped the disposable probe",
+  "cause": "Gradient clipping with error_if_nonfinite ran before standard GradScaler rejection/scale reduction",
+  "fix": "Unscale, check gradients; clip finite gradients only. Nonfinite scaled-gradient updates use standard GradScaler rejection and scale reduction, logged and counted; no input sample removed, NaN/Inf clamp, or optimizer step on invalid gradients",
+  "verification": "Repeated eight-attempt probes passed for all three models; ConvNeXt had one explicitly rejected AMP update, B0 and V2-S had zero; all final FP32 forward/loss probes finite",
+  "recipe_change": false,
+  "validation_precision": "FP32 from start, no fallback used",
+  "discarded_probe_state": true,
+  "test_images_loaded": false
+}

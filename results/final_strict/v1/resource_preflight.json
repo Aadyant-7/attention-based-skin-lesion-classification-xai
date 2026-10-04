@@ -1,0 +1,47 @@
+[
+  {
+    "model": "efficientnet_b0",
+    "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+    "peak_allocated_mb": 850.40234375,
+    "peak_reserved_mb": 1050.0,
+    "total_gpu_mb": 8187.5,
+    "host_available_gib": 4.058170318603516,
+    "seconds": 12.160786300000154,
+    "amp_training_finite": true,
+    "amp_overflow_rejected_updates": 0,
+    "fp32_forward_finite": true,
+    "scope": "8 repeated real-training-batch attempted optimizer steps; no validation/test images or saved model; discarded probe state",
+    "execution_mode": "sequential",
+    "reason": "Prior worker memory plus current host headroom; avoid concurrency contention on one 8GB GPU"
+  },
+  {
+    "model": "convnext_tiny",
+    "weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+    "peak_allocated_mb": 1503.3388671875,
+    "peak_reserved_mb": 1892.0,
+    "total_gpu_mb": 8187.5,
+    "host_available_gib": 3.7848663330078125,
+    "seconds": 12.360756400000128,
+    "amp_training_finite": true,
+    "amp_overflow_rejected_updates": 1,
+    "fp32_forward_finite": true,
+    "scope": "8 repeated real-training-batch attempted optimizer steps; no validation/test images or saved model; discarded probe state",
+    "execution_mode": "sequential",
+    "reason": "Prior worker memory plus current host headroom; avoid concurrency contention on one 8GB GPU"
+  },
+  {
+    "model": "efficientnet_v2_s",
+    "weights": "EfficientNet_V2_S_Weights.IMAGENET1K_V1",
+    "peak_allocated_mb": 1641.103515625,
+    "peak_reserved_mb": 1764.0,
+    "total_gpu_mb": 8187.5,
+    "host_available_gib": 3.656463623046875,
+    "seconds": 8.67118379999988,
+    "amp_training_finite": true,
+    "amp_overflow_rejected_updates": 0,
+    "fp32_forward_finite": true,
+    "scope": "8 repeated real-training-batch attempted optimizer steps; no validation/test images or saved model; discarded probe state",
+    "execution_mode": "sequential",
+    "reason": "Prior worker memory plus current host headroom; avoid concurrency contention on one 8GB GPU"
+  }
+]
