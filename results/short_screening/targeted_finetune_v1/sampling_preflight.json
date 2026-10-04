@@ -1,0 +1,58 @@
+{
+  "arms": [
+    {
+      "arm": "control",
+      "epoch_samples": 8544,
+      "unique_images": 7000,
+      "class_exposure": {
+        "akiec": 278,
+        "bcc": 433,
+        "bkl": 944,
+        "df": 100,
+        "mel": 941,
+        "nv": 5734,
+        "vasc": 114
+      }
+    },
+    {
+      "arm": "targeted",
+      "epoch_samples": 8544,
+      "unique_images": 7001,
+      "class_exposure": {
+        "akiec": 228,
+        "bcc": 357,
+        "bkl": 1538,
+        "df": 80,
+        "mel": 1553,
+        "nv": 4688,
+        "vasc": 100
+      }
+    }
+  ],
+  "weights": [
+    1.1109360456466675,
+    0.8853382468223572,
+    0.6049135327339172,
+    1.8754758834838867,
+    0.6010183691978455,
+    0.24484144151210785,
+    1.6774765253067017
+  ],
+  "source_checkpoint": "checkpoints/structured/s29_convnext_tiny_final_strict_seed42/best.pt",
+  "source_sha256": "ffe3a7f00c5371824fa46a8f9e5f864f53e15fcc533f5bf0263648f8573a1e93",
+  "model": "convnext_tiny",
+  "warm_start_epoch": 33,
+  "max_total_epochs": 20,
+  "source_fingerprints": {
+    "research/short_screening/targeted_finetune.py": "841aa20fd3419525fea673f9eca3beed79840b837ed1ddd67c52ba24fbef0744",
+    "research/short_screening/targeted_finetune_v1.json": "4315e28de0459fb45a07e2da35809993584eb2fc55c9dae20fb0545e5bd3b033",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/strict_protocol.py": "eb43d9fefda37bb4ba94c2b51f3c10171648543bc240af1e4c74a4fb41c1503c",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "cpu_passed": true
+}

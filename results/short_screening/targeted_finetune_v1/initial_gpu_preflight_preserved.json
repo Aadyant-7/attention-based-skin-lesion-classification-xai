@@ -1,0 +1,9 @@
+{
+  "device": "NVIDIA GeForce RTX 4060",
+  "peak_allocated_mb": 1297.9521484375,
+  "logits_and_loss_finite": true,
+  "scaled_gradients_finite": true,
+  "probe_discarded": true,
+  "validation_accuracy_not_measured": true,
+  "source_sha256": "ffe3a7f00c5371824fa46a8f9e5f864f53e15fcc533f5bf0263648f8573a1e93"
+}

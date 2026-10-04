@@ -35,3 +35,5 @@ research/configs/final_strict/** -text whitespace=cr-at-eol
 research/evaluate_final_locked_test.py -text whitespace=cr-at-eol
 research/aggressive/** -text whitespace=cr-at-eol
 research/run_aggressive_enhanced_pipeline.py -text whitespace=cr-at-eol
+research/short_screening/targeted_finetune.py -text whitespace=cr-at-eol
+research/short_screening/targeted_finetune_v1.json -text whitespace=cr-at-eol
