@@ -1,0 +1,12 @@
+[
+  {
+    "training_lesion_seen": false,
+    "class_standardized_accuracy": 0.9134006096004699,
+    "interpretation": "Diagnostic reweighting to common exploratory validation class mix; not causal, not a test result"
+  },
+  {
+    "training_lesion_seen": true,
+    "class_standardized_accuracy": 0.9238059249070725,
+    "interpretation": "Diagnostic reweighting to common exploratory validation class mix; not causal, not a test result"
+  }
+]

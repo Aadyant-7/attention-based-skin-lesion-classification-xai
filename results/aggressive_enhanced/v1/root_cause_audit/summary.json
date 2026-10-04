@@ -1,0 +1,69 @@
+{
+  "scope": "Saved metrics/predictions only; no training, raw image loading or new test inference",
+  "exploratory_accuracy": 0.9248170326014638,
+  "strict_validation_accuracy": 0.9015302727877578,
+  "original_test_accuracy": 0.867598137059215,
+  "exploratory_to_strict_drop_pp": 2.328675981370598,
+  "strict_validation_to_test_drop_pp": 3.393213572854281,
+  "original_test_errors": 199,
+  "correct_predictions_needed_for_92_percent": 79,
+  "exploratory_seen_lesion_cohorts": [
+    {
+      "training_lesion_seen": false,
+      "images": 907,
+      "accuracy": 0.9349503858875413,
+      "correct": 848
+    },
+    {
+      "training_lesion_seen": true,
+      "images": 596,
+      "accuracy": 0.9093959731543624,
+      "correct": 542
+    }
+  ],
+  "runtime": [
+    {
+      "run": "proven_strict_convnext",
+      "completed_epochs": 45,
+      "total_epoch_minutes": 43.60218884166666,
+      "full_epoch_seconds_median": 58.16286839999975,
+      "full_epoch_seconds_min": 46.2789358,
+      "full_epoch_seconds_max": 70.91715330000034,
+      "peak_allocated_mb": 1503.3388671875
+    },
+    {
+      "run": "historical_exploratory_dense",
+      "completed_epochs": 17,
+      "total_epoch_minutes": 31.072358849997787,
+      "full_epoch_seconds_median": 111.8502429999644,
+      "full_epoch_seconds_min": 91.37676180002744,
+      "full_epoch_seconds_max": 115.38048439996784,
+      "peak_allocated_mb": 1984.7705078125
+    },
+    {
+      "run": "enhanced_b3",
+      "completed_epochs": 43,
+      "total_epoch_minutes": 90.3078567966666,
+      "full_epoch_seconds_median": 106.68399705000049,
+      "full_epoch_seconds_min": 105.16259720000016,
+      "full_epoch_seconds_max": 408.23039530000096,
+      "peak_allocated_mb": 2595.91552734375
+    },
+    {
+      "run": "incomplete_enhanced_dense",
+      "completed_epochs": 19,
+      "total_epoch_minutes": 70.2361200283333,
+      "full_epoch_seconds_median": 271.02164079999966,
+      "full_epoch_seconds_min": 111.70444119999956,
+      "full_epoch_seconds_max": 329.0799179000024,
+      "peak_allocated_mb": 4350.35009765625
+    }
+  ],
+  "limitations": [
+    "Seen/unseen subgroups differ in class mix and lesion difficulty; not a causal leakage estimate.",
+    "Validation-selected models and many development comparisons can create optimistic validation estimates.",
+    "Aggressive package changes are confounded; no single causal attribution without ablations.",
+    "DenseNet stopped at19; its eventual convergence is unknown."
+  ],
+  "active_gpu_runs": 0
+}

@@ -1,0 +1,3 @@
+training_lesion_seen,images,accuracy,correct
+False,907,0.9349503858875413,848
+True,596,0.9093959731543624,542
