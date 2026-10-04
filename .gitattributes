@@ -13,3 +13,10 @@ results/audit/s10_nonfinite_20261003/** -text whitespace=blank-at-eol,blank-at-e
 results/structured_experiments/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Archival copies remain byte-identical, including original line endings.
 legacy/organization/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Autonomous batch source/config hashes must remain byte-stable on checkout.
+research/models.py -text
+research/final_selection.py -text
+research/run_final_architecture_selection.py -text
+research/profile_final_selection.py -text
+research/configs/final_architecture_selection_v1.json -text

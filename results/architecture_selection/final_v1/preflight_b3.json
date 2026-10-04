@@ -1,0 +1,17 @@
+{
+  "model": "efficientnet_b3",
+  "pretrained_weights": "EfficientNet_B3_Weights.IMAGENET1K_V1",
+  "microbatch": 16,
+  "effective_batch": 32,
+  "peak_allocated_mb": 1599.01513671875,
+  "peak_reserved_mb": 1678.0,
+  "seconds_per_effective_step": 0.1599306833340961,
+  "images_per_second": 200.0866833861506,
+  "dataloader_first_batch_seconds": 5.497217299998738,
+  "dataloader_host_rss_gib": 2.0248260498046875,
+  "host_available_gib": 4.308475494384766,
+  "total_gpu_mb": 8187.5,
+  "amp_logits_loss_gradients_finite": true,
+  "scope": "8 optimizer steps on repeated real training batch, not accuracy training; exact batch/AMP/groups; no saved model or test loader",
+  "test_images_loaded": false
+}

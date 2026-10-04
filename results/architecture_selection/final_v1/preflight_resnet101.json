@@ -1,0 +1,17 @@
+{
+  "model": "resnet101",
+  "pretrained_weights": "ResNet101_Weights.IMAGENET1K_V2",
+  "microbatch": 16,
+  "effective_batch": 32,
+  "peak_allocated_mb": 1819.0107421875,
+  "peak_reserved_mb": 1858.0,
+  "seconds_per_effective_step": 0.2044098666665377,
+  "images_per_second": 156.5482161984036,
+  "dataloader_first_batch_seconds": 5.3580641000007745,
+  "dataloader_host_rss_gib": 2.0401382446289062,
+  "host_available_gib": 4.376338958740234,
+  "total_gpu_mb": 8187.5,
+  "amp_logits_loss_gradients_finite": true,
+  "scope": "8 optimizer steps on repeated real training batch, not accuracy training; exact batch/AMP/groups; no saved model or test loader",
+  "test_images_loaded": false
+}
