@@ -1,0 +1,206 @@
+{
+  "status": "architecture_selection_closed",
+  "selected_run": "s13_s12_identity_fp32_control_exploratory_seed42",
+  "models": [
+    {
+      "run_id": "s03_efficientnet_b0_none_exploratory_seed42",
+      "model": "efficientnet_b0",
+      "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c"
+    },
+    {
+      "run_id": "s06_convnext_tiny_none_exploratory_seed42",
+      "model": "convnext_tiny",
+      "weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7"
+    },
+    {
+      "run_id": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "model": "efficientnet_v2_s",
+      "weights": "EfficientNet_V2_S_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5"
+    }
+  ],
+  "number_of_models": 3,
+  "ensemble_method": "fixed probability soft voting",
+  "ensemble_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "metrics": {
+    "loss": 0.3609271708617435,
+    "accuracy": 0.9248170326014638,
+    "macro_precision": 0.9032601879784398,
+    "macro_recall": 0.8586992323421929,
+    "macro_f1": 0.8774541331925992,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        9,
+        4,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        73,
+        0,
+        0,
+        1,
+        3,
+        0
+      ],
+      [
+        5,
+        1,
+        133,
+        0,
+        9,
+        17,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        14,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        132,
+        32,
+        0
+      ],
+      [
+        0,
+        2,
+        5,
+        0,
+        15,
+        983,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.8390804597701149,
+        "recall": 0.948051948051948,
+        "f1": 0.8902439024390244,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.910958904109589,
+        "recall": 0.806060606060606,
+        "f1": 0.8553054662379421,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8235294117647058,
+        "f1": 0.9032258064516129,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8407643312101911,
+        "recall": 0.7904191616766467,
+        "f1": 0.8148148148148148,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9479267116682739,
+        "recall": 0.9761668321747765,
+        "f1": 0.961839530332681,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "metrics_path": "results/structured_experiments/s13_s12_four_flip_tta_exploratory_seed42/validation_metrics_identity_fp32.json",
+  "confusion_matrix_reference": "results/structured_experiments/s13_s12_four_flip_tta_exploratory_seed42/figures_identity_fp32/confusion_matrix.csv",
+  "protocol": "exploratory_image_level",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "material_gain": false,
+  "material_gate": ">=1percentage point accuracy without F1loss OR >=.01macroF1 without accuracy loss; akiec recall drop<=.05,mel<=.03,df/vasc<=.10; single-seed development heuristic not significance",
+  "batch_candidate_status": {
+    "s16_efficientnet_b3_none_exploratory_seed42": {
+      "status": "failed",
+      "attempts": 1,
+      "pid": 24144,
+      "create_time": 1791097545.2182,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "research.train",
+        "--config",
+        "research/configs/phase3/s16_efficientnet_b3_none_exploratory_seed42.json"
+      ],
+      "resumed": false,
+      "console": "results\\architecture_selection\\final_v1\\s16_efficientnet_b3_none_exploratory_seed42.console.log",
+      "exit_code": 1,
+      "reason": "\": 7, \"logits_inf\": 0, \"bad_logit_rows\": [6], \"loss_finite\": false, \"probabilities_nonfinite\": 7}\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 565, in <module>\n    if __name__=='__main__': main()\n                             ~~~~^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 562, in main\n    with run_lock(config['experiment_id']): run(config,args.resume,fix,args.stop_after_epoch)\n                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 467, in run\n    all_y,all_p,ids,val_loss,validation_precision=evaluate_validation(model,val_loader,weights,config,experiment.path,epoch,\n                                                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        allow_fp32_recovery=bool(amendment),training_state=dict(optimizer=optimizer.state_dict(),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=rng_state(True)))\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 197, in evaluate_validation\n    try:return collect(False)\n               ~~~~~~~^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 189, in collect\n    try:num,p=checked_validation_batch(model,images,y,weights,fp32)\n              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 163, in checked_validation_batch\n    raise NonfiniteValidation(dict(reason='nonfinite_forward_or_loss',precision='fp32' if fp32 else 'amp_fp16',\n    ...<2 lines>...\n        loss_finite=bool(torch.isfinite(num)),probabilities_nonfinite=int((~torch.isfinite(probabilities)).sum())))\nNonfiniteValidation: Nonfinite validation batch: {\"reason\": \"nonfinite_forward_or_loss\", \"precision\": \"amp_fp16\", \"logits_nan\": 7, \"logits_inf\": 0, \"bad_logit_rows\": [6], \"loss_finite\": false, \"probabilities_nonfinite\": 7}\n"
+    },
+    "s19_resnet101_none_exploratory_seed42": {
+      "status": "completed",
+      "attempts": 2,
+      "pid": 10172,
+      "create_time": 1791104074.0195427,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "research.train",
+        "--config",
+        "research/configs/phase3/s19_resnet101_none_exploratory_seed42.json",
+        "--resume"
+      ],
+      "resumed": true,
+      "console": "results\\architecture_selection\\final_v1\\s19_resnet101_none_exploratory_seed42.console.log",
+      "exit_code": 0
+    }
+  },
+  "test_evaluated": false,
+  "architecture_search_closed": true,
+  "no_more_backbones": true
+}

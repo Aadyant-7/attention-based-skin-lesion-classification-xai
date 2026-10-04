@@ -1,0 +1,32 @@
+{
+  "experiment_id": "s22_final_equal_03_exploratory_seed42",
+  "recipe_version": "final_fixed_fusion_v1",
+  "protocol": "exploratory_image_level",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "parent_run_ids": [
+    "s18_convnext_small_none_exploratory_seed42",
+    "s19_resnet101_none_exploratory_seed42"
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "prediction_sha256": {
+    "s18_convnext_small_none_exploratory_seed42": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+    "s19_resnet101_none_exploratory_seed42": "85f9bf9e5eaae39bca288d4397f9dddd1c583832fd1f12126f593c9b8858d8b1"
+  },
+  "checkpoint_sha256": {
+    "s18_convnext_small_none_exploratory_seed42": "ece76c8c94f9f8e030613155811251b211007b1643a6e70de64413dfad8ac4ef",
+    "s19_resnet101_none_exploratory_seed42": "4763c8b83b96de57323938a76dee9074a36d1e62c21d63c6b05fecf67f8828d2"
+  },
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb"
+}

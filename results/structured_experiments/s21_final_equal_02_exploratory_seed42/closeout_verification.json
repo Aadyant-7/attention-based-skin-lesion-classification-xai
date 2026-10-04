@@ -1,0 +1,14 @@
+{
+  "status": "verified_completed",
+  "exact_probabilities_sha256": "1702a0cc87673798455f1a283764c6001f6b80ded488fc36534c76926e77e0dd",
+  "parent_prediction_hashes": {
+    "s06_convnext_tiny_none_exploratory_seed42": "86a4e98809591a4c767d68d2a90004304c0afe441240b48cc60d987dfd52e27b",
+    "s19_resnet101_none_exploratory_seed42": "85f9bf9e5eaae39bca288d4397f9dddd1c583832fd1f12126f593c9b8858d8b1"
+  },
+  "parent_checkpoint_hashes": {
+    "s06_convnext_tiny_none_exploratory_seed42": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+    "s19_resnet101_none_exploratory_seed42": "4763c8b83b96de57323938a76dee9074a36d1e62c21d63c6b05fecf67f8828d2"
+  },
+  "test_images_loaded": false,
+  "gpu_used": false
+}

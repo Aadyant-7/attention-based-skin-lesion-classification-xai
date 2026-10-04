@@ -1,0 +1,43 @@
+{
+  "status": "training",
+  "candidates": {
+    "s16_efficientnet_b3_none_exploratory_seed42": {
+      "status": "failed",
+      "attempts": 1,
+      "pid": 24144,
+      "create_time": 1791097545.2182,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "research.train",
+        "--config",
+        "research/configs/phase3/s16_efficientnet_b3_none_exploratory_seed42.json"
+      ],
+      "resumed": false,
+      "console": "results\\architecture_selection\\final_v1\\s16_efficientnet_b3_none_exploratory_seed42.console.log",
+      "exit_code": 1,
+      "reason": "\": 7, \"logits_inf\": 0, \"bad_logit_rows\": [6], \"loss_finite\": false, \"probabilities_nonfinite\": 7}\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 565, in <module>\n    if __name__=='__main__': main()\n                             ~~~~^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 562, in main\n    with run_lock(config['experiment_id']): run(config,args.resume,fix,args.stop_after_epoch)\n                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 467, in run\n    all_y,all_p,ids,val_loss,validation_precision=evaluate_validation(model,val_loader,weights,config,experiment.path,epoch,\n                                                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        allow_fp32_recovery=bool(amendment),training_state=dict(optimizer=optimizer.state_dict(),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=rng_state(True)))\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 197, in evaluate_validation\n    try:return collect(False)\n               ~~~~~~~^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 189, in collect\n    try:num,p=checked_validation_batch(model,images,y,weights,fp32)\n              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\research\\train.py\", line 163, in checked_validation_batch\n    raise NonfiniteValidation(dict(reason='nonfinite_forward_or_loss',precision='fp32' if fp32 else 'amp_fp16',\n    ...<2 lines>...\n        loss_finite=bool(torch.isfinite(num)),probabilities_nonfinite=int((~torch.isfinite(probabilities)).sum())))\nNonfiniteValidation: Nonfinite validation batch: {\"reason\": \"nonfinite_forward_or_loss\", \"precision\": \"amp_fp16\", \"logits_nan\": 7, \"logits_inf\": 0, \"bad_logit_rows\": [6], \"loss_finite\": false, \"probabilities_nonfinite\": 7}\n"
+    },
+    "s19_resnet101_none_exploratory_seed42": {
+      "status": "running",
+      "attempts": 1,
+      "pid": 11320,
+      "create_time": 1791098106.4534166,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "research.train",
+        "--config",
+        "research/configs/phase3/s19_resnet101_none_exploratory_seed42.json"
+      ],
+      "resumed": false,
+      "console": "results\\architecture_selection\\final_v1\\s19_resnet101_none_exploratory_seed42.console.log"
+    }
+  },
+  "master_pid": 25660,
+  "create_time": 1791097539.9619708,
+  "manifest_sha256": "a878b274b4f2021213a97701328c05d74960f68e595724b5ff4c1a8e5045c681",
+  "execution_mode": "sequential"
+}

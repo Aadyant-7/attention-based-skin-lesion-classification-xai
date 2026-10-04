@@ -1,0 +1,11 @@
+a,b,a_errors,b_errors,both_errors,a_fixes_b,b_fixes_a,agreement,disagreement,scope
+s06_convnext_tiny_none_exploratory_seed42,s18_convnext_small_none_exploratory_seed42,124,117,67,50,57,0.9214903526280772,0.07850964737192283,diagnostic overlap; no oracle routing or inference use of true labels
+s06_convnext_tiny_none_exploratory_seed42,s10_efficientnet_v2_s_none_exploratory_seed42,124,158,69,89,55,0.8928809048569527,0.10711909514304724,diagnostic overlap; no oracle routing or inference use of true labels
+s06_convnext_tiny_none_exploratory_seed42,s03_efficientnet_b0_none_exploratory_seed42,124,205,72,133,52,0.865602129075183,0.13439787092481703,diagnostic overlap; no oracle routing or inference use of true labels
+s06_convnext_tiny_none_exploratory_seed42,s19_resnet101_none_exploratory_seed42,124,179,72,107,52,0.8802395209580839,0.11976047904191617,diagnostic overlap; no oracle routing or inference use of true labels
+s18_convnext_small_none_exploratory_seed42,s10_efficientnet_v2_s_none_exploratory_seed42,117,158,67,91,50,0.8968729208250167,0.10312707917498337,diagnostic overlap; no oracle routing or inference use of true labels
+s18_convnext_small_none_exploratory_seed42,s03_efficientnet_b0_none_exploratory_seed42,117,205,68,137,49,0.8682634730538922,0.1317365269461078,diagnostic overlap; no oracle routing or inference use of true labels
+s18_convnext_small_none_exploratory_seed42,s19_resnet101_none_exploratory_seed42,117,179,67,112,50,0.8835662009314704,0.1164337990685296,diagnostic overlap; no oracle routing or inference use of true labels
+s10_efficientnet_v2_s_none_exploratory_seed42,s03_efficientnet_b0_none_exploratory_seed42,158,205,82,123,76,0.850964737192282,0.1490352628077179,diagnostic overlap; no oracle routing or inference use of true labels
+s10_efficientnet_v2_s_none_exploratory_seed42,s19_resnet101_none_exploratory_seed42,158,179,88,91,70,0.8795741849634066,0.12042581503659348,diagnostic overlap; no oracle routing or inference use of true labels
+s03_efficientnet_b0_none_exploratory_seed42,s19_resnet101_none_exploratory_seed42,205,179,92,87,113,0.8522954091816367,0.14770459081836326,diagnostic overlap; no oracle routing or inference use of true labels

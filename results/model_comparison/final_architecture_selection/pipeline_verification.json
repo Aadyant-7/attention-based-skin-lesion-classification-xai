@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "equal_candidates": 4,
+  "additional_weighted_candidates": 2,
+  "model_count": 3,
+  "test_images_loaded": false,
+  "gpu_postprocessing": false,
+  "architecture_frozen": true
+}

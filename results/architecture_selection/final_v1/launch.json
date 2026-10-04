@@ -1,0 +1,13 @@
+{
+  "authorized_candidates": [
+    "s16_efficientnet_b3_none_exploratory_seed42",
+    "s19_resnet101_none_exploratory_seed42"
+  ],
+  "master_pid": 2032,
+  "test_loader": false,
+  "automatic_handoffs": true,
+  "automatic_postprocessing": true,
+  "command": "-u -m research.run_final_architecture_selection",
+  "execution_mode": "sequential",
+  "launched_at": "2026-10-04T12:35:39.9537955+05:30"
+}

@@ -1,0 +1,21 @@
+{
+  "member_set": [
+    "s18_convnext_small_none_exploratory_seed42",
+    "s10_efficientnet_v2_s_none_exploratory_seed42",
+    "s03_efficientnet_b0_none_exploratory_seed42"
+  ],
+  "equal_run": "s20_final_equal_01_exploratory_seed42",
+  "fixed_weights": [
+    [
+      0.4,
+      0.4,
+      0.2
+    ],
+    [
+      0.5,
+      0.25,
+      0.25
+    ]
+  ],
+  "reason": "One strongest equal set; parent strength ranking frozen; exactly2 additional templates"
+}

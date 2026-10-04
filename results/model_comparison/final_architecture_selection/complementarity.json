@@ -1,0 +1,562 @@
+[
+  {
+    "a": "s06_convnext_tiny_none_exploratory_seed42",
+    "b": "s18_convnext_small_none_exploratory_seed42",
+    "a_errors": 124,
+    "b_errors": 117,
+    "both_errors": 67,
+    "a_fixes_b": 50,
+    "b_fixes_a": 57,
+    "agreement": 0.9214903526280772,
+    "disagreement": 0.07850964737192283,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 14,
+        "a_fixes_b": 1,
+        "b_fixes_a": 2
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 1,
+        "a_fixes_b": 0,
+        "b_fixes_a": 2
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 14,
+        "a_fixes_b": 11,
+        "b_fixes_a": 16
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 3,
+        "a_fixes_b": 2,
+        "b_fixes_a": 0
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 19,
+        "a_fixes_b": 14,
+        "b_fixes_a": 18
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 15,
+        "a_fixes_b": 20,
+        "b_fixes_a": 19
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 1,
+        "a_fixes_b": 2,
+        "b_fixes_a": 0
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s06_convnext_tiny_none_exploratory_seed42",
+    "b": "s10_efficientnet_v2_s_none_exploratory_seed42",
+    "a_errors": 124,
+    "b_errors": 158,
+    "both_errors": 69,
+    "a_fixes_b": 89,
+    "b_fixes_a": 55,
+    "agreement": 0.8928809048569527,
+    "disagreement": 0.10711909514304724,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 11,
+        "a_fixes_b": 7,
+        "b_fixes_a": 5
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 1,
+        "a_fixes_b": 9,
+        "b_fixes_a": 2
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 18,
+        "a_fixes_b": 26,
+        "b_fixes_a": 12
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 3,
+        "a_fixes_b": 1,
+        "b_fixes_a": 0
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 25,
+        "a_fixes_b": 25,
+        "b_fixes_a": 12
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 11,
+        "a_fixes_b": 21,
+        "b_fixes_a": 23
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 0,
+        "a_fixes_b": 0,
+        "b_fixes_a": 1
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s06_convnext_tiny_none_exploratory_seed42",
+    "b": "s03_efficientnet_b0_none_exploratory_seed42",
+    "a_errors": 124,
+    "b_errors": 205,
+    "both_errors": 72,
+    "a_fixes_b": 133,
+    "b_fixes_a": 52,
+    "agreement": 0.865602129075183,
+    "disagreement": 0.13439787092481703,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 10,
+        "a_fixes_b": 8,
+        "b_fixes_a": 6
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 3,
+        "a_fixes_b": 10,
+        "b_fixes_a": 0
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 19,
+        "a_fixes_b": 27,
+        "b_fixes_a": 11
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 2,
+        "a_fixes_b": 1,
+        "b_fixes_a": 1
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 19,
+        "a_fixes_b": 31,
+        "b_fixes_a": 18
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 18,
+        "a_fixes_b": 55,
+        "b_fixes_a": 16
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 1,
+        "a_fixes_b": 1,
+        "b_fixes_a": 0
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s06_convnext_tiny_none_exploratory_seed42",
+    "b": "s19_resnet101_none_exploratory_seed42",
+    "a_errors": 124,
+    "b_errors": 179,
+    "both_errors": 72,
+    "a_fixes_b": 107,
+    "b_fixes_a": 52,
+    "agreement": 0.8802395209580839,
+    "disagreement": 0.11976047904191617,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 11,
+        "a_fixes_b": 8,
+        "b_fixes_a": 5
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 2,
+        "a_fixes_b": 6,
+        "b_fixes_a": 1
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 19,
+        "a_fixes_b": 31,
+        "b_fixes_a": 11
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 3,
+        "a_fixes_b": 2,
+        "b_fixes_a": 0
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 25,
+        "a_fixes_b": 23,
+        "b_fixes_a": 12
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 11,
+        "a_fixes_b": 36,
+        "b_fixes_a": 23
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 1,
+        "a_fixes_b": 1,
+        "b_fixes_a": 0
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s18_convnext_small_none_exploratory_seed42",
+    "b": "s10_efficientnet_v2_s_none_exploratory_seed42",
+    "a_errors": 117,
+    "b_errors": 158,
+    "both_errors": 67,
+    "a_fixes_b": 91,
+    "b_fixes_a": 50,
+    "agreement": 0.8968729208250167,
+    "disagreement": 0.10312707917498337,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 11,
+        "a_fixes_b": 7,
+        "b_fixes_a": 4
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 1,
+        "a_fixes_b": 9,
+        "b_fixes_a": 0
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 13,
+        "a_fixes_b": 31,
+        "b_fixes_a": 12
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 4,
+        "a_fixes_b": 0,
+        "b_fixes_a": 1
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 23,
+        "a_fixes_b": 27,
+        "b_fixes_a": 10
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 15,
+        "a_fixes_b": 17,
+        "b_fixes_a": 20
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 0,
+        "a_fixes_b": 0,
+        "b_fixes_a": 3
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s18_convnext_small_none_exploratory_seed42",
+    "b": "s03_efficientnet_b0_none_exploratory_seed42",
+    "a_errors": 117,
+    "b_errors": 205,
+    "both_errors": 68,
+    "a_fixes_b": 137,
+    "b_fixes_a": 49,
+    "agreement": 0.8682634730538922,
+    "disagreement": 0.1317365269461078,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 10,
+        "a_fixes_b": 8,
+        "b_fixes_a": 5
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 1,
+        "a_fixes_b": 12,
+        "b_fixes_a": 0
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 14,
+        "a_fixes_b": 32,
+        "b_fixes_a": 11
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 2,
+        "a_fixes_b": 1,
+        "b_fixes_a": 3
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 22,
+        "a_fixes_b": 28,
+        "b_fixes_a": 11
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 17,
+        "a_fixes_b": 56,
+        "b_fixes_a": 18
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 2,
+        "a_fixes_b": 0,
+        "b_fixes_a": 1
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s18_convnext_small_none_exploratory_seed42",
+    "b": "s19_resnet101_none_exploratory_seed42",
+    "a_errors": 117,
+    "b_errors": 179,
+    "both_errors": 67,
+    "a_fixes_b": 112,
+    "b_fixes_a": 50,
+    "agreement": 0.8835662009314704,
+    "disagreement": 0.1164337990685296,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 12,
+        "a_fixes_b": 7,
+        "b_fixes_a": 3
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 1,
+        "a_fixes_b": 7,
+        "b_fixes_a": 0
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 15,
+        "a_fixes_b": 35,
+        "b_fixes_a": 10
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 4,
+        "a_fixes_b": 1,
+        "b_fixes_a": 1
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 20,
+        "a_fixes_b": 28,
+        "b_fixes_a": 13
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 13,
+        "a_fixes_b": 34,
+        "b_fixes_a": 22
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 2,
+        "a_fixes_b": 0,
+        "b_fixes_a": 1
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s10_efficientnet_v2_s_none_exploratory_seed42",
+    "b": "s03_efficientnet_b0_none_exploratory_seed42",
+    "a_errors": 158,
+    "b_errors": 205,
+    "both_errors": 82,
+    "a_fixes_b": 123,
+    "b_fixes_a": 76,
+    "agreement": 0.850964737192282,
+    "disagreement": 0.1490352628077179,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 11,
+        "a_fixes_b": 7,
+        "b_fixes_a": 7
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 3,
+        "a_fixes_b": 10,
+        "b_fixes_a": 7
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 26,
+        "a_fixes_b": 20,
+        "b_fixes_a": 18
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 2,
+        "a_fixes_b": 1,
+        "b_fixes_a": 2
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 24,
+        "a_fixes_b": 26,
+        "b_fixes_a": 26
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 16,
+        "a_fixes_b": 57,
+        "b_fixes_a": 16
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 0,
+        "a_fixes_b": 2,
+        "b_fixes_a": 0
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s10_efficientnet_v2_s_none_exploratory_seed42",
+    "b": "s19_resnet101_none_exploratory_seed42",
+    "a_errors": 158,
+    "b_errors": 179,
+    "both_errors": 88,
+    "a_fixes_b": 91,
+    "b_fixes_a": 70,
+    "agreement": 0.8795741849634066,
+    "disagreement": 0.12042581503659348,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 12,
+        "a_fixes_b": 7,
+        "b_fixes_a": 6
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 2,
+        "a_fixes_b": 6,
+        "b_fixes_a": 8
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 27,
+        "a_fixes_b": 23,
+        "b_fixes_a": 17
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 3,
+        "a_fixes_b": 2,
+        "b_fixes_a": 1
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 31,
+        "a_fixes_b": 17,
+        "b_fixes_a": 19
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 13,
+        "a_fixes_b": 34,
+        "b_fixes_a": 19
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 0,
+        "a_fixes_b": 2,
+        "b_fixes_a": 0
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  },
+  {
+    "a": "s03_efficientnet_b0_none_exploratory_seed42",
+    "b": "s19_resnet101_none_exploratory_seed42",
+    "a_errors": 205,
+    "b_errors": 179,
+    "both_errors": 92,
+    "a_fixes_b": 87,
+    "b_fixes_a": 113,
+    "agreement": 0.8522954091816367,
+    "disagreement": 0.14770459081836326,
+    "per_class": {
+      "akiec": {
+        "support": 49,
+        "both_wrong": 11,
+        "a_fixes_b": 8,
+        "b_fixes_a": 7
+      },
+      "bcc": {
+        "support": 77,
+        "both_wrong": 4,
+        "a_fixes_b": 4,
+        "b_fixes_a": 9
+      },
+      "bkl": {
+        "support": 165,
+        "both_wrong": 31,
+        "a_fixes_b": 19,
+        "b_fixes_a": 15
+      },
+      "df": {
+        "support": 17,
+        "both_wrong": 3,
+        "a_fixes_b": 2,
+        "b_fixes_a": 0
+      },
+      "mel": {
+        "support": 167,
+        "both_wrong": 24,
+        "a_fixes_b": 24,
+        "b_fixes_a": 26
+      },
+      "nv": {
+        "support": 1007,
+        "both_wrong": 18,
+        "a_fixes_b": 29,
+        "b_fixes_a": 55
+      },
+      "vasc": {
+        "support": 21,
+        "both_wrong": 1,
+        "a_fixes_b": 1,
+        "b_fixes_a": 1
+      }
+    },
+    "scope": "diagnostic overlap; no oracle routing or inference use of true labels"
+  }
+]

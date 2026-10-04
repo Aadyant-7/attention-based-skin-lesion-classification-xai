@@ -1,0 +1,30 @@
+{
+  "member_sets": [
+    [
+      "s18_convnext_small_none_exploratory_seed42",
+      "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "s03_efficientnet_b0_none_exploratory_seed42"
+    ],
+    [
+      "s06_convnext_tiny_none_exploratory_seed42",
+      "s19_resnet101_none_exploratory_seed42"
+    ],
+    [
+      "s18_convnext_small_none_exploratory_seed42",
+      "s19_resnet101_none_exploratory_seed42"
+    ],
+    [
+      "s18_convnext_small_none_exploratory_seed42",
+      "s19_resnet101_none_exploratory_seed42",
+      "s10_efficientnet_v2_s_none_exploratory_seed42"
+    ]
+  ],
+  "parent_hashes": {
+    "s18_convnext_small_none_exploratory_seed42": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+    "s03_efficientnet_b0_none_exploratory_seed42": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d",
+    "s06_convnext_tiny_none_exploratory_seed42": "86a4e98809591a4c767d68d2a90004304c0afe441240b48cc60d987dfd52e27b",
+    "s19_resnet101_none_exploratory_seed42": "85f9bf9e5eaae39bca288d4397f9dddd1c583832fd1f12126f593c9b8858d8b1"
+  },
+  "selection_rules": "After verified standalones, qualify newmodels ataccuracy>=.88/F1>=.79 andfix>=20Tinyerrors; freeze<=2pairs,<=3triples,<=1four using qualification/error-overlap rules. Always compare Small replacement in S12. Exactly2non-equal predetermined global templates for one strongest equal set; no grid/per-class weights. Maximum8total candidates."
+}

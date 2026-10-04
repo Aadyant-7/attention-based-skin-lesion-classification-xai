@@ -1,0 +1,6 @@
+{
+  "experiment_id": "s16_efficientnet_b3_none_exploratory_seed42",
+  "status": "failed",
+  "error": "NonfiniteValidation('Nonfinite validation batch: {\"reason\": \"nonfinite_forward_or_loss\", \"precision\": \"amp_fp16\", \"logits_nan\": 7, \"logits_inf\": 0, \"bad_logit_rows\": [6], \"loss_finite\": false, \"probabilities_nonfinite\": 7}')",
+  "committed_epochs": 11
+}

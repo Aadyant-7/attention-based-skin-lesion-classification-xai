@@ -1,0 +1,16 @@
+{
+  "status": "verified_completed",
+  "exact_probabilities_sha256": "5ef7806318e9a28bbe26e5f371a045a905844fec0497517cb893bf035f9c4030",
+  "parent_prediction_hashes": {
+    "s18_convnext_small_none_exploratory_seed42": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+    "s03_efficientnet_b0_none_exploratory_seed42": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d"
+  },
+  "parent_checkpoint_hashes": {
+    "s18_convnext_small_none_exploratory_seed42": "ece76c8c94f9f8e030613155811251b211007b1643a6e70de64413dfad8ac4ef",
+    "s10_efficientnet_v2_s_none_exploratory_seed42": "120b621b6ddc280c0929273121b149e4c7e90aec4c088c4da0c5b41a1dce62f5",
+    "s03_efficientnet_b0_none_exploratory_seed42": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c"
+  },
+  "test_images_loaded": false,
+  "gpu_used": false
+}

@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s19_resnet101_none_exploratory_seed42",
+  "status": "completed",
+  "epochs": 20,
+  "best_epoch": 19,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.8809048569527611,
+  "selected_macro_f1": 0.7920318955927467,
+  "best_macro_f1": 0.8052728230168089
+}

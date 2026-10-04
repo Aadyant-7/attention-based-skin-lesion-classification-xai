@@ -1,0 +1,122 @@
+[
+  {
+    "model": "mobilenet_v3_large",
+    "epochs": 20,
+    "accuracy_peak_epoch": 16,
+    "f1_peak_epoch": 16,
+    "best_accuracy": 0.8602794411177644,
+    "final_accuracy": 0.8516300731869594,
+    "last5_accuracy": [
+      0.8602794411177644,
+      0.846307385229541,
+      0.850964737192282,
+      0.850964737192282,
+      0.8516300731869594
+    ]
+  },
+  {
+    "model": "efficientnet_b0",
+    "epochs": 20,
+    "accuracy_peak_epoch": 20,
+    "f1_peak_epoch": 20,
+    "best_accuracy": 0.863606121091151,
+    "final_accuracy": 0.863606121091151,
+    "last5_accuracy": [
+      0.854956753160346,
+      0.8622754491017964,
+      0.8609447771124418,
+      0.8609447771124418,
+      0.863606121091151
+    ]
+  },
+  {
+    "model": "efficientnet_b0",
+    "epochs": 20,
+    "accuracy_peak_epoch": 19,
+    "f1_peak_epoch": 16,
+    "best_accuracy": 0.863606121091151,
+    "final_accuracy": 0.8569527611443779,
+    "last5_accuracy": [
+      0.8629407850964738,
+      0.8589487691284099,
+      0.850964737192282,
+      0.863606121091151,
+      0.8569527611443779
+    ]
+  },
+  {
+    "model": "efficientnet_v2_s",
+    "epochs": 20,
+    "accuracy_peak_epoch": 15,
+    "f1_peak_epoch": 15,
+    "best_accuracy": 0.8948769128409847,
+    "final_accuracy": 0.8895542248835662,
+    "last5_accuracy": [
+      0.8888888888888888,
+      0.8762475049900199,
+      0.8822355289421158,
+      0.8915502328675982,
+      0.8895542248835662
+    ]
+  },
+  {
+    "model": "densenet201",
+    "epochs": 17,
+    "accuracy_peak_epoch": 12,
+    "f1_peak_epoch": 14,
+    "best_accuracy": 0.8962075848303394,
+    "final_accuracy": 0.8948769128409847,
+    "last5_accuracy": [
+      0.8835662009314704,
+      0.895542248835662,
+      0.8855622089155023,
+      0.886892880904857,
+      0.8948769128409847
+    ]
+  },
+  {
+    "model": "convnext_tiny",
+    "epochs": 20,
+    "accuracy_peak_epoch": 17,
+    "f1_peak_epoch": 18,
+    "best_accuracy": 0.9174983366600132,
+    "final_accuracy": 0.9075182967398536,
+    "last5_accuracy": [
+      0.9021956087824352,
+      0.9174983366600132,
+      0.914836992681304,
+      0.9075182967398536,
+      0.9075182967398536
+    ]
+  },
+  {
+    "model": "convnext_small",
+    "epochs": 20,
+    "accuracy_peak_epoch": 17,
+    "f1_peak_epoch": 17,
+    "best_accuracy": 0.9221556886227544,
+    "final_accuracy": 0.9128409846972722,
+    "last5_accuracy": [
+      0.9194943446440452,
+      0.9221556886227544,
+      0.9135063206919496,
+      0.9141716566866268,
+      0.9128409846972722
+    ]
+  },
+  {
+    "model": "resnet101",
+    "epochs": 20,
+    "accuracy_peak_epoch": 19,
+    "f1_peak_epoch": 17,
+    "best_accuracy": 0.8809048569527611,
+    "final_accuracy": 0.8669328010645376,
+    "last5_accuracy": [
+      0.867598137059215,
+      0.8782435129740519,
+      0.8762475049900199,
+      0.8809048569527611,
+      0.8669328010645376
+    ]
+  }
+]

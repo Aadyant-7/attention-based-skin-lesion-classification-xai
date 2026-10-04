@@ -1,0 +1,21 @@
+{
+  "weights": "EfficientNet_B3_Weights.IMAGENET1K_V1",
+  "url": "https://download.pytorch.org/models/efficientnet_b3_rwightman-b3899882.pth",
+  "sha256": "b3899882250c22946d0229d266049fcd133c169233530b36b9ffa7983988362f",
+  "parameters": 10706991,
+  "metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+  "code_hashes": {
+    "research/train.py": "9f684fc3246cfedf80a6b4e8a2138039bc711282a3fda770671a30634fc846ba",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "torch": "2.11.0+cu128",
+  "device": "NVIDIA GeForce RTX 4060",
+  "microbatch": 16,
+  "effective_batch": 32,
+  "native_attention": "SE retained for EfficientNet/MobileNet; none means no added CBAM"
+}
