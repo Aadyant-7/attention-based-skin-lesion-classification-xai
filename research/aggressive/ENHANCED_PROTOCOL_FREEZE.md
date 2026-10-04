@@ -21,3 +21,6 @@ Pre-launch resource amendment: microbatch32,effective32; defaultprecisionbf16; m
 Pre-launch resource amendment: microbatch16,effective32; defaultprecisionbf16; model-specific FP32 initial overrides if present inconfig. Disposable fit-probe conservative maximum estimate 11.8hours plus I/O/validation/XAI; no outcome seen.
 
 Pre-launch resource amendment: microbatch16,effective32; defaultprecisionbf16; model-specific FP32 initial overrides if present inconfig. Disposable fit-probe conservative maximum estimate 4.1hours plus I/O/validation/XAI; no outcome seen.
+# Live stopping amendment
+
+The user authorized meaningful-improvement stopping on 2026-10-04. `stopping.py` and `MEANINGFUL_STOPPING_AMENDMENT.md` now supersede the original patience/min_delta stopping fields below: minimum25/maximum50; meaningful accuracy +.002 OR macro-F1 +.003; patience12; late plateau10 after30 with LR opportunity and three-epoch settling. Raw best checkpoint ranking remains unchanged. The original config is retained byte-for-byte for recovery identity; all training/data/architecture fields remain unchanged.

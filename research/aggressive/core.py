@@ -20,9 +20,18 @@ CKPT=ROOT/'checkpoints/aggressive_enhanced/v1'
 def config():return json.loads(CONFIG.read_text(encoding='utf-8'))
 
 def hashes():
-    names=['research/aggressive/'+n for n in ['config.json','core.py','train.py','results.py','xai.py','prepare.py']]
+    names=['research/aggressive/'+n for n in ['config.json','core.py','train.py','results.py','xai.py','prepare.py','stopping.py']]
     names+=['research/run_aggressive_enhanced_pipeline.py','research/common.py','research/train.py','research/strict_protocol.py','research/models.py','research/plots.py','research/registry.py','src/cbam.py']
     return {n:sha256(ROOT/n) for n in names}
+
+def compatible_sources(saved):
+    current=hashes()
+    if saved==current:return True
+    amendment=OUT/'stopping_policy_amendment.json'
+    if not amendment.exists():return False
+    record=json.loads(amendment.read_text())
+    allowed=[record.get('original_source_hashes'),record.get('legacy_live_disk_hashes')]
+    return record.get('status')=='authorized' and saved in allowed and current==record['amended_source_hashes']
 
 def data(c):
     # Existing checked reader excludes test rows BEFORE parsing any labels.

@@ -10,6 +10,8 @@ from research.train import atomic_checkpoint,rng_state,restore_rng,runtime_versi
 from research.registry import FIELDS,upsert
 from research.plots import metric_figures,training_figures
 from .core import config,CONFIG,OUT,CKPT,hashes,data,Images,EnhancedModel,mixed_focal_sum,weighted_metrics,predictions,stopping_state,epoch_batches,micro_ranges
+from .core import compatible_sources
+from .stopping import stopping_status
 
 class NumericalFailure(FloatingPointError):pass
 
@@ -47,7 +49,7 @@ def run(spec,resume=False,force_fp32=False):
     train,val,w=data(c);snapshot=None
     if resume:
         snapshot=torch.load(ck/'latest.pt',map_location='cpu',weights_only=False)
-        if snapshot['config']!=c or snapshot['spec']!=spec or snapshot['source_hashes']!=hashes() or snapshot['runtime_versions']!=runtime_versions():raise ValueError('Incompatible recovery checkpoint')
+        if snapshot['config']!=c or snapshot['spec']!=spec or not compatible_sources(snapshot['source_hashes']) or snapshot['runtime_versions']!=runtime_versions():raise ValueError('Incompatible recovery checkpoint')
         if tensor_nonfinite_names(snapshot['model']) or tensor_nonfinite_names(snapshot['optimizer']):raise ValueError('Nonfinite resume state; preserved')
     else:
         folder.mkdir(parents=True,exist_ok=False);ck.mkdir(parents=True,exist_ok=False)
@@ -68,7 +70,7 @@ def run(spec,resume=False,force_fp32=False):
     w=w.cuda();val_loader=DataLoader(Images(val,c),batch_size=c['microbatch'],num_workers=c['workers'],shuffle=False,pin_memory=True)
     tick=time.perf_counter()
     def payload():return dict(config=c,spec=spec,source_hashes=hashes(),runtime_versions=runtime_versions(),model=model.state_dict(),optimizer=opt.state_dict(),scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),
-        history=history,best=best,f1best=f1best,early_reference=reference,stale=stale,runtime_seconds=runtime+time.perf_counter()-tick,optimizer_updates=updates,precision=precision,rng=rng_state(True))
+        history=history,best=best,f1best=f1best,early_reference=reference,stale=stale,meaningful_stopping=stopping_status(history),runtime_seconds=runtime+time.perf_counter()-tick,optimizer_updates=updates,precision=precision,rng=rng_state(True))
     if not resume:
         enum=models.get_model_weights(spec['model'])[spec['weights'].split('.')[-1]]
         cached=torch.hub.get_dir()+'/checkpoints/'+enum.url.rsplit('/',1)[-1]
@@ -76,9 +78,13 @@ def run(spec,resume=False,force_fp32=False):
         atomic_checkpoint(ck/'latest.pt',payload())
     upsert(registry_row(spec,c,history,'running'))
     log.info('START %s resume=%s precision=%s validation=FP32 train=%d val=%d no test loader',rid,resume,precision,len(train),len(val))
+    log.info('Meaningful stopping v2: accuracy +.002 OR macroF1 +.003; min25/max50; patience12; plateau10 after30; LR settle3')
     try:
         for epoch in range(len(history)+1,51):
-            if epoch-1>=c['minimum_epochs'] and stale>=c['patience']:break
+            stopping=stopping_status(history)
+            if stopping['stop']:
+                atomic_checkpoint(ck/'latest.pt',payload())
+                log.info('STOP at committed boundary: %s',stopping['reason']);break
             epoch_tick=time.perf_counter();model.train();stage=model.stage(epoch);torch.cuda.reset_peak_memory_stats()
             loader=DataLoader(Images(train,c,True),batch_sampler=epoch_batches(len(train),c['seed']+epoch),num_workers=c['workers'],pin_memory=True,
                 worker_init_fn=seed_worker,generator=torch.Generator().manual_seed(c['seed']+epoch))
@@ -114,11 +120,13 @@ def run(spec,resume=False,force_fp32=False):
             state={k:v.detach().cpu().clone() for k,v in model.state_dict().items()}
             if best is None or metrics['accuracy']>best['metrics']['accuracy']:best=dict(epoch=epoch,metrics=metrics,predictions=preds,model=state)
             if f1best is None or metrics['macro_f1']>f1best['metrics']['macro_f1']:f1best=dict(epoch=epoch,metrics=metrics,predictions=preds,model=state)
-            reference,stale=stopping_state(reference,stale,metrics['accuracy'],epoch,c);history.append(row)
+            history.append(row);stopping=stopping_status(history);stale=stopping['stale']
+            row.update(meaningful_accuracy_reference=stopping['accuracy_reference'],meaningful_macro_f1_reference=stopping['macro_f1_reference'],meaningful_stale=stale,meaningful_accuracy_stale=stopping['accuracy_stale'],meaningful_macro_f1_stale=stopping['macro_f1_stale'],stopping_policy='meaningful_v2')
             atomic_checkpoint(ck/'latest.pt',payload())
             for name,chosen in [('best.pt',best),('best_macro_f1.pt',f1best)]:
                 if chosen['epoch']==epoch:atomic_checkpoint(ck/name,dict(config=c,spec=spec,model=chosen['model'],best_epoch=epoch,metrics=chosen['metrics'],source_hashes=hashes()))
             write_csv(folder/'history.csv',history);upsert(registry_row(spec,c,history,'running'))
+            write_json(folder/'early_stopping_state.json',stopping)
             log.info('EPOCH %d accuracy=%.6f macroF1=%.6f best=%d stale=%d',epoch,metrics['accuracy'],metrics['macro_f1'],best['epoch'],stale)
             del state
         for name,suffix,chosen in [('best.pt','',best),('best_macro_f1.pt','_macro_f1',f1best)]:
@@ -132,7 +140,8 @@ def run(spec,resume=False,force_fp32=False):
         training_figures(pd.DataFrame(history),folder/'figures',spec['model']+' | enhanced development',selection_metric='accuracy')
         write_csv(folder/'lr_history.csv',[{k:r[k] for k in ['epoch','backbone_lr','lr_after','stage']} for r in history])
         summary=dict(best_epoch=best['epoch'],best_macro_f1_epoch=f1best['epoch'],stopping_epoch=len(history),runtime_seconds=runtime+time.perf_counter()-tick,
-            precision=precision,fp32_fallback=bool((folder/'precision_amendment.json').exists()),parameters=sum(p.numel() for p in model.parameters()),optimizer_updates=updates,stop_reason='patience' if stale>=12 else 'epoch_cap')
+            precision=precision,fp32_fallback=bool((folder/'precision_amendment.json').exists()),parameters=sum(p.numel() for p in model.parameters()),optimizer_updates=updates,stop_reason=stopping_status(history)['reason'],meaningful_stopping=stopping_status(history))
+        write_json(folder/'early_stopping_state.json',stopping_status(history))
         write_json(folder/'training_summary.json',summary)
         record=registry_row(spec,c,history,'completed');record.update(best_epoch=best['epoch'],checkpoint=relative(ck/'best.pt'),checkpoint_available_local=True,checkpoint_sha256=sha256(ck/'best.pt'),
             metrics_path=relative(folder/'validation_metrics.json'),plots_dir=relative(folder/'figures'),runtime_seconds=summary['runtime_seconds'],val_loss=best['metrics']['loss'],**{k:best['metrics'][k] for k in ['accuracy','macro_precision','macro_recall','macro_f1']})
