@@ -1,0 +1,124 @@
+{
+  "source_hashes": {
+    "results/structured_experiments/s28_efficientnet_b0_final_strict_seed42/validation_predictions.csv": "7955f9d6346a08856fbcae92088630a70f2da7a82dbb153e2329770b07f0918a",
+    "results/structured_experiments/s29_convnext_tiny_final_strict_seed42/validation_predictions.csv": "771a34d342d7283599cf680b59cd9abf5768b33cb7428a8934d7830059d9ae0f",
+    "results/structured_experiments/s30_efficientnet_v2_s_final_strict_seed42/validation_predictions.csv": "e598445769e55ec23a79964fee3b31a143898aadc7912e8f42ea9fe6d4d40a80",
+    "results/final_strict/v1/ensemble/validation_predictions.csv": "84ae7ea9af7f6db6c0d6993d60f90a83e47ccae3960f60842b3647a3c031664b"
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "images": 1503,
+  "unique_validation_lesions": 1122,
+  "fold_checks": [
+    {
+      "fold": 0,
+      "meta_train_images": 1202,
+      "heldout_images": 301,
+      "lesion_overlap": 0,
+      "heldout_class_support": {
+        "akiec": 10,
+        "bcc": 15,
+        "bkl": 33,
+        "df": 4,
+        "mel": 33,
+        "nv": 202,
+        "vasc": 4
+      }
+    },
+    {
+      "fold": 1,
+      "meta_train_images": 1202,
+      "heldout_images": 301,
+      "lesion_overlap": 0,
+      "heldout_class_support": {
+        "akiec": 10,
+        "bcc": 16,
+        "bkl": 33,
+        "df": 4,
+        "mel": 33,
+        "nv": 201,
+        "vasc": 4
+      }
+    },
+    {
+      "fold": 2,
+      "meta_train_images": 1202,
+      "heldout_images": 301,
+      "lesion_overlap": 0,
+      "heldout_class_support": {
+        "akiec": 10,
+        "bcc": 16,
+        "bkl": 33,
+        "df": 3,
+        "mel": 33,
+        "nv": 201,
+        "vasc": 5
+      }
+    },
+    {
+      "fold": 3,
+      "meta_train_images": 1203,
+      "heldout_images": 300,
+      "lesion_overlap": 0,
+      "heldout_class_support": {
+        "akiec": 10,
+        "bcc": 15,
+        "bkl": 33,
+        "df": 3,
+        "mel": 34,
+        "nv": 201,
+        "vasc": 4
+      }
+    },
+    {
+      "fold": 4,
+      "meta_train_images": 1203,
+      "heldout_images": 300,
+      "lesion_overlap": 0,
+      "heldout_class_support": {
+        "akiec": 10,
+        "bcc": 15,
+        "bkl": 33,
+        "df": 4,
+        "mel": 33,
+        "nv": 201,
+        "vasc": 4
+      }
+    }
+  ],
+  "feature_probability_floor_count": 6,
+  "version": "cpu_fusion_v1",
+  "scope": "post-test development diagnostic; no new untouched-test result",
+  "seed": 42,
+  "folds": 5,
+  "fold_method": "StratifiedGroupKFold, lesion_id, shuffled",
+  "methods": [
+    "fixed_equal_probability_reference",
+    "fixed_equal_log_probability",
+    "crossfit_regularized_class_bias",
+    "crossfit_regularized_probability_stacking"
+  ],
+  "class_bias_l2": 0.05,
+  "class_bias_bounds": [
+    -2,
+    2
+  ],
+  "stacking_C": 1.0,
+  "meta_fit_criterion": "unweighted cross-entropy; no class-weight/threshold/grid search",
+  "minimum_material_accuracy_gain": 0.01,
+  "macro_f1_must_not_decline": true,
+  "melanoma_and_bkl_recall_must_not_decline": true,
+  "positive_gain_required_in_at_least_folds": 4,
+  "log_probability_floor": 1e-12,
+  "limitations": "Base checkpoints were previously selected using this validation cohort. Cross-fitting protects only new meta-fitting; it cannot undo prior selection optimism.",
+  "locked_test_loaded": false,
+  "gpu_used": false,
+  "cnn_training": false
+}

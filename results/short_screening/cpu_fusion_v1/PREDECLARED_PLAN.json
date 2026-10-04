@@ -1,0 +1,29 @@
+{
+  "version": "cpu_fusion_v1",
+  "scope": "post-test development diagnostic; no new untouched-test result",
+  "seed": 42,
+  "folds": 5,
+  "fold_method": "StratifiedGroupKFold, lesion_id, shuffled",
+  "methods": [
+    "fixed_equal_probability_reference",
+    "fixed_equal_log_probability",
+    "crossfit_regularized_class_bias",
+    "crossfit_regularized_probability_stacking"
+  ],
+  "class_bias_l2": 0.05,
+  "class_bias_bounds": [
+    -2,
+    2
+  ],
+  "stacking_C": 1.0,
+  "meta_fit_criterion": "unweighted cross-entropy; no class-weight/threshold/grid search",
+  "minimum_material_accuracy_gain": 0.01,
+  "macro_f1_must_not_decline": true,
+  "melanoma_and_bkl_recall_must_not_decline": true,
+  "positive_gain_required_in_at_least_folds": 4,
+  "log_probability_floor": 1e-12,
+  "limitations": "Base checkpoints were previously selected using this validation cohort. Cross-fitting protects only new meta-fitting; it cannot undo prior selection optimism.",
+  "locked_test_loaded": false,
+  "gpu_used": false,
+  "cnn_training": false
+}
