@@ -1,0 +1,21 @@
+{
+  "status": "verified",
+  "checkpoint_manifest": {
+    "best.pt": {
+      "sha256": "ffe3a7f00c5371824fa46a8f9e5f864f53e15fcc533f5bf0263648f8573a1e93",
+      "metrics_sha256": "65d7052a2f15b232a83da454b2daafe867ce1e3aaad76da79f7057c37de63db8",
+      "prediction_sha256": "771a34d342d7283599cf680b59cd9abf5768b33cb7428a8934d7830059d9ae0f"
+    },
+    "best_macro_f1.pt": {
+      "sha256": "260ce5c4b82c7c168af2288cdac137beb1b6eabd854b8e53c7afbb03003fede7",
+      "metrics_sha256": "5f486dbe2ab195bd694357437e7985120b909b4fe20527269f513d19b1fb5648",
+      "prediction_sha256": "468055e655294df886afd4a85078e90eb87c19cd4befb96caacbf728f24f16d5"
+    },
+    "latest.pt": {
+      "sha256": "1d0a9a5f86c662e46d6f4a35487cb6d1b45ada5f838bfedb5083c93e8d4e6eb2",
+      "metrics_sha256": "b07897c393c8010ecc0fd26296c9245805d0a62c4883fd9526c30eb89f17011e",
+      "prediction_sha256": "f9510a1554e9f9253c64a2df5d53f8961cefa6d22ff08491d14003869f10ba9d"
+    }
+  },
+  "test_loader": false
+}

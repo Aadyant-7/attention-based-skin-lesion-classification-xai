@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "member_count": 3,
+  "fixed_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "test_labels_read": false,
+  "test_loader": false,
+  "architecture_search_closed": true
+}

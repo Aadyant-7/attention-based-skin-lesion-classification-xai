@@ -1,0 +1,20 @@
+{
+  "parameters": 4016515,
+  "optimizer_updates": 6784,
+  "best_epoch": 19,
+  "selection_metric": "accuracy",
+  "secondary_best_epoch": 18,
+  "stopping_epoch": 31,
+  "runtime_seconds": 1862.9842459,
+  "maximum_epochs": 50,
+  "minimum_epochs": 15,
+  "fp32_validation_fallback_used": false,
+  "validation_precision": "fp32_from_start",
+  "gradient_clip_norm": 1.0,
+  "amp_skipped_optimizer_updates": 5,
+  "stop_reason": "patience",
+  "validation_timing_scope": "End-to-end validation batch loop including loading/transfers; not pure GPU latency",
+  "best_validation_ms_per_image": 8.566113905522538,
+  "validation_recovery_amendment": null,
+  "selected_validation_precision": "fp32"
+}

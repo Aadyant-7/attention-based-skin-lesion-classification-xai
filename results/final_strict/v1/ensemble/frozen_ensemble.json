@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "model": "efficientnet_b0",
+      "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s28_efficientnet_b0_final_strict_seed42/best.pt",
+      "sha256": "4ad09eed40c57970addce772043267d835bb93c41ec64a81fd7a0c7d7ed9a50f",
+      "best_epoch": 19
+    },
+    {
+      "model": "convnext_tiny",
+      "weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s29_convnext_tiny_final_strict_seed42/best.pt",
+      "sha256": "ffe3a7f00c5371824fa46a8f9e5f864f53e15fcc533f5bf0263648f8573a1e93",
+      "best_epoch": 33
+    },
+    {
+      "model": "efficientnet_v2_s",
+      "weights": "EfficientNet_V2_S_Weights.IMAGENET1K_V1",
+      "checkpoint": "checkpoints/structured/s30_efficientnet_v2_s_final_strict_seed42/best.pt",
+      "sha256": "8c3256e2a8a1335c00a38095aaa24f2fe9af136fc95044d5b419b880bb75f230",
+      "best_epoch": 24
+    }
+  ],
+  "weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "precision": "fp32",
+  "views": [
+    "identity"
+  ],
+  "input_size": 224,
+  "selection": "independent earliest accuracy winners; no strict weight/epoch fusion search",
+  "split_verification": {
+    "protocol": "strict_lesion_disjoint",
+    "split_manifest": "data/splits/split_assignments.csv",
+    "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "image_counts": {
+      "train": 7009,
+      "val": 1503,
+      "test": 1503
+    },
+    "lesion_counts": {
+      "train": 5230,
+      "val": 1122,
+      "test": 1118
+    },
+    "lesion_overlaps": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "test_labels_read": false,
+    "test_images_loaded": false,
+    "test_loader_instantiated": false
+  },
+  "test_evaluated": false
+}

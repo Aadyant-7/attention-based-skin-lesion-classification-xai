@@ -1,0 +1,27 @@
+{
+  "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+  "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+  "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+  "parameters": 4016515,
+  "metadata_scope": "train/validation metadata only; test labels excluded",
+  "fresh_imagenet_initialization": true,
+  "exploratory_checkpoint_reused": false,
+  "code_hashes": {
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/strict_protocol.py": "eb43d9fefda37bb4ba94c2b51f3c10171648543bc240af1e4c74a4fb41c1503c",
+    "research/run_final_strict_training.py": "4b7967a739604f78609f691611a45ba4cefc41d5eaf4a23f628b81b413afa0d9",
+    "research/final_strict_results.py": "4ac129d360aea7a6a98fa413f5a9e8cd2a01f1f7bdb51cb2031c77c7f0e6caaa",
+    "research/configs/final_strict_recipe_v1.json": "b5e646bf7b4a18e5acf8dfb5302a89834bbf26b25b536a084be14b587cc4e58a",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/strict_experiment.py": "84b9d83119b0a786465a5271c7d0c11f35cd05b6ff4cb69df5618c13a5ed190a",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "torch": "2.11.0+cu128",
+  "device": "NVIDIA GeForce RTX 4060",
+  "microbatch": 16,
+  "effective_batch": 32,
+  "native_attention": "SE retained for EfficientNet/MobileNet; none means no added CBAM"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s29_convnext_tiny_final_strict_seed42",
+  "status": "completed",
+  "epochs": 45,
+  "best_epoch": 33,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.8902195608782435,
+  "selected_macro_f1": 0.8146779326573336,
+  "best_macro_f1": 0.8183308911984498
+}

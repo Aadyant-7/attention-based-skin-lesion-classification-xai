@@ -1,0 +1,10 @@
+{
+  "accuracy_percentage_points": -2.328675981370598,
+  "macro_f1": -0.033967741591815814,
+  "ensemble_vs_strongest_accuracy_pp": 1.131071190951427,
+  "ensemble_vs_strongest_f1": 0.028808458943449855,
+  "correct": 1355,
+  "incorrect": 148,
+  "gained": 48,
+  "lost": 31
+}

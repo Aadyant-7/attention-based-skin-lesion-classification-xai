@@ -1,0 +1,10 @@
+{
+  "experiment_id": "s30_efficientnet_v2_s_final_strict_seed42",
+  "status": "completed",
+  "epochs": 36,
+  "best_epoch": 24,
+  "selection_metric": "accuracy",
+  "best_accuracy": 0.8542914171656687,
+  "selected_macro_f1": 0.7426847932343824,
+  "best_macro_f1": 0.7471525926608615
+}
