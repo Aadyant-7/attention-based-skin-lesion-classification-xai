@@ -1,0 +1,16 @@
+{
+  "weights": "DenseNet201_Weights.IMAGENET1K_V1",
+  "weights_sha256": "c1103571aad4f45d0b5b15556d92944db94c33bee68cd58babba3d76225a6401",
+  "fresh_imagenet": true,
+  "no_previous_training_checkpoint": true,
+  "parameters": 19211143,
+  "runtime_versions": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  }
+}

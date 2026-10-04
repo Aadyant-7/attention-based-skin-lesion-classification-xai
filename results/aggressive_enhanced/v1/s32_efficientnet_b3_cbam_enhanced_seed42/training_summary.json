@@ -1,0 +1,42 @@
+{
+  "best_epoch": 31,
+  "best_macro_f1_epoch": 31,
+  "stopping_epoch": 43,
+  "runtime_seconds": 5480.741804499998,
+  "precision": "bf16",
+  "fp32_fallback": false,
+  "parameters": 11912849,
+  "optimizer_updates": 9417,
+  "stop_reason": "late_meaningful_plateau",
+  "meaningful_stopping": {
+    "policy": {
+      "version": "meaningful_v2",
+      "max_epochs": 50,
+      "minimum_epochs": 25,
+      "accuracy_delta": 0.002,
+      "macro_f1_delta": 0.003,
+      "patience": 12,
+      "plateau_after_epoch": 30,
+      "plateau_window": 10,
+      "lr_settle_epochs": 3
+    },
+    "accuracy_reference": 0.8602794411177644,
+    "macro_f1_reference": 0.7410182622565825,
+    "last_accuracy_improvement_epoch": 31,
+    "last_macro_f1_improvement_epoch": 31,
+    "last_meaningful_epoch": 31,
+    "stale": 12,
+    "stop": true,
+    "reason": "late_meaningful_plateau",
+    "accuracy_stale": 12,
+    "macro_f1_stale": 12,
+    "lr_reduction_epochs": [
+      10,
+      20,
+      30,
+      40
+    ],
+    "flat_or_declining": true,
+    "lr_settled": true
+  }
+}

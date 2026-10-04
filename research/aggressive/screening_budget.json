@@ -1,0 +1,13 @@
+{
+  "status": "cpu_review_only_no_gpu_candidate_justified",
+  "automatic_long_queue": false,
+  "pilot_epochs": 5,
+  "continuation_total_epochs": 10,
+  "maximum_screening_epochs": 15,
+  "default_full_run_maximum_epochs": 20,
+  "accuracy_meaningful_delta": 0.002,
+  "macro_f1_meaningful_delta": 0.003,
+  "gate": "Require matched-protocol, matched-stage evidence and useful error complementarity; cap cannot be extended by patience",
+  "original_locked_test": "closed; no further inference",
+  "active_gpu_runs": 0
+}

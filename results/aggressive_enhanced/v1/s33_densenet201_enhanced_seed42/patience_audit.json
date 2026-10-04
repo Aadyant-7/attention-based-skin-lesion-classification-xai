@@ -1,0 +1,86 @@
+{
+  "policy": {
+    "version": "meaningful_v2",
+    "max_epochs": 50,
+    "minimum_epochs": 25,
+    "accuracy_delta": 0.002,
+    "macro_f1_delta": 0.003,
+    "patience": 12,
+    "plateau_after_epoch": 30,
+    "plateau_window": 10,
+    "lr_settle_epochs": 3
+  },
+  "resets": [
+    {
+      "epoch": 1,
+      "accuracy_change_from_previous": 0.0,
+      "macro_f1_change_from_previous": 0.0,
+      "accuracy_reference": 0.6713240186294078,
+      "macro_f1_reference": 0.19015723483977984
+    },
+    {
+      "epoch": 2,
+      "accuracy_change_from_previous": 0.009314703925482393,
+      "macro_f1_change_from_previous": 0.08561990228672864,
+      "accuracy_reference": 0.6806387225548902,
+      "macro_f1_reference": 0.2757771371265085
+    },
+    {
+      "epoch": 3,
+      "accuracy_change_from_previous": 0.009980039920159722,
+      "macro_f1_change_from_previous": 0.10649148876625064,
+      "accuracy_reference": 0.6906187624750499,
+      "macro_f1_reference": 0.3822686258927591
+    },
+    {
+      "epoch": 5,
+      "accuracy_change_from_previous": 0.018629407850964785,
+      "macro_f1_change_from_previous": 0.03507240701786141,
+      "accuracy_reference": 0.6906187624750499,
+      "macro_f1_reference": 0.4121421369931572
+    },
+    {
+      "epoch": 6,
+      "accuracy_change_from_previous": 0.06520292747837653,
+      "macro_f1_change_from_previous": 0.07333485281269969,
+      "accuracy_reference": 0.7059214903526281,
+      "macro_f1_reference": 0.4854769898058569
+    },
+    {
+      "epoch": 7,
+      "accuracy_change_from_previous": 0.06387225548902198,
+      "macro_f1_change_from_previous": 0.09033305949199893,
+      "accuracy_reference": 0.7697937458416501,
+      "macro_f1_reference": 0.5758100492978558
+    },
+    {
+      "epoch": 10,
+      "accuracy_change_from_previous": 0.028609447771124397,
+      "macro_f1_change_from_previous": 0.04952601682589819,
+      "accuracy_reference": 0.7904191616766467,
+      "macro_f1_reference": 0.6257651563794738
+    },
+    {
+      "epoch": 11,
+      "accuracy_change_from_previous": 0.02528276779773786,
+      "macro_f1_change_from_previous": 0.05716215158083282,
+      "accuracy_reference": 0.8157019294743846,
+      "macro_f1_reference": 0.6829273079603067
+    },
+    {
+      "epoch": 17,
+      "accuracy_change_from_previous": 0.017298735861610126,
+      "macro_f1_change_from_previous": 0.02800384912899878,
+      "accuracy_reference": 0.8210246174318031,
+      "macro_f1_reference": 0.6829273079603067
+    },
+    {
+      "epoch": 18,
+      "accuracy_change_from_previous": 0.0026613439787092075,
+      "macro_f1_change_from_previous": -0.0030616361592563646,
+      "accuracy_reference": 0.8236859614105123,
+      "macro_f1_reference": 0.6829273079603067
+    }
+  ],
+  "explanation": "Either metric crossing its last meaningful reference resets; cumulative small gains can cross a threshold. Raw-best changes alone do not reset."
+}

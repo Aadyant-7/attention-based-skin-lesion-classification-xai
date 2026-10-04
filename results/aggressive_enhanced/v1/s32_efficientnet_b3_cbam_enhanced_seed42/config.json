@@ -1,0 +1,93 @@
+{
+  "recipe": {
+    "version": "aggressive_enhanced_v1",
+    "protocol": "enhanced_lesion_disjoint_development",
+    "split_manifest": "data/splits/split_assignments.csv",
+    "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "seed": 42,
+    "image_size": 224,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "models": [
+      {
+        "id": "s32_efficientnet_b3_cbam_enhanced_seed42",
+        "model": "efficientnet_b3",
+        "attention": "cbam",
+        "weights": "EfficientNet_B3_Weights.IMAGENET1K_V1",
+        "lr": 0.0001
+      },
+      {
+        "id": "s33_densenet201_enhanced_seed42",
+        "model": "densenet201",
+        "attention": "none",
+        "weights": "DenseNet201_Weights.IMAGENET1K_V1",
+        "lr": 7.5e-05
+      },
+      {
+        "id": "s34_resnet101_enhanced_seed42",
+        "model": "resnet101",
+        "attention": "none",
+        "weights": "ResNet101_Weights.IMAGENET1K_V2",
+        "lr": 5e-05
+      }
+    ],
+    "microbatch": 16,
+    "effective_batch": 32,
+    "workers": 2,
+    "normalization_mean": [
+      0.7630306432877934,
+      0.5459358876080843,
+      0.5705884149341853
+    ],
+    "normalization_std": [
+      0.1402932921658137,
+      0.15144422149154305,
+      0.16872958982765698
+    ],
+    "training_precision": "bf16",
+    "validation_precision": "fp32",
+    "focal_gamma": 2.2,
+    "weight_rule": "clip(N_train/(7*n_class),1,20); normalize arithmetic mean1; no manual multipliers",
+    "mixup_alpha": 0.2,
+    "mixup_probability": 0.3,
+    "weight_decay": 0.0015,
+    "gradient_clip": 0.5,
+    "max_epochs": 50,
+    "minimum_epochs": 25,
+    "patience": 12,
+    "min_delta": 0.0003,
+    "scheduler": "StepLR gamma.7 every10epochs",
+    "freeze_head_epochs": 2,
+    "last_stage_epochs": 3,
+    "selection": "earliest true maximum standalone validation accuracy; independent macroF1 winner retained",
+    "primary_weights": [
+      0.4,
+      0.4,
+      0.2
+    ],
+    "secondary_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "old_test_excluded": true,
+    "target_accuracy": 0.93,
+    "numerical_policy": "BF16 where supported; FP32 loss/BN/validation. One safe automatic full-FP32 retry from last valid committed boundary; no clamping/skipping. FP32 micro<=16 preserves effective batch.",
+    "terminal_batch": "All training images consumed; singleton terminal batch merges preceding batch; terminal33 split safely for BN",
+    "xai_cases": "deterministic validation category coverage; Grad-CAM of weighted probability target per branch plus composite; original/spatial/channel attention artifacts; max14cases; no test"
+  },
+  "model_spec": {
+    "id": "s32_efficientnet_b3_cbam_enhanced_seed42",
+    "model": "efficientnet_b3",
+    "attention": "cbam",
+    "weights": "EfficientNet_B3_Weights.IMAGENET1K_V1",
+    "lr": 0.0001
+  }
+}

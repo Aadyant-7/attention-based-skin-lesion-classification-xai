@@ -117,6 +117,10 @@ def stale_lock(log):
     lock.unlink();log.warning('Orphaned registry lock released; no training writer observed')
 
 def main():
+    budget=OUT/'budget_control.json'
+    if budget.exists() and json.loads(budget.read_text()).get('automatic_training_disabled'):
+        print('Long-run queue disabled by budget decision; use CPU screening report, not this launcher.',flush=True)
+        return
     c=config();pre=json.loads((OUT/'preflight_complete.json').read_text())
     if pre['status']!='passed' or pre['config_sha256']!=sha256(CONFIG):raise RuntimeError('Prepared GPU preflight does not match recipe')
     if [s['model'] for s in c['models']]!=['efficientnet_b3','densenet201','resnet101'] or c['models'][0]['attention']!='cbam' or c['primary_weights']!=[.4,.4,.2]:raise ValueError('Fixed architecture/fusion changed')

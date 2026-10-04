@@ -1,0 +1,9 @@
+{
+  "status": "budget_stopped",
+  "reason": "User authorized autonomous short screening instead of long speculative runs",
+  "committed_epoch": 19,
+  "partial_epoch_discarded": true,
+  "checkpoints_preserved": true,
+  "remaining_resnet_cancelled": true,
+  "automatic_training_disabled": true
+}

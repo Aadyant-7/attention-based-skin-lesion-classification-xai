@@ -1,0 +1,8 @@
+{
+  "status": "training",
+  "epoch": 19,
+  "step": 201,
+  "steps": 219,
+  "stage": "full",
+  "precision": "bf16"
+}

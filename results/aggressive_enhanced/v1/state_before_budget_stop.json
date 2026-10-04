@@ -1,0 +1,64 @@
+{
+  "status": "training",
+  "models": {
+    "s32_efficientnet_b3_cbam_enhanced_seed42": {
+      "status": "completed",
+      "attempts": 2,
+      "fp32_recovery": false,
+      "pid": 13668,
+      "create_time": 1791128412.6603053,
+      "resumed": true,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "research.aggressive.train",
+        "--id",
+        "s32_efficientnet_b3_cbam_enhanced_seed42",
+        "--resume"
+      ]
+    },
+    "s33_densenet201_enhanced_seed42": {
+      "status": "running",
+      "attempts": 1,
+      "fp32_recovery": false,
+      "pid": 32412,
+      "create_time": 1791128462.3221672,
+      "resumed": false,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "research.aggressive.train",
+        "--id",
+        "s33_densenet201_enhanced_seed42"
+      ]
+    },
+    "s34_resnet101_enhanced_seed42": {
+      "status": "pending",
+      "attempts": 0,
+      "fp32_recovery": false
+    }
+  },
+  "source_hashes": {
+    "research/aggressive/config.json": "a0d64453d2a508ce2c5d590474a696b759bf094ea0a54d43a8e2e4c6596257fd",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22",
+    "research/aggressive/train.py": "8360cfd84b6893b9de51445f77453d1e7c1625dda55459d95dafd8657c898ddf",
+    "research/aggressive/results.py": "2c1f43f07e516f8069aa87b4565fbe3a9fbbcd49b397959980a17a95d720e622",
+    "research/aggressive/xai.py": "d4c28dbcaa2e5d23c91ab1839ab0880420597eed58940b6eb6b9651eb71596e8",
+    "research/aggressive/prepare.py": "f970edc7de35d4cb4cc9584659bacd11cbb6b68a800462da10cb7dbd0d1fe7d5",
+    "research/aggressive/stopping.py": "6835b74b44c75f77fa75577d0c9b5f2b8c707dd9a36be2ef08263523f6f5716b",
+    "research/run_aggressive_enhanced_pipeline.py": "313a54a79cc43548b3727531574753b7f4c126d8f8cdae61d12063fd352abb75",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/train.py": "9f684fc3246cfedf80a6b4e8a2138039bc711282a3fda770671a30634fc846ba",
+    "research/strict_protocol.py": "eb43d9fefda37bb4ba94c2b51f3c10171648543bc240af1e4c74a4fb41c1503c",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "src/cbam.py": "71a5b43378da0e38f294cb81cfc226358083733eadce456797bc8e17adc3758d"
+  },
+  "master_pid": 8896,
+  "create_time": 1791128403.8506684,
+  "execution_mode": "sequential",
+  "error": "RuntimeError('Stage failed after safe precision policy; diagnostics preserved: s32_efficientnet_b3_cbam_enhanced_seed42')"
+}
