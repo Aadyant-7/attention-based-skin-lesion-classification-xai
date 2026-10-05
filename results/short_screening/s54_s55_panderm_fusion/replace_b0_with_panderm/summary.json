@@ -1,0 +1,13 @@
+{
+  "experiment": "S55",
+  "accuracy": 0.9328010645375915,
+  "macro_precision": 0.9127174734428726,
+  "macro_recall": 0.8626737907307973,
+  "macro_f1": 0.8841116124758559,
+  "mel_recall": 0.7964071856287425,
+  "gained": 8,
+  "lost": 13,
+  "net": -5,
+  "directional_gate_passed": false,
+  "material_gate_passed": false
+}

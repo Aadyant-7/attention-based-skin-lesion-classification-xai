@@ -1,0 +1,16 @@
+{
+  "question": "Can a domain-pretrained frozen transformer plus its existing SVM head improve the current ensemble?",
+  "first": "S54: equal six members, S53 five plus PanDerm identity SVM",
+  "fallback": "S55 only if S54 fails directional gate: equal five, replace B0 with PanDerm in S53",
+  "views": [
+    "identity"
+  ],
+  "pan_selection": "Existing exploratory RBF SVM C=10, no refit or alternate heads",
+  "directional_gate": "Accuracy improves over S53 with macro-F1 and melanoma recall nondecreasing",
+  "material_gate": "At least +0.005 absolute accuracy over S53, macro-F1 and melanoma recall nondecreasing",
+  "scope": "Post-test exploratory development; same validation used for previous checkpoint and method selection",
+  "limit": "At most two fixed combinations; no weight, threshold, checkpoint or TTA search",
+  "test_loaded": false,
+  "gpu_used": false,
+  "new_training": false
+}

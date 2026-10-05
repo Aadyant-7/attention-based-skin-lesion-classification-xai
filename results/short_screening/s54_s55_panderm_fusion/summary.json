@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "reference_accuracy": 0.936127744510978,
+  "reference_macro_f1": 0.8868574111567237,
+  "complementarity": {
+    "panderm_accuracy": 0.884896872920825,
+    "fixes_reference_errors": 28,
+    "errors_on_reference_correct": 105
+  },
+  "studies": [
+    {
+      "experiment": "S54",
+      "accuracy": 0.9334664005322688,
+      "macro_precision": 0.9190357498918642,
+      "macro_recall": 0.8594299206654681,
+      "macro_f1": 0.8850078093345294,
+      "mel_recall": 0.8023952095808383,
+      "gained": 4,
+      "lost": 8,
+      "net": -4,
+      "directional_gate_passed": false,
+      "material_gate_passed": false
+    },
+    {
+      "experiment": "S55",
+      "accuracy": 0.9328010645375915,
+      "macro_precision": 0.9127174734428726,
+      "macro_recall": 0.8626737907307973,
+      "macro_f1": 0.8841116124758559,
+      "mel_recall": 0.7964071856287425,
+      "gained": 8,
+      "lost": 13,
+      "net": -5,
+      "directional_gate_passed": false,
+      "material_gate_passed": false
+    }
+  ],
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Bounded predefined study complete; no additional combinations or automatic training"
+}

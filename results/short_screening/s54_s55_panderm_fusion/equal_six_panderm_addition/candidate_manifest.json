@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "86e3aaf6d5f923be1cec47b4f3b037d65d87bf29f379263c45b17e1c710cc983",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361"
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d"
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "e410278092fce3c6996d222d6aac896f090201dc1819b09e8f400b59c3ffa2ef",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9"
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5"
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s03_efficientnet_b0_none_exploratory_seed42/validation_predictions.csv",
+      "prediction_sha256": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c"
+    },
+    {
+      "run": "legacy_panderm_identity_rbf_svc",
+      "prediction_file": ".cache/panderm_base_image_level_v1/panderm_rbf_svc_val_probabilities.npz",
+      "prediction_sha256": "8c2a6961aa153b55bd919174ddc4607794bdce949632a51576f28784ef15e578",
+      "checkpoint": "checkpoints/exploratory/panderm_base_image_level_v1/panderm_rbf_svc.joblib",
+      "checkpoint_sha256": "aa6534174c97de66ad50a58a7f001744c6c98f5c6993721798a43372da53fd0c",
+      "backbone": ".cache/panderm_bb_data6_checkpoint-499.pth",
+      "backbone_sha256": "be1e0fb108b3bc58721cb5195f136c948160799438f222acf1fd142230ac1ff1",
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "source_protocol": "results/exploratory/panderm_base_image_level_v1/protocol.json"
+    }
+  ],
+  "weights": [
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666
+  ],
+  "inference": "Preserved identity probabilities; no new GPU inference"
+}

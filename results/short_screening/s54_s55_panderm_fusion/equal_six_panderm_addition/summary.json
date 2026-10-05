@@ -1,0 +1,13 @@
+{
+  "experiment": "S54",
+  "accuracy": 0.9334664005322688,
+  "macro_precision": 0.9190357498918642,
+  "macro_recall": 0.8594299206654681,
+  "macro_f1": 0.8850078093345294,
+  "mel_recall": 0.8023952095808383,
+  "gained": 4,
+  "lost": 8,
+  "net": -4,
+  "directional_gate_passed": false,
+  "material_gate_passed": false
+}
