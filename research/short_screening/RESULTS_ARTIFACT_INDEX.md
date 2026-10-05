@@ -2,7 +2,13 @@
 
 All paths below are relative to the project root.
 
-## Current best exploratory result
+## Latest provisional exploratory candidate
+
+S53 equal five-model fusion adds S03 EfficientNet-B0 to the four members below, with weight 0.20 each. It achieved **93.6128% accuracy / 0.886857 macro-F1** (1,407 correct / 96 incorrect). The net gain is only two images; it is not established as a material improvement. This cached-probability result has not yet been freshly reproduced with all-five FP32 inference.
+
+Scores, predictions, probabilities, class metrics and PNG/PDF figures: `results/short_screening/s53_equal_five_b0_addition/`. Interpretation: `research/short_screening/S53_EQUAL_FIVE_CLOSEOUT.md`.
+
+## GPU-reproduced four-model reference
 
 **93.4797% accuracy / 0.883680 macro-F1**, 1,405 correct / 98 incorrect on 1,503 exploratory validation images. Equal fusion of ConvNeXt-Tiny, ConvNeXt-Small, DenseNet201 and EfficientNetV2-S using their saved macro-F1-selected checkpoints.
 
@@ -41,4 +47,4 @@ Within each result folder:
 - `research/FINAL_LOCKED_TEST_RESULTS.md`: original held-out test report.
 - `results/final_locked_test/v1/ensemble/test_metrics.json`: original frozen ensemble test metrics, **86.7598% accuracy / 0.794473 macro-F1**.
 
-The current 93.48% is exploratory validation performance from subsequent development; it is not a new locked-test accuracy. No test evaluation is repeated by these studies.
+The 93.48% reference and provisional 93.61% candidate are exploratory validation performance from subsequent development; neither is a new locked-test accuracy. No test evaluation is repeated by these studies.

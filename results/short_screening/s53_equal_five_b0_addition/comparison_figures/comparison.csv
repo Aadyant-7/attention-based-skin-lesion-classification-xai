@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+S46 equal four reference,0.9347970725216235,0.88367951625566
+S53 equal five with B0,0.936127744510978,0.8868574111567237

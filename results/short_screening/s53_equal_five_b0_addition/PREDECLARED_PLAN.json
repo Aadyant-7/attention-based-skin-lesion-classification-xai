@@ -1,0 +1,19 @@
+{
+  "question": "Does EfficientNet-B0 add useful complementary errors to the current four-model ensemble?",
+  "rule": "Equal probability average of current S46 members and S03 accuracy-selected EfficientNet-B0",
+  "current_selection": "Exact S46 macro-F1 winner checkpoints",
+  "rescue_selection": "Preserved S03 raw-accuracy winner",
+  "weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "scope": "Exploratory validation already used for selection; not an independent test",
+  "candidate_rationale": "Among unused MobileNet, B0, CBAM and ResNet, B0 fixes most current errors (31); this label-based candidate screening is development selection, not independent evidence.",
+  "study_limit": "One equal five-model combination; no weight or checkpoint alternatives",
+  "gate": "Accuracy improvement with no macro-F1 or melanoma recall decline",
+  "test_loaded": false,
+  "gpu_used": false
+}
