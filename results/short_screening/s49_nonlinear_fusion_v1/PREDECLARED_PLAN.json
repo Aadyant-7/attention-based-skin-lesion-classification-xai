@@ -1,0 +1,23 @@
+{
+  "model": "HistGradientBoostingClassifier",
+  "parameters": {
+    "loss": "log_loss",
+    "learning_rate": 0.05,
+    "max_iter": 100,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 30,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "features": "Concatenated four model probability vectors; no images or new embeddings",
+  "folds": 5,
+  "fold_method": "StratifiedGroupKFold; lesion groups; shuffled seed42",
+  "scope": "Post-test exploratory development; CNNs previously selected on this full validation cohort",
+  "gate": ">=+.005 accuracy over S46; macro-F1 and MEL recall nondecrease; positive accuracy gain in >=4/5 heldout meta folds",
+  "search": false,
+  "budget": "One configuration, five meta folds, no follow-up hyperparameter tuning",
+  "deployment": "No whole-validation final fit; reported probabilities are heldout-meta outputs, not an independently tested deployable model",
+  "test_loaded": false,
+  "gpu_used": false
+}

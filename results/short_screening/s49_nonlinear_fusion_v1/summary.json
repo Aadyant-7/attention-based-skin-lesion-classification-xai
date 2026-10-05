@@ -1,0 +1,83 @@
+{
+  "status": "completed",
+  "comparisons": [
+    {
+      "display_name": "S46 fixed soft voting",
+      "accuracy": 0.9347970725216235,
+      "macro_f1": 0.88367951625566
+    },
+    {
+      "display_name": "S49 heldout-meta nonlinear fusion",
+      "accuracy": 0.927478376580173,
+      "macro_f1": 0.8713347034348784
+    }
+  ],
+  "gained": 20,
+  "lost": 31,
+  "net": -11,
+  "positive_folds": 1,
+  "mel_recall": 0.8143712574850299,
+  "material_gate_passed": false,
+  "fold_checks": [
+    {
+      "fold": 0,
+      "meta_train_images": 1202,
+      "meta_holdout_images": 301,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9435215946843853,
+      "candidate_accuracy": 0.9269102990033222,
+      "gain_pp": -1.661129568106312
+    },
+    {
+      "fold": 1,
+      "meta_train_images": 1202,
+      "meta_holdout_images": 301,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9269102990033222,
+      "candidate_accuracy": 0.9401993355481728,
+      "gain_pp": 1.3289036544850585
+    },
+    {
+      "fold": 2,
+      "meta_train_images": 1202,
+      "meta_holdout_images": 301,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.920265780730897,
+      "candidate_accuracy": 0.9102990033222591,
+      "gain_pp": -0.9966777408637939
+    },
+    {
+      "fold": 3,
+      "meta_train_images": 1203,
+      "meta_holdout_images": 300,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9366666666666666,
+      "candidate_accuracy": 0.9266666666666666,
+      "gain_pp": -1.0000000000000009
+    },
+    {
+      "fold": 4,
+      "meta_train_images": 1203,
+      "meta_holdout_images": 300,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9466666666666667,
+      "candidate_accuracy": 0.9333333333333333,
+      "gain_pp": -1.3333333333333308
+    }
+  ],
+  "source_manifest": "results/short_screening/s46_all_f1_checkpoint_fusion/candidate_manifest.json",
+  "parameters": {
+    "loss": "log_loss",
+    "learning_rate": 0.05,
+    "max_iter": 100,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 30,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "limitations": "Post-test exploratory development; CNNs previously selected on this full validation cohort; cross-fitting only protects the meta-model, not prior CNN/checkpoint selection.",
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Single nonlinear configuration complete; stop, no tuning or automatic training"
+}

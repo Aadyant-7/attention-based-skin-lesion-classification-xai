@@ -1,0 +1,16 @@
+{
+  "methods": [
+    "hard_vote_probability_tiebreak",
+    "trimmed_middle_two"
+  ],
+  "hard_vote": "Each model votes for its highest-probability class; highest vote count wins; equal soft mean breaks ties only",
+  "trimmed": "For each class, sort four probabilities, discard highest/lowest, average middle two; normalize across classes",
+  "tiebreak_epsilon": 1e-06,
+  "weights": "fixed; no fitting",
+  "checkpoint_rule": "Exact four preserved S46 macro-F1 winners",
+  "scope": "Exploratory developmental validation, already used for model/epoch/method selection",
+  "gate": "Accuracy above S46, macro-F1 nondecrease and melanoma recall nondecrease; report modest gains as modest",
+  "study_limit": "Exactly two methods; no trim-fraction, epsilon, checkpoint or weight search",
+  "test_loaded": false,
+  "gpu_used": false
+}

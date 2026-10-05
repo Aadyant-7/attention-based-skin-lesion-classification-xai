@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "comparisons": [
+    {
+      "display_name": "S46 equal soft vote",
+      "accuracy": 0.9347970725216235,
+      "macro_f1": 0.88367951625566
+    },
+    {
+      "display_name": "hard_vote_probability_tiebreak",
+      "accuracy": 0.9341317365269461,
+      "macro_precision": 0.914407499405433,
+      "macro_recall": 0.8595821536323102,
+      "macro_f1": 0.8825066944118715
+    },
+    {
+      "display_name": "trimmed_middle_two",
+      "accuracy": 0.9334664005322688,
+      "macro_precision": 0.9131578659442436,
+      "macro_recall": 0.8573906385088694,
+      "macro_f1": 0.8805224544159739
+    }
+  ],
+  "decisions": {
+    "hard_vote_probability_tiebreak": {
+      "gained": 1,
+      "lost": 2,
+      "net": -1,
+      "mel_recall": 0.7964071856287425,
+      "adoption_gate_passed": false
+    },
+    "trimmed_middle_two": {
+      "gained": 2,
+      "lost": 4,
+      "net": -2,
+      "mel_recall": 0.7964071856287425,
+      "adoption_gate_passed": false
+    }
+  },
+  "source_manifest": "results/short_screening/s46_all_f1_checkpoint_fusion/candidate_manifest.json",
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Two-method budget exhausted; no further voting-rule variants or automatic training"
+}

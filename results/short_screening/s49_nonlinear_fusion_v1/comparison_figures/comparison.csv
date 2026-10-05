@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+S46 fixed soft voting,0.9347970725216235,0.88367951625566
+S49 heldout-meta nonlinear fusion,0.927478376580173,0.8713347034348784
