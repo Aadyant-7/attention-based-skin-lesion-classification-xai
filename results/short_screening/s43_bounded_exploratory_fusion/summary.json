@@ -1,0 +1,69 @@
+{
+  "status": "completed",
+  "comparisons": [
+    {
+      "display_name": "S42 equal probability baseline",
+      "accuracy": 0.9314703925482368,
+      "macro_precision": 0.9138148708631336,
+      "macro_recall": 0.8554053822701478,
+      "macro_f1": 0.8797441129336824
+    },
+    {
+      "display_name": "strong_convnext_weights",
+      "accuracy": 0.9301397205588823,
+      "macro_precision": 0.9115966669851723,
+      "macro_recall": 0.8575590143287309,
+      "macro_f1": 0.8798053739025001
+    },
+    {
+      "display_name": "tiny_emphasis_weights",
+      "accuracy": 0.929474384564205,
+      "macro_precision": 0.9132182751104587,
+      "macro_recall": 0.8559692766913269,
+      "macro_f1": 0.8797960160917586
+    },
+    {
+      "display_name": "equal_geometric_fusion",
+      "accuracy": 0.9281437125748503,
+      "macro_precision": 0.9105968630029583,
+      "macro_recall": 0.8504746004551069,
+      "macro_f1": 0.8753276235834967
+    }
+  ],
+  "decisions": {
+    "strong_convnext_weights": {
+      "gained": 7,
+      "lost": 9,
+      "net": -2,
+      "gain_pp": -0.13306719893545482,
+      "mel_recall": 0.7904191616766467,
+      "material_gate_passed": false
+    },
+    "tiny_emphasis_weights": {
+      "gained": 6,
+      "lost": 9,
+      "net": -3,
+      "gain_pp": -0.19960079840318778,
+      "mel_recall": 0.7904191616766467,
+      "material_gate_passed": false
+    },
+    "equal_geometric_fusion": {
+      "gained": 1,
+      "lost": 6,
+      "net": -5,
+      "gain_pp": -0.3326679973386537,
+      "mel_recall": 0.7904191616766467,
+      "material_gate_passed": false
+    }
+  },
+  "source_prediction_sha256": {
+    "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions.csv": "86a4e98809591a4c767d68d2a90004304c0afe441240b48cc60d987dfd52e27b",
+    "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions.csv": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+    "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions.csv": "ea2535350c8ae763dab9b935d73a0b1048a102060f2dd9ff4093be2d51affbe3",
+    "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions.csv": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c"
+  },
+  "interpretation": "Observed same-cohort developmental scores, not test or independent CV performance",
+  "gpu_used": false,
+  "test_loaded": false,
+  "decision": "Finite study complete; no automatic training or further weight trials"
+}

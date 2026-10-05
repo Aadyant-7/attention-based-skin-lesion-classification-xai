@@ -1,0 +1,41 @@
+{
+  "members": [
+    "s06_convnext_tiny_none_exploratory_seed42",
+    "s18_convnext_small_none_exploratory_seed42",
+    "s15_densenet201_none_exploratory_seed42",
+    "s10_efficientnet_v2_s_none_exploratory_seed42"
+  ],
+  "member_order": "Tiny, Small, Dense201, V2S",
+  "methods": {
+    "strong_convnext_weights": [
+      0.35,
+      0.35,
+      0.15,
+      0.15
+    ],
+    "tiny_emphasis_weights": [
+      0.4,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "equal_geometric_fusion": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  "rationale": {
+    "strong_convnext_weights": "70% weight to the two strongest standalone backbones; retain complementary Dense/V2S",
+    "tiny_emphasis_weights": "Favor Tiny, whose standalone macro-F1 exceeds Small; retain all other components",
+    "equal_geometric_fusion": "Fixed log-probability pooling, not fitting weights or routing using labels"
+  },
+  "probability_floor": 1e-08,
+  "protocol": "exploratory_image_level",
+  "evaluation": "repeatedly used development validation",
+  "search_limit": "Exactly three listed methods, no additional weights, checkpoints, clipping thresholds or cohorts",
+  "material_gate": ">=+.005 absolute accuracy vs S42 with nondecreasing macro-F1 and melanoma recall",
+  "test_loaded": false,
+  "gpu_used": false
+}

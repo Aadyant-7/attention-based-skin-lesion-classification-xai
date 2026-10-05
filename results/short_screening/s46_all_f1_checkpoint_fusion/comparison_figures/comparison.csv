@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+S42 accuracy winners equal fusion,0.9314703925482368,0.8797441129336824
+S46 macro-F1 winners equal fusion,0.9347970725216235,0.88367951625566

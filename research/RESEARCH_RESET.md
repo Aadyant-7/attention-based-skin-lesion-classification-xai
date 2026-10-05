@@ -17,7 +17,7 @@ All rows below are the same exploratory validation protocol. All used ImageNet t
 
 Frozen exploratory equal B0/ConvNeXt-Tiny/V2-S ensemble: 92.4817% / .877454 macro-F1. Correction after reviewing the complete final-selection table: highest prior numerical exploratory alternative was S27 at 92.7478% / .866355 macro-F1, not the initially quoted92.6148%.
 
-New CPU-only S42 equal ConvNeXt-Tiny/ConvNeXt-Small/DenseNet201/EfficientNetV2-S fusion reached93.1470% / .879744 on the SAME exploratory validation cohort. This is now the highest observed exploratory score, a modest improvement, not a new held-out test result. See `research/short_screening/S42_EXPLORATORY_RESULTS.md` for verification and limitations. Original strict/test results remain unchanged.
+CPU-only S42 equal ConvNeXt-Tiny/ConvNeXt-Small/DenseNet201/EfficientNetV2-S fusion reached93.1470% / .879744 on the SAME exploratory validation cohort. The subsequent single S46 ALL macro-F1 checkpoint rule reached93.4797% / .883680, now the highest observed exploratory score. Both are modest developmental improvements, not new held-out test results. See `research/short_screening/S42_EXPLORATORY_RESULTS.md` and `research/short_screening/S43_S46_EXPLORATORY_CLOSEOUT.md` for verification and limitations. Original strict/test results remain unchanged.
 
 Fresh strict ensemble validation: 90.1530% / .843486. Original one-time locked test: 86.7598% / .794473. These are different cohorts/protocols, not interchangeable estimates.
 
