@@ -1,0 +1,11 @@
+{
+  "experiment": "S60",
+  "accuracy": 0.9308050565535595,
+  "macro_f1": 0.8824018270851983,
+  "mel_recall": 0.7724550898203593,
+  "gained": 7,
+  "lost": 15,
+  "net": -8,
+  "directional_gate_passed": false,
+  "material_gate_passed": false
+}

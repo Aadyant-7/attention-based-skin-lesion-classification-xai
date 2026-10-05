@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checkpoints": [
+    {
+      "path": "checkpoints/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/best.pt",
+      "sha256": "c216df4cd4d20adcaa7202ec0d0a91ac3bcb9780c7cd4e0b1a4d9f13021c832b",
+      "epoch": 20,
+      "state_dict_strictly_loaded": true,
+      "finite": true
+    },
+    {
+      "path": "checkpoints/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/best_macro_f1.pt",
+      "sha256": "5096c94d1aa11c80cde62ab8f83f4e93768fdd91ee0fe33a31ddfc4d6251eec6",
+      "epoch": 18,
+      "state_dict_strictly_loaded": true,
+      "finite": true
+    },
+    {
+      "path": "checkpoints/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/latest.pt",
+      "sha256": "9d2b67984b5337edde061a46ed1e2f45e82cf3b9fb6cecce4f3c905e93bccbfe",
+      "epoch": 20,
+      "state_dict_strictly_loaded": true,
+      "finite": true
+    }
+  ],
+  "history_epochs": 20,
+  "best_accuracy": 0.9068529607451763,
+  "best_macro_f1": 0.8329744933935481,
+  "numerical_failure": false,
+  "validation_precision": [
+    "fp32"
+  ],
+  "skipped_training_updates": 6,
+  "final_train_accuracy": 1.0,
+  "test_loaded": false
+}

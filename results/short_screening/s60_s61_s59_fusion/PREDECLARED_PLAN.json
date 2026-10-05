@@ -1,0 +1,13 @@
+{
+  "checkpoint": "S59 raw accuracy winner epoch20 only; no alternative F1 checkpoint or epoch search",
+  "experiments": [
+    "S60: equal-six S53 + S59",
+    "S61: equal-five replace S06 Tiny in S53 with S59"
+  ],
+  "rationale": "S59 fixes24of96S53 errors; same-family replacement avoids adding correlated Tiny votes",
+  "adoption_gate": "Accuracy improves over S53, macro-F1 and melanoma recall nondecreasing",
+  "material_gate": "At least +.005 absolute accuracy over S53 with macro-F1 and melanoma recall nondecreasing",
+  "budget": "Exactly two fixed combinations; no weights, thresholds, epochs, GPU inference or training",
+  "scope": "Post-test exploratory development; repeated validation selection, not independent test",
+  "test_loaded": false
+}

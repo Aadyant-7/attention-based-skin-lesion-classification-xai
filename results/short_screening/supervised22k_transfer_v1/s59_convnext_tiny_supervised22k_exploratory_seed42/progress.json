@@ -1,0 +1,6 @@
+{
+  "status": "completed",
+  "pid": 24432,
+  "committed_epoch": 20,
+  "stop_reason": "hard20_epoch_cap"
+}

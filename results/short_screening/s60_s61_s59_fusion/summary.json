@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "s59_best_accuracy": 0.9068529607451763,
+  "reference_accuracy": 0.936127744510978,
+  "reference_macro_f1": 0.8868574111567237,
+  "s59_fixes_reference_errors": 24,
+  "s59_errors_on_reference_correct": 68,
+  "studies": [
+    {
+      "experiment": "S60",
+      "accuracy": 0.9308050565535595,
+      "macro_f1": 0.8824018270851983,
+      "mel_recall": 0.7724550898203593,
+      "gained": 7,
+      "lost": 15,
+      "net": -8,
+      "directional_gate_passed": false,
+      "material_gate_passed": false
+    },
+    {
+      "experiment": "S61",
+      "accuracy": 0.9308050565535595,
+      "macro_f1": 0.8846102444803655,
+      "mel_recall": 0.7904191616766467,
+      "gained": 10,
+      "lost": 18,
+      "net": -8,
+      "directional_gate_passed": false,
+      "material_gate_passed": false
+    }
+  ],
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Two predeclared comparisons complete; no epoch extension or further searches"
+}
