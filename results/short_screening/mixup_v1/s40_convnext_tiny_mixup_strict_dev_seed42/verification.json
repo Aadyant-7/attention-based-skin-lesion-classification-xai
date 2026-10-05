@@ -1,0 +1,57 @@
+{
+  "split": {
+    "protocol": "strict_lesion_disjoint",
+    "split_manifest": "data/splits/split_assignments.csv",
+    "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "image_counts": {
+      "train": 7009,
+      "val": 1503,
+      "test": 1503
+    },
+    "lesion_counts": {
+      "train": 5230,
+      "val": 1122,
+      "test": 1118
+    },
+    "lesion_overlaps": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "test_labels_read": false,
+    "test_images_loaded": false,
+    "test_loader_instantiated": false
+  },
+  "fresh_imagenet_initialization": true,
+  "pretrained_file": ".cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "fingerprints": {
+    "research/short_screening/controlled_mixup.py": "4cfdd63094f0d5a8cbc501b610b03ae782f245ede863f23a6d958a3e49ebc803",
+    "research/short_screening/mixup_v1.json": "81fe560f0eaae3d201feb57b26ef539a9dc8b826dcae200b9ab987f9708d35d2",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/strict_protocol.py": "eb43d9fefda37bb4ba94c2b51f3c10171648543bc240af1e4c74a4fb41c1503c",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "runtime_versions": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  },
+  "test_loaded": false
+}
