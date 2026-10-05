@@ -1,0 +1,17 @@
+{
+  "folds": 3,
+  "seed": 42,
+  "splitter": "StratifiedGroupKFold shuffled lesion_id groups on original training partition only",
+  "models": [
+    "square224",
+    "official236_crop224"
+  ],
+  "head": "Fixed fold-local StandardScaler + LogisticRegression C1 max_iter1000 seed42",
+  "imbalance": "Fold-training-only normalized sqrt inverse-frequency sample weights",
+  "gate": "Pooled candidate accuracy >= control+0.01; macro-F1 and melanoma recall nondecreasing; positive net correct in at least2/3 folds",
+  "limit": "One fixed paired comparison; no head/transform selection or hyperparameter search",
+  "purpose": "Cheap consistency evidence before any GPU training proposal; not final CNN/ensemble performance",
+  "heldout_validation_used_for_fit": false,
+  "test_loaded": false,
+  "gpu_used": false
+}

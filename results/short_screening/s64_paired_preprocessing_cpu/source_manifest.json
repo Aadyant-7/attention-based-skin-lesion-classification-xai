@@ -1,0 +1,20 @@
+{
+  "weights_path": ".cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth",
+  "weights_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+  "script_sha256": "b885a3ed237f741c76c95dd98b270e17c52479e5ad6227a894c838f700a6aa92",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "test_loaded": false,
+  "gpu_used": false,
+  "train_images": 7009,
+  "validation_images": 1503
+}

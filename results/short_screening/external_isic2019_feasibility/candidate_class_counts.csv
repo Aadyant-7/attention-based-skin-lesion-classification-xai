@@ -1,0 +1,8 @@
+class_name,current_ham_training_images,current_ham_training_lesions,external_candidate_images,known_lesion_id_candidates,known_external_lesion_groups,candidate_to_current_ratio
+akiec,229,166,737,737,236,3.2183406113537116
+bcc,359,244,2809,2809,983,7.8245125348189415
+bkl,769,541,1525,1327,542,1.9830949284785435
+df,81,57,124,124,40,1.5308641975308641
+mel,778,478,3409,3072,725,4.381748071979435
+nv,4693,3926,6170,4621,1692,1.3147240571063286
+vasc,100,74,111,111,37,1.11

@@ -1,0 +1,100 @@
+{
+  "status": "metadata_feasibility_only",
+  "source": "https://challenge.isic-archive.com/data/",
+  "training_csv_urls": {
+    "GroundTruth": "https://isic-archive.s3.amazonaws.com/challenges/2019/ISIC_2019_Training_GroundTruth.csv",
+    "Metadata": "https://isic-archive.s3.amazonaws.com/challenges/2019/ISIC_2019_Training_Metadata.csv"
+  },
+  "source_hashes": {
+    "GroundTruth": "aa88e9638fe4df9ef330dc4ba22fa4bd475c44af692fffb870c73091ab25cdcd",
+    "Metadata": "d93994a8ed201d474de9a7af7e17ec30929cbc4a5220659ecbde17cbe83e9316"
+  },
+  "source_training_rows": 25331,
+  "ham_identity_rows_excluded": 10015,
+  "external_rows_after_identity_exclusion": 15316,
+  "unsupported_diagnosis_rows_excluded": 431,
+  "candidate_images": 14885,
+  "missing_lesion_ids": 2084,
+  "known_lesion_id_candidates": 12801,
+  "known_external_lesion_groups": 4255,
+  "groups_with_conflicting_candidate_classes": 0,
+  "maximum_images_per_known_lesion": 31,
+  "candidate_class_counts": [
+    {
+      "class_name": "akiec",
+      "current_ham_training_images": 229,
+      "current_ham_training_lesions": 166,
+      "external_candidate_images": 737,
+      "known_lesion_id_candidates": 737,
+      "known_external_lesion_groups": 236,
+      "candidate_to_current_ratio": 3.2183406113537116
+    },
+    {
+      "class_name": "bcc",
+      "current_ham_training_images": 359,
+      "current_ham_training_lesions": 244,
+      "external_candidate_images": 2809,
+      "known_lesion_id_candidates": 2809,
+      "known_external_lesion_groups": 983,
+      "candidate_to_current_ratio": 7.8245125348189415
+    },
+    {
+      "class_name": "bkl",
+      "current_ham_training_images": 769,
+      "current_ham_training_lesions": 541,
+      "external_candidate_images": 1525,
+      "known_lesion_id_candidates": 1327,
+      "known_external_lesion_groups": 542,
+      "candidate_to_current_ratio": 1.9830949284785435
+    },
+    {
+      "class_name": "df",
+      "current_ham_training_images": 81,
+      "current_ham_training_lesions": 57,
+      "external_candidate_images": 124,
+      "known_lesion_id_candidates": 124,
+      "known_external_lesion_groups": 40,
+      "candidate_to_current_ratio": 1.5308641975308641
+    },
+    {
+      "class_name": "mel",
+      "current_ham_training_images": 778,
+      "current_ham_training_lesions": 478,
+      "external_candidate_images": 3409,
+      "known_lesion_id_candidates": 3072,
+      "known_external_lesion_groups": 725,
+      "candidate_to_current_ratio": 4.381748071979435
+    },
+    {
+      "class_name": "nv",
+      "current_ham_training_images": 4693,
+      "current_ham_training_lesions": 3926,
+      "external_candidate_images": 6170,
+      "known_lesion_id_candidates": 4621,
+      "known_external_lesion_groups": 1692,
+      "candidate_to_current_ratio": 1.3147240571063286
+    },
+    {
+      "class_name": "vasc",
+      "current_ham_training_images": 100,
+      "current_ham_training_lesions": 74,
+      "external_candidate_images": 111,
+      "known_lesion_id_candidates": 111,
+      "known_external_lesion_groups": 37,
+      "candidate_to_current_ratio": 1.11
+    }
+  ],
+  "images_downloaded": false,
+  "training_launched": false,
+  "test_loaded": false,
+  "ham_label_columns_loaded": false,
+  "identity_overlap_with_all_ham": 0,
+  "known_lesion_id_overlap_with_all_ham": 0,
+  "limitations": [
+    "Image aliases/near duplicates and patient overlap not yet audited; metadata exclusion alone is insufficient clearance.",
+    "AK to project akiec terminology requires documented mapping review; SCC and unknown are excluded.",
+    "Different acquisition sources and label distributions; domain-shift or improvement not yet measured.",
+    "This is not an accuracy experiment and cannot forecast final test accuracy."
+  ],
+  "decision": "Candidate for a separately scoped de-duplicated external-training feasibility stage; no automatic image download or GPU launch"
+}

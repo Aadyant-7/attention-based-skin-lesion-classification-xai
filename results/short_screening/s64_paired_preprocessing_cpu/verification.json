@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "same_weights": true,
+  "paired_cpu_fp32": true,
+  "train_only_head_fit": true,
+  "all_images_complete": true,
+  "source_weights_unchanged": true,
+  "metrics_and_confusion_matrix_independently_recomputed": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

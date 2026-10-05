@@ -1,0 +1,13 @@
+{
+  "question": "Does official aspect-preserving resize/center-crop improve frozen ConvNeXt representation over square resizing?",
+  "control": "224x224 bilinear square resize",
+  "candidate": "Short side236 bilinear resize then center crop224",
+  "weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+  "precision": "CPU FP32 for both",
+  "head": "StandardScaler + LogisticRegression C1 max_iter1000 seed42; train-only normalized sqrt inverse-frequency sample weights",
+  "cohorts": "Same complete exploratory training7009 and validation1503; no validation fit/tuning",
+  "gate": "Accuracy >= control+0.01 AND macro-F1 >= control AND melanoma recall >= control",
+  "limit": "Exactly two predefined transforms; no further transform/head search or automatic GPU training",
+  "caveat": "Changes geometry and cropping/visible field jointly, not a pure geometry ablation. Frozen-feature results do not predict fine-tuning or test accuracy.",
+  "source": "https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.convnext_tiny.html"
+}

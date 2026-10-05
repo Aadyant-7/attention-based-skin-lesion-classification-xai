@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "train_images": 7009,
+  "heldout_coverage": 7009,
+  "lesion_overlap": 0,
+  "fold_local_scaling_and_weights": true,
+  "metrics_and_confusion_recomputed": true,
+  "test_loaded": false,
+  "gpu_used": false
+}
