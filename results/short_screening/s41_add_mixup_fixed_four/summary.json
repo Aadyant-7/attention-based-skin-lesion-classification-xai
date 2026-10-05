@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "protocol": "post_test_strict_development",
+  "reference": {
+    "display_name": "Frozen three-model reference",
+    "accuracy": 0.9015302727877578,
+    "macro_f1": 0.8434863916007834
+  },
+  "candidate": {
+    "display_name": "Add S40, four equal members",
+    "accuracy": 0.9048569527611444,
+    "macro_f1": 0.8467074800867623
+  },
+  "gained": 18,
+  "lost": 13,
+  "net": 5,
+  "error_overlap": {
+    "mixup_fixes_original_convnext": 39,
+    "original_convnext_fixes_mixup": 48,
+    "both_convnext_variants_wrong": 126
+  },
+  "material_gate_passed": false,
+  "weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "members": [
+    "s28_efficientnet_b0_final_strict_seed42",
+    "s29_convnext_tiny_final_strict_seed42",
+    "s30_efficientnet_v2_s_final_strict_seed42",
+    "s40_convnext_tiny_mixup_strict_dev_seed42"
+  ],
+  "checkpoint_selection": "existing raw accuracy winners only",
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "No weight/checkpoint search; stop after this combination"
+}
