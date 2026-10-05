@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "comparisons": [
+    {
+      "display_name": "S46 equal four reference",
+      "accuracy": 0.9347970725216235,
+      "macro_f1": 0.88367951625566
+    },
+    {
+      "display_name": "S52 ResNet on disagreement only",
+      "accuracy": 0.929474384564205,
+      "macro_f1": 0.8767919820420919
+    }
+  ],
+  "routed_images": 90,
+  "gained": 7,
+  "lost": 15,
+  "net": -8,
+  "mel_recall": 0.7964071856287425,
+  "adoption_gate_passed": false,
+  "source_prediction_sha256": {
+    "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions_macro_f1.csv": "86e3aaf6d5f923be1cec47b4f3b037d65d87bf29f379263c45b17e1c710cc983",
+    "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions_macro_f1.csv": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+    "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions_macro_f1.csv": "e410278092fce3c6996d222d6aac896f090201dc1819b09e8f400b59c3ffa2ef",
+    "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions_macro_f1.csv": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+    "results/structured_experiments/s19_resnet101_none_exploratory_seed42/validation_predictions.csv": "85f9bf9e5eaae39bca288d4397f9dddd1c583832fd1f12126f593c9b8858d8b1"
+  },
+  "rescue_checkpoint": "checkpoints/structured/s19_resnet101_none_exploratory_seed42/best.pt",
+  "rescue_checkpoint_sha256": "4763c8b83b96de57323938a76dee9074a36d1e62c21d63c6b05fecf67f8828d2",
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Single rule evaluated; no alternative thresholds/rescue models or automatic training"
+}

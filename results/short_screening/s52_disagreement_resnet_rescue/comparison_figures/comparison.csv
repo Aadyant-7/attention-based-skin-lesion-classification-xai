@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+S46 equal four reference,0.9347970725216235,0.88367951625566
+S52 ResNet on disagreement only,0.929474384564205,0.8767919820420919

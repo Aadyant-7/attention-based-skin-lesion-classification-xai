@@ -1,0 +1,26 @@
+{
+  "question": "Does architecturally diverse ResNet101 help only on four-member disagreement cases?",
+  "rule": "When fewer than3of4member argmax classes agree, use equal five probabilities including ResNet; otherwise retain S46 equal four",
+  "current_selection": "Exact S46 macro-F1 winner checkpoints",
+  "rescue_selection": "Preserved S19 raw-accuracy winner",
+  "no_label_routing": true,
+  "agreement_threshold": 3,
+  "trigger_weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "other_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "scope": "Exploratory validation already used for selection; not an independent test",
+  "study_limit": "One predefined agreement threshold, one rescue model, no weight/checkpoint/threshold alternatives",
+  "gate": "Accuracy improvement with no macro-F1 or melanoma recall decline",
+  "test_loaded": false,
+  "gpu_used": false
+}
