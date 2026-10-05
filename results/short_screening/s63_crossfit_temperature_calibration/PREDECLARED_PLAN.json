@@ -1,0 +1,21 @@
+{
+  "question": "Does calibrating each exact S53 member improve equal fusion of its existing probabilities?",
+  "method": "One positive scalar temperature per member per meta fold; minimize natural-frequency NLL on meta-train rows only",
+  "folds": 5,
+  "fold_method": "StratifiedGroupKFold, lesion_id groups, shuffle seed42",
+  "optimizer": "Bounded scalar minimization in log-temperature; bounds log(.25) to log(10), xatol1e-6, maxiter200",
+  "probability_floor": 1e-12,
+  "weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "material_gate": "At least8net additional correct images over S53 AND accuracy gain>=.005 AND no macro-F1 or melanoma-recall decline",
+  "scope": "Post-test exploratory development; base checkpoints previously selected on this whole cohort",
+  "deployment": "Held-out-meta predictions only; no whole-validation temperature fit/deployment",
+  "budget": "Exactly one configuration, five folds, five existing members; no alternate bounds, weights, thresholds or checkpoint selection",
+  "test_loaded": false,
+  "gpu_used": false
+}

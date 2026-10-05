@@ -1,0 +1,89 @@
+{
+  "status": "completed",
+  "accuracy": 0.9367930805056554,
+  "macro_precision": 0.9177276840094691,
+  "macro_recall": 0.8640847836756954,
+  "macro_f1": 0.8870379428320633,
+  "reference_accuracy": 0.936127744510978,
+  "reference_macro_f1": 0.8868574111567237,
+  "gained": 5,
+  "lost": 4,
+  "net": 1,
+  "correct": 1408,
+  "incorrect": 95,
+  "melanoma_recall": 0.8083832335329342,
+  "akiec_recall": 0.7142857142857143,
+  "reference_nll": 0.21252927894010487,
+  "calibrated_nll": 0.23470558409162787,
+  "reference_ece10": 0.025947599859284475,
+  "calibrated_ece10": 0.06493597370715005,
+  "material_gate_passed": false,
+  "member_argmax_changes": 0,
+  "positive_folds": 2,
+  "folds": [
+    {
+      "fold": 0,
+      "meta_train_images": 1202,
+      "meta_holdout_images": 301,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9401993355481728,
+      "calibrated_accuracy": 0.946843853820598,
+      "gained": 2,
+      "lost": 0,
+      "net": 2
+    },
+    {
+      "fold": 1,
+      "meta_train_images": 1202,
+      "meta_holdout_images": 301,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9368770764119602,
+      "calibrated_accuracy": 0.9435215946843853,
+      "gained": 3,
+      "lost": 1,
+      "net": 2
+    },
+    {
+      "fold": 2,
+      "meta_train_images": 1202,
+      "meta_holdout_images": 301,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9169435215946844,
+      "calibrated_accuracy": 0.9169435215946844,
+      "gained": 0,
+      "lost": 0,
+      "net": 0
+    },
+    {
+      "fold": 3,
+      "meta_train_images": 1203,
+      "meta_holdout_images": 300,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.9466666666666667,
+      "calibrated_accuracy": 0.94,
+      "gained": 0,
+      "lost": 2,
+      "net": -2
+    },
+    {
+      "fold": 4,
+      "meta_train_images": 1203,
+      "meta_holdout_images": 300,
+      "lesion_overlap": 0,
+      "reference_accuracy": 0.94,
+      "calibrated_accuracy": 0.9366666666666666,
+      "gained": 0,
+      "lost": 1,
+      "net": -1
+    }
+  ],
+  "temperature_range": [
+    1.5588750452383142,
+    2.0248411217871563
+  ],
+  "test_loaded": false,
+  "gpu_used": false,
+  "deployment": "No full-validation temperature fit; these are held-out-meta outputs",
+  "limitations": "Post-test exploratory development; base checkpoints previously selected on this whole cohort; cross-fitting protects temperature fitting only, not prior base checkpoint selection",
+  "decision": "Material gate failed; preserve reference; no tuning or automatic GPU runs"
+}

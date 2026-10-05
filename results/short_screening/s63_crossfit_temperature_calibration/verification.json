@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "fold_count": 5,
+  "meta_holdout_coverage": 1503,
+  "lesion_overlap": 0,
+  "saved_metrics_independently_recomputed": true,
+  "member_argmax_changes": 0,
+  "source_probabilities_unchanged": true,
+  "test_loaded": false
+}
