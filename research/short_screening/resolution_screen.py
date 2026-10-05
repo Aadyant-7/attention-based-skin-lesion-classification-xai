@@ -90,6 +90,7 @@ def run(check=False):
         write_csv(folder/'validation_probabilities.csv',pd.DataFrame(p,columns=[f'p_{cl}' for cl in CLASSES]).assign(image_id=ids).to_dict('records'))
         metric_figures(metrics,folder/'figures',f'S39 ConvNeXt FP32 {size}px | strict development')
         comparisons.append(dict(experiment_id=f"{c['experiment_id']}_{size}",display_name=f'ConvNeXt {size}px',**{k:metrics[k] for k in ['accuracy','macro_precision','macro_recall','macro_f1']}))
+        retry_registry_upsert(dict(experiment_id=f"{c['experiment_id']}_{size}",era='structured',record_kind='inference_screen',phase='post_test_development',protocol='strict_lesion_disjoint',evaluation_split='val',split_manifest=c['split_manifest'],split_sha256=c['split_sha256'],method='FP32 identity inference',model='convnext_tiny',image_size=size,seed=42,epochs=0,checkpoint=c['source_checkpoint'],checkpoint_sha256=c['source_sha256'],config_path=relative(CFG),metrics_path=relative(folder/'validation_metrics.json'),plots_dir=relative(folder/'figures'),status='completed',notes='Post-test development; immutable epoch33 source; no training/test inference.'))
         logging.info('COMPLETED %spx accuracy=%.6f F1=%.6f',size,metrics['accuracy'],metrics['macro_f1'])
     old=pd.read_csv(ROOT/'results/structured_experiments/s29_convnext_tiny_final_strict_seed42/validation_predictions.csv').set_index('image_id').loc[val.image_id]
     assert np.array_equal(arrays[0].argmax(1),old[[f'p_{cl}' for cl in CLASSES]].to_numpy().argmax(1)), '224 control predictions changed; stop comparison'
@@ -128,7 +129,7 @@ if __name__=='__main__':
         run(check=True)
     else:
         OUT.mkdir(parents=True,exist_ok=True)
-        with run_lock(OUT/'process.lock'):
+        with run_lock('s39_convnext_resolution_screen_strict_dev_seed42'):
             try:
                 run()
             except Exception as exc:
