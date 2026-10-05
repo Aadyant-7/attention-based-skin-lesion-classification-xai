@@ -1,0 +1,58 @@
+{
+  "split": {
+    "protocol": "strict_lesion_disjoint",
+    "split_manifest": "data/splits/split_assignments.csv",
+    "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "image_counts": {
+      "train": 7009,
+      "val": 1503,
+      "test": 1503
+    },
+    "lesion_counts": {
+      "train": 5230,
+      "val": 1122,
+      "test": 1118
+    },
+    "lesion_overlaps": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "test_labels_read": false,
+    "test_images_loaded": false,
+    "test_loader_instantiated": false
+  },
+  "development_images_checked": 8512,
+  "corrupt_or_unreadable": [],
+  "dimensions": {
+    "(600, 450)": 8512
+  },
+  "modes": {
+    "RGB": 8512
+  },
+  "exact_duplicate_groups": [],
+  "cross_train_validation_exact_duplicate_groups": [],
+  "saved_prediction_checks": [
+    {
+      "run": "s28_efficientnet_b0_final_strict_seed42",
+      "accuracy": 0.8582834331337326,
+      "macro_f1": 0.7448967536941896,
+      "labels_probabilities_and_metrics_consistent": true
+    },
+    {
+      "run": "s29_convnext_tiny_final_strict_seed42",
+      "accuracy": 0.8902195608782435,
+      "macro_f1": 0.8146779326573336,
+      "labels_probabilities_and_metrics_consistent": true
+    },
+    {
+      "run": "s30_efficientnet_v2_s_final_strict_seed42",
+      "accuracy": 0.8542914171656687,
+      "macro_f1": 0.7426847932343824,
+      "labels_probabilities_and_metrics_consistent": true
+    }
+  ],
+  "gpu_used": false,
+  "test_inference": false,
+  "scope": "Header/integrity, byte duplicates, identities and saved metrics; not a visual label-quality audit or perceptual duplicate audit."
+}
