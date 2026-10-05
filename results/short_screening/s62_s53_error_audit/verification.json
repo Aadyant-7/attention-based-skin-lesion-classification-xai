@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "audit_rows": 1503,
+  "error_rows": 96,
+  "six_contact_sheets": true,
+  "reference_score_unchanged": true,
+  "test_loaded": false,
+  "new_model_evaluation": false
+}

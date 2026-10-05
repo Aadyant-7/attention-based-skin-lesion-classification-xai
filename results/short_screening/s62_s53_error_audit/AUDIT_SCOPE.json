@@ -1,0 +1,17 @@
+{
+  "reference": "results/short_screening/s53_equal_five_b0_addition",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "purpose": "Descriptive audit of errors, model outputs, image quality and preprocessing; no new method evaluation",
+  "constraints": "Validation images only; no label changes, quality-based exclusion, threshold tuning or GPU work",
+  "quality": "Pixel brightness, contrast, square-resized Laplacian variance and dark border fraction are proxies, not clinical diagnoses",
+  "image_selection": "All96errors contact sheets; preprocessing sheet uses first8errors sorted by confidence",
+  "uncertainty": "Class/quality/metadata associations can be confounded; this validation cohort has already been used for model selection"
+}

@@ -1,0 +1,11 @@
+model_a,model_b,shared_errors,error_union,error_jaccard
+ConvNeXt-Tiny,ConvNeXt-Small,60,185,0.32432432432432434
+ConvNeXt-Tiny,DenseNet201,68,217,0.31336405529953915
+ConvNeXt-Tiny,EfficientNetV2-S,61,225,0.27111111111111114
+ConvNeXt-Tiny,EfficientNet-B0,69,264,0.26136363636363635
+ConvNeXt-Small,DenseNet201,67,207,0.32367149758454106
+ConvNeXt-Small,EfficientNetV2-S,67,208,0.32211538461538464
+ConvNeXt-Small,EfficientNet-B0,68,254,0.2677165354330709
+DenseNet201,EfficientNetV2-S,91,224,0.40625
+DenseNet201,EfficientNet-B0,89,273,0.326007326007326
+EfficientNetV2-S,EfficientNet-B0,82,281,0.2918149466192171

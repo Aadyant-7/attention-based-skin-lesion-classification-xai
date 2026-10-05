@@ -40,6 +40,7 @@ Within each result folder:
 - `results/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/`: authorized capped fine-tuning run; artifact policy and commands in `research/short_screening/S58_S59_SUPERVISED22K_PLAN.md`.
 - S59 is now closed out: best accuracy 90.6853% at epoch20; best macro-F1 0.832974 at epoch18. `research/short_screening/S59_S61_CLOSEOUT.md` records verification and the decision not to extend training.
 - `results/short_screening/s60_s61_s59_fusion/`: two rejected S59 addition/replacement ensembles, both 93.0805%, with full metrics, prediction files and figures. S53 remains the provisional highest exploratory accuracy.
+- `results/short_screening/s62_s53_error_audit/`: descriptive audit of all 96 S53 errors, six image review sheets, preprocessing comparison, confidence/quality/class CSVs and PNG/PDF figures. Findings and the next bounded calibration proposal are in `research/short_screening/S62_ERROR_AUDIT.md`; no model score changed during this audit.
 - `research/short_screening/`: experiment scripts, plans and closeout Markdown files explaining decisions.
 
 ## Training and historical evidence

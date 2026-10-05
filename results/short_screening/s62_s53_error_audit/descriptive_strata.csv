@@ -1,0 +1,11 @@
+group,value,images,errors,accuracy
+train_lesion_shared,False,907,53,0.9415656008820287
+train_lesion_shared,True,596,43,0.9278523489932886
+dx_type,confocal,9,0,1.0
+dx_type,consensus,161,6,0.9627329192546584
+dx_type,follow_up,545,1,0.998165137614679
+dx_type,histo,788,89,0.8870558375634517
+max_vote_agreement,2,30,11,0.6333333333333333
+max_vote_agreement,3,116,38,0.6724137931034483
+max_vote_agreement,4,204,31,0.8480392156862745
+max_vote_agreement,5,1153,16,0.9861231569817867

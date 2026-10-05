@@ -1,0 +1,112 @@
+[
+  {
+    "run": "s06_convnext_tiny_none_exploratory_seed42",
+    "image_size": 224,
+    "preprocessing": "PIL RGB; resize 224x224 bilinear antialias; ImageNet normalization",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "augmentation": "horizontal flip p=0.5; validation deterministic",
+    "loss": "weighted_cross_entropy",
+    "imbalance": "training-only sqrt inverse-frequency class weights normalized to mean1",
+    "learning_rate": {
+      "backbone": 3e-05,
+      "head": 0.0001
+    }
+  },
+  {
+    "run": "s18_convnext_small_none_exploratory_seed42",
+    "image_size": 224,
+    "preprocessing": "PIL RGB; resize 224x224 bilinear antialias; ImageNet normalization",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "augmentation": "horizontal flip p=0.5; validation deterministic",
+    "loss": "weighted_cross_entropy",
+    "imbalance": "training-only sqrt inverse-frequency class weights normalized to mean1",
+    "learning_rate": {
+      "backbone": 3e-05,
+      "head": 0.0001
+    }
+  },
+  {
+    "run": "s15_densenet201_none_exploratory_seed42",
+    "image_size": 224,
+    "preprocessing": "PIL RGB; resize 224x224 bilinear antialias; ImageNet normalization",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "augmentation": "horizontal flip p=0.5; validation deterministic",
+    "loss": "weighted_cross_entropy",
+    "imbalance": "training-only sqrt inverse-frequency class weights normalized to mean1",
+    "learning_rate": {
+      "backbone": 3e-05,
+      "head": 0.0001
+    }
+  },
+  {
+    "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+    "image_size": 224,
+    "preprocessing": "PIL RGB; resize 224x224 bilinear antialias; ImageNet normalization",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "augmentation": "horizontal flip p=0.5; validation deterministic",
+    "loss": "weighted_cross_entropy",
+    "imbalance": "training-only sqrt inverse-frequency class weights normalized to mean1",
+    "learning_rate": {
+      "backbone": 3e-05,
+      "head": 0.0001
+    }
+  },
+  {
+    "run": "s03_efficientnet_b0_none_exploratory_seed42",
+    "image_size": 224,
+    "preprocessing": "PIL RGB; resize 224x224 bilinear antialias; ImageNet normalization",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "augmentation": "horizontal flip p=0.5; validation deterministic",
+    "loss": "weighted_cross_entropy",
+    "imbalance": "training-only sqrt inverse-frequency class weights normalized to mean1",
+    "learning_rate": {
+      "backbone": 3e-05,
+      "head": 0.0001
+    }
+  }
+]
