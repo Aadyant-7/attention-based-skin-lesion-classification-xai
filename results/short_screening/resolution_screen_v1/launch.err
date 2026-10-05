@@ -1,0 +1,6 @@
+2026-10-05 12:15:15,197 START PID=14992; preserved epoch33 checkpoint verified; FP32 validation only; resolutions224/320; no training/test
+2026-10-05 12:15:22,791 FIRST_BATCH 224: finite probabilities saved; original checkpoint reused unchanged
+2026-10-05 12:15:33,306 COMPLETED 224px accuracy=0.890220 F1=0.814678
+2026-10-05 12:15:40,279 FIRST_BATCH 320: finite probabilities saved; original checkpoint reused unchanged
+2026-10-05 12:15:51,346 COMPLETED 320px accuracy=0.870259 F1=0.780225
+2026-10-05 12:15:55,857 SCREEN COMPLETE; material_gate=False; STOP; no automatic next experiment
