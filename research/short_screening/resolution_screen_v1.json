@@ -1,0 +1,20 @@
+{
+  "experiment_id": "s39_convnext_resolution_screen_strict_dev_seed42",
+  "protocol": "strict_lesion_disjoint",
+  "reporting_scope": "post_test_development_validation_only",
+  "split_manifest": "data/splits/split_assignments.csv",
+  "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+  "source_checkpoint": "checkpoints/structured/s29_convnext_tiny_final_strict_seed42/best.pt",
+  "source_sha256": "ffe3a7f00c5371824fa46a8f9e5f864f53e15fcc533f5bf0263648f8573a1e93",
+  "resolutions": [224, 320],
+  "normalization_mean": [0.485, 0.456, 0.406],
+  "normalization_std": [0.229, 0.224, 0.225],
+  "precision": "fp32",
+  "batch_size": 8,
+  "workers": 2,
+  "seed": 42,
+  "training_epochs": 0,
+  "test_evaluation": false,
+  "material_gate": "320 fixed ensemble improves 224 control by >=0.005 absolute accuracy; macro-F1 nondecrease; MEL recall +>=0.02; NV recall decline <=0.01",
+  "stop_after_screen": true
+}

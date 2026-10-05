@@ -1,0 +1,13 @@
+{
+  "train_images": 7009,
+  "validation_images": 1503,
+  "test_images_loaded": false,
+  "gpu_used": false,
+  "proxy_valid_fraction": 0.9848449248120301,
+  "caveats": [
+    "Dark connected intensity region is not a verified lesion mask; excludes many light/red lesions and may capture hair/artifacts.",
+    "Quartiles fixed from training separately for each class; associations do not identify causes or training benefits.",
+    "Repeated images per lesion and small subgroups limit precision; no p-values or significance claims.",
+    "Audit covers already-used strict validation; no independent evaluation created."
+  ]
+}
