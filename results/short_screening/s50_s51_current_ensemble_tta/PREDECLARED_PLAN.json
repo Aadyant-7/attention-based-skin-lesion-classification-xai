@@ -1,0 +1,34 @@
+{
+  "parent_manifest": "results/short_screening/s46_all_f1_checkpoint_fusion/candidate_manifest.json",
+  "views": [
+    "identity",
+    "horizontal",
+    "vertical",
+    "both"
+  ],
+  "weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "view_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "precision": "fp32",
+  "image_size": 224,
+  "batch_size": 16,
+  "preprocessing": "RGB; square224 bilinear antialias; original per-model ImageNet normalization",
+  "question": "Does fixed four-flip TTA improve the current S46 four-model F1-checkpoint candidate?",
+  "control": "Fresh FP32 identity-only four-member mean; separates precision from views",
+  "protocol": "exploratory_image_level",
+  "scope": "Already selected exploratory development validation, not independent test",
+  "material_gate": ">=+.005 accuracy over S46 with no macro-F1/MEL recall decline, and accuracy above FP32 identity",
+  "study_limit": "Exactly identity control and one four-view average; no view/model/weight/checkpoint search",
+  "max_runtime_seconds": 900,
+  "training": false,
+  "test_loaded": false
+}

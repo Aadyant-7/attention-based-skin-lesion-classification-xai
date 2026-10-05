@@ -1,0 +1,93 @@
+{
+  "sources": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "86e3aaf6d5f923be1cec47b4f3b037d65d87bf29f379263c45b17e1c710cc983",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361"
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d"
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "e410278092fce3c6996d222d6aac896f090201dc1819b09e8f400b59c3ffa2ef",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9"
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5"
+    }
+  ],
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "validation_images": 1503,
+  "locked_test_image_overlap": 0,
+  "locked_test_lesion_overlap": 0,
+  "test_images_loaded": false,
+  "test_labels_loaded": false,
+  "training": false,
+  "precision": "fp32",
+  "signature": {
+    "plan": {
+      "parent_manifest": "results/short_screening/s46_all_f1_checkpoint_fusion/candidate_manifest.json",
+      "views": [
+        "identity",
+        "horizontal",
+        "vertical",
+        "both"
+      ],
+      "weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "view_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "precision": "fp32",
+      "image_size": 224,
+      "batch_size": 16,
+      "preprocessing": "RGB; square224 bilinear antialias; original per-model ImageNet normalization",
+      "question": "Does fixed four-flip TTA improve the current S46 four-model F1-checkpoint candidate?",
+      "control": "Fresh FP32 identity-only four-member mean; separates precision from views",
+      "protocol": "exploratory_image_level",
+      "scope": "Already selected exploratory development validation, not independent test",
+      "material_gate": ">=+.005 accuracy over S46 with no macro-F1/MEL recall decline, and accuracy above FP32 identity",
+      "study_limit": "Exactly identity control and one four-view average; no view/model/weight/checkpoint search",
+      "max_runtime_seconds": 900,
+      "training": false,
+      "test_loaded": false
+    },
+    "source_manifest_sha256": "4f3b7762791081f883dbadec7b2b1140f65c027801d57b165b77b337b2ad22d9",
+    "runner_sha256": "4fe617edbc222e5276ec9b3c909d5eaa34c905fae5aba221cc2f914df2da9117",
+    "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+    "supporting_hashes": {
+      "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+      "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9"
+    }
+  }
+}

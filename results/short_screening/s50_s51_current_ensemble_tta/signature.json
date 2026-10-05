@@ -1,0 +1,45 @@
+{
+  "plan": {
+    "parent_manifest": "results/short_screening/s46_all_f1_checkpoint_fusion/candidate_manifest.json",
+    "views": [
+      "identity",
+      "horizontal",
+      "vertical",
+      "both"
+    ],
+    "weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "view_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "precision": "fp32",
+    "image_size": 224,
+    "batch_size": 16,
+    "preprocessing": "RGB; square224 bilinear antialias; original per-model ImageNet normalization",
+    "question": "Does fixed four-flip TTA improve the current S46 four-model F1-checkpoint candidate?",
+    "control": "Fresh FP32 identity-only four-member mean; separates precision from views",
+    "protocol": "exploratory_image_level",
+    "scope": "Already selected exploratory development validation, not independent test",
+    "material_gate": ">=+.005 accuracy over S46 with no macro-F1/MEL recall decline, and accuracy above FP32 identity",
+    "study_limit": "Exactly identity control and one four-view average; no view/model/weight/checkpoint search",
+    "max_runtime_seconds": 900,
+    "training": false,
+    "test_loaded": false
+  },
+  "source_manifest_sha256": "4f3b7762791081f883dbadec7b2b1140f65c027801d57b165b77b337b2ad22d9",
+  "runner_sha256": "4fe617edbc222e5276ec9b3c909d5eaa34c905fae5aba221cc2f914df2da9117",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "supporting_hashes": {
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9"
+  }
+}

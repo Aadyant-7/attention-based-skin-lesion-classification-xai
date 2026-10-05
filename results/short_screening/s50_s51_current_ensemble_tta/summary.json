@@ -1,0 +1,281 @@
+{
+  "status": "completed",
+  "comparisons": [
+    {
+      "display_name": "S46 saved-output reference",
+      "accuracy": 0.9347970725216235,
+      "macro_f1": 0.88367951625566
+    },
+    {
+      "display_name": "identity_fp32",
+      "accuracy": 0.9347970725216235,
+      "macro_f1": 0.88367951625566
+    },
+    {
+      "display_name": "four_view_tta",
+      "accuracy": 0.9221556886227545,
+      "macro_f1": 0.8703576731432322
+    }
+  ],
+  "runtime_seconds": 125.69258660000924,
+  "gained_vs_identity": 8,
+  "lost_vs_identity": 27,
+  "material_gate_passed": false,
+  "results": {
+    "identity_fp32": {
+      "loss": 0.21215449273586273,
+      "accuracy": 0.9347970725216235,
+      "macro_precision": 0.9165601351501828,
+      "macro_recall": 0.8597343865991522,
+      "macro_f1": 0.88367951625566,
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "confusion_matrix": [
+        [
+          34,
+          6,
+          6,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          75,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          5,
+          0,
+          142,
+          0,
+          5,
+          13,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          13,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          3,
+          0,
+          132,
+          31,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          12,
+          989,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          20
+        ]
+      ],
+      "per_class": {
+        "akiec": {
+          "precision": 0.8717948717948718,
+          "recall": 0.6938775510204082,
+          "f1": 0.7727272727272727,
+          "support": 49
+        },
+        "bcc": {
+          "precision": 0.8928571428571429,
+          "recall": 0.974025974025974,
+          "f1": 0.9316770186335404,
+          "support": 77
+        },
+        "bkl": {
+          "precision": 0.9161290322580645,
+          "recall": 0.8606060606060606,
+          "f1": 0.8875,
+          "support": 165
+        },
+        "df": {
+          "precision": 1.0,
+          "recall": 0.7647058823529411,
+          "f1": 0.8666666666666667,
+          "support": 17
+        },
+        "mel": {
+          "precision": 0.8741721854304636,
+          "recall": 0.7904191616766467,
+          "f1": 0.8301886792452831,
+          "support": 167
+        },
+        "nv": {
+          "precision": 0.9518768046198267,
+          "recall": 0.9821251241310824,
+          "f1": 0.9667644183773216,
+          "support": 1007
+        },
+        "vasc": {
+          "precision": 0.9090909090909091,
+          "recall": 0.9523809523809523,
+          "f1": 0.9302325581395349,
+          "support": 21
+        }
+      }
+    },
+    "four_view_tta": {
+      "loss": 0.22146041691303253,
+      "accuracy": 0.9221556886227545,
+      "macro_precision": 0.9069885457024796,
+      "macro_recall": 0.8428339858625449,
+      "macro_f1": 0.8703576731432322,
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "confusion_matrix": [
+        [
+          35,
+          6,
+          6,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          74,
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          5,
+          0,
+          138,
+          0,
+          6,
+          16,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          13,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          6,
+          0,
+          124,
+          35,
+          0
+        ],
+        [
+          0,
+          2,
+          5,
+          0,
+          16,
+          983,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          19
+        ]
+      ],
+      "per_class": {
+        "akiec": {
+          "precision": 0.875,
+          "recall": 0.7142857142857143,
+          "f1": 0.7865168539325843,
+          "support": 49
+        },
+        "bcc": {
+          "precision": 0.8505747126436781,
+          "recall": 0.961038961038961,
+          "f1": 0.9024390243902439,
+          "support": 77
+        },
+        "bkl": {
+          "precision": 0.8846153846153846,
+          "recall": 0.8363636363636363,
+          "f1": 0.8598130841121495,
+          "support": 165
+        },
+        "df": {
+          "precision": 1.0,
+          "recall": 0.7647058823529411,
+          "f1": 0.8666666666666667,
+          "support": 17
+        },
+        "mel": {
+          "precision": 0.8435374149659864,
+          "recall": 0.7425149700598802,
+          "f1": 0.7898089171974523,
+          "support": 167
+        },
+        "nv": {
+          "precision": 0.9451923076923077,
+          "recall": 0.9761668321747765,
+          "f1": 0.9604298974108452,
+          "support": 1007
+        },
+        "vasc": {
+          "precision": 0.95,
+          "recall": 0.9047619047619048,
+          "f1": 0.926829268292683,
+          "support": 21
+        }
+      }
+    }
+  },
+  "checkpoint_hashes_unchanged": true,
+  "test_loaded": false,
+  "training": false,
+  "gpu_inference": true,
+  "decision": "Fixed study complete; no additional TTA patterns or automatic training"
+}
