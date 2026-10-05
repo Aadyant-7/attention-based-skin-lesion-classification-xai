@@ -1,0 +1,30 @@
+{
+  "cpu_forward_backward": "passed",
+  "parameters": 27871879,
+  "train_images": 7009,
+  "val_images": 1503,
+  "source_url": "https://dl.fbaipublicfiles.com/convnext/convnextv2/im22k/convnextv2_tiny_22k_224_ema.pt",
+  "pretrained_file": ".cache/torch/hub/checkpoints/convnextv2_tiny_22k_224_ema.pt",
+  "pretrained_sha256": "853d431aa9363f1b058e3c343d4bf2fca5fe2a4196621c381ddbcd4828290a96",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "test_loaded": false,
+  "config_sha256": "b68c2246bd229c4c9e611ac3c2740324a322770e31f3f7a6615b3b83d640bf0f",
+  "fingerprints": {
+    "research/short_screening/convnextv2_transfer.py": "a8bcfa64069848494fa4524814806e248134db8cefa63060b2ec76a02c3b3a1c",
+    "research/short_screening/convnextv2_transfer_v1.json": "b68c2246bd229c4c9e611ac3c2740324a322770e31f3f7a6615b3b83d640bf0f",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "timm_version": "0.9.16"
+}

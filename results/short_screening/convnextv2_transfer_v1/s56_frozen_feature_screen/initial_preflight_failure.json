@@ -1,0 +1,7 @@
+{
+  "status": "recovered_before_any_feature_extraction",
+  "cause": "DevelopmentImages intentionally rejects train rows when training=False",
+  "fix": "Keep train partition flag and remove its random flip for identity frozen-feature extraction; no split relabeling",
+  "training_epochs": 0,
+  "test_loaded": false
+}

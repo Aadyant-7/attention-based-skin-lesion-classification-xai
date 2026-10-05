@@ -1,0 +1,9 @@
+{
+  "control": "Fresh torchvision ConvNeXt-Tiny ImageNet1k, frozen normalized pooled features",
+  "candidate": "convnextv2_tiny.fcmae_ft_in22k_in1k",
+  "head": "Same StandardScaler + LogisticRegression C1 max_iter1000 on train only; sqrt class sample weights",
+  "transforms": "Same square224 bilinear/ImageNet normalization; identity only; no test loader",
+  "gate": "Candidate accuracy >= control+0.01 OR macro-F1 >= control+0.02 with accuracy nondecreasing",
+  "limit": "Two pretrained feature models, one head configuration each; no head tuning",
+  "caveat": "Frozen feature gate supports a trial, not a prediction of fine-tuned or ensemble performance"
+}

@@ -35,6 +35,9 @@ Within each result folder:
 - `results/short_screening/s50_s51_current_ensemble_tta/`: identity control, rejected four-view TTA, verification and summary.
 - `results/short_screening/s52_disagreement_resnet_rescue/`: rejected disagreement-only ResNet rule, routing CSV, scores and full figures.
 - `results/short_screening/s54_s55_panderm_fusion/`: rejected equal-six PanDerm addition and equal-five B0 replacement; full scores, source manifests, class comparisons and PNG/PDF figures for both.
+- `results/short_screening/convnextv2_transfer_v1/s56_frozen_feature_screen/`: failed V2 frozen-feature gate; its 20-epoch S57 run was not launched.
+- `results/short_screening/supervised22k_transfer_v1/s58_frozen_feature_screen/`: passed supervised22k frozen-feature gate, scores/predictions and figures.
+- `results/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/`: authorized capped fine-tuning run; artifact policy and commands in `research/short_screening/S58_S59_SUPERVISED22K_PLAN.md`.
 - `research/short_screening/`: experiment scripts, plans and closeout Markdown files explaining decisions.
 
 ## Training and historical evidence
