@@ -1,0 +1,16 @@
+method,fold,images,gain_over_s27_pp
+historical_s27_accuracy_reference,0,301,0.0
+historical_s27_accuracy_reference,1,301,0.0
+historical_s27_accuracy_reference,2,301,0.0
+historical_s27_accuracy_reference,3,300,0.0
+historical_s27_accuracy_reference,4,300,0.0
+equal_four_control,0,301,1.9933554817275767
+equal_four_control,1,301,0.6644518272425182
+equal_four_control,2,301,-0.33222591362126463
+equal_four_control,3,300,0.0
+equal_four_control,4,300,-0.33333333333332993
+crossfit_stacking,0,301,-0.6644518272425293
+crossfit_stacking,1,301,0.9966777408637828
+crossfit_stacking,2,301,-3.322259136212624
+crossfit_stacking,3,300,-0.6666666666666599
+crossfit_stacking,4,300,-1.3333333333333308

@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "methods": [
+    {
+      "display_name": "historical_s27_accuracy_reference",
+      "accuracy": 0.927478376580173,
+      "macro_precision": 0.891934564228278,
+      "macro_recall": 0.8476585346971343,
+      "macro_f1": 0.8663550330406329
+    },
+    {
+      "display_name": "equal_four_control",
+      "accuracy": 0.9314703925482368,
+      "macro_precision": 0.9138148708631336,
+      "macro_recall": 0.8554053822701478,
+      "macro_f1": 0.8797441129336824
+    },
+    {
+      "display_name": "crossfit_stacking",
+      "accuracy": 0.9174983366600133,
+      "macro_precision": 0.864372820906036,
+      "macro_recall": 0.8464501077649486,
+      "macro_f1": 0.8548050275677234
+    }
+  ],
+  "candidate_decisions": {
+    "equal_four_control": {
+      "gained": 26,
+      "lost": 20,
+      "net": 6,
+      "positive_folds": 2,
+      "material_gate_passed": false
+    },
+    "crossfit_stacking": {
+      "gained": 25,
+      "lost": 40,
+      "net": -15,
+      "positive_folds": 1,
+      "material_gate_passed": false
+    }
+  },
+  "source_artifacts_unchanged": true,
+  "limitations": "Base CNN checkpoints were selected on this validation cohort and exploratory training can share lesions with it. This is not independent CNN cross-validation or test performance.",
+  "gpu_used": false,
+  "test_loaded": false,
+  "decision": "No C/weight/cohort search or automatic GPU training; stop after bounded study"
+}
