@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "images": 14,
+  "expected_images": 14,
+  "runtime_seconds": 7.894915500000934,
+  "network_bytes": 10366711,
+  "bytes_on_disk": 7136581,
+  "archive_etag": "\"e21c03a0f30ee058d95e02b486c1141c-187\"",
+  "test_images_requested": false,
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_launched": false,
+  "full_pixel_duplicate_gate_pending": true
+}

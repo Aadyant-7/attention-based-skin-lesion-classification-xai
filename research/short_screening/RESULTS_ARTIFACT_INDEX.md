@@ -47,6 +47,7 @@ Within each result folder:
 - `results/short_screening/s65_preprocessing_train_group_cv/`: fixed three-fold train-only lesion-group consistency check, pooled75.8025% versus76.4160%; only one positive fold and lower melanoma recall, so no crop-based GPU training. Both studies save metrics, predictions/probabilities, confusion/class/comparison PNG/PDF figures, plans and verification. Interpretation: `research/short_screening/S64_S65_PREPROCESSING_CLOSEOUT.md`.
 - `results/short_screening/external_isic2019_feasibility/`: metadata-only non-HAM candidate identity manifest, image/lesion counts, source hashes and limitations; not an accuracy experiment. Data license/source attribution in its README. Next action: `research/short_screening/EXTERNAL_DATA_NEXT_DIRECTION.md`.
 - `research/short_screening/BOTTLENECKS_AND_NEXT_ACTION.md`: evidence synthesis separating difficult-class errors, fusion limits, generalization gaps and unproven causes.
+- `results/data_assisted/clearance_v1/`: completed external BCN data preparation: plans/source hashes, acquired-image integrity manifest, published-name exclusions, exact/near-hash candidate quarantine, and final3323-lesion manifest. This is not an accuracy experiment. `research/data_assisted/DATA_CLEARANCE_REPORT.md` explains label mapping, counts and unresolved independence limits; `METADATA_FOLLOWUP_DEFERRED.md` records the older metadata study and later follow-up.
 
 ## Training and historical evidence
 

@@ -1,0 +1,8 @@
+class_name,eligible_images,selected_lesions,external_train,external_preflight_val
+akiec,721,235,200,35
+bcc,2793,979,832,147
+bkl,1103,349,297,52
+df,124,40,34,6
+mel,2839,521,443,78
+nv,4191,1278,1086,192
+vasc,111,37,31,6

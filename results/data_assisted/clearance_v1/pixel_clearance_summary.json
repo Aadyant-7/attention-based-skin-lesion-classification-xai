@@ -1,0 +1,65 @@
+{
+  "status": "bounded_pixel_and_published_name_screen_complete",
+  "selected_images": 3439,
+  "decoded_images": 3439,
+  "HAM_development_images_compared": 8512,
+  "flagged_pairs": 84,
+  "quarantined_images": 116,
+  "retained_images": 3323,
+  "retained_lesion_groups": 3323,
+  "class_counts": [
+    {
+      "class_name": "akiec",
+      "images_and_lesions": 221,
+      "external_train": 188,
+      "external_preflight_val": 33
+    },
+    {
+      "class_name": "bcc",
+      "images_and_lesions": 943,
+      "external_train": 802,
+      "external_preflight_val": 141
+    },
+    {
+      "class_name": "bkl",
+      "images_and_lesions": 337,
+      "external_train": 285,
+      "external_preflight_val": 52
+    },
+    {
+      "class_name": "df",
+      "images_and_lesions": 38,
+      "external_train": 32,
+      "external_preflight_val": 6
+    },
+    {
+      "class_name": "mel",
+      "images_and_lesions": 511,
+      "external_train": 433,
+      "external_preflight_val": 78
+    },
+    {
+      "class_name": "nv",
+      "images_and_lesions": 1237,
+      "external_train": 1052,
+      "external_preflight_val": 185
+    },
+    {
+      "class_name": "vasc",
+      "images_and_lesions": 36,
+      "external_train": 31,
+      "external_preflight_val": 5
+    }
+  ],
+  "original_test_pixels_compared": false,
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_launched": false,
+  "patient_overlap_verified": false,
+  "unknown_original_test_aliases_verified": false,
+  "ready_for_bounded_development_screen": true,
+  "not_a_certificate_of_final_test_independence": true,
+  "candidate_manifest_sha256": "35065c4406b7e50134fb749cea04c403ffd8f83f7c63c8fe43c5619926037ba1",
+  "development_fingerprints_sha256": "352f925a23d34912fff0a29563367d19a62c2bcde7fd730c6e9deb8dc30e10a0",
+  "runtime_seconds": 28.98383370001102
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "source_hashes_checked": true,
+  "known_HAM_identity_and_lesion_overlap": 0,
+  "no_downsampled_entries": true,
+  "one_image_per_lesion": true,
+  "no_external_partition_overlap": true,
+  "all_seven_classes_present": true,
+  "published_flagged_groups_excluded": true,
+  "test_loaded": false
+}

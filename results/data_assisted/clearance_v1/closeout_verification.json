@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "selected_images": 3439,
+  "retained_images": 3323,
+  "external_train": 2823,
+  "external_preflight_val": 500,
+  "partition_assignments_preserved": true,
+  "candidate_manifest_sha256": "35065c4406b7e50134fb749cea04c403ffd8f83f7c63c8fe43c5619926037ba1",
+  "test_loaded": false,
+  "gpu_used": false,
+  "accuracy_measured": false,
+  "ready_for_bounded_development_screen": true,
+  "independence_limitations_preserved": true
+}

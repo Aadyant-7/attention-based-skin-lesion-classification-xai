@@ -32,4 +32,10 @@ This would change training-data scope. It must be labeled **external-data-assist
 
 ## Current decision
 
-Complete S64/S65 first. If both show consistent material preprocessing gains, a bounded matched preprocessing run is a candidate. If they fail, this external-data feasibility/deduplication stage is the next substantive direction, rather than another small voting/temperature variation. No images, checkpoint training, new ensemble or test evaluation was started by this preflight.
+S64/S65 are complete. The apparent first preprocessing gain did not pass the train-only group consistency gate, so no crop-based GPU run was justified.
+
+The next external-data preparation stage is now complete: **3,439 selected BCN lesions acquired and decoded; 116 images conservatively quarantined by exact/near-hash screening; 3,323 retained distinct lesions**, with2,823 external-training and500 external-preflight-validation images. This includes433 additional melanoma training lesions. Published-name filtering separately removed100 images from15 flagged lesion groups before image selection. Earlier candidate counts above are historical feasibility counts, not the current training-ready manifest.
+
+Current evidence and limitations: `research/data_assisted/DATA_CLEARANCE_REPORT.md`. Final identities/partitions/hashes: `results/data_assisted/clearance_v1/pixel_screened_candidate_manifest.csv`. Unknown aliases of original test images and patient overlap remain unverified; this is development-data preparation, not a certificate of final-test independence.
+
+Next: the matched bounded CPU frozen-feature data screen in `research/data_assisted/NEXT_DEVELOPMENT_SCREEN_PLAN.md`, before any GPU fine-tuning proposal. No classifier training, new ensemble, new accuracy measurement or locked-test evaluation has been performed by this preparation stage. Metadata fusion remains deferred.

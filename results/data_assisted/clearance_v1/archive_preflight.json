@@ -1,0 +1,12 @@
+{
+  "url": "https://isic-archive.s3.amazonaws.com/challenges/2019/ISIC_2019_Training_Input.zip",
+  "etag": "\"e21c03a0f30ee058d95e02b486c1141c-187\"",
+  "archive_bytes": 9771618190,
+  "selected_images": 3439,
+  "selected_compressed_bytes": 1756468705,
+  "selected_uncompressed_bytes": 1765988792,
+  "selected_manifest_sha256": "565b016d722ab2bc99a3679ac8aec10f385a31f787ec5f58ecc1b44e5e81c6b5",
+  "range_policy": "206 exact byte ranges only; no full archive fallback",
+  "test_images_requested": false,
+  "gpu_used": false
+}

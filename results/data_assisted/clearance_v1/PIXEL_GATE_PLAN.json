@@ -1,0 +1,11 @@
+{
+  "phash_bits": 64,
+  "resize_grey": 32,
+  "near_duplicate_flag_hamming_max": 4,
+  "exact": "Byte SHA256 or full decoded RGB plus dimensions SHA256",
+  "policy": "Conservatively quarantine every selected external image with an exact or near-pHash flag; do not relabel cases or call hash collisions confirmed duplicates.",
+  "scope": "Every selected external image versus8512 HAM development images, and within selected external set.",
+  "original_test_images_opened": false,
+  "original_test_labels_loaded": false,
+  "limitation": "This cannot audit unknown aliases of original test images or patient identity; published name/source checks are separate."
+}

@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "source_scope": "BCN lesion-prefix rows of the official ISIC2019 training release only",
+  "label_policy": "AK -> akiec as subset supervision; SCC/UNK excluded; other six matching diagnostic categories mapped directly",
+  "exclusions": [
+    "Every HAM image identity and canonical downsampled alias",
+    "Every known HAM lesion identity",
+    "Missing lesion IDs",
+    "All downsampled copies",
+    "Non-BCN sources for this bounded stage",
+    "Whole lesion group if any member occurs in pinned published duplicate-deletion name lists",
+    "Whole lesion group if any member is one of four forum-confirmed historical duplicate-label cases",
+    "Conflicting mapped classes within a lesion group"
+  ],
+  "selection": "One image per retained lesion, minimum SHA256(seed42:image_id), independent of quality/model predictions",
+  "external_partition": "Fixed stratified85/15 lesion-group external train/preflight-validation; NOT a new locked test",
+  "scope": "Metadata/name clearance and acquisition candidate only; no training, inference, accuracy optimization or test labels",
+  "pixel_gate": "Selected images require decode, hashes and external/HAM-development duplicate review before pilot readiness",
+  "caveats": [
+    "Patient identifiers unavailable; patient overlap cannot be directly audited.",
+    "Published duplicate lists are incomplete and removal-order dependent, not proof that all retained images are unique.",
+    "No original test pixels/labels will be inspected; unknown aliases of original test images remain unverified.",
+    "AK is a subset of HAM akiec, not full equivalent coverage; external SCC includes diagnoses that must not be indiscriminately merged."
+  ]
+}

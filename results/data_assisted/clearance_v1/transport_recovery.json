@@ -1,0 +1,6 @@
+{
+  "original_worker_pid": 6584,
+  "reason": "Bounded acquisition transport changed from 4 to 16 workers; no cohort/model changes",
+  "saved_images": 964,
+  "timestamp": "2026-10-05T18:38:35.9646724+05:30"
+}

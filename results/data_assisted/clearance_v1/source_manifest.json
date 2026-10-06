@@ -1,0 +1,121 @@
+{
+  "candidate_manifest": "results/short_screening/external_isic2019_feasibility/candidate_identity_manifest.csv",
+  "candidate_sha256": "219b29704a2a4d115ec301e08e0d790b508f32abfd275b78ab5d767445246f66",
+  "official_ground_truth_sha256": "aa88e9638fe4df9ef330dc4ba22fa4bd475c44af692fffb870c73091ab25cdcd",
+  "official_metadata_sha256": "d93994a8ed201d474de9a7af7e17ec30929cbc4a5220659ecbde17cbe83e9316",
+  "duplicate_reference_repository": "https://github.com/mmu-dermatology-research/isic_duplicate_removal_strategy",
+  "duplicate_reference_commit": "b785b75fc1b1440d7be7b17d2cb2348de6c76102",
+  "duplicate_lists": [
+    {
+      "repo_path": "file_lists/01 - downsampled_vs_2016_test_duplicate_filename_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/01%20-%20downsampled_vs_2016_test_duplicate_filename_deleted.txt",
+      "local_file": "02_01 - downsampled_vs_2016_test_duplicate_filename_deleted.txt",
+      "sha256": "b99b564de000cc616b72943067cb35242595978b7a8a479c64616922a7ee84e7",
+      "bytes": 6365,
+      "identity_count": 95
+    },
+    {
+      "repo_path": "file_lists/02 - downsampled_vs_2017_test_duplicate_filename_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/02%20-%20downsampled_vs_2017_test_duplicate_filename_deleted.txt",
+      "local_file": "03_02 - downsampled_vs_2017_test_duplicate_filename_deleted.txt",
+      "sha256": "026a402828ed138cdaadabab79f03277a32083758e9f91715e7a3c843fb618c5",
+      "bytes": 39798,
+      "identity_count": 594
+    },
+    {
+      "repo_path": "file_lists/03 - downsampled_vs_2016_test_binary_duplicate_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/03%20-%20downsampled_vs_2016_test_binary_duplicate_deleted.txt",
+      "local_file": "04_03 - downsampled_vs_2016_test_binary_duplicate_deleted.txt",
+      "sha256": "0586a9786c2ed26cd543e607d078cfa3548db41d905a64bb67f1ff75a794dfd8",
+      "bytes": 68,
+      "identity_count": 1
+    },
+    {
+      "repo_path": "file_lists/04 - downsampled_vs_2016_train_duplicate_filename_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/04%20-%20downsampled_vs_2016_train_duplicate_filename_deleted.txt",
+      "local_file": "05_04 - downsampled_vs_2016_train_duplicate_filename_deleted.txt",
+      "sha256": "91f540beb3f97da36651e66e2cd923422ef9f6299b30a1e7e7c48ae71814ec84",
+      "bytes": 19497,
+      "identity_count": 291
+    },
+    {
+      "repo_path": "file_lists/05 - downsampled_vs_2017_train_duplicate_filename_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/05%20-%20downsampled_vs_2017_train_duplicate_filename_deleted.txt",
+      "local_file": "06_05 - downsampled_vs_2017_train_duplicate_filename_deleted.txt",
+      "sha256": "0b9138f90db19ca9513333621aebd899c3372bd2d1ffaf280ced0f1b6b76a978",
+      "bytes": 63382,
+      "identity_count": 946
+    },
+    {
+      "repo_path": "file_lists/06 - all_train_duplicates_deleted_(all but newest).txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/06%20-%20all_train_duplicates_deleted_%28all%20but%20newest%29.txt",
+      "local_file": "07_06 - all_train_duplicates_deleted_(all but newest).txt",
+      "sha256": "44db850019f29696aea2ebcceebf3aa8d218c2df0f8b2248f845968b349022bb",
+      "bytes": 1021979,
+      "identity_count": 11546
+    },
+    {
+      "repo_path": "file_lists/07 - 2016_train_vs_2016_test_duplicates_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/07%20-%202016_train_vs_2016_test_duplicates_deleted.txt",
+      "local_file": "08_07 - 2016_train_vs_2016_test_duplicates_deleted.txt",
+      "sha256": "003a51232d4d72c3dd77e5febc1bad33d3bc0395a269b362d6e2b5f08e57399d",
+      "bytes": 178,
+      "identity_count": 2
+    },
+    {
+      "repo_path": "file_lists/08 - 2017_train_vs_2016_test_duplicates_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/08%20-%202017_train_vs_2016_test_duplicates_deleted.txt",
+      "local_file": "09_08 - 2017_train_vs_2016_test_duplicates_deleted.txt",
+      "sha256": "cf17fb163b4cd7de6cfb819ff46f981bdfdcfe2c5e98d925c49b5b682262300c",
+      "bytes": 6478,
+      "identity_count": 82
+    },
+    {
+      "repo_path": "file_lists/09 - 2017_train_vs_2017_test_duplicates_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/09%20-%202017_train_vs_2017_test_duplicates_deleted.txt",
+      "local_file": "10_09 - 2017_train_vs_2017_test_duplicates_deleted.txt",
+      "sha256": "1dfb88bf1a16a45695affe10908cb7614ef78d4ec3d4b67a7615109a6a041617",
+      "bytes": 158,
+      "identity_count": 2
+    },
+    {
+      "repo_path": "file_lists/10 - 2019_train_vs_2016_test_duplicates_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/10%20-%202019_train_vs_2016_test_duplicates_deleted.txt",
+      "local_file": "11_10 - 2019_train_vs_2016_test_duplicates_deleted.txt",
+      "sha256": "8b65396f910a928f0caa52c117b7be678a38c5341a63b2c0b2eced5154ed304e",
+      "bytes": 20640,
+      "identity_count": 259
+    },
+    {
+      "repo_path": "file_lists/11 - 2019_train_vs_2017_test_duplicates_deleted.txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/11%20-%202019_train_vs_2017_test_duplicates_deleted.txt",
+      "local_file": "12_11 - 2019_train_vs_2017_test_duplicates_deleted.txt",
+      "sha256": "df794acc7183b74fb5bffbe17cb10b0a598788c89f4081a81257a245670f562a",
+      "bytes": 80,
+      "identity_count": 2
+    },
+    {
+      "repo_path": "file_lists/12 - all_test_duplicates_deleted_(all but newest).txt",
+      "url": "https://raw.githubusercontent.com/mmu-dermatology-research/isic_duplicate_removal_strategy/b785b75fc1b1440d7be7b17d2cb2348de6c76102/file_lists/12%20-%20all_test_duplicates_deleted_%28all%20but%20newest%29.txt",
+      "local_file": "13_12 - all_test_duplicates_deleted_(all but newest).txt",
+      "sha256": "b3a8d60187b25a2121d22c1bf44f0c084fc1a0d799a5b1913813316faf0cd8c4",
+      "bytes": 128524,
+      "identity_count": 1593
+    }
+  ],
+  "sources": {
+    "HAM_category_definitions": "https://www.nature.com/articles/sdata2018161",
+    "ISIC_label_subdivision": "https://forum.isic-archive.com/t/question-re-new-classification-category/1074",
+    "Historical_duplicate_label_cases": "https://forum.isic-archive.com/t/a-list-of-duplicate-images-in-the-training-set/1141"
+  },
+  "selected_manifest_sha256": "565b016d722ab2bc99a3679ac8aec10f385a31f787ec5f58ecc1b44e5e81c6b5",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ]
+}

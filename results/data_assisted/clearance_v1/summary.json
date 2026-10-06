@@ -1,0 +1,79 @@
+{
+  "status": "metadata_and_published_name_clearance_complete_pixel_gate_pending",
+  "candidate_images": 14885,
+  "initial_BCN_images": 11982,
+  "published_name_direct_hits": 47,
+  "confirmed_case_direct_hits": 4,
+  "flagged_lesion_groups": 15,
+  "whole_group_images_excluded": 100,
+  "eligible_BCN_images": 11882,
+  "selected_images": 3439,
+  "selected_lesion_groups": 3439,
+  "external_train_images": 2923,
+  "external_preflight_val_images": 516,
+  "class_counts": [
+    {
+      "class_name": "akiec",
+      "eligible_images": 721,
+      "selected_lesions": 235,
+      "external_train": 200,
+      "external_preflight_val": 35
+    },
+    {
+      "class_name": "bcc",
+      "eligible_images": 2793,
+      "selected_lesions": 979,
+      "external_train": 832,
+      "external_preflight_val": 147
+    },
+    {
+      "class_name": "bkl",
+      "eligible_images": 1103,
+      "selected_lesions": 349,
+      "external_train": 297,
+      "external_preflight_val": 52
+    },
+    {
+      "class_name": "df",
+      "eligible_images": 124,
+      "selected_lesions": 40,
+      "external_train": 34,
+      "external_preflight_val": 6
+    },
+    {
+      "class_name": "mel",
+      "eligible_images": 2839,
+      "selected_lesions": 521,
+      "external_train": 443,
+      "external_preflight_val": 78
+    },
+    {
+      "class_name": "nv",
+      "eligible_images": 4191,
+      "selected_lesions": 1278,
+      "external_train": 1086,
+      "external_preflight_val": 192
+    },
+    {
+      "class_name": "vasc",
+      "eligible_images": 111,
+      "selected_lesions": 37,
+      "external_train": 31,
+      "external_preflight_val": 6
+    }
+  ],
+  "known_HAM_identity_overlap": 0,
+  "known_HAM_lesion_overlap": 0,
+  "external_partition_lesion_overlap": 0,
+  "training_launched": false,
+  "gpu_used": false,
+  "test_loaded": false,
+  "ready_for_GPU_pilot": false,
+  "selected_manifest_sha256": "565b016d722ab2bc99a3679ac8aec10f385a31f787ec5f58ecc1b44e5e81c6b5",
+  "limitations": [
+    "Patient identifiers unavailable; patient overlap cannot be directly audited.",
+    "Published duplicate lists are incomplete and removal-order dependent, not proof that all retained images are unique.",
+    "No original test pixels/labels will be inspected; unknown aliases of original test images remain unverified.",
+    "AK is a subset of HAM akiec, not full equivalent coverage; external SCC includes diagnoses that must not be indiscriminately merged."
+  ]
+}
