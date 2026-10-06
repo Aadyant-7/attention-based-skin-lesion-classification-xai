@@ -1,0 +1,28 @@
+{
+  "question": "Does train-only clinically available metadata help the retained S53 ensemble?",
+  "reference": "Existing S53 equal-five probabilities; all checkpoints/weights/preprocessing remain unchanged",
+  "candidates": {
+    "s68_age": [
+      "age_bin"
+    ],
+    "s69_age_sex_location": [
+      "age_bin",
+      "sex",
+      "localization"
+    ]
+  },
+  "formula": "softmax(log(P_S53) +0.25*sum_f log(P(metadata_field_f|class)))",
+  "strength": 0.25,
+  "laplace_alpha": 1.0,
+  "age_bins": "[0,20),[20,40),[40,60),[60,80),[80,120]; no learned boundaries",
+  "fit": "HAM training only; exclude every training lesion present in validation; one categorical metadata record per lesion",
+  "conflict_policy": "Exclude a fit lesion with contradictory observed categorical field values or classes; missing fields are neutral at inference",
+  "unknown_policy": "Missing age/sex/location and unseen training-vocabulary categories add zero log adjustment; missingness is not a predictor",
+  "prohibited": "No image/lesion ID, diagnosis confirmation, diagnosis-derived attributes or test metadata as predictors",
+  "material_gate": "At least8 net additional correct images AND accuracy gain>=.005 AND macroF1 and melanoma recall nondecreasing",
+  "limit": "Exactly two predefined field ablations, one strength and smoothing; no alternative bins/strengths/thresholds/source search",
+  "caveat": "Conditional independence is an approximation; image features already encode some clinical correlates. Existing base checkpoints were selected on this repeatedly used exploratory cohort; not independent test evidence.",
+  "source": "https://scikit-learn.org/stable/modules/naive_bayes.html#categorical-naive-bayes",
+  "test_loaded": false,
+  "gpu_used": false
+}

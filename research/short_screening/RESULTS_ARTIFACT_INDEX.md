@@ -51,6 +51,8 @@ Within each result folder:
 
 ## Training and historical evidence
 
+- `results/data_assisted/s68_s69_metadata_screen/`: completed fixed metadata follow-up on S53. Age-only93.4797% /0.882840; age+sex+location93.0805% /0.877659; both rejected versus93.6128% /0.886857 image-only. Contains train-only likelihood model, metadata-fit/exclusion manifests, full predictions/probabilities, class/confusion PNG/PDF figures and comparison. No validation-fitting or GPU/test run. Closeout: `research/data_assisted/S68_S69_METADATA_CLOSEOUT.md`.
+
 - `results/data_assisted/s66_s67_frozen_data_screen/`: rejected fixed external-data CPU screen and three-fold train-only lesion-group confirmation. HAM-only versus HAM+external:79.3081%→78.5762% on exploratory validation;75.8025%→74.4471% on pooled group-OOF. Full metrics, predictions/probabilities, class/confusion/comparison PNG/PDF, gain/loss identities, source hashes and classifier hashes are saved. These are diagnostic feature heads, not the93.61% ensemble. Closeout: `research/data_assisted/S66_S67_CLOSEOUT.md`.
 
 - `results/structured_experiments/`: individual structured model runs, training logs/history, validation metrics/predictions and figures.

@@ -1,0 +1,39 @@
+method,image_id,true_class,reference_class,candidate_class,reference_correct,candidate_correct,age_bin,sex,localization
+s68_age,ISIC_0025419,bkl,bkl,nv,True,False,2,male,trunk
+s68_age,ISIC_0025140,bkl,nv,bkl,False,True,3,male,ear
+s68_age,ISIC_0033414,bkl,nv,bkl,False,True,3,male,back
+s68_age,ISIC_0029522,bkl,nv,bkl,False,True,3,male,lower extremity
+s68_age,ISIC_0026254,df,bkl,nv,False,False,2,male,lower extremity
+s68_age,ISIC_0025265,mel,mel,nv,True,False,1,male,back
+s68_age,ISIC_0033300,mel,mel,nv,True,False,2,female,lower extremity
+s68_age,ISIC_0028051,mel,mel,nv,True,False,2,male,back
+s68_age,ISIC_0025128,mel,nv,mel,False,True,4,female,lower extremity
+s68_age,ISIC_0025941,mel,mel,nv,True,False,2,male,back
+s68_age,ISIC_0025564,bcc,bcc,nv,True,False,2,male,back
+s68_age,ISIC_0027235,nv,mel,nv,False,True,1,female,nan
+s68_age,ISIC_0033740,nv,mel,nv,False,True,1,female,face
+s68_age,ISIC_0031603,nv,mel,nv,False,True,1,female,scalp
+s68_age,ISIC_0025926,nv,nv,bcc,True,False,3,female,back
+s68_age,ISIC_0030115,nv,nv,mel,True,False,3,male,back
+s68_age,ISIC_0031852,akiec,nv,bkl,False,False,4,female,upper extremity
+s68_age,ISIC_0024800,akiec,akiec,bkl,True,False,2,male,back
+s69_age_sex_location,ISIC_0025419,bkl,bkl,nv,True,False,2,male,trunk
+s69_age_sex_location,ISIC_0025140,bkl,nv,bkl,False,True,3,male,ear
+s69_age_sex_location,ISIC_0033414,bkl,nv,bkl,False,True,3,male,back
+s69_age_sex_location,ISIC_0027470,bkl,bkl,nv,True,False,2,female,lower extremity
+s69_age_sex_location,ISIC_0033722,bkl,nv,bkl,False,True,2,female,chest
+s69_age_sex_location,ISIC_0026254,df,bkl,nv,False,False,2,male,lower extremity
+s69_age_sex_location,ISIC_0025265,mel,mel,nv,True,False,1,male,back
+s69_age_sex_location,ISIC_0033300,mel,mel,nv,True,False,2,female,lower extremity
+s69_age_sex_location,ISIC_0025691,bcc,bcc,nv,True,False,2,female,abdomen
+s69_age_sex_location,ISIC_0033468,bcc,mel,bcc,False,True,4,female,back
+s69_age_sex_location,ISIC_0025564,bcc,bcc,nv,True,False,2,male,back
+s69_age_sex_location,ISIC_0027235,nv,mel,nv,False,True,1,female,nan
+s69_age_sex_location,ISIC_0030429,nv,nv,bcc,True,False,2,female,scalp
+s69_age_sex_location,ISIC_0030796,nv,nv,mel,True,False,3,female,back
+s69_age_sex_location,ISIC_0025926,nv,nv,bcc,True,False,3,female,back
+s69_age_sex_location,ISIC_0030416,nv,nv,bkl,True,False,3,female,face
+s69_age_sex_location,ISIC_0030115,nv,nv,mel,True,False,3,male,back
+s69_age_sex_location,ISIC_0031852,akiec,nv,bkl,False,False,4,female,upper extremity
+s69_age_sex_location,ISIC_0024710,akiec,akiec,bcc,True,False,3,male,back
+s69_age_sex_location,ISIC_0024800,akiec,akiec,bkl,True,False,2,male,back

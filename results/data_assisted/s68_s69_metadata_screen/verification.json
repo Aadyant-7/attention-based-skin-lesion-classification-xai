@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "reference_reproduced": true,
+  "validation_images": 1503,
+  "clinical_development_rows": 8512,
+  "metadata_fit_lesions": 4923,
+  "metadata_train_validation_lesion_overlap": 0,
+  "excluded_shared_lesion_train_images": 773,
+  "contradictory_fit_images": 0,
+  "training_only_vocabularies_and_counts": true,
+  "validation_labels_used_for_fit": false,
+  "unknown_and_missing_fields_neutral": true,
+  "saved_metrics_and_confusion_recomputed": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

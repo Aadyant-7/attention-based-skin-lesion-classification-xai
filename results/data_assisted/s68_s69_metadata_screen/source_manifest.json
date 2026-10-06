@@ -1,0 +1,30 @@
+{
+  "files": {
+    "data/raw/HAM10000/HAM10000_metadata.csv": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+    "results/short_screening/s53_equal_five_b0_addition/validation_predictions.csv": "d6dfabc11a52567dfe25f56f7fb35d6da45463c09306eee02f50f596af82a5bd",
+    "results/short_screening/s53_equal_five_b0_addition/validation_metrics.json": "559e360783e8ca412ac8cde32d8a3e314a79428b840692f611c4b45053e16630",
+    "data/splits/exploratory/image_level_dev_v1.csv": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+    "research/data_assisted/metadata_screen.py": "456539ad9c5f5946459130e24c808c94b2e9305b5689ba920d0b7aae40fad63b"
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "clinical_columns_parsed": [
+    "age",
+    "sex",
+    "localization"
+  ],
+  "excluded_predictors": [
+    "image_id",
+    "lesion_id",
+    "dx",
+    "dx_type"
+  ],
+  "original_test_clinical_rows_parsed": false
+}

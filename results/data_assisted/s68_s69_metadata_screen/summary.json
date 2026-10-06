@@ -1,0 +1,424 @@
+{
+  "status": "completed",
+  "reference": {
+    "loss": 0.21252927894010532,
+    "accuracy": 0.936127744510978,
+    "macro_precision": 0.9157811848988903,
+    "macro_recall": 0.8656356053115845,
+    "macro_f1": 0.8868574111567237,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        75,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        141,
+        0,
+        6,
+        13,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        13,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        137,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        14,
+        986,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9036144578313253,
+        "recall": 0.974025974025974,
+        "f1": 0.9375,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.9038461538461539,
+        "recall": 0.8545454545454545,
+        "f1": 0.8785046728971962,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.7647058823529411,
+        "f1": 0.8666666666666667,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8616352201257862,
+        "recall": 0.8203592814371258,
+        "f1": 0.8404907975460123,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9572815533980582,
+        "recall": 0.9791459781529295,
+        "f1": 0.9680903289150712,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "metrics": {
+    "s68_age": {
+      "loss": 0.21188821779655426,
+      "accuracy": 0.9347970725216235,
+      "macro_precision": 0.9139174987929478,
+      "macro_recall": 0.8601720356932974,
+      "macro_f1": 0.8828400816388295,
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "confusion_matrix": [
+        [
+          34,
+          5,
+          9,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          74,
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          5,
+          0,
+          143,
+          0,
+          6,
+          11,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          13,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0,
+          134,
+          30,
+          0
+        ],
+        [
+          0,
+          1,
+          5,
+          0,
+          12,
+          987,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          20
+        ]
+      ],
+      "per_class": {
+        "akiec": {
+          "precision": 0.8717948717948718,
+          "recall": 0.6938775510204082,
+          "f1": 0.7727272727272727,
+          "support": 49
+        },
+        "bcc": {
+          "precision": 0.891566265060241,
+          "recall": 0.961038961038961,
+          "f1": 0.925,
+          "support": 77
+        },
+        "bkl": {
+          "precision": 0.89937106918239,
+          "recall": 0.8666666666666667,
+          "f1": 0.8827160493827161,
+          "support": 165
+        },
+        "df": {
+          "precision": 1.0,
+          "recall": 0.7647058823529411,
+          "f1": 0.8666666666666667,
+          "support": 17
+        },
+        "mel": {
+          "precision": 0.8701298701298701,
+          "recall": 0.8023952095808383,
+          "f1": 0.8348909657320872,
+          "support": 167
+        },
+        "nv": {
+          "precision": 0.9554695062923524,
+          "recall": 0.9801390268123138,
+          "f1": 0.9676470588235294,
+          "support": 1007
+        },
+        "vasc": {
+          "precision": 0.9090909090909091,
+          "recall": 0.9523809523809523,
+          "f1": 0.9302325581395349,
+          "support": 21
+        }
+      }
+    },
+    "s69_age_sex_location": {
+      "loss": 0.21180280360965223,
+      "accuracy": 0.9308050565535595,
+      "macro_precision": 0.9079113080665017,
+      "macro_recall": 0.8565368944546206,
+      "macro_f1": 0.8776590352606451,
+      "class_order": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "confusion_matrix": [
+        [
+          33,
+          6,
+          9,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          74,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          5,
+          0,
+          142,
+          0,
+          6,
+          12,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          13,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0,
+          135,
+          29,
+          0
+        ],
+        [
+          0,
+          2,
+          6,
+          0,
+          15,
+          982,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          20
+        ]
+      ],
+      "per_class": {
+        "akiec": {
+          "precision": 0.868421052631579,
+          "recall": 0.673469387755102,
+          "f1": 0.7586206896551724,
+          "support": 49
+        },
+        "bcc": {
+          "precision": 0.8705882352941177,
+          "recall": 0.961038961038961,
+          "f1": 0.9135802469135802,
+          "support": 77
+        },
+        "bkl": {
+          "precision": 0.8930817610062893,
+          "recall": 0.8606060606060606,
+          "f1": 0.8765432098765432,
+          "support": 165
+        },
+        "df": {
+          "precision": 1.0,
+          "recall": 0.7647058823529411,
+          "f1": 0.8666666666666667,
+          "support": 17
+        },
+        "mel": {
+          "precision": 0.8598726114649682,
+          "recall": 0.8083832335329342,
+          "f1": 0.8333333333333334,
+          "support": 167
+        },
+        "nv": {
+          "precision": 0.9543245869776482,
+          "recall": 0.9751737835153923,
+          "f1": 0.9646365422396856,
+          "support": 1007
+        },
+        "vasc": {
+          "precision": 0.9090909090909091,
+          "recall": 0.9523809523809523,
+          "f1": 0.9302325581395349,
+          "support": 21
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "method": "s68_age",
+      "gained": 7,
+      "lost": 9,
+      "net_correct_change": -2,
+      "material_gate_passed": false,
+      "accuracy_delta": -0.0013306719893545482,
+      "macro_f1_delta": -0.00401732951789413,
+      "melanoma_recall": 0.8023952095808383
+    },
+    {
+      "method": "s69_age_sex_location",
+      "gained": 5,
+      "lost": 13,
+      "net_correct_change": -8,
+      "material_gate_passed": false,
+      "accuracy_delta": -0.005322687957418526,
+      "macro_f1_delta": -0.009198375896078526,
+      "melanoma_recall": 0.8083832335329342
+    }
+  ],
+  "fit_lesions": 4923,
+  "fit_class_counts": [
+    145,
+    203,
+    463,
+    47,
+    370,
+    3633,
+    62
+  ],
+  "validation_known_fields": {
+    "age_bin": 1491,
+    "sex": 1490,
+    "localization": 1449
+  },
+  "excluded_shared_lesion_train_images": 773,
+  "contradictory_fit_images": 0,
+  "runtime_seconds": 10.00699020002503,
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Keep S53; metadata gate failed; no strength/bin/search retries",
+  "limitations": "Conditional independence is an approximation; image features already encode some clinical correlates. Existing base checkpoints were selected on this repeatedly used exploratory cohort; not independent test evidence."
+}

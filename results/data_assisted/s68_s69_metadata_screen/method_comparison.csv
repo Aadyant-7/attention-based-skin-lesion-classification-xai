@@ -1,0 +1,3 @@
+method,gained,lost,net_correct_change,material_gate_passed,accuracy_delta,macro_f1_delta,melanoma_recall
+s68_age,7,9,-2,False,-0.0013306719893545482,-0.00401732951789413,0.8023952095808383
+s69_age_sex_location,5,13,-8,False,-0.005322687957418526,-0.009198375896078526,0.8083832335329342

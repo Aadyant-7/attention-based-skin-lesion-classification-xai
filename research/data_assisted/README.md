@@ -28,6 +28,17 @@ S66/S67 tested the fixed HAM-only versus HAM+external frozen-feature recipe. Bot
 
 Artifacts: `results/data_assisted/s66_s67_frozen_data_screen/`. Cached external features and eight fitted CPU classifier heads: `.cache/s66_s67_frozen_data_screen/`. These are diagnostic classifiers, not new fine-tuned ensemble results; metadata remains deferred.
 
+## Completed metadata follow-up
+
+S68/S69 used training-only, validation-lesion-excluded categorical clinical likelihoods to adjust existing S53 probabilities. Age-only and age+sex+location both failed the fixed material gate; the retained image-only method is unchanged. `S68_S69_METADATA_CLOSEOUT.md` explains the comparison and limits. Commands:
+
+```powershell
+.\.venv\Scripts\python.exe -m research.data_assisted.metadata_screen
+.\.venv\Scripts\python.exe -m research.data_assisted.metadata_closeout
+```
+
+Outputs: `results/data_assisted/s68_s69_metadata_screen/`, including the fitted metadata model JSON, source/fit/exclusion manifests, predictions, class/confusion figures and comparisons. This is a metadata-fusion development probe, not a jointly trained multimodal CNN.
+
 ## Locations
 
 - `results/data_assisted/clearance_v1/`: fixed plans, source hashes, selection/exclusion manifests, acquisition evidence, duplicate candidates and the final screened manifest.

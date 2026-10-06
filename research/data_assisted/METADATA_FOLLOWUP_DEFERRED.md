@@ -1,5 +1,7 @@
 # Metadata follow-up: deferred
 
+**Follow-up completed2026-10-06:** S68/S69 tested fixed train-only metadata adjustments with the retained S53 ensemble. Age-only reached93.4797% /0.882840 macro-F1; age+sex+location reached93.0805% /0.877659, both below image-only93.6128% /0.886857. Both material gates failed and melanoma recall declined. Keep image-only; no metadata-strength/bin search or multimodal GPU training follows. Full report: `research/data_assisted/S68_S69_METADATA_CLOSEOUT.md`. The earlier deferred note and historical scores below are preserved.
+
 The user requested a later revisit of metadata with the current ensemble. No new metadata classifier or fusion was run during external-data clearance.
 
 Earlier evidence is saved under `results/phase5_multimodal_probe/`, especially `feasibility_conclusion.md`, `metadata_only_results.json`, `best_multimodal_classifier.json`, and `best_fusion_accuracy.json`.
