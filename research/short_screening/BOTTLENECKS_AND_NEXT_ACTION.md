@@ -31,6 +31,8 @@ Official transform reference: https://docs.pytorch.org/vision/stable/models/gene
 
 ## Direction after the screen
 
+**External-data follow-up completed:** S66/S67 tested the fixed addition of2,823 cleared BCN lesions with matched frozen features/classifier. HAM exploratory accuracy fell79.3081%→78.5762%; grouped train-OOF accuracy fell75.8025%→74.4471%, all three folds worsened, and melanoma recall declined. External preflight accuracy improved46.4%→58.8%. This supports rejecting simple pooled-data GPU training and investigating source/case-composition differences; it does not prove all external adaptation would fail. No new ensemble or original-test evaluation was performed. Full evidence: `research/data_assisted/S66_S67_CLOSEOUT.md`. The retained93.6128% ensemble stays unchanged; metadata remains a separate deferred follow-up.
+
 **Completed outcome:** S64 passed on frozen-feature exploratory validation (79.3081% ->81.7698%), but S65 failed the fixed train-only grouped consistency gate (75.8025% ->76.4160%, only one positive fold and slightly lower melanoma recall). No crop-based CNN training is justified by these screens. The next substantive action is the external-data identity/label/duplicate clearance stage in `EXTERNAL_DATA_NEXT_DIRECTION.md`, not an automatic GPU launch. Full closeout: `S64_S65_PREPROCESSING_CLOSEOUT.md`.
 
 If the gate passes, first check consistency on train-only lesion-group folds using these cached features, without changing the classifier or candidate transform. Only consistent gains would support proposing a matched15–20-epoch ConvNeXt run, with a saved control and later ensemble complementarity analysis. No GPU launch is implied by this document.

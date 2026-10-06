@@ -54,4 +54,6 @@ Final manifest SHA256: `35065c4406b7e50134fb749cea04c403ffd8f83f7c63c8fe43c56199
 
 ## Next action
 
+Follow-up on2026-10-06: S66/S67 executed the plan below and failed both advancement gates. The fixed pooled-data recipe is rejected for GPU training. This report preserves the earlier preparation-stage findings; the completed model evidence is in `research/data_assisted/S66_S67_CLOSEOUT.md`.
+
 Use the predeclared paired CPU frozen-feature data screen in `research/data_assisted/NEXT_DEVELOPMENT_SCREEN_PLAN.md` before spending GPU time. Compare HAM-only versus HAM-plus-external training under the same recipe; require material overall and difficult-class gains plus train-only group consistency. No classifier has yet been trained on this dataset. Metadata evidence and later question are in `METADATA_FOLLOWUP_DEFERRED.md`.

@@ -1,0 +1,18 @@
+{
+  "experiments": [
+    "S66 paired exploratory feature-head screen",
+    "S67 train-only3fold lesion-group consistency"
+  ],
+  "question": "Does curated external dermoscopy training data improve matched frozen-feature classifiers?",
+  "weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+  "precision": "CPU FP32",
+  "transform": "Square224 bilinear; ImageNet normalization; identity only",
+  "head": "Fold-local StandardScaler + LogisticRegression C1 max_iter1000 seed42; normalized sqrt inverse-frequency sample weights",
+  "candidate": "Same classifier plus fixed2823 external training lesions; same external set in each HAM group-CV training fold",
+  "external_preflight": "500 fixed external development-validation lesions; descriptive domain shift only; never fit",
+  "validation_gate": "accuracy+0.01 AND macroF1+0.01 AND melanoma recall nondecreasing",
+  "group_gate": "pooled accuracy+0.01 AND macroF1 nondecreasing AND melanoma recall nondecreasing AND2/3 folds positive",
+  "limit": "No source/subset/head/weight search; no GPU or original test; no automatic training regardless of score",
+  "external_manifest_sha256": "35065c4406b7e50134fb749cea04c403ffd8f83f7c63c8fe43c5619926037ba1",
+  "independence_limitations": true
+}

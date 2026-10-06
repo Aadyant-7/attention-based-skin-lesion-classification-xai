@@ -1,0 +1,11 @@
+{
+  "kind": "descriptive_not_causal",
+  "new_model_fitted": false,
+  "test_loaded": false,
+  "ham_validation_accuracy_control": 0.7930805056553559,
+  "ham_validation_accuracy_candidate": 0.7857618097139055,
+  "external_preflight_accuracy_control": 0.464,
+  "external_preflight_accuracy_candidate": 0.588,
+  "interpretation": "Candidate learns external cases better but loses HAM accuracy and melanoma recall; consistent with domain/composition/label-coverage shift, not proof of one causal mechanism.",
+  "inference_limit": "This rejects the fixed pooled frozen-feature recipe, not every possible source-adaptation/fine-tuning method. No alternative source weighting or subset search was performed."
+}

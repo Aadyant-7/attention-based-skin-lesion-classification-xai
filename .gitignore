@@ -42,5 +42,6 @@ __pycache__/
 !results/final_locked_test/**/*.pdf
 !results/aggressive_enhanced/**/*.pdf
 !results/short_screening/**/*.pdf
+!results/data_assisted/**/*.pdf
 *.lock
 !data/raw/.gitkeep

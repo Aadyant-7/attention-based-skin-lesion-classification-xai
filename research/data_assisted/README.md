@@ -16,6 +16,18 @@ Run from the project root with the existing virtual environment:
 
 The default acquisition is a fixed 14-image transport sample. Full acquisition downloads only selected ZIP members, requires exact HTTP byte ranges and a pinned archive ETag, and refuses a full-archive fallback. Each attempt has a 20-minute ceiling; rerunning safely verifies/reuses completed JPEGs and downloads the remainder. Valid files are never overwritten. Acquisition results are written only after all requested files pass CRC and decode checks.
 
+## Completed CPU screen
+
+S66/S67 tested the fixed HAM-only versus HAM+external frozen-feature recipe. Both advancement gates failed; no pooled-data GPU run follows. See `S66_S67_CLOSEOUT.md`. Reproducible commands (a completed screen rerun is a no-op):
+
+```powershell
+.\.venv\Scripts\python.exe -u -m research.data_assisted.frozen_screen
+.\.venv\Scripts\python.exe -m research.data_assisted.screen_closeout
+.\.venv\Scripts\python.exe -m research.data_assisted.source_shift_audit
+```
+
+Artifacts: `results/data_assisted/s66_s67_frozen_data_screen/`. Cached external features and eight fitted CPU classifier heads: `.cache/s66_s67_frozen_data_screen/`. These are diagnostic classifiers, not new fine-tuned ensemble results; metadata remains deferred.
+
 ## Locations
 
 - `results/data_assisted/clearance_v1/`: fixed plans, source hashes, selection/exclusion manifests, acquisition evidence, duplicate candidates and the final screened manifest.

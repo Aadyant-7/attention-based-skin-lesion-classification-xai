@@ -1,4 +1,6 @@
-# Next bounded screen — prepared, not launched
+# Bounded data screen — original plan
+
+Executed as S66/S67 on2026-10-06. Both gates failed; no pooled-data GPU run is recommended. Results and interpretation: `research/data_assisted/S66_S67_CLOSEOUT.md`. The original fixed plan below is preserved.
 
 ## Question
 

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "gate_passed": false,
+  "failed_gates": [
+    "S66 accuracy gain below +1.0 percentage point",
+    "S66 macro-F1 gain below +0.01",
+    "S66 melanoma recall declined",
+    "S67 pooled accuracy gain below +1.0 percentage point",
+    "S67 pooled macro-F1 declined",
+    "S67 pooled melanoma recall declined",
+    "S67 fewer than two improving folds"
+  ],
+  "serialized_classifier_hashes": {
+    "s66_ham_only.joblib": "0a14555686978fd223480b39daa2bbf6f1a56815e311519a3ba0a9c19fbebf19",
+    "s66_ham_plus_external.joblib": "de47f326657011d0eb6122019a110db016e01ae647b15dc06a902428be3c657e",
+    "s67_ham_only_fold1.joblib": "f921fcc3032839cb881d319904289bbdadf500557986bfac2108309f62ffe468",
+    "s67_ham_only_fold2.joblib": "d1bd42845a521446418e455da802ab1e6fc2274148d2d349756b4bf148a73d5d",
+    "s67_ham_only_fold3.joblib": "d58d507bce4fc4f5f44ae4ed2cab592a7dc3c339247ed759fb11e3716b8c4c31",
+    "s67_ham_plus_external_fold1.joblib": "93cc56140ccaaf05aa633e96108352350a6699f5badeeb60d366d8d5b7463f78",
+    "s67_ham_plus_external_fold2.joblib": "b0db50abf3c6e47c5757977bbabc343d8ebb412188b1b0177eaa18ec4153c7aa",
+    "s67_ham_plus_external_fold3.joblib": "0103b652dfa18be7599dc37eb634658a7484ca28e8536526f177ee4ea59e91ca"
+  },
+  "test_loaded": false,
+  "gpu_used": false,
+  "ensemble_changed": false
+}

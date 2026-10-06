@@ -1,0 +1,26 @@
+{
+  "weights_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+  "weights_path": ".cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth",
+  "external_manifest_sha256": "35065c4406b7e50134fb749cea04c403ffd8f83f7c63c8fe43c5619926037ba1",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "feature_hashes": {
+    ".cache/s64_paired_preprocessing_cpu/square224_train.npz": "f410939cbf8e8f9b97a65fae6652152347402c08cf3e84ef30328976d5819823",
+    ".cache/s64_paired_preprocessing_cpu/square224_val.npz": "47714c3a8bff66f2de9f2beabe1f7462df1eefe4d9c46132e69938e036a096bc",
+    ".cache/s66_s67_frozen_data_screen/external_square224.npz": "04c1aec814c84295b50844381b172322da6ed02b20d017f5eff6f9a9474e932c"
+  },
+  "script_sha256": "ca5cab11becb78120bb91e3555c7c6d278456806db6607e248b4675c9fc8470d",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "test_loaded": false,
+  "gpu_used": false,
+  "patient_overlap_verified": false,
+  "unknown_original_test_aliases_verified": false
+}

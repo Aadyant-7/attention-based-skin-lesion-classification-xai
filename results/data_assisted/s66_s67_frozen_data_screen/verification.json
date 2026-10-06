@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "ham_train_images": 7009,
+  "ham_validation_images": 1503,
+  "external_train_images": 2823,
+  "external_preflight_images": 500,
+  "same_pretrained_weights": true,
+  "historical_control_metrics_reproduced": true,
+  "all_oof_images_covered_once": true,
+  "fold_local_scaling_and_weights": true,
+  "external_heldout_never_fit": true,
+  "source_manifest_unchanged": true,
+  "metrics_and_confusion_recomputed": true,
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_epochs": 0
+}

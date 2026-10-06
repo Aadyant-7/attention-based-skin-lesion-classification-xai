@@ -51,6 +51,8 @@ Within each result folder:
 
 ## Training and historical evidence
 
+- `results/data_assisted/s66_s67_frozen_data_screen/`: rejected fixed external-data CPU screen and three-fold train-only lesion-group confirmation. HAM-only versus HAM+external:79.3081%→78.5762% on exploratory validation;75.8025%→74.4471% on pooled group-OOF. Full metrics, predictions/probabilities, class/confusion/comparison PNG/PDF, gain/loss identities, source hashes and classifier hashes are saved. These are diagnostic feature heads, not the93.61% ensemble. Closeout: `research/data_assisted/S66_S67_CLOSEOUT.md`.
+
 - `results/structured_experiments/`: individual structured model runs, training logs/history, validation metrics/predictions and figures.
 - `checkpoints/structured/`: preserved model checkpoints, including best raw accuracy, best macro-F1 and latest checkpoints where produced.
 - Training curves belong to training runs. CPU fusion/inference-only experiments have result/comparison figures, not new epoch curves.
