@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "source_hashes_unchanged": true,
+  "matched_cpu_precision": true,
+  "all_1503_predictions_verified": true,
+  "metrics_recomputed_from_saved_predictions": true,
+  "locked_test_image_overlap": 0,
+  "locked_test_lesion_overlap": 0,
+  "test_labels_read": false,
+  "test_images_loaded": false,
+  "gpu_used": false,
+  "training": false
+}

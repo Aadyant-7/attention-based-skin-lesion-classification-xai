@@ -1,0 +1,22 @@
+{
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  },
+  "supporting_code_sha256": {
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/short_screening/current_ensemble_tta.py": "4fe617edbc222e5276ec9b3c909d5eaa34c905fae5aba221cc2f914df2da9117",
+    "research/short_screening/lesion_bag_screen.py": "2a27c485b6978878c31f1ab45e4f5ef8f52eea106c7e0e4e96e3ec3f5ae040ef"
+  },
+  "device": "cpu",
+  "num_threads": 4,
+  "no_optimizer_or_training": true
+}

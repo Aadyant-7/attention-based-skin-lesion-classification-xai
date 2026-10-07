@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "uniform_matches_weighted_ce": true,
+  "duplicate_identical_view_invariance": true,
+  "per_lesion_weight_sums_equal_one": true,
+  "finite_backward": true
+}

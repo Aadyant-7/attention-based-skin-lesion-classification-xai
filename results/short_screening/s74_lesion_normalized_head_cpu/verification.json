@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "loss_preflight_passed": true,
+  "control_predictions_reproduced_from_saved_heads": true,
+  "training_fold_view_counts_and_class_weights_only": true,
+  "scaling_fit_only_inside_training_fold": true,
+  "fold_lesion_overlap": 0,
+  "OOF_coverage": 7009,
+  "sources_and_control_checkpoints_unchanged": true,
+  "saved_metrics_and_confusion_recomputed": true,
+  "validation_feature_cache_loaded": false,
+  "test_labels_read": false,
+  "gpu_used": false
+}

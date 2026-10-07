@@ -44,3 +44,7 @@ research/short_screening/train_oof_plot_labels.py -text
 results/short_screening/s70_s71_same_lesion_multiimage/** -text whitespace=cr-at-eol
 results/short_screening/s72_nonlinear_frozen_feature_head/** -text whitespace=cr-at-eol
 results/short_screening/s73_matched_contrastive_head_cpu/** -text whitespace=cr-at-eol
+research/short_screening/lesion_normalized_head_screen.py -text
+results/short_screening/s74_lesion_normalized_head_cpu/** -text whitespace=cr-at-eol
+research/short_screening/checkpoint_average_cpu.py -text
+results/short_screening/s75_convnext_checkpoint_average_cpu/** -text whitespace=cr-at-eol

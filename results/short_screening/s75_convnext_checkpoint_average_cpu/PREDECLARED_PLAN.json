@@ -1,0 +1,28 @@
+{
+  "question": "Does one fixed average of the preserved late same-run ConvNeXt-Tiny states improve its predictions and the unchanged S53 fusion?",
+  "states": [
+    "best.pt",
+    "best_macro_f1.pt",
+    "latest.pt"
+  ],
+  "expected_epochs": [
+    17,
+    18,
+    20
+  ],
+  "averaging": "Equal weights over unique model-tensor states; float64 accumulation then original FP32 dtype",
+  "scope": "Post-hoc same-run checkpoint averaging, NOT a reproduction of constant/cyclic-SGD SWA training",
+  "source_reference": "https://arxiv.org/abs/1803.05407",
+  "limitation": "Snapshots were previously selected on reused development validation; not independent evidence of generalization",
+  "precision": "FP32 CPU; original epoch18 checkpoint rerun as matched control",
+  "preprocessing": "Original square224 RGB bilinear antialias resize and ImageNet normalization; identity only",
+  "ensemble": "Replace only Tiny probabilities in S53; other four cached probabilities unchanged; all five weights0.20",
+  "gate": "Ensemble >=8 net additional correct predictions and >=0.005 accuracy vs matched control; nondecreasing macro-F1/MEL recall vs both control and saved S53; also >=0.005 accuracy vs S53",
+  "search": "Exactly one average and one original-checkpoint control; no subset/weight/checkpoint/view tuning",
+  "cpu_threads": 4,
+  "batch_size": 8,
+  "max_inference_seconds": 600,
+  "training": false,
+  "gpu_used": false,
+  "test_loaded": false
+}

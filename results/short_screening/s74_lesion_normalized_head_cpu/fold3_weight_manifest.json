@@ -1,0 +1,19 @@
+{
+  "fold": 3,
+  "fitting_images": 4673,
+  "fitting_lesions": 3658,
+  "multiimage_lesions": 829,
+  "maximum_views": 5,
+  "class_weights": [
+    1.1084775924682617,
+    0.8850483894348145,
+    0.6053603291511536,
+    1.8658459186553955,
+    0.6024316549301147,
+    0.2451149821281433,
+    1.6877211332321167
+  ],
+  "control_accuracy": 0.7855308219178082,
+  "candidate_accuracy": 0.7851027397260274,
+  "net_correct": -1
+}

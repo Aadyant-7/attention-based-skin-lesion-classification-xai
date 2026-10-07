@@ -1,0 +1,23 @@
+{
+  "feature_files": [
+    {
+      "path": ".cache/s64_paired_preprocessing_cpu/square224_train.npz",
+      "sha256": "f410939cbf8e8f9b97a65fae6652152347402c08cf3e84ef30328976d5819823",
+      "weights_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+    }
+  ],
+  "control_prediction_path": "results/short_screening/s73_matched_contrastive_head_cpu/ce_only/training_meta_oof_predictions.csv",
+  "control_prediction_sha256": "c67b3ec23bd8394e7f62a6945875097166d1ba607b9bc5d72f1ae15d67479873",
+  "control_checkpoints": {
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_only/fold1/final.pt": "771bf5d2a361ba22331bec1f4978273bc84200c72c233aa03c42deb71dbd68be",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_only/fold2/final.pt": "8ff4ac3db6df76c2eb66f591b666692ca0d9df98cf466654b50e710de0342904",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_only/fold3/final.pt": "4768d9acb47e5188bede5e12f8c4f2f6679cb7e77791005fcd9545340e906a9f"
+  },
+  "candidate_checkpoints": {
+    "checkpoints/short_screening/s74_lesion_normalized_head_cpu/lesion_normalized/fold1/final.pt": "d693a504830bf72ef38d2bc4c3affb71fecb4caacf9a1b86fa9b02d183f76783",
+    "checkpoints/short_screening/s74_lesion_normalized_head_cpu/lesion_normalized/fold2/final.pt": "2bcb2dd64a37e5cecea4606e5f4e373049527497dc67e16c1a598968a87bc18f",
+    "checkpoints/short_screening/s74_lesion_normalized_head_cpu/lesion_normalized/fold3/final.pt": "7f9f0b32c029383bd2d078717911f443667139db6d3a184f0a58e4d3cd9ec193"
+  },
+  "script_sha256": "af2a1df6939a3cccfe8a3cf93e597407bd9d4a55efd0877726b6ccb2e834baac",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb"
+}

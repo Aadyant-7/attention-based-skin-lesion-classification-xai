@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "source_hashes": {
+    "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best.pt": "92381249b6486f54a8db6c7d808e5d421bf7ba1c0f8c7ea370d24542ec247ef7",
+    "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361",
+    "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/latest.pt": "3dc2bddea961a3e0961725c5b0f15aa2369bb3771298f67b5aa3eb37b6056bc8"
+  },
+  "epochs": [
+    17,
+    18,
+    20
+  ],
+  "unique_model_states": 3,
+  "model_tensor_sha256": [
+    "711f32e1c8c979092357671bac7717312fd4fec4966608ad58054f37d67fb07b",
+    "e40d35ee3f3628202ec7cbd733c5d806de246e56dedbccc128a2212cf3c3adf5",
+    "33f3cbbb7a56d7cc7c12ef55f5f22746999ac71fa9f3c0ebb579f4bf4c8761c1"
+  ],
+  "all_configs_equal": true,
+  "batchnorm_layers": 0,
+  "finite_cpu_probe": true,
+  "relative_l2_change_from_epoch18": 0.0011969814556991286,
+  "averaged_checkpoint": "checkpoints/short_screening/s75_convnext_checkpoint_average_cpu/averaged.pt",
+  "averaged_checkpoint_sha256": "23a079cd01260c8d0892f2a3dbb2f0f9e8c8444c86770b259979a105d65e9519",
+  "runner_sha256": "8515fc06ce0852b08796b484155b5e261eea96637a343defd63211d7f85dd30e"
+}

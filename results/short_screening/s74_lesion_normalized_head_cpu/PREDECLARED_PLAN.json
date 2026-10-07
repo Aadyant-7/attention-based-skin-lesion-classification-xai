@@ -1,0 +1,21 @@
+{
+  "question": "Does removing extra training-loss influence from frequently photographed lesions improve generalization?",
+  "input": "Existing square224 frozen ImageNet1k ConvNeXt-Tiny768dim features, only original development-training rows",
+  "matched_control": "Exact S73 CE-only head, scaler, folds, seed, feature-dropout views, optimizer, LR schedule and epoch20 endpoint; control predictions independently reproduced from saved heads",
+  "change": "Each training image receives additional multiplier1/n_training_views_of_its_lesion inside that fitting fold",
+  "class_weights": "Unchanged normalized sqrt inverse-image-frequency CE weights fitted inside each training fold; not recomputed from lesion counts",
+  "loss": "Sum per-image CE*class_weight*inverse_view_count divided by sum of those target weights per effective batch, both feature views included",
+  "caveat": "Lesion influence equal before class multipliers in the whole fitting partition; batch-normalized SGD ratios do not guarantee exactly equal realized gradient influence",
+  "head": "Feature dropout0.10; Linear768to256; GELU; dropout0.20; Linear256to128; Linear128to7",
+  "optimizer": "AdamW lr0.001 weight_decay0.0001; cosine to0.00001 across20epochs; batch128; clip norm1",
+  "folds": "Three fixed seed42 shuffled lesion-group folds; all7009 development-training images held out exactly once",
+  "gate": "Accuracy improves >=0.01 absolute AND macro-F1 improves >=0.01; melanoma recall nondecreasing; positive net accuracy in >=2/3folds",
+  "conditional_validation": "Only if gate passes: one paired full-training epoch20 control/candidate fit, followed by fixed existing exploratory validation; no new tuning",
+  "checkpoint_selection": "Fixed final epoch20, no heldout epoch selection",
+  "search": false,
+  "gpu_used": false,
+  "test_loaded": false,
+  "cpu_threads": 4,
+  "soft_wall_seconds": 300,
+  "purpose": "CPU diagnostic feature head, not CNN fine-tuning or an improved S53/test result; no automatic GPU launch"
+}

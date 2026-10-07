@@ -2,7 +2,11 @@
 
 All paths below are relative to the project root.
 
-## New bounded checks: S70-S73
+## New bounded checks: S70-S75
+
+- `results/short_screening/s75_convnext_checkpoint_average_cpu/`: one fixed equal parameter average of S06 epochs17/18/20, with fresh CPU FP32 epoch18 control. Standalone91.4172% versus91.4837%; fixed five-model fusion93.6793% versus93.6128%, net+1 but lower melanoma recall; rejected. Four full prediction/class/confusion PNG/PDF result packages, comparison, gain/loss identities, compatibility/source hashes and runtime verification. Local new checkpoint: `checkpoints/short_screening/s75_convnext_checkpoint_average_cpu/averaged.pt`; source checkpoints unchanged. Closeout: `S75_CHECKPOINT_AVERAGE_CLOSEOUT.md`. No training/GPU/test.
+
+- `results/short_screening/s74_lesion_normalized_head_cpu/`: fixed inverse-lesion-view CE weighting on the unchanged CPU feature head. Train-only group-OOF accuracy79.1554% versus79.0840% control, lower macro-F1/melanoma recall; rejected. Full metrics/predictions/probabilities, class/confusion/comparison PNG/PDF, three fold histories/curves, weight manifests and verification. CPU heads/scalers: `checkpoints/short_screening/s74_lesion_normalized_head_cpu/`. Closeout: `S74_LESION_NORMALIZED_CLOSEOUT.md`. No validation/GPU/test run.
 
 - `results/short_screening/s70_s71_same_lesion_multiimage/`: fixed validation-only same-lesion multi-image pooling. Exploratory S70 93.7458% / 0.888382 (rejected); strict-validation S71 91.0845% / 0.854216 (conditional multi-image evidence only). Different input contract; no original-test run or retained-method change. Separate image/lesion metrics, predictions, class/confusion/comparison PNG/PDF, gains/losses, bootstrap intervals and hashes. Closeout: `S70_S72_CLOSEOUT.md`.
 - `results/short_screening/s72_nonlinear_frozen_feature_head/`: fixed train-only group-OOF nonlinear frozen-feature classifier, tied control accuracy75.8025% but lower macro-F1; rejected without development-validation scoring. Full metrics/predictions/figures/folds and source checks. Closeout: `S70_S72_CLOSEOUT.md`.
