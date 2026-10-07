@@ -1,5 +1,13 @@
 # Accuracy bottlenecks: evidence and next action
 
+## Latest completed checks - 7 October 2026
+
+S70 same-lesion multi-image exploratory pooling reaches93.7458% but gains only two images and lowers melanoma recall; rejected. S71's separate multi-image strict-validation endpoint reaches91.0845% and gains14images, but requires companion views/known grouping and does not change the original single-image validation/test claim. S72's fixed nonlinear frozen-feature classifier ties its linear control at75.8025% grouped accuracy with worse macro-F1/melanoma recall. S73's matched CPU SupCon feature-head regularizer reaches79.1126% versus79.0840% CE control but fails its meaningful/class-consistency gate. No GPU or original-test run followed.
+
+Closeouts: `S70_S72_CLOSEOUT.md`, `S73_CONTRASTIVE_CLOSEOUT.md`. Full predictions, class scores, confusion matrices, histories where training occurred, PNG/PDF figures, checkpoint/source hashes and registry records are preserved. Retain S53 at93.6128% single-image exploratory validation; the original frozen test stays86.7598%. S70's higher number is a different multi-image protocol, not a new accepted single-image best.
+
+Next distinct cheap hypothesis: normalize each training lesion's total influence instead of counting every view equally; compare with the unchanged CE-only feature head on train-only lesion-group folds before any GPU proposal. Derive any view-count/class weights only from the fitting fold. Do not infer that this will work, rescue rejected SupCon/metadata/voting variants, or train another backbone from these negative results.
+
 ## What the saved evidence establishes
 
 1. **Errors are concentrated, not uniformly distributed.** S53 has 96 errors. Melanoma, BKL and akiec account for 68 (70.83%) while representing 381/1,503 validation images (25.35%). Their combined error rate is 17.85%, versus 2.50% for the remaining classes. S53 recalls: melanoma82.04%, BKL85.45%, akiec71.43%; nevus97.91%. This identifies the difficult cases to improve, not a diagnosis of their cause. See S62 class/confusion tables.

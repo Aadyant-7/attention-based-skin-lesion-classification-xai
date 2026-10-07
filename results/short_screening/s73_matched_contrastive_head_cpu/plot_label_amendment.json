@@ -1,0 +1,6 @@
+{
+  "change": "Label training-OOF comparison/class support explicitly; shared generic plotter uses validation wording",
+  "metric_or_prediction_change": false,
+  "summary_sha256_unchanged": "3b5fcdc7216a7e4103f9613224976c96e64fdf84e8bc612f614879094bc9d8d4",
+  "original_common_plotter_unchanged": true
+}

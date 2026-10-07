@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+Original single-image reference,0.936127744510978,0.8868574111567237
+Same-lesion multi-image (changed input),0.9374584165003327,0.8883820297341026

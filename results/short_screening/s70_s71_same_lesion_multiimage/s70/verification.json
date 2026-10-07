@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "source_metrics_recomputed": true,
+  "unique_image_ids": true,
+  "label_free_pooling": true,
+  "singletons_unchanged": true,
+  "labels_constant_within_lesions": true,
+  "cross_partition_pooling": false,
+  "original_test_image_overlap": 0,
+  "original_test_lesion_overlap": 0,
+  "saved_predictions_metrics_recomputed": true,
+  "no_image_or_checkpoint_loading": true,
+  "test_labels_read": false,
+  "gpu_used": false
+}

@@ -37,3 +37,10 @@ research/aggressive/** -text whitespace=cr-at-eol
 research/run_aggressive_enhanced_pipeline.py -text whitespace=cr-at-eol
 research/short_screening/targeted_finetune.py -text whitespace=cr-at-eol
 research/short_screening/targeted_finetune_v1.json -text whitespace=cr-at-eol
+research/short_screening/lesion_bag_screen.py -text
+research/short_screening/kernel_head_screen.py -text
+research/short_screening/contrastive_head_screen.py -text
+research/short_screening/train_oof_plot_labels.py -text
+results/short_screening/s70_s71_same_lesion_multiimage/** -text
+results/short_screening/s72_nonlinear_frozen_feature_head/** -text
+results/short_screening/s73_matched_contrastive_head_cpu/** -text

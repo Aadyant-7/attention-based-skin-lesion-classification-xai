@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "loss_reference_and_backward_passed": true,
+  "paired_seeds_architecture_augmentation": true,
+  "scalers_and_class_weights_training_fold_only": true,
+  "heldout_coverage": 7009,
+  "fold_lesion_overlap": 0,
+  "source_feature_cache_unchanged": true,
+  "metrics_and_confusion_recomputed": true,
+  "validation_feature_cache_loaded": false,
+  "original_test_labels_read": false,
+  "gpu_used": false
+}

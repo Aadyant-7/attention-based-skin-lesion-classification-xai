@@ -2,6 +2,12 @@
 
 All paths below are relative to the project root.
 
+## New bounded checks: S70-S73
+
+- `results/short_screening/s70_s71_same_lesion_multiimage/`: fixed validation-only same-lesion multi-image pooling. Exploratory S70 93.7458% / 0.888382 (rejected); strict-validation S71 91.0845% / 0.854216 (conditional multi-image evidence only). Different input contract; no original-test run or retained-method change. Separate image/lesion metrics, predictions, class/confusion/comparison PNG/PDF, gains/losses, bootstrap intervals and hashes. Closeout: `S70_S72_CLOSEOUT.md`.
+- `results/short_screening/s72_nonlinear_frozen_feature_head/`: fixed train-only group-OOF nonlinear frozen-feature classifier, tied control accuracy75.8025% but lower macro-F1; rejected without development-validation scoring. Full metrics/predictions/figures/folds and source checks. Closeout: `S70_S72_CLOSEOUT.md`.
+- `results/short_screening/s73_matched_contrastive_head_cpu/`: completed matched CE versus CE+SupCon CPU feature-head preflight. Train-only grouped accuracy79.0840% versus79.1126%; candidate gains only two net images, lowers macro-F1/melanoma recall and fails the gate. No validation or GPU run. Full predictions, metrics, fold/training histories, curves, confusion/class/comparison PNG/PDF and verification. Six CPU head checkpoints/scalers are in `checkpoints/short_screening/s73_matched_contrastive_head_cpu/`; these are not CNN checkpoints. Closeout: `S73_CONTRASTIVE_CLOSEOUT.md`.
+
 ## Latest provisional exploratory candidate
 
 S53 equal five-model fusion adds S03 EfficientNet-B0 to the four members below, with weight 0.20 each. It achieved **93.6128% accuracy / 0.886857 macro-F1** (1,407 correct / 96 incorrect). The net gain is only two images; it is not established as a material improvement. This cached-probability result has not yet been freshly reproduced with all-five FP32 inference.

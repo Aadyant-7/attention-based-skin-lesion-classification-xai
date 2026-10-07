@@ -1,0 +1,22 @@
+{
+  "question": "Does a supervised contrastive feature regularizer improve group-heldout class separation beyond the identical cross-entropy head?",
+  "source": "https://arxiv.org/abs/2004.11362",
+  "paper_scope": "Supervised contrastive learning clusters same-class embeddings; this is an adapted frozen-feature joint-loss preflight, not replication of its image-augmented two-stage procedure",
+  "inputs": "Cached ImageNet1k ConvNeXt-Tiny FP32 square224 features,768 dimensions; no fine-tuned CNN features or validation-selected ensemble probabilities",
+  "folds": "3 fixed shuffled StratifiedGroupKFold lesion_id folds seed42; original7009 development-training images only",
+  "matched_head": "Train-fold StandardScaler; feature dropout0.10 -> Linear768to256 -> GELU -> dropout0.20 -> Linear256to128 -> Linear128to7 classifier",
+  "views": "Two independent dropout feature views for BOTH control and candidate; not distinct image augmentation or real companion-image inference",
+  "optimizer": "AdamW lr0.001 weight_decay0.0001; cosine LR to0.00001 across20 epochs; batch128; gradient clip norm1",
+  "loss_control": "Training-fold sqrt inverse-frequency weighted CE over both views",
+  "loss_candidate": "Same CE +0.1*SupCon; temperature0.1; L2 normalized128dim embeddings; average over all same-class nonself positives",
+  "imbalance": "Same fold-training-only mean1 sqrt inverse-frequency CE weights; contrastive anchors unweighted",
+  "checkpoint_selection": "Epoch20 fixed final; no heldout epoch selection, no parameter/loss-weight search",
+  "gate": "Pooled candidate accuracy >= control+0.01; macro-F1 >= control+0.01; melanoma recall nondecreasing; positive accuracy net in at least2/3 folds",
+  "continuation": "Passing permits proposing a matched bounded image-space pilot; no automatic GPU launch and no claim about S53/test improvement",
+  "validation_scored": false,
+  "test_loaded": false,
+  "gpu_used": false,
+  "cpu_threads": 4,
+  "hard_epochs_per_head": 20,
+  "soft_wall_budget_seconds": 300
+}

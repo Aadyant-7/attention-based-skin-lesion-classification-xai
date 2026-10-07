@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "heldout_coverage": 7009,
+  "fold_lesion_overlap": 0,
+  "all_transforms_and_weights_fit_on_fold_training_only": true,
+  "pretrained_feature_only": true,
+  "metrics_and_confusion_recomputed": true,
+  "source_files_unchanged": true,
+  "validation_feature_cache_loaded": false,
+  "original_test_labels_read": false,
+  "gpu_used": false
+}

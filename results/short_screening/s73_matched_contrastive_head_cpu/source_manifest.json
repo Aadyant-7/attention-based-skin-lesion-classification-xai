@@ -1,0 +1,25 @@
+{
+  "feature_source": {
+    "path": ".cache/s64_paired_preprocessing_cpu/square224_train.npz",
+    "sha256": "f410939cbf8e8f9b97a65fae6652152347402c08cf3e84ef30328976d5819823",
+    "weights_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "checkpoints": {
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_only/fold1/final.pt": "771bf5d2a361ba22331bec1f4978273bc84200c72c233aa03c42deb71dbd68be",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_supcon/fold1/final.pt": "adf9b4f036f16245dbf270ffd530498cd2281b959307a6c5bc59dea5ad94c11f",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_only/fold2/final.pt": "8ff4ac3db6df76c2eb66f591b666692ca0d9df98cf466654b50e710de0342904",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_supcon/fold2/final.pt": "e05cc73aaa280c8a6fc9f37a46db1cab6011b45a71a12952005a0fc86aef937f",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_only/fold3/final.pt": "4768d9acb47e5188bede5e12f8c4f2f6679cb7e77791005fcd9545340e906a9f",
+    "checkpoints/short_screening/s73_matched_contrastive_head_cpu/ce_supcon/fold3/final.pt": "dbd82c3a3608a118eef251a5186ca552c785a4c2686de428725ffa2f406ee6b2"
+  }
+}

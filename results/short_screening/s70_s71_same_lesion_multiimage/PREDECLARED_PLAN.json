@@ -1,0 +1,40 @@
+{
+  "question": "Can distinct available dermoscopic images of the same lesion add information beyond single-image CNN/model fusion?",
+  "rule": "Equal mean of existing ensemble probability vectors within each validation-only lesion_id; singleton unchanged",
+  "input_contract": "Known lesion grouping and all available distinct images of that lesion in the validation partition; group IDs only, never labels",
+  "singleton_fallback": "Original image probability vector",
+  "cross_partition_pooling": false,
+  "sources": {
+    "s70": {
+      "protocol": "exploratory_image_level",
+      "reference": "results/short_screening/s53_equal_five_b0_addition",
+      "split": "data/splits/exploratory/image_level_dev_v1.csv",
+      "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+      "display": "S70 S53 same-lesion multi-image"
+    },
+    "s71": {
+      "protocol": "strict_lesion_disjoint",
+      "reference": "results/final_strict/v1/ensemble",
+      "split": "data/splits/split_assignments.csv",
+      "split_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+      "display": "S71 S31 same-lesion multi-image"
+    }
+  },
+  "comparisons": "Paired image-weighted original versus broadcast pooled predictions on identical 1503 images within each protocol; additionally one canonical lexicographic-ID view versus bag prediction per lesion",
+  "gate": {
+    "accuracy_gain_absolute": 0.005,
+    "minimum_net_correct": 8,
+    "macro_f1_non_decreasing": true,
+    "melanoma_recall_non_decreasing": true
+  },
+  "advancement": "Only a conditional multi-image development candidate if both protocols pass; never replace frozen single-image test or call this a single-image improvement",
+  "search": "One predefined arithmetic mean; no confidence weighting, max/product alternatives, tuned subset or cross-partition companions",
+  "uncertainty": "10000 paired lesion-cluster bootstrap replicates, seed42; descriptive after repeated validation selection, not independent significance evidence",
+  "literature": {
+    "url": "https://doi.org/10.1111/exd.13777",
+    "scope": "Yap et al. studied clinical+dermoscopic modalities and metadata, not our repeated-dermoscopy arithmetic mean; conceptual motivation only, not protocol replication"
+  },
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_epochs": 0
+}

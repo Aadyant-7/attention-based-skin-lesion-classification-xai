@@ -1,0 +1,20 @@
+{
+  "feature_files": [
+    {
+      "path": ".cache/s64_paired_preprocessing_cpu/square224_train.npz",
+      "sha256": "f410939cbf8e8f9b97a65fae6652152347402c08cf3e84ef30328976d5819823",
+      "weights_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+    }
+  ],
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "script_sha256": "8d1c46f574a836142becbbc97b1d96ada652ed9b490d0e1e6ad0b8eebdb7c7f1"
+}

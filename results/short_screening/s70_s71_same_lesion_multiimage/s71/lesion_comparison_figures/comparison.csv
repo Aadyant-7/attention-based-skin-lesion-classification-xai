@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+One fixed view per lesion,0.9233511586452763,0.8547248980798681
+All available validation views per lesion,0.928698752228164,0.8594978118158191

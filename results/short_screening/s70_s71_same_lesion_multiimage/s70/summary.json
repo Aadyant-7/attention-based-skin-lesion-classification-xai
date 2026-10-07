@@ -1,0 +1,532 @@
+{
+  "status": "completed",
+  "protocol": "exploratory_image_level",
+  "reference": {
+    "loss": 0.21252927894010532,
+    "accuracy": 0.936127744510978,
+    "macro_precision": 0.9157811848988903,
+    "macro_recall": 0.8656356053115845,
+    "macro_f1": 0.8868574111567237,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        75,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        141,
+        0,
+        6,
+        13,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        13,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        137,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        14,
+        986,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9036144578313253,
+        "recall": 0.974025974025974,
+        "f1": 0.9375,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.9038461538461539,
+        "recall": 0.8545454545454545,
+        "f1": 0.8785046728971962,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.7647058823529411,
+        "f1": 0.8666666666666667,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8616352201257862,
+        "recall": 0.8203592814371258,
+        "f1": 0.8404907975460123,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9572815533980582,
+        "recall": 0.9791459781529295,
+        "f1": 0.9680903289150712,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "image_weighted_candidate": {
+    "loss": 0.210402983632587,
+    "accuracy": 0.9374584165003327,
+    "macro_precision": 0.9187345490727171,
+    "macro_recall": 0.8659297023726243,
+    "macro_f1": 0.8883820297341026,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        75,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        142,
+        0,
+        4,
+        14,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        13,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        136,
+        28,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        14,
+        988,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9036144578313253,
+        "recall": 0.974025974025974,
+        "f1": 0.9375,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.9161290322580645,
+        "recall": 0.8606060606060606,
+        "f1": 0.8875,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.7647058823529411,
+        "f1": 0.8666666666666667,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8717948717948718,
+        "recall": 0.8143712574850299,
+        "f1": 0.8421052631578947,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9555125725338491,
+        "recall": 0.9811320754716981,
+        "f1": 0.9681528662420382,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "canonical_single_lesion": {
+    "loss": 0.21076818523089194,
+    "accuracy": 0.9391182645206438,
+    "macro_precision": 0.9170540618678252,
+    "macro_recall": 0.8624506997101334,
+    "macro_f1": 0.8851952495749982,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        73,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        133,
+        0,
+        6,
+        12,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        11,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        126,
+        23,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        11,
+        944,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9012345679012346,
+        "recall": 0.9733333333333334,
+        "f1": 0.9358974358974359,
+        "support": 75
+      },
+      "bkl": {
+        "precision": 0.9047619047619048,
+        "recall": 0.8525641025641025,
+        "f1": 0.8778877887788779,
+        "support": 156
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.7333333333333333,
+        "f1": 0.8461538461538461,
+        "support": 15
+      },
+      "mel": {
+        "precision": 0.8689655172413793,
+        "recall": 0.8289473684210527,
+        "f1": 0.8484848484848485,
+        "support": 152
+      },
+      "nv": {
+        "precision": 0.960325534079349,
+        "recall": 0.9823100936524454,
+        "f1": 0.9711934156378601,
+        "support": 961
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "multiimage_lesion": {
+    "loss": 0.20896017077827897,
+    "accuracy": 0.9391182645206438,
+    "macro_precision": 0.9184845159265892,
+    "macro_recall": 0.8624266010018243,
+    "macro_f1": 0.885848863205782,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        73,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        134,
+        0,
+        4,
+        13,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        11,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        125,
+        24,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        12,
+        944,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.875,
+        "recall": 0.7142857142857143,
+        "f1": 0.7865168539325843,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9012345679012346,
+        "recall": 0.9733333333333334,
+        "f1": 0.9358974358974359,
+        "support": 75
+      },
+      "bkl": {
+        "precision": 0.9115646258503401,
+        "recall": 0.8589743589743589,
+        "f1": 0.8844884488448845,
+        "support": 156
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.7333333333333333,
+        "f1": 0.8461538461538461,
+        "support": 15
+      },
+      "mel": {
+        "precision": 0.8741258741258742,
+        "recall": 0.8223684210526315,
+        "f1": 0.847457627118644,
+        "support": 152
+      },
+      "nv": {
+        "precision": 0.9583756345177665,
+        "recall": 0.9823100936524454,
+        "f1": 0.9701952723535457,
+        "support": 961
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "images": 1503,
+  "lesions": 1429,
+  "multiimage_lesions": 70,
+  "multiimage_images": 144,
+  "maximum_available_views": 3,
+  "gained": 5,
+  "lost": 3,
+  "net_correct": 2,
+  "gate_passed": false,
+  "source_hashes": {
+    "results/short_screening/s53_equal_five_b0_addition/validation_predictions.csv": "d6dfabc11a52567dfe25f56f7fb35d6da45463c09306eee02f50f596af82a5bd",
+    "results/short_screening/s53_equal_five_b0_addition/validation_metrics.json": "559e360783e8ca412ac8cde32d8a3e314a79428b840692f611c4b45053e16630",
+    "data/splits/exploratory/image_level_dev_v1.csv": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 42,
+    "unit": "lesion-cluster",
+    "accuracy_difference_95_percentile": [
+      -0.002012072434607646,
+      0.005263331253033768
+    ],
+    "descriptive_only": true
+  },
+  "input_contract": "Known lesion grouping and all available distinct images of that lesion in the validation partition; group IDs only, never labels",
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_epochs": 0
+}

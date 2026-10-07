@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scalar_reference_agrees": true,
+  "self_excluded": true,
+  "permutation_invariant": true,
+  "finite_backward": true,
+  "gpu_used": false
+}

@@ -1,0 +1,9 @@
+image_id,lesion_id,split,available_view_count,true_class,old_class,new_class,old_correct,new_correct
+ISIC_0025419,HAM_0007010,val,2,bkl,bkl,nv,True,False
+ISIC_0026085,HAM_0001858,val,2,bkl,mel,bkl,False,True
+ISIC_0027991,HAM_0002722,val,2,bkl,mel,bkl,False,True
+ISIC_0025265,HAM_0002770,val,2,mel,mel,nv,True,False
+ISIC_0033503,HAM_0006520,val,2,nv,nv,mel,True,False
+ISIC_0033794,HAM_0007052,val,2,nv,bkl,nv,False,True
+ISIC_0031603,HAM_0002128,val,2,nv,mel,nv,False,True
+ISIC_0025179,HAM_0005762,val,2,nv,bkl,nv,False,True

@@ -1,0 +1,17 @@
+{
+  "question": "Are nonlinear class boundaries in existing pretrained image features useful beyond a fixed linear head?",
+  "input": "Cached identity square224 ConvNeXt-Tiny ImageNet1k FP32 768-dimensional features; no fine-tuned CNN or S53 prediction input",
+  "control": "Fold-local StandardScaler -> LogisticRegression C1 max_iter1000 seed42",
+  "candidate": "Fold-local StandardScaler -> Nystroem RBF gamma1/768 512 components seed42 -> StandardScaler -> same logistic head",
+  "imbalance": "Fold-training-only normalized sqrt inverse-frequency sample weights",
+  "folds": "Same3 StratifiedGroupKFold shuffled lesion_id groups seed42 on7009 original development-training images only",
+  "gate": "Pooled nonlinear accuracy >= linear+0.01; no macro-F1 or melanoma-recall decline; positive accuracy net in at least2/3 folds",
+  "validation_rule": "Do not load development-validation feature cache or scoring labels unless train-only gate passes; one fixed paired full-train head comparison afterward",
+  "limitation": "Diagnostic frozen-feature head, not a trained CNN/ensemble gain; consistency evidence cannot guarantee fine-tuning benefit",
+  "cpu_threads": 4,
+  "soft_wall_budget_seconds": 300,
+  "search": false,
+  "test_loaded": false,
+  "gpu_used": false,
+  "source": "https://scikit-learn.org/stable/modules/kernel_approximation.html#nystroem-method-for-kernel-approximation"
+}
