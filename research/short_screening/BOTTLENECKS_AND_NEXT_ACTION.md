@@ -1,5 +1,11 @@
 # Accuracy bottlenecks: evidence and next action
 
+## Current decision - 8 October 2026
+
+S76 tested the actual five skin-fine-tuned representations rather than generic ImageNet proxy features. Fresh FP32 equal voting reproduced S53 at93.6128%; learned feature fusion fell to91.3506%, gaining10 but losing44 predictions. S77 then tested the official published PanDerm Large against matched Base:88.9554% versus88.5562%, below the predefined advancement gate. Large fixes32 S53 errors but misses102 S53-correct cases. Conditional S78 was not run; no long training or rescue search follows. Read the S76/S77 closeouts for exact artifacts, resource cost and reporting-only recovery.
+
+Several trained members already achieve near-perfect training accuracy; increased fitting alone is not supported as the solution. No verified preprocessing/class-order corruption has been found. These observations support a generalization gap, without proving a single cause. The current evidence does not justify another long run or promise93% independent test performance. Retain S53 and stop automatic small variations. The earlier next-action sections below are historical, already completed proposals.
+
 ## Latest completed checks - 7 October 2026
 
 S70 same-lesion multi-image exploratory pooling reaches93.7458% but gains only two images and lowers melanoma recall; rejected. S71's separate multi-image strict-validation endpoint reaches91.0845% and gains14images, but requires companion views/known grouping and does not change the original single-image validation/test claim. S72's fixed nonlinear frozen-feature classifier ties its linear control at75.8025% grouped accuracy with worse macro-F1/melanoma recall. S73's matched CPU SupCon feature-head regularizer reaches79.1126% versus79.0840% CE control but fails its meaningful/class-consistency gate. No GPU or original-test run followed.

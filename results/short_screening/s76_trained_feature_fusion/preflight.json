@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "members": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "dimensions": 768,
+      "original_logits_reconstructed": true
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "dimensions": 768,
+      "original_logits_reconstructed": true
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "dimensions": 1920,
+      "original_logits_reconstructed": true
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "dimensions": 1280,
+      "original_logits_reconstructed": true
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "dimensions": 1280,
+      "original_logits_reconstructed": true
+    }
+  ],
+  "train_images": 7009,
+  "validation_images": 1503,
+  "locked_test_image_overlap": 0,
+  "locked_test_lesion_overlap": 0,
+  "training_classifier_labels_only": true,
+  "kernel_matches_sklearn": true,
+  "test_labels_read": false,
+  "test_images_loaded": false,
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "question": "Does the published dermatology-pretrained ViT-L encoder add materially stronger task-relevant features than the previously used smaller Base?",
+  "control": "PanDerm Base ViT-B16,86M-class encoder, newly extracted FP32 features and same fixed head",
+  "candidate": "Authors PanDerm Large ViT-L16,24blocks,1024D CLS features; official2million dermatology pretraining model",
+  "sources": {
+    "repository": "https://github.com/SiyuanYan1/PanDerm",
+    "paper": "https://www.nature.com/articles/s41591-025-03747-y",
+    "large_weights": "https://drive.google.com/file/d/1SwEzaOlFV_gBKf2UzeowMC8z9UH7AQbE/view",
+    "base_weights": "https://drive.google.com/file/d/17J4MjsZu3gdBP6xAQi_NMDVvH65a00HB/view"
+  },
+  "feature_extraction": "Both frozen/eval FP32 identity only; original author resize-short-side256/center224; mean(.485,.456,.406),std(.228,.224,.225); native CLS embedding",
+  "head": "Same training-only StandardScaler and RBF SVM C10 gamma=scale, no class weights, probability=True seed42; argmax predict_proba",
+  "head_rationale": "Preserve the previously used exploratory Base SVM recipe; no head/hyperparameter search",
+  "implementation": "Equivalent precomputed RBF kernel on standardized features, gamma computed from train only; probability calibration inside training",
+  "cohort": "Existing7009 exploratory train and1503 validation images; original locked-test images/labels excluded",
+  "s78_condition": "Only if Large exceeds matched Base by>=0.01 accuracy with nondecreasing macro-F1/MEL recall and Large accuracy>=0.90",
+  "s78_rule": "Exactly one fixed replacement of B0 in S53 with Large; Tiny/Small/Dense201/V2-S unchanged, all five probabilities weighted0.20",
+  "advancement": "S78 accuracy>=S53+0.005 (>=8 net gains), macro-F1 and melanoma recall nondecreasing; no weight/member rescue",
+  "caveats": "Published results use different evaluation/data. Complete pretraining overlap with our HAM images cannot be independently ruled out. No claim of untouched independent test accuracy.",
+  "local_prior": "There was a two-epoch Base last-two-block STRICT pilot84.43%; no previous Large run or complete exploratory PanDerm fine-tuning",
+  "limits": "One paired Base/Large frozen study, one conditional fusion, no training epochs or further automatic experiment",
+  "gpu_seconds_limit": 600,
+  "wall_seconds_limit": 900,
+  "batch_size": 16,
+  "cpu_threads": 4,
+  "backbone_training": false,
+  "test_loaded": false
+}

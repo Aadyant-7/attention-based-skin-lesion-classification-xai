@@ -1,0 +1,29 @@
+{
+  "question": "Do fine-tuned visual representations contain useful joint information lost by fixed probability fusion?",
+  "members": "Exact S53 Tiny/Small/Dense201/V2-S macro-F1 checkpoints and B0 accuracy checkpoint; all five, no subset search",
+  "representation": "Post-pooling/native-normalization/pre-linear feature vectors:768+768+1920+1280+1280=6016 dimensions",
+  "preprocessing": "Original RGB square224 bilinear antialias/ImageNet normalization; identity only in train and validation extraction",
+  "extraction_precision": "FP32 with TF32 disabled; no AMP; eval mode and inference_mode; no weight updates",
+  "classifier": "One SVC C10, RBF gamma1, sqrt inverse-frequency class weights; probability=True seed42, tol0.001, max_iter50000",
+  "feature_normalization": "Per-member StandardScaler fitted on7009 training images only, then per-image L2 normalize each block; concatenate and divide by sqrt5",
+  "kernel": "exp(-squared Euclidean distance) on normalized6016D representation; precomputed for efficient CPU fitting",
+  "fitting": "Training partition only; libsvm probability calibration internal to training, not independent CNN cross-validation",
+  "prediction": "Argmax of predict_proba; raw SVC decision accuracy not used to choose a rule",
+  "control": "Fresh all-five FP32 equal soft vote from the exact same passes; also compare saved S53",
+  "gate": ">=0.005 accuracy and>=8 net correct gains vs fresh control AND saved S53; macro-F1 and melanoma recall nondecreasing vs both",
+  "protocol": "Existing exploratory development; prior checkpoint/recipe selection and lesion overlap remain; not new independent test evidence",
+  "scope": "One actual feature-fusion candidate, no C/gamma/head/member/weight search or post-result rescue",
+  "gpu_extraction_limit_seconds": 600,
+  "total_wall_limit_seconds": 900,
+  "cpu_threads": 4,
+  "batch_size": 16,
+  "workers": 2,
+  "backbone_training": false,
+  "test_loaded": false,
+  "literature": [
+    "https://www.nature.com/articles/s41598-025-31816-2",
+    "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1478688/full",
+    "https://scikit-learn.org/stable/modules/svm.html"
+  ],
+  "literature_scope": "Feature fusion is supported as a distinct method; these architectures/classifier/protocol are an adaptation, not paper replication or a promised accuracy"
+}

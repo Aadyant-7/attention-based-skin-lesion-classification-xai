@@ -1,0 +1,13 @@
+2026-10-07 19:54:12,564 START fixed trained-feature fusion; short FP32 extraction then one CPU fit; no test/backbone training
+2026-10-07 19:54:58,261 SAVED s06_convnext_tiny_none_exploratory_seed42 train features 7009
+2026-10-07 19:55:18,171 SAVED s06_convnext_tiny_none_exploratory_seed42 val features 1503
+2026-10-07 19:55:59,965 SAVED s18_convnext_small_none_exploratory_seed42 train features 7009
+2026-10-07 19:56:18,159 SAVED s18_convnext_small_none_exploratory_seed42 val features 1503
+2026-10-07 19:57:02,373 SAVED s15_densenet201_none_exploratory_seed42 train features 7009
+2026-10-07 19:57:21,079 SAVED s15_densenet201_none_exploratory_seed42 val features 1503
+2026-10-07 19:58:02,651 SAVED s10_efficientnet_v2_s_none_exploratory_seed42 train features 7009
+2026-10-07 19:58:21,060 SAVED s10_efficientnet_v2_s_none_exploratory_seed42 val features 1503
+2026-10-07 19:59:02,533 SAVED s03_efficientnet_b0_none_exploratory_seed42 train features 7009
+2026-10-07 19:59:20,562 SAVED s03_efficientnet_b0_none_exploratory_seed42 val features 1503
+2026-10-07 19:59:23,952 CPU FIT one nonlinear6016D feature-fusion SVM;7009 training labels only
+2026-10-07 19:59:52,471 COMPLETE feature_fusion=0.913506 control=0.936128 gate=False

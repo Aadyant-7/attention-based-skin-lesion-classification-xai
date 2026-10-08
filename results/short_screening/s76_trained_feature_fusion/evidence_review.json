@@ -1,0 +1,62 @@
+{
+  "trained_model_histories": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "model": "convnext_tiny",
+      "epochs": 20,
+      "final_train_accuracy": 0.9971461187214612,
+      "best_val_accuracy": 0.9174983366600132,
+      "final_val_accuracy": 0.9075182967398536,
+      "history_path": "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/history.csv",
+      "history_sha256": "76147e124d20ad8f6788e8e7c2309f586808321cccec729d3504c9e3da6c9900",
+      "augmentation": "horizontal flip p=0.5; validation deterministic"
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "model": "convnext_small",
+      "epochs": 20,
+      "final_train_accuracy": 0.9961472602739726,
+      "best_val_accuracy": 0.9221556886227544,
+      "final_val_accuracy": 0.9128409846972722,
+      "history_path": "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/history.csv",
+      "history_sha256": "d9b174eb48383180471db2f94d7ac6f6898f01f57330b4ca14e0f25f1696f158",
+      "augmentation": "horizontal flip p=0.5; validation deterministic"
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "model": "densenet201",
+      "epochs": 17,
+      "final_train_accuracy": 0.9978595890410958,
+      "best_val_accuracy": 0.8962075848303394,
+      "final_val_accuracy": 0.8948769128409847,
+      "history_path": "results/structured_experiments/s15_densenet201_none_exploratory_seed42/history.csv",
+      "history_sha256": "f3494e788be53ebff0b490f8cd3f3a28f0107d9d63e5c04f11e8a2f319d0978b",
+      "augmentation": "horizontal flip p=0.5; validation deterministic"
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "model": "efficientnet_v2_s",
+      "epochs": 20,
+      "final_train_accuracy": 0.990296803652968,
+      "best_val_accuracy": 0.8948769128409847,
+      "final_val_accuracy": 0.8895542248835662,
+      "history_path": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/history.csv",
+      "history_sha256": "4efb82ca7640140b652a802a28a107dfad7789461db8ec8ba8022281933a5bed",
+      "augmentation": "horizontal flip p=0.5; validation deterministic"
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "model": "efficientnet_b0",
+      "epochs": 20,
+      "final_train_accuracy": 0.9596175799086758,
+      "best_val_accuracy": 0.863606121091151,
+      "final_val_accuracy": 0.863606121091151,
+      "history_path": "results/structured_experiments/s03_efficientnet_b0_none_exploratory_seed42/history.csv",
+      "history_sha256": "1f4c35b4a2853577affee7f554bf7e78da2d34a2e622180baeaf0e73e9cfa73e",
+      "augmentation": "horizontal flip p=0.5; validation deterministic"
+    }
+  ],
+  "prior_cpu_probe_representation": "Generic frozen ImageNet1k, not these fine-tuned model features",
+  "interpretation": "Generalization gaps observed; no sole causal defect established. Prior weak-head gate is not a reliable surrogate for end-to-end improvement. S76 evaluates actual trained representations.",
+  "test_data_read": false
+}

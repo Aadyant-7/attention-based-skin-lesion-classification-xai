@@ -1,0 +1,52 @@
+{
+  "fitting_images": 7009,
+  "dimensions": 6016,
+  "C": 10,
+  "gamma": 1,
+  "class_weights": [
+    1.1106702023079094,
+    0.8870653948777679,
+    0.6060935911513174,
+    1.8674988895809894,
+    0.6025777108141585,
+    0.24534521064496714,
+    1.6807490006228907
+  ],
+  "support_vectors": [
+    75,
+    85,
+    155,
+    36,
+    143,
+    365,
+    30
+  ],
+  "iterations": [
+    131,
+    153,
+    85,
+    151,
+    197,
+    85,
+    170,
+    90,
+    144,
+    205,
+    101,
+    117,
+    214,
+    335,
+    130,
+    126,
+    165,
+    73,
+    312,
+    99,
+    146
+  ],
+  "converged": true,
+  "probability_rule": "Argmax predict_proba; libsvm internal training calibration",
+  "seconds": 30.71908509999048,
+  "classifier_checkpoint": "checkpoints/short_screening/s76_trained_feature_fusion/feature_fusion.joblib",
+  "classifier_sha256": "b1bed10b0e323551f6eab24ad024f061b67e61d11d140651a938c367a14bc843"
+}

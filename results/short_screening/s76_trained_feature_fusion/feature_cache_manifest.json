@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": ".cache/s76_trained_feature_fusion/s06_convnext_tiny_none_exploratory_seed42_train.npz",
+      "sha256": "56c37cfecc8dab2ef52a9281f6eca2b8de2ea7f549dba103aeb1e5f61d927dc4",
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s06_convnext_tiny_none_exploratory_seed42_val.npz",
+      "sha256": "67233626dd733301bd78f53d31a4a17079ba43f107de25ce27dc4d7d1d84dae6",
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s18_convnext_small_none_exploratory_seed42_train.npz",
+      "sha256": "ecffa0c98709a09cf1cb9037bd6d1ee628c95ef319bd2cf8ff6566df8ea338f5",
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s18_convnext_small_none_exploratory_seed42_val.npz",
+      "sha256": "4c8dc183fcf13e0c4d41b3db25045fe32072265939733435efb49b67e472d66a",
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s15_densenet201_none_exploratory_seed42_train.npz",
+      "sha256": "757ee505f814365d9c3d166509d556fed904200a79c69cdc4e28e8dd7de3dea6",
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s15_densenet201_none_exploratory_seed42_val.npz",
+      "sha256": "be3b8e8dc60da981ed37bfe16878a14189695b8f7363832d48f77d7327c4cc3e",
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s10_efficientnet_v2_s_none_exploratory_seed42_train.npz",
+      "sha256": "8979cb5f675e3a25c2f304dd54ddeab83183bdf12dfb32a852c2443221ebde81",
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s10_efficientnet_v2_s_none_exploratory_seed42_val.npz",
+      "sha256": "d452acb5df751ab6c87e1d8562011676a679902a3ea91c4536bbb7e9912626dd",
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s03_efficientnet_b0_none_exploratory_seed42_train.npz",
+      "sha256": "fe59b29fd08b64e56547f2e382b242da823dc95727a73dac388d06302b0478a1",
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s03_efficientnet_b0_none_exploratory_seed42_val.npz",
+      "sha256": "3c08751cb39da220af38c794729909d03466335ab8d44f511daf48949feac875",
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "split": "val"
+    }
+  ],
+  "seconds": 308.0697353000287,
+  "gpu_name": "NVIDIA GeForce RTX 4060",
+  "peak_allocated_mb": 420.60693359375,
+  "precision": "FP32",
+  "optimizer_updates": 0
+}

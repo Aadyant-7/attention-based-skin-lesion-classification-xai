@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "original_checkpoint_hashes_unchanged": true,
+  "all_feature_cache_hashes_unchanged": true,
+  "classifier_fit_uses_train_only": true,
+  "normalizers_fit_uses_train_only": true,
+  "saved_classifier_reproduces_predictions": true,
+  "probability_metrics_and_confusions_recomputed": true,
+  "train_images": 7009,
+  "val_images": 1503,
+  "test_images_loaded": false,
+  "test_labels_read": false,
+  "no_backbone_updates": true,
+  "no_hyperparameter_search": true,
+  "gpu_inference_only": true
+}

@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "path": ".cache/s77_panderm_large_transfer/base_train.npz",
+      "sha256": "e3a4036779f42e25441262ada30446c36f1bd2904f71276191e97a6ddcdbfe6d",
+      "model": "base",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s77_panderm_large_transfer/base_val.npz",
+      "sha256": "2540b11e9daa6d7a63a96d8fc04d0150f0a3ce26b62e0efd771d4bbd164dc787",
+      "model": "base",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s77_panderm_large_transfer/large_train.npz",
+      "sha256": "029a5fb806083bd440c13bea688526ab65b4da30ebe7151c618053d8960d690e",
+      "model": "large",
+      "split": "train"
+    },
+    {
+      "path": ".cache/s77_panderm_large_transfer/large_val.npz",
+      "sha256": "cb72513ce0b9fda24ccc4640b8aaa3e7a2d2645802b059a77aec0e8ac9875dd2",
+      "model": "large",
+      "split": "val"
+    }
+  ],
+  "seconds": 278.6761147000361,
+  "peak_allocated_mb": 1352.546875,
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "precision": "FP32",
+  "optimizer_updates": 0
+}

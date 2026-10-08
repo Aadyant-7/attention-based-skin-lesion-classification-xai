@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source_and_cache_hashes_unchanged": true,
+  "head_fitting_train_only": true,
+  "saved_heads_reproduce_predictions": true,
+  "metrics_recomputed": true,
+  "test_labels_read": false,
+  "test_images_loaded": false,
+  "backbone_updates": 0,
+  "prior_registry_rows_unchanged": 565,
+  "new_rows": 4
+}

@@ -1,0 +1,19 @@
+2026-10-08 20:44:44,459 START matched PanDerm Base/Large frozen FP32 inference; no backbone training/test
+2026-10-08 20:45:44,494 SAVED base train 7009 frozen features
+2026-10-08 20:46:07,299 SAVED base val 1503 frozen features
+2026-10-08 20:48:42,891 SAVED large train 7009 frozen features
+2026-10-08 20:49:22,997 SAVED large val 1503 frozen features
+2026-10-08 20:49:23,269 CPU FIT matched base SVM C10, train only
+2026-10-08 20:49:32,162 CPU FIT matched large SVM C10, train only
+2026-10-08 20:49:47,923 Stopped; preserve artifacts
+Traceback (most recent call last):
+  File "C:\Users\MARS\Desktop\College\Minor Project\Project Development\research\short_screening\panderm_large_screen.py", line 268, in run
+    extract(train,val,sig);close(train,val,sig)
+                           ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\MARS\Desktop\College\Minor Project\Project Development\research\short_screening\panderm_large_screen.py", line 248, in close
+    assert all(sha256(ROOT[s['path']])==s['sha256'] for s in json.loads((OUT/'feature_cache_manifest.json').read_text())['files'])
+           ^^^
+  File "C:\Users\MARS\Desktop\College\Minor Project\Project Development\research\short_screening\panderm_large_screen.py", line 248, in <genexpr>
+    assert all(sha256(ROOT[s['path']])==s['sha256'] for s in json.loads((OUT/'feature_cache_manifest.json').read_text())['files'])
+                      ~~~~^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not subscriptable

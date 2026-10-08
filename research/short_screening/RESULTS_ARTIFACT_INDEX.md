@@ -2,6 +2,13 @@
 
 All paths below are relative to the project root.
 
+## Representation studies: S76-S78
+
+S77 completed: Base88.5562% /0.810305; Large88.9554% /0.820575. Advancement gate failed; S78 was not run. Closeout: `S77_PANDERM_LARGE_CLOSEOUT.md`. Full reporting recovered from saved artifacts after a path typo, without repeating inference/fitting.
+
+- `results/short_screening/s76_trained_feature_fusion/`: actual fine-tuned member features, one fixed training-only nonlinear classifier; 91.3506% / 0.850417, rejected against the freshly reproduced 93.6128% / 0.886857 control. Full metrics, predictions, class/confusion/comparison figures and source/cache verification. Closeout: `S76_FEATURE_FUSION_CLOSEOUT.md`.
+- `results/short_screening/s77_panderm_large_transfer/`: matched official PanDerm Base/Large frozen transfer, with at most one conditional S78 B0 replacement. Predeclared scope and commands: `S77_PANDERM_LARGE_PLAN.md`; completion status/results are recorded in that result folder's `summary.json`. Local classifier bundles are under `checkpoints/short_screening/s77_panderm_large_transfer/`; third-party weights/features remain local.
+
 ## New bounded checks: S70-S75
 
 - `results/short_screening/s75_convnext_checkpoint_average_cpu/`: one fixed equal parameter average of S06 epochs17/18/20, with fresh CPU FP32 epoch18 control. Standalone91.4172% versus91.4837%; fixed five-model fusion93.6793% versus93.6128%, net+1 but lower melanoma recall; rejected. Four full prediction/class/confusion PNG/PDF result packages, comparison, gain/loss identities, compatibility/source hashes and runtime verification. Local new checkpoint: `checkpoints/short_screening/s75_convnext_checkpoint_average_cpu/averaged.pt`; source checkpoints unchanged. Closeout: `S75_CHECKPOINT_AVERAGE_CLOSEOUT.md`. No training/GPU/test.

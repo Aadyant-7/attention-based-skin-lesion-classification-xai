@@ -1,0 +1,10 @@
+{
+  "original_runner_sha256": "e48975808a2401ad8f18d7698faac18d603de6a564b6ff0654c45506e702f0cd",
+  "corrected_runner_sha256": "036e468b4adf200ef066531efe71dd5f2cf3d09dd860b6859a3849870f38a146",
+  "recovery_runner_sha256": "be22be1bf0ed00e1a45578d53df90271fd96f17acb8287d6439b18d006edd296",
+  "reason": "ROOT[path] corrected to ROOT/path in final hash check; completed-run guard moved before prepare",
+  "original_signature_preserved": true,
+  "inference_repeated": false,
+  "classifier_refitted": false,
+  "metrics_changed": false
+}
