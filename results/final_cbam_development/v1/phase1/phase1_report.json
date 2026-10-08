@@ -1,0 +1,91 @@
+{
+  "status": "phase1_complete_pending_phase2_implementation",
+  "cpu_only": true,
+  "gpu_training_started": false,
+  "training_epochs_completed": 0,
+  "accuracy_measured": false,
+  "train_images": 7009,
+  "validation_images": 1503,
+  "training_class_counts": {
+    "akiec": 229,
+    "bcc": 359,
+    "bkl": 769,
+    "df": 81,
+    "mel": 778,
+    "nv": 4693,
+    "vasc": 100
+  },
+  "class_weights": {
+    "akiec": 1.1106702089309692,
+    "bcc": 0.8870654106140137,
+    "bkl": 0.6060935854911804,
+    "df": 1.8674988746643066,
+    "mel": 0.6025776863098145,
+    "nv": 0.24534520506858826,
+    "vasc": 1.6807490587234497
+  },
+  "locked_test_image_overlap": 0,
+  "locked_test_lesion_overlap": 0,
+  "test_images_loaded": false,
+  "test_labels_read": false,
+  "exploratory_train_validation_shared_lesions": 563,
+  "exploratory_validation_images_with_train_lesion": 596,
+  "stopping_checks": {
+    "minimum_window": true,
+    "tiny_raw_records_do_not_reset": true,
+    "cumulative_gain_resets": true,
+    "f1_gain_resets": true,
+    "lr_opportunity_required": true,
+    "late_plateau": true,
+    "hard_cap": true,
+    "nonfinite_metric_rejected": true
+  },
+  "model_and_recovery_checks": {
+    "parameters": 27899337,
+    "attention_parameters": 73826,
+    "attention_input_shape": [
+      1,
+      768,
+      7,
+      7
+    ],
+    "pretrained_tensors_verified": true,
+    "finite_cpu_forward": true,
+    "finite_attention_gradients": true,
+    "warmup_preserves_backbone": true,
+    "full_finetuning_updates_backbone": true,
+    "optimizer_preserved_at_transition": true,
+    "atomic_checkpoint_roundtrip": true,
+    "resumed_next_update_bitwise_equal": true,
+    "recovery_mismatch_guards": true,
+    "deterministic_validation": true,
+    "weighted_effective_batch_loss": true,
+    "synthetic_warmup_loss": 1.8862593173980713,
+    "synthetic_full_loss": 1.7455090284347534,
+    "accuracy_measured": false,
+    "temporary_checkpoint_deleted": true
+  },
+  "registry_unchanged": true,
+  "original_sources_and_checkpoints_verified": true,
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  },
+  "seconds": 5.722222100012004,
+  "pending": [
+    "GPU memory/timing/AMP preflight",
+    "full GPU training runner and artifact closeout",
+    "explicit training approval"
+  ],
+  "paths": {
+    "config": "research/configs/final_cbam_development/s79_convnext_tiny_cbam_v1.json",
+    "frozen_manifest": "results/final_cbam_development/v1/phase1/frozen_manifest.json",
+    "future_results": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42",
+    "future_checkpoints": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42"
+  }
+}

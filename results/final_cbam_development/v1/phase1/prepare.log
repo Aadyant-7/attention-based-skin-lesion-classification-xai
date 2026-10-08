@@ -1,0 +1,5 @@
+2026-10-08 21:13:59,576 Verifying development identities and existing ensemble sources; CPU only
+2026-10-08 21:14:18,203 Verifying development identities and existing ensemble sources; CPU only
+2026-10-08 21:14:20,444 Checking meaningful stopping and disposable CPU optimizer/recovery probes
+2026-10-08 21:14:25,543 PHASE1 COMPLETE: no GPU use or training; original registry/results unchanged
+2026-10-08 21:16:17,699 Verifying development identities and existing ensemble sources; CPU only

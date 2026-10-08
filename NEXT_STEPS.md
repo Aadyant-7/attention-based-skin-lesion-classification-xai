@@ -1,4 +1,8 @@
-## Current status: 8 October 2026
+## Current status: final CBAM development Phase 1 complete
+
+User-authorized Phase 1 completed on8October2026. S79 ConvNeXt-Tiny+CBAM specification, existing ensemble source hashes and development protocol are frozen. CPU forward/gradient/staging, meaningful-stopping and checkpoint/RNG/optimizer recovery checks passed. No GPU training/preflight, new accuracy score or test evaluation started. Full dedicated GPU runner and launch approval are still pending. Start at `research/final_cbam_development/README.md`; evidence is in `results/final_cbam_development/v1/phase1/`.
+
+## Earlier completed screening: 8 October 2026
 
 S76 actual trained-feature fusion was rejected (91.3506% versus reproduced S53 93.6128%). S77 matched published PanDerm Large frozen transfer reached88.9554% versus Base88.5562%; its predefined gate failed, so S78 was not run. No further model training or weight search is queued. S53 remains the retained single-image exploratory candidate (93.6128% /0.886857 macro-F1), not a new test result. Original strict locked-test result stays86.7598% /0.794473. Do not reevaluate or tune against that test.
 
