@@ -22,8 +22,6 @@ def record(c,payload,status):
         config_path=c['results']+'/config.json',epochs=payload['epoch'],status=status,
         history_path=c['results']+'/history.csv',checkpoint=c['checkpoints']+'/best.pt',
         notes='Post-test exploratory development; no original-test evaluation; combined recipe, not pure CBAM ablation')
-    if payload.get('numerical_recovery'):
-        row['notes']+='; epoch20 recovery amendment: standard GradScaler skipped-update/backoff; details in training summary/history'
     if payload['best_accuracy']:
         best=payload['best_accuracy'];row.update(best_epoch=best['epoch'],**{k:best['metrics'][k] for k in ['accuracy','macro_precision','macro_recall','macro_f1']},
             val_loss=best['metrics']['loss'],metrics_path=c['results']+'/validation_metrics.json',plots_dir=c['results']+'/figures',
@@ -117,8 +115,6 @@ def closeout(payload,folder,ck,c,val,publish=True):
         best_accuracy_epoch=payload['best_accuracy']['epoch'],best_macro_f1_epoch=payload['best_macro_f1']['epoch'],
         best_accuracy=payload['best_accuracy']['metrics']['accuracy'],best_macro_f1=payload['best_macro_f1']['metrics']['macro_f1'],
         final_metrics=last['metrics'],meaningful_stopping=payload['meaningful_stopping'],optimizer_updates=payload['optimizer_updates'],
-        numerical_recovery=payload.get('numerical_recovery'),amp_overflow_events=payload.get('overflow_events',[]),
-        amp_skipped_optimizer_updates=sum(r.get('amp_skipped_optimizer_updates',0) for r in payload['history']),
         runtime_seconds=payload['runtime_seconds'],fixed_ensemble_material_gate_passed=passed,test_loaded=False))
     row=record(c,payload,'completed');row['decision']='completed_bounded_recipe';write_json(folder/'record.json',row)
     if publish:upsert(row)

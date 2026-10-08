@@ -15,7 +15,7 @@ from research.common import ROOT, CLASSES, relative, write_json
 from research.strict_train import atomic_checkpoint, run_lock, runtime_versions
 from research.short_screening.lesion_bag_screen import report
 from .protocol import verified_development, weights_from_training, make_model, make_optimizer, make_scheduler, stage, stopping, check_resume
-from .runtime import signature, require_launch_freeze, deterministic_cuda, capture_rng, load_rng, loader, model_cpu, finite, amp_update, NUMERICS, migrate_resume
+from .runtime import signature, require_launch_freeze, deterministic_cuda, capture_rng, load_rng, loader, model_cpu, finite, amp_update, NUMERICS
 from .artifacts import COLS, repair, closeout
 
 
@@ -34,12 +34,11 @@ def validation(model,dl,weights):
     return m,p,ids
 
 
-def checkpoint(c,sig,model,opt,scheduler,scaler,epoch,history,best,f1,last,updates,runtime,overflow_events=None,consecutive_overflows=0,numerical_recovery=None):
+def checkpoint(c,sig,model,opt,scheduler,scaler,epoch,history,best,f1,last,updates,runtime):
     return dict(config=c,signature=sig,epoch=epoch,model=model_cpu(model),optimizer=opt.state_dict(),
         scheduler=scheduler.state_dict(),scaler=scaler.state_dict(),rng=capture_rng(),history=history,
         meaningful_stopping=stopping(history,c),best_accuracy=best,best_macro_f1=f1,last_validation=last,
         optimizer_updates=updates,runtime_seconds=runtime,
-        overflow_events=overflow_events or [],consecutive_overflows=consecutive_overflows,numerical_recovery=numerical_recovery,
         loader_recovery='epoch seed=seed+epoch; complete epoch replay after partial interruption; no mid-epoch resume')
 
 
@@ -52,7 +51,7 @@ def run(resume=False):
     folder=ROOT/c['results'];ck=ROOT/c['checkpoints'];latest=ck/'latest.pt'
     if resume:
         if not latest.exists():raise FileNotFoundError('No committed checkpoint to resume')
-        saved=torch.load(latest,map_location='cpu',weights_only=False);saved=migrate_resume(saved,c,sig,latest)
+        saved=torch.load(latest,map_location='cpu',weights_only=False);check_resume(saved,c,sig)
         if 'cuda' not in saved['rng']:raise ValueError('Missing CUDA RNG recovery state')
         if (folder/'progress.json').exists() and json.loads((folder/'progress.json').read_text()).get('status')=='completed':
             print('Completed S79 preserved; no GPU initialization or training');return
@@ -67,8 +66,6 @@ def run(resume=False):
     tick=time.perf_counter();base_runtime=(saved or {}).get('runtime_seconds',0)
     epoch=(saved or {}).get('epoch',0);history=(saved or {}).get('history',[]);updates=(saved or {}).get('optimizer_updates',0)
     best=(saved or {}).get('best_accuracy');f1=(saved or {}).get('best_macro_f1');last=(saved or {}).get('last_validation')
-    overflow_events=(saved or {}).get('overflow_events',[]);consecutive_overflows=(saved or {}).get('consecutive_overflows',0)
-    numerical_recovery=(saved or {}).get('numerical_recovery')
     try:
         logger.info('START S79 resume=%s committed_epoch=%d train=%d val=%d FP32 validation; no test loader',resume,epoch,len(train),len(val))
         deterministic_cuda(c['seed']);model=make_model(c,pretrained=not resume).cuda();opt=make_optimizer(model,c)
@@ -85,20 +82,12 @@ def run(resume=False):
             if stopping(history,c)['stop']:break
             epoch=next_epoch;start=time.perf_counter();torch.cuda.reset_peak_memory_stats();phase=stage(model,epoch,c)
             dl=loader(train,c,epoch,True);assert len(dl)%c['gradient_accumulation']==0
-            iterator=iter(dl);num=den=0.;correct=used=0;skipped=0;lr_before=[g['lr'] for g in opt.param_groups]
+            iterator=iter(dl);num=den=0.;correct=used=0;lr_before=[g['lr'] for g in opt.param_groups]
             for i in range(len(dl)//c['gradient_accumulation']):
-                batches=[];batch_ids=[]
+                batches=[]
                 for _ in range(c['gradient_accumulation']):
-                    x,y,_ids=next(iterator);batches.append((x.cuda(non_blocking=True),y.cuda(non_blocking=True)));batch_ids.extend(_ids)
-                stats=amp_update(model,opt,scaler,batches,weights,c)
-                if stats['skipped']:
-                    skipped+=1;consecutive_overflows+=1
-                    overflow_events.append(dict(epoch=epoch,effective_batch=i+1,image_ids=batch_ids,
-                        scale_before=stats['scale_before'],scale_after=stats['scale_after'],nonfinite_gradient_parameters=stats['nonfinite_gradient_parameters']))
-                    write_json(folder/'amp_overflow_events.json',overflow_events)
-                    logger.warning('AMP OVERFLOW epoch=%d batch=%d skipped optimizer update scale %.0f->%.0f',epoch,i+1,stats['scale_before'],stats['scale_after'])
-                    if consecutive_overflows>=3:raise FloatingPointError('Three consecutive AMP gradient overflows; stop for diagnosis')
-                else:updates+=1;consecutive_overflows=0
+                    x,y,_ids=next(iterator);batches.append((x.cuda(non_blocking=True),y.cuda(non_blocking=True)))
+                stats=amp_update(model,opt,scaler,batches,weights,c);updates+=1
                 num+=stats['numerator'];den+=stats['denominator'];correct+=stats['correct'];used+=stats['used']
                 if i==0 or (i+1)%25==0:logger.info('epoch %d/%d update %d/%d stage=%s',epoch,c['max_epochs'],i+1,len(dl)//2,phase)
             del dl,iterator,batches;gc.collect()
@@ -112,14 +101,13 @@ def run(resume=False):
                 train_images_used=used,val_loss=metrics['loss'],**{'val_'+k:metrics[k] for k in ['accuracy','macro_precision','macro_recall','macro_f1']},
                 backbone_lr=lr_before[0],head_lr=lr_before[1],backbone_lr_after=lr_after[0],head_lr_after=lr_after[1],
                 scheduler_lr_reduced=any(a<b for a,b in zip(lr_after,lr_before)),optimizer_updates=updates,
-                scaler_scale=scaler.get_scale(),amp_skipped_optimizer_updates=skipped,training_precision='amp_fp16',validation_precision='fp32',
+                scaler_scale=scaler.get_scale(),training_precision='amp_fp16',validation_precision='fp32',
                 epoch_seconds=time.perf_counter()-start,peak_allocated_vram_mb=torch.cuda.max_memory_allocated()/1024**2)
             history.append(row);policy=stopping(history,c);row.update(meaningful_stale=policy['stale'],last_meaningful_epoch=policy['last_meaningful_epoch'],
                 meaningful_accuracy_reference=policy['references']['accuracy'],meaningful_macro_f1_reference=policy['references']['macro_f1'],stopping_reason=policy['reason'])
             if best is None or metrics['accuracy']>best['metrics']['accuracy']:best=selected(epoch,metrics,predictions,model)
             if f1 is None or metrics['macro_f1']>f1['metrics']['macro_f1']:f1=selected(epoch,metrics,predictions,model)
-            payload=checkpoint(c,sig,model,opt,scheduler,scaler,epoch,history,best,f1,last,updates,base_runtime+time.perf_counter()-tick,
-                overflow_events,consecutive_overflows,numerical_recovery)
+            payload=checkpoint(c,sig,model,opt,scheduler,scaler,epoch,history,best,f1,last,updates,base_runtime+time.perf_counter()-tick)
             atomic_checkpoint(latest,payload) # Commit before any CSV/registry/figure mutation.
             repair(payload,folder,ck,c);del payload
             logger.info('EPOCH %d accuracy=%.6f macroF1=%.6f best_accuracy_epoch=%d best_F1_epoch=%d meaningful_stale=%d stop=%s',

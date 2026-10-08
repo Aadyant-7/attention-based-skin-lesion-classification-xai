@@ -1,5 +1,7 @@
 # S79 Phase 2 complete: ready for training approval
 
+**Recovery amendment:** S79 later stopped in epoch21 on nonfinite backward gradients, with finite model/optimizer and valid epoch20 checkpoint. The user authorized resume. Standard GradScaler skip/backoff is now supported and verified; details/signature migration are in `S79_EPOCH21_RECOVERY.md`. The original preflight/launch evidence below is retained. Its abort-on-gradient-overflow description is superseded by this recorded amendment; all forward/loss/state guards remain strict.
+
 8 October 2026. The dedicated runner is implemented and preflight passed. **Full S79 training has not started.** The Phase 1 configuration, policy and source hashes remain unchanged. No original test labels/images were loaded, no experiment registry row was added, and no actual S79 training folders/checkpoints exist yet.
 
 ## Implemented behavior

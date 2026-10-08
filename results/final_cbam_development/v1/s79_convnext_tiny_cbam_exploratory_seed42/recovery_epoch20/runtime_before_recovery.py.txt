@@ -16,7 +16,7 @@ CODE=['research/final_cbam_development/runtime.py','research/final_cbam_developm
       'research/final_cbam_development/artifacts.py','research/final_cbam_development/prepare_gpu.py',
       'research/final_cbam_development/test_runner.py',
       'research/registry.py','research/plots.py','research/short_screening/lesion_bag_screen.py']
-NUMERICS=dict(gradscaler_initial_scale=1024.0,gradient_overflow='skip_update_and_gradscaler_backoff; abort_after_three_consecutive',
+NUMERICS=dict(gradscaler_initial_scale=1024.0,gradient_overflow='abort_preserve_valid_boundary',
               fp32_validation=True,tf32=False,deterministic=True)
 
 
@@ -41,30 +41,10 @@ def signature():
 
 def require_launch_freeze():
     c,s=signature();f=json.loads((PHASE2/'launch_manifest.json').read_text())
-    if f!=s:
-        amendment=recovery_amendment()
-        if amendment['from_signature']!=f or amendment['to_signature']!=s or amendment['overflow_probe_status']!='passed':
-            raise ValueError('Runner/config/source changed without verified recovery amendment')
+    if f!=s:raise ValueError('Runner/config/source changed after GPU preflight; review and refreeze explicitly')
     report=json.loads((PHASE2/'gpu_preflight.json').read_text())
     if report['status']!='passed':raise ValueError('GPU preflight has not passed')
     return c,s
-
-
-def recovery_amendment():
-    return json.loads((PHASE2/'amp_recovery_manifest.json').read_text())
-
-
-def migrate_resume(saved,c,sig,latest):
-    from .protocol import check_resume
-    if saved['signature']==sig:
-        check_resume(saved,c,sig);return saved
-    amendment=recovery_amendment()
-    check_resume(saved,c,amendment['from_signature'])
-    if amendment['to_signature']!=sig or saved['epoch']!=20 or sha256(latest)!=amendment['checkpoint_sha256']:
-        raise ValueError('Recovery must use the recorded unchanged epoch20 checkpoint')
-    saved['signature']=sig;saved['numerical_recovery']=dict(kind='standard_gradscaler_overflow_handling',
-        resumed_from_epoch=20,original_checkpoint_sha256=amendment['checkpoint_sha256'])
-    return saved
 
 
 def deterministic_cuda(seed):
@@ -107,7 +87,7 @@ def model_cpu(model):return {k:v.detach().cpu().clone() for k,v in model.state_d
 
 
 def amp_update(model,opt,scaler,batches,weights,c):
-    """Exact weighted loss; standard GradScaler skip/backoff on gradient overflow."""
+    """Exact weighted effective-batch loss; any nonfinite gradient stops safely."""
     opt.zero_grad(set_to_none=True);den=sum(weights[y].sum() for _,y in batches)
     num_sum=0.;correct=0;used=0
     for x,y in batches:
@@ -118,15 +98,7 @@ def amp_update(model,opt,scaler,batches,weights,c):
         if not torch.isfinite(num):raise FloatingPointError('Nonfinite training loss')
         scaler.scale(num/den).backward();num_sum+=float(num.detach());correct+=int((z.argmax(1)==y).sum());used+=len(y)
     scaler.unscale_(opt)
-    if not finite([p.grad for p in model.parameters() if p.grad is not None]):
-        bad=[name for name,p in model.named_parameters() if p.grad is not None and not bool(torch.isfinite(p.grad).all())]
-        if not finite(model.state_dict()) or not finite(opt.state_dict()):raise FloatingPointError('Corrupted state during gradient overflow')
-        scale_before=scaler.get_scale();scaler.step(opt);scaler.update()
-        if scaler.get_scale()>=scale_before:raise FloatingPointError('GradScaler failed to skip/back off nonfinite gradients')
-        opt.zero_grad(set_to_none=True)
-        return dict(numerator=num_sum,denominator=float(den),correct=correct,used=used,gradient_norm=None,
-                    skipped=True,scale_before=scale_before,scale_after=scaler.get_scale(),nonfinite_gradient_parameters=bad)
     norm=torch.nn.utils.clip_grad_norm_(model.parameters(),c['gradient_clip_norm'],error_if_nonfinite=True)
     scaler.step(opt);scaler.update()
     if not finite(model.state_dict()) or not finite(opt.state_dict()):raise FloatingPointError('Nonfinite updated state')
-    return dict(numerator=num_sum,denominator=float(den),correct=correct,used=used,gradient_norm=float(norm),skipped=False)
+    return dict(numerator=num_sum,denominator=float(den),correct=correct,used=used,gradient_norm=float(norm))

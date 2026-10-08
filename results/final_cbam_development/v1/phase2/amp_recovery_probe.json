@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "synthetic_gradient_overflow": true,
+  "optimizer_step_skipped": true,
+  "model_unchanged_on_skip": true,
+  "scale_before": 4096,
+  "scale_after": 2048,
+  "next_finite_update_succeeded": true,
+  "skin_images_loaded": false,
+  "accuracy_measured": false,
+  "training_epochs": 0
+}
