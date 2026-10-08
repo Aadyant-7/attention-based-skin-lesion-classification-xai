@@ -1,4 +1,8 @@
-## Current status: final CBAM development Phase 1 complete
+## Current status: final CBAM development Phase 2 ready
+
+The dedicated S79 runner, full artifact/recovery handling and one fixed CPU S80 ensemble closeout are implemented. Two CPU gates and disposable GPU AMP/FP32/recovery preflight passed. Single-model peak allocated memory1,514MiB; synthetic compute estimate68seconds/epoch; budget60–90minutes for the40-epoch cap. No full training has started. See `research/final_cbam_development/PHASE2_LAUNCH_HANDOFF.md` for start/monitor/resume commands and paths. Await user approval before the full GPU run; then launch, confirm logging/checkpointing and stop interacting.
+
+## Completed Phase 1 preparation
 
 User-authorized Phase 1 completed on8October2026. S79 ConvNeXt-Tiny+CBAM specification, existing ensemble source hashes and development protocol are frozen. CPU forward/gradient/staging, meaningful-stopping and checkpoint/RNG/optimizer recovery checks passed. No GPU training/preflight, new accuracy score or test evaluation started. Full dedicated GPU runner and launch approval are still pending. Start at `research/final_cbam_development/README.md`; evidence is in `results/final_cbam_development/v1/phase1/`.
 

@@ -1,5 +1,7 @@
 # Final attention-inclusive development: Phase 1
 
+**Phase 2 is now implemented and preflight passed. Full training awaits approval.** Exact commands, measured GPU resources and recovery instructions: `PHASE2_LAUNCH_HANDOFF.md`. Phase 1 evidence below is preserved; its pending-runner statements describe the state when Phase 1 completed.
+
 Prepared 8 October 2026 on `structured-research`. Phase 1 is complete. No GPU preflight, training run, new accuracy result or locked-test evaluation has started. The full GPU runner and its artifact closeout still require Phase 2 implementation and launch approval.
 
 ## Frozen experiment

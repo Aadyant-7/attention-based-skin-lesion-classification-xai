@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  },
+  "synthetic_only": true,
+  "optimizer_probe_updates": 7,
+  "training_epochs_completed": 0,
+  "accuracy_measured": false,
+  "training_started": false,
+  "batch_size": 16,
+  "effective_batch_size": 32,
+  "finite_amp_warmup": true,
+  "finite_amp_full_stage": true,
+  "fp32_validation_finite": true,
+  "resumed_next_update_bitwise_equal": true,
+  "cuda_rng_optimizer_scheduler_scaler_restored": true,
+  "peak_single_model_allocated_mb": 1514.3330078125,
+  "peak_two_model_recovery_probe_mb": 1945.31884765625,
+  "full_effective_batch_seconds": [
+    5.860054099990521,
+    0.2738506000023335,
+    0.25912140001310036
+  ],
+  "fp32_validation_batch_seconds": [
+    1.6697271000011824,
+    0.08293490001233295,
+    0.0731472999905236
+  ],
+  "synthetic_epoch_compute_lower_bound_seconds": 67.76915991306305,
+  "caveat": "Synthetic timings exclude loading/augmentation/checkpoint/reporting; not a promised wall runtime",
+  "gpu_preflight_seconds": 16.32178559998283,
+  "original_registry_unchanged": true,
+  "test_images_loaded": false,
+  "test_labels_read": false,
+  "temporary_probe_checkpoint_deleted": true,
+  "numerics": {
+    "gradscaler_initial_scale": 1024.0,
+    "gradient_overflow": "abort_preserve_valid_boundary",
+    "fp32_validation": true,
+    "tf32": false,
+    "deterministic": true
+  },
+  "remaining_gate": "Human approval for full S79 training; no training launched"
+}

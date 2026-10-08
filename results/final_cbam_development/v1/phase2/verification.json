@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "cpu_tests": 2,
+  "cpu_test_cases": [
+    "committed_epoch_repairs_outputs_without_retraining",
+    "epoch_loader_replay_and_forbidden_partition"
+  ],
+  "artifact_fixture_disposable": true,
+  "registry_not_modified": true,
+  "phase1_code_config_hashes_unchanged": true,
+  "launch_signature_current": true,
+  "fp32_reference_source_caches_verified": true,
+  "training_started": false,
+  "actual_training_folders_created": false,
+  "gpu_preflight_only": true
+}

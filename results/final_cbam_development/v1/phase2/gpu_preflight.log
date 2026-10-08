@@ -1,0 +1,2 @@
+2026-10-08 21:28:14,759 Disposable synthetic AMP warmup/full-stage probes; no training images/test/accuracy
+2026-10-08 21:28:31,082 GPU PREFLIGHT PASSED single-model_peak=1514.3MB synthetic_epoch_lower_bound=67.8s; no training launched
