@@ -1,6 +1,6 @@
-## Current status: final CBAM development Phase 2 ready
+## Current status: S79/S80 completed; stopped for tonight
 
-The dedicated S79 runner, full artifact/recovery handling and one fixed CPU S80 ensemble closeout are implemented. Two CPU gates and disposable GPU AMP/FP32/recovery preflight passed. Single-model peak allocated memory1,514MiB; synthetic compute estimate68seconds/epoch; budget60–90minutes for the40-epoch cap. No full training has started. See `research/final_cbam_development/PHASE2_LAUNCH_HANDOFF.md` for start/monitor/resume commands and paths. Await user approval before the full GPU run; then launch, confirm logging/checkpointing and stop interacting.
+S79 ConvNeXt-Tiny+CBAM finished its 40-epoch cap: best accuracy93.0140% at33, best macro-F1 0.877708 at35; final92.6148% /0.873314. S80 fixed equal-five replacement reached93.3466% /0.877017, below retained S53 93.6128% /0.886857 (11 gained,15 lost). Checkpoints, all prediction/metric/figure packages, recovery disclosure and registry entries are verified. No next run is queued. See `research/final_cbam_development/S79_S80_CLOSEOUT.md`. Late validation fluctuated below the epoch33 accuracy record despite LR reduction; no extension was launched. Original test remains untouched by this development.
 
 ## Completed Phase 1 preparation
 

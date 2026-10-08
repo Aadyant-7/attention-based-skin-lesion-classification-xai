@@ -1,0 +1,295 @@
+{
+  "status": "completed",
+  "epochs": 40,
+  "stop_reason": "epoch_cap",
+  "best_accuracy_epoch": 33,
+  "best_macro_f1_epoch": 35,
+  "best_accuracy": 0.9301397205588823,
+  "best_macro_f1": 0.8777083500240772,
+  "final_metrics": {
+    "loss": 0.813822668718115,
+    "accuracy": 0.9261477045908184,
+    "macro_precision": 0.8760914344002574,
+    "macro_recall": 0.8711247090842383,
+    "macro_f1": 0.8733143403253674,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        39,
+        3,
+        5,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        3,
+        69,
+        0,
+        1,
+        3,
+        1,
+        0
+      ],
+      [
+        6,
+        1,
+        138,
+        1,
+        8,
+        11,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        14,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        138,
+        21,
+        0
+      ],
+      [
+        1,
+        0,
+        12,
+        0,
+        18,
+        974,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.78,
+        "recall": 0.7959183673469388,
+        "f1": 0.7878787878787878,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9452054794520548,
+        "recall": 0.8961038961038961,
+        "f1": 0.92,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.8414634146341463,
+        "recall": 0.8363636363636363,
+        "f1": 0.8389057750759878,
+        "support": 165
+      },
+      "df": {
+        "precision": 0.875,
+        "recall": 0.8235294117647058,
+        "f1": 0.8484848484848485,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8165680473372781,
+        "recall": 0.8263473053892215,
+        "f1": 0.8214285714285714,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9653121902874133,
+        "recall": 0.9672293942403177,
+        "f1": 0.9662698412698413,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    }
+  },
+  "meaningful_stopping": {
+    "references": {
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8774343983529919
+    },
+    "last_improvement_epochs": {
+      "accuracy": 33,
+      "macro_f1": 33
+    },
+    "last_meaningful_epoch": 33,
+    "stale": 7,
+    "lr_reduction_epochs": [
+      25,
+      37
+    ],
+    "lr_settled": true,
+    "flat_or_declining": true,
+    "stop": true,
+    "reason": "epoch_cap"
+  },
+  "optimizer_updates": 8757,
+  "numerical_recovery": {
+    "kind": "standard_gradscaler_overflow_handling",
+    "resumed_from_epoch": 20,
+    "original_checkpoint_sha256": "ca508dcee16327a6315134e1b354bef6e5117dde5dcd3ccc046043aa5d9b6bb3"
+  },
+  "amp_overflow_events": [
+    {
+      "epoch": 21,
+      "effective_batch": 117,
+      "image_ids": [
+        "ISIC_0025021",
+        "ISIC_0025474",
+        "ISIC_0027169",
+        "ISIC_0026023",
+        "ISIC_0025523",
+        "ISIC_0031570",
+        "ISIC_0030673",
+        "ISIC_0029161",
+        "ISIC_0033148",
+        "ISIC_0030966",
+        "ISIC_0032107",
+        "ISIC_0026853",
+        "ISIC_0033395",
+        "ISIC_0024916",
+        "ISIC_0030779",
+        "ISIC_0032353",
+        "ISIC_0028070",
+        "ISIC_0024947",
+        "ISIC_0032773",
+        "ISIC_0031156",
+        "ISIC_0026911",
+        "ISIC_0025656",
+        "ISIC_0029095",
+        "ISIC_0025349",
+        "ISIC_0031602",
+        "ISIC_0031515",
+        "ISIC_0033568",
+        "ISIC_0026256",
+        "ISIC_0024442",
+        "ISIC_0028450",
+        "ISIC_0027693",
+        "ISIC_0029972"
+      ],
+      "scale_before": 4096.0,
+      "scale_after": 2048.0,
+      "nonfinite_gradient_parameters": [
+        "features.1.0.block.0.bias"
+      ]
+    },
+    {
+      "epoch": 22,
+      "effective_batch": 174,
+      "image_ids": [
+        "ISIC_0032962",
+        "ISIC_0028033",
+        "ISIC_0030818",
+        "ISIC_0032064",
+        "ISIC_0031247",
+        "ISIC_0033091",
+        "ISIC_0033518",
+        "ISIC_0027694",
+        "ISIC_0028182",
+        "ISIC_0030904",
+        "ISIC_0025162",
+        "ISIC_0032722",
+        "ISIC_0029518",
+        "ISIC_0026506",
+        "ISIC_0025509",
+        "ISIC_0033674",
+        "ISIC_0031041",
+        "ISIC_0032654",
+        "ISIC_0027674",
+        "ISIC_0032523",
+        "ISIC_0026394",
+        "ISIC_0027617",
+        "ISIC_0033350",
+        "ISIC_0032362",
+        "ISIC_0029543",
+        "ISIC_0025228",
+        "ISIC_0032897",
+        "ISIC_0028170",
+        "ISIC_0028964",
+        "ISIC_0028605",
+        "ISIC_0029828",
+        "ISIC_0030856"
+      ],
+      "scale_before": 2048.0,
+      "scale_after": 1024.0,
+      "nonfinite_gradient_parameters": [
+        "features.1.0.block.0.bias"
+      ]
+    },
+    {
+      "epoch": 32,
+      "effective_batch": 80,
+      "image_ids": [
+        "ISIC_0034240",
+        "ISIC_0027289",
+        "ISIC_0027035",
+        "ISIC_0029923",
+        "ISIC_0030400",
+        "ISIC_0030294",
+        "ISIC_0032512",
+        "ISIC_0025597",
+        "ISIC_0033686",
+        "ISIC_0028383",
+        "ISIC_0026756",
+        "ISIC_0028720",
+        "ISIC_0027912",
+        "ISIC_0033378",
+        "ISIC_0034162",
+        "ISIC_0027848",
+        "ISIC_0034182",
+        "ISIC_0027930",
+        "ISIC_0026428",
+        "ISIC_0025998",
+        "ISIC_0028831",
+        "ISIC_0030106",
+        "ISIC_0027175",
+        "ISIC_0025608",
+        "ISIC_0031688",
+        "ISIC_0030025",
+        "ISIC_0033015",
+        "ISIC_0033664",
+        "ISIC_0027062",
+        "ISIC_0033267",
+        "ISIC_0031558",
+        "ISIC_0028295"
+      ],
+      "scale_before": 2048.0,
+      "scale_after": 1024.0,
+      "nonfinite_gradient_parameters": [
+        "features.1.0.block.0.bias"
+      ]
+    }
+  ],
+  "amp_skipped_optimizer_updates": 3,
+  "runtime_seconds": 3127.7937126999605,
+  "fixed_ensemble_material_gate_passed": false,
+  "test_loaded": false
+}

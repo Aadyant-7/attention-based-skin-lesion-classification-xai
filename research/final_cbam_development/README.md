@@ -1,8 +1,8 @@
-# Final attention-inclusive development: Phase 1
+# Final attention-inclusive development: completed
 
-**Phase 2 is now implemented and preflight passed. Full training awaits approval.** Exact commands, measured GPU resources and recovery instructions: `PHASE2_LAUNCH_HANDOFF.md`. Phase 1 evidence below is preserved; its pending-runner statements describe the state when Phase 1 completed.
+**S79 and the one fixed S80 ensemble completed and verification passed.** S79 best accuracy93.0140% at33; best macro-F1 0.877708 at35; latest state40. S80 93.3466% /0.877017 fails the improvement gate against retained S53 93.6128% /0.886857. No further run is queued. Full conclusions, numerical recovery, curves and artifact paths: `S79_S80_CLOSEOUT.md`.
 
-Prepared 8 October 2026 on `structured-research`. Phase 1 is complete. No GPU preflight, training run, new accuracy result or locked-test evaluation has started. The full GPU runner and its artifact closeout still require Phase 2 implementation and launch approval.
+The Phase 1/2 preparation records below are historical; references to pending implementation or future outputs describe that earlier preparation state. The completed outputs now exist. Launch/recovery records are preserved in `PHASE2_LAUNCH_HANDOFF.md` and `S79_EPOCH21_RECOVERY.md`.
 
 ## Frozen experiment
 

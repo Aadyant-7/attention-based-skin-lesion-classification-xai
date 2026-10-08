@@ -1,0 +1,7 @@
+{
+  "error": "RuntimeError('The total norm of order 2.0 for gradients from `parameters` is non-finite, so it cannot be clipped. To disable this error and scale the gradients by the non-finite norm anyway, set `error_if_nonfinite=False`')",
+  "attempted_epoch": 21,
+  "latest_valid_checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/latest.pt",
+  "latest_committed_epoch": 20,
+  "automatic_retry": false
+}

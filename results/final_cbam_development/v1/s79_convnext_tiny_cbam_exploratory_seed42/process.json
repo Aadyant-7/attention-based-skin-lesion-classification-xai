@@ -1,0 +1,7 @@
+{
+  "pid": 6388,
+  "started": true,
+  "results": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42",
+  "checkpoints": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42",
+  "resume": true
+}

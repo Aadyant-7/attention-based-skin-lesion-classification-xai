@@ -1,0 +1,6 @@
+{
+  "status": "completed",
+  "committed_epoch": 40,
+  "stop_reason": "epoch_cap",
+  "active_process": false
+}

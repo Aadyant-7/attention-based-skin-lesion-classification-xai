@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+Fresh FP32 S53 reference,0.936127744510978,0.8868574111567237
+S79 CBAM replacement equal-five,0.9334664005322688,0.8770165094278121

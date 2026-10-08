@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "epoch": 40,
+  "checkpoint_hashes": {
+    "best.pt": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+    "best_macro_f1.pt": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+    "latest.pt": "0916a8c91bc619fb10f3e69163d84a02eda62921742f259f2c0e45bb1dfe5b14"
+  },
+  "packages": {
+    "accuracy_selected": {
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8774343983529919,
+      "correct": 1398,
+      "samples": 1503
+    },
+    "macro_f1_selected": {
+      "accuracy": 0.9248170326014638,
+      "macro_f1": 0.8777083500240772,
+      "correct": 1390,
+      "samples": 1503
+    },
+    "final_epoch": {
+      "accuracy": 0.9261477045908184,
+      "macro_f1": 0.8733143403253674,
+      "correct": 1392,
+      "samples": 1503
+    },
+    "fixed_ensemble": {
+      "accuracy": 0.9334664005322688,
+      "macro_f1": 0.8770165094278121,
+      "correct": 1403,
+      "samples": 1503
+    }
+  },
+  "source_hashes_unchanged": true,
+  "config_and_execution_amendment_verified": true,
+  "original_epoch20_preserved": true,
+  "prior_registry_rows_unchanged": 569,
+  "new_registry_ids": [
+    "s79_convnext_tiny_cbam_exploratory_seed42",
+    "s80_s79_replacement_equal_five_exploratory_seed42"
+  ],
+  "optimizer_updates": 8757,
+  "amp_skipped_updates": 3,
+  "figures_verified": true,
+  "test_loaded": false
+}

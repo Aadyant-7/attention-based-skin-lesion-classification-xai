@@ -2,6 +2,10 @@
 
 All paths below are relative to the project root.
 
+## Completed final CBAM package: S79/S80
+
+S79 standalone93.0140% /0.877434 at accuracy-selected epoch33; macro-F1 winner0.877708 at35. S80 fixed replacement ensemble93.3466% /0.877017, below retained S53. Closeout: `research/final_cbam_development/S79_S80_CLOSEOUT.md`. Full selected/final/ensemble metrics, predictions, probabilities, class/confusion/curve PNG/PDF, logs and verification: `results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/`. Local best/latest checkpoints: `checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/`. Recovery transparently recorded; no original-test evaluation.
+
 ## Representation studies: S76-S78
 
 S77 completed: Base88.5562% /0.810305; Large88.9554% /0.820575. Advancement gate failed; S78 was not run. Closeout: `S77_PANDERM_LARGE_CLOSEOUT.md`. Full reporting recovered from saved artifacts after a path typo, without repeating inference/fitting.
@@ -21,7 +25,7 @@ S77 completed: Base88.5562% /0.810305; Large88.9554% /0.820575. Advancement gate
 
 ## Latest provisional exploratory candidate
 
-S53 equal five-model fusion adds S03 EfficientNet-B0 to the four members below, with weight 0.20 each. It achieved **93.6128% accuracy / 0.886857 macro-F1** (1,407 correct / 96 incorrect). The net gain is only two images; it is not established as a material improvement. This cached-probability result has not yet been freshly reproduced with all-five FP32 inference.
+S53 equal five-model fusion adds S03 EfficientNet-B0 to the four members below, with weight 0.20 each. It achieved **93.6128% accuracy / 0.886857 macro-F1** (1,407 correct / 96 incorrect). The net gain is only two images; it is not established as a material improvement. S76 freshly reproduced all-five FP32 inference with the same labels and metrics; S79/S80 verification also reproduced the reference from those hash-verified FP32 caches.
 
 Scores, predictions, probabilities, class metrics and PNG/PDF figures: `results/short_screening/s53_equal_five_b0_addition/`. Interpretation: `research/short_screening/S53_EQUAL_FIVE_CLOSEOUT.md`.
 
