@@ -4,6 +4,8 @@ All paths below are relative to the project root.
 
 ## Latest saved-model expansion: S86/S87; next prepared Swin pilot
 
+The user subsequently authorized a concurrent S90 **DeiT III Small ImageNet22k->1k** epoch15 pilot. Plan: `research/short_screening/S90_DEIT3_CONCURRENT_PILOT.md`; isolated runner/config: `s90_deit3_transfer.py`, `s90_deit3_transfer_v1.json`; CPU preflight/launcher logs: `results/short_screening/deit3_transfer_v1/`; serious-run outputs: `results/short_screening/deit3_transfer_v1/s90_deit3_small_none_exploratory_seed42/`; checkpoints: `checkpoints/short_screening/deit3_transfer_v1/s90_deit3_small_none_exploratory_seed42/`. No score exists until training validation is committed; inspect live progress/registry rather than treating this static index as a completion claim.
+
 - `results/short_screening/s86_s87_saved_member_addition/`: fixed candidate audit (MobileNet, ResNet101, ImageNet22k Tiny, frozen PanDerm Large), class-wise error complementarity and two rejected equal-seven additions. Both93.7458%; ResNet macro-F10.891351; PanDerm macro-F10.888905. Metrics, predictions/probabilities, raw/normalized confusion matrices, class scores, PNG/PDF/comparison figures, source hashes and independent verification. No conditional joint fusion was executed. Closeout: `research/short_screening/S86_S87_SAVED_ADDITION_CLOSEOUT.md`.
 - `research/short_screening/S89_SWIN_PROPOSAL.md`: exact isolated Swin-T model/recipe, epoch15 pilot, hard20 cap, continuation criteria and commands. Runner/config: `s89_swin_transfer.py`, `s89_swin_transfer_v1.json`. CPU safety preflight: `results/short_screening/swin_transfer_v1/preflight.json`. **Prepared only, no GPU run or accuracy result.**
 

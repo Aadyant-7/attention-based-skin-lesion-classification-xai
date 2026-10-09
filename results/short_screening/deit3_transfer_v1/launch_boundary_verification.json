@@ -1,0 +1,9 @@
+{
+  "fresh_epoch20_refused": true,
+  "existing_pilot_or_same_boundary_not_advanced": true,
+  "status": "passed",
+  "cpu_only": true,
+  "effective_batch_size": 32,
+  "source_preflight_current": true,
+  "no_training_created": true
+}
