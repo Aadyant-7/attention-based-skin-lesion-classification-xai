@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "methods": {
+    "cbam_only_fixed_temperature": {
+      "status": "passed",
+      "samples": 1503,
+      "independent_formula_reconstructed": true,
+      "probabilities_finite_normalized": true,
+      "image_class_order_verified": true,
+      "sklearn_metrics_recomputed": true,
+      "class_scores_verified": true,
+      "raw_normalized_confusion_verified": true,
+      "changed_prediction_counts_verified": true,
+      "gained": 0,
+      "lost": 2,
+      "source_hashes_verified": true,
+      "figures_exist": true,
+      "test_loaded": false,
+      "gpu_used": false
+    },
+    "cbam_two_winner_probability_bag": {
+      "status": "passed",
+      "samples": 1503,
+      "independent_formula_reconstructed": true,
+      "probabilities_finite_normalized": true,
+      "image_class_order_verified": true,
+      "sklearn_metrics_recomputed": true,
+      "class_scores_verified": true,
+      "raw_normalized_confusion_verified": true,
+      "changed_prediction_counts_verified": true,
+      "gained": 0,
+      "lost": 1,
+      "source_hashes_verified": true,
+      "figures_exist": true,
+      "test_loaded": false,
+      "gpu_used": false
+    }
+  },
+  "original_rows_unchanged": 574,
+  "new_rows": 2,
+  "source_checkpoints_predictions_and_cache_hashes_verified": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

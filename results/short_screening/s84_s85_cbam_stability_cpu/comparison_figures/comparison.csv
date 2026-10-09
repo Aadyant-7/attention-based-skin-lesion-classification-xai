@@ -1,0 +1,4 @@
+display_name,accuracy,macro_f1
+S83 equal-six reference,0.9401197604790419,0.8952008370253541
+S84 cbam_only_fixed_temperature,0.9387890884896873,0.8938941929387786
+S85 cbam_two_winner_probability_bag,0.9394544244843646,0.8946219444834017

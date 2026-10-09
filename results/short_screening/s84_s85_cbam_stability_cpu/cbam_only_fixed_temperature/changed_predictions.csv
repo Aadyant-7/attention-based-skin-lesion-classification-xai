@@ -1,0 +1,3 @@
+image_id,true_class,reference_class,candidate_class,change
+ISIC_0032978,bkl,bkl,mel,lost
+ISIC_0029054,nv,nv,mel,lost

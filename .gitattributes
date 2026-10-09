@@ -62,3 +62,5 @@ research/short_screening/s82_cbam_addition_cpu.py -text
 research/short_screening/s83_cbam_f1_addition_cpu.py -text
 results/short_screening/s82_cbam_addition_cpu/** -text whitespace=cr-at-eol
 results/short_screening/s83_cbam_f1_addition_cpu/** -text whitespace=cr-at-eol
+research/short_screening/s84_s85_cbam_stability_cpu.py -text
+results/short_screening/s84_s85_cbam_stability_cpu/** -text whitespace=cr-at-eol

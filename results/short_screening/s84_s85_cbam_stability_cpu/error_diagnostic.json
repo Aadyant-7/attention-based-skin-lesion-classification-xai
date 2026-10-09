@@ -1,0 +1,46 @@
+{
+  "reference_errors": 90,
+  "all_six_wrong": 22,
+  "correct_member_count_on_errors": [
+    22,
+    28,
+    29,
+    10,
+    1,
+    0,
+    0
+  ],
+  "members": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "fixes_reference_errors": 20,
+      "mean_confidence_when_wrong": 0.8368454701267183
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "fixes_reference_errors": 21,
+      "mean_confidence_when_wrong": 0.8479743538758694
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "fixes_reference_errors": 18,
+      "mean_confidence_when_wrong": 0.8014583946413295
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "fixes_reference_errors": 18,
+      "mean_confidence_when_wrong": 0.8068851058996176
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "fixes_reference_errors": 21,
+      "mean_confidence_when_wrong": 0.7347157238460169
+    },
+    {
+      "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+      "fixes_reference_errors": 22,
+      "mean_confidence_when_wrong": 0.9240656895975096
+    }
+  ],
+  "caveat": "Label-based error diagnostic, not a deployable oracle score or routing rule"
+}

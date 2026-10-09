@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-09",
+  "reference": "S83 fixed equal-six, macro-F1-selected CBAM35",
+  "sources": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "86e3aaf6d5f923be1cec47b4f3b037d65d87bf29f379263c45b17e1c710cc983",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361"
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d"
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "e410278092fce3c6996d222d6aac896f090201dc1819b09e8f400b59c3ffa2ef",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9"
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5"
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+      "prediction_file": "results/structured_experiments/s03_efficientnet_b0_none_exploratory_seed42/validation_predictions.csv",
+      "prediction_sha256": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d"
+    },
+    {
+      "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+      "selector": "standalone_macro_f1",
+      "epoch": 35,
+      "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+      "prediction_file": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/macro_f1_selected/validation_predictions.csv",
+      "prediction_sha256": "9fe70681fea5272112fcf1e5babd21cec96bbf6db7b655489327b13166a9e4b8"
+    }
+  ],
+  "additional_source": {
+    "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+    "selector": "standalone_accuracy",
+    "epoch": 33,
+    "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+    "checkpoint_sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+    "prediction_file": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/validation_predictions.csv",
+    "prediction_sha256": "ef1f8236018c8c8738f7da1c121b4eb98271d14e7adbd1a30cb22b38775f349f"
+  },
+  "protocol": "exploratory_image_level",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "methods": [
+    {
+      "id": 84,
+      "name": "cbam_only_fixed_temperature",
+      "rule": "CBAM35 softmax(log(max(p,1e-12))/2); others unchanged; equal-six",
+      "question": "Does a fixed reduction of the newly added, unusually overconfident CBAM scores reduce domination by confident errors?",
+      "caveat": "Fixed confidence tempering, not a fitted or guaranteed calibration; earlier all-five fitted calibration was rejected"
+    },
+    {
+      "id": 85,
+      "name": "cbam_two_winner_probability_bag",
+      "rule": "Average CBAM33 and35 probabilities first; this remains one1/6 CBAM slot; other five1/6 each",
+      "question": "Does prediction averaging of the two already-saved standalone selection winners reduce CBAM late-epoch variance?",
+      "caveat": "Two selected checkpoint prediction bagging; not parameter averaging or a cyclic-learning-rate snapshot-ensemble reproduction"
+    }
+  ],
+  "comparisons": "Both against S83 and historical S53; report all, no follow-up temperatures/weights/epochs",
+  "gate": {
+    "minimum_net_correct": 8,
+    "minimum_accuracy_gain": 0.005,
+    "macro_f1_nondecreasing": true,
+    "melanoma_recall_nondecreasing": true
+  },
+  "scope": "Repeated exploratory validation after known test outcomes; no independent test or causal generalization claim",
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_epochs": 0
+}

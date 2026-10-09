@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "samples": 1503,
+  "independent_formula_reconstructed": true,
+  "probabilities_finite_normalized": true,
+  "image_class_order_verified": true,
+  "sklearn_metrics_recomputed": true,
+  "class_scores_verified": true,
+  "raw_normalized_confusion_verified": true,
+  "changed_prediction_counts_verified": true,
+  "gained": 0,
+  "lost": 2,
+  "source_hashes_verified": true,
+  "figures_exist": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

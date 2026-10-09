@@ -2,6 +2,10 @@
 
 All paths below are relative to the project root.
 
+## Latest completed checks: S84/S85
+
+Both rejected against S83: fixed CBAM-only temperature 2 **93.8789% /0.893894**; probability averaging CBAM checkpoints 33/35 within its one-sixth slot **93.9454% /0.894622**. Saved metrics, predictions/probabilities, class metrics, raw/normalized confusion matrices, PNG/PDF figures, changed identities, source/cache provenance and independent verification: `results/short_screening/s84_s85_cbam_stability_cpu/`. Interpretation: `research/short_screening/S84_S85_CBAM_STABILITY_CLOSEOUT.md`. CPU only; no new test or training run. S83 remains the highest observed exploratory validation result at **94.0120% /0.895201**.
+
 ## Latest numerical development leader: S82/S83
 
 Fixed equal-six keeps both Tiny and Tiny+CBAM. S82 accuracy-selected CBAM addition93.9454% /0.893190; S83 macro-F1-selected addition **94.0120% /0.895201** with unchanged82.0359% melanoma recall versus S53. S83 is the highest observed exploratory validation accuracy; its six net correct gains fall short of the unchanged material gate, so S53 remains the policy reference. Full metrics/predictions/probabilities, class/confusion/comparison PNG/PDF, gains/losses and hashes: `results/short_screening/s82_cbam_addition_cpu/`, `results/short_screening/s83_cbam_f1_addition_cpu/`. Decision: `research/short_screening/S82_S83_NEXT_DECISION.md`. No new GPU/test run; report writing paused by user.

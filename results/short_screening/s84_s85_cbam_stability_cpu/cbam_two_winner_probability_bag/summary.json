@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.9394544244843646,
+  "macro_f1": 0.8946219444834017,
+  "macro_precision": 0.9220765756451094,
+  "macro_recall": 0.873361755269616,
+  "gained": 0,
+  "lost": 1,
+  "net_correct": -1,
+  "correct": 1412,
+  "incorrect": 91,
+  "accuracy_gain_pp": -0.06653359946773296,
+  "melanoma_recall": 0.8143712574850299,
+  "nll": 0.1978339902952759,
+  "ece": 0.0236129354879223,
+  "material_gate_vs_s83": false,
+  "material_gate_vs_s53": false,
+  "decision": "reject_no_accuracy_gain"
+}

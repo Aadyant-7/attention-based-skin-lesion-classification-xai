@@ -1,0 +1,51 @@
+{
+  "status": "completed",
+  "reference_accuracy": 0.9401197604790419,
+  "reference_macro_f1": 0.8952008370253541,
+  "reference_melanoma_recall": 0.8203592814371258,
+  "reference_nll": 0.20065262076263854,
+  "reference_ece": 0.024042009200229215,
+  "results": {
+    "cbam_only_fixed_temperature": {
+      "accuracy": 0.9387890884896873,
+      "macro_f1": 0.8938941929387786,
+      "macro_precision": 0.920647900940272,
+      "macro_recall": 0.8732095223027738,
+      "gained": 0,
+      "lost": 2,
+      "net_correct": -2,
+      "correct": 1411,
+      "incorrect": 92,
+      "accuracy_gain_pp": -0.13306719893545482,
+      "melanoma_recall": 0.8203592814371258,
+      "nll": 0.20001779179367415,
+      "ece": 0.02388395293763655,
+      "material_gate_vs_s83": false,
+      "material_gate_vs_s53": false,
+      "decision": "reject_no_accuracy_gain"
+    },
+    "cbam_two_winner_probability_bag": {
+      "accuracy": 0.9394544244843646,
+      "macro_f1": 0.8946219444834017,
+      "macro_precision": 0.9220765756451094,
+      "macro_recall": 0.873361755269616,
+      "gained": 0,
+      "lost": 1,
+      "net_correct": -1,
+      "correct": 1412,
+      "incorrect": 91,
+      "accuracy_gain_pp": -0.06653359946773296,
+      "melanoma_recall": 0.8143712574850299,
+      "nll": 0.1978339902952759,
+      "ece": 0.0236129354879223,
+      "material_gate_vs_s83": false,
+      "material_gate_vs_s53": false,
+      "decision": "reject_no_accuracy_gain"
+    }
+  },
+  "source_hashes_unchanged": true,
+  "runtime_seconds": 8.758669000002556,
+  "decision": "Two-method budget complete; preserve all; no automatic weight/temperature/checkpoint sweep or test run",
+  "test_loaded": false,
+  "gpu_used": false
+}
