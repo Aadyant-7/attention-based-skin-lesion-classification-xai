@@ -1,0 +1,9 @@
+{
+  "fresh_epoch20_refused_before_model_creation": true,
+  "existing_pilot_not_restarted": true,
+  "resume_same_boundary_cannot_advance": true,
+  "status": "passed",
+  "cpu_only": true,
+  "no_training_outputs_or_checkpoints_created": true,
+  "preflight_current": true
+}

@@ -64,3 +64,8 @@ results/short_screening/s82_cbam_addition_cpu/** -text whitespace=cr-at-eol
 results/short_screening/s83_cbam_f1_addition_cpu/** -text whitespace=cr-at-eol
 research/short_screening/s84_s85_cbam_stability_cpu.py -text
 results/short_screening/s84_s85_cbam_stability_cpu/** -text whitespace=cr-at-eol
+research/short_screening/s86_s87_saved_member_addition.py -text
+research/short_screening/s89_swin_transfer.py -text whitespace=cr-at-eol
+research/short_screening/s89_swin_transfer_v1.json -text whitespace=cr-at-eol
+results/short_screening/s86_s87_saved_member_addition/** -text whitespace=cr-at-eol
+results/short_screening/swin_transfer_v1/** -text whitespace=cr-at-eol

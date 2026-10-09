@@ -1,0 +1,34 @@
+{
+  "id": 87,
+  "name": "add_s77",
+  "members": [
+    {
+      "name": "PanDerm Large frozen SVM",
+      "run": "s77_panderm_large_fp32_svm_exploratory_seed42",
+      "prediction_file": "results/short_screening/s77_panderm_large_transfer/large/validation_predictions.csv",
+      "prediction_sha256": "53b15a2d6318830a12e38a771d480dea9ef24bb6586c064ddec9e2a55ce3ca65",
+      "checkpoint": "checkpoints/short_screening/s77_panderm_large_transfer/large/svm.joblib",
+      "checkpoint_sha256": "acccecf1d5815b3b8f23b2814567dea4a423877bb114f134ae8683a0a0cab271",
+      "selector": "Existing fixed C10 weighted RBF SVM",
+      "precision": "saved FP32 feature/inference probabilities",
+      "accuracy": 0.8895542248835662,
+      "macro_f1": 0.8205747024004421,
+      "recovers_s83_errors": 30,
+      "errors_on_s83_correct": 106,
+      "melanoma_recall": 0.7365269461077845
+    }
+  ],
+  "accuracy": 0.9374584165003327,
+  "macro_f1": 0.8889048289326064,
+  "macro_precision": 0.9175243621203072,
+  "macro_recall": 0.8672657855029084,
+  "melanoma_recall": 0.8083832335329342,
+  "gained": 5,
+  "lost": 9,
+  "net_correct": -4,
+  "correct": 1409,
+  "incorrect": 94,
+  "directional_gate_passed": false,
+  "material_gate_passed": false,
+  "decision": "reject_no_balanced_gain"
+}

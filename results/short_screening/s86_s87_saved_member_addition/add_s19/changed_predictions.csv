@@ -1,0 +1,17 @@
+image_id,true_class,reference_class,candidate_class,change
+ISIC_0029301,bkl,nv,bkl,gained
+ISIC_0029413,bkl,bkl,mel,lost
+ISIC_0032978,bkl,bkl,mel,lost
+ISIC_0033414,bkl,bkl,nv,lost
+ISIC_0029522,bkl,bkl,nv,lost
+ISIC_0025389,bkl,bkl,akiec,lost
+ISIC_0032098,mel,mel,nv,lost
+ISIC_0032812,mel,mel,nv,lost
+ISIC_0032552,mel,nv,mel,gained
+ISIC_0025941,mel,nv,mel,gained
+ISIC_0026829,bcc,nv,bcc,gained
+ISIC_0027640,nv,nv,mel,lost
+ISIC_0029719,nv,mel,nv,gained
+ISIC_0029054,nv,nv,mel,lost
+ISIC_0024800,akiec,akiec,bkl,lost
+ISIC_0026984,akiec,bkl,akiec,gained

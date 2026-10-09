@@ -2,6 +2,11 @@
 
 All paths below are relative to the project root.
 
+## Latest saved-model expansion: S86/S87; next prepared Swin pilot
+
+- `results/short_screening/s86_s87_saved_member_addition/`: fixed candidate audit (MobileNet, ResNet101, ImageNet22k Tiny, frozen PanDerm Large), class-wise error complementarity and two rejected equal-seven additions. Both93.7458%; ResNet macro-F10.891351; PanDerm macro-F10.888905. Metrics, predictions/probabilities, raw/normalized confusion matrices, class scores, PNG/PDF/comparison figures, source hashes and independent verification. No conditional joint fusion was executed. Closeout: `research/short_screening/S86_S87_SAVED_ADDITION_CLOSEOUT.md`.
+- `research/short_screening/S89_SWIN_PROPOSAL.md`: exact isolated Swin-T model/recipe, epoch15 pilot, hard20 cap, continuation criteria and commands. Runner/config: `s89_swin_transfer.py`, `s89_swin_transfer_v1.json`. CPU safety preflight: `results/short_screening/swin_transfer_v1/preflight.json`. **Prepared only, no GPU run or accuracy result.**
+
 ## Latest completed checks: S84/S85
 
 Both rejected against S83: fixed CBAM-only temperature 2 **93.8789% /0.893894**; probability averaging CBAM checkpoints 33/35 within its one-sixth slot **93.9454% /0.894622**. Saved metrics, predictions/probabilities, class metrics, raw/normalized confusion matrices, PNG/PDF figures, changed identities, source/cache provenance and independent verification: `results/short_screening/s84_s85_cbam_stability_cpu/`. Interpretation: `research/short_screening/S84_S85_CBAM_STABILITY_CLOSEOUT.md`. CPU only; no new test or training run. S83 remains the highest observed exploratory validation result at **94.0120% /0.895201**.

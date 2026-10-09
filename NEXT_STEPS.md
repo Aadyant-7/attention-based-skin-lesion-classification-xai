@@ -1,4 +1,10 @@
-## Current status: report writing paused; S84/S85 CPU stability checks completed
+## Current status: report writing paused; saved-model expansion rejected; Swin pilot prepared
+
+9 October 2026: S86/S87 audited four unused saved candidates and added only the two recovering the most S83 errors. Equal-seven S83+ResNet101 and S83+PanDerm Large each reached **93.7458%**, losing4 net correct versus S83; macro-F1 was0.891351 and0.888905. Neither passed the directional gate, so no joint equal-eight or all-model fusion was run. Full evidence and independently recomputed verification are saved under `results/short_screening/s86_s87_saved_member_addition/`. S83 remains the numerical leader at **94.0120% /0.895201**. No test or GPU inference/training was used for these checks.
+
+**Next prepared experiment, awaiting explicit GPU approval:** S89 fully fine-tuned ImageNet Swin-T. Isolated runner/config, same exploratory cohort, weightedCE, FP32 validation; mandatory pilot pause15, hard20 cap and meaningful plateau counters. CPU pretrained forward/backward and split safety preflight are recorded in `results/short_screening/swin_transfer_v1/`. Proposal, gating rationale, estimated cost, start/monitor/recovery commands and artifact paths: `research/short_screening/S89_SWIN_PROPOSAL.md`. No training launched; existing frozen/historical training code remains unchanged. S88's conditional joint fusion was not executed.
+
+## Earlier completed CPU stability checks
 
 9 October 2026: two fixed CPU-only follow-ups did not improve S83. S84 softened only CBAM probabilities at temperature 2: **93.8789% /0.893894**, zero gained and two lost predictions. S85 averaged CBAM's saved accuracy/F1 winners within its existing one-sixth ensemble slot: **93.9454% /0.894622**, zero gained and one lost prediction. Reject both for accuracy development; retain S83 as the numerical leader (**94.0120% /0.895201**). All metrics, prediction probabilities, class scores, confusion/comparison PNG/PDF figures and registry rows are preserved. No training, new inference or test evaluation.
 

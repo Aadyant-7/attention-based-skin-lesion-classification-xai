@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "samples": 1503,
+  "formula_recomputed": true,
+  "sklearn_metrics_class_scores_confusion_verified": true,
+  "changed_prediction_counts_verified": true,
+  "source_hashes_verified": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

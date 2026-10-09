@@ -1,0 +1,34 @@
+{
+  "id": 86,
+  "name": "add_s19",
+  "members": [
+    {
+      "name": "ResNet101",
+      "run": "s19_resnet101_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s19_resnet101_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "7a5c5c370fa945fb2c51630a475ac182f5bcedac9d4ce34f5c95f19dbcb56bb6",
+      "checkpoint": "checkpoints/structured/s19_resnet101_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "d239da7ec96a9df6cf575b28c7135d7f7eeef9c9d18d2b664e6043d0bd07e2a2",
+      "selector": "Standalone macro-F1 winner",
+      "precision": "original saved AMP validation probabilities",
+      "accuracy": 0.8782435129740519,
+      "macro_f1": 0.8052728230168089,
+      "recovers_s83_errors": 31,
+      "errors_on_s83_correct": 124,
+      "melanoma_recall": 0.7544910179640718
+    }
+  ],
+  "accuracy": 0.9374584165003327,
+  "macro_f1": 0.891350864182055,
+  "macro_precision": 0.9152081468099865,
+  "macro_recall": 0.8724674072749445,
+  "melanoma_recall": 0.8203592814371258,
+  "gained": 6,
+  "lost": 10,
+  "net_correct": -4,
+  "correct": 1409,
+  "incorrect": 94,
+  "directional_gate_passed": false,
+  "material_gate_passed": false,
+  "decision": "reject_no_balanced_gain"
+}

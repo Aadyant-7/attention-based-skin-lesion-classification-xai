@@ -1,0 +1,143 @@
+{
+  "status": "completed",
+  "reference_accuracy": 0.9401197604790419,
+  "reference_macro_f1": 0.8952008370253541,
+  "audit": [
+    {
+      "name": "ResNet101",
+      "run": "s19_resnet101_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s19_resnet101_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "7a5c5c370fa945fb2c51630a475ac182f5bcedac9d4ce34f5c95f19dbcb56bb6",
+      "checkpoint": "checkpoints/structured/s19_resnet101_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "d239da7ec96a9df6cf575b28c7135d7f7eeef9c9d18d2b664e6043d0bd07e2a2",
+      "selector": "Standalone macro-F1 winner",
+      "precision": "original saved AMP validation probabilities",
+      "accuracy": 0.8782435129740519,
+      "macro_f1": 0.8052728230168089,
+      "recovers_s83_errors": 31,
+      "errors_on_s83_correct": 124,
+      "melanoma_recall": 0.7544910179640718
+    },
+    {
+      "name": "PanDerm Large frozen SVM",
+      "run": "s77_panderm_large_fp32_svm_exploratory_seed42",
+      "prediction_file": "results/short_screening/s77_panderm_large_transfer/large/validation_predictions.csv",
+      "prediction_sha256": "53b15a2d6318830a12e38a771d480dea9ef24bb6586c064ddec9e2a55ce3ca65",
+      "checkpoint": "checkpoints/short_screening/s77_panderm_large_transfer/large/svm.joblib",
+      "checkpoint_sha256": "acccecf1d5815b3b8f23b2814567dea4a423877bb114f134ae8683a0a0cab271",
+      "selector": "Existing fixed C10 weighted RBF SVM",
+      "precision": "saved FP32 feature/inference probabilities",
+      "accuracy": 0.8895542248835662,
+      "macro_f1": 0.8205747024004421,
+      "recovers_s83_errors": 30,
+      "errors_on_s83_correct": 106,
+      "melanoma_recall": 0.7365269461077845
+    },
+    {
+      "name": "MobileNetV3-Large",
+      "run": "s02_mobilenet_v3_large_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s02_mobilenet_v3_large_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "b38898e669d47dfd7d9b3a812c68d681ee26e79756286cdd62def1f13d1a6f4b",
+      "checkpoint": "checkpoints/structured/s02_mobilenet_v3_large_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "15fc0f3e41af72f78d7410fc8be4e15c6e4438442e2d873af936e34dff60031b",
+      "selector": "Standalone macro-F1 winner",
+      "precision": "original saved AMP validation probabilities",
+      "accuracy": 0.8602794411177644,
+      "macro_f1": 0.7861111676525011,
+      "recovers_s83_errors": 24,
+      "errors_on_s83_correct": 144,
+      "melanoma_recall": 0.6946107784431138
+    },
+    {
+      "name": "ConvNeXt-Tiny ImageNet22k",
+      "run": "s59_convnext_tiny_supervised22k_exploratory_seed42",
+      "prediction_file": "results/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "c91220b7e1af6ebc12ed6a2d8b3fd2d20312ea7ac5788c0d37dfec0faa586d6c",
+      "checkpoint": "checkpoints/short_screening/supervised22k_transfer_v1/s59_convnext_tiny_supervised22k_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5096c94d1aa11c80cde62ab8f83f4e93768fdd91ee0fe33a31ddfc4d6251eec6",
+      "selector": "Standalone macro-F1 winner",
+      "precision": "saved FP32 feature/inference probabilities",
+      "accuracy": 0.906187624750499,
+      "macro_f1": 0.8329744933935481,
+      "recovers_s83_errors": 22,
+      "errors_on_s83_correct": 73,
+      "melanoma_recall": 0.7844311377245509
+    }
+  ],
+  "results": [
+    {
+      "id": 86,
+      "name": "add_s19",
+      "members": [
+        {
+          "name": "ResNet101",
+          "run": "s19_resnet101_none_exploratory_seed42",
+          "prediction_file": "results/structured_experiments/s19_resnet101_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+          "prediction_sha256": "7a5c5c370fa945fb2c51630a475ac182f5bcedac9d4ce34f5c95f19dbcb56bb6",
+          "checkpoint": "checkpoints/structured/s19_resnet101_none_exploratory_seed42/best_macro_f1.pt",
+          "checkpoint_sha256": "d239da7ec96a9df6cf575b28c7135d7f7eeef9c9d18d2b664e6043d0bd07e2a2",
+          "selector": "Standalone macro-F1 winner",
+          "precision": "original saved AMP validation probabilities",
+          "accuracy": 0.8782435129740519,
+          "macro_f1": 0.8052728230168089,
+          "recovers_s83_errors": 31,
+          "errors_on_s83_correct": 124,
+          "melanoma_recall": 0.7544910179640718
+        }
+      ],
+      "accuracy": 0.9374584165003327,
+      "macro_f1": 0.891350864182055,
+      "macro_precision": 0.9152081468099865,
+      "macro_recall": 0.8724674072749445,
+      "melanoma_recall": 0.8203592814371258,
+      "gained": 6,
+      "lost": 10,
+      "net_correct": -4,
+      "correct": 1409,
+      "incorrect": 94,
+      "directional_gate_passed": false,
+      "material_gate_passed": false,
+      "decision": "reject_no_balanced_gain"
+    },
+    {
+      "id": 87,
+      "name": "add_s77",
+      "members": [
+        {
+          "name": "PanDerm Large frozen SVM",
+          "run": "s77_panderm_large_fp32_svm_exploratory_seed42",
+          "prediction_file": "results/short_screening/s77_panderm_large_transfer/large/validation_predictions.csv",
+          "prediction_sha256": "53b15a2d6318830a12e38a771d480dea9ef24bb6586c064ddec9e2a55ce3ca65",
+          "checkpoint": "checkpoints/short_screening/s77_panderm_large_transfer/large/svm.joblib",
+          "checkpoint_sha256": "acccecf1d5815b3b8f23b2814567dea4a423877bb114f134ae8683a0a0cab271",
+          "selector": "Existing fixed C10 weighted RBF SVM",
+          "precision": "saved FP32 feature/inference probabilities",
+          "accuracy": 0.8895542248835662,
+          "macro_f1": 0.8205747024004421,
+          "recovers_s83_errors": 30,
+          "errors_on_s83_correct": 106,
+          "melanoma_recall": 0.7365269461077845
+        }
+      ],
+      "accuracy": 0.9374584165003327,
+      "macro_f1": 0.8889048289326064,
+      "macro_precision": 0.9175243621203072,
+      "macro_recall": 0.8672657855029084,
+      "melanoma_recall": 0.8083832335329342,
+      "gained": 5,
+      "lost": 9,
+      "net_correct": -4,
+      "correct": 1409,
+      "incorrect": 94,
+      "directional_gate_passed": false,
+      "material_gate_passed": false,
+      "decision": "reject_no_balanced_gain"
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "test_loaded": false,
+  "gpu_used": false,
+  "runtime_seconds": 8.42455949995201,
+  "joint_run_performed": false,
+  "highest_observed_accuracy": 0.9401197604790419
+}
