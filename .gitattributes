@@ -56,3 +56,5 @@ results/short_screening/s77_panderm_large_transfer/** -text whitespace=cr-at-eol
 research/final_cbam_development/*.py -text
 research/configs/final_cbam_development/** -text
 results/final_cbam_development/** -text whitespace=cr-at-eol
+research/final_cbam_reporting/** -text
+results/final_cbam_reporting/** -text whitespace=cr-at-eol

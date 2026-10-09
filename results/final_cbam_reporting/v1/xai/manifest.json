@@ -1,0 +1,1246 @@
+{
+  "status": "completed",
+  "cases": [
+    {
+      "image_id": "ISIC_0024351",
+      "categories": [
+        "correct_mel"
+      ],
+      "true_class": "mel",
+      "predicted_class": "mel",
+      "cohort": "exploratory_validation",
+      "target_class": "mel",
+      "saved_confidence": 0.9759796857833862,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.9999998807907104,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.991932213306427,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9959730505943298,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.9907426238059998,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.9012507796287537,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.9759796857833862,
+      "max_probability_difference": 9.313225746154785e-09,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0024886",
+      "categories": [
+        "incorrect_mel"
+      ],
+      "true_class": "mel",
+      "predicted_class": "bkl",
+      "cohort": "exploratory_validation",
+      "target_class": "bkl",
+      "saved_confidence": 0.4365258812904358,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.019942443817853928,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.004545482341200113,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.817020058631897,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.9806098341941833,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.3605121374130249,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.43652600049972534,
+      "max_probability_difference": 2.384185791015625e-07,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0024710",
+      "categories": [
+        "correct_akiec"
+      ],
+      "true_class": "akiec",
+      "predicted_class": "akiec",
+      "cohort": "exploratory_validation",
+      "target_class": "akiec",
+      "saved_confidence": 0.628301739692688,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.9981568455696106,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.019166000187397003,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9788884520530701,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.21783830225467682,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.9274568557739258,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.6283012628555298,
+      "max_probability_difference": 4.76837158203125e-07,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0024511",
+      "categories": [
+        "incorrect_akiec"
+      ],
+      "true_class": "akiec",
+      "predicted_class": "bcc",
+      "cohort": "exploratory_validation",
+      "target_class": "bcc",
+      "saved_confidence": 0.3729425370693207,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.002684537786990404,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.0009156547021120787,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9109342694282532,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.8350555300712585,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.11512244492769241,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.3729424774646759,
+      "max_probability_difference": 2.086162567138672e-07,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0025128",
+      "categories": [
+        "melanoma_as_nv"
+      ],
+      "true_class": "mel",
+      "predicted_class": "nv",
+      "cohort": "exploratory_validation",
+      "target_class": "nv",
+      "saved_confidence": 0.4938036799430847,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.0002194076223531738,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.22027821838855743,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9872419834136963,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.9418405294418335,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.3194379508495331,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.49380359053611755,
+      "max_probability_difference": 8.940696716308594e-08,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0024595",
+      "categories": [
+        "representative_bcc"
+      ],
+      "true_class": "bcc",
+      "predicted_class": "bcc",
+      "cohort": "exploratory_validation",
+      "target_class": "bcc",
+      "saved_confidence": 0.998601257801056,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.9999984502792358,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.9999353885650635,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9993413090705872,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.9982165694236755,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.995514452457428,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.9986012578010559,
+      "max_probability_difference": 5.820766091346741e-10,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0024726",
+      "categories": [
+        "representative_bkl"
+      ],
+      "true_class": "bkl",
+      "predicted_class": "bkl",
+      "cohort": "exploratory_validation",
+      "target_class": "bkl",
+      "saved_confidence": 0.8875354528427124,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.9999997615814209,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.9997196793556213,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9994121789932251,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.4701072871685028,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.9684412479400635,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.8875360488891602,
+      "max_probability_difference": 6.034970283508301e-07,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0025668",
+      "categories": [
+        "representative_df"
+      ],
+      "true_class": "df",
+      "predicted_class": "df",
+      "cohort": "exploratory_validation",
+      "target_class": "df",
+      "saved_confidence": 0.7716215252876282,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.9999896287918091,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.158829003572464,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9753995537757874,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.7381322383880615,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.9857558608055115,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.7716212868690491,
+      "max_probability_difference": 2.384185791015625e-07,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0024308",
+      "categories": [
+        "representative_nv"
+      ],
+      "true_class": "nv",
+      "predicted_class": "nv",
+      "cohort": "exploratory_validation",
+      "target_class": "nv",
+      "saved_confidence": 0.9999791383743286,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 1.0,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.9999932050704956,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9999912977218628,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.9999982118606567,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.9999128580093384,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.9999791383743286,
+      "max_probability_difference": 6.730260793119669e-11,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    },
+    {
+      "image_id": "ISIC_0025677",
+      "categories": [
+        "representative_vasc"
+      ],
+      "true_class": "vasc",
+      "predicted_class": "vasc",
+      "cohort": "exploratory_validation",
+      "target_class": "vasc",
+      "saved_confidence": 0.99928617477417,
+      "branches": [
+        {
+          "model": "convnext_tiny",
+          "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt",
+          "sha256": "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+          "weight": 0.2,
+          "target_probability": 0.9999868869781494,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "convnext_small",
+          "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+          "weight": 0.2,
+          "target_probability": 0.9999260902404785,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            768,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "densenet201",
+          "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+          "weight": 0.2,
+          "target_probability": 0.9994589686393738,
+          "target_layer": "features.0.denseblock4",
+          "activation_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1920,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_v2_s",
+          "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+          "sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+          "weight": 0.2,
+          "target_probability": 0.9996260404586792,
+          "target_layer": "features.7",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        },
+        {
+          "model": "efficientnet_b0",
+          "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+          "sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+          "weight": 0.2,
+          "target_probability": 0.9974330067634583,
+          "target_layer": "features.8",
+          "activation_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "gradient_shape": [
+            1,
+            1280,
+            7,
+            7
+          ],
+          "degenerate_map": false
+        }
+      ],
+      "recomputed_confidence": 0.9992862939834595,
+      "max_probability_difference": 1.1920928955078125e-07,
+      "gradient_target": "actual 0.2-weighted ensemble predicted-class probability, branch derivative",
+      "composite_rule": "equal mean of per-branch normalized positive Grad-CAM maps; display summary only, not exact causal attribution",
+      "attention_note": "CBAM sigmoid weights are internal attention, not Grad-CAM or segmentation; maps do not prove clinical reasoning"
+    }
+  ],
+  "unavailable_categories": [],
+  "selection": "first lexicographic image ID per declared category; categories can share an image; no favorable-case selection",
+  "test_images_used": false,
+  "predictions_changed": false,
+  "member_checkpoint_hashes": [
+    "18bdf9c6237a4653c91fdd76bfa51dacb20c368a355e2692a57ca944ad66afc7",
+    "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+    "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+    "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+    "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c"
+  ]
+}

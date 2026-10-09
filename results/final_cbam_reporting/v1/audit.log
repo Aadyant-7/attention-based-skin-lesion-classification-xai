@@ -1,0 +1,33 @@
+2026-10-09 18:15:50,241 START fixed S80 audit; FP32 identity,1503 images/member,one model resident; no training/test tuning
+2026-10-09 18:15:53,970 convnext_tiny inference batch 1/94
+2026-10-09 18:15:59,979 convnext_tiny inference batch 30/94
+2026-10-09 18:16:06,651 convnext_tiny inference batch 60/94
+2026-10-09 18:16:13,419 convnext_tiny inference batch 90/94
+2026-10-09 18:16:15,834 SAVED convnext_tiny single pass;1503 probability vectors; peak memory 338MiB
+2026-10-09 18:16:17,297 convnext_small inference batch 1/94
+2026-10-09 18:16:25,388 convnext_small inference batch 30/94
+2026-10-09 18:16:34,846 convnext_small inference batch 60/94
+2026-10-09 18:16:44,268 convnext_small inference batch 90/94
+2026-10-09 18:16:45,377 SAVED convnext_small single pass;1503 probability vectors; peak memory 421MiB
+2026-10-09 18:16:46,861 densenet201 inference batch 1/94
+2026-10-09 18:16:54,868 densenet201 inference batch 30/94
+2026-10-09 18:17:03,003 densenet201 inference batch 60/94
+2026-10-09 18:17:11,529 densenet201 inference batch 90/94
+2026-10-09 18:17:12,696 SAVED densenet201 single pass;1503 probability vectors; peak memory 267MiB
+2026-10-09 18:17:13,797 efficientnet_v2_s inference batch 1/94
+2026-10-09 18:17:19,695 efficientnet_v2_s inference batch 30/94
+2026-10-09 18:17:26,285 efficientnet_v2_s inference batch 60/94
+2026-10-09 18:17:32,860 efficientnet_v2_s inference batch 90/94
+2026-10-09 18:17:33,800 SAVED efficientnet_v2_s single pass;1503 probability vectors; peak memory 222MiB
+2026-10-09 18:17:34,413 efficientnet_b0 inference batch 1/94
+2026-10-09 18:17:39,061 efficientnet_b0 inference batch 30/94
+2026-10-09 18:17:44,519 efficientnet_b0 inference batch 60/94
+2026-10-09 18:17:48,664 efficientnet_b0 inference batch 90/94
+2026-10-09 18:17:49,208 SAVED efficientnet_b0 single pass;1503 probability vectors; peak memory 218MiB
+2026-10-09 18:17:59,329 COMPLETED S80 audit accuracy=0.870925 macro-F1=0.801646; no method change
+2026-10-09 18:18:29,234 XAI branch completed convnext_tiny, cases=10
+2026-10-09 18:18:31,518 XAI branch completed convnext_small, cases=10
+2026-10-09 18:18:35,751 XAI branch completed densenet201, cases=10
+2026-10-09 18:18:37,791 XAI branch completed efficientnet_v2_s, cases=10
+2026-10-09 18:18:39,062 XAI branch completed efficientnet_b0, cases=10
+2026-10-09 18:18:50,396 COMPLETED validation XAI; cases=10; predictions unchanged

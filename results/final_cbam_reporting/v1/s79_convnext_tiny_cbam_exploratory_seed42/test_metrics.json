@@ -1,0 +1,133 @@
+{
+  "loss": 1.1222314834594727,
+  "accuracy": 0.8682634730538922,
+  "macro_precision": 0.8054182644837529,
+  "macro_recall": 0.8018124462423079,
+  "macro_f1": 0.8017749010524234,
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "confusion_matrix": [
+    [
+      36,
+      5,
+      4,
+      1,
+      2,
+      1,
+      0
+    ],
+    [
+      2,
+      65,
+      4,
+      1,
+      2,
+      4,
+      0
+    ],
+    [
+      6,
+      5,
+      117,
+      0,
+      17,
+      20,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      15,
+      0,
+      1,
+      0
+    ],
+    [
+      3,
+      1,
+      12,
+      0,
+      101,
+      51,
+      0
+    ],
+    [
+      1,
+      8,
+      10,
+      3,
+      31,
+      952,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      19
+    ]
+  ],
+  "per_class": {
+    "akiec": {
+      "precision": 0.7346938775510204,
+      "recall": 0.7346938775510204,
+      "f1": 0.7346938775510204,
+      "support": 49
+    },
+    "bcc": {
+      "precision": 0.7738095238095238,
+      "recall": 0.8333333333333334,
+      "f1": 0.8024691358024691,
+      "support": 78
+    },
+    "bkl": {
+      "precision": 0.7959183673469388,
+      "recall": 0.7090909090909091,
+      "f1": 0.75,
+      "support": 165
+    },
+    "df": {
+      "precision": 0.75,
+      "recall": 0.8823529411764706,
+      "f1": 0.8108108108108109,
+      "support": 17
+    },
+    "mel": {
+      "precision": 0.6601307189542484,
+      "recall": 0.6011904761904762,
+      "f1": 0.6292834890965732,
+      "support": 168
+    },
+    "nv": {
+      "precision": 0.9233753637245393,
+      "recall": 0.9472636815920398,
+      "f1": 0.9351669941060904,
+      "support": 1005
+    },
+    "vasc": {
+      "precision": 1.0,
+      "recall": 0.9047619047619048,
+      "f1": 0.95,
+      "support": 21
+    }
+  },
+  "correct": 1305,
+  "incorrect": 198,
+  "cohort_size": 1503,
+  "evaluation_split": "previously_evaluated_heldout_test",
+  "protocol": "exploratory_trained_postdevelopment_test_audit",
+  "pristine_first_test": false,
+  "loss_definition": "unweighted negative log likelihood with probability floor1e-12",
+  "weighted_f1": 0.8660271667473197
+}

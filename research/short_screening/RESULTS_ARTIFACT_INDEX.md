@@ -2,6 +2,10 @@
 
 All paths below are relative to the project root.
 
+## Final test audit, XAI and report tables
+
+`research/final_cbam_reporting/REPORTING_HANDOFF.md` indexes the completed fixed S80 post-development test audit87.0925% /0.801646, all-five validation Grad-CAM/actual CBAM maps and standalone/protocol comparison tables. Artifacts: `results/final_cbam_reporting/v1/`. Original S31 test evidence was preserved; this is not a new pristine first test. S80 validation93.3466% and retained S53 validation93.6128% remain separately labelled.
+
 ## Completed final CBAM package: S79/S80
 
 S79 standalone93.0140% /0.877434 at accuracy-selected epoch33; macro-F1 winner0.877708 at35. S80 fixed replacement ensemble93.3466% /0.877017, below retained S53. Closeout: `research/final_cbam_development/S79_S80_CLOSEOUT.md`. Full selected/final/ensemble metrics, predictions, probabilities, class/confusion/curve PNG/PDF, logs and verification: `results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/`. Local best/latest checkpoints: `checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/`. Recovery transparently recorded; no original-test evaluation.

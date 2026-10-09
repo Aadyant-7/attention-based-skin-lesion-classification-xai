@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "probability_files": [
+    "results/final_cbam_reporting/v1/s79_convnext_tiny_cbam_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_cbam_reporting/v1/s18_convnext_small_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_cbam_reporting/v1/s15_densenet201_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_cbam_reporting/v1/s10_efficientnet_v2_s_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_cbam_reporting/v1/s03_efficientnet_b0_none_exploratory_seed42/inference_probabilities_unscored.csv"
+  ],
+  "labels_used_during_inference": false,
+  "model_passes": 5,
+  "images_per_model": 1503,
+  "inference_seconds": 119.35601510002743
+}

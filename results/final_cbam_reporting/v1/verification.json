@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "test_packages": {
+    "s79_convnext_tiny_cbam_exploratory_seed42": {
+      "accuracy": 0.8682634730538922,
+      "macro_f1": 0.8017749010524234,
+      "correct": 1305
+    },
+    "s18_convnext_small_none_exploratory_seed42": {
+      "accuracy": 0.8483033932135728,
+      "macro_f1": 0.7489286801886569,
+      "correct": 1275
+    },
+    "s15_densenet201_none_exploratory_seed42": {
+      "accuracy": 0.8383233532934131,
+      "macro_f1": 0.7286887948155986,
+      "correct": 1260
+    },
+    "s10_efficientnet_v2_s_none_exploratory_seed42": {
+      "accuracy": 0.8356620093147039,
+      "macro_f1": 0.7568654039930217,
+      "correct": 1256
+    },
+    "s03_efficientnet_b0_none_exploratory_seed42": {
+      "accuracy": 0.8117099135063207,
+      "macro_f1": 0.686063516770753,
+      "correct": 1220
+    },
+    "ensemble": {
+      "accuracy": 0.8709248170326015,
+      "macro_f1": 0.8016455177968437,
+      "correct": 1309
+    }
+  },
+  "model_passes": 5,
+  "images_per_pass": 1503,
+  "original_test_artifacts_unchanged": true,
+  "original_test_report_unchanged": true,
+  "checkpoint_hashes_unchanged": true,
+  "test_training_image_and_lesion_overlap": 0,
+  "prior_registry_rows_unchanged": 571,
+  "new_record": "s81_s80_fixed_cbam_five_postdevelopment_test_audit_seed42",
+  "xai_cases": 10,
+  "xai_maps": 50,
+  "cbam_channel_count": 768,
+  "maximum_xai_probability_difference": 6.034970283508301e-07,
+  "xai_test_images_used": false,
+  "repeat_inference_protection_test": "passed",
+  "ensemble_gradient_semantics_test": "passed",
+  "test_rerun": false,
+  "training_run": false
+}

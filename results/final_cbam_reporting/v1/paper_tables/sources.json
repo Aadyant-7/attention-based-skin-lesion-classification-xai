@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "standalone_count": 9,
+  "protocol_rows": [
+    {
+      "display_name": "S53 retained equal-five (without added CBAM)",
+      "protocol": "Repeated exploratory image-level validation",
+      "accuracy": 0.936127744510978,
+      "macro_precision": 0.9157811848988903,
+      "macro_recall": 0.8656356053115845,
+      "macro_f1": 0.8868574111567237,
+      "source_metrics": "results/short_screening/s53_equal_five_b0_addition/validation_metrics.json",
+      "source_sha256": "559e360783e8ca412ac8cde32d8a3e314a79428b840692f611c4b45053e16630"
+    },
+    {
+      "display_name": "S80 CBAM-inclusive equal-five",
+      "protocol": "Repeated exploratory image-level validation",
+      "accuracy": 0.9334664005322688,
+      "macro_precision": 0.9132487874795914,
+      "macro_recall": 0.8496285043979375,
+      "macro_f1": 0.8770165094278121,
+      "source_metrics": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/fixed_ensemble/validation_metrics.json",
+      "source_sha256": "3d1e6de7c826bddbd18a22f66103870c78b06e91064b49e574e8d0e73cce26c2"
+    },
+    {
+      "display_name": "S80 fixed post-development test audit",
+      "protocol": "Previously evaluated held-out cohort; post-development descriptive audit",
+      "accuracy": 0.8709248170326015,
+      "macro_precision": 0.8143709263849592,
+      "macro_recall": 0.7950745861139868,
+      "macro_f1": 0.8016455177968437,
+      "source_metrics": "results/final_cbam_reporting/v1/ensemble/test_metrics.json",
+      "source_sha256": "8a23c05d974a34475264de73bd04a70617b014a7594d61e0f464b90d1362cbeb"
+    },
+    {
+      "display_name": "S31 original strict locked-test evaluation",
+      "protocol": "Original strict methodology; first evaluation preserved",
+      "accuracy": 0.867598137059215,
+      "macro_precision": 0.814009945830746,
+      "macro_recall": 0.7787235834587612,
+      "macro_f1": 0.7944726449893623,
+      "source_metrics": "results/final_locked_test/v1/ensemble/test_metrics.json",
+      "source_sha256": "f76c0ceec609abf1362d71101ebdf8f5db5c6180d8e5f079ba39fc0b221c4648"
+    }
+  ],
+  "test_tuning": false,
+  "xai_cases": 10
+}

@@ -1,6 +1,10 @@
-## Current status: S79/S80 completed; stopped for tonight
+## Current status: final CBAM audit/XAI/tables complete; writing next
 
-S79 ConvNeXt-Tiny+CBAM finished its 40-epoch cap: best accuracy93.0140% at33, best macro-F1 0.877708 at35; final92.6148% /0.873314. S80 fixed equal-five replacement reached93.3466% /0.877017, below retained S53 93.6128% /0.886857 (11 gained,15 lost). Checkpoints, all prediction/metric/figure packages, recovery disclosure and registry entries are verified. No next run is queued. See `research/final_cbam_development/S79_S80_CLOSEOUT.md`. Late validation fluctuated below the epoch33 accuracy record despite LR reduction; no extension was launched. Original test remains untouched by this development.
+S80 fixed five-model audit completed9October2026:87.0925% accuracy /0.801646 macro-F1 on the previously evaluated1503-image held-out cohort, versus93.3466% /0.877017 exploratory validation. Original S31 first-test artifacts remain unchanged. This post-development audit is explicitly distinguished from a pristine independent first test. No method change or new run follows the score.
+
+All-five Grad-CAM and actual CBAM attention completed for10 deterministic exploratory-validation cases, including correct/incorrect melanoma and akiec. Verification passed: six test packages,50 CAMs, probabilities/class/confusion metrics, original/source hashes and571 prior registry rows unchanged. Model-versus-accuracy tables, PNG/PDF figures and a focused reporting handoff are ready. Start at `research/final_cbam_reporting/REPORTING_HANDOFF.md`; private university/report references are in local Git-ignored `docs/private_reference/report_guidance_2026-10-09/`.
+
+S79 remains completed40epochs:93.0140% accuracy at33, best macro-F1 0.877708 at35. Retained non-CBAM S53 is93.6128% /0.886857 exploratory validation. Keep these claims separate. Current work is manuscript/report composition and layout after remaining user guidance; no training, weight search or further test inference is queued. Historical dated plans below are preserved, not launch instructions.
 
 ## Completed Phase 1 preparation
 

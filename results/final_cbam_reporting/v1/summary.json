@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "accuracy": 0.8709248170326015,
+  "macro_f1": 0.8016455177968437,
+  "macro_precision": 0.8143709263849592,
+  "macro_recall": 0.7950745861139868,
+  "weighted_f1": 0.8668974748264174,
+  "correct": 1309,
+  "incorrect": 194,
+  "melanoma_recall": 0.5714285714285714,
+  "akiec_recall": 0.6530612244897959,
+  "validation_accuracy": 0.9334664005322688,
+  "validation_macro_f1": 0.8770165094278121,
+  "test_minus_validation_pp": -6.2541583499667315,
+  "original_s31_test_accuracy": 0.867598137059215,
+  "test_minus_original_s31_pp": 0.3326679973386537,
+  "caveat": "Post-development audit of previously evaluated held-out cohort; different models/training from S31; not pristine first-and-only test",
+  "method_changed_after_audit": false,
+  "original_test_artifacts_unchanged": true,
+  "checkpoint_hashes_unchanged": true
+}

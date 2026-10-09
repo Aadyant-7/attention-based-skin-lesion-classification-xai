@@ -44,5 +44,6 @@ __pycache__/
 !results/short_screening/**/*.pdf
 !results/data_assisted/**/*.pdf
 !results/final_cbam_development/**/*.pdf
+!results/final_cbam_reporting/**/*.pdf
 *.lock
 !data/raw/.gitkeep
