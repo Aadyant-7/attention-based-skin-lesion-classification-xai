@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "samples": 1503,
+  "source_hashes_unchanged": true,
+  "metrics_recomputed": true,
+  "reference_reproduced": true,
+  "probabilities_finite_normalized": true,
+  "test_loaded": false,
+  "gpu_used": false,
+  "independent_closeout_verified": true,
+  "correct": 1413,
+  "incorrect": 90,
+  "six_probability_average_recomputed": true
+}

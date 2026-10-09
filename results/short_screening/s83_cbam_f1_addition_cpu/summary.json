@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "accuracy": 0.9401197604790419,
+  "macro_f1": 0.8952008370253541,
+  "macro_precision": 0.9223213602144419,
+  "macro_recall": 0.8742171872627725,
+  "gained": 12,
+  "lost": 6,
+  "net_correct": 6,
+  "accuracy_gain_pp": 0.39920159680638667,
+  "melanoma_recall": 0.8203592814371258,
+  "reference_melanoma_recall": 0.8203592814371258,
+  "s82_accuracy": 0.9394544244843646,
+  "s82_macro_f1": 0.8931896767769771,
+  "material_gate_passed": false,
+  "decision": "reject_no_material_gain",
+  "runtime_seconds": 6.5808858999516815,
+  "test_loaded": false,
+  "gpu_used": false
+}

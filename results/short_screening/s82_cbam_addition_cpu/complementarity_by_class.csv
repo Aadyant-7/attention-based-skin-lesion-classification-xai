@@ -1,0 +1,8 @@
+class_name,support,reference_correct,candidate_correct,gained,lost,cbam_fixes_reference_errors,reference_fixes_cbam_errors
+akiec,49,35,35,0,0,7,2
+bcc,77,75,73,0,2,0,6
+bkl,165,141,144,4,1,6,10
+df,17,13,14,1,0,2,0
+mel,167,137,135,3,5,12,18
+nv,1007,986,991,5,0,12,11
+vasc,21,20,20,0,0,0,1

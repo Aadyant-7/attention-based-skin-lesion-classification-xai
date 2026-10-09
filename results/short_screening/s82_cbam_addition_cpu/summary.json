@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "accuracy": 0.9394544244843646,
+  "macro_f1": 0.8931896767769771,
+  "reference_accuracy": 0.936127744510978,
+  "reference_macro_f1": 0.8868574111567237,
+  "gained": 13,
+  "lost": 8,
+  "net_correct": 5,
+  "accuracy_gain_pp": 0.3326679973386537,
+  "melanoma_recall": 0.8083832335329342,
+  "reference_melanoma_recall": 0.8203592814371258,
+  "material_gate_passed": false,
+  "cbam_fixes_reference_errors": 39,
+  "reference_fixes_cbam_errors": 48,
+  "decision": "reject_no_material_gain",
+  "runtime_seconds": 6.624398600019049,
+  "test_loaded": false,
+  "gpu_used": false,
+  "source_checkpoint_hashes_unchanged": true
+}

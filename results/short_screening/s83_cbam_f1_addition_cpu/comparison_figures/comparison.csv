@@ -1,0 +1,4 @@
+display_name,accuracy,macro_f1
+S53 equal-five reference,0.936127744510978,0.8868574111567237
+S82 added accuracy-selected CBAM,0.9394544244843646,0.8931896767769771
+S83 added macro-F1-selected CBAM,0.9401197604790419,0.8952008370253541

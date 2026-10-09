@@ -58,3 +58,7 @@ research/configs/final_cbam_development/** -text
 results/final_cbam_development/** -text whitespace=cr-at-eol
 research/final_cbam_reporting/** -text
 results/final_cbam_reporting/** -text whitespace=cr-at-eol
+research/short_screening/s82_cbam_addition_cpu.py -text
+research/short_screening/s83_cbam_f1_addition_cpu.py -text
+results/short_screening/s82_cbam_addition_cpu/** -text whitespace=cr-at-eol
+results/short_screening/s83_cbam_f1_addition_cpu/** -text whitespace=cr-at-eol

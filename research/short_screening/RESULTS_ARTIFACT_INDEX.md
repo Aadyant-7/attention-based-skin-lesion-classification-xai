@@ -2,6 +2,10 @@
 
 All paths below are relative to the project root.
 
+## Latest numerical development leader: S82/S83
+
+Fixed equal-six keeps both Tiny and Tiny+CBAM. S82 accuracy-selected CBAM addition93.9454% /0.893190; S83 macro-F1-selected addition **94.0120% /0.895201** with unchanged82.0359% melanoma recall versus S53. S83 is the highest observed exploratory validation accuracy; its six net correct gains fall short of the unchanged material gate, so S53 remains the policy reference. Full metrics/predictions/probabilities, class/confusion/comparison PNG/PDF, gains/losses and hashes: `results/short_screening/s82_cbam_addition_cpu/`, `results/short_screening/s83_cbam_f1_addition_cpu/`. Decision: `research/short_screening/S82_S83_NEXT_DECISION.md`. No new GPU/test run; report writing paused by user.
+
 ## Final test audit, XAI and report tables
 
 `research/final_cbam_reporting/REPORTING_HANDOFF.md` indexes the completed fixed S80 post-development test audit87.0925% /0.801646, all-five validation Grad-CAM/actual CBAM maps and standalone/protocol comparison tables. Artifacts: `results/final_cbam_reporting/v1/`. Original S31 test evidence was preserved; this is not a new pristine first test. S80 validation93.3466% and retained S53 validation93.6128% remain separately labelled.
