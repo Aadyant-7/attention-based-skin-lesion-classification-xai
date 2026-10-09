@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "epoch": 15,
+  "checkpoints": {
+    "best.pt": {
+      "status": "passed",
+      "epoch": 15,
+      "sha256": "10e13d51a988121bb1328260cc130697a2b958873af4cbb09666094e6f6a7d6c"
+    },
+    "best_macro_f1.pt": {
+      "status": "passed",
+      "epoch": 15,
+      "sha256": "10e13d51a988121bb1328260cc130697a2b958873af4cbb09666094e6f6a7d6c"
+    },
+    "latest.pt": {
+      "status": "passed",
+      "epoch": 15,
+      "sha256": "90271fbaa11ac02ceab9fa0000ed2d1d5efd654e2d51602854162ac600ec3731"
+    }
+  },
+  "metrics_predictions_confusion_figures_verified": true,
+  "source_config_sha256": "092de58ee2bc482b07d8a1568440358d85c012849ca0bc08d6f89dcdecb057e8",
+  "checkpoint_backup": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/pilot_epoch15",
+  "test_loaded": false,
+  "gpu_used": false,
+  "decision": "Continue unchanged through20: within0.5pp of same-stage S06, higher macroF1, best result after LR reduction",
+  "same_stage_s06_accuracy": 0.9115103127079176,
+  "same_stage_s06_macro_f1": 0.856052488987592,
+  "comparison_full_s06_accuracy": 0.9174983366600133,
+  "warning": "Weighted validation loss increased; more epochs are not guaranteed to improve accuracy."
+}

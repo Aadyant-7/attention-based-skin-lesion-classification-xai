@@ -1,0 +1,66 @@
+{
+  "preflight": {
+    "cpu_forward_backward": "passed",
+    "parameters": 27524737,
+    "train_images": 7009,
+    "val_images": 1503,
+    "source_url": "https://download.pytorch.org/models/swin_t-704ceda3.pth",
+    "pretrained_file": ".cache/torch/hub/checkpoints/swin_t-704ceda3.pth",
+    "pretrained_sha256": "704ceda373461b0a224fcdddd75cd2a5e9f8064512ed47adbddef7f343fd147b",
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "test_loaded": false,
+    "gpu_used": false,
+    "config_sha256": "092de58ee2bc482b07d8a1568440358d85c012849ca0bc08d6f89dcdecb057e8",
+    "fingerprints": {
+      "research/short_screening/s89_swin_transfer.py": "be4a283d687d6a7e9d0cb7551d040f3cb809c166081be78ce20d885f2de1b8fa",
+      "research/short_screening/s89_swin_transfer_v1.json": "092de58ee2bc482b07d8a1568440358d85c012849ca0bc08d6f89dcdecb057e8",
+      "research/short_screening/supervised22k_transfer.py": "21473d8b483d093179102a755df3e1142660becf0ee3c39c093a2bd721efa956",
+      "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+      "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+      "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+    },
+    "warning": "Two-sample CPU safety check is not an accuracy screen or evidence of future ensemble gain."
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "train_images": 7009,
+  "val_images": 1503,
+  "test_loaded": false,
+  "fingerprints": {
+    "research/short_screening/s89_swin_transfer.py": "be4a283d687d6a7e9d0cb7551d040f3cb809c166081be78ce20d885f2de1b8fa",
+    "research/short_screening/s89_swin_transfer_v1.json": "092de58ee2bc482b07d8a1568440358d85c012849ca0bc08d6f89dcdecb057e8",
+    "research/short_screening/supervised22k_transfer.py": "21473d8b483d093179102a755df3e1142660becf0ee3c39c093a2bd721efa956",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "runtime_versions": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1"
+  },
+  "pretrained_sha256": "704ceda373461b0a224fcdddd75cd2a5e9f8064512ed47adbddef7f343fd147b"
+}

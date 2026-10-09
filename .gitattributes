@@ -72,3 +72,8 @@ results/short_screening/swin_transfer_v1/** -text whitespace=cr-at-eol
 research/short_screening/s90_deit3_transfer.py -text whitespace=cr-at-eol
 research/short_screening/s90_deit3_transfer_v1.json -text whitespace=cr-at-eol
 results/short_screening/deit3_transfer_v1/** -text whitespace=cr-at-eol
+research/short_screening/s91_deit3_base_transfer.py -text whitespace=cr-at-eol
+research/short_screening/s91_deit3_base_transfer_v1.json -text whitespace=cr-at-eol
+research/short_screening/run_s89_s91_completion.py -text
+results/short_screening/deit3_base_transfer_v1/** -text whitespace=cr-at-eol
+results/short_screening/s89_s91_completion_v1/** -text whitespace=cr-at-eol

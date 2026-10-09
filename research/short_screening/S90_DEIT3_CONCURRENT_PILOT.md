@@ -1,5 +1,7 @@
 # S90: authorized concurrent DeiT III Small pilot
 
+**Superseded before GPU launch on9October2026.** The user requested a larger model and full20 window once Swin had finished its pilot. S90 is retained as CPU-verified preparation only, with no training or accuracy. Active plan: `S89_S91_FULL_WINDOW_PLAN.md`.
+
 9 October2026. The user explicitly requested one new useful model to train alongside the existing S89 Swin run. This authorizes this bounded launch; it does not authorize another queue, test evaluation or automatic continuation.
 
 ## Choice and research question

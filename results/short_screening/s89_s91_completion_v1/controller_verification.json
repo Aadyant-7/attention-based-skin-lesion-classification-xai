@@ -1,0 +1,10 @@
+{
+  "base_refuses_epoch15_boundary": true,
+  "base_full20_effective32_config": true,
+  "exactly_two_sequential_commands_resume_then_fresh20": true,
+  "failure_prevents_next_launch": true,
+  "completed_stages_not_restarted": true,
+  "status": "passed",
+  "cpu_only": true,
+  "no_training_started": true
+}
