@@ -1,0 +1,50 @@
+{
+  "master_pid": 24208,
+  "status": "completed",
+  "stages": [
+    {
+      "name": "S89 Swin completion",
+      "status": "completed",
+      "worker_pid": 25556,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-m",
+        "research.short_screening.s89_swin_transfer",
+        "--run",
+        "--stop-after-epoch",
+        "20",
+        "--resume"
+      ],
+      "resumed": true,
+      "checkpoint_before_sha256": "90271fbaa11ac02ceab9fa0000ed2d1d5efd654e2d51602854162ac600ec3731",
+      "epochs": 20,
+      "elapsed_seconds": 402.415887594223,
+      "best_accuracy": 0.9068529607451763,
+      "best_macro_f1": 0.8604477979012091
+    },
+    {
+      "name": "S91 DeiT III Base full20",
+      "status": "completed",
+      "worker_pid": 27168,
+      "command": [
+        "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-m",
+        "research.short_screening.s91_deit3_base_transfer",
+        "--run",
+        "--stop-after-epoch",
+        "20"
+      ],
+      "resumed": false,
+      "checkpoint_before_sha256": null,
+      "epochs": 20,
+      "elapsed_seconds": 2332.1930298805237,
+      "best_accuracy": 0.9055222887558216,
+      "best_macro_f1": 0.8505353400880974
+    }
+  ],
+  "test_loaded": false
+}

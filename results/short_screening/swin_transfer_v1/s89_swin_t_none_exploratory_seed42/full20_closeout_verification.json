@@ -1,0 +1,61 @@
+{
+  "name": "S89 Swin-T",
+  "run": "s89_swin_t_none_exploratory_seed42",
+  "status": "passed",
+  "epochs": 20,
+  "selections": [
+    {
+      "selector": "accuracy",
+      "epoch": 15,
+      "checkpoint": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "10e13d51a988121bb1328260cc130697a2b958873af4cbb09666094e6f6a7d6c",
+      "prediction_file": "results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/validation_predictions.csv",
+      "prediction_sha256": "00bc67c633179d9593f928e351a4b8aab3a9de06abf3c9a62e232753eb85c606",
+      "accuracy": 0.9068529607451763,
+      "macro_precision": 0.9101249883151795,
+      "macro_recall": 0.8195864087451751,
+      "macro_f1": 0.8604477979012091,
+      "melanoma_recall": 0.6646706586826348,
+      "akiec_recall": 0.7346938775510204
+    },
+    {
+      "selector": "macro_f1",
+      "epoch": 15,
+      "checkpoint": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "10e13d51a988121bb1328260cc130697a2b958873af4cbb09666094e6f6a7d6c",
+      "prediction_file": "results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "00bc67c633179d9593f928e351a4b8aab3a9de06abf3c9a62e232753eb85c606",
+      "accuracy": 0.9068529607451763,
+      "macro_precision": 0.9101249883151795,
+      "macro_recall": 0.8195864087451751,
+      "macro_f1": 0.8604477979012091,
+      "melanoma_recall": 0.6646706586826348,
+      "akiec_recall": 0.7346938775510204
+    },
+    {
+      "selector": "final",
+      "epoch": 20,
+      "checkpoint": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/latest.pt",
+      "checkpoint_sha256": "c2b52ba962276a76c5ae91f57093f0c557f735c9c2b017ed01b3a35830a8f13f",
+      "prediction_file": "results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/validation_predictions_latest.csv",
+      "prediction_sha256": "ec41e52d0dab2f0c9a02f349a6b5a45aef23be94fe1d0f17c3bf9bdf9f02714c",
+      "accuracy": 0.8995342648037259,
+      "macro_precision": 0.877801076099335,
+      "macro_recall": 0.8231100271825326,
+      "macro_f1": 0.8480495443350403,
+      "melanoma_recall": 0.7664670658682635,
+      "akiec_recall": 0.7346938775510204
+    }
+  ],
+  "runtime_seconds": 2460.3172504999675,
+  "skipped_amp_optimizer_updates": 5,
+  "peak_allocated_vram_mb": 1639.6591796875,
+  "checkpoint_model_optimizer_tensors_finite": true,
+  "strict_model_state_loading": true,
+  "predictions_match_selected_checkpoints": true,
+  "metrics_confusions_class_scores_recomputed": true,
+  "curves_present": true,
+  "code_config_fingerprints_unchanged": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

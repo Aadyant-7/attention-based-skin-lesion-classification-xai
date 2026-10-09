@@ -1,0 +1,21 @@
+{
+  "id": 92,
+  "name": "swin",
+  "new_members": [
+    "s89_swin_t_none_exploratory_seed42"
+  ],
+  "accuracy": 0.9367930805056554,
+  "macro_precision": 0.924950489278953,
+  "macro_recall": 0.8607992919683404,
+  "macro_f1": 0.8892308249421325,
+  "melanoma_recall": 0.8083832335329342,
+  "akiec_recall": 0.7551020408163265,
+  "gained": 8,
+  "lost": 13,
+  "net_correct": -5,
+  "correct": 1408,
+  "incorrect": 95,
+  "balanced_gain": false,
+  "material_gate_passed": false,
+  "decision": "reject_no_balanced_gain"
+}

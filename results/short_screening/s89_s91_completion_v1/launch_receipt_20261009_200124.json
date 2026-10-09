@@ -1,0 +1,12 @@
+{
+  "launcher_pid": 13012,
+  "started_at": "2026-10-09T20:01:24.8342920+05:30",
+  "command": "python -B -u -m research.short_screening.run_s89_s91_completion",
+  "stages": [
+    "S89 resume15 to20",
+    "S91 DeiT III Base full20"
+  ],
+  "stdout": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\short_screening\\s89_s91_completion_v1\\launcher_stdout_20261009_200124.log",
+  "stderr": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\short_screening\\s89_s91_completion_v1\\launcher_stderr_20261009_200124.log",
+  "test_evaluation": false
+}

@@ -1,0 +1,67 @@
+{
+  "preflight": {
+    "cpu_forward_backward": "passed",
+    "parameters": 85821703,
+    "train_images": 7009,
+    "val_images": 1503,
+    "source_url": "https://dl.fbaipublicfiles.com/deit/deit_3_base_224_21k.pth",
+    "pretrained_file": ".cache/torch/hub/checkpoints/deit_3_base_224_21k.pth",
+    "pretrained_sha256": "79d5ec0c4ae73dc6810aff18efae8cb50de05523d16ca904bf42975a65b39271",
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "test_loaded": false,
+    "gpu_used": false,
+    "config_sha256": "1a948bd5e807f630b1fe0ac86064c0cb067ce1e1e9642cce8a1f9d71228152ed",
+    "fingerprints": {
+      "research/short_screening/s91_deit3_base_transfer.py": "de8e6d8c99526f4333b198bb3e6e1948c7902b5fd0d779509c2107d7f210ee04",
+      "research/short_screening/s91_deit3_base_transfer_v1.json": "1a948bd5e807f630b1fe0ac86064c0cb067ce1e1e9642cce8a1f9d71228152ed",
+      "research/short_screening/supervised22k_transfer.py": "21473d8b483d093179102a755df3e1142660becf0ee3c39c093a2bd721efa956",
+      "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+      "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+      "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+    },
+    "warning": "Two-sample CPU safety check is not an accuracy screen or evidence of future ensemble gain."
+  },
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "train_images": 7009,
+  "val_images": 1503,
+  "test_loaded": false,
+  "fingerprints": {
+    "research/short_screening/s91_deit3_base_transfer.py": "de8e6d8c99526f4333b198bb3e6e1948c7902b5fd0d779509c2107d7f210ee04",
+    "research/short_screening/s91_deit3_base_transfer_v1.json": "1a948bd5e807f630b1fe0ac86064c0cb067ce1e1e9642cce8a1f9d71228152ed",
+    "research/short_screening/supervised22k_transfer.py": "21473d8b483d093179102a755df3e1142660becf0ee3c39c093a2bd721efa956",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "runtime_versions": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1",
+    "timm": "0.9.16"
+  },
+  "pretrained_sha256": "79d5ec0c4ae73dc6810aff18efae8cb50de05523d16ca904bf42975a65b39271"
+}

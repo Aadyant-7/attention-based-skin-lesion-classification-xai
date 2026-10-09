@@ -1,0 +1,22 @@
+{
+  "id": 94,
+  "name": "both",
+  "new_members": [
+    "s89_swin_t_none_exploratory_seed42",
+    "s91_deit3_base_none_exploratory_seed42"
+  ],
+  "accuracy": 0.9341317365269461,
+  "macro_precision": 0.9281460625305255,
+  "macro_recall": 0.8589188883091138,
+  "macro_f1": 0.8899861131123672,
+  "melanoma_recall": 0.7724550898203593,
+  "akiec_recall": 0.7551020408163265,
+  "gained": 8,
+  "lost": 17,
+  "net_correct": -9,
+  "correct": 1404,
+  "incorrect": 99,
+  "balanced_gain": false,
+  "material_gate_passed": false,
+  "decision": "reject_no_balanced_gain"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "samples": 1503,
+  "saved_probabilities_formula_reproduced": true,
+  "cohort_alignment_verified": true,
+  "metrics_class_scores_confusions_recomputed": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

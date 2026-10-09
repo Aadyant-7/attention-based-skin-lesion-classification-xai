@@ -1,0 +1,61 @@
+{
+  "name": "S91 DeiT III Base",
+  "run": "s91_deit3_base_none_exploratory_seed42",
+  "status": "passed",
+  "epochs": 20,
+  "selections": [
+    {
+      "selector": "accuracy",
+      "epoch": 13,
+      "checkpoint": "checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "0474ccb143e8df8e8494242bb8a5514997f2c4f0ce0d14dfd67f9663a013ae08",
+      "prediction_file": "results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/validation_predictions.csv",
+      "prediction_sha256": "77041da158368d76dabacb76edde339a38f0794535c5f16853aecb0feaaf6403",
+      "accuracy": 0.9055222887558216,
+      "macro_precision": 0.8886158696063592,
+      "macro_recall": 0.7982226272651777,
+      "macro_f1": 0.8359860227220602,
+      "melanoma_recall": 0.688622754491018,
+      "akiec_recall": 0.673469387755102
+    },
+    {
+      "selector": "macro_f1",
+      "epoch": 17,
+      "checkpoint": "checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "4bd242e37b75667f64155eb806ba410e20759dcc6de4629937397f770df44b9b",
+      "prediction_file": "results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "182e899b1b43ae98f39edd1192e08d9429c9a3a7e6e0f044b7ec4ffdc141808e",
+      "accuracy": 0.9055222887558216,
+      "macro_precision": 0.879042430367831,
+      "macro_recall": 0.8268308649692232,
+      "macro_f1": 0.8505353400880974,
+      "melanoma_recall": 0.6646706586826348,
+      "akiec_recall": 0.7551020408163265
+    },
+    {
+      "selector": "final",
+      "epoch": 20,
+      "checkpoint": "checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/latest.pt",
+      "checkpoint_sha256": "783e8b49af98b5eb86bc19a9452606830d9bd860929b2600571c5c4e1c2141de",
+      "prediction_file": "results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/validation_predictions_latest.csv",
+      "prediction_sha256": "5bf6d09c7c0d2e22b5c329502563649e158805b0cbc4df0a9c45cff00e77ab68",
+      "accuracy": 0.8962075848303394,
+      "macro_precision": 0.8662625366687163,
+      "macro_recall": 0.8028590847418406,
+      "macro_f1": 0.831388494040415,
+      "melanoma_recall": 0.6347305389221557,
+      "akiec_recall": 0.7142857142857143
+    }
+  ],
+  "runtime_seconds": 2323.9175144999754,
+  "skipped_amp_optimizer_updates": 3,
+  "peak_allocated_vram_mb": 1896.2041015625,
+  "checkpoint_model_optimizer_tensors_finite": true,
+  "strict_model_state_loading": true,
+  "predictions_match_selected_checkpoints": true,
+  "metrics_confusions_class_scores_recomputed": true,
+  "curves_present": true,
+  "code_config_fingerprints_unchanged": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

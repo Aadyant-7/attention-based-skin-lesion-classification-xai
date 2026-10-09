@@ -1,4 +1,12 @@
-## Current status: report writing paused; saved-model expansion rejected; Swin pilot prepared
+## Current status: S89/S91 completed20; fixed transformer additions rejected
+
+9 October 2026 closeout: S89 Swin-T best90.6853% /0.860448 at15; its remaining five epochs did not improve the best. S91 DeiT III Base best90.5522% at13 (tied17), macro-F1 best0.850535 at17. Both completed20 and all accuracy/F1/final checkpoints and prediction packages were independently verified. S90 Small was superseded before training.
+
+Three bounded CPU-only equal-probability additions used existing standalone macro-F1 winners: S92 S83+Swin93.6793% /0.889231 (8gained/13lost), S93 S83+DeiT93.6793% /0.889811 (7/12), S94 S83+both93.4132% /0.889986 (8/17). All lost net correct predictions and reduced melanoma recall. Retain S83 **94.0120% /0.895201** as the numerical exploratory leader. The transformers do recover some errors individually, but their actual equal-weight fusion does not improve this ensemble. No weighting search or extension beyond20 was performed; no next GPU run is queued. Report writing remains paused.
+
+Full closeout: `research/short_screening/S89_S91_TRANSFORMER_CLOSEOUT.md`; complete comparison/class diagnostics/changed image IDs/PNG/PDF metrics packages: `results/short_screening/s92_s94_transformer_addition_cpu/`. Individual training folders and checkpoints remain unchanged except for normal completion through20; original Swin epoch15 snapshots are preserved. No new test scoring or training was performed during closeout. These are repeatedly selected exploratory validation results, not test results.
+
+## Historical launch plans (superseded by completed results above)
 
 Latest9October decision: S89 pilot15 passed its continuation gate (**90.6853% /0.860448**, both best at15 after LR reduction). Epoch15 results and all three checkpoints were independently verified and copied into `pilot_epoch15/` snapshot folders before any resume. Continue unchanged to20. User superseded the unlaunched S90 Small plan with a larger model/full20 window: **S91 DeiT III Base ImageNet22k->1k**, full fine-tuning, microbatch4×accumulation8=effective32, sequential after Swin exits. Exact two-stage commands/resources/artifact/recovery paths: `research/short_screening/S89_S91_FULL_WINDOW_PLAN.md`. No automatic30 epochs, third model, ensemble or test scoring. Live master state: `results/short_screening/s89_s91_completion_v1/`. Static notes do not imply either stage has finished.
 

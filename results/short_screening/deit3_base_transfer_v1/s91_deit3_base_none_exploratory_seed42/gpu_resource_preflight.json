@@ -1,0 +1,9 @@
+{
+  "free_vram_mb": 7096.0,
+  "total_vram_mb": 8187.5,
+  "microbatch": 4,
+  "accumulation": 8,
+  "effective_batch_size": 32,
+  "per_process_memory_fraction": 0.85,
+  "sequential_after_s89": true
+}

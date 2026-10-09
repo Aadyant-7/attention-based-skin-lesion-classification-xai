@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "samples": 1503,
+  "sklearn_metrics_reproduced": true,
+  "class_metrics_changed_identities_verified": true,
+  "lr_history_matches_training": true,
+  "all_historical_registry_rows_preserved_except_authorized_s89_completion": true,
+  "publication_figures_present_and_comparison_visually_checked": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

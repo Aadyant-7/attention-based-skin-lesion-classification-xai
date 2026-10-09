@@ -1,0 +1,37 @@
+{
+  "candidates": [
+    {
+      "name": "S89 Swin-T",
+      "run": "s89_swin_t_none_exploratory_seed42",
+      "checkpoint": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "10e13d51a988121bb1328260cc130697a2b958873af4cbb09666094e6f6a7d6c",
+      "prediction_file": "results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "00bc67c633179d9593f928e351a4b8aab3a9de06abf3c9a62e232753eb85c606",
+      "epoch": 15,
+      "selector": "Standalone macro-F1 winner; earliest maximum",
+      "accuracy": 0.9068529607451763,
+      "macro_f1": 0.8604477979012091,
+      "recovers_s83_errors": 31,
+      "errors_on_s83_correct": 81,
+      "shares_s83_errors": 59,
+      "melanoma_recall": 0.6646706586826348
+    },
+    {
+      "name": "S91 DeiT III Base",
+      "run": "s91_deit3_base_none_exploratory_seed42",
+      "checkpoint": "checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "4bd242e37b75667f64155eb806ba410e20759dcc6de4629937397f770df44b9b",
+      "prediction_file": "results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "182e899b1b43ae98f39edd1192e08d9429c9a3a7e6e0f044b7ec4ffdc141808e",
+      "epoch": 17,
+      "selector": "Standalone macro-F1 winner; earliest maximum",
+      "accuracy": 0.9055222887558216,
+      "macro_f1": 0.8505353400880974,
+      "recovers_s83_errors": 27,
+      "errors_on_s83_correct": 79,
+      "shares_s83_errors": 63,
+      "melanoma_recall": 0.6646706586826348
+    }
+  ],
+  "oracle_warning": "Standalone recovered errors are diagnostics. The union of correct answers is not deployable ensemble performance."
+}

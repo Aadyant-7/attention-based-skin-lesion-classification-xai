@@ -2,7 +2,15 @@
 
 All paths below are relative to the project root.
 
-## Latest saved-model expansion: S86/S87; next prepared Swin pilot
+## Latest completed: S89/S91 full20 and S92–S94 transformer additions
+
+- `research/short_screening/S89_S91_TRANSFORMER_CLOSEOUT.md`: final standalone results, best epochs, actual recovered/lost predictions and interpretation.
+- `results/short_screening/s92_s94_transformer_addition_cpu/`: fixed three-fusion plan with source hashes, standalone/class complementarity, changed predictions, scores, probabilities, raw/normalized confusion matrices and PNG/PDF comparisons. Equal-seven Swin and DeiT additions both93.6793%; equal-eight joint addition93.4132%. All worse than retained S83 **94.0120% /0.895201**.
+- `results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/`: completed20, best90.6853% /0.860448 at15; best-accuracy/F1/final predictions, metrics, class matrices and training curves. `full20_closeout_verification.json` verifies all three checkpoints; immutable original `pilot_epoch15/` evidence remains available. Local checkpoints: `checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/`.
+- `results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/`: completed20, best accuracy90.5522% at13 (tied17), best macro-F10.850535 at17; same full reporting and verification package. Local checkpoints: `checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/`.
+- `results/short_screening/s89_s91_completion_v1/`: completed orchestration state, plan and original launch receipt. S90 Small was superseded before training. No new test scoring or GPU work in closeout; no subsequent training queued.
+
+## Historical preparation notes (completed/superseded above)
 
 **Latest amendment:** S89 verified epoch15 score90.6853% /0.860448 and immutable pilot/checkpoint snapshots before continuing to20. S90 Small was never launched and is superseded. S91 is the larger DeiT III Base full20 run, sequential after Swin; plan `research/short_screening/S89_S91_FULL_WINDOW_PLAN.md`. Master logs/state: `results/short_screening/s89_s91_completion_v1/`; Base outputs: `results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/`; Base checkpoints: `checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/`. No new test or ensemble score.
 

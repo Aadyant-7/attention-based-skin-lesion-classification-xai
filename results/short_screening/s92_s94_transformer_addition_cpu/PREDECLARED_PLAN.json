@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-09",
+  "question": "Do the two newly trained transformer members recover S83 errors without losing previous correct predictions?",
+  "reference_file": "results/short_screening/s83_cbam_f1_addition_cpu/validation_predictions.csv",
+  "reference_sha256": "9aece30ca72513610ac62ef0c615b558d91b11e99beca5e1edae6e1b631267dc",
+  "original_six_sources": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "86e3aaf6d5f923be1cec47b4f3b037d65d87bf29f379263c45b17e1c710cc983",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361"
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d"
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "e410278092fce3c6996d222d6aac896f090201dc1819b09e8f400b59c3ffa2ef",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9"
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5"
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+      "prediction_file": "results/structured_experiments/s03_efficientnet_b0_none_exploratory_seed42/validation_predictions.csv",
+      "prediction_sha256": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d"
+    },
+    {
+      "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+      "selector": "earliest standalone macro-F1 maximum",
+      "epoch": 35,
+      "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+      "prediction_file": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/macro_f1_selected/validation_predictions.csv",
+      "prediction_sha256": "9fe70681fea5272112fcf1e5babd21cec96bbf6db7b655489327b13166a9e4b8"
+    }
+  ],
+  "sources": [
+    {
+      "name": "S89 Swin-T",
+      "run": "s89_swin_t_none_exploratory_seed42",
+      "checkpoint": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "10e13d51a988121bb1328260cc130697a2b958873af4cbb09666094e6f6a7d6c",
+      "prediction_file": "results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "00bc67c633179d9593f928e351a4b8aab3a9de06abf3c9a62e232753eb85c606",
+      "epoch": 15,
+      "selector": "Standalone macro-F1 winner; earliest maximum"
+    },
+    {
+      "name": "S91 DeiT III Base",
+      "run": "s91_deit3_base_none_exploratory_seed42",
+      "checkpoint": "checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "4bd242e37b75667f64155eb806ba410e20759dcc6de4629937397f770df44b9b",
+      "prediction_file": "results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "182e899b1b43ae98f39edd1192e08d9429c9a3a7e6e0f044b7ec4ffdc141808e",
+      "epoch": 17,
+      "selector": "Standalone macro-F1 winner; earliest maximum"
+    }
+  ],
+  "protocol": "exploratory_image_level",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "selection_rule": "Use each already selected standalone macro-F1 winner; no checkpoint, weight, temperature or subset sweep.",
+  "jobs": [
+    {
+      "id": 92,
+      "name": "swin",
+      "new_members": [
+        0
+      ],
+      "equal_member_weights": [
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285
+      ]
+    },
+    {
+      "id": 93,
+      "name": "deit_base",
+      "new_members": [
+        1
+      ],
+      "equal_member_weights": [
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285
+      ]
+    },
+    {
+      "id": 94,
+      "name": "both",
+      "new_members": [
+        0,
+        1
+      ],
+      "equal_member_weights": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ]
+    }
+  ],
+  "arithmetic": "(6*S83_saved_FP32_mean + each selected saved_FP32_member) / total_members; CPU float64 arithmetic from saved CSV probabilities",
+  "material_gate": {
+    "minimum_net_correct": 8,
+    "minimum_accuracy_gain": 0.005,
+    "macro_f1_nondecreasing": true,
+    "melanoma_recall_nondecreasing": true
+  },
+  "maximum_fusions": 3,
+  "test_loaded": false,
+  "gpu_used": false,
+  "training_epochs": 0,
+  "caveat": "Repeated exploratory image-level validation selection, after prior held-out outcomes were known; not independent confirmation or a test score. Same cohort, but native architecture, pretraining and training recipe details differ. No new training, inference, weight or checkpoint search."
+}

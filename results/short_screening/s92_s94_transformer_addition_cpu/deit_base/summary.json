@@ -1,0 +1,21 @@
+{
+  "id": 93,
+  "name": "deit_base",
+  "new_members": [
+    "s91_deit3_base_none_exploratory_seed42"
+  ],
+  "accuracy": 0.9367930805056554,
+  "macro_precision": 0.9123534904184867,
+  "macro_recall": 0.8706021135320802,
+  "macro_f1": 0.8898114248018618,
+  "melanoma_recall": 0.7964071856287425,
+  "akiec_recall": 0.7551020408163265,
+  "gained": 7,
+  "lost": 12,
+  "net_correct": -5,
+  "correct": 1408,
+  "incorrect": 95,
+  "balanced_gain": false,
+  "material_gate_passed": false,
+  "decision": "reject_no_balanced_gain"
+}

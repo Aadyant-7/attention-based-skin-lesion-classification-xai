@@ -1,0 +1,30 @@
+{
+  "stages": [
+    {
+      "name": "S89 Swin completion",
+      "module": "research.short_screening.s89_swin_transfer",
+      "config": "research/short_screening/s89_swin_transfer_v1.json",
+      "result": "results/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42",
+      "checkpoint": "checkpoints/short_screening/swin_transfer_v1/s89_swin_t_none_exploratory_seed42",
+      "preflight": "results/short_screening/swin_transfer_v1/preflight.json",
+      "config_sha256": "092de58ee2bc482b07d8a1568440358d85c012849ca0bc08d6f89dcdecb057e8",
+      "preflight_sha256": "f6db422c56d123d8db99ced49e130d19d0cac97c67b80c95b9233b48c17aeffe"
+    },
+    {
+      "name": "S91 DeiT III Base full20",
+      "module": "research.short_screening.s91_deit3_base_transfer",
+      "config": "research/short_screening/s91_deit3_base_transfer_v1.json",
+      "result": "results/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42",
+      "checkpoint": "checkpoints/short_screening/deit3_base_transfer_v1/s91_deit3_base_none_exploratory_seed42",
+      "preflight": "results/short_screening/deit3_base_transfer_v1/preflight.json",
+      "config_sha256": "1a948bd5e807f630b1fe0ac86064c0cb067ce1e1e9642cce8a1f9d71228152ed",
+      "preflight_sha256": "9cb4224a5fb54c285e52c6a659c18466afc3c18e43ca2508a9adb6a5d72fd12d"
+    }
+  ],
+  "maximum_epochs_each": 20,
+  "sequential": true,
+  "test_loaded": false,
+  "no_s90_small_training": true,
+  "no_ensembles": true,
+  "no_automatic_extension": true
+}

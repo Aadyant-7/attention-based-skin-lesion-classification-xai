@@ -1,6 +1,6 @@
 {
-  "status": "pilot_complete",
-  "pid": 33560,
-  "committed_epoch": 15,
-  "stop_reason": "authorized_epoch15_pilot_boundary"
+  "status": "completed",
+  "pid": 17248,
+  "committed_epoch": 20,
+  "stop_reason": "hard20_epoch_cap"
 }
