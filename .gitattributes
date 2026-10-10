@@ -87,3 +87,6 @@ results/short_screening/s96_convnext_replacement_cpu/** -text whitespace=cr-at-e
 research/short_screening/s97_final_convnext_warmstart.py -text whitespace=cr-at-eol
 research/short_screening/s97_final_convnext_warmstart_v1.json -text whitespace=cr-at-eol
 results/short_screening/final_convnext_warmstart_v1/** -text whitespace=cr-at-eol
+research/short_screening/s98_final_warmstart_closeout_cpu.py -text whitespace=cr-at-eol
+results/short_screening/s98_final_warmstart_replacement_cpu/** -text whitespace=cr-at-eol
+results/final_exploratory_freeze/** -text whitespace=cr-at-eol

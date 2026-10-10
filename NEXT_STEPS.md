@@ -1,3 +1,11 @@
+## Current final decision: retain S83; S97/S98 closed
+
+10 October2026. S97 completed51 cumulative epochs (33 inherited+18 new) with no improvement: both winners remain parent33 at93.013972% /0.877434398. One fixed S98 replacement reached93.945442% /0.893189677 (2 gained,3 lost vsS83), reproducing known S82; reject replacement. **Final numerical-best ensemble remains original S83:94.011976% /0.895200837**, exact equal-six FP32 identity fusion. No more GPU training/validation searches are planned. No new test inference occurred.
+
+Final method/results/remaining steps: `research/FINAL_EXPLORATORY_ENSEMBLE.md`. Exact checkpoint hashes/epochs/weights: `results/final_exploratory_freeze/v1/frozen_method.json`. S97 package: `results/short_screening/final_convnext_warmstart_v1/s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42/`. S98 comparison: `results/short_screening/s98_final_warmstart_replacement_cpu/`. A later explicitly approved original-test evaluation is a repeated post-development audit, not another first independent test.
+
+## Historical preparation and results below (superseded by final decision above)
+
 ## Current status: S95/S96 closed out; S97 prepared, pending GPU approval
 
 10 October 2026. S95 completed 20 epochs: best **91.616766% / 0.859747988 macro-F1**, both at epoch 17; final epoch 20 **90.618762% / 0.841268972**. Stronger weight decay did not improve the historical ConvNeXt-Tiny control. The one fixed S96 equal-six replacement reached **93.213573% / 0.874849189**, gaining 3 correct predictions and losing 15 versus S83. Reject that replacement. All saved checkpoints, results and historical registry evidence remain preserved. Closeout: `research/short_screening/S95_S96_REGULARIZATION_CLOSEOUT.md`; ensemble artifacts: `results/short_screening/s96_convnext_replacement_cpu/`.

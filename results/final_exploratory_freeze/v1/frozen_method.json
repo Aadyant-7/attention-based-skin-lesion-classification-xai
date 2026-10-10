@@ -1,0 +1,159 @@
+{
+  "status": "frozen_pending_test_audit_approval",
+  "source_experiment": "s83_cbam_f1_addition_equal_six_exploratory_seed42",
+  "protocol": "exploratory_image_level",
+  "split_manifest": "data/splits/exploratory/image_level_dev_v1.csv",
+  "split_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "validation_metrics": "results/short_screening/s83_cbam_f1_addition_cpu/validation_metrics.json",
+  "validation_predictions": "results/short_screening/s83_cbam_f1_addition_cpu/validation_predictions.csv",
+  "validation_prediction_sha256": "9aece30ca72513610ac62ef0c615b558d91b11e99beca5e1edae6e1b631267dc",
+  "validation_accuracy": 0.9401197604790419,
+  "validation_macro_f1": 0.8952008370253541,
+  "sources": [
+    {
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "86e3aaf6d5f923be1cec47b4f3b037d65d87bf29f379263c45b17e1c710cc983",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361",
+      "epoch": 18,
+      "model": "convnext_tiny",
+      "pretrained_weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+      "weight": 0.16666666666666666,
+      "selection": "macro_f1"
+    },
+    {
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s18_convnext_small_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "2c76af2082626cab8c5cf71927fbaff8bc8f8439bfd8165e2f0aa1dc5f8e39c6",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+      "epoch": 17,
+      "model": "convnext_small",
+      "pretrained_weights": "ConvNeXt_Small_Weights.IMAGENET1K_V1",
+      "weight": 0.16666666666666666,
+      "selection": "macro_f1"
+    },
+    {
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s15_densenet201_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "e410278092fce3c6996d222d6aac896f090201dc1819b09e8f400b59c3ffa2ef",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+      "epoch": 14,
+      "model": "densenet201",
+      "pretrained_weights": "DenseNet201_Weights.IMAGENET1K_V1",
+      "weight": 0.16666666666666666,
+      "selection": "macro_f1"
+    },
+    {
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "prediction_file": "results/structured_experiments/s10_efficientnet_v2_s_none_exploratory_seed42/validation_predictions_macro_f1.csv",
+      "prediction_sha256": "29a69d2c2d73a5f98b49567e109e3e4aad12a08bc2fc340873fa367c56829a7c",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+      "epoch": 15,
+      "model": "efficientnet_v2_s",
+      "pretrained_weights": "EfficientNet_V2_S_Weights.IMAGENET1K_V1",
+      "weight": 0.16666666666666666,
+      "selection": "macro_f1"
+    },
+    {
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+      "prediction_file": "results/structured_experiments/s03_efficientnet_b0_none_exploratory_seed42/validation_predictions.csv",
+      "prediction_sha256": "1b99115472a2ac045e1447ed62b1352f15ab9dac27ef676d824208c9fd95245d",
+      "epoch": 20,
+      "model": "efficientnet_b0",
+      "pretrained_weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+      "weight": 0.16666666666666666,
+      "selection": "accuracy"
+    },
+    {
+      "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+      "selector": "earliest standalone macro-F1 maximum",
+      "epoch": 35,
+      "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+      "prediction_file": "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/macro_f1_selected/validation_predictions.csv",
+      "prediction_sha256": "9fe70681fea5272112fcf1e5babd21cec96bbf6db7b655489327b13166a9e4b8",
+      "model": "convnext_tiny",
+      "pretrained_weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+      "weight": 0.16666666666666666,
+      "selection": "macro_f1"
+    }
+  ],
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "image_size": 224,
+  "preprocessing": "PIL RGB; square224 bilinear antialias; ImageNet normalization",
+  "normalization_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalization_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "inference_precision": "FP32",
+  "views": [
+    "identity"
+  ],
+  "tf32": false,
+  "weights": [
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666
+  ],
+  "probability_fusion": "Arithmetic mean of six FP32 softmax probability vectors; argmax in frozen class order",
+  "fp32_validation_cache_provenance": [
+    {
+      "path": ".cache/s76_trained_feature_fusion/s06_convnext_tiny_none_exploratory_seed42_val.npz",
+      "sha256": "67233626dd733301bd78f53d31a4a17079ba43f107de25ce27dc4d7d1d84dae6",
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s18_convnext_small_none_exploratory_seed42_val.npz",
+      "sha256": "4c8dc183fcf13e0c4d41b3db25045fe32072265939733435efb49b67e472d66a",
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s15_densenet201_none_exploratory_seed42_val.npz",
+      "sha256": "be3b8e8dc60da981ed37bfe16878a14189695b8f7363832d48f77d7327c4cc3e",
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s10_efficientnet_v2_s_none_exploratory_seed42_val.npz",
+      "sha256": "d452acb5df751ab6c87e1d8562011676a679902a3ea91c4536bbb7e9912626dd",
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "split": "val"
+    },
+    {
+      "path": ".cache/s76_trained_feature_fusion/s03_efficientnet_b0_none_exploratory_seed42_val.npz",
+      "sha256": "3c08751cb39da220af38c794729909d03466335ab8d44f511daf48949feac875",
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "split": "val"
+    }
+  ],
+  "no_further_training_or_validation_search": true,
+  "test_loaded": false,
+  "test_evaluation_launched": false,
+  "future_test_role": "Repeated post-development audit of a previously evaluated cohort; not first independent test",
+  "xai_role": "Post-hoc explanations; no prediction correction or accuracy increase"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "accuracy": 0.9394544244843646,
+  "macro_precision": 0.92020565385166,
+  "macro_recall": 0.8719242505990541,
+  "macro_f1": 0.8931896767769771,
+  "gained": 2,
+  "lost": 3,
+  "net_correct": -1,
+  "inherited_winner": true,
+  "reproduces_existing_s82": true,
+  "decision": "retain_S83_no_improvement",
+  "test_loaded": false,
+  "gpu_used": false,
+  "runtime_seconds": 5.614568099961616
+}

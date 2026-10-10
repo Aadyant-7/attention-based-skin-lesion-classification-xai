@@ -1,0 +1,8 @@
+{
+  "helper": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\short_screening\\final_convnext_warmstart_v1\\recovery_20261010T092614Z\\resume_hidden.ps1",
+  "incident": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\short_screening\\final_convnext_warmstart_v1\\recovery_20261010T092614Z",
+  "stdout": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\short_screening\\final_convnext_warmstart_v1\\recovery_20261010T092614Z\\stdout.log",
+  "stderr": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\results\\short_screening\\final_convnext_warmstart_v1\\recovery_20261010T092614Z\\stderr.log",
+  "run": "s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42",
+  "last_committed_epoch": 33
+}

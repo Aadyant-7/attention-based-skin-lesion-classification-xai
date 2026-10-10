@@ -1,0 +1,6 @@
+image_id,true_class,reference_class,candidate_class,change
+ISIC_0025389,bkl,bkl,akiec,lost
+ISIC_0025316,mel,mel,nv,lost
+ISIC_0028051,mel,mel,nv,lost
+ISIC_0027235,nv,mel,nv,gained
+ISIC_0025179,nv,bkl,nv,gained

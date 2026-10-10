@@ -1,0 +1,33 @@
+{
+  "status": "running",
+  "pid": 27972,
+  "committed_epoch": 33,
+  "inherited_epochs": 33,
+  "new_epochs": 0,
+  "meaningful_stopping": {
+    "references": {
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8774343983529919
+    },
+    "last_improvement_epochs": {
+      "accuracy": 33,
+      "macro_f1": 33
+    },
+    "last_meaningful_epoch": 33,
+    "stale": 0,
+    "lr_reduction_epochs": [
+      25
+    ],
+    "lr_settled": true,
+    "flat_or_declining": false,
+    "stop": false,
+    "reason": "running",
+    "child_lr_reduction_epochs": [],
+    "child_lr_settled": false
+  },
+  "checkpoint_created": true,
+  "first_update_confirmed": false,
+  "test_loaded": false,
+  "training_precision": "amp_fp16",
+  "validation_precision": "fp32"
+}

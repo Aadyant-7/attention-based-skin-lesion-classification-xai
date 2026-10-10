@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-10-10T09:26:15.184942+00:00",
+  "original_pid": 27972,
+  "original_process_exists": false,
+  "last_log_time_local": "2026-10-10 14:40:52",
+  "last_logged_update": "epoch34 update25/219",
+  "last_committed_epoch": 33,
+  "optimizer_updates_committed": 0,
+  "resume_checkpoint": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\short_screening\\final_convnext_warmstart_v1\\s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42\\latest.pt",
+  "resume_checkpoint_sha256": "fa956607c2c10cd8d2611a60c89690c14decd7192fd3c426a42e4c1fc5dbf014",
+  "exact_termination_cause": "Unestablished: no caught Python failure/traceback; no matching Windows crash event returned",
+  "recovery": "Same-config full-state epoch33 resume; replay only partial epoch34",
+  "training_recipe_changed": false,
+  "test_loaded": false,
+  "preserved_checkpoint_snapshot": "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\checkpoints\\short_screening\\final_convnext_warmstart_v1\\s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42\\recovery_snapshots\\recovery_20261010T092614Z\\latest.pt",
+  "preserved_checkpoint_snapshot_sha256": "fa956607c2c10cd8d2611a60c89690c14decd7192fd3c426a42e4c1fc5dbf014"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "pid": 21032,
+  "committed_epoch": 51,
+  "inherited_epochs": 33,
+  "new_epochs": 18,
+  "meaningful_stopping": {
+    "references": {
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8774343983529919
+    },
+    "last_improvement_epochs": {
+      "accuracy": 33,
+      "macro_f1": 33
+    },
+    "last_meaningful_epoch": 33,
+    "stale": 18,
+    "lr_reduction_epochs": [
+      25,
+      37,
+      41,
+      45,
+      49
+    ],
+    "lr_settled": true,
+    "flat_or_declining": false,
+    "stop": true,
+    "reason": "meaningful_patience_exhausted",
+    "child_lr_reduction_epochs": [
+      37,
+      41,
+      45,
+      49
+    ],
+    "child_lr_settled": true
+  },
+  "checkpoint_created": true,
+  "first_update_confirmed": true,
+  "test_loaded": false,
+  "training_precision": "amp_fp16",
+  "validation_precision": "fp32"
+}

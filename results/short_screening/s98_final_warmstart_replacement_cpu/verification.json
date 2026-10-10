@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "reference_reproduced": true,
+  "sources_hash_verified": true,
+  "known_s82_confusion_reproduced": true,
+  "samples": 1503,
+  "saved_metrics_recomputed": true,
+  "test_loaded": false,
+  "gpu_used": false
+}

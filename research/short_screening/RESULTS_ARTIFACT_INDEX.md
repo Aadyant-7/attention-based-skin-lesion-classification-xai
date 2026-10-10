@@ -1,3 +1,11 @@
+## Final ensemble frozen after S97/S98
+
+10 October2026. S97 completed51 cumulative epochs (33 inherited+18 new) with no improvement: both winners remain parent33 at93.013972% /0.877434398. One fixed S98 replacement reached93.945442% /0.893189677 (2 gained,3 lost vsS83), reproducing known S82; reject replacement. **Final numerical-best ensemble remains original S83:94.011976% /0.895200837**, exact equal-six FP32 identity fusion. No more GPU training/validation searches are planned. No new test inference occurred.
+
+Final method/results/remaining steps: `research/FINAL_EXPLORATORY_ENSEMBLE.md`. Exact checkpoint hashes/epochs/weights: `results/final_exploratory_freeze/v1/frozen_method.json`. S97 package: `results/short_screening/final_convnext_warmstart_v1/s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42/`. S98 comparison: `results/short_screening/s98_final_warmstart_replacement_cpu/`. A later explicitly approved original-test evaluation is a repeated post-development audit, not another first independent test.
+
+## Historical preparation and results below (superseded by final decision above)
+
 # Saved scores and graphs: quick index
 
 All paths below are relative to the project root.

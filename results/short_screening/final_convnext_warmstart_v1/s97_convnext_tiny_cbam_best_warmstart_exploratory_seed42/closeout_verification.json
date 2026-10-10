@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verification": "Independent read-only CPU checkpoint/artifact audit plus fixed-fusion reconstruction",
+  "total_branch_epochs": 51,
+  "inherited_epochs": 33,
+  "new_epochs": 18,
+  "selected_winners_inherited": true,
+  "new_only_best_accuracy_epoch": 41,
+  "new_only_best_accuracy": 0.9268130405854956,
+  "new_only_best_f1_epoch": 49,
+  "new_only_best_macro_f1": 0.8759616558583213,
+  "best_latest_model_state_finite_and_strict_loading": true,
+  "latest_full_recovery_payload_valid": true,
+  "parent_hashes_preserved": true,
+  "predictions_metrics_class_confusion_probabilities_reconciled": true,
+  "figures_present": true,
+  "amp_skipped_updates": 1,
+  "test_loaded": false,
+  "gpu_used": false
+}

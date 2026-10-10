@@ -1,0 +1,45 @@
+[
+  {
+    "epoch": 43,
+    "effective_batch": 115,
+    "image_ids": [
+      "ISIC_0026501",
+      "ISIC_0033289",
+      "ISIC_0024839",
+      "ISIC_0028674",
+      "ISIC_0030048",
+      "ISIC_0028220",
+      "ISIC_0031247",
+      "ISIC_0033628",
+      "ISIC_0025983",
+      "ISIC_0027350",
+      "ISIC_0033621",
+      "ISIC_0028650",
+      "ISIC_0033225",
+      "ISIC_0033047",
+      "ISIC_0027238",
+      "ISIC_0027867",
+      "ISIC_0025024",
+      "ISIC_0032409",
+      "ISIC_0029458",
+      "ISIC_0024857",
+      "ISIC_0031920",
+      "ISIC_0032983",
+      "ISIC_0024547",
+      "ISIC_0029397",
+      "ISIC_0032666",
+      "ISIC_0027496",
+      "ISIC_0026828",
+      "ISIC_0031418",
+      "ISIC_0032852",
+      "ISIC_0029249",
+      "ISIC_0028668",
+      "ISIC_0025206"
+    ],
+    "scale_before": 2048.0,
+    "scale_after": 1024.0,
+    "nonfinite_gradient_parameters": [
+      "features.1.0.block.0.bias"
+    ]
+  }
+]
