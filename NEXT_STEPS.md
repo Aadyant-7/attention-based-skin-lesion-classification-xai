@@ -1,3 +1,16 @@
+## Final S83 test audit completed
+
+10 October 2026. Frozen S83 equal-six FP32 identity test audit completed: **87.558217% accuracy / 0.807031200 macro-F1**, macro precision 0.814039202, macro recall 0.805563868, weighted-F1 0.872134817. Correct 1,316/1,503; incorrect 187. Melanoma recall 58.333333%; akiec recall 71.428571%. Exploratory validation 94.011976% / 0.895200837 did not transfer at the same level: accuracy drop 6.453759 percentage points, F1 drop 0.088169637. No method changes follow the audit.
+
+This is a repeated post-development audit of the previously evaluated cohort, not a first independent test. Exact frozen checkpoints, receipts, zero development/test image+lesion overlap verification, standalone scores from the same six passes, all class metrics, prediction probabilities and PNG/PDF figures are saved. Prior S31/S81 evidence remains unchanged. Performance experiments are finished; next work is exact-method Grad-CAM/XAI, final figures/tables and report/paper writing.
+
+- Report: `research/FINAL_S83_TEST_AUDIT.md`.
+- Final metrics/predictions/class/confusion figures: `results/final_exploratory_test_audit/v1/ensemble/`.
+- Source verification, member packages and comparisons: `results/final_exploratory_test_audit/v1/`.
+- Frozen checkpoint method: `results/final_exploratory_freeze/v1/frozen_method.json`; completed state: sibling `audit_status.json`.
+
+## Historical status and plans below (superseded by completed audit above)
+
 ## Current final decision: retain S83; S97/S98 closed
 
 10 October2026. S97 completed51 cumulative epochs (33 inherited+18 new) with no improvement: both winners remain parent33 at93.013972% /0.877434398. One fixed S98 replacement reached93.945442% /0.893189677 (2 gained,3 lost vsS83), reproducing known S82; reject replacement. **Final numerical-best ensemble remains original S83:94.011976% /0.895200837**, exact equal-six FP32 identity fusion. No more GPU training/validation searches are planned. No new test inference occurred.

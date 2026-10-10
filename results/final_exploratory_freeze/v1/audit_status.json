@@ -1,0 +1,15 @@
+{
+  "status": "completed_performance_work_finished",
+  "method": "S83 frozen equal-six",
+  "freeze_manifest_unchanged": true,
+  "freeze_sha256": "8b9d2125aedfe69f2aecc2d401ac0add580bd00a6f1b0b60a13d6e806f667e6b",
+  "audit_results": "results/final_exploratory_test_audit/v1",
+  "test_accuracy": 0.8755821689953427,
+  "test_macro_f1": 0.8070312001292939,
+  "no_further_training_or_test_tuning": true,
+  "next_work": [
+    "exact_method_GradCAM_XAI",
+    "final_figures_tables",
+    "report_paper_writing"
+  ]
+}

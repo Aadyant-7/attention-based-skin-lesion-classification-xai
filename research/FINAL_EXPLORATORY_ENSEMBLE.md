@@ -1,6 +1,6 @@
 # Final exploratory ensemble: S83 frozen
 
-10 October2026. The final bounded S97 warm-start is closed. No more training or validation searches are planned. Test inference has not been launched for this six-model method.
+10 October2026. The final bounded S97 warm-start is closed. No more training or validation searches are planned. Its final test audit is now complete:87.558217% /0.807031200 macro-F1. See `research/FINAL_S83_TEST_AUDIT.md`; method unchanged afterward.
 
 ## Last experiment and decision
 
@@ -34,7 +34,7 @@ Observed exploratory validation result: **94.011976% accuracy /0.895200837 macro
 - `results/short_screening/s98_final_warmstart_replacement_cpu/`: the single fixed comparison, source hashes, predictions, class/confusion/comparison figures and verification.
 - `results/master_experiment_registry.csv`: completed experiment index; historical rows/checkpoints retained.
 
-## Remaining plan
+## Original pre-audit plan (audit step now completed)
 
 Freeze these exact six checkpoints and rules → after explicit user approval, one final recorded audit on the previously evaluated1503-image original test cohort → save final test metrics/predictions/class scores/confusion figures without any subsequent method tuning → Grad-CAM/XAI for the exact frozen components → final tables/report/paper.
 

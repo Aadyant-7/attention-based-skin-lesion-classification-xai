@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-10T10:28:53.714133+00:00",
+  "independent_reviewer": "s83_test_protocol_review",
+  "verification_mode": "CPU reconstruction from saved probabilities; no additional inference",
+  "packages_verified": 7,
+  "six_frozen_float32_probability_mean_reproduced": true,
+  "metrics_predictions_probabilities_per_class_raw_normalized_confusion_verified": true,
+  "png_pdf_figures_verified": true,
+  "checkpoint_hashes_unchanged": true,
+  "prior_S31_and_S81_artifacts_unchanged": true,
+  "historical_registry_rows_unchanged": 587,
+  "only_new_registry_entry": "s99_s83_frozen_six_postdevelopment_test_audit_seed42",
+  "summary_sha256": "c450302aa94e131c878cb84cf11156e2e47b14221c70532a6a1b4ef103ff2814",
+  "accuracy": 0.8755821689953427,
+  "macro_f1": 0.8070312001292939,
+  "correct": 1316,
+  "incorrect": 187,
+  "largest_confusion": {
+    "true": "mel",
+    "predicted": "nv",
+    "count": 53
+  },
+  "cohort_previously_evaluated": true,
+  "no_method_change_after_test": true
+}

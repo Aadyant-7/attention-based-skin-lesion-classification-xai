@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "model_passes": 6,
+  "images_per_model": 1503,
+  "labels_used_during_inference": false,
+  "probability_files": [
+    "results/final_exploratory_test_audit/v1/s06_convnext_tiny_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_exploratory_test_audit/v1/s18_convnext_small_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_exploratory_test_audit/v1/s15_densenet201_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_exploratory_test_audit/v1/s10_efficientnet_v2_s_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_exploratory_test_audit/v1/s03_efficientnet_b0_none_exploratory_seed42/inference_probabilities_unscored.csv",
+    "results/final_exploratory_test_audit/v1/s79_convnext_tiny_cbam_exploratory_seed42/inference_probabilities_unscored.csv"
+  ],
+  "probability_sha256": [
+    "5cb643c2e5832d579891786a9069ba450b8224c2dfd21e85a4679295f8aa979d",
+    "efe3d1fbb5d9d79d5c7a13301bcfc01ef9bb791a52fe94125449a3fd3760c315",
+    "e17639705c0dfc6a22f4b5e8753596ee94001d3e13bc3a49b39e46ad2cd2dfa6",
+    "dccd2dbf47cf02544ca84807583802caecd56e7a489d8f2a0e6a99cfd2b1b483",
+    "f3b752405be6c28109488412eded725c9e44fd87bd09932aedacb7cb62721e17",
+    "4a34651c2bda020404420b8dac31d351207bd57bde4bc3aa97426aec7866ea38"
+  ],
+  "inference_seconds": 91.80638289998751
+}
