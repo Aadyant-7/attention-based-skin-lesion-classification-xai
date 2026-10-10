@@ -2,6 +2,10 @@
 
 All paths below are relative to the project root.
 
+## S95 controlled ConvNeXt regularization
+
+`research/short_screening/S95_CONVNEXT_REGULARIZATION_PLAN.md` records the approved direction, exact20-epoch recipe, historical comparability limitation, fixed future ensemble gate and start/monitor/resume commands. Runner/config: `s95_convnext_regularization.py`, `s95_convnext_regularization_v1.json`. CPU checks/source fingerprints: `results/short_screening/convnext_regularization_v1/`. Training results/logs: `results/short_screening/convnext_regularization_v1/s95_convnext_tiny_wd005_exploratory_seed42/`; checkpoints: `checkpoints/short_screening/convnext_regularization_v1/s95_convnext_tiny_wd005_exploratory_seed42/`. No candidate score exists at preparation. Use live registry/progress to distinguish prepared/running/completed. S83 and existing CBAM/checkpoints remain preserved; no test scoring.
+
 ## Latest completed: S89/S91 full20 and S92–S94 transformer additions
 
 - `research/short_screening/S89_S91_TRANSFORMER_CLOSEOUT.md`: final standalone results, best epochs, actual recovered/lost predictions and interpretation.

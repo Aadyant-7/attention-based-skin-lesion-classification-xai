@@ -1,4 +1,10 @@
-## Current status: S89/S91 completed20; fixed transformer additions rejected
+## Current status: S95 ConvNeXt regularization prepared for authorized launch
+
+10 October2026: user approved proceeding with the proven ConvNeXt direction. S95 tests AdamW decay0.05 versus historical S06's0.0001 using the same fresh ImageNet1k ConvNeXt-Tiny, full fine-tuning, exploratory cohort,224/horizontal flip/weightedCE/effective32 and20-epoch budget. Existing CBAM/S83 sources remain unchanged. Modern guarded FP32 validation is disclosed as a numerical amendment, so this is not a pure causal decay estimate. CPU pretrained forward/backward, actual optimizer step/group coverage, checkpoint/optimizer/RNG restoration, source hashes and test-loader rejection passed. No candidate accuracy exists yet. Live launch/completion status belongs to the registry and `results/short_screening/convnext_regularization_v1/`, not this static preparation note.
+
+Plan/commands/resources/gates: `research/short_screening/S95_CONVNEXT_REGULARIZATION_PLAN.md`. No extension beyond20, new model, automatic weighting search or test evaluation. Once launch is confirmed, stop interaction. After the user returns, verify the standalone run and one fixed equal-six S83 replacement before deciding whether to keep it. Current observed exploratory leader remains S83 **94.0120% /0.895201**.
+
+## Previous completed closeout: S89/S91 and S92–S94
 
 9 October 2026 closeout: S89 Swin-T best90.6853% /0.860448 at15; its remaining five epochs did not improve the best. S91 DeiT III Base best90.5522% at13 (tied17), macro-F1 best0.850535 at17. Both completed20 and all accuracy/F1/final checkpoints and prediction packages were independently verified. S90 Small was superseded before training.
 

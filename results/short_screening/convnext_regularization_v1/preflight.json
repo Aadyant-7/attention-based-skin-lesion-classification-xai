@@ -1,0 +1,37 @@
+{
+  "cpu_forward_backward": "passed",
+  "parameters": 27825511,
+  "train_images": 7009,
+  "val_images": 1503,
+  "source_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "pretrained_file": ".cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "test_loaded": false,
+  "gpu_used": false,
+  "config_sha256": "a5e01ad3f6d8d27ca97f99924d365b93ed243138736f6729ad91d2c3b95e7100",
+  "fingerprints": {
+    "research/short_screening/s95_convnext_regularization.py": "64d70658549de20c1a03fb7a5937483f8c2953a47b6e4c37838b1fe4c18fbe60",
+    "research/short_screening/s95_convnext_regularization_v1.json": "a5e01ad3f6d8d27ca97f99924d365b93ed243138736f6729ad91d2c3b95e7100",
+    "research/short_screening/supervised22k_transfer.py": "21473d8b483d093179102a755df3e1142660becf0ee3c39c093a2bd721efa956",
+    "results/structured_experiments/s06_convnext_tiny_none_exploratory_seed42/config.json": "8b28d4008a0cee16b713739359666b8dae02584fe0ee706a8ef2744e95d44c7e",
+    "research/strict_train.py": "b5e490b4b62ae7a85d6e13b19a6bcc09e28d63f30bc16eafd6732ed8e57ff349",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/aggressive/core.py": "07598beabb355f4492f9ca8ed34c09dd362c610f7b4102ce47508fbe61282a22"
+  },
+  "optimizer_step_and_group_decay": "passed",
+  "cpu_checkpoint_optimizer_rng_recovery": "passed",
+  "test_dataset_guard": "passed",
+  "maximum_epochs": 20,
+  "warning": "Two-sample CPU safety check is not an accuracy screen or evidence of future ensemble gain."
+}
