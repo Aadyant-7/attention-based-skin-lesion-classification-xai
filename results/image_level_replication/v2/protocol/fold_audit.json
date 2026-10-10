@@ -1,0 +1,1110 @@
+{
+  "study_id": "image_level_replication_v2_k10",
+  "folds": [
+    {
+      "fold": 0,
+      "counts": {
+        "train": 8111,
+        "val": 902,
+        "test": 1002
+      },
+      "proportions_percent": {
+        "train": 80.98851722416376,
+        "val": 9.006490264603096,
+        "test": 10.00499251123315
+      },
+      "outer_development_images": 9013,
+      "unique_lesions": {
+        "train": 6377,
+        "val": 872,
+        "test": 968
+      },
+      "images_with_training_lesion": {
+        "val": 353,
+        "test": 389
+      },
+      "class_counts": [
+        {
+          "fold": 0,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 265,
+          "val": 30,
+          "test": 32
+        },
+        {
+          "fold": 0,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 416,
+          "val": 46,
+          "test": 52
+        },
+        {
+          "fold": 0,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 0,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 93,
+          "val": 10,
+          "test": 12
+        },
+        {
+          "fold": 0,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 0,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5430,
+          "val": 604,
+          "test": 671
+        },
+        {
+          "fold": 0,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 0,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 339,
+          "images_in_a_with_lesion_in_b": 453,
+          "images_in_b_with_lesion_in_a": 353
+        },
+        {
+          "fold": 0,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 375,
+          "images_in_a_with_lesion_in_b": 484,
+          "images_in_b_with_lesion_in_a": 389
+        },
+        {
+          "fold": 0,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 62,
+          "images_in_a_with_lesion_in_b": 62,
+          "images_in_b_with_lesion_in_a": 64
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "counts": {
+        "train": 8111,
+        "val": 902,
+        "test": 1002
+      },
+      "proportions_percent": {
+        "train": 80.98851722416376,
+        "val": 9.006490264603096,
+        "test": 10.00499251123315
+      },
+      "outer_development_images": 9013,
+      "unique_lesions": {
+        "train": 6397,
+        "val": 869,
+        "test": 973
+      },
+      "images_with_training_lesion": {
+        "val": 375,
+        "test": 398
+      },
+      "class_counts": [
+        {
+          "fold": 1,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 265,
+          "val": 30,
+          "test": 32
+        },
+        {
+          "fold": 1,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 416,
+          "val": 46,
+          "test": 52
+        },
+        {
+          "fold": 1,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 1,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 93,
+          "val": 10,
+          "test": 12
+        },
+        {
+          "fold": 1,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 1,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5430,
+          "val": 604,
+          "test": 671
+        },
+        {
+          "fold": 1,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 1,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 365,
+          "images_in_a_with_lesion_in_b": 472,
+          "images_in_b_with_lesion_in_a": 375
+        },
+        {
+          "fold": 1,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 380,
+          "images_in_a_with_lesion_in_b": 520,
+          "images_in_b_with_lesion_in_a": 398
+        },
+        {
+          "fold": 1,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 60,
+          "images_in_a_with_lesion_in_b": 63,
+          "images_in_b_with_lesion_in_a": 60
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "counts": {
+        "train": 8111,
+        "val": 902,
+        "test": 1002
+      },
+      "proportions_percent": {
+        "train": 80.98851722416376,
+        "val": 9.006490264603096,
+        "test": 10.00499251123315
+      },
+      "outer_development_images": 9013,
+      "unique_lesions": {
+        "train": 6347,
+        "val": 878,
+        "test": 976
+      },
+      "images_with_training_lesion": {
+        "val": 363,
+        "test": 371
+      },
+      "class_counts": [
+        {
+          "fold": 2,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 2,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 416,
+          "val": 46,
+          "test": 52
+        },
+        {
+          "fold": 2,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 2,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 94,
+          "val": 10,
+          "test": 11
+        },
+        {
+          "fold": 2,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 2,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5430,
+          "val": 604,
+          "test": 671
+        },
+        {
+          "fold": 2,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 2,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 352,
+          "images_in_a_with_lesion_in_b": 465,
+          "images_in_b_with_lesion_in_a": 363
+        },
+        {
+          "fold": 2,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 356,
+          "images_in_a_with_lesion_in_b": 487,
+          "images_in_b_with_lesion_in_a": 371
+        },
+        {
+          "fold": 2,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 52,
+          "images_in_a_with_lesion_in_b": 53,
+          "images_in_b_with_lesion_in_a": 54
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "counts": {
+        "train": 8111,
+        "val": 902,
+        "test": 1002
+      },
+      "proportions_percent": {
+        "train": 80.98851722416376,
+        "val": 9.006490264603096,
+        "test": 10.00499251123315
+      },
+      "outer_development_images": 9013,
+      "unique_lesions": {
+        "train": 6353,
+        "val": 876,
+        "test": 977
+      },
+      "images_with_training_lesion": {
+        "val": 334,
+        "test": 387
+      },
+      "class_counts": [
+        {
+          "fold": 3,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 3,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 417,
+          "val": 46,
+          "test": 51
+        },
+        {
+          "fold": 3,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 3,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 94,
+          "val": 10,
+          "test": 11
+        },
+        {
+          "fold": 3,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 3,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5430,
+          "val": 604,
+          "test": 671
+        },
+        {
+          "fold": 3,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 114,
+          "val": 13,
+          "test": 15
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 3,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 323,
+          "images_in_a_with_lesion_in_b": 423,
+          "images_in_b_with_lesion_in_a": 334
+        },
+        {
+          "fold": 3,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 377,
+          "images_in_a_with_lesion_in_b": 491,
+          "images_in_b_with_lesion_in_a": 387
+        },
+        {
+          "fold": 3,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 60,
+          "images_in_a_with_lesion_in_b": 64,
+          "images_in_b_with_lesion_in_a": 60
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "counts": {
+        "train": 8111,
+        "val": 902,
+        "test": 1002
+      },
+      "proportions_percent": {
+        "train": 80.98851722416376,
+        "val": 9.006490264603096,
+        "test": 10.00499251123315
+      },
+      "outer_development_images": 9013,
+      "unique_lesions": {
+        "train": 6378,
+        "val": 882,
+        "test": 970
+      },
+      "images_with_training_lesion": {
+        "val": 350,
+        "test": 411
+      },
+      "class_counts": [
+        {
+          "fold": 4,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 4,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 417,
+          "val": 46,
+          "test": 51
+        },
+        {
+          "fold": 4,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 4,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 94,
+          "val": 10,
+          "test": 11
+        },
+        {
+          "fold": 4,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 4,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5430,
+          "val": 604,
+          "test": 671
+        },
+        {
+          "fold": 4,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 114,
+          "val": 13,
+          "test": 15
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 4,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 339,
+          "images_in_a_with_lesion_in_b": 454,
+          "images_in_b_with_lesion_in_a": 350
+        },
+        {
+          "fold": 4,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 393,
+          "images_in_a_with_lesion_in_b": 517,
+          "images_in_b_with_lesion_in_a": 411
+        },
+        {
+          "fold": 4,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 54,
+          "images_in_a_with_lesion_in_b": 56,
+          "images_in_b_with_lesion_in_a": 56
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "counts": {
+        "train": 8112,
+        "val": 902,
+        "test": 1001
+      },
+      "proportions_percent": {
+        "train": 80.99850224663005,
+        "val": 9.006490264603096,
+        "test": 9.99500748876685
+      },
+      "outer_development_images": 9014,
+      "unique_lesions": {
+        "train": 6340,
+        "val": 878,
+        "test": 975
+      },
+      "images_with_training_lesion": {
+        "val": 302,
+        "test": 419
+      },
+      "class_counts": [
+        {
+          "fold": 5,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 5,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 417,
+          "val": 46,
+          "test": 51
+        },
+        {
+          "fold": 5,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 5,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 94,
+          "val": 10,
+          "test": 11
+        },
+        {
+          "fold": 5,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 901,
+          "val": 100,
+          "test": 112
+        },
+        {
+          "fold": 5,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5431,
+          "val": 604,
+          "test": 670
+        },
+        {
+          "fold": 5,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 5,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 295,
+          "images_in_a_with_lesion_in_b": 400,
+          "images_in_b_with_lesion_in_a": 302
+        },
+        {
+          "fold": 5,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 406,
+          "images_in_a_with_lesion_in_b": 537,
+          "images_in_b_with_lesion_in_a": 419
+        },
+        {
+          "fold": 5,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 53,
+          "images_in_a_with_lesion_in_b": 54,
+          "images_in_b_with_lesion_in_a": 56
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "counts": {
+        "train": 8112,
+        "val": 902,
+        "test": 1001
+      },
+      "proportions_percent": {
+        "train": 80.99850224663005,
+        "val": 9.006490264603096,
+        "test": 9.99500748876685
+      },
+      "outer_development_images": 9014,
+      "unique_lesions": {
+        "train": 6354,
+        "val": 883,
+        "test": 972
+      },
+      "images_with_training_lesion": {
+        "val": 341,
+        "test": 386
+      },
+      "class_counts": [
+        {
+          "fold": 6,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 6,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 417,
+          "val": 46,
+          "test": 51
+        },
+        {
+          "fold": 6,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 6,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 94,
+          "val": 10,
+          "test": 11
+        },
+        {
+          "fold": 6,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 901,
+          "val": 100,
+          "test": 112
+        },
+        {
+          "fold": 6,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5431,
+          "val": 604,
+          "test": 670
+        },
+        {
+          "fold": 6,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 6,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 334,
+          "images_in_a_with_lesion_in_b": 457,
+          "images_in_b_with_lesion_in_a": 341
+        },
+        {
+          "fold": 6,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 371,
+          "images_in_a_with_lesion_in_b": 507,
+          "images_in_b_with_lesion_in_a": 386
+        },
+        {
+          "fold": 6,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 56,
+          "images_in_a_with_lesion_in_b": 60,
+          "images_in_b_with_lesion_in_a": 56
+        }
+      ]
+    },
+    {
+      "fold": 7,
+      "counts": {
+        "train": 8112,
+        "val": 902,
+        "test": 1001
+      },
+      "proportions_percent": {
+        "train": 80.99850224663005,
+        "val": 9.006490264603096,
+        "test": 9.99500748876685
+      },
+      "outer_development_images": 9014,
+      "unique_lesions": {
+        "train": 6362,
+        "val": 880,
+        "test": 971
+      },
+      "images_with_training_lesion": {
+        "val": 339,
+        "test": 399
+      },
+      "class_counts": [
+        {
+          "fold": 7,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 7,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 417,
+          "val": 46,
+          "test": 51
+        },
+        {
+          "fold": 7,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 891,
+          "val": 99,
+          "test": 109
+        },
+        {
+          "fold": 7,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 93,
+          "val": 10,
+          "test": 12
+        },
+        {
+          "fold": 7,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 901,
+          "val": 100,
+          "test": 112
+        },
+        {
+          "fold": 7,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5431,
+          "val": 604,
+          "test": 670
+        },
+        {
+          "fold": 7,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 7,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 326,
+          "images_in_a_with_lesion_in_b": 433,
+          "images_in_b_with_lesion_in_a": 339
+        },
+        {
+          "fold": 7,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 388,
+          "images_in_a_with_lesion_in_b": 520,
+          "images_in_b_with_lesion_in_a": 399
+        },
+        {
+          "fold": 7,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 55,
+          "images_in_a_with_lesion_in_b": 55,
+          "images_in_b_with_lesion_in_a": 57
+        }
+      ]
+    },
+    {
+      "fold": 8,
+      "counts": {
+        "train": 8112,
+        "val": 902,
+        "test": 1001
+      },
+      "proportions_percent": {
+        "train": 80.99850224663005,
+        "val": 9.006490264603096,
+        "test": 9.99500748876685
+      },
+      "outer_development_images": 9014,
+      "unique_lesions": {
+        "train": 6339,
+        "val": 867,
+        "test": 972
+      },
+      "images_with_training_lesion": {
+        "val": 323,
+        "test": 373
+      },
+      "class_counts": [
+        {
+          "fold": 8,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 264,
+          "val": 30,
+          "test": 33
+        },
+        {
+          "fold": 8,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 417,
+          "val": 46,
+          "test": 51
+        },
+        {
+          "fold": 8,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 8,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 93,
+          "val": 10,
+          "test": 12
+        },
+        {
+          "fold": 8,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 8,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5431,
+          "val": 604,
+          "test": 670
+        },
+        {
+          "fold": 8,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 8,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 311,
+          "images_in_a_with_lesion_in_b": 433,
+          "images_in_b_with_lesion_in_a": 323
+        },
+        {
+          "fold": 8,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 363,
+          "images_in_a_with_lesion_in_b": 486,
+          "images_in_b_with_lesion_in_a": 373
+        },
+        {
+          "fold": 8,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 65,
+          "images_in_a_with_lesion_in_b": 67,
+          "images_in_b_with_lesion_in_a": 66
+        }
+      ]
+    },
+    {
+      "fold": 9,
+      "counts": {
+        "train": 8112,
+        "val": 902,
+        "test": 1001
+      },
+      "proportions_percent": {
+        "train": 80.99850224663005,
+        "val": 9.006490264603096,
+        "test": 9.99500748876685
+      },
+      "outer_development_images": 9014,
+      "unique_lesions": {
+        "train": 6370,
+        "val": 882,
+        "test": 970
+      },
+      "images_with_training_lesion": {
+        "val": 358,
+        "test": 384
+      },
+      "class_counts": [
+        {
+          "fold": 9,
+          "diagnosis": "akiec",
+          "label": 0,
+          "train": 265,
+          "val": 30,
+          "test": 32
+        },
+        {
+          "fold": 9,
+          "diagnosis": "bcc",
+          "label": 1,
+          "train": 416,
+          "val": 46,
+          "test": 52
+        },
+        {
+          "fold": 9,
+          "diagnosis": "bkl",
+          "label": 2,
+          "train": 890,
+          "val": 99,
+          "test": 110
+        },
+        {
+          "fold": 9,
+          "diagnosis": "df",
+          "label": 3,
+          "train": 93,
+          "val": 10,
+          "test": 12
+        },
+        {
+          "fold": 9,
+          "diagnosis": "mel",
+          "label": 4,
+          "train": 902,
+          "val": 100,
+          "test": 111
+        },
+        {
+          "fold": 9,
+          "diagnosis": "nv",
+          "label": 5,
+          "train": 5431,
+          "val": 604,
+          "test": 670
+        },
+        {
+          "fold": 9,
+          "diagnosis": "vasc",
+          "label": 6,
+          "train": 115,
+          "val": 13,
+          "test": 14
+        }
+      ],
+      "pairwise_overlap": [
+        {
+          "fold": 9,
+          "partition_a": "train",
+          "partition_b": "val",
+          "shared_image_ids": 0,
+          "shared_lesions": 352,
+          "images_in_a_with_lesion_in_b": 457,
+          "images_in_b_with_lesion_in_a": 358
+        },
+        {
+          "fold": 9,
+          "partition_a": "train",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 371,
+          "images_in_a_with_lesion_in_b": 488,
+          "images_in_b_with_lesion_in_a": 384
+        },
+        {
+          "fold": 9,
+          "partition_a": "val",
+          "partition_b": "test",
+          "shared_image_ids": 0,
+          "shared_lesions": 60,
+          "images_in_a_with_lesion_in_b": 62,
+          "images_in_b_with_lesion_in_a": 63
+        }
+      ]
+    }
+  ],
+  "labels_read_for_stratification_and_counts_only": true,
+  "images_opened": false,
+  "seed_search": false,
+  "lesion_overlap_allowed_not_forced": true,
+  "model_predictions_or_metrics_generated": false
+}

@@ -1,4 +1,19 @@
-## Active separate study: image-level replication v1 — Phase 1 complete
+## Active separate study: image-level replication V2 — revised Phase 1 complete
+
+10 October 2026: user relaxed fixed 70/15/15 before Phase 2. Active protocol is now stratified ten-fold image-level evaluation inspired by DermAI's K10, with separate inner validation. Per fold: **8,111–8,112 fitting / 902 inner-validation / 1,001–1,002 assessment originals**, approximately **81/9/10**. Lesion overlap is allowed/measured; original image IDs are disjoint within each fold. All ten manifests are saved and verified, but no training or outer assessment is launched or scheduled.
+
+- Active home and phased plan: `research/image_level_replication/v2/README.md`, `PLAN.md`.
+- Verified paper details and adaptations: `research/image_level_replication/v2/PAPER_PROTOCOL_REVIEW.md`.
+- Completed preparation/audit: `research/image_level_replication/v2/PHASE1_CLOSEOUT.md`.
+- Frozen policy: `research/image_level_replication/v2/protocol.json`.
+- Outer assignments and fold manifests: `data/splits/image_level_replication/v2/`.
+- Counts/overlap/figures/preservation receipts and empty registry: `results/image_level_replication/v2/`.
+
+Next authorized boundary: stop after Phase 1. Phase 2 will prepare a plain B3 adaptation using fresh pretrained weights and predeclared fold 0 inner train/validation only, then present a GPU proposal. No previous fine-tuned model or cached probability may enter the new evaluation. Full K10 needs ten independently trained fold models per backbone; an optional fresh outer-90% refit adds cost and requires its own approval. Same-fold ensemble components only; report pooled OOF metrics and every fold, not a best-fold score.
+
+Future results are post-development internal image-level evaluation with lesion overlap. No higher accuracy is demonstrated yet. Previous S83 **94.011976% validation / 87.558217% test audit**, all historical checkpoints/results and the full V1 preparation are unchanged.
+
+## Preserved V1 preparation — superseded before Phase 2
 
 10 October 2026. User approved a fresh, separately saved paper-guided study. New stratified image-level manifest: **7,009 / 1,503 / 1,503**, seed 42; lesion overlap allowed, original image identities disjoint. Train/validation share 513 lesions; train/test share 518. CPU preparation and independent audit passed; no training or new accuracy result.
 

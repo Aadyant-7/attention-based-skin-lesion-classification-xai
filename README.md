@@ -4,7 +4,9 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 
 ## Active study — 10 October 2026
 
-[Separate paper-guided image-level workflow](research/image_level_replication/README.md): **Phase 1 complete**, new seed-42 stratified **70/15/15** split, natural lesion overlap allowed. [Saved plan](research/image_level_replication/PLAN.md) · [split audit and preservation checks](research/image_level_replication/PHASE1_CLOSEOUT.md). No new model trained; next is B3 recipe preparation and a GPU proposal.
+[Separate paper-guided image-level workflow V2](research/image_level_replication/v2/README.md): **revised Phase 1 complete**, stratified **ten-fold** outer assignments with inner validation, seed 42, natural lesion overlap allowed. Actual fitting/inner-validation/assessment sizes are approximately **81/9/10**; a later fresh outer-90% refit is optional and requires a separate proposal. [Saved plan](research/image_level_replication/v2/PLAN.md) · [split audit and preservation checks](research/image_level_replication/v2/PHASE1_CLOSEOUT.md) · [paper-method review](research/image_level_replication/v2/PAPER_PROTOCOL_REVIEW.md). No new model trained and no ten-run queue scheduled. Next is one inner-fold B3 recipe proposal.
+
+The earlier [70/15/15 V1](research/image_level_replication/README.md) is preserved as an inactive preparation, with all manifests, code and figures unchanged. The user relaxed the split requirement before Phase 2; V2 follows the reference's K10 structure as a documented adaptation, not a certified exact reproduction.
 
 Previous S83 results remain **94.011976% exploratory validation / 87.558217% original-cohort test audit** ([report](research/FINAL_S83_TEST_AUDIT.md)). Fresh external pretrained weights are required for the new study; original results/checkpoints/manifests are preserved.
 

@@ -1,0 +1,108 @@
+{
+  "study_id": "image_level_replication_v2_k10",
+  "protocol": "postdevelopment_image_level_k10_inner_validation_overlap_allowed",
+  "version": 2,
+  "status": "phase1_prepared_no_training",
+  "created_at_utc": "2026-10-10T11:04:31.536540+00:00",
+  "primary_paper": "DermAI 1.0 (2023)",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10573070/",
+  "paper_evaluation_basis": "K10 in sections3.6/4.5; conflicting80/20 in3.3; exact IDs unavailable",
+  "exact_paper_reproduction": false,
+  "seed": 42,
+  "outer_folds": 10,
+  "initial_development_fold": 0,
+  "inner_validation_fraction_of_outer_development": 0.1,
+  "inner_seed_rule": "42 + outer_fold",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "metadata_source": "data/raw/HAM10000/HAM10000_metadata.csv",
+  "metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+  "outer_assignments": "data/splits/image_level_replication/v2/outer_folds.csv",
+  "outer_assignments_sha256": "0bb2f9bedbfd6f08fb2c2c9b30772a3af9e7e44a5156e69fe390ca5216e32c84",
+  "fold_manifests": {
+    "0": {
+      "path": "data/splits/image_level_replication/v2/fold_00.csv",
+      "sha256": "c69b7da5441e151a2e2248a987994472091018b8ea9c8069d1177bd50b7ff1aa"
+    },
+    "1": {
+      "path": "data/splits/image_level_replication/v2/fold_01.csv",
+      "sha256": "0f88fe80696e799df73e6aa264cd8c661c0041db62ea10b9cd680183fdd78135"
+    },
+    "2": {
+      "path": "data/splits/image_level_replication/v2/fold_02.csv",
+      "sha256": "1969f30524262566732c865c91a83a7e23de94b0b8d3f56cca7d6f8fe850399c"
+    },
+    "3": {
+      "path": "data/splits/image_level_replication/v2/fold_03.csv",
+      "sha256": "f960eb02157335e1ee4ea6dc06c5605ca21f8669219ada2a122c40588913f446"
+    },
+    "4": {
+      "path": "data/splits/image_level_replication/v2/fold_04.csv",
+      "sha256": "312b2fae6e8c70691f726bda8645ea91a6424facb2fb1876a03ebf8ccf603ea8"
+    },
+    "5": {
+      "path": "data/splits/image_level_replication/v2/fold_05.csv",
+      "sha256": "9b2464d997476042ab59e6b271a415e214580916bc46204ec278e16a8e27ca9d"
+    },
+    "6": {
+      "path": "data/splits/image_level_replication/v2/fold_06.csv",
+      "sha256": "45cfb9082b37f67fb757831090ff155bf6e053d5295e6ba98f79054e09dc255e"
+    },
+    "7": {
+      "path": "data/splits/image_level_replication/v2/fold_07.csv",
+      "sha256": "93211c60c717fae1dc3a8413ed5a8e583201c783d1f1b4cb687e3ff382d4563b"
+    },
+    "8": {
+      "path": "data/splits/image_level_replication/v2/fold_08.csv",
+      "sha256": "f9472f64a68e42c9121f857015eb3897f0d4be7a163f69dc4068e2b8fc8ca35b"
+    },
+    "9": {
+      "path": "data/splits/image_level_replication/v2/fold_09.csv",
+      "sha256": "ee59dd516beedb0cc8f6c94b7c31f3087c081fb4678c76a7ee0b99f217e66f02"
+    }
+  },
+  "split_algorithm": "Canonical image-ID order; StratifiedKFold10 shuffle seed42; stratified inner10%",
+  "python": "3.14.4",
+  "sklearn": "1.9.1",
+  "initial_fit_fraction_approx": 0.81,
+  "inner_validation_fraction_approx": 0.09,
+  "outer_assessment_fraction_approx": 0.1,
+  "optional_outer90_refit": "requires later approval; fresh external weights, inner-selected fixed epoch budget, no outer selection",
+  "lesion_grouping": false,
+  "lesion_overlap": "natural, permitted and measured; not optimized",
+  "original_image_overlap_within_fold": false,
+  "augmentation_before_split": false,
+  "sampling_augmentation_scope": "current fold training originals only",
+  "outer_assessment_natural_class_proportions": true,
+  "fresh_external_pretrained_only": true,
+  "legacy_project_checkpoints_or_fitted_predictions_allowed": false,
+  "outer_assessment_used_for_selection": false,
+  "pilot_uses_inner_validation_only": true,
+  "automatic_ten_fold_training_authorized": false,
+  "gpu_training_authorized": false,
+  "evaluation": {
+    "checkpoint_and_ensemble_decisions": "inner validation only",
+    "one_outer_session_per_frozen_fold": true,
+    "ensemble_members": "same outer-fold models only; never average all ten fold checkpoints for OOF",
+    "original_oof_predictions_required": 10015,
+    "report": "pooled OOF accuracy/macro-F1 plus all fold scores and mean/std",
+    "full_k10_claim_requires_all_ten_completed_folds": true,
+    "best_fold_selection": false,
+    "previous_test_outcomes_known": true,
+    "label": "Post-development internal image-level K10-inspired evaluation with lesion overlap"
+  },
+  "preserved_v1": "research/image_level_replication/protocol_v1.json",
+  "paths": {
+    "results": "results/image_level_replication/v2",
+    "experiment_registry": "results/image_level_replication/v2/experiment_registry.csv",
+    "future_checkpoints": "checkpoints/image_level_replication/v2"
+  },
+  "next_phase": "Prepare one plain-B3 adaptation and an inner-fold0 GPU proposal; no outer scoring"
+}
