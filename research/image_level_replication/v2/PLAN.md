@@ -1,6 +1,6 @@
 # Active phased plan V2 — K10-inspired adaptation
 
-10 October 2026. User permits changing split proportions to follow relevant papers more closely. This new V2 plan supersedes the earlier fixed-70/15/15 plan; it does not edit V1 or historical results. Only revised Phase 1 is currently authorized.
+10 October 2026. User permits changing split proportions to follow relevant papers more closely. This new V2 plan supersedes the earlier fixed-70/15/15 plan; it does not edit V1 or historical results. Revised Phase 1 is complete; Phase 2 preparation is now authorized. The first GPU run still requires separate approval. See `PHASE2_PROPOSAL.md` and `RECIPE_DECISIONS.md` for the prepared recipe.
 
 ## Phase 1: freeze all partitions and record the literature decision
 
@@ -22,7 +22,7 @@ Prepare a **fold-aware isolated runner**, which accesses only inner train/valida
 
 ## Phase 3: bounded development and complete evaluation decision
 
-The epoch policy still needs to be fixed in the actual config/proposal. Current working budget: evaluate trajectory at around 15, allow minimum 20 unless numerical failure, plan 30, cap 50 under a predeclared continuation gate. Use meaningful-improvement counters/LR scheduling and raw accuracy-best/F1-best/latest checkpoints. This remains an adaptation of the paper's stated 50-epoch training, not an exact copy.
+Phase 2 fixes the epoch policy in `b3_fold00.json`: maximum 50, minimum 25 unless numerical failure, meaningful accuracy/F1 patience 10 with an LR reduction opportunity, and a late flat-trend guard after 30. This supersedes Phase 1's provisional 30-epoch working budget. Use meaningful-improvement counters/LR scheduling and raw accuracy-best/F1-best/latest checkpoints. This remains an adaptation of the paper's stated 50-epoch training.
 
 Do not automatically launch ten folds. First obtain a useful, finite inner-fold B3 result, then a fresh ConvNeXt comparator if justified. Select components and recipes on development evidence, not outer scores. Freeze candidate set, preprocessing, epoch/checkpoint rules and fusion rule before complete outer assessment.
 

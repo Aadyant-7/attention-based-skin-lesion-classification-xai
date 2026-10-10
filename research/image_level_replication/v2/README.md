@@ -2,6 +2,8 @@
 
 User relaxed the earlier 70/15/15 requirement on 10 October 2026. V2 replaces V1 as the active plan; all V1 manifests, policy, code, audits and figures remain preserved. No model training or accuracy result exists for either new version.
 
+**Phase 2 preparation:** [B3 proposal/commands/artifacts](PHASE2_PROPOSAL.md) and [recipe evidence/assumptions](RECIPE_DECISIONS.md). An isolated fold-0 runner and CPU preflight are implemented; launch requires a verified freeze and separate GPU approval. Preparation checks are recorded under `results/image_level_replication/v2/preparation/`. No trained run or outer-assessment inference exists.
+
 ## Why this protocol
 
 [DermAI 1.0](https://pmc.ncbi.nlm.nih.gov/articles/PMC10573070/) associates its reported B3 97.01% with K10. It also describes 80/20 elsewhere; exact assignments and augmentation lineage are unavailable. We choose one declared stratified ten-fold image-level protocol, with separate inner validation. This is a documented adaptation, not a verified exact reproduction or a prediction of 97% performance. See [paper-method review](PAPER_PROTOCOL_REVIEW.md).
@@ -42,6 +44,6 @@ Start future feasibility/development on **predeclared fold 0, inner validation o
 
 Completed K10 requires ten independent same-method fold runs per backbone, fresh external pretrained initialization in every fold, and one out-of-fold prediction per original. Same-fold ensemble components can fuse an image's probabilities; averaging all ten fold models would include models trained on that image and is prohibited for OOF evaluation. Report pooled OOF metrics, every fold and mean/std; never report a best fold as completed K10.
 
-All ten folds are prepared, not scheduled. A full K10 study costs approximately ten training runs per backbone; optional fresh outer-90% refits add runs. Phase 2 must propose the first bounded inner-fold B3 run and its resource/monitoring details before GPU approval. Launch-and-stop remains in effect.
+All ten folds are prepared, not scheduled. A full K10 study costs approximately ten training runs per backbone; optional fresh outer-90% refits add runs. The Phase 2 proposal specifies the first bounded inner-fold B3 run and its resource/monitoring details. The prepared allowance is 50 epochs with a 25-epoch minimum and meaningful stopping, superseding the earlier provisional 30-epoch plan. Launch-and-stop remains in effect.
 
 Label results **post-development internal image-level K10-inspired evaluation with lesion overlap**. Previous test outcomes were known. Old S83 94.011976% validation / 87.558217% audit and all strict results remain reported separately.

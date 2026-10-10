@@ -8,6 +8,8 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 
 The earlier [70/15/15 V1](research/image_level_replication/README.md) is preserved as an inactive preparation, with all manifests, code and figures unchanged. The user relaxed the split requirement before Phase 2; V2 follows the reference's K10 structure as a documented adaptation, not a certified exact reproduction.
 
+**Phase2:** [one fresh B3 recipe/proposal](research/image_level_replication/v2/PHASE2_PROPOSAL.md), isolated inner-fold runner and CPU checks prepared;50-epoch allowance/min25 with meaningful stopping. No GPU launch or assessment inference. [Recipe decisions](research/image_level_replication/v2/RECIPE_DECISIONS.md) separate paper-reported details from implementation assumptions.
+
 Previous S83 results remain **94.011976% exploratory validation / 87.558217% original-cohort test audit** ([report](research/FINAL_S83_TEST_AUDIT.md)). Fresh external pretrained weights are required for the new study; original results/checkpoints/manifests are preserved.
 
 ## Start here

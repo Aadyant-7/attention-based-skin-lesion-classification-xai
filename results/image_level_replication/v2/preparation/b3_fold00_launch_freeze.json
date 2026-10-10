@@ -1,0 +1,22 @@
+{
+  "status": "prepared_pending_gpu_approval",
+  "signature": {
+    "config_sha256": "daaad3c68bc37e73087921d6fd6d312c9afe12f5c17d8c086baeb0d9af36bd63",
+    "code_sha256": {
+      "research/image_level_replication/v2/core.py": "687f5df9ac7af25796da65c6991583e8869bb0ca45cdbb1521fb39caadd81bf6",
+      "research/image_level_replication/v2/train_b3.py": "536e2893bb35112eeab29337c1c75c0c3e219558caa9e7511c8040899e7dd177",
+      "research/image_level_replication/v2/prepare_protocol.py": "81d04fe600b784b13eb57a2d8dd47d347aa9454bbaa898833d7ca9cb01bde075",
+      "research/image_level_replication/prepare_protocol.py": "033f164ed776d2f7caabc0212a5a21efe04a4a21c384f91e44a882fa1deded42",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+      "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b",
+      "research/train.py": "9f684fc3246cfedf80a6b4e8a2138039bc711282a3fda770671a30634fc846ba"
+    },
+    "protocol_sha256": "b2a5c5acb1c527af778b4044554d88af605679549716b4a65a7fb56fc2e6671f",
+    "fold_manifest_sha256": "c69b7da5441e151a2e2248a987994472091018b8ea9c8069d1177bd50b7ff1aa",
+    "pretrained_sha256": "b3899882250c22946d0229d266049fcd133c169233530b36b9ffa7983988362f"
+  },
+  "question": "Can a fresh paper-inspired B3 with the reported 112px input and dense head give a useful inner-validation component under the new image-level protocol?",
+  "experiment_id": "r201_b3_dermai_adaptation_fold00_seed42",
+  "outer_assessment_enabled": false
+}
