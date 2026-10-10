@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+S83 existing equal-six,0.9401197604790419,0.8952008370253541
+S96 S95 replaces S06 (equal-six),0.9321357285429142,0.8748491893728776

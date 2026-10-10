@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "train": 7009,
+  "validation": 1503,
+  "class_counts_training": [
+    229,
+    359,
+    769,
+    81,
+    778,
+    4693,
+    100
+  ],
+  "cuda_initialized": false,
+  "gpu_training": false,
+  "test_loader_rejected": true,
+  "actual_parent_weights_strict_loaded": true,
+  "parent_history_exact": true,
+  "inherited_f1_uses_only_through33": true,
+  "fresh_optimizer_finite_update": true,
+  "full_state_checkpoint_roundtrip": true,
+  "stopping_checks": "minimum, meaningful deltas, child LR opportunity/settling and hard cap passed",
+  "inherited_epochs": 33,
+  "maximum_new_epochs": 37,
+  "first_eligible_plateau_epoch": 50
+}

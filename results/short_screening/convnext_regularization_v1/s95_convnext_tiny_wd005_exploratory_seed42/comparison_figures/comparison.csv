@@ -1,0 +1,3 @@
+display_name,accuracy,macro_f1
+S06 original decay0.0001 (historical AMP),0.9174983366600133,0.862830691053104
+S95 ConvNeXt-Tiny decay0.05 (FP32 validation),0.9161676646706587,0.8597479878259762

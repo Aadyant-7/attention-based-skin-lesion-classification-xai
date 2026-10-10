@@ -1,0 +1,10 @@
+{
+  "status": "started_confirmed",
+  "pid": 36784,
+  "optimizer_update_confirmed": true,
+  "logging_confirmed": true,
+  "latest_checkpoint_bytes": 111389391,
+  "maximum_epochs": 20,
+  "test_loaded": false,
+  "auto_next_experiment": false
+}

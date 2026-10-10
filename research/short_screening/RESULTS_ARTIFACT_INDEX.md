@@ -2,7 +2,24 @@
 
 All paths below are relative to the project root.
 
-## S95 controlled ConvNeXt regularization
+## Current completed closeout: S95/S96
+
+- `research/short_screening/S95_S96_REGULARIZATION_CLOSEOUT.md`: S95 best **91.616766% / 0.859747988 macro-F1**, both at epoch 17; final epoch 20 **90.618762% / 0.841268972**. Stronger decay did not improve standalone performance.
+- `results/short_screening/convnext_regularization_v1/s95_convnext_tiny_wd005_exploratory_seed42/`: completed 20-epoch history/curves, accuracy/F1/final metrics and probabilities, class scores, confusion matrices and checkpoint verification. Local checkpoints: `checkpoints/short_screening/convnext_regularization_v1/s95_convnext_tiny_wd005_exploratory_seed42/`.
+- `results/short_screening/s96_convnext_replacement_cpu/`: the one rejected equal-six replacement, **93.213573% / 0.874849189**, with 3 gained and 15 lost correct predictions versus S83. Includes source hashes/plan, probabilities, changed-image identities, class complementarity, raw/normalized matrices, PNG/PDF figures and verification.
+- S83 remains the numerical exploratory validation leader: **94.011976% / 0.895200837** in `results/short_screening/s83_cbam_f1_addition_cpu/`. All previous results and checkpoints remain preserved.
+
+## Prepared final branch: S97, pending GPU approval
+
+S97 warm-starts the actual S79 ConvNeXt-Tiny + CBAM accuracy winner at epoch 33 (**93.013972% / 0.877434398**). Parent checkpoint: `checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best.pt`. Fresh optimizer/scheduler/scaler/RNG state begins at the documented branch boundary; this is not an uninterrupted optimizer resume. Cumulative maximum epoch 70 means at most **37 additional epochs**; minimum epoch 50 means **17 additional epochs** before meaningful plateau stopping becomes eligible, after a fresh LR-reduction opportunity. One fixed S83 CBAM-slot replacement using S97's standalone macro-F1 winner is planned later, with all other sources and equal weights preserved.
+
+- Runner/config: `research/short_screening/s97_final_convnext_warmstart.py`, `research/short_screening/s97_final_convnext_warmstart_v1.json`.
+- Planned outputs/logs: `results/short_screening/final_convnext_warmstart_v1/s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42/`.
+- Planned checkpoints: `checkpoints/short_screening/final_convnext_warmstart_v1/s97_convnext_tiny_cbam_best_warmstart_exploratory_seed42/`.
+
+No S97 accuracy result exists yet; GPU training is pending approval. The original test set has already been evaluated. These exploratory studies do not produce a new first independent test, and any later approved test evaluation must be labelled as a post-development audit. No test evaluation is queued automatically.
+
+## Historical S95 preparation (completed above)
 
 `research/short_screening/S95_CONVNEXT_REGULARIZATION_PLAN.md` records the approved direction, exact20-epoch recipe, historical comparability limitation, fixed future ensemble gate and start/monitor/resume commands. Runner/config: `s95_convnext_regularization.py`, `s95_convnext_regularization_v1.json`. CPU checks/source fingerprints: `results/short_screening/convnext_regularization_v1/`. Training results/logs: `results/short_screening/convnext_regularization_v1/s95_convnext_tiny_wd005_exploratory_seed42/`; checkpoints: `checkpoints/short_screening/convnext_regularization_v1/s95_convnext_tiny_wd005_exploratory_seed42/`. No candidate score exists at preparation. Use live registry/progress to distinguish prepared/running/completed. S83 and existing CBAM/checkpoints remain preserved; no test scoring.
 

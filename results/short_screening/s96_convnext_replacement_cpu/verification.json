@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "samples": 1503,
+  "reference_fp32_mean_reproduced": true,
+  "saved_metrics_recomputed": true,
+  "probability_formula_verified": true,
+  "confusion_class_scores_present": true,
+  "source_checkpoints_predictions_caches_unchanged": true,
+  "gpu_used": false,
+  "test_loaded": false
+}

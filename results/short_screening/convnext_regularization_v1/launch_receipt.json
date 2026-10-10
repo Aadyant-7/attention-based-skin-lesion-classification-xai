@@ -1,0 +1,10 @@
+{
+  "pid": 29952,
+  "launched_at_utc": "2026-10-10T08:28:42.7767317+00:00",
+  "experiment_id": "s95_convnext_tiny_wd005_exploratory_seed42",
+  "command": ".\\.venv\\Scripts\\python.exe -u -B -m research.short_screening.s95_convnext_regularization --run",
+  "maximum_epochs": 20,
+  "auto_next_experiment": false,
+  "test_evaluation": false,
+  "setup_commit": "34fd4a4"
+}
