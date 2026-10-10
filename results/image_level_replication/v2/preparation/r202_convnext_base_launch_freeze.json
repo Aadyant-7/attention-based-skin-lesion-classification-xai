@@ -1,0 +1,26 @@
+{
+  "status": "prepared_pending_gpu_approval",
+  "signature": {
+    "config_sha256": "c4c198140a51105f607fa3900a4d4900526e1b1a363f4f5c78f676225d7df8d9",
+    "code_sha256": {
+      "research/image_level_replication/v2/convnext_core.py": "49f4b542e23390f319e8028d570ee3f32e502c27203ce3c974f28472c038e3be",
+      "research/image_level_replication/v2/train_convnext_base.py": "f8b2807cb0deb5ef97574e34940636ca3b1474aeb0ebed3556b4aaf975dca68c",
+      "research/image_level_replication/v2/preflight_convnext_base.py": "8cfadaf866594ad53ea206052dcf07a255bc8653d1ee3aca879472ea18e4b1b2",
+      "research/image_level_replication/v2/core.py": "687f5df9ac7af25796da65c6991583e8869bb0ca45cdbb1521fb39caadd81bf6",
+      "research/image_level_replication/v2/train_b3.py": "536e2893bb35112eeab29337c1c75c0c3e219558caa9e7511c8040899e7dd177",
+      "research/image_level_replication/v2/prepare_protocol.py": "81d04fe600b784b13eb57a2d8dd47d347aa9454bbaa898833d7ca9cb01bde075",
+      "research/image_level_replication/prepare_protocol.py": "033f164ed776d2f7caabc0212a5a21efe04a4a21c384f91e44a882fa1deded42",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+      "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+    },
+    "protocol_sha256": "b2a5c5acb1c527af778b4044554d88af605679549716b4a65a7fb56fc2e6671f",
+    "fold_manifest_sha256": "c69b7da5441e151a2e2248a987994472091018b8ea9c8069d1177bd50b7ff1aa",
+    "pretrained_sha256": "dd7a88d111c8af2295cb744f5bba888eca26759984b1cac81804ef876807ce17",
+    "timm_convnext_sha256": "b6f993a543350ef26bb66f38996ea2b7b5bd17aa2c943b71a6f7a3f3f2ab20d5"
+  },
+  "question": "Does fresh FCMAE/ImageNet-22K-to-1K pretrained ConvNeXt-V2 Base with careful full fine-tuning improve inner-validation generalization over the stopped R201 package on the unchanged V2 fold00?",
+  "experiment_id": "r202_convnextv2_base_fold00_seed42",
+  "outer_assessment_enabled": false,
+  "preflight_cpu_only": true
+}

@@ -1,6 +1,15 @@
 # Active phased plan V2 — K10-inspired adaptation
 
-10 October 2026. User permits changing split proportions to follow relevant papers more closely. This new V2 plan supersedes the earlier fixed-70/15/15 plan; it does not edit V1 or historical results. Revised Phase 1 is complete; Phase 2 preparation is now authorized. The first GPU run still requires separate approval. See `PHASE2_PROPOSAL.md` and `RECIPE_DECISIONS.md` for the prepared recipe.
+10 October 2026. User permits changing split proportions to follow relevant papers more closely. V2 supersedes the earlier fixed-70/15/15 plan; V1 and historical results remain preserved. Its partitions are frozen. R201 B3 stopped and closed at epoch 28 following the user's instruction; see `R201_CLOSEOUT.md`.
+
+## Current ConvNeXt upgrade sequence
+
+1. **R202 Phase 1:** CPU preparation of fresh `convnextv2_base.fcmae_ft_in22k_in1k` on unchanged V2 fold 00. Verify official external weights, exact model/head, train-only weighting, optimizer/schedule, accumulation, raw/EMA selectors, recovery and historical preservation; save a launch freeze. No GPU use.
+2. **R202 Phase 2, separately approved:** disposable synthetic GPU feasibility check including full-stage BF16 training, resident FP32 EMA and FP32 validation. Then launch one fresh fixed-50-epoch run. Two head-only epochs, lower earlier-stage learning rates, cosine decay, effective batch 32, restrained geometry augmentation. No CBAM or automatic early stopping. An explicit stop commits the current epoch. Confirm logging/checkpointing, provide the monitor command, then stop interacting.
+3. Close out raw/EMA inner-validation results. If this package merits another run, independently repeat it on the original exploratory split before combining it with historical same-split models. A V2 model cannot fuse with historical models whose training includes V2 assessment images.
+4. Any outer assessment, fresh outer-90% refit or additional fold requires a separately frozen decision and approval. All ten folds remain prepared, unscheduled.
+
+The complete active recipe and commands are in `R202_PHASE1_PROPOSAL.md`. The B3-oriented phase sequence below records the initial V2 plan and its protocol/reporting rationale; its candidate/ensemble ordering has been superseded by this ConvNeXt upgrade.
 
 ## Phase 1: freeze all partitions and record the literature decision
 

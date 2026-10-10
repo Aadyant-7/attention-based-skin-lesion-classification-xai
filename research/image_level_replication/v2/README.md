@@ -2,7 +2,7 @@
 
 User relaxed the earlier 70/15/15 requirement on 10 October 2026. V2 replaces V1 as the active plan; all V1 manifests, policy, code, audits and figures remain preserved. R201 B3 now has real fold-00 inner-validation results. V1 remains preparation only; no outer-assessment inference has been performed in V2.
 
-**Current direction:** R201 was authorized for cancellation after its ongoing epoch because its results did not justify further compute. Its committed results and cancellation receipt live under `results/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42/`; its checkpoints remain under the matching `checkpoints/` path. See [fresh ConvNeXt-Tiny + CBAM proposal](CONVNEXT_NEXT_PROPOSAL.md). No ConvNeXt run has launched on V2. The original [B3 proposal](PHASE2_PROPOSAL.md), [recipe assumptions](RECIPE_DECISIONS.md), config and launch freeze are preserved as historical preparation evidence.
+**Current direction:** R201 stopped cleanly after epoch 28; its [closeout](R201_CLOSEOUT.md), checkpoints and results are preserved. The active next experiment is fresh **ConvNeXt-V2 Base**, prepared on unchanged V2 fold 00; see [R202 Phase 1 proposal](R202_PHASE1_PROPOSAL.md). CPU preparation verifies official weights, full fine-tuning, weighted accumulation, EMA and recovery. GPU feasibility and training await separate approval. No ConvNeXt run has launched on V2. The earlier [Tiny + CBAM proposal](CONVNEXT_NEXT_PROPOSAL.md), [B3 proposal](PHASE2_PROPOSAL.md), [recipe assumptions](RECIPE_DECISIONS.md), config and launch freeze remain historical preparation evidence.
 
 ## Why this protocol
 
@@ -44,6 +44,15 @@ Start future feasibility/development on **predeclared fold 0, inner validation o
 
 Completed K10 requires ten independent same-method fold runs per backbone, fresh external pretrained initialization in every fold, and one out-of-fold prediction per original. Same-fold ensemble components can fuse an image's probabilities; averaging all ten fold models would include models trained on that image and is prohibited for OOF evaluation. Report pooled OOF metrics, every fold and mean/std; never report a best fold as completed K10.
 
-All ten folds are prepared, not scheduled. A full K10 study costs approximately ten training runs per backbone; optional fresh outer-90% refits add runs. The original B3 allowance was 50 epochs with a 25-epoch minimum and meaningful stopping; its user-requested cancellation is recorded separately from that frozen policy. The next ConvNeXt proposal has a 40-epoch cap and 20-epoch minimum, based on the historical successful package. A separate runner/preflight and GPU approval are needed. Launch-and-stop remains in effect.
+All ten folds are prepared, not scheduled. A full K10 study costs approximately ten training runs per backbone; optional fresh outer-90% refits add runs. The original B3 allowance was 50 epochs with a 25-epoch minimum and meaningful stopping; its user-requested cancellation is recorded separately from that frozen policy. The active Base proposal specifies 50 planned epochs, two head-only warmup epochs, stage-wise AdamW/cosine scheduling, train-only square-root class weights and separately evaluated raw/EMA weights. Meaningful counters are observational; an explicit manual stop finishes and commits the current epoch. The earlier unlaunched Tiny proposal's 40-epoch cap remains historical. Launch-and-stop remains in effect.
+
+CPU preparation and status:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m research.image_level_replication.v2.preflight_convnext_base
+.\.venv\Scripts\python.exe -B -m research.image_level_replication.v2.train_convnext_base --check
+```
+
+The preflight uses two disposable CPU optimizer updates to verify correctness, then discards them. It computes no project accuracy and opens no outer-assessment images. Its report and launch freeze are under `results/image_level_replication/v2/preparation/`. See the R202 proposal for the later approved GPU memory check, training, monitoring, recovery and stop commands.
 
 Label results **post-development internal image-level K10-inspired evaluation with lesion overlap**. Previous test outcomes were known. Old S83 94.011976% validation / 87.558217% audit and all strict results remain reported separately.

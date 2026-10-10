@@ -1,0 +1,8 @@
+{
+  "status": "superseded_unlaunched_preparation_freeze",
+  "archive_path": "results/image_level_replication/v2/preparation/r202_convnext_base_launch_freeze_before_validation_cleanup_ab96262daa8f.json",
+  "archive_sha256": "fd3f3918d3e959f2584484d1118b2a5d11760e5a7b13397b04a1b36401e9a5e6",
+  "prior_runner_sha256": "ab96262daa8f8016045cb69258bfda5df76e482721f50506066d47dc0332ac02",
+  "experiment_training_launched": false,
+  "reason": "Administrative source amendment before any GPU launch: clear retained optimizer gradients before FP32 validation, matching the memory probe without changing optimizer updates or inference outputs. Final CPU preflight and current launch freeze supersede this archived preparation signature."
+}
