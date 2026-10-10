@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "frozen_checkpoints_strict_loaded": true,
+  "synthetic_cpu_forward_finite": true,
+  "class_epoch_selection_preprocessing_verified": true,
+  "cohort_size": 1503,
+  "zero_development_to_test_lesion_overlap": true,
+  "cuda_initialized": false,
+  "labels_read": false,
+  "test_images_loaded": false
+}
