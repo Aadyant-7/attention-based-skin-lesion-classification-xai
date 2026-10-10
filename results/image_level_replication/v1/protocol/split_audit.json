@@ -1,0 +1,125 @@
+{
+  "study_id": "image_level_replication_v1",
+  "protocol": "postdevelopment_image_level_70_15_15_overlap_allowed",
+  "seed": 42,
+  "total_images": 10015,
+  "total_unique_lesions": 7470,
+  "cohorts": {
+    "train": {
+      "images": 7009,
+      "unique_lesions": 5701,
+      "percent_of_original_images": 69.98502246630055,
+      "images_with_training_lesion": null
+    },
+    "val": {
+      "images": 1503,
+      "unique_lesions": 1452,
+      "percent_of_original_images": 15.007488766849725,
+      "images_with_training_lesion": 536
+    },
+    "test": {
+      "images": 1503,
+      "unique_lesions": 1427,
+      "percent_of_original_images": 15.007488766849725,
+      "images_with_training_lesion": 553
+    }
+  },
+  "class_counts": [
+    {
+      "diagnosis": "akiec",
+      "label": 0,
+      "total": 327,
+      "train": 229,
+      "val": 49,
+      "test": 49
+    },
+    {
+      "diagnosis": "bcc",
+      "label": 1,
+      "total": 514,
+      "train": 360,
+      "val": 77,
+      "test": 77
+    },
+    {
+      "diagnosis": "bkl",
+      "label": 2,
+      "total": 1099,
+      "train": 769,
+      "val": 165,
+      "test": 165
+    },
+    {
+      "diagnosis": "df",
+      "label": 3,
+      "total": 115,
+      "train": 80,
+      "val": 17,
+      "test": 18
+    },
+    {
+      "diagnosis": "mel",
+      "label": 4,
+      "total": 1113,
+      "train": 779,
+      "val": 167,
+      "test": 167
+    },
+    {
+      "diagnosis": "nv",
+      "label": 5,
+      "total": 6705,
+      "train": 4693,
+      "val": 1006,
+      "test": 1006
+    },
+    {
+      "diagnosis": "vasc",
+      "label": 6,
+      "total": 142,
+      "train": 99,
+      "val": 22,
+      "test": 21
+    }
+  ],
+  "pairwise_overlap": [
+    {
+      "partition_a": "train",
+      "partition_b": "val",
+      "shared_image_ids": 0,
+      "shared_lesions": 513,
+      "images_in_a_with_lesion_in_b": 665,
+      "images_in_b_with_lesion_in_a": 536
+    },
+    {
+      "partition_a": "train",
+      "partition_b": "test",
+      "shared_image_ids": 0,
+      "shared_lesions": 518,
+      "images_in_a_with_lesion_in_b": 656,
+      "images_in_b_with_lesion_in_a": 553
+    },
+    {
+      "partition_a": "val",
+      "partition_b": "test",
+      "shared_image_ids": 0,
+      "shared_lesions": 138,
+      "images_in_a_with_lesion_in_b": 142,
+      "images_in_b_with_lesion_in_a": 148
+    }
+  ],
+  "unique_image_ids_disjoint": true,
+  "stratification": "seven-class diagnosis",
+  "image_files_available": 10015,
+  "filenames_checked_only": true,
+  "labels_read_for_split_and_counts_only": true,
+  "images_opened": false,
+  "gpu_used": false,
+  "inference_run": false,
+  "training_run": false,
+  "performance_scores_exist": false,
+  "overlap_allowed_not_forced": true,
+  "original_images_split_before_augmentation_or_sampling": true,
+  "manifest_sha256": "3ce1c7924b52c5e9434b51b1e09bbbda75d438935aab4017a8ceebff8da4fcdf",
+  "metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5"
+}

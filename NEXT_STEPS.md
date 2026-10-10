@@ -1,3 +1,17 @@
+## Active separate study: image-level replication v1 — Phase 1 complete
+
+10 October 2026. User approved a fresh, separately saved paper-guided study. New stratified image-level manifest: **7,009 / 1,503 / 1,503**, seed 42; lesion overlap allowed, original image identities disjoint. Train/validation share 513 lesions; train/test share 518. CPU preparation and independent audit passed; no training or new accuracy result.
+
+- Plan and active home: `research/image_level_replication/README.md` and `PLAN.md`.
+- Actual protocol/verification: `research/image_level_replication/PHASE1_CLOSEOUT.md`.
+- New split: `data/splits/image_level_replication/v1/split_assignments.csv`.
+- New outputs/empty run registry: `results/image_level_replication/v1/`.
+- Next: Phase 2 preparation of one B3 adaptation, then a separate GPU proposal/approval.
+
+Use fresh external pretrained initialization; old trained checkpoints/probabilities contain reassigned test images. All previous results, manifests, checkpoints and master-registry rows remain unchanged. Prior S83 **94.011976% validation / 87.558217% test audit** remains the completed previous study. Its performance-work closure applies to that study; the new user-approved workflow is separate and post-development.
+
+## Previous study status (preserved below)
+
 ## Final S83 test audit completed
 
 10 October 2026. Frozen S83 equal-six FP32 identity test audit completed: **87.558217% accuracy / 0.807031200 macro-F1**, macro precision 0.814039202, macro recall 0.805563868, weighted-F1 0.872134817. Correct 1,316/1,503; incorrect 187. Melanoma recall 58.333333%; akiec recall 71.428571%. Exploratory validation 94.011976% / 0.895200837 did not transfer at the same level: accuracy drop 6.453759 percentage points, F1 drop 0.088169637. No method changes follow the audit.

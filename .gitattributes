@@ -92,3 +92,6 @@ results/short_screening/s98_final_warmstart_replacement_cpu/** -text whitespace=
 results/final_exploratory_freeze/** -text whitespace=cr-at-eol
 research/final_exploratory_test_audit.py -text whitespace=cr-at-eol
 results/final_exploratory_test_audit/** -text whitespace=cr-at-eol
+research/image_level_replication/** -text whitespace=cr-at-eol
+data/splits/image_level_replication/** -text whitespace=cr-at-eol
+results/image_level_replication/** -text whitespace=cr-at-eol

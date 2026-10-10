@@ -1,0 +1,4 @@
+partition_a,partition_b,shared_image_ids,shared_lesions,images_in_a_with_lesion_in_b,images_in_b_with_lesion_in_a
+train,val,0,513,665,536
+train,test,0,518,656,553
+val,test,0,138,142,148

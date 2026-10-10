@@ -1,0 +1,12 @@
+{
+  "old_test_original_images": 1503,
+  "old_test_originals_by_new_partition": {
+    "train": 1073,
+    "val": 224,
+    "test": 206
+  },
+  "old_test_assignments_modified": false,
+  "new_study_uses_all_originals": true,
+  "prior_test_outcomes_known": true,
+  "new_scores_are_postdevelopment_image_level_not_pristine_external_test": true
+}

@@ -2,6 +2,12 @@
 
 B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **structured-research**.
 
+## Active study — 10 October 2026
+
+[Separate paper-guided image-level workflow](research/image_level_replication/README.md): **Phase 1 complete**, new seed-42 stratified **70/15/15** split, natural lesion overlap allowed. [Saved plan](research/image_level_replication/PLAN.md) · [split audit and preservation checks](research/image_level_replication/PHASE1_CLOSEOUT.md). No new model trained; next is B3 recipe preparation and a GPU proposal.
+
+Previous S83 results remain **94.011976% exploratory validation / 87.558217% original-cohort test audit** ([report](research/FINAL_S83_TEST_AUDIT.md)). Fresh external pretrained weights are required for the new study; original results/checkpoints/manifests are preserved.
+
 ## Start here
 
 | Open | What it contains |
@@ -24,7 +30,7 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **struct
 | [Saved figures](results/figures/figure_index.csv) | Training curves, confusion matrices and class-score charts. |
 | [Legacy research](legacy/README.md) | Preserved code/results/reports and previous navigation documents. |
 
-## Current status
+## Historical status — 3 October 2026
 
 **Active priority (3 October2026):** [High-performance heterogeneous ensemble phase](research/phase3/HIGH_PERFORMANCE_ENSEMBLE_PLAN.md): DenseNet201 next ([S15 proposal](research/phase3/S15_PROPOSAL.md)), EfficientNet-B3 second subject to evidence/approval, conditional Swin-T third; equal voting then a small bounded global-weight study. **S14 deferred by user; no new experiments launched.** Reference remains S12 92.42%/.8770, FP32 identity92.48%/.8775; S13 TTA rejected. Same exploratory split; strict confirmation postponed; original locked test untouched.
 

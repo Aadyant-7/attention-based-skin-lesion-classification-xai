@@ -1,0 +1,54 @@
+{
+  "study_id": "image_level_replication_v1",
+  "protocol": "postdevelopment_image_level_70_15_15_overlap_allowed",
+  "version": 1,
+  "seed": 42,
+  "created_at_utc": "2026-10-10T10:48:58.010451+00:00",
+  "status": "phase1_prepared_no_training",
+  "manifest": "data/splits/image_level_replication/v1/split_assignments.csv",
+  "manifest_sha256": "3ce1c7924b52c5e9434b51b1e09bbbda75d438935aab4017a8ceebff8da4fcdf",
+  "metadata_source": "data/raw/HAM10000/HAM10000_metadata.csv",
+  "metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "unique_original_counts": {
+    "train": 7009,
+    "val": 1503,
+    "test": 1503
+  },
+  "split_method": "canonical image_id sort; stratified holdout3006 then val/test1503; seed42 at both steps",
+  "python": "3.14.4",
+  "sklearn": "1.9.1",
+  "lesion_grouping": false,
+  "lesion_overlap": "allowed, measured, not optimized",
+  "original_image_overlap": "forbidden",
+  "augmentation_before_split": false,
+  "validation_test_natural_class_counts": true,
+  "test_model_selection": false,
+  "test_evaluation": "one frozen-method session after validation decisions; no test-driven tuning",
+  "prior_test_outcomes_known": true,
+  "reporting_label": "Post-development image-level HAM10000 70/15/15 evaluation with lesion overlap",
+  "initialization": {
+    "fresh_external_pretrained_only": true,
+    "legacy_project_checkpoints": false,
+    "legacy_fitted_models_embeddings_probabilities": false,
+    "later_resume": "only the same new run and frozen config"
+  },
+  "balancing": "training-only; exact recipe pending Phase2; original counts unaffected",
+  "paths": {
+    "research": "research/image_level_replication",
+    "results": "results/image_level_replication/v1",
+    "checkpoints": "checkpoints/image_level_replication/v1",
+    "experiment_registry": "results/image_level_replication/v1/experiment_registry.csv",
+    "master_registry": "results/master_experiment_registry.csv"
+  },
+  "next_phase": "verify and prepare one paper-guided B3 adaptation; GPU approval required",
+  "gpu_training_authorized": false
+}
