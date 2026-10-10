@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "CPU-only delegated checkpoint and saved-artifact closeout verification",
+  "committed_epochs": 50,
+  "history_contiguous": true,
+  "config_code_weights_signature_verified": true,
+  "checkpoint_hashes_verified": 8,
+  "native_latest_resume_schema_verified": true,
+  "selected_and_final_states_match_latest": true,
+  "prediction_packages_verified": 9,
+  "ordered_validation_images": 902,
+  "probabilities_metrics_class_scores_confusion_matrices_verified": true,
+  "png_files_decoded": 40,
+  "pdf_files_structurally_checked": 40,
+  "curves_and_comparison_figures_present": true,
+  "master_and_v2_registry_completed_and_matching": true,
+  "optimizer_updates": 12700,
+  "ema_updates": 12192,
+  "numerical_events": [],
+  "outer_assessment_loaded": false,
+  "new_inference_performed": false,
+  "gpu_used": false,
+  "accuracy_selection": {
+    "branch": "ema",
+    "epoch": 20,
+    "accuracy": 0.9323725055432373,
+    "macro_f1": 0.8752770626299834
+  },
+  "macro_f1_selection": {
+    "branch": "raw",
+    "epoch": 40,
+    "accuracy": 0.9312638580931264,
+    "macro_f1": 0.8885843887287698
+  }
+}

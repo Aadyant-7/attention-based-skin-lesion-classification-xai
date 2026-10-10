@@ -1,0 +1,8 @@
+{
+  "epoch": 20,
+  "effective_step": 1,
+  "optimizer_updates": 4827,
+  "committed_checkpoint": "checkpoints/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/latest.pt",
+  "checkpoint_exists": true,
+  "log_active": true
+}

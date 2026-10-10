@@ -1,0 +1,33 @@
+{
+  "error": "RuntimeError('[enforce fail at inline_container.cc:672] . unexpected pos 507677376 vs 507677264')",
+  "attempted_epoch": 20,
+  "latest_committed_epoch": 19,
+  "latest_valid_checkpoint": "checkpoints/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/latest.pt",
+  "batch": {
+    "epoch": 20,
+    "effective_step": 254,
+    "image_ids": [
+      "ISIC_0029397",
+      "ISIC_0029008",
+      "ISIC_0033939",
+      "ISIC_0025648",
+      "ISIC_0024747",
+      "ISIC_0030875",
+      "ISIC_0033603",
+      "ISIC_0031403",
+      "ISIC_0032595",
+      "ISIC_0024858",
+      "ISIC_0030714",
+      "ISIC_0029032",
+      "ISIC_0029020",
+      "ISIC_0025574",
+      "ISIC_0028887"
+    ]
+  },
+  "numerical_events": [],
+  "automatic_retry": false,
+  "outer_assessment_loaded": false,
+  "secondary_errors": [
+    "Failure bookkeeping: RuntimeError('[enforce fail at inline_container.cc:672] . unexpected pos 156020480 vs 156020368')"
+  ]
+}

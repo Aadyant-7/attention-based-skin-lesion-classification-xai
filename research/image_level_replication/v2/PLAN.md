@@ -4,6 +4,8 @@
 
 ## Current ConvNeXt upgrade sequence
 
+**Completed checkpoint:** R202 finished 50 epochs on 11 October 2026; best inner-validation accuracy 93.2373% (EMA epoch 20), best macro-F1 0.888584 (raw epoch 40). See `R202_CLOSEOUT.md`. The sequence below preserves the plan; steps 1–2 are complete. Further evaluation/training is pending a later session.
+
 1. **R202 Phase 1:** CPU preparation of fresh `convnextv2_base.fcmae_ft_in22k_in1k` on unchanged V2 fold 00. Verify official external weights, exact model/head, train-only weighting, optimizer/schedule, accumulation, raw/EMA selectors, recovery and historical preservation; save a launch freeze. No GPU use.
 2. **R202 Phase 2, separately approved:** disposable synthetic GPU feasibility check including full-stage BF16 training, resident FP32 EMA and FP32 validation. Then launch one fresh fixed-50-epoch run. Two head-only epochs, lower earlier-stage learning rates, cosine decay, effective batch 32, restrained geometry augmentation. No CBAM or automatic early stopping. An explicit stop commits the current epoch. Confirm logging/checkpointing, provide the monitor command, then stop interacting.
 3. Close out raw/EMA inner-validation results. If this package merits another run, independently repeat it on the original exploratory split before combining it with historical same-split models. A V2 model cannot fuse with historical models whose training includes V2 assessment images.

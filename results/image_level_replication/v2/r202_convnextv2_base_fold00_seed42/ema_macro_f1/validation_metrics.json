@@ -1,0 +1,137 @@
+{
+  "accuracy": 0.9312638580931264,
+  "macro_precision": 0.8875056204676065,
+  "macro_recall": 0.8885970599129251,
+  "macro_f1": 0.8873800841005618,
+  "weighted_f1": 0.9308869482737527,
+  "loss": 0.531084909587423,
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "confusion_matrix": [
+    [
+      25,
+      1,
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      43,
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      87,
+      0,
+      4,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      9,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      5,
+      0,
+      78,
+      14,
+      0
+    ],
+    [
+      0,
+      2,
+      5,
+      0,
+      11,
+      586,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      12
+    ]
+  ],
+  "per_class": {
+    "akiec": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1": 0.8333333333333334,
+      "support": 30
+    },
+    "bcc": {
+      "precision": 0.8958333333333334,
+      "recall": 0.9347826086956522,
+      "f1": 0.9148936170212766,
+      "support": 46
+    },
+    "bkl": {
+      "precision": 0.87,
+      "recall": 0.8787878787878788,
+      "f1": 0.8743718592964824,
+      "support": 99
+    },
+    "df": {
+      "precision": 0.8181818181818182,
+      "recall": 0.9,
+      "f1": 0.8571428571428571,
+      "support": 10
+    },
+    "mel": {
+      "precision": 0.8297872340425532,
+      "recall": 0.78,
+      "f1": 0.8041237113402062,
+      "support": 100
+    },
+    "nv": {
+      "precision": 0.9654036243822076,
+      "recall": 0.9701986754966887,
+      "f1": 0.967795210569777,
+      "support": 604
+    },
+    "vasc": {
+      "precision": 1.0,
+      "recall": 0.9230769230769231,
+      "f1": 0.96,
+      "support": 13
+    }
+  },
+  "epoch": 25,
+  "experiment_id": "r202_convnextv2_base_fold00_seed42",
+  "protocol": "postdevelopment_image_level_k10_inner_validation_overlap_allowed",
+  "evaluation_split": "inner_validation",
+  "fold": 0,
+  "inference_precision": "fp32",
+  "outer_assessment_loaded": false,
+  "correct": 840,
+  "incorrect": 62,
+  "model": "convnextv2_base.fcmae_ft_in22k_in1k",
+  "branch": "ema"
+}

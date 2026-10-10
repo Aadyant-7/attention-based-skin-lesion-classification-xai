@@ -1,0 +1,31 @@
+{
+  "error": "RuntimeError('[enforce fail at inline_container.cc:672] . unexpected pos 2021777536 vs 2021777424')",
+  "attempted_epoch": 16,
+  "latest_committed_epoch": 15,
+  "latest_valid_checkpoint": "checkpoints/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/latest.pt",
+  "batch": {
+    "epoch": 16,
+    "effective_step": 254,
+    "image_ids": [
+      "ISIC_0024372",
+      "ISIC_0031608",
+      "ISIC_0029134",
+      "ISIC_0034267",
+      "ISIC_0032167",
+      "ISIC_0033470",
+      "ISIC_0033215",
+      "ISIC_0033261",
+      "ISIC_0026077",
+      "ISIC_0030244",
+      "ISIC_0027212",
+      "ISIC_0026262",
+      "ISIC_0034207",
+      "ISIC_0031694",
+      "ISIC_0030981"
+    ]
+  },
+  "numerical_events": [],
+  "automatic_retry": false,
+  "outer_assessment_loaded": false,
+  "secondary_errors": []
+}

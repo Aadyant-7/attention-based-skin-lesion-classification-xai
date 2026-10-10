@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "pid": 30496,
+  "committed_epoch": 50,
+  "max_epochs": 50,
+  "optimizer_updates": 12700,
+  "ema_updates": 12192,
+  "runtime_seconds": 10774.546172900125,
+  "meaningful_stopping": {
+    "automatic_early_stopping": false,
+    "stale": 25,
+    "last_meaningful_epoch": 25,
+    "accuracy_reference": 0.9312638580931264,
+    "macro_f1_reference": 0.8873800841005618,
+    "meaningful_improvement_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      23,
+      25
+    ],
+    "stop": true,
+    "reason": "maximum_epochs"
+  },
+  "results": "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42",
+  "checkpoints": "checkpoints/image_level_replication/v2/r202_convnextv2_base_fold00_seed42",
+  "outer_assessment_loaded": false,
+  "stopping_reason": "maximum_epochs"
+}

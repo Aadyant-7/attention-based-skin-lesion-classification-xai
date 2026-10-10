@@ -1,0 +1,8 @@
+{
+  "pid": 30496,
+  "resume": true,
+  "committed_epoch": 19,
+  "results": "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42",
+  "checkpoints": "checkpoints/image_level_replication/v2/r202_convnextv2_base_fold00_seed42",
+  "outer_assessment_loaded": false
+}

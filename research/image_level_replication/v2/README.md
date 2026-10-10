@@ -2,7 +2,7 @@
 
 User relaxed the earlier 70/15/15 requirement on 10 October 2026. V2 replaces V1 as the active plan; all V1 manifests, policy, code, audits and figures remain preserved. R201 B3 now has real fold-00 inner-validation results. V1 remains preparation only; no outer-assessment inference has been performed in V2.
 
-**Current direction:** R201 stopped cleanly after epoch 28; its [closeout](R201_CLOSEOUT.md), checkpoints and results are preserved. The active next experiment is fresh **ConvNeXt-V2 Base**, prepared on unchanged V2 fold 00; see [R202 Phase 1 proposal](R202_PHASE1_PROPOSAL.md). CPU preparation verifies official weights, full fine-tuning, weighted accumulation, EMA and recovery. GPU feasibility and training await separate approval. No ConvNeXt run has launched on V2. The earlier [Tiny + CBAM proposal](CONVNEXT_NEXT_PROPOSAL.md), [B3 proposal](PHASE2_PROPOSAL.md), [recipe assumptions](RECIPE_DECISIONS.md), config and launch freeze remain historical preparation evidence.
+**Current status:** R202 **ConvNeXt-V2 Base completed all 50 epochs** on unchanged V2 fold 00: best accuracy **93.2373% at EMA epoch 20**, best macro-F1 **0.888584 at raw epoch 40**. See [verified closeout](R202_CLOSEOUT.md) and the preserved [recipe proposal](R202_PHASE1_PROPOSAL.md). Both registries are updated; all selected/final checkpoints and research artifacts are saved. No V2 outer assessment was inferred. Work stops here pending the next session. R201's [epoch-28 closeout](R201_CLOSEOUT.md) remains preserved, as do the earlier [Tiny + CBAM proposal](CONVNEXT_NEXT_PROPOSAL.md), [B3 proposal](PHASE2_PROPOSAL.md), [recipe assumptions](RECIPE_DECISIONS.md), config and launch freeze.
 
 ## Why this protocol
 
