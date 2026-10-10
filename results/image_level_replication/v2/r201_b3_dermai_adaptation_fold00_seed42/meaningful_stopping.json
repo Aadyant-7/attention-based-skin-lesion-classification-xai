@@ -1,0 +1,27 @@
+{
+  "stop": false,
+  "reason": "running",
+  "stale": 7,
+  "last_meaningful_epoch": 21,
+  "accuracy_reference": 0.8580931263858093,
+  "macro_f1_reference": 0.7577234001778859,
+  "meaningful_improvement_epochs": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    11,
+    13,
+    14,
+    16,
+    20,
+    21
+  ],
+  "lr_reduction_epochs": [
+    11,
+    19,
+    26
+  ],
+  "lr_settled": false
+}

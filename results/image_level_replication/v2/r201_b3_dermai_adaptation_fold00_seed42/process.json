@@ -1,0 +1,8 @@
+{
+  "pid": 35316,
+  "resume": false,
+  "committed_epoch": 0,
+  "results": "results/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42",
+  "checkpoints": "checkpoints/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42",
+  "outer_assessment_loaded": false
+}

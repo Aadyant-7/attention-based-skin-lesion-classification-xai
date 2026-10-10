@@ -1,8 +1,8 @@
 # Active paper-guided study V2: K10-inspired image-level evaluation
 
-User relaxed the earlier 70/15/15 requirement on 10 October 2026. V2 replaces V1 as the active plan; all V1 manifests, policy, code, audits and figures remain preserved. No model training or accuracy result exists for either new version.
+User relaxed the earlier 70/15/15 requirement on 10 October 2026. V2 replaces V1 as the active plan; all V1 manifests, policy, code, audits and figures remain preserved. R201 B3 now has real fold-00 inner-validation results. V1 remains preparation only; no outer-assessment inference has been performed in V2.
 
-**Phase 2 preparation:** [B3 proposal/commands/artifacts](PHASE2_PROPOSAL.md) and [recipe evidence/assumptions](RECIPE_DECISIONS.md). An isolated fold-0 runner and CPU preflight are implemented; launch requires a verified freeze and separate GPU approval. Preparation checks are recorded under `results/image_level_replication/v2/preparation/`. No trained run or outer-assessment inference exists.
+**Current direction:** R201 was authorized for cancellation after its ongoing epoch because its results did not justify further compute. Its committed results and cancellation receipt live under `results/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42/`; its checkpoints remain under the matching `checkpoints/` path. See [fresh ConvNeXt-Tiny + CBAM proposal](CONVNEXT_NEXT_PROPOSAL.md). No ConvNeXt run has launched on V2. The original [B3 proposal](PHASE2_PROPOSAL.md), [recipe assumptions](RECIPE_DECISIONS.md), config and launch freeze are preserved as historical preparation evidence.
 
 ## Why this protocol
 
@@ -25,8 +25,8 @@ Every original image is assigned to exactly one outer assessment fold. Different
 - `research/image_level_replication/v2/protocol.json`: frozen algorithm, hashes, class order, selection/aggregation rules.
 - `research/image_level_replication/v2/PLAN.md`: current phased sequence and compute policy.
 - `results/image_level_replication/v2/protocol/`: counts, overlap, preservation, verification and PNG/PDF figures.
-- `results/image_level_replication/v2/experiment_registry.csv`: new run registry; header only until a real run starts.
-- `checkpoints/image_level_replication/v2/`: future local checkpoints; none created by Phase 1.
+- `results/image_level_replication/v2/experiment_registry.csv`: active V2 run registry, including R201.
+- `checkpoints/image_level_replication/v2/`: local V2 checkpoints, including preserved R201 best/latest states and its administrative final checkpoint after closeout.
 
 ## CPU-only commands
 
@@ -44,6 +44,6 @@ Start future feasibility/development on **predeclared fold 0, inner validation o
 
 Completed K10 requires ten independent same-method fold runs per backbone, fresh external pretrained initialization in every fold, and one out-of-fold prediction per original. Same-fold ensemble components can fuse an image's probabilities; averaging all ten fold models would include models trained on that image and is prohibited for OOF evaluation. Report pooled OOF metrics, every fold and mean/std; never report a best fold as completed K10.
 
-All ten folds are prepared, not scheduled. A full K10 study costs approximately ten training runs per backbone; optional fresh outer-90% refits add runs. The Phase 2 proposal specifies the first bounded inner-fold B3 run and its resource/monitoring details. The prepared allowance is 50 epochs with a 25-epoch minimum and meaningful stopping, superseding the earlier provisional 30-epoch plan. Launch-and-stop remains in effect.
+All ten folds are prepared, not scheduled. A full K10 study costs approximately ten training runs per backbone; optional fresh outer-90% refits add runs. The original B3 allowance was 50 epochs with a 25-epoch minimum and meaningful stopping; its user-requested cancellation is recorded separately from that frozen policy. The next ConvNeXt proposal has a 40-epoch cap and 20-epoch minimum, based on the historical successful package. A separate runner/preflight and GPU approval are needed. Launch-and-stop remains in effect.
 
 Label results **post-development internal image-level K10-inspired evaluation with lesion overlap**. Previous test outcomes were known. Old S83 94.011976% validation / 87.558217% audit and all strict results remain reported separately.

@@ -1,0 +1,469 @@
+{
+  "status": "stopped_by_user",
+  "experiment_id": "r201_b3_dermai_adaptation_fold00_seed42",
+  "committed_epochs": 28,
+  "stopping_reason": "User requested cancellation after the ongoing epoch",
+  "original_meaningful_stopping": {
+    "stop": false,
+    "reason": "running",
+    "stale": 7,
+    "last_meaningful_epoch": 21,
+    "accuracy_reference": 0.8580931263858093,
+    "macro_f1_reference": 0.7577234001778859,
+    "meaningful_improvement_epochs": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      11,
+      13,
+      14,
+      16,
+      20,
+      21
+    ],
+    "lr_reduction_epochs": [
+      11,
+      19,
+      26
+    ],
+    "lr_settled": false
+  },
+  "administrative_stop": {
+    "status": "stopped_at_committed_boundary",
+    "requested_at": "2026-10-10T15:39:36.716528+00:00",
+    "worker_pid": 35316,
+    "worker_created": 1791639585.5870004,
+    "command": [
+      "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "research.image_level_replication.v2.train_b3",
+      "--train"
+    ],
+    "requested_stop_after_epoch": 28,
+    "helper_pid": 32444,
+    "user_instruction": "Let the ongoing epoch run and then stop",
+    "outer_assessment_loaded": false,
+    "stopped_at": "2026-10-10T15:41:58.367603+00:00",
+    "committed_epoch": 28,
+    "worker_children": [
+      1876
+    ],
+    "last_log_lines": [
+      "2026-10-10 21:11:07,445 epoch 28/50 step 2100/2376 CE=0.002187 lr=1.25e-05",
+      "2026-10-10 21:11:20,583 epoch 28/50 step 2200/2376 CE=0.000032 lr=1.25e-05",
+      "2026-10-10 21:11:33,948 epoch 28/50 step 2300/2376 CE=0.000100 lr=1.25e-05",
+      "2026-10-10 21:11:43,942 epoch 28/50 step 2376/2376 CE=0.000000 lr=1.25e-05",
+      "2026-10-10 21:11:58,260 EPOCH 28 accuracy=0.855876 macroF1=0.755297 best_accuracy_epoch=21 best_F1_epoch=26 meaningful_stale=7 stop=running"
+    ],
+    "next_epoch_uncommitted_work_may_be_discarded": true
+  },
+  "best_accuracy_epoch": 21,
+  "best_accuracy": {
+    "accuracy": 0.8580931263858093,
+    "macro_precision": 0.7715146972164847,
+    "macro_recall": 0.7510747335653757,
+    "macro_f1": 0.7579457466808875,
+    "weighted_f1": 0.8577271397457107,
+    "loss": 1.287520967047631,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        19,
+        2,
+        3,
+        0,
+        2,
+        4,
+        0
+      ],
+      [
+        1,
+        37,
+        2,
+        1,
+        0,
+        4,
+        1
+      ],
+      [
+        4,
+        3,
+        70,
+        0,
+        10,
+        12,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        8,
+        0,
+        1,
+        0
+      ],
+      [
+        3,
+        2,
+        3,
+        0,
+        69,
+        23,
+        0
+      ],
+      [
+        0,
+        2,
+        12,
+        3,
+        25,
+        562,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        3,
+        9
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.7037037037037037,
+        "recall": 0.6333333333333333,
+        "f1": 0.6666666666666666,
+        "support": 30
+      },
+      "bcc": {
+        "precision": 0.7872340425531915,
+        "recall": 0.8043478260869565,
+        "f1": 0.7956989247311828,
+        "support": 46
+      },
+      "bkl": {
+        "precision": 0.7692307692307693,
+        "recall": 0.7070707070707071,
+        "f1": 0.7368421052631579,
+        "support": 99
+      },
+      "df": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727273,
+        "support": 10
+      },
+      "mel": {
+        "precision": 0.6509433962264151,
+        "recall": 0.69,
+        "f1": 0.6699029126213593,
+        "support": 100
+      },
+      "nv": {
+        "precision": 0.922824302134647,
+        "recall": 0.9304635761589404,
+        "f1": 0.9266281945589447,
+        "support": 604
+      },
+      "vasc": {
+        "precision": 0.9,
+        "recall": 0.6923076923076923,
+        "f1": 0.782608695652174,
+        "support": 13
+      }
+    }
+  },
+  "best_macro_f1_epoch": 26,
+  "best_macro_f1": {
+    "accuracy": 0.8569844789356984,
+    "macro_precision": 0.7861664380295574,
+    "macro_recall": 0.7377278139846524,
+    "macro_f1": 0.7596619748453339,
+    "weighted_f1": 0.8561116987846673,
+    "loss": 1.359245633273281,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        19,
+        1,
+        3,
+        0,
+        2,
+        5,
+        0
+      ],
+      [
+        2,
+        34,
+        1,
+        0,
+        2,
+        6,
+        1
+      ],
+      [
+        4,
+        3,
+        69,
+        1,
+        11,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        7,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        0,
+        69,
+        26,
+        0
+      ],
+      [
+        0,
+        1,
+        11,
+        2,
+        25,
+        565,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        10
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.7037037037037037,
+        "recall": 0.6333333333333333,
+        "f1": 0.6666666666666666,
+        "support": 30
+      },
+      "bcc": {
+        "precision": 0.85,
+        "recall": 0.7391304347826086,
+        "f1": 0.7906976744186046,
+        "support": 46
+      },
+      "bkl": {
+        "precision": 0.7931034482758621,
+        "recall": 0.696969696969697,
+        "f1": 0.7419354838709677,
+        "support": 99
+      },
+      "df": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1": 0.7,
+        "support": 10
+      },
+      "mel": {
+        "precision": 0.6330275229357798,
+        "recall": 0.69,
+        "f1": 0.6602870813397129,
+        "support": 100
+      },
+      "nv": {
+        "precision": 0.9142394822006472,
+        "recall": 0.9354304635761589,
+        "f1": 0.9247135842880524,
+        "support": 604
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.7692307692307693,
+        "f1": 0.8333333333333334,
+        "support": 13
+      }
+    }
+  },
+  "final_epoch": 28,
+  "final_metrics": {
+    "accuracy": 0.8558758314855875,
+    "macro_precision": 0.7881173446559758,
+    "macro_recall": 0.7277313204120001,
+    "macro_f1": 0.7552968611691815,
+    "weighted_f1": 0.8535513039957209,
+    "loss": 1.3167639738927077,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        20,
+        2,
+        3,
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        2,
+        34,
+        2,
+        0,
+        1,
+        6,
+        1
+      ],
+      [
+        4,
+        3,
+        72,
+        0,
+        9,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        7,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        3,
+        0,
+        63,
+        31,
+        0
+      ],
+      [
+        0,
+        3,
+        13,
+        2,
+        19,
+        567,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        3,
+        9
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.7142857142857143,
+        "recall": 0.6666666666666666,
+        "f1": 0.6896551724137931,
+        "support": 30
+      },
+      "bcc": {
+        "precision": 0.7727272727272727,
+        "recall": 0.7391304347826086,
+        "f1": 0.7555555555555555,
+        "support": 46
+      },
+      "bkl": {
+        "precision": 0.7659574468085106,
+        "recall": 0.7272727272727273,
+        "f1": 0.7461139896373057,
+        "support": 99
+      },
+      "df": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1": 0.7368421052631579,
+        "support": 10
+      },
+      "mel": {
+        "precision": 0.6774193548387096,
+        "recall": 0.63,
+        "f1": 0.6528497409326425,
+        "support": 100
+      },
+      "nv": {
+        "precision": 0.9086538461538461,
+        "recall": 0.9387417218543046,
+        "f1": 0.9234527687296417,
+        "support": 604
+      },
+      "vasc": {
+        "precision": 0.9,
+        "recall": 0.6923076923076923,
+        "f1": 0.782608695652174,
+        "support": 13
+      }
+    }
+  },
+  "training_precision": "amp_bf16",
+  "validation_precision": "fp32",
+  "numerical_events": [],
+  "outer_assessment_loaded": false,
+  "original_checkpoints_unchanged": true,
+  "latest_sha256": "6240ce6a57da2362d0a3b381bfb457c4f02f21e96404cb5a0ca4e59384f0efa8",
+  "checkpoints": {
+    "best.pt": {
+      "path": "checkpoints/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42/best.pt",
+      "sha256": "6aeb6ef41c69c5c739f12ea549164b9818d22facc1df00710d52ab8c37f96456"
+    },
+    "best_macro_f1.pt": {
+      "path": "checkpoints/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42/best_macro_f1.pt",
+      "sha256": "6a32563c5ed9b8e98cb40d2c09a393a322eee535f0476d922fa7a8a9d03ce357"
+    },
+    "latest.pt": {
+      "path": "checkpoints/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42/latest.pt",
+      "sha256": "6240ce6a57da2362d0a3b381bfb457c4f02f21e96404cb5a0ca4e59384f0efa8"
+    },
+    "final.pt": {
+      "path": "checkpoints/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42/final.pt",
+      "sha256": "9f651f05188dde1db25ec1f944f58eb4aaf28bdacfa6eac87a0d2013d32ab44e"
+    }
+  },
+  "evaluation_claim": "Fold-00 inner validation only; not an outer-test or full K10 result"
+}

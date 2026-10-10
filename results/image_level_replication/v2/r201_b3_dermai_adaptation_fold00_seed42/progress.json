@@ -1,0 +1,39 @@
+{
+  "status": "stopped_by_user",
+  "pid": 32444,
+  "epoch": 28,
+  "max_epochs": 50,
+  "best_accuracy_epoch": 21,
+  "best_macro_f1_epoch": 26,
+  "meaningful_stopping": {
+    "stop": false,
+    "reason": "running",
+    "stale": 7,
+    "last_meaningful_epoch": 21,
+    "accuracy_reference": 0.8580931263858093,
+    "macro_f1_reference": 0.7577234001778859,
+    "meaningful_improvement_epochs": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      11,
+      13,
+      14,
+      16,
+      20,
+      21
+    ],
+    "lr_reduction_epochs": [
+      11,
+      19,
+      26
+    ],
+    "lr_settled": false
+  },
+  "runtime_seconds": 7326.856764499913,
+  "results": "results/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42",
+  "checkpoints": "checkpoints/image_level_replication/v2/r201_b3_dermai_adaptation_fold00_seed42",
+  "outer_assessment_loaded": false
+}

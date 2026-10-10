@@ -1,0 +1,30 @@
+{
+  "status": "stopped_at_committed_boundary",
+  "requested_at": "2026-10-10T15:39:36.716528+00:00",
+  "worker_pid": 35316,
+  "worker_created": 1791639585.5870004,
+  "command": [
+    "C:\\Users\\MARS\\Desktop\\College\\Minor Project\\Project Development\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "research.image_level_replication.v2.train_b3",
+    "--train"
+  ],
+  "requested_stop_after_epoch": 28,
+  "helper_pid": 32444,
+  "user_instruction": "Let the ongoing epoch run and then stop",
+  "outer_assessment_loaded": false,
+  "stopped_at": "2026-10-10T15:41:58.367603+00:00",
+  "committed_epoch": 28,
+  "worker_children": [
+    1876
+  ],
+  "last_log_lines": [
+    "2026-10-10 21:11:07,445 epoch 28/50 step 2100/2376 CE=0.002187 lr=1.25e-05",
+    "2026-10-10 21:11:20,583 epoch 28/50 step 2200/2376 CE=0.000032 lr=1.25e-05",
+    "2026-10-10 21:11:33,948 epoch 28/50 step 2300/2376 CE=0.000100 lr=1.25e-05",
+    "2026-10-10 21:11:43,942 epoch 28/50 step 2376/2376 CE=0.000000 lr=1.25e-05",
+    "2026-10-10 21:11:58,260 EPOCH 28 accuracy=0.855876 macroF1=0.755297 best_accuracy_epoch=21 best_F1_epoch=26 meaningful_stale=7 stop=running"
+  ],
+  "next_epoch_uncommitted_work_may_be_discarded": true
+}
