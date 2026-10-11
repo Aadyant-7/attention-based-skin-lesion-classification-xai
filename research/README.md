@@ -1,5 +1,13 @@
 # Structured research workspace
 
+## Current work — 11 October 2026
+
+[R203 plan and commands](convnext_base_original/PLAN.md): fresh ConvNeXt-V2 Base + fixed EMA0.999, **30 epochs** on the original exploratory manifest (7,009 train / 1,503 validation). External pretrained initialization; no R202 checkpoint reuse, test inference or automatic next run. Source/config: `research/convnext_base_original/`; artifacts: `results/structured_experiments/convnext_base_original_v1/`; local checkpoints: corresponding `checkpoints/structured_experiments/convnext_base_original_v1/`.
+
+R202's completed different-split result is preserved in [its verified closeout](image_level_replication/v2/R202_CLOSEOUT.md). Sections below are chronological historical plans/status; their pending-launch and test-lock statements reflect the dates written and do not supersede the current R203 plan.
+
+## Historical navigation and research contract
+
 **Active priority (3 October2026):** [High-performance heterogeneous ensemble phase](phase3/HIGH_PERFORMANCE_ENSEMBLE_PLAN.md): DenseNet201 next ([S15 proposal](phase3/S15_PROPOSAL.md)), EfficientNet-B3 second subject to evidence/approval, conditional Swin-T third; equal voting then a small bounded global-weight study. **S14 deferred by user; no new experiments launched.** Reference remains S12 92.42%/.8770, FP32 identity92.48%/.8775; S13 TTA rejected. Same exploratory split; strict confirmation postponed; original locked test untouched.
 
 **Local organization cleanup:** archives live under `legacy/`; immutable inventory uses `legacy/path_map.json`. Current verification is `python -m research.verify_layout --phase3-current`, preserving earlier cleanup/preparation audits. See [cleanup report](../legacy/organization/README.md). Historical code, datasets, results and checkpoints remain stable.

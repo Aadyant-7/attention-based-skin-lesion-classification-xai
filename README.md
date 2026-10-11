@@ -2,7 +2,15 @@
 
 B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **structured-research**.
 
-## Active study — 10 October 2026
+## Active run — 11 October 2026
+
+[R203: fresh ConvNeXt-V2 Base + EMA on the original exploratory split](research/convnext_base_original/PLAN.md). One authorized **30-epoch** run, 7,009 training / 1,503 validation images, seed 42. It starts from official external pretrained weights; the different-split R202 project checkpoint is not an initializer. Raw and EMA validation branches, predictions, checkpoints and complete figures are saved separately. No test inference or automatic subsequent experiment.
+
+Start/recovery/monitor commands and output paths: [R203 plan](research/convnext_base_original/PLAN.md). Configuration: [config.json](research/convnext_base_original/config.json). Preparation evidence: `results/structured_experiments/convnext_base_original_v1/preparation/`. Results and checkpoints use the same study name in their respective `structured_experiments/` folders.
+
+R202 completed 50 epochs on its **different 902-image V2 inner-validation cohort**: best accuracy **93.2373%**, best macro-F1 **0.888584** (different selectors). [Verified closeout](research/image_level_replication/v2/R202_CLOSEOUT.md). Existing original-split S83 remains **94.011976% validation / 87.558217% historical test audit**. R203 is not yet a result and no accuracy gain is assumed.
+
+## Preserved V2 preparation — 10 October 2026
 
 [Separate paper-guided image-level workflow V2](research/image_level_replication/v2/README.md): **revised Phase 1 complete**, stratified **ten-fold** outer assignments with inner validation, seed 42, natural lesion overlap allowed. Actual fitting/inner-validation/assessment sizes are approximately **81/9/10**; a later fresh outer-90% refit is optional and requires a separate proposal. [Saved plan](research/image_level_replication/v2/PLAN.md) · [split audit and preservation checks](research/image_level_replication/v2/PHASE1_CLOSEOUT.md) · [paper-method review](research/image_level_replication/v2/PAPER_PROTOCOL_REVIEW.md). No new model trained and no ten-run queue scheduled. Next is one inner-fold B3 recipe proposal.
 

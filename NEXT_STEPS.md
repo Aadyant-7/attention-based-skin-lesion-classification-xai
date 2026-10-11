@@ -1,3 +1,7 @@
+## Current authorized work — 11 October 2026
+
+Run only [R203 fresh ConvNeXt-V2 Base + EMA on the original exploratory split](research/convnext_base_original/PLAN.md), capped at 30 epochs. After successful launch and logging/checkpoint verification, stop interacting until the user returns. Then verify/close out the run and inspect same-cohort complementarity before considering a bounded ensemble analysis. No automatic test evaluation or next model. Plans below are historical.
+
 ## Active separate study: image-level replication V2 — revised Phase 1 complete
 
 10 October 2026: user relaxed fixed 70/15/15 before Phase 2. Active protocol is now stratified ten-fold image-level evaluation inspired by DermAI's K10, with separate inner validation. Per fold: **8,111–8,112 fitting / 902 inner-validation / 1,001–1,002 assessment originals**, approximately **81/9/10**. Lesion overlap is allowed/measured; original image IDs are disjoint within each fold. All ten manifests are saved and verified, but no training or outer assessment is launched or scheduled.

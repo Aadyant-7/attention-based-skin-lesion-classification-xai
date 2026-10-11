@@ -1,0 +1,326 @@
+{
+  "status": "passed",
+  "signature": {
+    "config_sha256": "930eefc6b411be82d1355385f2498d7fb5ca5ab509ac95605447e71a5d31c42a",
+    "code_sha256": {
+      "research/convnext_base_original/core.py": "271107f5245300ac5ae448912a7a4fef0e785538f9c23d9b205730051c6b326a",
+      "research/convnext_base_original/train.py": "1dd61393a39efefd58cd867c411a1ad1bb9707cc6bec1203968d928151fd9a5f",
+      "research/convnext_base_original/preflight.py": "a071c0251de6d98c6858152c403e620d4bc9af3c1f3d0205a694a26b77531ee9",
+      "research/image_level_replication/v2/convnext_core.py": "49f4b542e23390f319e8028d570ee3f32e502c27203ce3c974f28472c038e3be",
+      "research/image_level_replication/v2/core.py": "687f5df9ac7af25796da65c6991583e8869bb0ca45cdbb1521fb39caadd81bf6",
+      "research/image_level_replication/v2/train_b3.py": "536e2893bb35112eeab29337c1c75c0c3e219558caa9e7511c8040899e7dd177",
+      "research/image_level_replication/v2/prepare_protocol.py": "81d04fe600b784b13eb57a2d8dd47d347aa9454bbaa898833d7ca9cb01bde075",
+      "research/image_level_replication/prepare_protocol.py": "033f164ed776d2f7caabc0212a5a21efe04a4a21c384f91e44a882fa1deded42",
+      "research/train.py": "9f684fc3246cfedf80a6b4e8a2138039bc711282a3fda770671a30634fc846ba",
+      "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+      "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+      "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+      "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+      "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+    },
+    "split_manifest_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+    "locked_reference_manifest_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+    "locked_recipe_sha256": "f81281a212df6b5d1c9873e5788ea505caa801db24349b67ca5fffda2e83fb59",
+    "raw_metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+    "reference_predictions_sha256": "9aece30ca72513610ac62ef0c615b558d91b11e99beca5e1edae6e1b631267dc",
+    "pretrained_sha256": "dd7a88d111c8af2295cb744f5bba888eca26759984b1cac81804ef876807ce17",
+    "timm_convnext_sha256": "b6f993a543350ef26bb66f38996ea2b7b5bd17aa2c943b71a6f7a3f3f2ab20d5"
+  },
+  "cpu_only": true,
+  "gpu_used": false,
+  "cuda_initialized": false,
+  "experiment_training_launched": false,
+  "model_accuracy_computed": false,
+  "original_test_images_opened": 0,
+  "original_training_samples_checked": 1,
+  "original_validation_samples_checked": 1,
+  "train_images": 7009,
+  "validation_images": 1503,
+  "exposures_per_epoch": 7009,
+  "microbatches_per_epoch": 877,
+  "accumulation_groups_per_epoch": 220,
+  "final_partial_group_images": 1,
+  "natural_sampling_reproducible": true,
+  "weighted_effective_batch_gradient_checked": true,
+  "meaningful_counter_thresholds_and_fixed30_epoch_budget_checked": true,
+  "model_parameters": 87699975,
+  "fresh_pretrained_sha256": "dd7a88d111c8af2295cb744f5bba888eca26759984b1cac81804ef876807ce17",
+  "head_only_then_full_fine_tuning_checked": true,
+  "optimizer_coverage_and_no_decay_checked": true,
+  "schedule_epoch_probes": {
+    "1": {
+      "stem_decay": 0.0,
+      "stem_no_decay": 0.0,
+      "stage0_decay": 0.0,
+      "stage0_no_decay": 0.0,
+      "stage1_no_decay": 0.0,
+      "stage1_decay": 0.0,
+      "stage2_no_decay": 0.0,
+      "stage2_decay": 0.0,
+      "stage3_no_decay": 0.0,
+      "stage3_decay": 0.0,
+      "head_no_decay": 0.0001,
+      "head_decay": 0.0001
+    },
+    "2": {
+      "stem_decay": 0.0,
+      "stem_no_decay": 0.0,
+      "stage0_decay": 0.0,
+      "stage0_no_decay": 0.0,
+      "stage1_no_decay": 0.0,
+      "stage1_decay": 0.0,
+      "stage2_no_decay": 0.0,
+      "stage2_decay": 0.0,
+      "stage3_no_decay": 0.0,
+      "stage3_decay": 0.0,
+      "head_no_decay": 0.0001,
+      "head_decay": 0.0001
+    },
+    "3": {
+      "stem_decay": 4.096e-06,
+      "stem_no_decay": 4.096e-06,
+      "stage0_decay": 5.12e-06,
+      "stage0_no_decay": 5.12e-06,
+      "stage1_no_decay": 6.4000000000000006e-06,
+      "stage1_decay": 6.4000000000000006e-06,
+      "stage2_no_decay": 8e-06,
+      "stage2_decay": 8e-06,
+      "stage3_no_decay": 9.999999999999999e-06,
+      "stage3_decay": 9.999999999999999e-06,
+      "head_no_decay": 0.0001,
+      "head_decay": 0.0001
+    },
+    "4": {
+      "stem_decay": 8.192e-06,
+      "stem_no_decay": 8.192e-06,
+      "stage0_decay": 1.024e-05,
+      "stage0_no_decay": 1.024e-05,
+      "stage1_no_decay": 1.2800000000000001e-05,
+      "stage1_decay": 1.2800000000000001e-05,
+      "stage2_no_decay": 1.6e-05,
+      "stage2_decay": 1.6e-05,
+      "stage3_no_decay": 1.9999999999999998e-05,
+      "stage3_decay": 1.9999999999999998e-05,
+      "head_no_decay": 0.0001,
+      "head_decay": 0.0001
+    },
+    "5": {
+      "stem_decay": 1.2288000000000002e-05,
+      "stem_no_decay": 1.2288000000000002e-05,
+      "stage0_decay": 1.5360000000000002e-05,
+      "stage0_no_decay": 1.5360000000000002e-05,
+      "stage1_no_decay": 1.9200000000000003e-05,
+      "stage1_decay": 1.9200000000000003e-05,
+      "stage2_no_decay": 2.4e-05,
+      "stage2_decay": 2.4e-05,
+      "stage3_no_decay": 3e-05,
+      "stage3_decay": 3e-05,
+      "head_no_decay": 0.0001,
+      "head_decay": 0.0001
+    },
+    "6": {
+      "stem_decay": 1.2239714215793235e-05,
+      "stem_no_decay": 1.2239714215793235e-05,
+      "stage0_decay": 1.5299642769741543e-05,
+      "stage0_no_decay": 1.5299642769741543e-05,
+      "stage1_no_decay": 1.912455346217693e-05,
+      "stage1_decay": 1.912455346217693e-05,
+      "stage2_no_decay": 2.3905691827721158e-05,
+      "stage2_decay": 2.3905691827721158e-05,
+      "stage3_no_decay": 2.988211478465145e-05,
+      "stage3_decay": 2.988211478465145e-05,
+      "head_no_decay": 9.96070492821715e-05,
+      "head_decay": 9.96070492821715e-05
+    },
+    "30": {
+      "stem_decay": 4.096000000000001e-08,
+      "stem_no_decay": 4.096000000000001e-08,
+      "stage0_decay": 5.120000000000001e-08,
+      "stage0_no_decay": 5.120000000000001e-08,
+      "stage1_no_decay": 6.400000000000002e-08,
+      "stage1_decay": 6.400000000000002e-08,
+      "stage2_no_decay": 8e-08,
+      "stage2_decay": 8e-08,
+      "stage3_no_decay": 1.0000000000000001e-07,
+      "stage3_decay": 1.0000000000000001e-07,
+      "head_no_decay": 3.3333333333333335e-07,
+      "head_decay": 3.3333333333333335e-07
+    }
+  },
+  "finite_forward_backward_optimizer_steps": true,
+  "cpu_optimizer_steps": 2,
+  "ema_parameter_and_buffer_policy_checked": true,
+  "raw_ema_optimizer_schedule_rng_roundtrip": true,
+  "temporary_checkpoint_bytes": 1403812714,
+  "native_initial_committed_schema_checked": true,
+  "resume_and_selector_probes": {
+    "three_stage_synthetic_schema_checked": true,
+    "earliest_epoch_raw_tie_selection_checked": true,
+    "corrupted_resume_rejections": [
+      "updates",
+      "ema_updates",
+      "history",
+      "class_order",
+      "outer_scope",
+      "winner",
+      "lr",
+      "nonfinite",
+      "cuda_rng_required_for_real_resume"
+    ],
+    "note": "Handcrafted selector metrics are synthetic schema fixtures; they are not model or project results."
+  },
+  "wrong_partition_rejected": true,
+  "original_split_manifest_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "s83_validation_ids_and_labels_exactly_matched": true,
+  "deterministic_identity_validation_checked": true,
+  "historical_preservation_before": {
+    "source_signature": {
+      "config_sha256": "c4c198140a51105f607fa3900a4d4900526e1b1a363f4f5c78f676225d7df8d9",
+      "code_sha256": {
+        "research/image_level_replication/v2/convnext_core.py": "49f4b542e23390f319e8028d570ee3f32e502c27203ce3c974f28472c038e3be",
+        "research/image_level_replication/v2/train_convnext_base.py": "f8b2807cb0deb5ef97574e34940636ca3b1474aeb0ebed3556b4aaf975dca68c",
+        "research/image_level_replication/v2/preflight_convnext_base.py": "8cfadaf866594ad53ea206052dcf07a255bc8653d1ee3aca879472ea18e4b1b2",
+        "research/image_level_replication/v2/core.py": "687f5df9ac7af25796da65c6991583e8869bb0ca45cdbb1521fb39caadd81bf6",
+        "research/image_level_replication/v2/train_b3.py": "536e2893bb35112eeab29337c1c75c0c3e219558caa9e7511c8040899e7dd177",
+        "research/image_level_replication/v2/prepare_protocol.py": "81d04fe600b784b13eb57a2d8dd47d347aa9454bbaa898833d7ca9cb01bde075",
+        "research/image_level_replication/prepare_protocol.py": "033f164ed776d2f7caabc0212a5a21efe04a4a21c384f91e44a882fa1deded42",
+        "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+        "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+        "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+      },
+      "protocol_sha256": "b2a5c5acb1c527af778b4044554d88af605679549716b4a65a7fb56fc2e6671f",
+      "fold_manifest_sha256": "c69b7da5441e151a2e2248a987994472091018b8ea9c8069d1177bd50b7ff1aa",
+      "pretrained_sha256": "dd7a88d111c8af2295cb744f5bba888eca26759984b1cac81804ef876807ce17",
+      "timm_convnext_sha256": "b6f993a543350ef26bb66f38996ea2b7b5bd17aa2c943b71a6f7a3f3f2ab20d5"
+    },
+    "artifacts_sha256": {
+      "research/image_level_replication/v2/R202_CLOSEOUT.md": "ed0d417affce3f65d940c8fb50b00529d55290158e2ab55d59ed2dbc27dab124",
+      "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/closeout.json": "aa4f1b1b87d6c2011be06e836c9973583b0885fe638946ac95d8518494bde110",
+      "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/history.csv": "a16fb05153b886ef95294bd823973c21a8eb90cfffd2e855a854768371a89e19"
+    },
+    "checkpoint_inventory": {
+      "best.pt": {
+        "bytes": 351068039,
+        "mtime_ns": 1791657393889841700
+      },
+      "best_ema_accuracy.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791657393026763000
+      },
+      "best_ema_macro_f1.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791658465804979100
+      },
+      "best_macro_f1.pt": {
+        "bytes": 351068039,
+        "mtime_ns": 1791661517701742700
+      },
+      "best_raw_accuracy.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791661516991811200
+      },
+      "best_raw_macro_f1.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791661517286386400
+      },
+      "failure_1791653062174728000_diagnostic.pt": {
+        "bytes": 350925895,
+        "mtime_ns": 1791653065414311100
+      },
+      "failure_1791655093929516500_diagnostic.pt": {
+        "bytes": 350925895,
+        "mtime_ns": 1791655096665587500
+      },
+      "final.pt": {
+        "bytes": 702144335,
+        "mtime_ns": 1791663549567647300
+      },
+      "latest.pt": {
+        "bytes": 2457266933,
+        "mtime_ns": 1791663545221927500
+      }
+    },
+    "completed_artifacts_preserved": true
+  },
+  "historical_preservation_after": {
+    "source_signature": {
+      "config_sha256": "c4c198140a51105f607fa3900a4d4900526e1b1a363f4f5c78f676225d7df8d9",
+      "code_sha256": {
+        "research/image_level_replication/v2/convnext_core.py": "49f4b542e23390f319e8028d570ee3f32e502c27203ce3c974f28472c038e3be",
+        "research/image_level_replication/v2/train_convnext_base.py": "f8b2807cb0deb5ef97574e34940636ca3b1474aeb0ebed3556b4aaf975dca68c",
+        "research/image_level_replication/v2/preflight_convnext_base.py": "8cfadaf866594ad53ea206052dcf07a255bc8653d1ee3aca879472ea18e4b1b2",
+        "research/image_level_replication/v2/core.py": "687f5df9ac7af25796da65c6991583e8869bb0ca45cdbb1521fb39caadd81bf6",
+        "research/image_level_replication/v2/train_b3.py": "536e2893bb35112eeab29337c1c75c0c3e219558caa9e7511c8040899e7dd177",
+        "research/image_level_replication/v2/prepare_protocol.py": "81d04fe600b784b13eb57a2d8dd47d347aa9454bbaa898833d7ca9cb01bde075",
+        "research/image_level_replication/prepare_protocol.py": "033f164ed776d2f7caabc0212a5a21efe04a4a21c384f91e44a882fa1deded42",
+        "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+        "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+        "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+      },
+      "protocol_sha256": "b2a5c5acb1c527af778b4044554d88af605679549716b4a65a7fb56fc2e6671f",
+      "fold_manifest_sha256": "c69b7da5441e151a2e2248a987994472091018b8ea9c8069d1177bd50b7ff1aa",
+      "pretrained_sha256": "dd7a88d111c8af2295cb744f5bba888eca26759984b1cac81804ef876807ce17",
+      "timm_convnext_sha256": "b6f993a543350ef26bb66f38996ea2b7b5bd17aa2c943b71a6f7a3f3f2ab20d5"
+    },
+    "artifacts_sha256": {
+      "research/image_level_replication/v2/R202_CLOSEOUT.md": "ed0d417affce3f65d940c8fb50b00529d55290158e2ab55d59ed2dbc27dab124",
+      "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/closeout.json": "aa4f1b1b87d6c2011be06e836c9973583b0885fe638946ac95d8518494bde110",
+      "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/history.csv": "a16fb05153b886ef95294bd823973c21a8eb90cfffd2e855a854768371a89e19"
+    },
+    "checkpoint_inventory": {
+      "best.pt": {
+        "bytes": 351068039,
+        "mtime_ns": 1791657393889841700
+      },
+      "best_ema_accuracy.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791657393026763000
+      },
+      "best_ema_macro_f1.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791658465804979100
+      },
+      "best_macro_f1.pt": {
+        "bytes": 351068039,
+        "mtime_ns": 1791661517701742700
+      },
+      "best_raw_accuracy.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791661516991811200
+      },
+      "best_raw_macro_f1.pt": {
+        "bytes": 351068103,
+        "mtime_ns": 1791661517286386400
+      },
+      "failure_1791653062174728000_diagnostic.pt": {
+        "bytes": 350925895,
+        "mtime_ns": 1791653065414311100
+      },
+      "failure_1791655093929516500_diagnostic.pt": {
+        "bytes": 350925895,
+        "mtime_ns": 1791655096665587500
+      },
+      "final.pt": {
+        "bytes": 702144335,
+        "mtime_ns": 1791663549567647300
+      },
+      "latest.pt": {
+        "bytes": 2457266933,
+        "mtime_ns": 1791663545221927500
+      }
+    },
+    "completed_artifacts_preserved": true
+  },
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.9.1",
+    "timm": "0.9.16"
+  },
+  "elapsed_seconds": 8.6338191999821,
+  "note": "Two disposable CPU optimizer updates are correctness probes. Their states are discarded; no training experiment or accuracy is recorded."
+}
