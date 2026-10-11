@@ -2,6 +2,8 @@
 
 Links open original files. This is navigation/provenance, not a finished report or new experiment. [source_manifest.csv](source_manifest.csv) records exact source paths and SHA-256 hashes. Accuracy below is percent; macro-F1 is a fraction.
 
+[Final local/Git readiness audit](FINAL_READINESS_AUDIT.md): preservation, readable assets, metric consistency and remaining reporting tasks.
+
 ## Current outcomes: separate protocols
 
 | Method/cohort | Accuracy | Macro-F1 | Source |

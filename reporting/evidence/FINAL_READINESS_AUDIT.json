@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "scope": "saved_artifact_readiness_only",
+  "training": false,
+  "inference": false,
+  "prior_full_content_hash_gate": "passed",
+  "preserved_metadata_unchanged": 67547,
+  "preservation_issues": [],
+  "saved_media_files": 2286,
+  "readable_png_jpeg": 1204,
+  "readable_pdf": 1082,
+  "media_issues": [],
+  "source_manifest_files": 286,
+  "source_hash_issues": [],
+  "tracked_curated_sources": 285,
+  "local_only_curated_sources": [
+    "research/literature/incoming/SciSpace Literature Review.xlsx"
+  ],
+  "elapsed_seconds": 16.7,
+  "date": "2026-10-11",
+  "audited_commit": "42cfbc4fe2d32bfde619ef7a44ef9f1a198a8fef",
+  "organization_finalized": true,
+  "report_drafting_can_begin": true,
+  "git_history_connectivity": "passed",
+  "github_head_verified": "42cfbc4fe2d32bfde619ef7a44ef9f1a198a8fef",
+  "selected_result_packages": 32,
+  "prediction_rows_checked": 48096,
+  "separate_probability_csvs": 16,
+  "class_score_csvs": 37,
+  "raw_matrix_csvs": 32,
+  "normalized_matrix_csvs": 32,
+  "backbones_with_complete_curves": 10,
+  "s80_xai_cases": 10,
+  "s80_xai_branch_explanations": 50,
+  "exact_s83_xai_complete": false,
+  "representative_pdf_layout_review": "passed; three saved plots rendered and inspected",
+  "remaining_reporting_tasks": [
+    "method-specific S83 XAI or explicit earlier-S80 captions",
+    "current curated report table",
+    "bibliography encoding/citation preparation",
+    "guide format/team details and manuscript layout"
+  ]
+}
