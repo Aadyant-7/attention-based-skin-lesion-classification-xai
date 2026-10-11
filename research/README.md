@@ -1,5 +1,9 @@
 # Structured research workspace
 
+## Local location
+
+Use `E:\Minor Project\Project Development`; the former C: location remains a compatibility junction. [Verified migration and artifact paths](migration/LOCAL_DRIVE_MIGRATION.md).
+
 ## Current work — 11 October 2026
 
 [R203 completed closeout](convnext_base_original/CLOSEOUT.md): **30 epochs completed**, original exploratory split. Best accuracy **93.213573%** raw epoch20; best macro-F1 **0.890102** EMA epoch27. Two fixed saved-probability CPU fusions did not improve S83 accuracy: addition93.945442%, Small replacement93.812375%. **Retain S83 94.011976% / 0.895201. GPU training closed; drafting next.** No extension or test evaluation queued. Source/config/closeout: `research/convnext_base_original/`; verified artifacts and bounded fusion study: `results/structured_experiments/convnext_base_original_v1/`; local checkpoints: corresponding `checkpoints/structured_experiments/convnext_base_original_v1/`.

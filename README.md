@@ -2,6 +2,10 @@
 
 B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **structured-research**.
 
+## Local project location
+
+The complete local project is now at `E:\Minor Project\Project Development`. All files and Git history were verified; the old C: path is a compatibility junction to E:. [Migration record and commands](research/migration/LOCAL_DRIVE_MIGRATION.md).
+
 ## Training closed — 11 October 2026
 
 [R203 verified closeout](research/convnext_base_original/CLOSEOUT.md): all **30 epochs completed**, best accuracy **93.213573%** (raw epoch 20), best macro-F1 **0.890102** (EMA epoch 27). Original exploratory split: 7,009 training / 1,503 validation images; fresh external ConvNeXt-V2 Base initialization. Checkpoints, predictions, class scores, confusion matrices, curves and source hashes are verified.
