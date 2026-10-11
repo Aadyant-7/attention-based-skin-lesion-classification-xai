@@ -1,0 +1,5 @@
+experiment_id,display_name,accuracy,macro_f1
+r203_convnextv2_base_original_exploratory_seed42,R203 Base standalone,0.9321357285429142,0.8885281344320528
+s83_cbam_f1_addition_equal_six_exploratory_seed42,S83 existing equal-six,0.9401197604790419,0.8952008370253541
+r204_r203_equal_seven_original_exploratory_seed42,R204 equal-seven: S83 + Base,0.9394544244843646,0.8913504276692493
+r205_r203_small_replacement_equal_six_original_exploratory_seed42,R205 equal-six: Base replaces Small,0.93812375249501,0.8960108493677571

@@ -2,11 +2,13 @@
 
 B.Tech CSE Minor Project · HAM10000 · seven classes · active branch: **structured-research**.
 
-## Active run — 11 October 2026
+## Training closed — 11 October 2026
 
-[R203: fresh ConvNeXt-V2 Base + EMA on the original exploratory split](research/convnext_base_original/PLAN.md). One authorized **30-epoch** run, 7,009 training / 1,503 validation images, seed 42. It starts from official external pretrained weights; the different-split R202 project checkpoint is not an initializer. Raw and EMA validation branches, predictions, checkpoints and complete figures are saved separately. No test inference or automatic subsequent experiment.
+[R203 verified closeout](research/convnext_base_original/CLOSEOUT.md): all **30 epochs completed**, best accuracy **93.213573%** (raw epoch 20), best macro-F1 **0.890102** (EMA epoch 27). Original exploratory split: 7,009 training / 1,503 validation images; fresh external ConvNeXt-V2 Base initialization. Checkpoints, predictions, class scores, confusion matrices, curves and source hashes are verified.
 
-Start/recovery/monitor commands and output paths: [R203 plan](research/convnext_base_original/PLAN.md). Configuration: [config.json](research/convnext_base_original/config.json). Preparation evidence: `results/structured_experiments/convnext_base_original_v1/preparation/`. Results and checkpoints use the same study name in their respective `structured_experiments/` folders.
+Two fixed CPU fusions: Base addition equal-seven **93.945442% / 0.891350 macro-F1**; Base replacing Small equal-six **93.812375% / 0.896011**. Both reduce accuracy versus S83. **Retain S83: 94.011976% exploratory validation / 0.895201 macro-F1.** These are validation results; the existing S83 historical test audit remains **87.558217%**. No new test evaluation occurred.
+
+GPU training is closed; no extension or further experiment is queued. Next: drafting from the verified result tables/figures and methodology/XAI evidence. Exact results, ensemble constituents and artifact paths: [R203 closeout](research/convnext_base_original/CLOSEOUT.md). Original config/launch plan are preserved.
 
 R202 completed 50 epochs on its **different 902-image V2 inner-validation cohort**: best accuracy **93.2373%**, best macro-F1 **0.888584** (different selectors). [Verified closeout](research/image_level_replication/v2/R202_CLOSEOUT.md). Existing original-split S83 remains **94.011976% validation / 87.558217% historical test audit**. R203 is not yet a result and no accuracy gain is assumed.
 

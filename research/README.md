@@ -2,7 +2,7 @@
 
 ## Current work — 11 October 2026
 
-[R203 plan and commands](convnext_base_original/PLAN.md): fresh ConvNeXt-V2 Base + fixed EMA0.999, **30 epochs** on the original exploratory manifest (7,009 train / 1,503 validation). External pretrained initialization; no R202 checkpoint reuse, test inference or automatic next run. Source/config: `research/convnext_base_original/`; artifacts: `results/structured_experiments/convnext_base_original_v1/`; local checkpoints: corresponding `checkpoints/structured_experiments/convnext_base_original_v1/`.
+[R203 completed closeout](convnext_base_original/CLOSEOUT.md): **30 epochs completed**, original exploratory split. Best accuracy **93.213573%** raw epoch20; best macro-F1 **0.890102** EMA epoch27. Two fixed saved-probability CPU fusions did not improve S83 accuracy: addition93.945442%, Small replacement93.812375%. **Retain S83 94.011976% / 0.895201. GPU training closed; drafting next.** No extension or test evaluation queued. Source/config/closeout: `research/convnext_base_original/`; verified artifacts and bounded fusion study: `results/structured_experiments/convnext_base_original_v1/`; local checkpoints: corresponding `checkpoints/structured_experiments/convnext_base_original_v1/`.
 
 R202's completed different-split result is preserved in [its verified closeout](image_level_replication/v2/R202_CLOSEOUT.md). Sections below are chronological historical plans/status; their pending-launch and test-lock statements reflect the dates written and do not supersede the current R203 plan.
 

@@ -1,5 +1,7 @@
 # R203 — ConvNeXt-V2 Base on the original exploratory split
 
+**Completed and closed:** [verified closeout](CLOSEOUT.md). All 30 epochs completed; best accuracy 93.213573%, best macro-F1 0.890102 at a different checkpoint. Two fixed CPU ensemble comparisons did not improve S83 accuracy. Retain S83 at 94.011976%; no extension or further training is queued. Original launch plan below is preserved.
+
 **Authorized:** prepare and launch one independent 30-epoch run. Stop interacting after logging, a recoverable checkpoint and the first accepted update are confirmed. No automatic next experiment, ensemble or test evaluation.
 
 ## Purpose and comparison

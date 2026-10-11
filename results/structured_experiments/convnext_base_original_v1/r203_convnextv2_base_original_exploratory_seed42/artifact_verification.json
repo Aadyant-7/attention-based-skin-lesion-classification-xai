@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "prediction_packages": [
+    {
+      "package": "root",
+      "epoch": 20,
+      "branch": "raw",
+      "accuracy": 0.9321357285429142,
+      "macro_f1": 0.8885281344320528,
+      "prediction_sha256": "843d17c0f63c3bbbdc934b23cb1368fb7a6f3cd45a1606544445bbce9c11dace"
+    },
+    {
+      "package": "best_accuracy",
+      "epoch": 20,
+      "branch": "raw",
+      "accuracy": 0.9321357285429142,
+      "macro_f1": 0.8885281344320528,
+      "prediction_sha256": "843d17c0f63c3bbbdc934b23cb1368fb7a6f3cd45a1606544445bbce9c11dace"
+    },
+    {
+      "package": "best_macro_f1",
+      "epoch": 27,
+      "branch": "ema",
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8901017581996019,
+      "prediction_sha256": "50cedec688329f6f17963cdd4f12e3a0a917409fb6c7309dea3ea4a41d4c76af"
+    },
+    {
+      "package": "raw_accuracy",
+      "epoch": 20,
+      "branch": "raw",
+      "accuracy": 0.9321357285429142,
+      "macro_f1": 0.8885281344320528,
+      "prediction_sha256": "843d17c0f63c3bbbdc934b23cb1368fb7a6f3cd45a1606544445bbce9c11dace"
+    },
+    {
+      "package": "raw_macro_f1",
+      "epoch": 26,
+      "branch": "raw",
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8892637786041038,
+      "prediction_sha256": "5c4967bc3dfa6aab4704653b643eb7917051752d008af54ef75011c2900ea7c4"
+    },
+    {
+      "package": "ema_accuracy",
+      "epoch": 25,
+      "branch": "ema",
+      "accuracy": 0.9321357285429142,
+      "macro_f1": 0.8878644342497978,
+      "prediction_sha256": "f62949bc0e98d7fe9a5e11a7bff24c4db83c4728e0be3b447aa6284646f79bcf"
+    },
+    {
+      "package": "ema_macro_f1",
+      "epoch": 27,
+      "branch": "ema",
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8901017581996019,
+      "prediction_sha256": "50cedec688329f6f17963cdd4f12e3a0a917409fb6c7309dea3ea4a41d4c76af"
+    },
+    {
+      "package": "final_raw",
+      "epoch": 30,
+      "branch": "raw",
+      "accuracy": 0.9321357285429142,
+      "macro_f1": 0.886587244504925,
+      "prediction_sha256": "667f0a4a3b21c9e1f0558b0e1f71887a146742b63c61dc46c919f33d7b68e254"
+    },
+    {
+      "package": "final_ema",
+      "epoch": 30,
+      "branch": "ema",
+      "accuracy": 0.9301397205588823,
+      "macro_f1": 0.8867200172335516,
+      "prediction_sha256": "c554a9b01fd8b532edaa96490f70babe85d4141b3a4ea4d08d93173142f2dfa3"
+    }
+  ],
+  "sample_count": 1503,
+  "recomputed_metrics": true,
+  "class_scores_and_confusion_csvs_verified": true,
+  "png_images_decoded": 40,
+  "pdf_headers_and_eof_checked": 40,
+  "test_images_opened": 0,
+  "gpu_used": false
+}

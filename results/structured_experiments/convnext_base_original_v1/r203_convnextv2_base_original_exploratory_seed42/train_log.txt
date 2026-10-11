@@ -1,0 +1,334 @@
+2026-10-11 12:36:48,557 LOGGING/CHECKPOINTING ACTIVE resume=False committed_epoch=0 train=7009 exploratory_val=1503 latest=checkpoints/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42/latest.pt; no test loader
+2026-10-11 12:36:59,099 FIRST ACCEPTED GPU UPDATE; logging and committed recovery checkpoint active
+2026-10-11 12:36:59,099 epoch 1/30 effective update 1/220 stage=head_warmup weighted_CE=2.301205
+2026-10-11 12:37:02,996 epoch 1/30 effective update 25/220 stage=head_warmup weighted_CE=1.472766
+2026-10-11 12:37:07,039 epoch 1/30 effective update 50/220 stage=head_warmup weighted_CE=1.658902
+2026-10-11 12:37:11,218 epoch 1/30 effective update 75/220 stage=head_warmup weighted_CE=1.199566
+2026-10-11 12:37:15,404 epoch 1/30 effective update 100/220 stage=head_warmup weighted_CE=1.509523
+2026-10-11 12:37:19,364 epoch 1/30 effective update 125/220 stage=head_warmup weighted_CE=1.318364
+2026-10-11 12:37:23,341 epoch 1/30 effective update 150/220 stage=head_warmup weighted_CE=1.452901
+2026-10-11 12:37:27,315 epoch 1/30 effective update 175/220 stage=head_warmup weighted_CE=1.492273
+2026-10-11 12:37:31,275 epoch 1/30 effective update 200/220 stage=head_warmup weighted_CE=1.213886
+2026-10-11 12:37:36,196 epoch 1/30 effective update 220/220 stage=head_warmup weighted_CE=0.429249
+2026-10-11 12:38:00,811 EPOCH 1 raw_accuracy=0.721224 raw_macroF1=0.348455 EMA_accuracy=None EMA_macroF1=None best_epoch=1 meaningful_stale=0 status=running
+2026-10-11 12:38:09,047 epoch 2/30 effective update 1/220 stage=head_warmup weighted_CE=1.166548
+2026-10-11 12:38:12,841 epoch 2/30 effective update 25/220 stage=head_warmup weighted_CE=1.284783
+2026-10-11 12:38:16,787 epoch 2/30 effective update 50/220 stage=head_warmup weighted_CE=1.151810
+2026-10-11 12:38:20,735 epoch 2/30 effective update 75/220 stage=head_warmup weighted_CE=0.739159
+2026-10-11 12:38:24,689 epoch 2/30 effective update 100/220 stage=head_warmup weighted_CE=1.421081
+2026-10-11 12:38:28,643 epoch 2/30 effective update 125/220 stage=head_warmup weighted_CE=0.870444
+2026-10-11 12:38:32,589 epoch 2/30 effective update 150/220 stage=head_warmup weighted_CE=1.331445
+2026-10-11 12:38:36,541 epoch 2/30 effective update 175/220 stage=head_warmup weighted_CE=0.984214
+2026-10-11 12:38:40,503 epoch 2/30 effective update 200/220 stage=head_warmup weighted_CE=1.115631
+2026-10-11 12:38:44,335 epoch 2/30 effective update 220/220 stage=head_warmup weighted_CE=0.123102
+2026-10-11 12:39:06,853 EPOCH 2 raw_accuracy=0.732535 raw_macroF1=0.470812 EMA_accuracy=None EMA_macroF1=None best_epoch=2 meaningful_stale=0 status=running
+2026-10-11 12:39:06,885 EMA initialized after committed head warmup; decay=0.999
+2026-10-11 12:39:18,757 epoch 3/30 effective update 1/220 stage=full_fine_tuning weighted_CE=1.050689
+2026-10-11 12:39:33,851 epoch 3/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.995395
+2026-10-11 12:39:49,607 epoch 3/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.750214
+2026-10-11 12:40:05,394 epoch 3/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.905062
+2026-10-11 12:40:21,191 epoch 3/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.916843
+2026-10-11 12:40:36,943 epoch 3/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.793178
+2026-10-11 12:40:52,669 epoch 3/30 effective update 150/220 stage=full_fine_tuning weighted_CE=1.002447
+2026-10-11 12:41:08,406 epoch 3/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.960346
+2026-10-11 12:41:24,117 epoch 3/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.646594
+2026-10-11 12:41:39,955 epoch 3/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.080746
+2026-10-11 12:42:25,958 EPOCH 3 raw_accuracy=0.821025 raw_macroF1=0.666033 EMA_accuracy=0.7438456420492349 EMA_macroF1=0.5068494511068912 best_epoch=3 meaningful_stale=0 status=running
+2026-10-11 12:42:34,988 epoch 4/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.712333
+2026-10-11 12:42:50,073 epoch 4/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.969870
+2026-10-11 12:43:05,849 epoch 4/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.782220
+2026-10-11 12:43:21,625 epoch 4/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.686628
+2026-10-11 12:43:37,486 epoch 4/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.582190
+2026-10-11 12:43:53,380 epoch 4/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.391904
+2026-10-11 12:44:09,282 epoch 4/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.931779
+2026-10-11 12:44:25,203 epoch 4/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.894634
+2026-10-11 12:44:40,950 epoch 4/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.821714
+2026-10-11 12:44:53,906 epoch 4/30 effective update 220/220 stage=full_fine_tuning weighted_CE=4.837555
+2026-10-11 12:45:40,584 EPOCH 4 raw_accuracy=0.849634 raw_macroF1=0.757461 EMA_accuracy=0.7764471057884231 EMA_macroF1=0.5916599403460372 best_epoch=4 meaningful_stale=0 status=running
+2026-10-11 12:45:49,579 epoch 5/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.360201
+2026-10-11 12:46:04,651 epoch 5/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.380984
+2026-10-11 12:46:20,360 epoch 5/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.473458
+2026-10-11 12:46:36,116 epoch 5/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.583975
+2026-10-11 12:46:51,870 epoch 5/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.521140
+2026-10-11 12:47:07,599 epoch 5/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.567819
+2026-10-11 12:47:23,284 epoch 5/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.173170
+2026-10-11 12:47:39,059 epoch 5/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.187606
+2026-10-11 12:47:54,789 epoch 5/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.592840
+2026-10-11 12:48:08,090 epoch 5/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.087639
+2026-10-11 12:48:53,237 EPOCH 5 raw_accuracy=0.855622 raw_macroF1=0.775822 EMA_accuracy=0.8110445775116434 EMA_macroF1=0.6861516756306208 best_epoch=5 meaningful_stale=0 status=running
+2026-10-11 12:49:02,299 epoch 6/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.437558
+2026-10-11 12:49:17,452 epoch 6/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.362023
+2026-10-11 12:49:33,212 epoch 6/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.245283
+2026-10-11 12:49:49,042 epoch 6/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.188088
+2026-10-11 12:50:04,858 epoch 6/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.406740
+2026-10-11 12:50:20,678 epoch 6/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.630844
+2026-10-11 12:50:36,481 epoch 6/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.504537
+2026-10-11 12:50:52,130 epoch 6/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.332385
+2026-10-11 12:51:07,832 epoch 6/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.146799
+2026-10-11 12:51:20,765 epoch 6/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.127404
+2026-10-11 12:52:05,352 EPOCH 6 raw_accuracy=0.846973 raw_macroF1=0.760566 EMA_accuracy=0.8343313373253493 EMA_macroF1=0.7316384555696285 best_epoch=5 meaningful_stale=1 status=running
+2026-10-11 12:52:14,246 epoch 7/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.239997
+2026-10-11 12:52:29,378 epoch 7/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.209631
+2026-10-11 12:52:45,079 epoch 7/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.159864
+2026-10-11 12:53:00,766 epoch 7/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.301770
+2026-10-11 12:53:16,427 epoch 7/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.316418
+2026-10-11 12:53:32,124 epoch 7/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.486300
+2026-10-11 12:53:47,934 epoch 7/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.334510
+2026-10-11 12:54:03,799 epoch 7/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.189419
+2026-10-11 12:54:19,747 epoch 7/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.350411
+2026-10-11 12:54:32,797 epoch 7/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.051327
+2026-10-11 12:55:18,647 EPOCH 7 raw_accuracy=0.899534 raw_macroF1=0.831301 EMA_accuracy=0.8582834331337326 EMA_macroF1=0.7792380003624457 best_epoch=7 meaningful_stale=0 status=running
+2026-10-11 12:55:27,782 epoch 8/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.439254
+2026-10-11 12:55:42,983 epoch 8/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.067232
+2026-10-11 12:55:58,744 epoch 8/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.071855
+2026-10-11 12:56:14,604 epoch 8/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.380136
+2026-10-11 12:56:30,384 epoch 8/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.299595
+2026-10-11 12:56:46,045 epoch 8/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.196932
+2026-10-11 12:57:01,708 epoch 8/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.127304
+2026-10-11 12:57:17,373 epoch 8/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.106869
+2026-10-11 12:57:33,067 epoch 8/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.439559
+2026-10-11 12:57:45,967 epoch 8/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000199
+2026-10-11 12:58:30,564 EPOCH 8 raw_accuracy=0.901530 raw_macroF1=0.843676 EMA_accuracy=0.8782435129740519 EMA_macroF1=0.8080353133073901 best_epoch=8 meaningful_stale=0 status=running
+2026-10-11 12:58:39,540 epoch 9/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.038727
+2026-10-11 12:58:54,647 epoch 9/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.101819
+2026-10-11 12:59:10,290 epoch 9/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.443467
+2026-10-11 12:59:25,977 epoch 9/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.285701
+2026-10-11 12:59:41,684 epoch 9/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.055225
+2026-10-11 12:59:57,457 epoch 9/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.028666
+2026-10-11 13:00:13,415 epoch 9/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.042388
+2026-10-11 13:00:29,342 epoch 9/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.103145
+2026-10-11 13:00:45,085 epoch 9/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.240329
+2026-10-11 13:00:58,070 epoch 9/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.023507
+2026-10-11 13:01:42,553 EPOCH 9 raw_accuracy=0.906188 raw_macroF1=0.820949 EMA_accuracy=0.8922155688622755 EMA_macroF1=0.8324182608683423 best_epoch=9 meaningful_stale=0 status=running
+2026-10-11 13:01:51,671 epoch 10/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.096722
+2026-10-11 13:02:06,848 epoch 10/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.058800
+2026-10-11 13:02:22,677 epoch 10/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.076819
+2026-10-11 13:02:38,386 epoch 10/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.043306
+2026-10-11 13:02:54,139 epoch 10/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.074912
+2026-10-11 13:03:09,886 epoch 10/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.044765
+2026-10-11 13:03:25,566 epoch 10/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.104197
+2026-10-11 13:03:41,271 epoch 10/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.071409
+2026-10-11 13:03:56,973 epoch 10/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.021313
+2026-10-11 13:04:09,959 epoch 10/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000200
+2026-10-11 13:04:55,329 EPOCH 10 raw_accuracy=0.910845 raw_macroF1=0.849641 EMA_accuracy=0.9028609447771124 EMA_macroF1=0.8432052870570199 best_epoch=10 meaningful_stale=0 status=running
+2026-10-11 13:05:04,401 epoch 11/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.148708
+2026-10-11 13:05:19,454 epoch 11/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.037284
+2026-10-11 13:05:35,207 epoch 11/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.171261
+2026-10-11 13:05:50,979 epoch 11/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.357297
+2026-10-11 13:06:06,879 epoch 11/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.084482
+2026-10-11 13:06:22,813 epoch 11/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.328109
+2026-10-11 13:06:38,654 epoch 11/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.106887
+2026-10-11 13:06:54,371 epoch 11/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.110536
+2026-10-11 13:07:10,124 epoch 11/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.016618
+2026-10-11 13:07:23,148 epoch 11/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000703
+2026-10-11 13:08:07,786 EPOCH 11 raw_accuracy=0.913506 raw_macroF1=0.836601 EMA_accuracy=0.9108449767132402 EMA_macroF1=0.8558203546364253 best_epoch=11 meaningful_stale=0 status=running
+2026-10-11 13:08:16,946 epoch 12/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.017915
+2026-10-11 13:08:32,117 epoch 12/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.053073
+2026-10-11 13:08:47,786 epoch 12/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.004588
+2026-10-11 13:09:03,460 epoch 12/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.120373
+2026-10-11 13:09:19,134 epoch 12/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.047343
+2026-10-11 13:09:34,842 epoch 12/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.052028
+2026-10-11 13:09:50,577 epoch 12/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.019134
+2026-10-11 13:10:06,294 epoch 12/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.003875
+2026-10-11 13:10:22,069 epoch 12/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.031449
+2026-10-11 13:10:35,089 epoch 12/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000002
+2026-10-11 13:11:19,687 EPOCH 12 raw_accuracy=0.918829 raw_macroF1=0.849264 EMA_accuracy=0.914836992681304 EMA_macroF1=0.8653139972471408 best_epoch=12 meaningful_stale=0 status=running
+2026-10-11 13:11:28,927 epoch 13/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.049372
+2026-10-11 13:11:44,092 epoch 13/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.036850
+2026-10-11 13:11:59,924 epoch 13/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.041371
+2026-10-11 13:12:15,873 epoch 13/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.026260
+2026-10-11 13:12:31,924 epoch 13/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.061668
+2026-10-11 13:12:47,636 epoch 13/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.021808
+2026-10-11 13:13:03,380 epoch 13/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.001566
+2026-10-11 13:13:19,118 epoch 13/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.006709
+2026-10-11 13:13:34,899 epoch 13/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.004903
+2026-10-11 13:13:48,031 epoch 13/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000002
+2026-10-11 13:14:34,416 EPOCH 13 raw_accuracy=0.916168 raw_macroF1=0.857086 EMA_accuracy=0.9214903526280772 EMA_macroF1=0.8709950321389262 best_epoch=13 meaningful_stale=0 status=running
+2026-10-11 13:14:43,437 epoch 14/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.027200
+2026-10-11 13:14:58,589 epoch 14/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.070823
+2026-10-11 13:15:14,303 epoch 14/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.017436
+2026-10-11 13:15:30,034 epoch 14/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.001167
+2026-10-11 13:15:45,704 epoch 14/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.001667
+2026-10-11 13:16:01,403 epoch 14/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.062787
+2026-10-11 13:16:17,170 epoch 14/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.047605
+2026-10-11 13:16:32,876 epoch 14/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.019267
+2026-10-11 13:16:48,661 epoch 14/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.002286
+2026-10-11 13:17:01,651 epoch 14/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000197
+2026-10-11 13:17:45,931 EPOCH 14 raw_accuracy=0.924152 raw_macroF1=0.867766 EMA_accuracy=0.9214903526280772 EMA_macroF1=0.8687334606063997 best_epoch=14 meaningful_stale=0 status=running
+2026-10-11 13:17:55,177 epoch 15/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.001122
+2026-10-11 13:18:10,470 epoch 15/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000935
+2026-10-11 13:18:26,409 epoch 15/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.017251
+2026-10-11 13:18:42,117 epoch 15/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.001943
+2026-10-11 13:18:57,828 epoch 15/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000910
+2026-10-11 13:19:13,624 epoch 15/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.006392
+2026-10-11 13:19:29,426 epoch 15/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000392
+2026-10-11 13:19:45,194 epoch 15/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.730906
+2026-10-11 13:20:01,011 epoch 15/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.033541
+2026-10-11 13:20:14,024 epoch 15/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000009
+2026-10-11 13:20:59,082 EPOCH 15 raw_accuracy=0.922821 raw_macroF1=0.865641 EMA_accuracy=0.9261477045908184 EMA_macroF1=0.8771782520904823 best_epoch=15 meaningful_stale=0 status=running
+2026-10-11 13:21:08,121 epoch 16/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000294
+2026-10-11 13:21:23,149 epoch 16/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.030990
+2026-10-11 13:21:38,829 epoch 16/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.050595
+2026-10-11 13:21:54,553 epoch 16/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.066719
+2026-10-11 13:22:10,296 epoch 16/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.024457
+2026-10-11 13:22:25,971 epoch 16/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000144
+2026-10-11 13:22:41,720 epoch 16/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000617
+2026-10-11 13:22:57,388 epoch 16/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.001005
+2026-10-11 13:23:13,073 epoch 16/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000764
+2026-10-11 13:23:26,015 epoch 16/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000008
+2026-10-11 13:24:11,668 EPOCH 16 raw_accuracy=0.930805 raw_macroF1=0.881665 EMA_accuracy=0.9268130405854956 EMA_macroF1=0.8791493128173772 best_epoch=16 meaningful_stale=0 status=running
+2026-10-11 13:24:20,690 epoch 17/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000107
+2026-10-11 13:24:35,850 epoch 17/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000053
+2026-10-11 13:24:51,580 epoch 17/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000181
+2026-10-11 13:25:07,336 epoch 17/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.077858
+2026-10-11 13:25:23,074 epoch 17/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.059421
+2026-10-11 13:25:38,913 epoch 17/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000191
+2026-10-11 13:25:54,747 epoch 17/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000182
+2026-10-11 13:26:10,566 epoch 17/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.015686
+2026-10-11 13:26:26,399 epoch 17/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.034970
+2026-10-11 13:26:39,324 epoch 17/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000033
+2026-10-11 13:27:23,468 EPOCH 17 raw_accuracy=0.922821 raw_macroF1=0.870718 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8823981743667322 best_epoch=16 meaningful_stale=1 status=running
+2026-10-11 13:27:32,614 epoch 18/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000150
+2026-10-11 13:27:47,681 epoch 18/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000042
+2026-10-11 13:28:03,410 epoch 18/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.001107
+2026-10-11 13:28:19,126 epoch 18/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000164
+2026-10-11 13:28:34,822 epoch 18/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000415
+2026-10-11 13:28:50,604 epoch 18/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.013992
+2026-10-11 13:29:06,339 epoch 18/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000153
+2026-10-11 13:29:21,995 epoch 18/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.004308
+2026-10-11 13:29:37,719 epoch 18/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.006934
+2026-10-11 13:29:50,731 epoch 18/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000000
+2026-10-11 13:30:34,005 EPOCH 18 raw_accuracy=0.925482 raw_macroF1=0.873586 EMA_accuracy=0.9281437125748503 EMA_macroF1=0.8768427815159917 best_epoch=16 meaningful_stale=2 status=running
+2026-10-11 13:30:43,115 epoch 19/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000130
+2026-10-11 13:30:58,214 epoch 19/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000048
+2026-10-11 13:31:13,921 epoch 19/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000060
+2026-10-11 13:31:29,712 epoch 19/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000050
+2026-10-11 13:31:45,545 epoch 19/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000026
+2026-10-11 13:32:01,334 epoch 19/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000738
+2026-10-11 13:32:17,208 epoch 19/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000035
+2026-10-11 13:32:32,955 epoch 19/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.002142
+2026-10-11 13:32:48,611 epoch 19/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.063092
+2026-10-11 13:33:01,545 epoch 19/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000008
+2026-10-11 13:33:45,826 EPOCH 19 raw_accuracy=0.931470 raw_macroF1=0.886279 EMA_accuracy=0.9268130405854956 EMA_macroF1=0.8749159604888892 best_epoch=19 meaningful_stale=0 status=running
+2026-10-11 13:33:55,081 epoch 20/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000652
+2026-10-11 13:34:10,174 epoch 20/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000039
+2026-10-11 13:34:25,900 epoch 20/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000063
+2026-10-11 13:34:41,623 epoch 20/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000147
+2026-10-11 13:34:57,391 epoch 20/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.160242
+2026-10-11 13:35:13,061 epoch 20/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000548
+2026-10-11 13:35:28,779 epoch 20/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000253
+2026-10-11 13:35:44,591 epoch 20/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.194380
+2026-10-11 13:36:00,355 epoch 20/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.026515
+2026-10-11 13:36:13,481 epoch 20/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000243
+2026-10-11 13:36:58,130 EPOCH 20 raw_accuracy=0.932136 raw_macroF1=0.888528 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8786866616375643 best_epoch=20 meaningful_stale=1 status=running
+2026-10-11 13:37:07,427 epoch 21/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000537
+2026-10-11 13:37:22,559 epoch 21/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000028
+2026-10-11 13:37:38,331 epoch 21/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000096
+2026-10-11 13:37:54,110 epoch 21/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000358
+2026-10-11 13:38:09,933 epoch 21/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000035
+2026-10-11 13:38:25,770 epoch 21/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000172
+2026-10-11 13:38:41,459 epoch 21/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000026
+2026-10-11 13:38:57,178 epoch 21/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000279
+2026-10-11 13:39:12,855 epoch 21/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000013
+2026-10-11 13:39:25,772 epoch 21/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000000
+2026-10-11 13:40:09,316 EPOCH 21 raw_accuracy=0.927478 raw_macroF1=0.878892 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8787873937311049 best_epoch=20 meaningful_stale=2 status=running
+2026-10-11 13:40:18,346 epoch 22/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000032
+2026-10-11 13:40:33,475 epoch 22/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000060
+2026-10-11 13:40:49,226 epoch 22/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000292
+2026-10-11 13:41:04,907 epoch 22/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.042760
+2026-10-11 13:41:20,587 epoch 22/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000180
+2026-10-11 13:41:36,257 epoch 22/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000191
+2026-10-11 13:41:51,998 epoch 22/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000061
+2026-10-11 13:42:07,907 epoch 22/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000188
+2026-10-11 13:42:23,878 epoch 22/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000163
+2026-10-11 13:42:36,919 epoch 22/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000024
+2026-10-11 13:43:20,057 EPOCH 22 raw_accuracy=0.930140 raw_macroF1=0.882236 EMA_accuracy=0.9301397205588823 EMA_macroF1=0.8790184709356302 best_epoch=20 meaningful_stale=3 status=running
+2026-10-11 13:43:29,303 epoch 23/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000687
+2026-10-11 13:43:44,488 epoch 23/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000104
+2026-10-11 13:44:00,292 epoch 23/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000010
+2026-10-11 13:44:16,105 epoch 23/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000215
+2026-10-11 13:44:31,860 epoch 23/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000055
+2026-10-11 13:44:47,532 epoch 23/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000226
+2026-10-11 13:45:03,201 epoch 23/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000184
+2026-10-11 13:45:18,910 epoch 23/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000277
+2026-10-11 13:45:34,633 epoch 23/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000016
+2026-10-11 13:45:47,569 epoch 23/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000000
+2026-10-11 13:46:31,101 EPOCH 23 raw_accuracy=0.925482 raw_macroF1=0.881340 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8797034971688664 best_epoch=20 meaningful_stale=4 status=running
+2026-10-11 13:46:40,263 epoch 24/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000029
+2026-10-11 13:46:55,319 epoch 24/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000005
+2026-10-11 13:47:11,009 epoch 24/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000018
+2026-10-11 13:47:26,702 epoch 24/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000643
+2026-10-11 13:47:42,412 epoch 24/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000006
+2026-10-11 13:47:58,186 epoch 24/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000007
+2026-10-11 13:48:14,136 epoch 24/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000017
+2026-10-11 13:48:30,086 epoch 24/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000013
+2026-10-11 13:48:45,789 epoch 24/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000038
+2026-10-11 13:48:58,757 epoch 24/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000043
+2026-10-11 13:49:42,156 EPOCH 24 raw_accuracy=0.930140 raw_macroF1=0.888640 EMA_accuracy=0.9301397205588823 EMA_macroF1=0.8812039326773906 best_epoch=20 meaningful_stale=5 status=running
+2026-10-11 13:49:51,776 epoch 25/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000016
+2026-10-11 13:50:06,846 epoch 25/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000115
+2026-10-11 13:50:22,554 epoch 25/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000014
+2026-10-11 13:50:38,260 epoch 25/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.435861
+2026-10-11 13:50:53,949 epoch 25/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000007
+2026-10-11 13:51:09,676 epoch 25/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000029
+2026-10-11 13:51:25,352 epoch 25/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000049
+2026-10-11 13:51:41,079 epoch 25/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000055
+2026-10-11 13:51:56,798 epoch 25/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000047
+2026-10-11 13:52:09,827 epoch 25/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000000
+2026-10-11 13:52:54,127 EPOCH 25 raw_accuracy=0.928809 raw_macroF1=0.883249 EMA_accuracy=0.9321357285429142 EMA_macroF1=0.8878644342497978 best_epoch=20 meaningful_stale=6 status=running
+2026-10-11 13:53:03,692 epoch 26/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000013
+2026-10-11 13:53:18,761 epoch 26/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000024
+2026-10-11 13:53:34,499 epoch 26/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000003
+2026-10-11 13:53:50,236 epoch 26/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000030
+2026-10-11 13:54:06,065 epoch 26/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.002731
+2026-10-11 13:54:21,943 epoch 26/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000217
+2026-10-11 13:54:37,722 epoch 26/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000053
+2026-10-11 13:54:53,470 epoch 26/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000016
+2026-10-11 13:55:09,143 epoch 26/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000011
+2026-10-11 13:55:22,113 epoch 26/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.001695
+2026-10-11 13:56:06,669 EPOCH 26 raw_accuracy=0.930140 raw_macroF1=0.889264 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8874058921163211 best_epoch=20 meaningful_stale=7 status=running
+2026-10-11 13:56:16,651 epoch 27/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000415
+2026-10-11 13:56:31,828 epoch 27/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000033
+2026-10-11 13:56:47,599 epoch 27/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000105
+2026-10-11 13:57:03,374 epoch 27/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000013
+2026-10-11 13:57:19,148 epoch 27/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000016
+2026-10-11 13:57:34,833 epoch 27/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.007032
+2026-10-11 13:57:50,547 epoch 27/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.002448
+2026-10-11 13:58:06,265 epoch 27/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000044
+2026-10-11 13:58:21,963 epoch 27/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000031
+2026-10-11 13:58:34,964 epoch 27/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000002
+2026-10-11 13:59:18,325 EPOCH 27 raw_accuracy=0.930805 raw_macroF1=0.887333 EMA_accuracy=0.9301397205588823 EMA_macroF1=0.8901017581996019 best_epoch=20 meaningful_stale=0 status=running
+2026-10-11 13:59:28,156 epoch 28/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000009
+2026-10-11 13:59:43,305 epoch 28/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.200078
+2026-10-11 13:59:59,248 epoch 28/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000036
+2026-10-11 14:00:15,237 epoch 28/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.004269
+2026-10-11 14:00:31,126 epoch 28/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000022
+2026-10-11 14:00:46,923 epoch 28/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000067
+2026-10-11 14:01:02,656 epoch 28/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000012
+2026-10-11 14:01:18,399 epoch 28/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.002277
+2026-10-11 14:01:34,149 epoch 28/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000037
+2026-10-11 14:01:47,244 epoch 28/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000003
+2026-10-11 14:02:30,757 EPOCH 28 raw_accuracy=0.930140 raw_macroF1=0.884708 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8858381830183841 best_epoch=20 meaningful_stale=1 status=running
+2026-10-11 14:02:40,164 epoch 29/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000022
+2026-10-11 14:02:55,262 epoch 29/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000033
+2026-10-11 14:03:10,969 epoch 29/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000006
+2026-10-11 14:03:26,677 epoch 29/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000171
+2026-10-11 14:03:42,393 epoch 29/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000025
+2026-10-11 14:03:58,103 epoch 29/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000144
+2026-10-11 14:04:13,801 epoch 29/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000029
+2026-10-11 14:04:29,518 epoch 29/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.000009
+2026-10-11 14:04:45,256 epoch 29/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000055
+2026-10-11 14:04:58,308 epoch 29/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000000
+2026-10-11 14:05:41,569 EPOCH 29 raw_accuracy=0.931470 raw_macroF1=0.886018 EMA_accuracy=0.929474384564205 EMA_macroF1=0.8858042470955085 best_epoch=20 meaningful_stale=2 status=running
+2026-10-11 14:05:51,441 epoch 30/30 effective update 1/220 stage=full_fine_tuning weighted_CE=0.000031
+2026-10-11 14:06:06,674 epoch 30/30 effective update 25/220 stage=full_fine_tuning weighted_CE=0.000081
+2026-10-11 14:06:22,571 epoch 30/30 effective update 50/220 stage=full_fine_tuning weighted_CE=0.000019
+2026-10-11 14:06:38,370 epoch 30/30 effective update 75/220 stage=full_fine_tuning weighted_CE=0.000111
+2026-10-11 14:06:54,106 epoch 30/30 effective update 100/220 stage=full_fine_tuning weighted_CE=0.000024
+2026-10-11 14:07:09,882 epoch 30/30 effective update 125/220 stage=full_fine_tuning weighted_CE=0.000056
+2026-10-11 14:07:25,654 epoch 30/30 effective update 150/220 stage=full_fine_tuning weighted_CE=0.000054
+2026-10-11 14:07:41,466 epoch 30/30 effective update 175/220 stage=full_fine_tuning weighted_CE=0.001589
+2026-10-11 14:07:57,292 epoch 30/30 effective update 200/220 stage=full_fine_tuning weighted_CE=0.000898
+2026-10-11 14:08:10,455 epoch 30/30 effective update 220/220 stage=full_fine_tuning weighted_CE=0.000001
+2026-10-11 14:08:54,171 EPOCH 30 raw_accuracy=0.932136 raw_macroF1=0.886587 EMA_accuracy=0.9301397205588823 EMA_macroF1=0.8867200172335516 best_epoch=20 meaningful_stale=3 status=completed
+2026-10-11 14:09:18,593 CLOSED at epoch=30 status=completed; stored exploratory predictions only; no test inference or next experiment

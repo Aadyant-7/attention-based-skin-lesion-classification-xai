@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "pid": 29116,
+  "committed_epoch": 30,
+  "max_epochs": 30,
+  "optimizer_updates": 6600,
+  "ema_updates": 6160,
+  "runtime_seconds": 5522.880983600044,
+  "meaningful_stopping": {
+    "automatic_early_stopping": false,
+    "stale": 3,
+    "last_meaningful_epoch": 27,
+    "accuracy_reference": 0.9308050565535595,
+    "macro_f1_reference": 0.8901017581996019,
+    "meaningful_improvement_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      27
+    ],
+    "stop": true,
+    "reason": "maximum_epochs"
+  },
+  "results": "results/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42",
+  "checkpoints": "checkpoints/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42",
+  "outer_assessment_loaded": false,
+  "stopping_reason": "maximum_epochs"
+}

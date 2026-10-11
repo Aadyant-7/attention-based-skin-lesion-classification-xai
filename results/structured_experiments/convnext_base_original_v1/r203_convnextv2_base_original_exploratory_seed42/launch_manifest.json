@@ -1,0 +1,26 @@
+{
+  "config_sha256": "930eefc6b411be82d1355385f2498d7fb5ca5ab509ac95605447e71a5d31c42a",
+  "code_sha256": {
+    "research/convnext_base_original/core.py": "271107f5245300ac5ae448912a7a4fef0e785538f9c23d9b205730051c6b326a",
+    "research/convnext_base_original/train.py": "1dd61393a39efefd58cd867c411a1ad1bb9707cc6bec1203968d928151fd9a5f",
+    "research/convnext_base_original/preflight.py": "a071c0251de6d98c6858152c403e620d4bc9af3c1f3d0205a694a26b77531ee9",
+    "research/image_level_replication/v2/convnext_core.py": "49f4b542e23390f319e8028d570ee3f32e502c27203ce3c974f28472c038e3be",
+    "research/image_level_replication/v2/core.py": "687f5df9ac7af25796da65c6991583e8869bb0ca45cdbb1521fb39caadd81bf6",
+    "research/image_level_replication/v2/train_b3.py": "536e2893bb35112eeab29337c1c75c0c3e219558caa9e7511c8040899e7dd177",
+    "research/image_level_replication/v2/prepare_protocol.py": "81d04fe600b784b13eb57a2d8dd47d347aa9454bbaa898833d7ca9cb01bde075",
+    "research/image_level_replication/prepare_protocol.py": "033f164ed776d2f7caabc0212a5a21efe04a4a21c384f91e44a882fa1deded42",
+    "research/train.py": "9f684fc3246cfedf80a6b4e8a2138039bc711282a3fda770671a30634fc846ba",
+    "research/experiment.py": "2336f3bfacabd6bc0396e3d154e695bad8421387b33b1ac3d8aacceb10cfc6e9",
+    "research/models.py": "d00d4719d6f2ff7cd6fee4d124916ed64759e1e8e850574b5f6426e1e139178e",
+    "research/common.py": "68bc539e0ef766067086d43bd67b958e504b74ac906b678261596784948973ac",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9",
+    "research/registry.py": "cc1f7b8c21391d99a8ce388a40100374a804c6913aae05cffab847101ab9b25b"
+  },
+  "split_manifest_sha256": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+  "locked_reference_manifest_sha256": "db1ce9f8b83f176001dd89fd332fb1668c7d2ba5f58d77157d293a09e2c2e696",
+  "locked_recipe_sha256": "f81281a212df6b5d1c9873e5788ea505caa801db24349b67ca5fffda2e83fb59",
+  "raw_metadata_sha256": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+  "reference_predictions_sha256": "9aece30ca72513610ac62ef0c615b558d91b11e99beca5e1edae6e1b631267dc",
+  "pretrained_sha256": "dd7a88d111c8af2295cb744f5bba888eca26759984b1cac81804ef876807ce17",
+  "timm_convnext_sha256": "b6f993a543350ef26bb66f38996ea2b7b5bd17aa2c943b71a6f7a3f3f2ab20d5"
+}

@@ -1,6 +1,6 @@
-## Current authorized work — 11 October 2026
+## Training closed; drafting next — 11 October 2026
 
-Run only [R203 fresh ConvNeXt-V2 Base + EMA on the original exploratory split](research/convnext_base_original/PLAN.md), capped at 30 epochs. After successful launch and logging/checkpoint verification, stop interacting until the user returns. Then verify/close out the run and inspect same-cohort complementarity before considering a bounded ensemble analysis. No automatic test evaluation or next model. Plans below are historical.
+[R203 closeout and final bounded fusion study](research/convnext_base_original/CLOSEOUT.md) are complete. Base standalone93.213573%, best macro-F1.890102 at a separate EMA checkpoint; addition/replacement both lower S83 accuracy. Retain S83 **94.011976% exploratory validation / .895201 macro-F1**. Do not extend, train, search weights or evaluate the test again automatically. Next work: draft the report/paper using the verified metrics, protocol-separated historical results, saved figures and exact implemented attention/XAI evidence. Do not turn validation scores into test claims. Plans below are historical.
 
 ## Active separate study: image-level replication V2 — revised Phase 1 complete
 

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "same_original_validation_cohort": true,
+  "original_reference_reproduced": true,
+  "sample_count": 1503,
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "source_checkpoints_and_predictions_hash_checked": true,
+  "fp32_cache_hashes_checked": true,
+  "finite_normalized_probabilities": true,
+  "exactly_two_fixed_fusions": true,
+  "fusion_outputs_sha256": {
+    "results/structured_experiments/convnext_base_original_v1/ensemble_comparison/r204_equal_seven/validation_predictions.csv": "c4071ca8a58b120c984d0c4e85b99a48ca08024caa2a6c1668300fbb94454831",
+    "results/structured_experiments/convnext_base_original_v1/ensemble_comparison/r204_equal_seven/validation_probabilities.csv": "749ae8cf9faccb56dfb7bd0ef8e09feac894b877d19c50f3e7f2ae0324fde5d2",
+    "results/structured_experiments/convnext_base_original_v1/ensemble_comparison/r205_replace_small_equal_six/validation_predictions.csv": "0a9d11da5d4a68ce9cf3150c0dfd0631a2add4f9bb64411019cce76926a974e9",
+    "results/structured_experiments/convnext_base_original_v1/ensemble_comparison/r205_replace_small_equal_six/validation_probabilities.csv": "ea4502a2e2ef8feb4eb70cd2a343fa857568ea7d20d7aaf39d31c4ac86cd976a"
+  },
+  "analysis_code_sha256": "fce4395cd4f31de568c59d463bcf0925c6f3731b1a5519e32c9b29f5d5291fde",
+  "gpu_used": false,
+  "test_images_opened": 0,
+  "png_images_decoded": 9,
+  "pdf_headers_and_eof_checked": 9,
+  "independent_probability_reconstruction_max_absolute_difference": 0.0,
+  "independently_recomputed_counts": {
+    "r204": {
+      "correct": 1412,
+      "gained": 11,
+      "lost": 12
+    },
+    "r205": {
+      "correct": 1410,
+      "gained": 11,
+      "lost": 14
+    }
+  }
+}

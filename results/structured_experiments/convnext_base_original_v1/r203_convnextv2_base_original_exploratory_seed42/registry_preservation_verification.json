@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "preexisting_registry_rows": 590,
+  "preexisting_registry_rows_unchanged": true,
+  "new_completed_ids": [
+    "r203_convnextv2_base_original_exploratory_seed42",
+    "r204_r203_equal_seven_original_exploratory_seed42",
+    "r205_r203_small_replacement_equal_six_original_exploratory_seed42"
+  ],
+  "original_checkpoints_not_modified": true,
+  "test_evaluation_performed": false,
+  "gpu_training_closed": true
+}

@@ -1,0 +1,8 @@
+{
+  "epoch": 1,
+  "effective_step": 1,
+  "optimizer_updates": 1,
+  "committed_checkpoint": "checkpoints/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42/latest.pt",
+  "checkpoint_exists": true,
+  "log_active": true
+}

@@ -1,0 +1,138 @@
+{
+  "accuracy": 0.9321357285429142,
+  "macro_precision": 0.9163224608682912,
+  "macro_recall": 0.8643046660546778,
+  "macro_f1": 0.8878644342497978,
+  "weighted_f1": 0.9310583958722211,
+  "loss": 0.474979469593409,
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "confusion_matrix": [
+    [
+      36,
+      6,
+      3,
+      0,
+      1,
+      3,
+      0
+    ],
+    [
+      3,
+      73,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      141,
+      0,
+      6,
+      15,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      14,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      2,
+      0,
+      135,
+      28,
+      0
+    ],
+    [
+      0,
+      1,
+      6,
+      0,
+      16,
+      983,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      19
+    ]
+  ],
+  "per_class": {
+    "akiec": {
+      "precision": 0.8571428571428571,
+      "recall": 0.7346938775510204,
+      "f1": 0.7912087912087912,
+      "support": 49
+    },
+    "bcc": {
+      "precision": 0.8795180722891566,
+      "recall": 0.948051948051948,
+      "f1": 0.9125,
+      "support": 77
+    },
+    "bkl": {
+      "precision": 0.9215686274509803,
+      "recall": 0.8545454545454545,
+      "f1": 0.8867924528301887,
+      "support": 165
+    },
+    "df": {
+      "precision": 1.0,
+      "recall": 0.8235294117647058,
+      "f1": 0.9032258064516129,
+      "support": 17
+    },
+    "mel": {
+      "precision": 0.8544303797468354,
+      "recall": 0.8083832335329342,
+      "f1": 0.8307692307692308,
+      "support": 167
+    },
+    "nv": {
+      "precision": 0.9515972894482091,
+      "recall": 0.9761668321747765,
+      "f1": 0.9637254901960784,
+      "support": 1007
+    },
+    "vasc": {
+      "precision": 0.95,
+      "recall": 0.9047619047619048,
+      "f1": 0.926829268292683,
+      "support": 21
+    }
+  },
+  "epoch": 25,
+  "experiment_id": "r203_convnextv2_base_original_exploratory_seed42",
+  "protocol": "exploratory_image_level",
+  "evaluation_split": "validation",
+  "inference_precision": "fp32",
+  "outer_assessment_loaded": false,
+  "correct": 1401,
+  "incorrect": 102,
+  "model": "convnextv2_base.fcmae_ft_in22k_in1k",
+  "branch": "ema",
+  "test_loaded": false,
+  "validation_images": 1503
+}

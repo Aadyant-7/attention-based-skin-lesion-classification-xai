@@ -1,0 +1,8 @@
+{
+  "pid": 29116,
+  "resume": false,
+  "committed_epoch": 0,
+  "results": "results/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42",
+  "checkpoints": "checkpoints/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42",
+  "outer_assessment_loaded": false
+}

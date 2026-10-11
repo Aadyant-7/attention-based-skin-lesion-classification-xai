@@ -1,0 +1,7 @@
+{
+  "base_fixes_s83_errors": 42,
+  "s83_fixes_base_errors": 54,
+  "shared_errors": 48,
+  "both_correct": 1359,
+  "oracle_note": "Correct-answer union is a diagnostic upper bound, never an actual ensemble result"
+}
