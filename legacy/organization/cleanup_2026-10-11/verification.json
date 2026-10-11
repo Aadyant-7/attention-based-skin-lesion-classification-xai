@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "organization_only",
+  "training": false,
+  "inference": false,
+  "preservation": {
+    "baseline_files": 67800,
+    "preserved_files": 67547,
+    "fresh_content_checks": 19486,
+    "preserved_checkpoints": 149,
+    "environment_metadata_checks": 48061,
+    "archives_verified": 10,
+    "moves_verified": 10,
+    "approved_deletions_verified": 233,
+    "baseline_sha256": "1eaf30ad7aa197e23f93912fc14584a5639e3abc235f066181dbeeb9894050be",
+    "full_hash": true
+  },
+  "runtime": {
+    "python_files_parsed": 189,
+    "archived_generator_parsed_not_executed": true,
+    "cpu_imports": 15,
+    "frozen_signatures": {
+      "R202": "unchanged",
+      "R203": "unchanged"
+    },
+    "cuda_initialized": false
+  },
+  "registry": {
+    "rows": 593,
+    "resolved_references": 1780
+  },
+  "reporting": {
+    "source_files": 286,
+    "hashes_verified": true
+  },
+  "navigation": {
+    "local_links_checked": 257
+  }
+}

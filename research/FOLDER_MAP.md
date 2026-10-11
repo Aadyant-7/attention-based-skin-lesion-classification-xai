@@ -1,45 +1,52 @@
-# Project folder map
+# Current project folder map
 
-## Active research
+Physical root: **`E:\Minor Project\Project Development`**. The old C: directory is a compatibility junction. Training is closed; current work is organization and preparation for reporting.
 
-| Path | One-line purpose |
+## Root folders and files
+
+| Path | What it contains / why it stays |
 |---|---|
-| `README.md`, `NEXT_STEPS.md` | Current entry point and phase plan. |
-| `research/README.md`, `research/PHASE1_AUDIT.md` | Infrastructure guide and Phase-1 findings. |
-| `research/common.py` | Class/protocol definitions, hashes and atomic writes. |
-| `research/models.py` | Six CNN feature-map adapters and optional CBAM. |
-| `research/experiment.py` | Run artifact writer; does not train. |
-| `research/registry.py` | Historical evidence import and safe run upserts. |
-| `research/plots.py`, `research/build.py` | Saved-evidence figures, dataset tables and preservation audit. |
-| `research/phase2/` | Protocol, comparison plan, literature generator and handoff. |
-| `research/configs/backbone_comparison/` | Five fixed planned configs plus optional B2; unlaunched. |
-| `research/literature/` | Verified-field CSV, paper table, citations and evidence notes. |
-| `research/tests/` | CPU/saved-evidence infrastructure checks. |
-| `results/master_experiment_registry.csv` | Authoritative evidence/run index. |
-| `results/datasets/` | Manifest audits and class-count tables/charts. |
-| `results/figures/legacy/`, `results/model_comparison/legacy/` | Historical presentation figures, separated by protocol. |
-| `results/structured_experiments/<id>/` | Future config/environment/log/history/metrics/predictions/plots. |
-| `results/model_comparison/structured/` | Future controlled backbone tables/charts. |
-| `results/ablations/`, `results/ensembles/`, `results/final/` | Future attention, fusion and frozen-test packages. |
-| `results/audit/`, `results/legacy/` | Verification, environment, immutable inventory and portable evidence. |
-| `checkpoints/structured/<id>/` | Future local `best.pt` and `latest.pt`. |
-| `research/xai/`, `results/xai/structured/` | Reserved new XAI code and labelled image/heatmap/overlay packages. |
+| `README.md` | Current method, evaluation summary and starting links. |
+| `NEXT_STEPS.md` | Remaining reporting/XAI tasks, with no queued experiments. |
+| `requirements.txt` | Recorded Python package requirements. |
+| `.gitignore`, `.gitattributes` | Local-asset exclusions and Git file handling. |
+| `reporting/` | Current report-facing navigation and curated evidence links. |
+| `research/` | Literature, shared implementation, configurations and completed study records; [study index](STUDY_INDEX.md). |
+| `results/` | Original result packages and [master registry](../results/master_experiment_registry.csv); historical paths remain stable. |
+| `checkpoints/` | Ignored local trained weights, best/F1/latest/final states and recovery evidence. |
+| `data/splits/` | Frozen strict, exploratory and separate replication manifests plus class labels. |
+| `data/raw/` | Ignored HAM10000 and cleared external-data research assets. |
+| `src/` | Foundational model/data/loss/Grad-CAM code; CBAM remains a current dependency. |
+| `scripts/` | Preserved early runners/probes/preflight helpers with inter-module dependencies. |
+| `configs/` | Three foundational configs still referenced by historical code. |
+| `docs/` | Existing development documentation and local private report references. |
+| `legacy/` | Archived notebooks, reports, old explanations/navigation and preservation records. |
+| `.cache/` | Local derived caches, external pretrained weights/source and verification receipts. |
+| `.venv/` | Local Python environment for reopening the project. |
+| `.vscode/` | Editor visibility/search preferences; hides generated/local-heavy folders. |
+| `.git/` | Complete Git history and branch metadata; do not reorganize internally. |
 
-## Historical and local
+## Current evidence to open
 
-| Path | One-line purpose |
+| Path | Meaning |
 |---|---|
-| `legacy/` | Historical entry point and relocated old navigation. |
-| `src/`, `scripts/`, `configs/` | Preserved executable historical code/configs; shared CBAM reused explicitly. |
-| `docs/` | Historical audits kept at referenced locations. |
-| `legacy/reports/` | Six archived Word/PDF deliverables. |
-| Older `results/` and `checkpoints/` subfolders | Historical experiments at original paths; see legacy index. |
-| `data/splits/` | Frozen tracked labels/assignments; do not regenerate. |
-| `data/raw/HAM10000/` | Ignored original images/metadata; future training needs them, presentation does not. |
-| `.cache/`, `.venv/` | Ignored features/weights/source and Python environment. |
-| `legacy/archive/`, `legacy/notebooks/`, `legacy/gradcam_outputs/` | Archived local historical materials. |
-| `docs/private_reference/` | Local private references kept with historical notes. |
-| `.git/` | Git database; active `structured-research`, historical `main`/`accuracy-exploration`. |
-| `.gitignore`, `.gitattributes`, `requirements.txt` | Asset exclusions, byte-preservation policy and dependencies. |
+| [reporting/evidence/INDEX.md](../reporting/evidence/INDEX.md) | Curated entry point to existing report figures/tables. |
+| [research/FINAL_EXPLORATORY_ENSEMBLE.md](FINAL_EXPLORATORY_ENSEMBLE.md) | Exact retained S83 six-model method and validation result. |
+| [results/final_exploratory_freeze/v1/](../results/final_exploratory_freeze/v1/) | Frozen checkpoint identities/selectors, class order, preprocessing, weights and audit status. |
+| [results/short_screening/s83_cbam_f1_addition_cpu/](../results/short_screening/s83_cbam_f1_addition_cpu/) | S83 validation metrics, predictions, class/confusion/comparison figures. |
+| [results/final_exploratory_test_audit/v1/](../results/final_exploratory_test_audit/v1/) | S83 audit of the previously evaluated test cohort. |
+| [results/final_strict/v1/](../results/final_strict/v1/) | Original strict-validation methodology and ensemble. |
+| [results/final_locked_test/v1/](../results/final_locked_test/v1/) | Original strict first-test evaluation. |
+| [results/final_cbam_reporting/v1/xai/](../results/final_cbam_reporting/v1/xai/) | Completed S80 five-model explanations, not S83 explanations. |
+| [results/structured_experiments/convnext_base_original_v1/](../results/structured_experiments/convnext_base_original_v1/) | R203 Base run and two rejected fixed fusions. |
+| [research/literature/](literature/) | Verified review, references and screened SciSpace input. |
 
-No raw-data/checkpoint/cache duplication or directory junctions are needed. Old executable paths remain valid; new run IDs and destinations cannot overwrite history.
+## Historical work and path protection
+
+- `legacy/notebooks/`, `legacy/reports/`, `legacy/gradcam_outputs/`, `legacy/archive/`: physically archived earlier materials.
+- `legacy/navigation/`: old handoffs and exact navigation snapshots, including [11 October originals](../legacy/navigation/cleanup_2026-10-11/).
+- `legacy/organization/`, `legacy/path_map.json`, `results/legacy/`: historical inventories, approved relocations and integrity evidence.
+- Completed research studies remain in existing namespaces because later modules reuse them. [STUDY_INDEX.md](STUDY_INDEX.md) gives their questions/status.
+- Original result/checkpoint directories stay in place: registries, frozen methods, configs and signatures contain their paths. The relocation map is not a universal substitute for direct references.
+
+Use indexes to choose report material; preserve negative studies and failed-run evidence. GitHub provides tracked code and portable results; ignored raw data, checkpoints, caches and private references need the local project or a separate transfer. Earlier descriptions remain in [the archived map](../legacy/navigation/cleanup_2026-10-11/research/FOLDER_MAP.md).

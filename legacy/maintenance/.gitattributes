@@ -1,0 +1,2 @@
+# Preserve the archived source-generator bytes on Windows checkouts.
+prepare_strict_source_generator.py -text whitespace=cr-at-eol

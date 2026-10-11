@@ -1,69 +1,52 @@
-# Structured research workspace
+# Research workspace
 
-## Local location
+## Current decision
 
-Use `E:\Minor Project\Project Development`; the former C: location remains a compatibility junction. [Verified migration and artifact paths](migration/LOCAL_DRIVE_MIGRATION.md).
+**Training and performance searches are closed.** Retain [S83's six-model equal FP32 identity ensemble](FINAL_EXPLORATORY_ENSEMBLE.md): **94.011976% exploratory validation accuracy / 0.895200837 macro-F1**. Its [post-development audit](FINAL_S83_TEST_AUDIT.md) scored **87.558217% / 0.807031200** on the previously evaluated test cohort.
 
-## Current work — 11 October 2026
+[Latest R203 closeout](convnext_base_original/CLOSEOUT.md): ConvNeXt-V2 Base finished 30 epochs on the original exploratory split; accuracy best **93.213573%** at raw epoch 20, macro-F1 best **0.890102** at EMA epoch 27. Two fixed CPU fusions did not improve S83 accuracy. No further run is queued.
 
-[R203 completed closeout](convnext_base_original/CLOSEOUT.md): **30 epochs completed**, original exploratory split. Best accuracy **93.213573%** raw epoch20; best macro-F1 **0.890102** EMA epoch27. Two fixed saved-probability CPU fusions did not improve S83 accuracy: addition93.945442%, Small replacement93.812375%. **Retain S83 94.011976% / 0.895201. GPU training closed; drafting next.** No extension or test evaluation queued. Source/config/closeout: `research/convnext_base_original/`; verified artifacts and bounded fusion study: `results/structured_experiments/convnext_base_original_v1/`; local checkpoints: corresponding `checkpoints/structured_experiments/convnext_base_original_v1/`.
+## Current reading order
 
-R202's completed different-split result is preserved in [its verified closeout](image_level_replication/v2/R202_CLOSEOUT.md). Sections below are chronological historical plans/status; their pending-launch and test-lock statements reflect the dates written and do not supersede the current R203 plan.
+1. [Reporting workspace](../reporting/README.md) and [evidence index](../reporting/evidence/INDEX.md).
+2. [Study index](STUDY_INDEX.md): research questions, useful conclusions and preserved negative studies.
+3. [Verified literature](literature/README.md), [review table](literature/review_table.md), [integrated SciSpace screening](literature/scispace_analysis/INTEGRATED_REVIEW.md), [bibliography](literature/references.bib).
+4. [Retained exploratory methodology](FINAL_EXPLORATORY_ENSEMBLE.md) and [its test audit](FINAL_S83_TEST_AUDIT.md).
+5. [Separate strict validation](FINAL_STRICT_VALIDATION_RESULTS.md) and [original strict test](FINAL_LOCKED_TEST_RESULTS.md).
+6. [Completed S80 explainability](xai/README.md), explicitly labelled as that five-model workflow.
+7. [Folder map](FOLDER_MAP.md) and [remaining work](../NEXT_STEPS.md).
 
-## Historical navigation and research contract
+## Authoritative evidence
 
-**Active priority (3 October2026):** [High-performance heterogeneous ensemble phase](phase3/HIGH_PERFORMANCE_ENSEMBLE_PLAN.md): DenseNet201 next ([S15 proposal](phase3/S15_PROPOSAL.md)), EfficientNet-B3 second subject to evidence/approval, conditional Swin-T third; equal voting then a small bounded global-weight study. **S14 deferred by user; no new experiments launched.** Reference remains S12 92.42%/.8770, FP32 identity92.48%/.8775; S13 TTA rejected. Same exploratory split; strict confirmation postponed; original locked test untouched.
-
-**Local organization cleanup:** archives live under `legacy/`; immutable inventory uses `legacy/path_map.json`. Current verification is `python -m research.verify_layout --phase3-current`, preserving earlier cleanup/preparation audits. See [cleanup report](../legacy/organization/README.md). Historical code, datasets, results and checkpoints remain stable.
-
-Current direction (3 October 2026): final architecture is open to evidence. The primary benchmark remains the frozen lesion-disjoint split; the locked test is reserved until Phase 8. Historical image-level scores remain explicitly exploratory. Old reports describe the earlier direction and remain unchanged research history.
-
-## Navigation
-
-| Location | Purpose |
+| Path | Contents |
 |---|---|
-| `results/legacy/artifact_manifest.csv` | Immutable path/size/SHA-256/tracking inventory; all historical experiments preserved in place. |
-| `results/legacy/evidence/` | Verified copies of small ignored run configs/histories/metrics for a portable GitHub evidence pack; checkpoints and raw images are not copied. |
-| `results/master_experiment_registry.csv` | One machine-readable index of historical evidence and new structured run records. |
-| `results/audit/` | Environment, duplicate-content groups, missing references, and build verification. |
-| `results/datasets/` | Verified primary/exploratory class tables, manifest overlap audits, stacked count figures and LaTeX table fragments. |
-| `results/figures/legacy/` | Automatically generated evidence figures, labelled by protocol and source. |
-| `results/model_comparison/legacy/` | Separate strict and exploratory historical comparisons; these are not controlled backbone comparisons. |
-| `results/structured_experiments/<id>/` | Structured configs, environment, history, metrics, predictions and figures; S01 completed, later runs separately approved. |
-| `results/ablations/`, `results/ensembles/`, `results/final/` | Reserved outputs for later paired attention studies, controlled ensembles and frozen-test results. |
-| `checkpoints/structured/<id>/` | New local checkpoints, outside all historical checkpoint directories. |
-| `research/models.py` | Common seven-class feature-map classifier with optional CBAM for seven torchvision CNNs. |
-| `research/experiment.py` | New run logging/artifact contract; never starts training itself. |
-| `research/literature/` | Review schema, historical evidence index, and verification guidance. |
-| `NEXT_STEPS.md` | Phases, model shortlist, controls, gates and two-week schedule. |
+| [Master experiment registry](../results/master_experiment_registry.csv) | Preserved legacy records and structured training/inference candidates with protocol, selector and artifact paths. |
+| [S83 validation package](../results/short_screening/s83_cbam_f1_addition_cpu/) | Metrics, predictions/probabilities, class scores, confusion matrices and comparison figures. |
+| [S83 frozen method](../results/final_exploratory_freeze/v1/frozen_method.json) | Six checkpoint paths/hashes, selected epochs, class order, preprocessing and weights. |
+| [S83 test audit](../results/final_exploratory_test_audit/v1/) | Audit metrics, member outputs, figures, source verification and completed receipts. |
+| [Strict methodology](../results/final_strict/v1/) | S28/S29/S30 summaries, frozen S31 validation and comparisons. |
+| [Original strict test](../results/final_locked_test/v1/) | Frozen-method test outputs and first-evaluation evidence. |
+| [S80 reporting/XAI](../results/final_cbam_reporting/v1/) | Earlier five-model reporting tables, audit and ten validation explanation cases. |
+| [R203/R204/R205](../results/structured_experiments/convnext_base_original_v1/) | Latest Base standalone, fixed fusions and their verification. |
+| [Dataset/protocol audits](../results/datasets/) | Saved class counts and manifest audits. |
+| [Portable legacy evidence](../results/legacy/) | Immutable earlier inventory and small portable metric/history/config copies. |
 
-Rebuild evidence on the original machine (no training, inference, or test-image loading):
+A registry row is saved evidence, not necessarily an independently trained model. Missing fields mean unrecorded, not zero. The original exploratory cohort has 7,009 training and 1,503 validation images; related lesions can cross its development partitions. Strict results use a different lesion-disjoint methodology. Later test audits do not restore first-test independence.
 
-```powershell
-.\.venv\Scripts\python.exe -m research.build
-```
+## Shared implementation: preserve paths
 
-Use `--skip-figures` for a faster registry/audit/table refresh. Figures still include dataset counts in that mode. On a clone without ignored checkpoints/run records, use `--portable`: it retains missing-source registry rows and uses verified small evidence copies for charts. Default mode requires all original historical assets; portable mode reports unavailable ignored assets but still fails on changed files or missing historically tracked files. Never regenerate the immutable manifest to hide a change. Historical paths stay intact because old scripts/checkpoints embed them; no model weights are copied.
+- `common.py`: project root, classes, protocol paths, hashes and atomic writes.
+- `models.py`: backbone adapters and optional CBAM; imports preserved `src/cbam.py`.
+- `train.py`, `strict_train.py`, `strict_protocol.py`: development loaders, training/recovery and protocol safeguards.
+- `experiment.py`, `registry.py`, `plots.py`: artifact contract, experiment indexing and figures.
+- `final_cbam_development/`, `short_screening/`, `aggressive/`, `phase3/`: completed studies that also contain shared runtime/reporting helpers.
+- `image_level_replication/v2/`: separate study whose model primitives are reused by R203.
+- `tests/`: implementation/recovery checks; importing source does not authorize training.
 
-## Registry meaning
+Imports, configuration paths and frozen signatures require these paths. Completed runners, proposals and recovery helpers remain historical implementation evidence; [the study index](STUDY_INDEX.md) identifies their status. Rebuilding registries/closeouts can write artifacts, so it is not a generic read-only browsing step.
 
-Rows index **saved evidence**, not independent trained networks. `record_kind` distinguishes training runs, inference candidates and tabular sweep candidates. Some CSV candidates are also summarized in best-result JSONs; compare source selectors and methods rather than counting rows as models. `source_sha256` establishes provenance; `split_sha256` records the manifest identity. Empty fields mean **not recorded**, never zero or a guessed default. Historical training/inference claims follow their audited producers. The missing weighted-run runtime remains blank. Historical decisions describe observed leaders; no entry is selected as the new final model.
+## Historical navigation and local storage
 
-`research.registry.upsert()` requires a structured ID, checks unique IDs, uses a writer lock, preserves all other rows and atomically replaces the CSV. `research.build` refreshes legacy rows while preserving structured rows. No old `results/experiments.csv` row is modified.
+Earlier planning is preserved unchanged in [the navigation archive](../legacy/navigation/cleanup_2026-10-11/research/README.md). Its dated pending-run/test-lock statements describe the state when written and do not supersede this page.
 
-## New experiment contract
-
-The old config and original S01 launch plan remain historical. Active configs/shared runner follow [the two-stage strategy](phase3/TWO_STAGE_STRATEGY.md) and [next launch proposal](phase3/S15_PROPOSAL.md). Every new GPU run waits for approval. Use the shared runner for comparisons.
-
-Strict v1 selects macro-F1; exploratory screening v1 selects accuracy and saves a separate macro-F1 winner. `Experiment.complete()` verifies the declared criterion, supports, split identity and metrics. Checkpoints remain in `checkpoints/structured/`; explicit epoch resume repairs history/registry and completed IDs exit without training. The final test runner is unimplemented and the test remains locked.
-
-Use `research.plots.metric_figures()`, `training_figures()` and `comparison_figures()` with saved results for raw/normalized confusion matrices, per-class scores/support, available curves and model comparisons. PNG exports are 300 dpi and PDFs are vector figures. A missing historical field/curve is omitted, not synthesized. Every highlighted legacy figure directory includes `provenance.json` and a per-class CSV.
-
-## Research boundaries
-
-- Build scripts read manifest labels for the requested train/validation/test count table, but never open test images or produce test predictions.
-- New comparisons use the same split, class order, preprocessing, loss, selection metric and effective batch size. Record intentional exceptions.
-- Compare attention against the **same new backbone/head/training recipe** without attention; the old custom B0 head is not a valid isolated CBAM control.
-- Final selection uses validation evidence and compute/complexity. Freeze ensemble members/weights and protocol before one locked-test evaluation.
-- PanDerm pretraining overlap cannot be independently ruled out; source weights have distribution/licensing limits and remain local.
-- Grad-CAM code exists for historical B0 only; adapt/verify the selected model's target layer later. No reviewed XAI examples exist yet.
+Physical root: **`E:\Minor Project\Project Development`**; [migration record](migration/LOCAL_DRIVE_MIGRATION.md). Frozen manifests and local checkpoints are preserved. Raw images/checkpoints/caches/private references are excluded from Git and are not all available from a GitHub clone. Existing presentation evidence can be read without retraining.
