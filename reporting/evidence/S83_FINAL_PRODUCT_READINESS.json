@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "date": "2026-10-11",
+  "retained_method": "s83_cbam_f1_addition_equal_six_exploratory_seed42",
+  "checkpoints_and_inference_unchanged": true,
+  "validation_accuracy": 0.9401197604790419,
+  "validation_macro_f1": 0.8952008370253541,
+  "test_audit_metrics": "results/final_exploratory_test_audit/v1/ensemble/test_metrics.json",
+  "xai_verification": "results/final_s83_xai/v1/verification.json",
+  "visual_review": "results/final_s83_xai/v1/visual_review.json",
+  "old_registry_sha256": "270fa9253cfda5ca8b3f834d105add47c53aee961bc1d7648345809a97d6c1bc",
+  "new_registry_sha256": "e9852240ef6cda1ece24fc0b65c8b64ce4943b04bd15a99aa245ddd15f24c121",
+  "preserved_registry_rows": 593,
+  "total_registry_rows": 594,
+  "added_row_kind": "explainability_artifact",
+  "old_registry_values_unchanged": true,
+  "separate_branch_metadata_checks": 72,
+  "no_training": true,
+  "no_test_inference": true,
+  "explanation_accuracy_gain_claimed": false,
+  "remaining_work": "Report, paper and presentation writing/formatting; no model-performance work."
+}

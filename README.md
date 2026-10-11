@@ -41,7 +41,9 @@ The master index is [results/master_experiment_registry.csv](results/master_expe
 
 ## Explainability and reproducibility
 
-[Completed XAI](research/xai/README.md) contains verified Grad-CAM/CBAM evidence for **S80's five-model method**. Exact S83 six-model explanations remain a separate task; S80 maps must not be relabelled as S83. XAI does not raise prediction accuracy.
+[Verified current XAI](research/xai/README.md) explains the **exact frozen S83 six-model method**: 12 predetermined exploratory-validation cases, 72 branch Grad-CAM maps and actual S79 epoch-35 CBAM gates. [XAI package](results/final_s83_xai/v1/README.md) contains the gallery, 12-page PDF atlas and completion/verification receipts; probability replay changes zero labels. S80's earlier five-model maps remain historical. XAI does not raise prediction accuracy.
+
+[Final product handoff](reporting/FINAL_PRODUCT_HANDOFF.md): exact files to open for results, confusion matrices, XAI and checkpoint provenance, without retraining.
 
 Code, frozen configurations, results and checkpoint paths remain stable because imports and recorded hashes depend on them. Old dated launch plans are historical records, not instructions to restart training. See [research navigation](research/README.md) and [legacy navigation](legacy/README.md).
 

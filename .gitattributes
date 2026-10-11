@@ -95,3 +95,9 @@ results/final_exploratory_test_audit/** -text whitespace=cr-at-eol
 research/image_level_replication/** -text whitespace=cr-at-eol
 data/splits/image_level_replication/** -text whitespace=cr-at-eol
 results/image_level_replication/** -text whitespace=cr-at-eol
+# Final S83 XAI code, receipts and curated hashes must survive checkout exactly.
+research/final_s83_xai/** -text whitespace=cr-at-eol
+results/final_s83_xai/** -text whitespace=cr-at-eol
+reporting/** -text whitespace=cr-at-eol
+research/xai/README.md -text whitespace=cr-at-eol
+results/master_experiment_registry.csv -text whitespace=cr-at-eol

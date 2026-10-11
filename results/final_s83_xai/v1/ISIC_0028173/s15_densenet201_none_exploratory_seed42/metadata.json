@@ -1,0 +1,34 @@
+{
+  "target_layer": "features.0.denseblock4",
+  "activation_shape": [
+    1,
+    1920,
+    7,
+    7
+  ],
+  "gradient_shape": [
+    1,
+    1920,
+    7,
+    7
+  ],
+  "raw_cam_max": 0.00046909955563023686,
+  "degenerate_map": false,
+  "run": "s15_densenet201_none_exploratory_seed42",
+  "display_name": "S15 DenseNet201",
+  "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+  "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+  "epoch": 14,
+  "weight": 0.16666666666666666,
+  "target_class": "nv",
+  "probabilities": [
+    0.00038188384496606886,
+    0.00035699992440640926,
+    0.010944944806396961,
+    7.214632933028042e-05,
+    0.00032613863004371524,
+    0.9878979325294495,
+    1.9946905013057403e-05
+  ],
+  "reference_max_difference": 4.563480615615845e-08
+}

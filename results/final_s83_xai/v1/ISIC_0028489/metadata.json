@@ -1,0 +1,239 @@
+{
+  "image_id": "ISIC_0028489",
+  "category": "additional_error_3",
+  "true_class": "mel",
+  "predicted_class": "nv",
+  "target_class": "nv",
+  "correct": false,
+  "selection_rank": "1e596c0e3f30a30b67ad11e724d86053720c63ed39c133038b07c858463686e9",
+  "input_sha256": "0fd767b96923a9b100cc8efb41a05479135892066454b3ccef45396d23d2f2dc",
+  "lesion_id": "HAM_0005785",
+  "branches": [
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "raw_cam_max": 0.0028203832916915417,
+      "degenerate_map": false,
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "display_name": "S06 ConvNeXt-Tiny",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361",
+      "epoch": 18,
+      "weight": 0.16666666666666666,
+      "target_class": "nv",
+      "probabilities": [
+        0.0003072060935664922,
+        4.7818168241064996e-05,
+        0.06878675520420074,
+        4.64887052658014e-05,
+        0.00076536979759112,
+        0.9299732446670532,
+        7.318772259168327e-05
+      ],
+      "reference_max_difference": 4.172325134277344e-07
+    },
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "raw_cam_max": 0.0013005903456360102,
+      "degenerate_map": false,
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "display_name": "S18 ConvNeXt-Small",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+      "epoch": 17,
+      "weight": 0.16666666666666666,
+      "target_class": "nv",
+      "probabilities": [
+        0.0002942694700323045,
+        0.00013891971320845187,
+        0.5180062651634216,
+        6.394351657945663e-05,
+        0.4622151553630829,
+        0.01911325752735138,
+        0.00016819853044580668
+      ],
+      "reference_max_difference": 2.384185791015625e-07
+    },
+    {
+      "target_layer": "features.0.denseblock4",
+      "activation_shape": [
+        1,
+        1920,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        1920,
+        7,
+        7
+      ],
+      "raw_cam_max": 0.0014879661612212658,
+      "degenerate_map": false,
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "display_name": "S15 DenseNet201",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+      "epoch": 14,
+      "weight": 0.16666666666666666,
+      "target_class": "nv",
+      "probabilities": [
+        0.0002842405519913882,
+        8.683228224981576e-05,
+        0.0951588973402977,
+        8.185410115402192e-05,
+        0.002245214069262147,
+        0.9011648893356323,
+        0.0009781086118891835
+      ],
+      "reference_max_difference": 3.5762786865234375e-07
+    },
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "raw_cam_max": 0.006000475957989693,
+      "degenerate_map": false,
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "display_name": "S10 EfficientNetV2-S",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+      "epoch": 15,
+      "weight": 0.16666666666666666,
+      "target_class": "nv",
+      "probabilities": [
+        0.00020740415493492037,
+        4.789614104083739e-05,
+        0.004305751528590918,
+        6.758910603821278e-05,
+        0.021864784881472588,
+        0.9728081226348877,
+        0.0006984047358855605
+      ],
+      "reference_max_difference": 1.1920928955078125e-07
+    },
+    {
+      "target_layer": "features.8",
+      "activation_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "raw_cam_max": 0.03958450257778168,
+      "degenerate_map": false,
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "display_name": "S03 EfficientNet-B0",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+      "epoch": 20,
+      "weight": 0.16666666666666666,
+      "target_class": "nv",
+      "probabilities": [
+        4.701306170318276e-05,
+        3.2773896236903965e-05,
+        0.03257253021001816,
+        2.523170769563876e-05,
+        0.2744129002094269,
+        0.6921098232269287,
+        0.000799754576291889
+      ],
+      "reference_max_difference": 5.364418029785156e-07
+    },
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "raw_cam_max": 7.877751073692707e-08,
+      "degenerate_map": false,
+      "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+      "display_name": "S79 ConvNeXt-Tiny + CBAM",
+      "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+      "epoch": 35,
+      "weight": 0.16666666666666666,
+      "target_class": "nv",
+      "probabilities": [
+        1.9108105675513798e-07,
+        1.1824098322676946e-07,
+        5.540504162127036e-07,
+        8.47049790309029e-08,
+        5.5156334610728663e-08,
+        0.9999985694885254,
+        3.5502773698681267e-07
+      ],
+      "reference_max_difference": 4.718003765447065e-12
+    }
+  ],
+  "probabilities": [
+    0.00019005406647920609,
+    5.905974830966443e-05,
+    0.11980511993169785,
+    4.75319720862899e-05,
+    0.1269172579050064,
+    0.7525280117988586,
+    0.00045300155761651695
+  ],
+  "saved_probabilities": [
+    0.0001900542265502736,
+    5.905982106924057e-05,
+    0.11980520933866501,
+    4.753196481033228e-05,
+    0.12691734731197357,
+    0.7525278925895691,
+    0.0004530017904471606
+  ],
+  "max_probability_difference": 1.1920928955078125e-07,
+  "gradient_target": "(1/6) * branch softmax probability of saved S83 predicted class",
+  "composite_rule": "Equal mean of branch-normalized positive maps; display summary, not exact causal attribution",
+  "attention_note": "Actual sigmoid gates, not segmentation or proof of clinical reasoning"
+}

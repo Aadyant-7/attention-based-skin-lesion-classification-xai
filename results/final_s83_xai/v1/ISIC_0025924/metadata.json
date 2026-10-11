@@ -1,0 +1,239 @@
+{
+  "image_id": "ISIC_0025924",
+  "category": "representative_vasc",
+  "true_class": "vasc",
+  "predicted_class": "vasc",
+  "target_class": "vasc",
+  "correct": true,
+  "selection_rank": "1ce5e5418ad22a7c94e975bea69238149e24070afc752880882c5552fa293e5b",
+  "input_sha256": "40f6a3e41059b665245711aba96ed05c26c8757c46f0ebc0c9b03c6df002da6f",
+  "lesion_id": "HAM_0006748",
+  "branches": [
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "raw_cam_max": 8.203187462640926e-07,
+      "degenerate_map": false,
+      "run": "s06_convnext_tiny_none_exploratory_seed42",
+      "display_name": "S06 ConvNeXt-Tiny",
+      "checkpoint": "checkpoints/structured/s06_convnext_tiny_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "3d99e10e5fd9a61aabc2eeec42e3da9d34ec41bd592d636aa97e95e9bd4f3361",
+      "epoch": 18,
+      "weight": 0.16666666666666666,
+      "target_class": "vasc",
+      "probabilities": [
+        1.3878677691536723e-06,
+        4.002681089332327e-05,
+        2.477983571225195e-06,
+        7.499143066524994e-06,
+        6.539369496749714e-05,
+        5.826469532621559e-06,
+        0.9998773336410522
+      ],
+      "reference_max_difference": 7.275957614183426e-12
+    },
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "raw_cam_max": 3.891394953825511e-06,
+      "degenerate_map": false,
+      "run": "s18_convnext_small_none_exploratory_seed42",
+      "display_name": "S18 ConvNeXt-Small",
+      "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+      "epoch": 17,
+      "weight": 0.16666666666666666,
+      "target_class": "vasc",
+      "probabilities": [
+        8.416525361099048e-07,
+        1.3859093996870797e-05,
+        1.2239130455782288e-06,
+        6.804138592997333e-06,
+        2.763305565167684e-05,
+        6.485886115115136e-05,
+        0.999884843826294
+      ],
+      "reference_max_difference": 6.548361852765083e-11
+    },
+    {
+      "target_layer": "features.0.denseblock4",
+      "activation_shape": [
+        1,
+        1920,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        1920,
+        7,
+        7
+      ],
+      "raw_cam_max": 4.471577994991094e-05,
+      "degenerate_map": false,
+      "run": "s15_densenet201_none_exploratory_seed42",
+      "display_name": "S15 DenseNet201",
+      "checkpoint": "checkpoints/structured/s15_densenet201_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "552eada2c63a52d01e1fe31082b53f099411654206b1156e367dffddb3e603d9",
+      "epoch": 14,
+      "weight": 0.16666666666666666,
+      "target_class": "vasc",
+      "probabilities": [
+        4.788687874679454e-06,
+        3.491363167995587e-05,
+        6.177326667966554e-06,
+        9.740158020576928e-06,
+        0.00018709382857196033,
+        0.0001843471545726061,
+        0.9995729327201843
+      ],
+      "reference_max_difference": 3.637978807091713e-10
+    },
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "raw_cam_max": 0.00015875903773121536,
+      "degenerate_map": false,
+      "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+      "display_name": "S10 EfficientNetV2-S",
+      "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+      "epoch": 15,
+      "weight": 0.16666666666666666,
+      "target_class": "vasc",
+      "probabilities": [
+        1.7299891624134034e-05,
+        0.00017508001474197954,
+        5.228187364991754e-05,
+        0.0001636394881643355,
+        0.0008704401552677155,
+        0.00032117063528858125,
+        0.9984001517295837
+      ],
+      "reference_max_difference": 8.731149137020111e-09
+    },
+    {
+      "target_layer": "features.8",
+      "activation_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        1280,
+        7,
+        7
+      ],
+      "raw_cam_max": 1.7000917068799026e-05,
+      "degenerate_map": false,
+      "run": "s03_efficientnet_b0_none_exploratory_seed42",
+      "display_name": "S03 EfficientNet-B0",
+      "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+      "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+      "epoch": 20,
+      "weight": 0.16666666666666666,
+      "target_class": "vasc",
+      "probabilities": [
+        4.970541311877241e-08,
+        8.878814696799964e-06,
+        4.167624865658581e-06,
+        1.2292481414988288e-06,
+        6.875013241369743e-06,
+        6.832517829025164e-05,
+        0.9999104738235474
+      ],
+      "reference_max_difference": 6.548361852765083e-11
+    },
+    {
+      "target_layer": "features.7",
+      "activation_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "gradient_shape": [
+        1,
+        768,
+        7,
+        7
+      ],
+      "raw_cam_max": 3.67957220248627e-08,
+      "degenerate_map": false,
+      "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+      "display_name": "S79 ConvNeXt-Tiny + CBAM",
+      "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt",
+      "checkpoint_sha256": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+      "epoch": 35,
+      "weight": 0.16666666666666666,
+      "target_class": "vasc",
+      "probabilities": [
+        1.4605749356633169e-06,
+        8.040316856749996e-07,
+        4.710319387868367e-07,
+        7.152290777412418e-07,
+        1.749945795381791e-06,
+        2.0905164888063155e-07,
+        0.9999946355819702
+      ],
+      "reference_max_difference": 1.8189894035458565e-12
+    }
+  ],
+  "probabilities": [
+    4.304730282456148e-06,
+    4.5593729737447575e-05,
+    1.113329199142754e-05,
+    3.1604566174792126e-05,
+    0.0001931976294144988,
+    0.00010745622421381995,
+    0.9996067881584167
+  ],
+  "saved_probabilities": [
+    4.3047457438660786e-06,
+    4.559397712000646e-05,
+    1.1133321095257998e-05,
+    3.160461346851662e-05,
+    0.00019319907005410641,
+    0.00010745634062914178,
+    0.9996067881584167
+  ],
+  "max_probability_difference": 1.4406396076083183e-09,
+  "gradient_target": "(1/6) * branch softmax probability of saved S83 predicted class",
+  "composite_rule": "Equal mean of branch-normalized positive maps; display summary, not exact causal attribution",
+  "attention_note": "Actual sigmoid gates, not segmentation or proof of clinical reasoning"
+}

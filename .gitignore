@@ -45,6 +45,7 @@ __pycache__/
 !results/data_assisted/**/*.pdf
 !results/final_cbam_development/**/*.pdf
 !results/final_cbam_reporting/**/*.pdf
+!results/final_s83_xai/**/*.pdf
 !results/final_exploratory_test_audit/**/*.pdf
 !results/image_level_replication/**/*.pdf
 *.lock

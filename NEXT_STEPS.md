@@ -14,7 +14,7 @@ Updated 11 October 2026. **Training and performance searches are closed.** Histo
 1. Organization cleanup and verification are complete; use [the current evidence index](reporting/evidence/INDEX.md) as the report-facing entry point. Historical artifacts remain at their referenced paths.
 2. Reconcile the guide's report format, team details, actual contributions and publication template before drafting. References remain private under `docs/private_reference/`.
 3. Arrange saved model comparisons, matched attention results, controlled ensemble results, curves, class scores and confusion matrices by research question; use [the study index](research/STUDY_INDEX.md).
-4. Address exact-method S83 Grad-CAM/XAI if requested. The existing [S80 explanation package](research/xai/README.md) is implemented and verified, but belongs to a different five-model ensemble.
+4. Use the completed, numerically/artifact-verified [exact S83 XAI package](results/final_s83_xai/v1/README.md): 12 fixed validation cases, 72 branch maps, HTML gallery and 12-page PDF atlas. Visual layout review is complete for all 12 atlas pages and a representative CBAM PDF. [S80 XAI](results/final_cbam_reporting/v1/xai/) remains historical five-model evidence. No training, performance search or test evaluation occurred.
 5. Draft the report and paper after organization is complete; review citations, figure labels, cross-references, layout and plagiarism requirements.
 
 ## Reporting boundaries
@@ -26,3 +26,5 @@ Updated 11 October 2026. **Training and performance searches are closed.** Histo
 - No new training, ensemble search or test inference is queued by this document.
 
 [Reporting workspace](reporting/README.md) · [Folder map](research/FOLDER_MAP.md) · [Research navigation](research/README.md)
+
+[Final product handoff](reporting/FINAL_PRODUCT_HANDOFF.md) gives the saved-results/gallery/atlas opening sequence. Prior navigation is archived under `legacy/navigation/s83_xai_2026-10-11/`.

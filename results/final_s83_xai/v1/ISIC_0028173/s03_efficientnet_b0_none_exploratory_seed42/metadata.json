@@ -1,0 +1,34 @@
+{
+  "target_layer": "features.8",
+  "activation_shape": [
+    1,
+    1280,
+    7,
+    7
+  ],
+  "gradient_shape": [
+    1,
+    1280,
+    7,
+    7
+  ],
+  "raw_cam_max": 0.0007991400780156255,
+  "degenerate_map": false,
+  "run": "s03_efficientnet_b0_none_exploratory_seed42",
+  "display_name": "S03 EfficientNet-B0",
+  "checkpoint": "checkpoints/structured/s03_efficientnet_b0_none_exploratory_seed42/best.pt",
+  "checkpoint_sha256": "6b7a270de98912a7f7a70ca3c1a78e55f8b5a0fe1406762760699cb23d4ca39c",
+  "epoch": 20,
+  "weight": 0.16666666666666666,
+  "target_class": "nv",
+  "probabilities": [
+    9.968653102987446e-06,
+    0.0007171296165324748,
+    0.0010199559619650245,
+    0.0002584800240583718,
+    0.0022515852469950914,
+    0.9956440925598145,
+    9.880550351226702e-05
+  ],
+  "reference_max_difference": 9.778887033462524e-09
+}

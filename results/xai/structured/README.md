@@ -1,14 +1,11 @@
 # Structured XAI evidence navigation
 
-Explainability is implemented for an earlier frozen method. This directory remains a navigation entry point; its former empty/future-only description is superseded.
+Current verified exact-method package: [S83 six-model XAI](../../final_s83_xai/v1/README.md). It explains 12 predetermined original exploratory-validation cases, 72 branch CAMs and actual S79 epoch-35/F1 CBAM gates. Numerical/artifact verification passed with zero changed labels; open the HTML gallery or 12-page PDF atlas. Visual layout review passed for all 12 atlas pages and a representative CBAM PDF.
 
-- Completed package: [../../final_cbam_reporting/v1/xai/](../../final_cbam_reporting/v1/xai/).
-- Scope: **S80 five-model method**, ten deterministic validation cases, including difficult-class correct/incorrect examples.
-- Each case retains per-model Grad-CAM maps/overlays, inputs, confidence/label metadata, panels and the CBAM component's attention weights.
-- Method/context: [research/final_cbam_reporting/REPORTING_HANDOFF.md](../../../research/final_cbam_reporting/REPORTING_HANDOFF.md).
+[Implementation/method](../../../research/xai/README.md) explains the weighted predicted-class gradient, immutable checkpoints, FP32 identity preprocessing and limitations. No training, test evaluation or changed predictions are part of this explanation task.
 
-These are not exact explanations of the retained **S83 six-model ensemble**. Matching S83 explanations remain future work unless separately generated and verified. No XAI inference is performed during cleanup.
+[S80 historical five-model XAI](../../final_cbam_reporting/v1/xai/) remains preserved: ten cases, five branches, weights 0.2 and a different S79 checkpoint selector. Do not mix its labels/maps with S83's six-member method.
 
-Grad-CAM describes class-related activations; CBAM is learned attention. Neither proves segmentation, clinical reasoning or a causal explanation. An averaged display heatmap is not a jointly trained ensemble explanation, and XAI itself does not raise accuracy.
+Grad-CAM is qualitative attribution; CBAM is internal learned attention. Neither is lesion segmentation or proof of clinical reasoning. Averaged normalized maps are display composites, and XAI does not raise accuracy.
 
-The [reporting evidence index](../../../reporting/evidence/INDEX.md) identifies explanation figures with their correct method/protocol labels.
+[Reporting evidence index](../../../reporting/evidence/INDEX.md) · [final product handoff](../../../reporting/FINAL_PRODUCT_HANDOFF.md).

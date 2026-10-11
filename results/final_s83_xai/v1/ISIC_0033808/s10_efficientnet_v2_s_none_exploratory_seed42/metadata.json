@@ -1,0 +1,34 @@
+{
+  "target_layer": "features.7",
+  "activation_shape": [
+    1,
+    1280,
+    7,
+    7
+  ],
+  "gradient_shape": [
+    1,
+    1280,
+    7,
+    7
+  ],
+  "raw_cam_max": 2.719392978178803e-05,
+  "degenerate_map": false,
+  "run": "s10_efficientnet_v2_s_none_exploratory_seed42",
+  "display_name": "S10 EfficientNetV2-S",
+  "checkpoint": "checkpoints/structured/s10_efficientnet_v2_s_none_exploratory_seed42/best_macro_f1.pt",
+  "checkpoint_sha256": "1cb77009c4544c0f99dd61955701f9026201f7f1184480e8167c9c6aeaf93ff5",
+  "epoch": 15,
+  "weight": 0.16666666666666666,
+  "target_class": "df",
+  "probabilities": [
+    3.609723353292793e-05,
+    8.11631434771698e-06,
+    1.073296425602166e-05,
+    0.9997572302818298,
+    1.0852647392312065e-05,
+    0.00014650964294560254,
+    3.052135798498057e-05
+  ],
+  "reference_max_difference": 6.984919309616089e-10
+}

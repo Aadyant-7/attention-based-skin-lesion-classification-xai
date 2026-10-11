@@ -1,0 +1,34 @@
+{
+  "target_layer": "features.7",
+  "activation_shape": [
+    1,
+    768,
+    7,
+    7
+  ],
+  "gradient_shape": [
+    1,
+    768,
+    7,
+    7
+  ],
+  "raw_cam_max": 0.0017099399119615555,
+  "degenerate_map": false,
+  "run": "s79_convnext_tiny_cbam_exploratory_seed42",
+  "display_name": "S79 ConvNeXt-Tiny + CBAM",
+  "checkpoint": "checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt",
+  "checkpoint_sha256": "6ce99b7073d8563fc8ceaa81b173c9aa9c28b06755af031ce8fa711f387a0d83",
+  "epoch": 35,
+  "weight": 0.16666666666666666,
+  "target_class": "akiec",
+  "probabilities": [
+    0.9840447902679443,
+    8.48642666824162e-05,
+    7.337109127547592e-05,
+    2.881449654523749e-05,
+    5.317184331943281e-06,
+    0.015733150765299797,
+    2.9786748200422153e-05
+  ],
+  "reference_max_difference": 4.470348358154297e-08
+}

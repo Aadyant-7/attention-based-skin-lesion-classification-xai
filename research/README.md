@@ -13,7 +13,7 @@
 3. [Verified literature](literature/README.md), [review table](literature/review_table.md), [integrated SciSpace screening](literature/scispace_analysis/INTEGRATED_REVIEW.md), [bibliography](literature/references.bib).
 4. [Retained exploratory methodology](FINAL_EXPLORATORY_ENSEMBLE.md) and [its test audit](FINAL_S83_TEST_AUDIT.md).
 5. [Separate strict validation](FINAL_STRICT_VALIDATION_RESULTS.md) and [original strict test](FINAL_LOCKED_TEST_RESULTS.md).
-6. [Completed S80 explainability](xai/README.md), explicitly labelled as that five-model workflow.
+6. [Current exact S83 explainability](xai/README.md), with completion receipts; earlier S80 explanations remain a distinct historical workflow.
 7. [Folder map](FOLDER_MAP.md) and [remaining work](../NEXT_STEPS.md).
 
 ## Authoritative evidence
@@ -26,7 +26,8 @@
 | [S83 test audit](../results/final_exploratory_test_audit/v1/) | Audit metrics, member outputs, figures, source verification and completed receipts. |
 | [Strict methodology](../results/final_strict/v1/) | S28/S29/S30 summaries, frozen S31 validation and comparisons. |
 | [Original strict test](../results/final_locked_test/v1/) | Frozen-method test outputs and first-evaluation evidence. |
-| [S80 reporting/XAI](../results/final_cbam_reporting/v1/) | Earlier five-model reporting tables, audit and ten validation explanation cases. |
+| [Exact S83 XAI](../results/final_s83_xai/v1/README.md) | Current six-model explanation package: 12 predetermined validation cases, gallery, atlas and verification/completion receipts. |
+| [S80 reporting/XAI](../results/final_cbam_reporting/v1/) | Historical five-model reporting tables, audit and ten validation explanation cases. |
 | [R203/R204/R205](../results/structured_experiments/convnext_base_original_v1/) | Latest Base standalone, fixed fusions and their verification. |
 | [Dataset/protocol audits](../results/datasets/) | Saved class counts and manifest audits. |
 | [Portable legacy evidence](../results/legacy/) | Immutable earlier inventory and small portable metric/history/config copies. |

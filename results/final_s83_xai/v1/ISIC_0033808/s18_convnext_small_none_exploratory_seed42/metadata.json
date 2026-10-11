@@ -1,0 +1,34 @@
+{
+  "target_layer": "features.7",
+  "activation_shape": [
+    1,
+    768,
+    7,
+    7
+  ],
+  "gradient_shape": [
+    1,
+    768,
+    7,
+    7
+  ],
+  "raw_cam_max": 6.0297468735370785e-05,
+  "degenerate_map": false,
+  "run": "s18_convnext_small_none_exploratory_seed42",
+  "display_name": "S18 ConvNeXt-Small",
+  "checkpoint": "checkpoints/structured/s18_convnext_small_none_exploratory_seed42/best_macro_f1.pt",
+  "checkpoint_sha256": "5c3e866a89006a2ba75628d8ec25ae12ee84f57db1fd3984a341d10dc3e2921d",
+  "epoch": 17,
+  "weight": 0.16666666666666666,
+  "target_class": "df",
+  "probabilities": [
+    3.345081495353952e-05,
+    6.584174116142094e-06,
+    4.773282489622943e-05,
+    0.9988560676574707,
+    1.884455627987336e-06,
+    0.0010341285960748792,
+    2.016220059886109e-05
+  ],
+  "reference_max_difference": 4.423782229423523e-09
+}

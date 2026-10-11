@@ -1,7 +1,15 @@
-# Structured explainability implementation
+# Current exact S83 explainability
 
-The final S80 five-model workflow now has verified Grad-CAM and actual CBAM attention artifacts for10 deterministic exploratory-validation cases, including correct/incorrect melanoma and akiec. Implementation: `research/final_cbam_reporting/finalize.py`; full method and figure index: `research/final_cbam_reporting/REPORTING_HANDOFF.md`; outputs: `results/final_cbam_reporting/v1/xai/`.
+The authorized current workflow explains the frozen **S83 six-model ensemble**, without changing checkpoints, weights, preprocessing or predictions. [Plan](../final_s83_xai/PLAN.md) · [implementation](../final_s83_xai/runner.py) · [package/status](../../results/final_s83_xai/v1/README.md).
 
-All-five branch maps target the actual0.2-weighted ensemble predicted-class probability. Normalized-map composites are display summaries, not exact causal ensemble attributions. Actual channel/spatial CBAM sigmoid weights are separately saved; XAI does not change predictions or establish clinical validity. Verification confirmed50 finite, nondegenerate CAMs and recomputed prediction agreement; representative panels and attention figures were visually reviewed. No test images were used for these explanations.
+The fixed cohort has **12 original exploratory-validation images**: correct/incorrect melanoma and akiec, the remaining true classes and three additional errors. SHA-256 ranking selects cases before viewing maps; unattractive or degenerate maps are not grounds to replace cases.
 
-Earlier historical `src/gradcam.py` and aggressive-workflow explanation code remain intact; their outputs must not be relabelled as S80 explanations.
+Each of the six branches targets the **saved S83 predicted class**, including errors. Grad-CAM differentiates `(1/6) × branch softmax probability[target]`, spatially averages activation gradients, weights channels, sums, applies ReLU and resizes for display. The completed package contains **72 branch CAMs**, raw/normalized arrays, overlays and confidence/target metadata. The S79 **macro-F1-selected epoch-35** checkpoint supplies actual channel/spatial CBAM gates, separate from Grad-CAM.
+
+Inference remains FP32, TF32 disabled, identity RGB 224-square bilinear/ImageNet normalization, equal weights 1/6. One model loads at a time; no optimizer, parameter update, test image or performance search is involved. The package's `verification.json` passed and `manifest.json` records completion: 72 finite nondegenerate CAMs, 12 CBAM cases, 192 readable PNGs, 25 valid PDFs and 12 atlas pages. Maximum branch replay difference is 2.980232e-6; ensemble difference 5.215406e-7; zero changed labels. All 12 atlas pages and a representative CBAM PDF passed visual layout review; see the package's `visual_review.json`.
+
+Open the saved HTML gallery or 12-page PDF atlas after completion. Mean normalized branch maps are labelled **display composites**, not exact causal ensemble attribution. XAI does not improve accuracy, establish clinical reasoning or prove lesion segmentation.
+
+## Historical explanations
+
+[S80 five-model XAI](../../results/final_cbam_reporting/v1/xai/) retains ten validation cases/50 branch maps using weights 0.2 and S79 accuracy epoch 33. It is not the current six-model S83 package. Earlier `src/gradcam.py` and aggressive-workflow code remain historical too.

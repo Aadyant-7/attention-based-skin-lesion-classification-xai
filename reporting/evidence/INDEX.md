@@ -2,7 +2,7 @@
 
 Links open original files. This is navigation/provenance, not a finished report or new experiment. [source_manifest.csv](source_manifest.csv) records exact source paths and SHA-256 hashes. Accuracy below is percent; macro-F1 is a fraction.
 
-[Final local/Git readiness audit](FINAL_READINESS_AUDIT.md): preservation, readable assets, metric consistency and remaining reporting tasks.
+[Original organization readiness audit](FINAL_READINESS_AUDIT.md): dated preservation snapshot. [Current S83 final-product readiness](S83_FINAL_PRODUCT_READINESS.md): exact-method XAI completed and verified.
 
 ## Current outcomes: separate protocols
 
@@ -12,7 +12,7 @@ Links open original files. This is navigation/provenance, not a finished report 
 | S83 post-development audit, previously evaluated test cohort | 87.558217% | 0.807031200 | [Metrics](../../results/final_exploratory_test_audit/v1/ensemble/test_metrics.json) |
 | S31 strict equal-three, lesion-disjoint validation | 90.153027% | 0.843486392 | [Metrics](../../results/final_strict/v1/ensemble/validation_metrics.json) |
 | S31 original strict held-out test | 86.759814% | 0.794472645 | [Metrics](../../results/final_locked_test/v1/ensemble/test_metrics.json) |
-| R203 ConvNeXt-V2 Base, original exploratory validation, raw accuracy selector epoch20 | 93.213573% | 0.888528134 | [Metrics](../../results/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42/best_accuracy/validation_metrics.json) |
+| R203 ConvNeXt-V2 Base, original exploratory validation, raw accuracy selector epoch 20 | 93.213573% | 0.888528134 | [Metrics](../../results/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42/best_accuracy/validation_metrics.json) |
 
 94.01% is extensively reused image-level **validation**, with related lesions shared between development partitions; it is not test or strict lesion-independent accuracy. The S83 test cohort had previously been evaluated. S31 is a separately strict-trained three-model methodology. R203 has no test score from its closeout.
 
@@ -48,11 +48,15 @@ Best accuracy/F1 can belong to different checkpoints; do not imply both come fro
 
 Suggested later writing order: dataset/protocols → matched backbones → complementary soft voting → attention role/ablation → retained exploratory framework → strict/recorded-test generalization → XAI and limitations. Keep meaningful unsuccessful backbones and neutral CBAM/TTA findings in a concise comparison/appendix. Do not imply every trial improved or mix different protocols into one rising curve.
 
-## Existing XAI: earlier five-model method
+## Current XAI: exact frozen S83 six-model method
 
-[Manifest](../../results/final_cbam_reporting/v1/xai/manifest.json) and [10 case packages](../../results/final_cbam_reporting/v1/xai/) contain branch heatmaps, input images, PNG/PDF Grad-CAM panels and metadata for correct/incorrect exploratory-validation cases.
+[Completed package](../../results/final_s83_xai/v1/README.md) and [fixed plan](../../research/final_s83_xai/PLAN.md) identify the current explanations. Twelve SHA-256-ranked original exploratory-validation cases cover all seven true classes, correct/incorrect melanoma and akiec, plus additional errors. All six branches target the saved S83 predicted class through `(1/6) × branch probability[target]`; S79 uses its frozen F1 epoch 35 checkpoint and actual CBAM gates. Artifacts include72 branch maps, overlays/arrays, 12 case panels, [HTML gallery](../../results/final_s83_xai/v1/gallery.html) and [12-page atlas](../../results/final_s83_xai/v1/S83_GradCAM_Atlas.pdf).
 
-These explain **S80's earlier FIVE-model ensemble**, weights 0.2 with S79 accuracy epoch33. They do **not** explain exact S83: SIX models, weights 1/6, S79 F1 epoch35 and added S06. Label as earlier-method XAI; matching final-method explanations remain future work. Grad-CAM is qualitative attribution, not segmentation, proof of clinical reasoning or an accuracy improvement.
+[Completion manifest](../../results/final_s83_xai/v1/manifest.json) and [passed verification](../../results/final_s83_xai/v1/verification.json) record 72 nondegenerate CAMs, 12 CBAM cases, 192 PNGs, 25 PDFs and zero changed labels. Branch/ensemble replay maximum differences are 2.980232e-6/5.215406e-7; checkpoints, methodology and earlier XAI/test evidence are unchanged. All 12 atlas pages and a representative CBAM PDF passed visual layout review. XAI adds no training, test evaluation or new accuracy result.
+
+[S80 historical manifest](../../results/final_cbam_reporting/v1/xai/manifest.json) and [ten earlier case packages](../../results/final_cbam_reporting/v1/xai/) remain distinct FIVE-model evidence, weights 0.2 and S79 accuracy epoch 33. Do not relabel them as S83. Grad-CAM is qualitative attribution; mean normalized maps are display composites, not segmentation or causal clinical reasoning.
+
+[Final product handoff](../FINAL_PRODUCT_HANDOFF.md) gives the exact saved-results/gallery/atlas opening sequence. The linked prior readiness audit describes the state before this new exact-method XAI task.
 
 ## Dataset and literature
 
