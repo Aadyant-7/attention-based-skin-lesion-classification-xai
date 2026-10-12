@@ -85,6 +85,12 @@ continuation gate. No old-test candidate scoring occurred; all retained results
 above are unchanged. The 94.121763% lesion-unit development score is not a new
 single-image best or test result.
 
+[Final learned CPU residual study](../../research/generalization_review/FINAL_RESIDUAL_SCREEN_CLOSEOUT.md)
+tested clinical offset correction and a conservative top-two reranker with five
+lesion-group meta folds. Accuracy was 93.7458% and 93.9454%, respectively, versus
+94.0120% S83. Both failed the fixed gate; no candidate test scoring followed.
+All prior retained scores, checkpoints and XAI remain unchanged.
+
 ## Dataset and literature
 
 - [Strict split](../../data/splits/split_assignments.csv), [exploratory split](../../data/splits/exploratory/image_level_dev_v1.csv), [class order](../../data/splits/label_mapping.json).

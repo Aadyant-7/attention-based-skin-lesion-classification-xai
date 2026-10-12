@@ -1,0 +1,58 @@
+{
+  "plan": {
+    "question": "Can a conservative learned correction recover complementary S83 errors without discarding its strong image predictions?",
+    "candidates": [
+      "clinical_residual",
+      "top2_reranker"
+    ],
+    "control": "intercept-only S83 log-probability residual",
+    "clinical_rule": "softmax(log(P_S83)+b+W*fold-encoded age/sex/localization)",
+    "clinical_features": "TRAIN-fold standardized age; TRAIN-vocabulary one-hot sex/site; missing/unseen neutral; no diagnosis type or identifiers",
+    "reranker_rule": "Binary residual over fixed log(P_runner/P_leader), only when margin<=0.5 and member argmax disagreement; keep pair mass and all noneligible outputs",
+    "reranker_features": "leader/runner one-hot classes plus six member runner-minus-leader probabilities",
+    "penalty": "Mean unweighted cross-entropy +0.01/2*squared correction parameters; identical fixed L2 for every fit",
+    "optimizer": "Zero initialization; L-BFGS-B, analytic gradients, maxiter500, ftol1e-12, gtol1e-7",
+    "folds": 5,
+    "fold_method": "StratifiedGroupKFold by lesion_id, shuffle, seed42",
+    "primary": "All 1,503 original validation images, one held-out-meta prediction per image; no exclusion or altered denominator",
+    "gate": {
+      "minimum_accuracy_gain": 0.005,
+      "minimum_net_correct": 8,
+      "macro_f1_non_decreasing": true,
+      "melanoma_recall_non_decreasing": true,
+      "akiec_recall_non_decreasing": true,
+      "minimum_positive_folds": 4,
+      "clinical_must_also_improve_over_intercept_control": true
+    },
+    "selection": "Only passing candidates; accuracy then macro-F1, simpler image-only reranker on exact ties",
+    "no_parameter_grid": true,
+    "no_post_result_rescue": true,
+    "no_training_in_sample_probabilities": true,
+    "test_action": "No candidate old-test scoring in this screen. A passing fixed deployment head requires a separate transparent retrospective assessment.",
+    "limitation": "Base CNNs/checkpoints and methodology were selected on this repeatedly used validation cohort; grouped crossfit protects only the new head fitting",
+    "prior": "Previous unrestricted stacking, feature fusion, scalar calibration and naive-Bayes metadata adjustments were unhelpful; these anchored residuals are distinct unproven hypotheses",
+    "known_prior_test_outcomes": true,
+    "training_epochs": 0,
+    "gpu_used": false,
+    "new_model_inference": false
+  },
+  "source_sha256": {
+    "results/short_screening/s83_cbam_f1_addition_cpu/validation_predictions.csv": "9aece30ca72513610ac62ef0c615b558d91b11e99beca5e1edae6e1b631267dc",
+    "results/short_screening/s83_cbam_f1_addition_cpu/validation_metrics.json": "4022248515d7a36954df0170f3930cda9333c75c672a0dad4867f89b90d24241",
+    "results/final_exploratory_freeze/v1/frozen_method.json": "8b9d2125aedfe69f2aecc2d401ac0add580bd00a6f1b0b60a13d6e806f667e6b",
+    "data/splits/exploratory/image_level_dev_v1.csv": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb",
+    "data/raw/HAM10000/HAM10000_metadata.csv": "06aee5e603d313ba69de38263053c792a1dff030eb9c44a96ceb477ceefb99a5",
+    "results/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/macro_f1_selected/validation_predictions.csv": "9fe70681fea5272112fcf1e5babd21cec96bbf6db7b655489327b13166a9e4b8",
+    ".cache/s76_trained_feature_fusion/s06_convnext_tiny_none_exploratory_seed42_val.npz": "67233626dd733301bd78f53d31a4a17079ba43f107de25ce27dc4d7d1d84dae6",
+    ".cache/s76_trained_feature_fusion/s18_convnext_small_none_exploratory_seed42_val.npz": "4c8dc183fcf13e0c4d41b3db25045fe32072265939733435efb49b67e472d66a",
+    ".cache/s76_trained_feature_fusion/s15_densenet201_none_exploratory_seed42_val.npz": "be3b8e8dc60da981ed37bfe16878a14189695b8f7363832d48f77d7327c4cc3e",
+    ".cache/s76_trained_feature_fusion/s10_efficientnet_v2_s_none_exploratory_seed42_val.npz": "d452acb5df751ab6c87e1d8562011676a679902a3ea91c4536bbb7e9912626dd",
+    ".cache/s76_trained_feature_fusion/s03_efficientnet_b0_none_exploratory_seed42_val.npz": "3c08751cb39da220af38c794729909d03466335ab8d44f511daf48949feac875"
+  },
+  "code_sha256": {
+    "research/generalization_review/final_residual_screen.py": "67e633b34d44939b53432de7e682fccd1f17eace52814a49707264875e0b222b",
+    "research/generalization_review/clinical_residual.py": "cf5f1cb127754ce934fe5b7a0f60f7eb2f334c093b3d23e02af61bfaff4b4194",
+    "research/generalization_review/top2_residual.py": "3658e8c7d4a10ea63edb406a0945e9213446384c3f405a6196b0d681be224cf3",
+    "research/short_screening/lesion_bag_screen.py": "2a27c485b6978878c31f1ab45e4f5ef8f52eea106c7e0e4e96e3ec3f5ae040ef"
+  }
+}

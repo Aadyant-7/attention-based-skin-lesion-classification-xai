@@ -1,0 +1,112 @@
+{
+  "status": "completed",
+  "comparisons": [
+    {
+      "method": "s83_reference",
+      "accuracy": 0.9401197604790419,
+      "macro_precision": 0.9223213602144419,
+      "macro_recall": 0.8742171872627725,
+      "macro_f1": 0.8952008370253541,
+      "melanoma_recall": 0.8203592814371258,
+      "akiec_recall": 0.7142857142857143,
+      "gained": 0,
+      "lost": 0,
+      "net": 0,
+      "positive_folds": 0,
+      "gate_passed": false,
+      "checks": {
+        "accuracy_gain": false,
+        "net_correct": false,
+        "macro_f1": true,
+        "melanoma_recall": true,
+        "akiec_recall": true,
+        "positive_folds": false
+      }
+    },
+    {
+      "method": "intercept_control",
+      "accuracy": 0.9387890884896873,
+      "macro_precision": 0.918540068848208,
+      "macro_recall": 0.8798168622299363,
+      "macro_f1": 0.8974364528105722,
+      "melanoma_recall": 0.8203592814371258,
+      "akiec_recall": 0.7755102040816326,
+      "gained": 4,
+      "lost": 6,
+      "net": -2,
+      "positive_folds": 2,
+      "gate_passed": false,
+      "checks": {
+        "accuracy_gain": false,
+        "net_correct": false,
+        "macro_f1": true,
+        "melanoma_recall": true,
+        "akiec_recall": true,
+        "positive_folds": false
+      }
+    },
+    {
+      "method": "clinical_residual",
+      "accuracy": 0.9374584165003327,
+      "macro_precision": 0.9163416821290487,
+      "macro_recall": 0.864724605613092,
+      "macro_f1": 0.8874177792991748,
+      "melanoma_recall": 0.8263473053892215,
+      "akiec_recall": 0.7346938775510204,
+      "gained": 5,
+      "lost": 9,
+      "net": -4,
+      "positive_folds": 2,
+      "gate_passed": false,
+      "checks": {
+        "accuracy_gain": false,
+        "net_correct": false,
+        "macro_f1": false,
+        "melanoma_recall": true,
+        "akiec_recall": true,
+        "positive_folds": false,
+        "clinical_information_gain": false
+      }
+    },
+    {
+      "method": "top2_reranker",
+      "accuracy": 0.9394544244843646,
+      "macro_precision": 0.9222022738267512,
+      "macro_recall": 0.8789192997439522,
+      "macro_f1": 0.8980915291096564,
+      "melanoma_recall": 0.8083832335329342,
+      "akiec_recall": 0.7551020408163265,
+      "gained": 4,
+      "lost": 5,
+      "net": -1,
+      "positive_folds": 2,
+      "gate_passed": false,
+      "checks": {
+        "accuracy_gain": false,
+        "net_correct": false,
+        "macro_f1": true,
+        "melanoma_recall": false,
+        "akiec_recall": true,
+        "positive_folds": false
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "chosen_candidate": null,
+  "decision": "Both substantive hypotheses rejected; retain frozen S83 and stop this finite study",
+  "validation_images": 1503,
+  "validation_lesions": 1429,
+  "folds": 5,
+  "all_head_train_holdout_lesion_overlap": 0,
+  "meta_fitting_reuses_validation": true,
+  "base_checkpoint_selection_uses_same_validation": true,
+  "clinical_rows_parsed": 1503,
+  "diagnosis_type_or_identifiers_as_predictors": false,
+  "candidate_old_test_scored": false,
+  "test_clinical_rows_parsed": false,
+  "training_epochs": 0,
+  "gpu_used": false,
+  "new_model_inference": false,
+  "original_sources_unchanged": true,
+  "elapsed_seconds": 2.34521169999789
+}
