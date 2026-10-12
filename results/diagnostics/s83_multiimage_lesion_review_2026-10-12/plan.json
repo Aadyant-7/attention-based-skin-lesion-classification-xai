@@ -1,0 +1,33 @@
+{
+  "plan": {
+    "question": "Can multiple already-held-out photographs of a lesion add useful information to fixed S83 predictions?",
+    "rule": "Equal probability mean over every available image of each lesion within the original held-out cohort; singleton unchanged",
+    "input_contract": "Known lesion grouping and all available distinct held-out images per lesion, not single-image input",
+    "grouping_uses": "lesion_id only; never labels, correctness or confidence",
+    "primary": "ALL1118 lesions, one decision per lesion; equal mean versus first lexicographic image-ID single-view control",
+    "secondary": "ALL1503 images; broadcast pooled case prediction versus original saved S83 single-image prediction",
+    "reporting": "Retrospective multi-image lesion-level assessment of saved S83 predictions; not a new untouched test",
+    "preserve": "Original S83 single-image87.558217%/0.807031 result and all original files unchanged",
+    "gate": ">=0.005 accuracy gain, nondecreasing macro-F1/melanoma/akiec recall for both matched endpoints; >=8 net correct gains for image endpoint",
+    "no_subsets": true,
+    "no_view_or_weight_search": true,
+    "no_other_pooling": true,
+    "no_cross_partition_companions": true,
+    "no_training": true,
+    "no_new_image_inference": true,
+    "previous_test_score_known": true,
+    "probability_arithmetic": "CPU float64 on previously saved FP32 six-model probabilities; no new model logits",
+    "limitation": "Lesion-level and image-level denominators/class mixes differ; a higher case score alone is not a model improvement"
+  },
+  "source_sha256": {
+    "results/final_exploratory_test_audit/v1/ensemble/test_predictions.csv": "03b1bc5e922dbe655d4d0316c3cdaf0a431cc99b9cc74741eeec6df47658b42e",
+    "results/final_exploratory_test_audit/v1/ensemble/test_metrics.json": "f54a0973ac3546e4179441414b4822e607ea53c68605592821768a07671ce192",
+    "results/final_exploratory_freeze/v1/frozen_method.json": "8b9d2125aedfe69f2aecc2d401ac0add580bd00a6f1b0b60a13d6e806f667e6b",
+    "results/final_exploratory_test_audit/v1/pre_inference_verification.json": "6719aa06b8760282863740078ee6f65c71004177979c09314370a4e53b4ca991"
+  },
+  "code_sha256": {
+    "research/generalization_review/s83_multiimage.py": "20c3da05aad359f55e62cf485e6856a7c11e63472fdf790111a123f07b6abe33",
+    "research/short_screening/lesion_bag_screen.py": "2a27c485b6978878c31f1ab45e4f5ef8f52eea106c7e0e4e96e3ec3f5ae040ef",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9"
+  }
+}

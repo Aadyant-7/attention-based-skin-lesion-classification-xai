@@ -69,6 +69,16 @@ training-image overlap, 389 images sharing 375 training lesions. See the
 [verified closeout](../../research/generalization_review/R202_OUTER_CLOSEOUT.md).
 It is not S83 performance and does not replace S83 or its exact XAI package.
 
+## Supplementary S83 multi-image diagnostic
+
+[Retrospective lesion-level closeout](../../research/generalization_review/S83_MULTIIMAGE_CLOSEOUT.md):
+90.071556% / 0.809079 on all 1,118 lesions using equal averaging of available
+held-out photographs, versus 89.713775% / 0.797281 for the matched first-view
+control. The all 1,503-image broadcast score is 87.890885%; original single-image
+S83 stays 87.558217%. Melanoma recall declined and the material-gain gate failed.
+This is a changed input/unit diagnostic, not a replacement final test or a new
+untouched evaluation.
+
 ## Dataset and literature
 
 - [Strict split](../../data/splits/split_assignments.csv), [exploratory split](../../data/splits/exploratory/image_level_dev_v1.csv), [class order](../../data/splits/label_mapping.json).

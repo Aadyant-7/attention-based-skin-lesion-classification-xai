@@ -36,6 +36,7 @@ __pycache__/
 !results/figures/**/*.pdf
 !results/model_comparison/**/*.pdf
 !results/datasets/**/*.pdf
+!results/diagnostics/**/*.pdf
 !results/structured_experiments/**/*.pdf
 !results/xai/structured/**/*.pdf
 !results/final_strict/**/*.pdf

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scope": "Independent CPU array/artifact review and closeout checks",
+  "source_and_code_hashes_match": true,
+  "all_original_source_files_unchanged": true,
+  "images": 1503,
+  "lesions": 1118,
+  "lesion_labels_consistent": true,
+  "equal_pooling_and_first_ID_control_verified": true,
+  "canonical_correct": 1003,
+  "multiimage_correct": 1007,
+  "broadcast_correct": 1321,
+  "pngs_verified": 14,
+  "pdfs_verified": 14,
+  "representative_PDF_layouts_rendered_and_reviewed": true,
+  "original_registry_rows_preserved": 595,
+  "registry_rows": 596,
+  "training": false,
+  "gpu_used": false,
+  "new_model_inference": false,
+  "original_S83_single_image_accuracy": 0.8755821689953427,
+  "unit_and_retrospective_scope_explicit": true
+}
