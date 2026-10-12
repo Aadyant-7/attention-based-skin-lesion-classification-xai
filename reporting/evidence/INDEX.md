@@ -10,6 +10,7 @@ Links open original files. This is navigation/provenance, not a finished report 
 |---|---:|---:|---|
 | S83 retained equal-six, exploratory validation | **94.011976%** | **0.895200837** | [Metrics](../../results/short_screening/s83_cbam_f1_addition_cpu/validation_metrics.json) |
 | S83 post-development audit, previously evaluated test cohort | 87.558217% | 0.807031200 | [Metrics](../../results/final_exploratory_test_audit/v1/ensemble/test_metrics.json) |
+| R202 EMA20, image-level outer fold00 with natural lesion overlap | 93.413174% | 0.901996079 | [Metrics](../../results/image_level_replication/v2/r202_outer_assessment_v1/assessment_metrics.json) |
 | S31 strict equal-three, lesion-disjoint validation | 90.153027% | 0.843486392 | [Metrics](../../results/final_strict/v1/ensemble/validation_metrics.json) |
 | S31 original strict held-out test | 86.759814% | 0.794472645 | [Metrics](../../results/final_locked_test/v1/ensemble/test_metrics.json) |
 | R203 ConvNeXt-V2 Base, original exploratory validation, raw accuracy selector epoch 20 | 93.213573% | 0.888528134 | [Metrics](../../results/structured_experiments/convnext_base_original_v1/r203_convnextv2_base_original_exploratory_seed42/best_accuracy/validation_metrics.json) |
@@ -63,8 +64,10 @@ Suggested later writing order: dataset/protocols → matched backbones → compl
 [Saved-validation generalization review](../../research/generalization_review/README.md)
 decomposes lesion exposure and class mix, checks late overfitting, and records one
 rejected training-loss-derived correction. A separate R202 EMA20 image-level
-assessment is CPU-prepared, **not evaluated**. It has no test score and does not
-replace S83 or its exact XAI package.
+assessment is **completed**: 93.413174% / 0.901996079 on 1,002 images, zero original
+training-image overlap, 389 images sharing 375 training lesions. See the
+[verified closeout](../../research/generalization_review/R202_OUTER_CLOSEOUT.md).
+It is not S83 performance and does not replace S83 or its exact XAI package.
 
 ## Dataset and literature
 

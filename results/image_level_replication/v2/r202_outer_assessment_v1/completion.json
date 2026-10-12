@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "accuracy": 0.9341317365269461,
+  "macro_f1": 0.9019960788067909,
+  "original_checkpoint_unchanged": true,
+  "no_training": true,
+  "one_inference_pass": true,
+  "labels_used_only_after_saved_inference": true,
+  "method_changed_after_scoring": false,
+  "seconds": 24.32734569999593
+}

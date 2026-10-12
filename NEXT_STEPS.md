@@ -12,9 +12,11 @@ Updated 11 October 2026. **Training and performance searches are closed.** Histo
 ## Remaining work
 
 12 October: the user requested a pre-test generalization check. See the
-[saved-validation review and prepared R202 assessment](research/generalization_review/README.md).
-The correction was rejected; no assessment or training has run. The R202 result
-would be reported separately from the retained S83 product.
+[saved-validation review](research/generalization_review/README.md) and
+[completed R202 assessment](research/generalization_review/R202_OUTER_CLOSEOUT.md).
+The correction was rejected; the unchanged R202 EMA20 reached 93.413174% / 0.901996079
+on its own image-level outer cohort. This is separate from the retained S83 product.
+No training or assessment rerun is scheduled.
 
 1. Organization cleanup and verification are complete; use [the current evidence index](reporting/evidence/INDEX.md) as the report-facing entry point. Historical artifacts remain at their referenced paths.
 2. Reconcile the guide's report format, team details, actual contributions and publication template before drafting. References remain private under `docs/private_reference/`.

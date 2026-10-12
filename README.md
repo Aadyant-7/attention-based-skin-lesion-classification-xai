@@ -10,6 +10,7 @@ B.Tech CSE Minor Project · HAM10000 · seven classes · Git branch: **structure
 |---|---:|---:|---|
 | S83 exploratory validation | **94.011976%** | **0.895200837** | Repeatedly used image-level development cohort; train/validation can share lesions. |
 | S83 post-development test audit | **87.558217%** | **0.807031200** | Audit of the previously evaluated test cohort; not a new independent first test. |
+| R202 single-fold image-level outer assessment | **93.413174%** | **0.901996079** | Separate ConvNeXt-V2 Base model; natural lesion overlap, zero training-image overlap. |
 | S31 strict validation | 90.153027% | 0.843486392 | Separate lesion-disjoint three-model methodology. |
 | S31 original strict test | 86.759814% | 0.794472645 | Original locked-test evaluation of that frozen strict methodology. |
 
@@ -17,9 +18,10 @@ Latest R203 ConvNeXt-V2 Base completed 30 epochs: **93.213573%** exploratory acc
 
 ## Start here
 
-12 October update: [development-only generalization review](research/generalization_review/README.md)
-is complete. A separate R202 EMA20 image-level outer assessment is prepared but
-has not run; S83's final method, scores and XAI remain unchanged.
+12 October update: [generalization review](research/generalization_review/README.md)
+and [R202 EMA20 image-level outer assessment](research/generalization_review/R202_OUTER_CLOSEOUT.md)
+are complete. R202 reached 93.413174% / 0.901996079 on its own 1,002-image cohort;
+S83's final method, scores and XAI remain unchanged.
 
 - [Reporting workspace](reporting/README.md) and [current evidence index](reporting/evidence/INDEX.md): what to open for report/paper preparation.
 - [Retained S83 method](research/FINAL_EXPLORATORY_ENSEMBLE.md) and [S83 test audit](research/FINAL_S83_TEST_AUDIT.md): exact method and evaluation limits.

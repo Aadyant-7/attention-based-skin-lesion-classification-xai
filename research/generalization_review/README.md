@@ -3,7 +3,9 @@
 12 October 2026. User asked whether the 94.01% S83 validation versus 87.56% audit
 gap reflects overfitting, and requested development checks before another test.
 This review uses **already-saved validation predictions and histories only**.
-No training or assessment inference has run; S83/XAI remains unchanged.
+The development checks involved no training or image inference. The subsequently
+authorized R202 assessment is now complete: **93.413174% / 0.901996 macro-F1**.
+See [verified assessment closeout](R202_OUTER_CLOSEOUT.md). S83/XAI remains unchanged.
 
 ## Findings
 
@@ -52,7 +54,7 @@ It gained 1 correct prediction and lost 4. It failed the predeclared minimum
 **Rejected; no trained weights or original predictions were changed.** This is
 a negative development diagnostic, not a new test score.
 
-## Recommended lowest-cost next step
+## Pre-assessment decision (subsequently completed)
 
 Preserve S83 as the final ensemble reference. For the user's separate
 overlap-allowed assessment, use the **existing R202 EMA20** unchanged rather than
@@ -75,9 +77,11 @@ cohort; exposure subgroups are descriptive and cannot replace the headline score
 No subsequent tuning on assessment labels or automatic extra run is scheduled.
 
 Estimated assessment cost: approximately 1–3 minutes on the RTX 4060, batch 8,
-within 8GB VRAM. No training is involved. **Prepared, not launched.**
+within 8GB VRAM. No training is involved. **Completed in 24.33 seconds**;
+the result and independent verification are in the adjacent closeout.
 
-Start from the existing project root after the evaluation decision is approved:
+The original start command below is retained for provenance. The completed-run
+guard now returns without repeat inference; do not delete its start receipt.
 
 ```powershell
 Set-Location 'E:\Minor Project\Project Development'
@@ -90,7 +94,7 @@ Manual monitor in another PowerShell window:
 Get-Content 'E:\Minor Project\Project Development\results\image_level_replication\v2\r202_outer_assessment_v1\assessment.log' -Tail 20 -Wait
 ```
 
-Prepared freeze and future outputs:
+Original preparation freeze and completed outputs:
 `results/image_level_replication/v2/r202_outer_assessment_v1/`.
 Exact existing checkpoint:
 `checkpoints/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/best.pt`.

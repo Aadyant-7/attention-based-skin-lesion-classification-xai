@@ -1,0 +1,134 @@
+{
+  "accuracy": 0.9341317365269461,
+  "correct": 936,
+  "macro_precision": 0.8974756425056538,
+  "macro_recall": 0.907846480270368,
+  "macro_f1": 0.9019960788067909,
+  "confusion_matrix": [
+    [
+      28,
+      1,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      48,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      97,
+      0,
+      4,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      12,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      3,
+      0,
+      86,
+      21,
+      0
+    ],
+    [
+      2,
+      2,
+      4,
+      1,
+      10,
+      652,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      13
+    ]
+  ],
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "per_class": {
+    "akiec": {
+      "precision": 0.8235294117647058,
+      "recall": 0.875,
+      "f1": 0.8484848484848485,
+      "support": 32
+    },
+    "bcc": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9230769230769231,
+      "f1": 0.9056603773584906,
+      "support": 52
+    },
+    "bkl": {
+      "precision": 0.9065420560747663,
+      "recall": 0.8818181818181818,
+      "f1": 0.8940092165898618,
+      "support": 110
+    },
+    "df": {
+      "precision": 0.9230769230769231,
+      "recall": 1.0,
+      "f1": 0.96,
+      "support": 12
+    },
+    "mel": {
+      "precision": 0.8514851485148515,
+      "recall": 0.7747747747747747,
+      "f1": 0.8113207547169812,
+      "support": 111
+    },
+    "nv": {
+      "precision": 0.9602356406480118,
+      "recall": 0.9716840536512668,
+      "f1": 0.965925925925926,
+      "support": 671
+    },
+    "vasc": {
+      "precision": 0.9285714285714286,
+      "recall": 0.9285714285714286,
+      "f1": 0.9285714285714286,
+      "support": 14
+    }
+  },
+  "loss": 0.3835681974887848,
+  "weighted_f1": 0.9334329028631964,
+  "evaluation_claim": "Post-development single-fold image-level outer assessment with natural lesion overlap; not S83 test or completed K10",
+  "cohort_size": 1002,
+  "branch": "ema",
+  "selected_epoch": 20,
+  "incorrect": 66,
+  "melanoma_recall": 0.7747747747747747,
+  "akiec_recall": 0.875
+}

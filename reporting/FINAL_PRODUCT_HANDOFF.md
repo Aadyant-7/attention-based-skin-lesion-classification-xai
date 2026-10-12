@@ -10,10 +10,16 @@ Physical project: `E:\Minor Project\Project Development`; branch `structured-res
 |---|---:|---:|
 | S83 original exploratory validation | **94.011976%** | **0.895200837** |
 | S83 repeated post-development test audit | **87.558217%** | **0.807031200** |
+| Separate R202 EMA20 image-level outer fold00 | 93.413174% | 0.901996079 |
 | Separate S31 strict validation | 90.153027% | 0.843486392 |
 | Original S31 strict held-out test | 86.759814% | 0.794472645 |
 
 Exploratory development can share lesions and reused validation extensively. The S83 audit cohort was previously evaluated. Do not call 94.01% test accuracy or merge these protocols. R203 Base did not improve S83 through its two fixed fusions.
+
+The later [R202 outer assessment](../research/generalization_review/R202_OUTER_CLOSEOUT.md)
+uses a separate model/cohort: 1,002 images with no original image overlap with
+R202 training/selection; natural lesion overlap is permitted. Its 93.41% is not
+S83's ensemble accuracy, strict performance or a completed ten-fold result.
 
 ## What to open
 

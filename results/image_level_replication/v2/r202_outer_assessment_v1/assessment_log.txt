@@ -1,0 +1,6 @@
+2026-10-12 12:31:19,733 START one R202 EMA20 outer pass; FP32 bicubic224 identity;1002 images; labels absent from loader
+2026-10-12 12:31:22,104 Inference batch1/126
+2026-10-12 12:31:26,766 Inference batch40/126
+2026-10-12 12:31:31,367 Inference batch80/126
+2026-10-12 12:31:36,015 Inference batch120/126
+2026-10-12 12:31:41,175 COMPLETE accuracy=0.934132 macroF1=0.901996; no subsequent method change

@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "artifact_sha256": {
+    "results/image_level_replication/v2/r202_outer_assessment_v1/assessment_log.txt": "c224c7f968662be9b359c82307061569e4a164505e18a1bc6b0acbbcc6804aab",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/assessment_metrics.json": "504d89993dd660adca24e26d0d88f7e17c8c81d749ffb39441766becf586e782",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/completion.json": "2436614e46a28b653039882c72c2bcd1d0211662d52d7de96b5c134228aa3108",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/class_support.pdf": "1c7912d935dcf119752157d306bc6db529f3a6e9d0da8b069d806742279ab689",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/class_support.png": "2533cdd7a175d081ad27f896931c7a0c60b456dd9187fee965d6af6d4cde973c",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/confusion_matrix.csv": "b2670b4e51202ffe412eb95128c848dfa813f9f6406658c439a742e5f41f3626",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/confusion_matrix.pdf": "bbf12d9d01c81d0c759ceb8cb9214c76398b17fa48128a776a4b92f00a22fb01",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/confusion_matrix.png": "bd5a133e787f31b58a8ae384e6ccefc2c716364d9b464f01e6cd441ca198be7d",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/confusion_matrix_normalized.csv": "87afaad711dfe54082033d4f8ab5ce178c86e964030364e21407a9beed8b0164",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/confusion_matrix_normalized.pdf": "baf0d2cf180aba2038b3149abd9a4bae77144326e3fb8637376f5cf88ec6ff95",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/confusion_matrix_normalized.png": "71c937329a40d9ac934fefe5630bb5068aa0c22628973374f8bd62b1a04cddc5",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/per_class_metrics.csv": "4c395505e5d23f28ee24c79812c1ee770c860753d99fd59b3574132c50324c53",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/per_class_metrics.pdf": "3f3ca75d9847b5452dd80f33089b6a7cb686c5f1bc192f1d470fcb26d328e941",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/per_class_metrics.png": "82c39b34b52f4d52f3999c297ac941457fc0a16816d4cf02ef3b478ef8dce423",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/per_class_metrics_report.pdf": "10957c474e723d5b8e46d4bff566e1508964786d0480e3954677c125cf82090e",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/figures/per_class_metrics_report.png": "44e4fe3f242138fc9c3cead99022203362bd8edc3bf98fc8db5a345393aab594",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/frozen_assessment.json": "6c9225e12a4752dcb2eb0399a468391f977d5efd871e7b15a611f8c885562125",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/inference_started.json": "78b9f5e06987f286a584f8476fffb1e7132252a5cf12277ec4cc6ab6dbe9c823",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/lesion_exposure_subgroups.json": "8d58d61726fdd3c5e91940c87d1f4d7e6e9b4ab60580629bcc7f9e3213c713b5",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/per_class_metrics.csv": "86ccc8dc4d17053de9e454d45fa373cc896716f90bf8e8f0935c37c1734a516e",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/predictions.csv": "829951e48e2235578937049f348911656dae58fe1e39c99f29ab8688f60e9ed0",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/probabilities_unscored.csv": "28bd95a059ddeb4300093a6d6aa363b984f189ec0d3320e2288ec03d996618cc",
+    "results/image_level_replication/v2/r202_outer_assessment_v1/verification.json": "bf13ac0dfb48dca0126ed9739673eb1c0de8f0b4fba6b295c71664cc0e00b449"
+  }
+}

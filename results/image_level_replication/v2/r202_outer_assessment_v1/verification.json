@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "original_model": "R202 EMA20",
+  "frozen_checkpoint_unchanged": true,
+  "source_hashes_verified": true,
+  "predictions_and_probabilities_verified": 1002,
+  "correct": 936,
+  "incorrect": 66,
+  "metrics_classes_raw_and_normalized_matrices_match": true,
+  "pngs_verified": 5,
+  "pdfs_verified": 5,
+  "representative_pdf_layouts_rendered_and_reviewed": true,
+  "model_inference_during_closeout": false,
+  "training_during_closeout": false,
+  "preserved_previous_registry_rows": 594,
+  "registry_rows": 595,
+  "S83_exposure_to_this_cohort": {
+    "train": 701,
+    "val": 151,
+    "test": 150
+  },
+  "exposure_note": "701 images trained on by S83;151 used in S83 validation. This cohort is not a held-out S83 test.",
+  "result_claim": "Post-development single-fold image-level outer assessment with natural lesion overlap; not S83 test or completed K10"
+}
