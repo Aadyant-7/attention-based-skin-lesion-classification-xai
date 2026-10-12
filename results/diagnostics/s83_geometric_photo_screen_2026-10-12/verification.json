@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "independent_array_and_metric_recomputation": true,
+  "independent_reviewer": "multiimage_followup_review",
+  "all_1429_lesion_and_1503_image_predicted_labels_identical_between_rules": true,
+  "exact_singleton_preservation": true,
+  "source_and_code_sha256_verified": true,
+  "plan_precedes_derived_outputs": true,
+  "confusion_and_per_class_metrics_verified": true,
+  "png_verified": true,
+  "pdf_verified": true,
+  "pdf_rendered_and_visually_reviewed": true,
+  "registry_rows": 597,
+  "prior_596_registry_records_preserved": true,
+  "old_test_candidate_scored": false,
+  "training": false,
+  "gpu_used": false,
+  "new_model_inference": false
+}

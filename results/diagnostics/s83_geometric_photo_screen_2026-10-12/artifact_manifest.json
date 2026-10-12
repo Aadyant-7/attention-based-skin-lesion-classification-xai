@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "artifact_sha256": {
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/comparison.csv": "9780e8241f01485234ff58ab6a11b0ec6d39abb272bdadfa95bfe13a7aca7f9e",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/figures/validation_comparison.pdf": "66161bb25d64e74d6e8a4b9ee0dfe269eac0707aaece6848ce4f679abbc073b1",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/figures/validation_comparison.png": "68efc2d2de8e0eaf58bf5a245b724ed15bacb8c8bd07fd6894d7bdcb298f076d",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/arithmetic/confusion_matrix.csv": "c1e3e48352afb7af1fc9394aefe777950c34ae4da3c2d20d83fc9a468473b8cf",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/arithmetic/confusion_matrix_normalized.csv": "e9f009481fe1cfbd950183febe69b32b96eb9a34726dd1cbdca5c5505d2ae87f",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/arithmetic/metrics.json": "8a6c050404cc87c2f6d1e1c09ae4e9969b9e088b62b26a2149ac2b4d41ddef1d",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/arithmetic/per_class_metrics.csv": "d37fb3d123dda118473b73dd7a43e7660cd0bebabe2d9a037e530da2ffc02809",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/arithmetic/predictions.csv": "c92896f913545c1b3605bc75f69512bab5153c881e92bbfad4990d594440a26f",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/geometric/confusion_matrix.csv": "c1e3e48352afb7af1fc9394aefe777950c34ae4da3c2d20d83fc9a468473b8cf",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/geometric/confusion_matrix_normalized.csv": "e9f009481fe1cfbd950183febe69b32b96eb9a34726dd1cbdca5c5505d2ae87f",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/geometric/metrics.json": "0c33d9ca92403f23ce2948ae3a235655a83d847f2b413dca60eba13d3267de32",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/geometric/per_class_metrics.csv": "d37fb3d123dda118473b73dd7a43e7660cd0bebabe2d9a037e530da2ffc02809",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/image/geometric/predictions.csv": "d7ee2a0e5b190e078da2e9c766745c00d1f421046efdc7fdafc1ed3471fdae66",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/arithmetic/confusion_matrix.csv": "c9197cdb9acf7f80ee4ea387b4efa4359bdc8ecc98f7fd84f408e03b13f15c90",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/arithmetic/confusion_matrix_normalized.csv": "4a68c01ea080512cdbdd78acdeee47fd940df8dfbfa641b8f8567b884eadc1f3",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/arithmetic/metrics.json": "c90beaae2aae63c02a5aa6a461da35456b4ffa89535dff900fc20081f07c5ebe",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/arithmetic/per_class_metrics.csv": "604b0517947dd3cc924895b15b790fba13bc6523a8ff999d2676fd2887a48bc4",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/arithmetic/predictions.csv": "e1b85123363980f060178f734386c1925aa3785664999465b8e74e0c6fe13707",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/geometric/confusion_matrix.csv": "c9197cdb9acf7f80ee4ea387b4efa4359bdc8ecc98f7fd84f408e03b13f15c90",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/geometric/confusion_matrix_normalized.csv": "4a68c01ea080512cdbdd78acdeee47fd940df8dfbfa641b8f8567b884eadc1f3",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/geometric/metrics.json": "05996e3bc793c86473a23d643cc3e134978d323e4ee2afc5dbae61f2988e6200",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/geometric/per_class_metrics.csv": "604b0517947dd3cc924895b15b790fba13bc6523a8ff999d2676fd2887a48bc4",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/lesion/geometric/predictions.csv": "e9d48fe2a40c17b02eca7f10dfca80910cfebf67eac205904a7171ac1bbffe84",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/plan.json": "714eb300f11f445476be32a56cbbc77543e2927e2fe957f670c0ddf9dd053966",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/summary.json": "1b58b967f6f093f9b0249c1b007a73caa2370e68b7a42f3863a4ce913c7baac0",
+    "results/diagnostics/s83_geometric_photo_screen_2026-10-12/verification.json": "73fd358ecff3b431dc64216c3e5a600bbcee895130ccb184eef861897f7fb7ab"
+  }
+}

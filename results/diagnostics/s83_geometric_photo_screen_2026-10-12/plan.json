@@ -1,0 +1,39 @@
+{
+  "plan": {
+    "question": "Does agreement-sensitive geometric photo pooling materially outperform arithmetic photo pooling on existing S83 validation?",
+    "candidate": "Normalize exp(mean(log(max(p, 1e-12)))) over all available validation photographs of each lesion; preserve singleton vectors exactly",
+    "epsilon": 1e-12,
+    "arithmetic_control": "Equal probability mean across the same available photographs",
+    "units": "All validation lesions and all original validation images; broadcast lesion predictions for the image endpoint",
+    "grouping": "lesion_id only; no labels, confidence, correctness, diagnosis or image appearance selects photographs",
+    "gate": {
+      "minimum_accuracy_gain": 0.005,
+      "minimum_net_image_gain": 8,
+      "macro_f1_non_decreasing": true,
+      "melanoma_recall_non_decreasing": true,
+      "akiec_recall_non_decreasing": true,
+      "required_on_both_units": true
+    },
+    "prior": "Geometric fusion across models was previously unhelpful; across photographs is a distinct unproven ablation",
+    "origin": "User authorized one further check after the earlier retrospective arithmetic diagnostic; all previous outcomes remain known",
+    "assessment": "Exploratory validation development only, with existing lesion overlap; not independent confirmation",
+    "fail_action": "Stop candidate; do not open old-test prediction files or select another pooling alternative",
+    "pass_action": "Only permits a separately labelled retrospective old-test diagnostic; does not freeze or upgrade S83",
+    "no_grids": true,
+    "no_subsets": true,
+    "no_cross_partition_companions": true,
+    "no_training": true,
+    "no_new_model_inference": true,
+    "old_test_candidate_scored": false
+  },
+  "source_sha256": {
+    "results/short_screening/s83_cbam_f1_addition_cpu/validation_predictions.csv": "9aece30ca72513610ac62ef0c615b558d91b11e99beca5e1edae6e1b631267dc",
+    "results/short_screening/s83_cbam_f1_addition_cpu/validation_metrics.json": "4022248515d7a36954df0170f3930cda9333c75c672a0dad4867f89b90d24241",
+    "data/splits/exploratory/image_level_dev_v1.csv": "75ebfcb011d8822e372283218dbb95a89b3e3d3e9323c83519004e2da1790fbb"
+  },
+  "code_sha256": {
+    "research/generalization_review/s83_multiimage_geometric_screen.py": "b0ead5739925ff00da7bcb5e2aa4bd430bd120e797753175060d59400cf43a70",
+    "research/short_screening/lesion_bag_screen.py": "2a27c485b6978878c31f1ab45e4f5ef8f52eea106c7e0e4e96e3ec3f5ae040ef",
+    "research/plots.py": "48289dfe2f4b397288f3aab69d650ac12a14d86b7e73b47e61cd8888d6edf5c9"
+  }
+}

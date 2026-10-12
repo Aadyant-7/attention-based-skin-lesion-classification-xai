@@ -104,3 +104,4 @@ results/master_experiment_registry.csv -text whitespace=cr-at-eol
 research/generalization_review/** -text whitespace=cr-at-eol
 results/diagnostics/generalization_review_2026-10-12/** -text whitespace=cr-at-eol
 results/diagnostics/s83_multiimage_lesion_review_2026-10-12/** -text whitespace=cr-at-eol
+results/diagnostics/s83_geometric_photo_screen_2026-10-12/** -text whitespace=cr-at-eol

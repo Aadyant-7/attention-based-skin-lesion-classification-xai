@@ -1,0 +1,834 @@
+{
+  "status": "completed",
+  "gate_passed": false,
+  "checks": {
+    "lesion": {
+      "accuracy": false,
+      "macro_f1": true,
+      "melanoma_recall": true,
+      "akiec_recall": true
+    },
+    "image": {
+      "accuracy": false,
+      "macro_f1": true,
+      "melanoma_recall": true,
+      "akiec_recall": true
+    },
+    "minimum_net_image_gain": false
+  },
+  "decision": "Rejected on development; stop before old-test scoring",
+  "original_image": {
+    "loss": 0.20065261712794383,
+    "accuracy": 0.9401197604790419,
+    "macro_precision": 0.9223213602144419,
+    "macro_recall": 0.8742171872627725,
+    "macro_f1": 0.8952008370253541,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        73,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        145,
+        0,
+        5,
+        11,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        14,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        137,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        12,
+        989,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.8974358974358975,
+        "recall": 0.7142857142857143,
+        "f1": 0.7954545454545454,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9012345679012346,
+        "recall": 0.948051948051948,
+        "f1": 0.9240506329113924,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.9119496855345912,
+        "recall": 0.8787878787878788,
+        "f1": 0.8950617283950617,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8235294117647058,
+        "f1": 0.9032258064516129,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8782051282051282,
+        "recall": 0.8203592814371258,
+        "f1": 0.848297213622291,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9583333333333334,
+        "recall": 0.9821251241310824,
+        "f1": 0.9700833742030407,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    },
+    "unit": "image",
+    "observations": 1503,
+    "correct": 1413,
+    "incorrect": 90,
+    "weighted_f1": 0.9389512119591665,
+    "evaluation": "Exploratory validation development only; repeatedly reused image-level split"
+  },
+  "canonical_lesion": {
+    "loss": 0.19972145210857917,
+    "accuracy": 0.940517844646606,
+    "macro_precision": 0.922272180777771,
+    "macro_recall": 0.8693298482739307,
+    "macro_f1": 0.8923037346052983,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        71,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        136,
+        0,
+        5,
+        11,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        124,
+        25,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        10,
+        946,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.8974358974358975,
+        "recall": 0.7142857142857143,
+        "f1": 0.7954545454545454,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.8987341772151899,
+        "recall": 0.9466666666666667,
+        "f1": 0.922077922077922,
+        "support": 75
+      },
+      "bkl": {
+        "precision": 0.912751677852349,
+        "recall": 0.8717948717948718,
+        "f1": 0.8918032786885246,
+        "support": 156
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 15
+      },
+      "mel": {
+        "precision": 0.8794326241134752,
+        "recall": 0.8157894736842105,
+        "f1": 0.8464163822525598,
+        "support": 152
+      },
+      "nv": {
+        "precision": 0.9584599797365755,
+        "recall": 0.9843912591050988,
+        "f1": 0.971252566735113,
+        "support": 961
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    },
+    "unit": "lesion",
+    "observations": 1429,
+    "correct": 1344,
+    "incorrect": 85,
+    "weighted_f1": 0.93922438918658,
+    "evaluation": "Exploratory validation development only; repeatedly reused image-level split"
+  },
+  "arithmetic_lesion": {
+    "loss": 0.19742677164547398,
+    "accuracy": 0.9412176347095871,
+    "macro_precision": 0.9233286291604391,
+    "macro_recall": 0.871012695430243,
+    "macro_f1": 0.8936737107743068,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        71,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        138,
+        0,
+        3,
+        11,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        124,
+        25,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        11,
+        945,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.8974358974358975,
+        "recall": 0.7142857142857143,
+        "f1": 0.7954545454545454,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.8987341772151899,
+        "recall": 0.9466666666666667,
+        "f1": 0.922077922077922,
+        "support": 75
+      },
+      "bkl": {
+        "precision": 0.9139072847682119,
+        "recall": 0.8846153846153846,
+        "f1": 0.8990228013029316,
+        "support": 156
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 15
+      },
+      "mel": {
+        "precision": 0.8857142857142857,
+        "recall": 0.8157894736842105,
+        "f1": 0.8493150684931506,
+        "support": 152
+      },
+      "nv": {
+        "precision": 0.9584178498985801,
+        "recall": 0.9833506763787722,
+        "f1": 0.9707241910631741,
+        "support": 961
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    },
+    "unit": "lesion",
+    "observations": 1429,
+    "correct": 1345,
+    "incorrect": 84,
+    "weighted_f1": 0.9399655206181294,
+    "evaluation": "Exploratory validation development only; repeatedly reused image-level split"
+  },
+  "geometric_lesion": {
+    "loss": 0.19598049580019922,
+    "accuracy": 0.9412176347095871,
+    "macro_precision": 0.9233286291604391,
+    "macro_recall": 0.871012695430243,
+    "macro_f1": 0.8936737107743068,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        71,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        138,
+        0,
+        3,
+        11,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        124,
+        25,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        11,
+        945,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.8974358974358975,
+        "recall": 0.7142857142857143,
+        "f1": 0.7954545454545454,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.8987341772151899,
+        "recall": 0.9466666666666667,
+        "f1": 0.922077922077922,
+        "support": 75
+      },
+      "bkl": {
+        "precision": 0.9139072847682119,
+        "recall": 0.8846153846153846,
+        "f1": 0.8990228013029316,
+        "support": 156
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 15
+      },
+      "mel": {
+        "precision": 0.8857142857142857,
+        "recall": 0.8157894736842105,
+        "f1": 0.8493150684931506,
+        "support": 152
+      },
+      "nv": {
+        "precision": 0.9584178498985801,
+        "recall": 0.9833506763787722,
+        "f1": 0.9707241910631741,
+        "support": 961
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    },
+    "unit": "lesion",
+    "observations": 1429,
+    "correct": 1345,
+    "incorrect": 84,
+    "weighted_f1": 0.9399655206181294,
+    "evaluation": "Exploratory validation development only; repeatedly reused image-level split"
+  },
+  "arithmetic_image": {
+    "loss": 0.19884419992533725,
+    "accuracy": 0.9394544244843646,
+    "macro_precision": 0.9227993363383956,
+    "macro_recall": 0.8740960609138634,
+    "macro_f1": 0.8953116406764321,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        73,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        147,
+        0,
+        3,
+        11,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        14,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        135,
+        29,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        13,
+        988,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.8974358974358975,
+        "recall": 0.7142857142857143,
+        "f1": 0.7954545454545454,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9012345679012346,
+        "recall": 0.948051948051948,
+        "f1": 0.9240506329113924,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.9130434782608695,
+        "recall": 0.8909090909090909,
+        "f1": 0.901840490797546,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8235294117647058,
+        "f1": 0.9032258064516129,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8823529411764706,
+        "recall": 0.8083832335329342,
+        "f1": 0.84375,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9564375605033882,
+        "recall": 0.9811320754716981,
+        "f1": 0.9686274509803922,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    },
+    "unit": "image",
+    "observations": 1503,
+    "correct": 1412,
+    "incorrect": 91,
+    "weighted_f1": 0.9382146826419878,
+    "evaluation": "Exploratory validation development only; repeatedly reused image-level split"
+  },
+  "geometric_image": {
+    "loss": 0.19603350202605374,
+    "accuracy": 0.9394544244843646,
+    "macro_precision": 0.9227993363383956,
+    "macro_recall": 0.8740960609138634,
+    "macro_f1": 0.8953116406764321,
+    "class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        5,
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        73,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        147,
+        0,
+        3,
+        11,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        14,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        135,
+        29,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        13,
+        988,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        20
+      ]
+    ],
+    "per_class": {
+      "akiec": {
+        "precision": 0.8974358974358975,
+        "recall": 0.7142857142857143,
+        "f1": 0.7954545454545454,
+        "support": 49
+      },
+      "bcc": {
+        "precision": 0.9012345679012346,
+        "recall": 0.948051948051948,
+        "f1": 0.9240506329113924,
+        "support": 77
+      },
+      "bkl": {
+        "precision": 0.9130434782608695,
+        "recall": 0.8909090909090909,
+        "f1": 0.901840490797546,
+        "support": 165
+      },
+      "df": {
+        "precision": 1.0,
+        "recall": 0.8235294117647058,
+        "f1": 0.9032258064516129,
+        "support": 17
+      },
+      "mel": {
+        "precision": 0.8823529411764706,
+        "recall": 0.8083832335329342,
+        "f1": 0.84375,
+        "support": 167
+      },
+      "nv": {
+        "precision": 0.9564375605033882,
+        "recall": 0.9811320754716981,
+        "f1": 0.9686274509803922,
+        "support": 1007
+      },
+      "vasc": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9523809523809523,
+        "f1": 0.9302325581395349,
+        "support": 21
+      }
+    },
+    "unit": "image",
+    "observations": 1503,
+    "correct": 1412,
+    "incorrect": 91,
+    "weighted_f1": 0.9382146826419878,
+    "evaluation": "Exploratory validation development only; repeatedly reused image-level split"
+  },
+  "lesion_changes": {
+    "gained": 0,
+    "lost": 0,
+    "net": 0
+  },
+  "image_changes": {
+    "gained": 0,
+    "lost": 0,
+    "net": 0
+  },
+  "validation_images": 1503,
+  "validation_lesions": 1429,
+  "multiimage_lesions": 70,
+  "multiimage_images": 144,
+  "view_counts": {
+    "1": 1359,
+    "2": 66,
+    "3": 4
+  },
+  "labels_used_for_scoring": true,
+  "labels_used_for_pooling": false,
+  "old_test_candidate_scored": false,
+  "old_test_files_loaded": false,
+  "training": false,
+  "gpu_used": false,
+  "new_model_inference": false,
+  "frozen_S83_changed": false,
+  "original_sources_unchanged": true
+}

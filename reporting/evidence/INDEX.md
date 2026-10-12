@@ -79,6 +79,12 @@ S83 stays 87.558217%. Melanoma recall declined and the material-gain gate failed
 This is a changed input/unit diagnostic, not a replacement final test or a new
 untouched evaluation.
 
+[One subsequent fixed geometric-photo screen](../../research/generalization_review/S83_GEOMETRIC_PHOTO_CLOSEOUT.md)
+made identical validation decisions to arithmetic pooling and failed the
+continuation gate. No old-test candidate scoring occurred; all retained results
+above are unchanged. The 94.121763% lesion-unit development score is not a new
+single-image best or test result.
+
 ## Dataset and literature
 
 - [Strict split](../../data/splits/split_assignments.csv), [exploratory split](../../data/splits/exploratory/image_level_dev_v1.csv), [class order](../../data/splits/label_mapping.json).
