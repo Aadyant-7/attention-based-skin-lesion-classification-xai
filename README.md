@@ -17,6 +17,10 @@ Latest R203 ConvNeXt-V2 Base completed 30 epochs: **93.213573%** exploratory acc
 
 ## Start here
 
+12 October update: [development-only generalization review](research/generalization_review/README.md)
+is complete. A separate R202 EMA20 image-level outer assessment is prepared but
+has not run; S83's final method, scores and XAI remain unchanged.
+
 - [Reporting workspace](reporting/README.md) and [current evidence index](reporting/evidence/INDEX.md): what to open for report/paper preparation.
 - [Retained S83 method](research/FINAL_EXPLORATORY_ENSEMBLE.md) and [S83 test audit](research/FINAL_S83_TEST_AUDIT.md): exact method and evaluation limits.
 - [Research study index](research/STUDY_INDEX.md): work grouped by research question, including negative and superseded studies.

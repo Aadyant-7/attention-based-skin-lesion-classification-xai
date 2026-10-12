@@ -11,6 +11,11 @@ Updated 11 October 2026. **Training and performance searches are closed.** Histo
 
 ## Remaining work
 
+12 October: the user requested a pre-test generalization check. See the
+[saved-validation review and prepared R202 assessment](research/generalization_review/README.md).
+The correction was rejected; no assessment or training has run. The R202 result
+would be reported separately from the retained S83 product.
+
 1. Organization cleanup and verification are complete; use [the current evidence index](reporting/evidence/INDEX.md) as the report-facing entry point. Historical artifacts remain at their referenced paths.
 2. Reconcile the guide's report format, team details, actual contributions and publication template before drafting. References remain private under `docs/private_reference/`.
 3. Arrange saved model comparisons, matched attention results, controlled ensemble results, curves, class scores and confusion matrices by research question; use [the study index](research/STUDY_INDEX.md).

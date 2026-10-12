@@ -58,6 +58,14 @@ Suggested later writing order: dataset/protocols → matched backbones → compl
 
 [Final product handoff](../FINAL_PRODUCT_HANDOFF.md) gives the exact saved-results/gallery/atlas opening sequence. The linked prior readiness audit describes the state before this new exact-method XAI task.
 
+## Later pre-test review: 12 October 2026
+
+[Saved-validation generalization review](../../research/generalization_review/README.md)
+decomposes lesion exposure and class mix, checks late overfitting, and records one
+rejected training-loss-derived correction. A separate R202 EMA20 image-level
+assessment is CPU-prepared, **not evaluated**. It has no test score and does not
+replace S83 or its exact XAI package.
+
 ## Dataset and literature
 
 - [Strict split](../../data/splits/split_assignments.csv), [exploratory split](../../data/splits/exploratory/image_level_dev_v1.csv), [class order](../../data/splits/label_mapping.json).

@@ -101,3 +101,5 @@ results/final_s83_xai/** -text whitespace=cr-at-eol
 reporting/** -text whitespace=cr-at-eol
 research/xai/README.md -text whitespace=cr-at-eol
 results/master_experiment_registry.csv -text whitespace=cr-at-eol
+research/generalization_review/** -text whitespace=cr-at-eol
+results/diagnostics/generalization_review_2026-10-12/** -text whitespace=cr-at-eol

@@ -1,0 +1,19 @@
+{
+  "method": "One inverse training-class-weight probability correction, exponent exactly1",
+  "question": "Does undoing the known weighted-CE class tilt improve the saved R202 natural-distribution validation predictions?",
+  "formula": "q_corrected[c] = (q[c]/training_loss_weight[c]) / sum_k(q[k]/training_loss_weight[k])",
+  "rationale": "At the population optimum of weighted cross entropy, q[c] is proportional to weight[c]*P(c|x). A trained finite network need not satisfy that idealization.",
+  "sources": "Existing EMA epoch20 accuracy-selected R202 checkpoint predictions; original902 inner-validation images",
+  "search": "One fixed rule; no exponent/temperature/threshold/weight grid or alternative checkpoint evaluation",
+  "gate": {
+    "minimum_accuracy_gain": 0.005,
+    "macro_f1_non_decreasing": true,
+    "melanoma_recall_non_decreasing": true,
+    "akiec_recall_non_decreasing": true
+  },
+  "scope": "Postdevelopment validation-only diagnostic. It cannot measure generalization or prove a test gain.",
+  "test_images_loaded": false,
+  "test_labels_loaded": false,
+  "gpu_used": false,
+  "checkpoint_loaded": false
+}

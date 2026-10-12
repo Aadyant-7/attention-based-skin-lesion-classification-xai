@@ -1,0 +1,5 @@
+method,subset,images,mean_top_probability,errors_or_correct_above_0_9
+S83,correct,1413,0.9313067999910313,1112
+S83,incorrect,90,0.676981747481558,10
+R202_EMA20,correct,841,0.9896891166707423,816
+R202_EMA20,incorrect,61,0.9054069909893099,42

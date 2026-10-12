@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "checks": {
+    "material_accuracy_gain": false,
+    "macro_f1_non_decreasing": true,
+    "melanoma_recall_non_decreasing": false,
+    "akiec_recall_non_decreasing": true
+  },
+  "adopt": false,
+  "baseline_accuracy": 0.9323725055432373,
+  "candidate_accuracy": 0.9290465631929047,
+  "accuracy_gain_pp": -0.3325942350332567,
+  "baseline_macro_f1": 0.8752770626299834,
+  "candidate_macro_f1": 0.8821484637132391,
+  "correct_gained": 1,
+  "correct_lost": 4,
+  "net_correct": -3,
+  "source_sha256": {
+    "research/image_level_replication/v2/convnext_base_fold00.json": "c4c198140a51105f607fa3900a4d4900526e1b1a363f4f5c78f676225d7df8d9",
+    "results/image_level_replication/v2/r202_convnextv2_base_fold00_seed42/best_accuracy/predictions.csv": "217274463837790c54815ad483ed3f0678bf0fe56d084ebc85dce94232932977"
+  },
+  "test_loaded": false,
+  "training": false,
+  "gpu_used": false,
+  "original_model_or_results_changed": false,
+  "conclusion": "Rejected; original EMA20 predictions/decision rule retained"
+}
