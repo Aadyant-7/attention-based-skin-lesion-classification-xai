@@ -9,7 +9,7 @@ Read in this order:
 3. [Dataset/protocol](DATASET_PROTOCOL.md): exact cohort, class counts, limits and test lock.
 4. [Experimental setup](EXPERIMENTAL_SETUP.md): fixed settings, questions, selection and amendment rules.
 5. [GPU run handoff](GPU_RUN_HANDOFF.md): mandatory announcement, launch/monitor contract and saved artifacts.
-6. [Next steps](../../NEXT_STEPS.md): Phase 3 implementation gates before training.
+6. [Current project status](../../docs/project/STATUS.md): current reporting work and completed-study boundaries. The Phase 3 implementation gates below are historical.
 
 ## Decisions
 

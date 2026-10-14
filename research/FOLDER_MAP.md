@@ -7,7 +7,7 @@ Physical root: **`E:\Minor Project\Project Development`**. The old C: directory 
 | Path | What it contains / why it stays |
 |---|---|
 | `README.md` | Current method, evaluation summary and starting links. |
-| `NEXT_STEPS.md` | Remaining reporting/XAI tasks, with no queued experiments. |
+| [docs/project/STATUS.md](../docs/project/STATUS.md) | Current project status and remaining reporting tasks, with no queued experiments. |
 | `requirements.txt` | Recorded Python package requirements. |
 | `.gitignore`, `.gitattributes` | Local-asset exclusions and Git file handling. |
 | `reporting/` | Current report-facing navigation and curated evidence links. |

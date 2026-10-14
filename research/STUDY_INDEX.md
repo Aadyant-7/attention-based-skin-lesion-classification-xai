@@ -36,4 +36,4 @@ Present each selected question, protocol, actual recipe, saved result and conclu
 
 Use [the current evidence index](../reporting/evidence/INDEX.md) for figures/tables. Keep checkpoint selection, class-wise performance and evaluation labels visible. Do not imply every study added a positive gain, repeated validation is independent testing, or CBAM/Grad-CAM guarantees better accuracy.
 
-Code stays at its original paths because later implementations import its helpers and freezes hash it. [Folder map](FOLDER_MAP.md) · [Current next steps](../NEXT_STEPS.md) · [Archived navigation](../legacy/navigation/cleanup_2026-10-11/)
+Code stays at its original paths because later implementations import its helpers and freezes hash it. [Folder map](FOLDER_MAP.md) · [Current next steps](../docs/project/STATUS.md) · [Archived navigation](../legacy/navigation/cleanup_2026-10-11/)

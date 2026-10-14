@@ -1,6 +1,6 @@
 # Final product handoff
 
-Physical project: `E:\Minor Project\Project Development`; branch `structured-research`. Training and performance searches are closed. This guide opens saved evidence; it does not retrain, regenerate explanations or evaluate the test.
+Default branch: `main`. Training and performance searches are closed. This guide opens saved evidence; it does not retrain, regenerate explanations or evaluate the test.
 
 ## Retained framework
 
@@ -44,19 +44,20 @@ Exact S83 XAI has completed with passed numerical/artifact verification in `resu
 4. Open the verified exact S83 gallery/atlas; discuss both correct and incorrect cases.
 5. Show the separately labelled strict/test-audit results and limitations.
 
+Run these PowerShell commands from the root of any clone:
+
 ```powershell
-Set-Location 'E:\Minor Project\Project Development'
 Get-Content '.\results\final_s83_xai\v1\verification.json'
 Start-Process '.\results\final_s83_xai\v1\gallery.html'
 Start-Process '.\results\final_s83_xai\v1\S83_GradCAM_Atlas.pdf'
 ```
 
-These commands open saved artifacts only. On another laptop, clone/download the `structured-research` branch and open the same paths relative to its project folder. Keep the gallery and its case folders together. Saved tracked tables, PNG/PDFs and HTML need **no raw HAM10000 data, checkpoints, CUDA or Python** to present.
+These commands open saved artifacts only. On another laptop, clone/download the repository's default branch (`main`) and open the same paths relative to its project folder. Keep the gallery and its case folders together. Saved tracked tables, PNG/PDFs and HTML need **no raw HAM10000 data, checkpoints, CUDA or Python** to present.
 
 ## Checkpoints and remaining work
 
 Checkpoint binaries are local, Git-ignored: five S83 members live under `checkpoints/structured/<run_id>/`; S79 lives under `checkpoints/final_cbam_development/v1/s79_convnext_tiny_cbam_exploratory_seed42/best_macro_f1.pt`. Use the freeze for exact filenames, selectors and hashes. GitHub alone does not supply checkpoint binaries, raw data, the virtual environment or private guide references. Copy those only if actual inference is required; viewing reports does not require them.
 
-Next work is final report/paper/presentation composition, citation/figure review and guide formatting. Preserve source metrics and meaningful unsuccessful comparisons; a thematic research narrative need not reproduce daily chronology.
+Two local report drafts are complete and await group review; they are private and excluded from Git. Next work is group review, citation/figure review, guide formatting and paper/presentation composition. Preserve source metrics and meaningful unsuccessful comparisons; a thematic research narrative need not reproduce daily chronology.
 
 [Current final-product readiness](evidence/S83_FINAL_PRODUCT_READINESS.md) · [XAI closeout](../research/final_s83_xai/CLOSEOUT.md).

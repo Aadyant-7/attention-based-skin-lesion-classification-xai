@@ -1,19 +1,27 @@
-# Read-only organization checks
+# Read-only repository and preservation checks
 
-This is the current cleanup verification tool. Historical training utilities remain at their recorded paths; no frozen runtime was changed for organization.
+## Any fresh clone (no ML dependencies or local assets)
 
-From the project root, run:
+From the clone root:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -B -m research.maintenance.verify_organization --full-hash
+python -B -m research.maintenance.verify_repository
 ```
 
-Checks the pre-cleanup local snapshot, exact archived navigation, approved move/delete ledgers, protected file metadata and SHA-256 hashes, registry references, reporting sources, active Markdown links, Python syntax, CPU imports and R202/R203 signatures. It does not decode images, load model checkpoints, perform inference, start training or initialize CUDA. Hashing large preserved files takes time and reads their bytes only.
+Uses only the Python standard library. Checks Python syntax, current navigation, registry references with explicit local-only exclusions, reporting source SHA-256 values, frozen S83 receipts and saved XAI gallery/resources. It does not import Torch, decode images, load weights, run inference, score the test or write files by default. `--output <path>` saves a receipt only when explicitly requested.
 
-The baseline stays local at `.cache/cleanup/20261011/before_manifest.json`; its digest and outcomes are recorded in the [dated cleanup record](../../legacy/organization/cleanup_2026-10-11/README.md). The unchanged environment is checked by metadata against the verified migration baseline; research/data/checkpoint/cache content receives fresh hashes. Run Python with `-B` to avoid recreating bytecode.
+## Existing full project (original environment and scientific assets)
 
-`--portable` skips the local cleanup snapshot, but still requires the existing local scientific assets and matching dependencies for registry/import/freeze checks. It is not a checkpoint-free fresh-clone test. The older `research/verify_layout.py` has phase-specific assumptions and writes historical receipts; it is preserved, not used for this cleanup.
+```powershell
+& '.\.venv\Scripts\python.exe' -B -m research.maintenance.verify_organization --portable
+```
 
-## Later authorized work — 11 October 2026
+The historical option name `--portable` skips the old local cleanup snapshot. This check still requires local checkpoint/cache/raw metadata references and the matching ML environment; it is **not** the fresh-clone check above. It verifies registry references, reporting hashes, syntax, reviewed CPU imports and R202/R203 frozen signatures, with CUDA uninitialized. It loads no model or image.
 
-The exact S83 XAI task adds new explanation files and updates active navigation after the dated cleanup. The `--full-hash` baseline authenticates the cleanup's original state and is not expected to accept every later authorized addition/navigation change. Preserve its original receipts. Use `--portable` for current read-only link/reference/import checks, and the new `results/final_s83_xai/v1/verification.json` for exact-method XAI verification. Neither is authorization to regenerate explanations or evaluate the test.
+## Historical cleanup baseline
+
+The 11 October baseline and `--full-hash` option authenticate that dated organization snapshot, not the latest repository. Later authorized XAI, research and navigation additions can differ. Preserve the original [cleanup record](../../legacy/organization/cleanup_2026-10-11/README.md) and local baseline under `.cache/cleanup/20261011/`; do not rewrite them to make a modern check pass.
+
+`research/verify_layout.py` also has phase-specific historical assumptions and writes old audit receipts; it is not a current gate. Do not run training/sanity or XAI regeneration commands as browsing checks. The XAI runner's `--verify` rewrites receipts; the new clone audit checks existing hashes without invoking it.
+
+See [setup and excluded assets](../../docs/SETUP.md), [current status](../../docs/project/STATUS.md) and [final audit](../../docs/project/FINAL_AUDIT.md). No frozen runtime, checkpoint or metric is changed by these navigation tools.

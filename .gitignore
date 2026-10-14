@@ -2,6 +2,9 @@
 .cache/
 data/raw/
 docs/private_reference/
+# Local report content draft and personal administrative details.
+/reporting/report/draft_v1/
+/reporting/report/draft_v2/
 notebooks/legacy/
 legacy/notebooks/
 legacy/archive/

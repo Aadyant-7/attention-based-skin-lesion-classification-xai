@@ -4,6 +4,10 @@ Updated 11 October 2026. Training is closed. This folder preserves earlier resea
 
 ## Current entry points
 
+- [Clone and setup](SETUP.md): viewing saved evidence versus installing research dependencies.
+- [Current project status / assistant handoff](project/STATUS.md): retained method, completed work and remaining submission tasks.
+- [Final repository audit](project/FINAL_AUDIT.md): preservation, clone checks and Git consolidation.
+
 - [Project overview](../README.md): retained methodology and current status.
 - [Reporting evidence index](../reporting/evidence/INDEX.md): verified tables, figures, protocols and implemented XAI evidence for writing.
 - [Research workspace](../research/README.md): code and completed-study navigation.
@@ -28,6 +32,6 @@ The current retained S83 result is **94.011976% exploratory validation accuracy 
 
 ## Local private references
 
-`private_reference/` is excluded from Git. It contains reference papers and the guide's PDF/screenshots. The [guide-reference notes](private_reference/report_guidance_2026-10-09/REFERENCE_NOTES.md) index the originals; generated inspection PNGs are grouped under that folder's `previews/` child. Do not publish private originals or treat a sample Project Plan as the complete final research-report template.
+`private_reference/` is excluded from Git. It contains reference papers and the guide's PDF/screenshots. The local-only guide-reference notes at `private_reference/report_guidance_2026-10-09/REFERENCE_NOTES.md` index the originals; generated inspection PNGs are grouped under that folder's `previews/` child. These private references are not included in a clone. Do not publish private originals or treat a sample Project Plan as the complete final research-report template.
 
 Original reports/document bytes and previous navigation remain preserved. New report and paper deliverables will be identified separately when writing begins.

@@ -14,7 +14,7 @@
 4. [Retained exploratory methodology](FINAL_EXPLORATORY_ENSEMBLE.md) and [its test audit](FINAL_S83_TEST_AUDIT.md).
 5. [Separate strict validation](FINAL_STRICT_VALIDATION_RESULTS.md) and [original strict test](FINAL_LOCKED_TEST_RESULTS.md).
 6. [Current exact S83 explainability](xai/README.md), with completion receipts; earlier S80 explanations remain a distinct historical workflow.
-7. [Folder map](FOLDER_MAP.md) and [remaining work](../NEXT_STEPS.md).
+7. [Folder map](FOLDER_MAP.md) and [remaining work](../docs/project/STATUS.md).
 
 ## Authoritative evidence
 
