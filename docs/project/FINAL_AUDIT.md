@@ -10,11 +10,11 @@ Historical tips are preserved by annotated tags:
 
 | Tag | Original commit |
 |---|---|
-| `archive/main-before-consolidation-2026-10-14` | `ac 868d 4e 72c 51f 5ea 9fc 55bcbb 37cf 9b 5e 8ecee 3` |
-| `archive/accuracy-exploration-2026-10-14` | `8abbc 29a 302357c 2e 1df 07fcd 6fb 5fd 6f 71fde 0c` |
-| `archive/structured-research-2026-10-14` | `ba 59354` |
+| `archive/main-before-consolidation-2026-10-14` | `ac868d4e72c51f5ea9fc55bcbb37cf9b5e8ecee3` |
+| `archive/accuracy-exploration-2026-10-14` | `8abbc29a302357c2e1df07fcd6fb5fd6f71fde0c` |
+| `archive/structured-research-2026-10-14` | `ba59354` |
 
-`strict-baseline-snapshot` remains preserved. The two redundant development branches are retired after main and the archive tags are verified on GitHub. Earlier branch names in dated historical reports remain unchanged.
+`strict-baseline-snapshot` remains preserved. The two redundant development branches were retired after main and the archive tags were verified on GitHub. Earlier branch names in dated historical reports remain unchanged.
 
 ## Organization and documentation
 
